@@ -55,6 +55,7 @@
 @@||videos.news.co.uk^$third-party,xmlhttprequest
 @@||vimeocdn.com^$third-party,xmlhttprequest
 @@||wikimedia.org^$third-party,xmlhttprequest,domain=wikipedia.org
+@@||wordpress.com^$third-party,xmlhttprequest
 @@||yimg.com^$third-party,xmlhttprequest,domain=yahoo.com
 @@||youtube.com^$third-party,xmlhttprequest
 @@||ytimg.com^$third-party,xmlhttprequest,domain=youtube.com
