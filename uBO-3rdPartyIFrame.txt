@@ -1,59 +1,47 @@
-! Title: BEXT: Deny 3rd-Party iFrames with specific Unbreak
+! Title: crssi: Deny 3rd-Party iFrames with specific Unbreak
 ! Expires: 2 days
-
-!!! GLOBAL DENY
+! Homepage: https://github.com/crssi/Firefox
 
 ||$third-party,subdocument
 
-
-!!! ALLOW for Unbreak
-
-! Video
-@@||soundcloud.com/player/*$third-party,subdocument
-@@||youtube.com/embed/$third-party,subdocument
-@@||youtube-nocookie.com/embed/$third-party,subdocument
-@@||instagram.com/p/$third-party,subdocument
-@@||twitter.com/i/videos/$third-party,subdocument
-@@||player.vimeo.com^$third-party,subdocument
-@@||vox-cdn.com^$third-party,subdocument
-@@||giphy.com/embed/$third-party,subdocument
-@@||player.theplatform.com^$third-party,subdocument
 !@@||brightcove.com^$third-party,subdocument
-
-! PayPal, Mastercard
-@@||braintreegateway.com^$third-party,subdocument
-@@||paypalobjects.com^$third-party,subdocument,domain=paypal.com
-
-! Captcha
-@@||google.*/recaptcha/$third-party,subdocument
-
-! Other
-@@||google.*/maps/*$third-party,subdocument
-@@||cldmail.ru^$third-party,subdocument,domain=mail.ru
-@@||blogger.com/comment-iframe.$third-party,subdocument
 @@||accounts.google.*/ServiceLogin$third-party,subdocument
-@@||wsimg.com^$third-party,subdocument,domain=godaddy.com
-@@||ishoutbox.com^$third-party,subdocument
-@@||googleapis.com^$third-party,subdocument,domain=google.com
-@@||googleapis.com^$third-party,subdocument,domain=google.si
-@@||googleusercontent.com^$third-party,subdocument,domain=google.com|google.si|github.com
-@@||youtubemp3api.com/@api/*$third-party,subdocument,domain=easy-youtube-mp3.com
-@@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
-@@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
+@@||ali*.com^$third-party,subdocument
+@@||appspot.com^$third-party,subdocument,domain=cloud.google.com
+@@||blogger.com/comment-iframe.$third-party,subdocument
+@@||braintreegateway.com^$third-party,subdocument
+@@||cldmail.ru^$third-party,subdocument,domain=mail.ru
 @@||dropbox.com*^$third-party,subdocument,domain=dropboxpayments.com
+@@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
+@@||giphy.com/embed/$third-party,subdocument
 @@||github.*^$third-party,subdocument,domain=github.com
-@@||tumblr.com^$third-party,subdocument,domain=instagram.com
-@@||sharepoint.com^$third-party,subdocument,domain=live.com
+@@||google.*/maps/*$third-party,subdocument
+@@||google.*/recaptcha/$third-party,subdocument
+@@||googleapis.com^$third-party,subdocument,domain=google.com|google.si
+@@||googleusercontent.com^$third-party,subdocument,domain=google.com|google.si|github.com
+@@||imgur.com^$third-party,subdocument
+@@||instagram.com/p/$third-party,subdocument
+@@||ishoutbox.com^$third-party,subdocument
+@@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
 @@||live.com^$third-party,subdocument,domain=microsoft.com
-@@||office.com^$third-party,subdocument,domain=microsoftonline.com
-@@||office365.com^$third-party,subdocument,domain=office.com
 @@||mozilla.*^$third-party,subdocument,domain=mozilla.org
 @@||mozillademos.org^$third-party,subdocument,domain=mozilla.org
+@@||office.com^$third-party,subdocument,domain=microsoftonline.com
+@@||office365.com^$third-party,subdocument,domain=office.com
+@@||paypalobjects.com^$third-party,subdocument,domain=paypal.com
+@@||player.theplatform.com^$third-party,subdocument
+@@||player.vimeo.com^$third-party,subdocument
 @@||redditmedia.com^$third-party,subdocument,domain=reddit.com
-@@||yimg.com^$third-party,subdocument,domain=yahoo.com
+@@||sharepoint.com^$third-party,subdocument,domain=live.com
 @@||skype.com^$third-party,subdocument,domain=live.com
-@@||imgur.com^$third-party,subdocument
-@@||ali*.com^$third-party,subdocument
+@@||soundcloud.com/player/*$third-party,subdocument
 @@||tickcounter.com^$third-party,subdocument
+@@||tumblr.com^$third-party,subdocument,domain=instagram.com
+@@||twitter.com/i/videos/$third-party,subdocument
+@@||vox-cdn.com^$third-party,subdocument
+@@||wsimg.com^$third-party,subdocument,domain=godaddy.com
+@@||yimg.com^$third-party,subdocument,domain=yahoo.com
 @@||yourshoutbox.com^$third-party,subdocument
-@@||appspot.com^$third-party,subdocument,domain=cloud.google.com
+@@||youtube.com/embed/$third-party,subdocument
+@@||youtubemp3api.com/@api/*$third-party,subdocument,domain=easy-youtube-mp3.com
+@@||youtube-nocookie.com/embed/$third-party,subdocument

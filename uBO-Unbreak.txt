@@ -1,23 +1,23 @@
-! Title: BEXT: Unbreak
+! Title: crssi: Unbreak
 ! Expires: 2 days
+! Homepage: https://github.com/crssi/Firefox
 
-@@||translate.googleusercontent.com
-@@||cloudfront.net$third-party,image,font,stylesheet
-@@||google.*^$domain=google.si
-@@||facebook.*^$domain=facebook.com
-@@||fbcdn.*^$domain=facebook.com
-@@||fbcdn.*^$third-party,image,media
-@@||maps.googleapis.com/maps*$script,image,xmlhttprequest
-@@||ytimg.com^$third-party,script
-@@||gravatar.com^$third-party,image,stylesheet
-@@||zdassets.com^$third-party,image,stylesheet
 @@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
 @@||assets.adobedtm.com^$third-party,script
-!@@||players.brightcove.net^$third-party,script
-@@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
+@@||cloudfront.net$third-party,image,font,stylesheet
+@@||facebook.*^$domain=facebook.com
+@@||fbcdn.*^$domain=facebook.com
+@@||fbcdn.*^$third-party,image,media
+@@||google.*^$domain=google.si
+@@||gravatar.com^$third-party,image,stylesheet
 @@||maps.google.*/maps*$third-party,script,image
-
+@@||maps.googleapis.com/maps*$script,image,xmlhttprequest
+@@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
+!@@||players.brightcove.net^$third-party,script
+@@||translate.googleusercontent.com
+@@||ytimg.com^$third-party,script
+@@||zdassets.com^$third-party,image,stylesheet
 
 ! ALLOW JS library, since they are covered by Decentraleyes WE
 @@||ajax.googleapis.com^$third-party,script

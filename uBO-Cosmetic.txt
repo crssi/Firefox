@@ -1,5 +1,6 @@
-! Title: BEXT: Cosmetic
+! Title: crssi: Cosmetic
 ! Expires: 2 days
+! Homepage: https://github.com/crssi/Firefox
 
 ! youtube.com
 www.youtube.com##div[class^="ytp-ce-"]
