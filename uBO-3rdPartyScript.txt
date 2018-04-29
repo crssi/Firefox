@@ -12,6 +12,7 @@
 @@||algolianet.com^$third-party,script,domain=fanatical.com
 @@||ali*.com^$third-party,script
 @@||bstatic.com^$third-party,script,domain=booking.com
+@@||cbsistatic.com^$third-party,script,domain=cnet.com
 @@||cdn.auth0.com^$third-party,script,domain=foxnews.com
 @@||cloudfront.net^$third-party,script
 @@||cnbcfm.com^$third-party,script,domain=cnbc.com
