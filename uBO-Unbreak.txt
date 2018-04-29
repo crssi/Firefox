@@ -14,7 +14,6 @@
 @@||maps.google.*/maps*$third-party,script,image
 @@||maps.googleapis.com/maps*$script,image,xmlhttprequest
 @@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
-!@@||players.brightcove.net^$third-party,script
 @@||translate.googleusercontent.com
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
