@@ -21,6 +21,7 @@
 @@||eu-wotp.wgcdn.co^$third-party,script,domain=worldoftanks.eu
 @@||fncstatic.com^$third-party,script,subdocument,domain=foxnews.com
 @@||foxbusiness.com^$third-party,script,domain=foxnews.com
+@@||futurecdn.net^$third-party,script,domain=techradar.com
 @@||gfx.ms^$third-party,script,domain=live.com|office365.com|microsoft.com|office.com
 @@||ignimgs.com^$third-party,script,domain=ign.com
 @@||imgsmail.ru^$third-party,script,domain=mail.ru
