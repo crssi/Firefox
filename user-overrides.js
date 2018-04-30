@@ -127,13 +127,10 @@ EXTENSIONS:
 	// // https://github.com/ghacksuserjs/ghacks-user.js/issues/375
 		// /* 2803  */ user_pref("privacy.clearOnShutdown.offlineApps", false);
 		// /* 2804  */ user_pref("privacy.cpd.offlineApps", false);
-
 	// /* 2516  */ user_pref("dom.w3c_pointer_events.enabled", true); // review for privacy concern
 	// /* ????  */ user_pref("suspendTabsUntilReady", true); // waiting for FF to load WEs, before loading pages
-
 	// /* ????  */ user_pref("browser.autofocus", false);
 	// ? Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
-
 
 /*** REMOVED ***/
 	// /* 2671  */ user_pref("svg.disabled", false); // true breaks inline controls on youtube
