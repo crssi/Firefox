@@ -132,8 +132,4 @@ EXTENSIONS:
 	// /* ????  */ user_pref("browser.autofocus", false);
 	// ? Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
 
-/*** REMOVED ***/
-	// /* 2671  */ user_pref("svg.disabled", false); // true breaks inline controls on youtube
-	// /* 2720  */ user_pref("dom.indexedDB.enabled", true); // false generaly breaks stuff
-
 user_pref("_user.js.parrot", "Success!");
