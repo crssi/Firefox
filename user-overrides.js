@@ -119,16 +119,7 @@ EXTENSIONS:
 	user_pref("mousewheel.min_line_scroll_amount", 10); // if the CSS line height is smaller than this value in pixels, each scroll click will scroll this amount
 
 /*** EXPERIMENTAL ***/
-	// https://github.com/ghacksuserjs/ghacks-user.js/issues/379
-	// /* 2730  */ user_pref("browser.cache.offline.enable", true);
-		// /* 2730? */ user_pref("browser.cache.offline.insecure.enable", false);
-		// /* 2730? */ user_pref("browser.cache.offline.capacity", 1);
-		// // /* 2750  */ user_pref("dom.storageManager.enabled", true);
-	// // https://github.com/ghacksuserjs/ghacks-user.js/issues/375
-		// /* 2803  */ user_pref("privacy.clearOnShutdown.offlineApps", false);
-		// /* 2804  */ user_pref("privacy.cpd.offlineApps", false);
 	// /* 2516  */ user_pref("dom.w3c_pointer_events.enabled", true); // review for privacy concern
-	// /* ????  */ user_pref("suspendTabsUntilReady", true); // waiting for FF to load WEs, before loading pages
 	// /* ????  */ user_pref("browser.autofocus", false);
 	// ? Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
 
