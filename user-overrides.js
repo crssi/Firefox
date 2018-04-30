@@ -87,17 +87,17 @@ EXTENSIONS:
 	/* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true);
 	/* 0850b */ user_pref("browser.urlbar.suggest.openpage", true);
 
-/*** ENTERPRISE SPECIFIC : Change comtrade.com to your domain(s) - comma separated ***/
-	/* 0000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-	/* 0000  */ user_pref("network.negotiate-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO
-	/* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO
-	/* 0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
-	/* 0000  */ user_pref("plugins.load_appdir_plugins", true); // enable Skype meeting open URL
-
 /*** SPECIAL ***/
 	/* 1003  */ user_pref("browser.cache.memory.enable", true); // false = Get rid of ETAG cookieless tracking/fingerprinting; demo: https://lucb1e.com/rp/cookielesscookies/; when true, then use header editor with etag rule
 	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party extension, like uM or Smart Referer
 	/* 2701  */ user_pref("network.cookie.cookieBehavior", 0); // 1 = accept 1st party cookies only; if you dont block outgoing cookies (at least 3rd party with uM) then set this to 1
+
+	/*** ENTERPRISE SPECIFIC : Change comtrade.com to your domain(s) - comma separated ***/
+		user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
+		user_pref("network.negotiate-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO
+		user_pref("network.automatic-ntlm-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO
+		user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
+		user_pref("plugins.load_appdir_plugins", true); // enable Skype meeting open URL
 
 /*** SMOOTH SCROLLING : See: http://12bytes.org/tech/firefox/firefox-tweaks-and-fixes-and-things#enable-silky-smooth-scrolling ***/
 	user_pref("general.smoothScroll", true); // enable/disable smooth scrolling
@@ -117,10 +117,5 @@ EXTENSIONS:
 	user_pref("mousewheel.acceleration.start", 0);   // when to apply mouse wheel.acceleration.factor (after how many scroll clicks of mouse wheel) - value must be greater than -1
 	user_pref("mousewheel.default.delta_multiplier_y", 85); // sets the vertical step size
 	user_pref("mousewheel.min_line_scroll_amount", 10); // if the CSS line height is smaller than this value in pixels, each scroll click will scroll this amount
-
-/*** EXPERIMENTAL ***/
-	// /* 2516  */ user_pref("dom.w3c_pointer_events.enabled", true); // review for privacy concern
-	// /* ????  */ user_pref("browser.autofocus", false);
-	// ? Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
 
 user_pref("_user.js.parrot", "Success!");
