@@ -45,6 +45,11 @@ EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/
+
+		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
+		Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
+		Facebook Container; https://addons.mozilla.org/firefox/addon/facebook-container/
+		
 ******/
 
 /*** PERSONAL TWEAKS ***/
