@@ -58,7 +58,6 @@
 ||list-manage.com^$third-party
 ||lithium.com^$third-party,script
 ||livenetlife.com^$third-party
-||livenetlife.com^$third-party
 ||mailchimp.com^$third-party
 ||mailerlite.com^$third-party
 ||mallgroup.com^$third-party
