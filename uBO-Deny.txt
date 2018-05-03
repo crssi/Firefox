@@ -63,6 +63,7 @@
 ||mallgroup.com^$third-party
 ||medium.com^$third-party,script
 ||moengage.com^$third-party
+||n26.*^$domain=~n26.com
 ||nir.regmedia.co.uk^$third-party
 ||nmaib9.com^$third-party
 ||nrholding.net^$third-party
