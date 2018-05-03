@@ -35,7 +35,6 @@ EXTENSIONS:
 			Add to Blacklist: cred_submit, /_login, /adfs/ls/, /sso/, /saml/, rover.ebay.co, /openid/, microsofttranslator.com/, translate.google.com/, youtube.com/embed/, t.umblr.com/redirect, chart.googleapis.com/chart, /wsfederation, medium.com/, archive.org/, securityheaders.com/, _sso=
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/
-			Add to exceptions: *>player.vimeo.com
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
 			Import configuration
 		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/
@@ -47,8 +46,8 @@ EXTENSIONS:
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/
 
 		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
-		Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
 		Facebook Container; https://addons.mozilla.org/firefox/addon/facebook-container/
+		? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
 
 ******/
 
