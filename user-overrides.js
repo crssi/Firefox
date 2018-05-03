@@ -102,23 +102,4 @@ EXTENSIONS:
 	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 	user_pref("plugins.load_appdir_plugins", true); // enable Skype meeting open URL
 
-/*** SMOOTH SCROLLING : See: http://12bytes.org/tech/firefox/firefox-tweaks-and-fixes-and-things#enable-silky-smooth-scrolling ***/
-	// user_pref("general.smoothScroll", true); // enable/disable smooth scrolling
-	// user_pref("general.smoothScroll.lines", true); // enable/disable smooth line scrolling (up/down arrow/page keys)
-	// user_pref("general.smoothScroll.lines.durationMaxMS", 400); // smooth the start/end of line scrolling operations in ms (up/down arrow/page keys)
-	// user_pref("general.smoothScroll.lines.durationMinMS", 200); // smooth the start/end of line scrolling operations in ms (up/down arrow/page keys)
-	// user_pref("general.smoothScroll.mouseWheel", true); // enable/disable smooth scrolling with mouse wheel
-	// user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 600); // smooth the start/end of scrolling operations in ms
-	// user_pref("general.smoothScroll.mouseWheel.durationMinMS", 300); // smooth the start/end of scrolling operations in ms
-	// user_pref("general.smoothScroll.other", true); // enable/disable other smooth scrolling (Home/End keys)
-	// user_pref("general.smoothScroll.other.durationMaxMS", 400); // smooth the start/end of other scrolling operations in ms
-	// user_pref("general.smoothScroll.other.durationMinMS", 200); // smooth the start/end of other scrolling operations in ms
-	// user_pref("general.smoothScroll.pages", true); // enable/disable page smooth scrolling (PgUp/PgDn keys)
-	// user_pref("general.smoothScroll.pages.durationMaxMS", 400); // smooth the start/end of page scrolling operations in ms (PgUp/PgDn keys)
-	// user_pref("general.smoothScroll.pages.durationMinMS", 200); // smooth the start/end of page scrolling operations in ms (PgUp/PgDn keys)
-	// user_pref("mousewheel.acceleration.factor", 10); // sets acceleration factor if mouse wheel.acceleration.start > -1
-	// user_pref("mousewheel.acceleration.start", 0);   // when to apply mouse wheel.acceleration.factor (after how many scroll clicks of mouse wheel) - value must be greater than -1
-	// user_pref("mousewheel.default.delta_multiplier_y", 85); // sets the vertical step size
-	// user_pref("mousewheel.min_line_scroll_amount", 10); // if the CSS line height is smaller than this value in pixels, each scroll click will scroll this amount
-
 user_pref("_user.js.parrot", "Success!");
