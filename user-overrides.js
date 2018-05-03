@@ -47,7 +47,11 @@ EXTENSIONS:
 
 		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
 		Facebook Container; https://addons.mozilla.org/firefox/addon/facebook-container/
-		? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
+		?? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
+		?? Containerise; https://addons.mozilla.org/firefox/addon/containerise/
+		?- Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/
+		?+ Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/
+
 
 ******/
 
