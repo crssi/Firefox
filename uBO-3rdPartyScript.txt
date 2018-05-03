@@ -7,6 +7,7 @@
 @@$third-party,script,domain=player.theplatform.com
 @@weather*^$third-party,script
 
+@@||accounts-static.cdn.mozilla.net^$third-party,script,domain=accounts.firefox.com
 @@||akamaihd.net^$third-party,script
 @@||akamaized.net^$third-party,script
 @@||algolianet.com^$third-party,script,domain=fanatical.com
