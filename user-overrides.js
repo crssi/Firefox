@@ -45,12 +45,14 @@ EXTENSIONS:
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/
 
+	UNDER INVESTIGATION:
 		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
-		Facebook Container; https://addons.mozilla.org/firefox/addon/facebook-container/
-		?? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
-		?? Containerise; https://addons.mozilla.org/firefox/addon/containerise/
-		?- Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/
 		?+ Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/
+		?? Containerise; https://addons.mozilla.org/firefox/addon/containerise/
+		?? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
+		?- Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/
+		?- Facebook Container; https://addons.mozilla.org/firefox/addon/facebook-container/
+		?- Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/
 
 
 ******/
