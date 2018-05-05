@@ -32,7 +32,7 @@ EXTENSIONS:
 			Test blocked parameters: n/a
 		Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/
 		Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/
-			Add to Blacklist: cred_submit, /_login, /adfs/ls/, /sso/, /saml/, rover.ebay.co, /openid/, microsofttranslator.com/, translate.google.com/, youtube.com/embed/, t.umblr.com/redirect, chart.googleapis.com/chart, /wsfederation, medium.com/, archive.org/, securityheaders.com/, _sso=
+			Add to Blacklist: cred_submit, /_login, /adfs/ls/, /sso/, /saml/, rover.ebay.co, /openid/, microsofttranslator.com/, translate.google.com/, youtube.com/embed/, t.umblr.com/redirect, chart.googleapis.com/chart, /wsfederation, medium.com/, archive.org/, securityheaders.com/, _sso=, paypal.com/, action=login, logout=
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
