@@ -11,7 +11,12 @@
 @@||akamaihd.net^$third-party,script
 @@||akamaized.net^$third-party,script
 @@||algolianet.com^$third-party,script,domain=fanatical.com
-!@@||ali*.com^$third-party,script
+@@||aliapp.org^$third-party,script,domain=aliexpress.com
+@@||alicdn.com^$third-party,script,domain=aliexpress.com
+@@||alipay.com^$third-party,script,domain=aliexpress.com
+@@||alipsec.com^$third-party,script,domain=aliexpress.com
+@@||alipcsec.com:*^$third-party,script,domain=aliexpress.com
+@@||aliyun.com^$third-party,script,domain=aliexpress.com
 @@||assets.gitlab-static.net^$third-party,script,domain=gitlab.com
 @@||bstatic.com^$third-party,script,domain=booking.com
 @@||cbsistatic.com^$third-party,script,domain=cnet.com

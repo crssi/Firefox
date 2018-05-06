@@ -12,7 +12,10 @@
 @@||algolia.net^$third-party,xmlhttprequest,domain=fontawesome.com
 @@||algolianet.com^$third-party,xmlhttprequest,domain=fanatical.com
 @@||algolianet.com^$third-party,xmlhttprequest,domain=fontawesome.com
-!@@||ali*.com^$third-party,xmlhttprequest
+@@||aliapp.org^$third-party,xmlhttprequest,domain=aliexpress.com
+@@||alicdn.com^$third-party,xmlhttprequest,domain=aliexpress.com
+@@||alicdn.com/ae-login/*$third-party,xmlhttprequest
+@@||alipay.com^$third-party,xmlhttprequest,domain=aliexpress.com
 @@||amazonaws.com^$third-party,xmlhttprequest
 @@||amazonaws.com^$third-party,xmlhttprequest,domain=github.com
 @@||amgload.net^$third-party,xmlhttprequest,domain=mp3pn.info
