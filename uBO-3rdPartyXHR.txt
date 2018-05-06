@@ -12,10 +12,11 @@
 @@||algolia.net^$third-party,xmlhttprequest,domain=fontawesome.com
 @@||algolianet.com^$third-party,xmlhttprequest,domain=fanatical.com
 @@||algolianet.com^$third-party,xmlhttprequest,domain=fontawesome.com
-@@||ali*.com^$third-party,xmlhttprequest
+!@@||ali*.com^$third-party,xmlhttprequest
 @@||amazonaws.com^$third-party,xmlhttprequest
 @@||amazonaws.com^$third-party,xmlhttprequest,domain=github.com
 @@||amgload.net^$third-party,xmlhttprequest,domain=mp3pn.info
+@@||assets.gitlab-static.net^$third-party,xmlhttprequest,domain=gitlab.com
 @@||azureedge.net^$third-party,xmlhttprequest,domain=live.com
 @@||bbc.co.uk^$third-party,xmlhttprequest,domain=bbc.com
 @@||bci.co.uk^$third-party,xmlhttprequest,domain=bbc.com

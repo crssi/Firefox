@@ -11,7 +11,8 @@
 @@||akamaihd.net^$third-party,script
 @@||akamaized.net^$third-party,script
 @@||algolianet.com^$third-party,script,domain=fanatical.com
-@@||ali*.com^$third-party,script
+!@@||ali*.com^$third-party,script
+@@||assets.gitlab-static.net^$third-party,script,domain=gitlab.com
 @@||bstatic.com^$third-party,script,domain=booking.com
 @@||cbsistatic.com^$third-party,script,domain=cnet.com
 @@||cdn.auth0.com^$third-party,script,domain=foxnews.com
@@ -19,6 +20,7 @@
 @@||cnbcfm.com^$third-party,script,domain=cnbc.com
 @@||comcast.com^$third-party,script,domain=xfinity.com
 @@||deviantart.net^$third-party,script,domain=deviantart.com
+@@||ebaystatic.com^$third-party,script,domain=ebay.com|ebay.de|ebay.co.uk
 @@||eu-wotp.wgcdn.co^$third-party,script,domain=worldoftanks.eu
 @@||fncstatic.com^$third-party,script,subdocument,domain=foxnews.com
 @@||foxbusiness.com^$third-party,script,domain=foxnews.com
