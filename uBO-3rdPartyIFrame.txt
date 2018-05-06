@@ -32,6 +32,7 @@
 @@||player.theplatform.com^$third-party,subdocument
 @@||player.vimeo.com^$third-party,subdocument
 @@||redditmedia.com^$third-party,subdocument,domain=reddit.com
+@@||render.githubusercontent.com^$third-party,subdocument,domain=github.com
 @@||sharepoint.com^$third-party,subdocument,domain=live.com
 @@||skype.com^$third-party,subdocument,domain=live.com
 @@||soundcloud.com/player/*$third-party,subdocument
