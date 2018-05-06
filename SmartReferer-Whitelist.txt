@@ -1,1 +1,1 @@
-# https://seafile.comtrade.com/f/ba65b80547844cae8ba4/?dl=1
+# See https://raw.githubusercontent.com/meh/smart-referer/gh-pages/whitelist.txt
