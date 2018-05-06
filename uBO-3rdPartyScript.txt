@@ -17,6 +17,7 @@
 @@||alipsec.com^$third-party,script,domain=aliexpress.com
 @@||alipcsec.com:*^$third-party,script,domain=aliexpress.com
 @@||aliyun.com^$third-party,script,domain=aliexpress.com
+@@||alipayobjects.com^$third-party,script,domain=alipay.com
 @@||assets.gitlab-static.net^$third-party,script,domain=gitlab.com
 @@||bstatic.com^$third-party,script,domain=booking.com
 @@||cbsistatic.com^$third-party,script,domain=cnet.com
