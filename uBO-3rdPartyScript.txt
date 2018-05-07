@@ -60,6 +60,8 @@
 @@||twimg.com^$third-party,script,domain=twitter.com
 @@||twitchcdn.net^$third-party,script,domain=twitch.tv
 @@||twitchsvc.net^$third-party,script,domain=twitch.tv
+@@||univision.com^$third-party,script
+@@||uvnimg.com^$third-party,script
 @@||vimeocdn.com^$third-party,script
 @@||wikipedia.org^$third-party,script
 @@||wp.com^$third-party,script
