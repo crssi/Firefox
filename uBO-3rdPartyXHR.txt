@@ -25,7 +25,6 @@
 @@||bci.co.uk^$third-party,xmlhttprequest,domain=bbc.com
 @@||boltdns.net^$third-party,xmlhttprequest
 @@||cloudfront.net^$third-party,xmlhttprequest
-@@||content.jwplatform.com/manifests/*^$third-party,xmlhttprequest
 @@||discourse-cdn-sjc1.com^$third-party,xmlhttprequest,script,domain=discuss.atom.io
 @@||dropboxstatic.com^$third-party,xmlhttprequest,domain=dropbox.com
 @@||edge.api.brightcove.com^$third-party,xmlhttprequest
