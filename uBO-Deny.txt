@@ -51,6 +51,7 @@
 ||ipromcloud.com^$third-party
 ||jetlore.com^$third-party
 ||jwpcdn.com^$third-party
+||jwplatform.com^$third-party
 ||letspin.io^$third-party
 ||limelight.com^$third-party,script
 ||linkedin.*^$third-party
