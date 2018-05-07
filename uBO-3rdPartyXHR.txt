@@ -35,7 +35,6 @@
 @@||imdb-video.media-imdb.com^$third-party,xmlhttprequest,domain=imdb.com
 @@||jsfiddle.net^$third-party,xmlhttprequest
 @@||jshell.net^$third-party,xmlhttprequest
-@@||content.jwplatform.com^$third-party,xmlhttprequest
 @@||licdn.com^$third-party,xmlhttprequest,domain=linkedin.com
 @@||live.com^$third-party,xmlhttprequest,domain=office.com
 @@||maps.google.com/maps*$third-party,xmlhttprequest
