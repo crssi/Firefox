@@ -1,5 +1,5 @@
 /******
-INFO:      Supplement for ghacks-user.js; 6.5.2017 (commit: 772fa4e); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 6.5.2017 (commit: 35fd4e3); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.1.1-Setting-Extension-Permission-Exceptions
