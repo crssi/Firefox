@@ -42,6 +42,7 @@
 @@||libs.cdn.renault.com$third-party,script
 @@||licdn.com^$third-party,script,domain=linkedin.com
 @@||livejournal.net^$third-party,script,subdocument,domain=livejournal.com
+@@||maxcdn.bootstrapcdn.com^$third-party,script
 @@||microsoft.*^$third-party,script,domain=live.com|office.com
 @@||microsoftonline*.com^$third-party,script,domain=microsoftonline.com
 @@||msocdn.com^$third-party,script,domain=live.com|office.com
