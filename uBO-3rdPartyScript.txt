@@ -8,6 +8,7 @@
 @@weather*^$third-party,script
 
 @@||accounts-static.cdn.mozilla.net^$third-party,script,domain=accounts.firefox.com
+@@||addons-amo.cdn.mozilla.net^$third-party,script,domain=addons.mozilla.org
 @@||akamaihd.net^$third-party,script
 @@||akamaized.net^$third-party,script
 @@||algolianet.com^$third-party,script,domain=fanatical.com
@@ -29,6 +30,7 @@
 @@||ebaystatic.com^$third-party,script,domain=ebay.com|ebay.de|ebay.co.uk
 @@||eu-wotp.wgcdn.co^$third-party,script,domain=worldoftanks.eu
 @@||fncstatic.com^$third-party,script,subdocument,domain=foxnews.com
+@@||forbesimg.com^$third-party,script,domain=forbes.com
 @@||foxbusiness.com^$third-party,script,domain=foxnews.com
 @@||futurecdn.net^$third-party,script,domain=techradar.com
 @@||gfx.ms^$third-party,script,domain=live.com|office365.com|microsoft.com|office.com
