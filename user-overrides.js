@@ -1,5 +1,5 @@
 /******
-INFO:      Supplement for ghacks-user.js; 6.5.2017 (commit: 35fd4e3); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 7.5.2017 (commit: 1b0c9f6); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.1.1-Setting-Extension-Permission-Exceptions
@@ -53,6 +53,8 @@ EXTENSIONS:
 		?- Facebook Container; https://addons.mozilla.org/firefox/addon/facebook-container/
 		?- Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/
 
+		Link Virus Check - Security Plus; https://addons.mozilla.org/firefox/addon/security-plus/
+		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
 ******/
 
@@ -65,7 +67,7 @@ EXTENSIONS:
 	/* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
 	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party extension, like uM or Smart Referer
 	/* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
-	/* 2641  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+	/* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
 	/* 2701  */ user_pref("network.cookie.cookieBehavior", 0); // 1 = accept 1st party cookies only; if you dont block outgoing cookies (at least 3rd party with uM) then set this to 1
 	/* 5000- */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 	/* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
