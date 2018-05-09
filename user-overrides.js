@@ -49,12 +49,12 @@ EXTENSIONS:
 		?+ Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/
 		?? Containerise; https://addons.mozilla.org/firefox/addon/containerise/
 		?? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
-		?- Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/
-		?- Facebook Container; https://addons.mozilla.org/firefox/addon/facebook-container/
 		?- Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/
 
 		Link Virus Check - Security Plus; https://addons.mozilla.org/firefox/addon/security-plus/
 		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
+
+		Forget Me Not; https://addons.mozilla.org/en-US/firefox/addon/forget_me_not/
 
 ******/
 
