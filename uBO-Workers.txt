@@ -1,0 +1,8 @@
+! Title: crssi: Deny Workers with specific Unbreak
+! Expires: 2 days
+! Homepage: https://github.com/crssi/Firefox
+
+*$csp=worker-src 'none'
+
+!@@||comtrade.com^$csp=worker-src 'none'
+@@/owa/#path=/mail$csp=worker-src 'none'
