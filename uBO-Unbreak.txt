@@ -6,10 +6,11 @@
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
 @@||assets.adobedtm.com^$third-party,script
 @@||cloudfront.net$third-party,image,font,stylesheet
+@@||drive.google.com^$third-party,image
 @@||facebook.*^$domain=facebook.com
 @@||fbcdn.*^$domain=facebook.com
 @@||fbcdn.*^$third-party,image,media
-@@||google.*^$domain=google.si
+@@||google.*^$domain=google.
 @@||gravatar.com^$third-party,image,stylesheet
 @@||content.jwplatform.com^$third-party,xmlhttprequest
 @@||maps.google.*/maps*$third-party,script,image
