@@ -43,18 +43,14 @@ EXTENSIONS:
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/
+		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
 	UNDER INVESTIGATION:
 		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
 		?+ Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/
 		?? Containerise; https://addons.mozilla.org/firefox/addon/containerise/
 		?? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
-		?- Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/
 
-		Link Virus Check - Security Plus; https://addons.mozilla.org/firefox/addon/security-plus/
-		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
-
-		Forget Me Not; https://addons.mozilla.org/en-US/firefox/addon/forget_me_not/
 
 ******/
 
