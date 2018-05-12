@@ -22,6 +22,7 @@
 @@||alipayobjects.com^$third-party,script,domain=alipay.com
 @@||assets.gitlab-static.net^$third-party,script,domain=gitlab.com
 @@||bstatic.com^$third-party,script,domain=booking.com
+@@||c.s-microsoft.com^$third-party,script,domain=microsoft.com
 @@||cbsistatic.com^$third-party,script,domain=cnet.com
 @@||cdn.auth0.com^$third-party,script,domain=foxnews.com
 @@||cloudfront.net^$third-party,script
