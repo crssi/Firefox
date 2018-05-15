@@ -1,5 +1,5 @@
 /******
-INFO:      Supplement for ghacks-user.js; 11.5.2017 (commit: b880c9d); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 15.5.2017 (commit: 6736033); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.1.1-Setting-Extension-Permission-Exceptions
@@ -50,6 +50,9 @@ EXTENSIONS:
 		?+ Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/
 		?? Containerise; https://addons.mozilla.org/firefox/addon/containerise/
 		?? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
+
+		AudioContext Fingerprint Defender; https://addons.mozilla.org/firefox/addon/audioctx-fingerprint-defender/
+		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/
 
 
 ******/
