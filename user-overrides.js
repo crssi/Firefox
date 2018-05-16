@@ -1,5 +1,5 @@
 /******
-INFO:      Supplement for ghacks-user.js; 15.5.2017 (commit: 6736033); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 15.5.2017 (commit: e5d23f6); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.1.1-Setting-Extension-Permission-Exceptions
@@ -42,18 +42,15 @@ EXTENSIONS:
 
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
+		Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
+		Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/
+		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/
 		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
 	UNDER INVESTIGATION:
-		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
-		?+ Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/
-		?? Containerise; https://addons.mozilla.org/firefox/addon/containerise/
-		?? Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
-
 		AudioContext Fingerprint Defender; https://addons.mozilla.org/firefox/addon/audioctx-fingerprint-defender/
 		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/
-
 
 ******/
 
@@ -74,6 +71,7 @@ EXTENSIONS:
 	/* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
 /*** BREAKAGE TWEAKS ***/
+	// /* ????  */ user_pref("security.sandbox.content.level", 4); // sandboxie.com doesn't work with FF 60 (default = 5)
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
 	/* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
@@ -102,8 +100,8 @@ EXTENSIONS:
 
 /*** ENTERPRISE SPECIFIC : Change comtrade.com to your domain(s) - comma separated ***/
 	user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-	user_pref("network.negotiate-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO, replace sample domains with yours
-	user_pref("network.automatic-ntlm-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO, replace sample domains with yours
+	user_pref("network.negotiate-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO
+	user_pref("network.automatic-ntlm-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO
 	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 	user_pref("plugins.load_appdir_plugins", true); // enable Skype meeting open URL
 
