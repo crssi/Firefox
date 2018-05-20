@@ -53,7 +53,6 @@ EXTENSIONS:
 
 		Privacy Badger; https://www.eff.org/files/privacy-badger-latest.xpi
 		Privacy Possum; https://addons.mozilla.org/firefox/addon/privacy-possum/
-		retire.js; https://addons.mozilla.org/firefox/addon/retire-js/
 
 ******/
 
