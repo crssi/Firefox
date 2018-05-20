@@ -51,6 +51,7 @@ EXTENSIONS:
 	UNDER INVESTIGATION:
 		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/
 		Privacy Possum; https://addons.mozilla.org/firefox/addon/privacy-possum/
+		Request Control; https://addons.mozilla.org/en-US/firefox/addon/requestcontrol/
 
 ******/
 
