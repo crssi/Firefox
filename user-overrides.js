@@ -15,26 +15,26 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 
 EXTENSIONS:
 	ESSENTIAL:
-		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/
+		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
 			{"logLevel": 0,"urlSettings": [],"whiteList": "","blackList": "","blockMode": "fakeReadout","minFakeSize": 1,"maxFakeSize": 0,"rng": "nonPersistent","useCanvasCache": true,"ignoreFrequentColors": 0,"minColors": 0,"fakeAlphaChannel": false,"persistentRndStorage": "","storePersistentRnd": false,"persistentRndClearIntervalValue": 0,"persistentRndClearIntervalUnit": "days","lastPersistentRndClearing": 1516721313132,"askOnlyOnce": "individual","askDenyMode": "block","showNotifications": true,"storeImageForInspection": false,"notificationDisplayTime": 30,"ignoreList": "","showCallingFile": false,"showCompleteCallingStack": false,"enableStackList": false,"stackList": "","displayAdvancedSettings": true,"displayDescriptions": true,"isStillDefault": false,"storageVersion": 0.3}
-		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/
-		CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/
-		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/
+		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
+		CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
+		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://github.com/Synzvato/decentraleyes/)
 			https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
 		Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
 		DuckDuckGo (HTTPS / SSL); https://addons.mozilla.org/firefox/addon/duckduckgo-ssl/
-		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/
-			Get rid of ETags supercookies: Rule type = Modify the response header; Match type = All; Execute type = normal; Header name = etag (now we can enable 1003)
-		Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/
+		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor)
+			Get rid of ETags supercookies: Rule type = Modify the response header; Match type = All; Execute type = normal; Header name = etag; Make another same rule with Header name = ETag (now we can enable 1003)
+		Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/firefoxaddons/tree/master/Neat URL-webext/)
 			Blocked parameters:  $/ref@amazon.*, _encoding, _hsenc, _hsmi, _openstat, 77campaign, action_object_*, action_ref_*, action_type_*, ad_*, adset_*, aff_platform, aff_trace_key, algo_*, aqs, assetId, assetType, bav, bih, biw, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, cn, cp, csi, cvid, d@banggood.com, dni, dpr, dq, e@linkedin.com, ei@google.*, ek, elq*, elqTrack, elqTrackId, ems_l, F@digifot.com, fb_*, feature, feeditemid, form, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mc_*, midToken, mkt_*, N@digifot.com, nb, ncid, ndsp, nid, nr_email_referer, oq, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, psc, pv, qp, recipientId, ref_, refsrc, rni, RSS*, sc, sc_*, sclient, scm@*.aliexpress.com, scroll, sei, siteId, sk, source@sourceforge.net, sp, spm@*.aliexpress.com, sr, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, wmode, ws_ab_*, yclid, yv
 			URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
 			Test blocked parameters: n/a
-		Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/
-		Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/
+		Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
+		Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
 			Add to Blacklist: cred_submit, /_login, /adfs/ls/, /sso/, /saml/, rover.ebay.co, /openid/, microsofttranslator.com/, translate.google.com/, youtube.com/embed/, t.umblr.com/redirect, chart.googleapis.com/chart, /wsfederation, medium.com/, archive.org/, securityheaders.com/, _sso=, paypal.com/, action=login, logout=, virustotal.com/, /websso/, /SAML2/
-		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/
-		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/
+		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
+		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
 			Import configuration
 		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/
@@ -42,16 +42,16 @@ EXTENSIONS:
 
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-		Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/
-		Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/
-		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/
-		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/
+		Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/stoically/multi-account-containers/)
+		Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
+		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
+		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
 	UNDER INVESTIGATION:
-		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/
-		Privacy Possum; https://addons.mozilla.org/firefox/addon/privacy-possum/
-		Request Control; https://addons.mozilla.org/en-US/firefox/addon/requestcontrol/
+		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/ (https://mybrowseraddon.com/change-timezone.html)
+		Privacy Possum; https://addons.mozilla.org/firefox/addon/privacy-possum/ (https://github.com/cowlicks/privacypossum/)
+		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol)
 
 ******/
 
