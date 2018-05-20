@@ -49,7 +49,6 @@ EXTENSIONS:
 		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
 	UNDER INVESTIGATION:
-		AudioContext Fingerprint Defender; https://addons.mozilla.org/firefox/addon/audioctx-fingerprint-defender/
 		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/
 
 		Containerise; https://addons.mozilla.org/firefox/addon/containerise/
