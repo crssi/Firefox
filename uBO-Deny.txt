@@ -2,6 +2,13 @@
 ! Expires: 2 days
 ! Homepage: https://github.com/crssi/Firefox
 
+! 1x1pixel clear images on startpage and ixquick
+||/do/avtc?$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+||/do/showimage?$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+||/english/web/$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+||/tix2/$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+||/tst2/*$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+
 ||1105media.com^$third-party
 ||a2sky.com^$third-party
 ||addthis.com^$important
