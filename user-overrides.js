@@ -51,7 +51,6 @@ EXTENSIONS:
 	UNDER INVESTIGATION:
 		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/
 
-		Containerise; https://addons.mozilla.org/firefox/addon/containerise/
 		Privacy Badger; https://www.eff.org/files/privacy-badger-latest.xpi
 		Privacy Possum; https://addons.mozilla.org/firefox/addon/privacy-possum/
 		retire.js; https://addons.mozilla.org/firefox/addon/retire-js/
