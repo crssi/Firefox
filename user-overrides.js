@@ -81,7 +81,6 @@ EXTENSIONS:
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
-	/* 2301  */ user_pref("dom.workers.enabled", true); // false breaks some sites, see: https://docs.microsoft.com/en-us/advanced-threat-analytics/modifying-ata-config-centercert
 	/* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable copy/cut/paste
 	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 	/* 5000- */ user_pref("dom.disable_open_during_load", false); // enable popup
