@@ -114,6 +114,10 @@ EXTENSIONS:
 					https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 					https://ssl.bblck.me/blacklists/ublock-origin.txt
 					https://www.kiboke-studio.hr/i-dont-care-about-cookies/abp/
+					! Are you nuts section:
+					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyScript.txt
+					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyXHR.txt
+					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Workers.txt
 			My rules
 				no-csp-reports: * true
 				no-large-media: behind-the-scene false
