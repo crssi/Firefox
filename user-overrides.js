@@ -8,7 +8,7 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
-2. Create folder "preferences" (if doesn't exist) in the "profile folder" and place this file into "preferences" folder
+2. Append this file to user.js that was created on step 1.
 3. Install essentials extensions (see Extensions section down bellow), review also extensions in other sections
 4. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
 
