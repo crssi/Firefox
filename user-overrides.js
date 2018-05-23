@@ -73,7 +73,7 @@ EXTENSIONS:
 /*** BREAKAGE TWEAKS ***/
 	// /* ????  */ user_pref("security.sandbox.content.level", 4); // sandboxie.com doesn't work with FF 60 (default = 5)
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-	/* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
+	/* 1202  */ user_pref("security.tls.version.min", 2); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
