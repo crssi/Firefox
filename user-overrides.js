@@ -1,5 +1,5 @@
 /******
-HOME:			 https://github.com/crssi/Firefox
+HOME:      https://github.com/crssi/Firefox
 INFO:      Supplement for ghacks-user.js; 23.5.2017 (commit: 0a63b65); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
            Extensions under Essential section are... Essential !!!
