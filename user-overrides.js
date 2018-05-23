@@ -72,79 +72,10 @@ EXTENSIONS:
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
 			Settings
-				I am an advanced user: Check
-				Prevent WebRTC from leaking local IP addresses: Check
-				Block CSP reports: Check
-			Filter lists
-				Ads
-					Adblock Warning Removal List: Check
-					Adguard Base Filters: Check
-					Adguard Mobile Filters: Check
-				Privacy
-					Fanboy’s Enhanced Tracking List: Check
-				Malware domains
-					Malware Domain List: Uncheck
-					Malware domains: Uncheck
-					Spam404: Check
-				Annoyances
-					Fanboy’s Social Blocking List: Check
-				Multipurpose
-					hpHosts’ Ad and tracking servers: Check
-					Peter Lowe’s Ad and tracking server list: Uncheck
-				Regions, languages
-					CHN: EasyList China: Check
-					DEU: EasyList Germany: Check
-					SVN: Slovenian List: Check
-				Custom
-					https://easylist-downloads.adblockplus.org/adwarefilters.txt
-					https://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt
-					https://easylist-downloads.adblockplus.org/yt_annoyances_other.txt
-					https://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt
-					https://filters.adtidy.org/extension/chromium/filters/3.txt
-					https://filters.adtidy.org/extension/chromium/filters/4.txt
-					https://filters.adtidy.org/extension/chromium/filters/6.txt
-					https://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt
-					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyIFrame.txt
-					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt
-					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt
-					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt
-					https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt
-					https://raw.githubusercontent.com/keraf/NoCoin/master/src/blacklist.txt
-					https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt
-					https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-					https://ssl.bblck.me/blacklists/ublock-origin.txt
-					https://www.kiboke-studio.hr/i-dont-care-about-cookies/abp/
-					! Are you nuts section:
-					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyScript.txt
-					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyXHR.txt
-					https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Workers.txt
-			My rules
-				no-csp-reports: * true
-				no-large-media: behind-the-scene false
-				* ajax.aspnetcdn.com * noop
-				* ajax.googleapis.com * noop
-				* ajax.microsoft.com * noop
-				* cdn.jsdelivr.net * noop
-				* cdnjs.cloudflare.com * noop
-				* code.jquery.com * noop
-				* duckduckgo.com * allow
-				* lib.sinaapp.com * noop
-				* libs.baidu.com * noop
-				* upcdn.b0.upaiyun.com * noop
-				* yandex.st * noop
-				* yastatic.net * noop
-				behind-the-scene * * noop
-				behind-the-scene * 1p-script noop
-				behind-the-scene * 3p noop
-				behind-the-scene * 3p-frame noop
-				behind-the-scene * 3p-script noop
-				behind-the-scene * image noop
-				behind-the-scene * inline-script noop
-
-				 Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/Config-uBlockOrigin.txt
+				Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
 		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/
 			About
-				Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/Config-uMatrix.txt
+				Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
