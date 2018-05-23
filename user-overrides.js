@@ -1,5 +1,4 @@
 /******
-INFO:      Supplement for ghacks-user.js; 23.5.2017 (commit: a635ae5); https://github.com/ghacksuserjs/ghacks-user.js
 INFO:      Supplement for ghacks-user.js; 23.5.2017 (commit: 0a63b65); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
            Extensions under Essential section are... Essential !!!
@@ -8,31 +7,66 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
-2. Append this file to user.js that was created on step 1.
-3. Install essentials extensions (see Extensions section down bellow), review also extensions in other sections
-4. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
+2. Append this file to user.js that was downloaded on step 1.
+3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
+4. Firefox -> Settings -> Search
+		Default Search Engine = duckduckgo
+		One-Click Search Engines = delete all except DuckDuckGo
+5. Install essentials extensions (see Extensions section down bellow), review also extensions in other sections
 
 
 EXTENSIONS:
 	ESSENTIAL:
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-			{"logLevel": 0,"urlSettings": [],"whiteList": "","blackList": "","blockMode": "fakeReadout","minFakeSize": 1,"maxFakeSize": 0,"rng": "nonPersistent","useCanvasCache": true,"ignoreFrequentColors": 0,"minColors": 0,"fakeAlphaChannel": false,"persistentRndStorage": "","storePersistentRnd": false,"persistentRndClearIntervalValue": 0,"persistentRndClearIntervalUnit": "days","lastPersistentRndClearing": 1516721313132,"askOnlyOnce": "individual","askDenyMode": "block","showNotifications": true,"storeImageForInspection": false,"notificationDisplayTime": 30,"ignoreList": "","showCallingFile": false,"showCompleteCallingStack": false,"enableStackList": false,"stackList": "","displayAdvancedSettings": true,"displayDescriptions": true,"isStillDefault": false,"storageVersion": 0.3}
 		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
+			Cookie Settings
+				Enable Automatic Cleaning? Delay Before Cleaning: Check, 10 Seconds
+				Enable Cleanup on Domain Change: Check
+				Enable Cleanup Log and Counter: Uncheck
+				Show Number of Cookies for that Domain: Uncheck
+				Show Notification After Cookie Cleanup: Uncheck
+				Enable Support for Firefox's Container Tabs: Check
 		CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
-		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://github.com/Synzvato/decentraleyes/)
-			https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
+		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://github.com/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
 		Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
-		DuckDuckGo (HTTPS / SSL); https://addons.mozilla.org/firefox/addon/duckduckgo-ssl/
-		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor)
-			Configure per instructions @ https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor (now we can enable 1003)
+		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor); https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
+			Export and Import
+				Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
+				Import: Click [Save]
 		Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/firefoxaddons/tree/master/Neat URL-webext/)
-			Blocked parameters:  $/ref@amazon.*, _encoding, _hsenc, _hsmi, _openstat, 77campaign, action_object_*, action_ref_*, action_type_*, ad_*, adset_*, aff_platform, aff_trace_key, algo_*, aqs, assetId, assetType, bav, bih, biw, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, cn, cp, csi, cvid, d@banggood.com, dni, dpr, dq, e@linkedin.com, ei@google.*, ek, elq*, elqTrack, elqTrackId, ems_l, F@digifot.com, fb_*, feature, feeditemid, form, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mc_*, midToken, mkt_*, N@digifot.com, nb, ncid, ndsp, nid, nr_email_referer, oq, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, psc, pv, qp, recipientId, ref_, refsrc, rni, RSS*, sc, sc_*, sclient, scm@*.aliexpress.com, scroll, sei, siteId, sk, source@sourceforge.net, sp, spm@*.aliexpress.com, sr, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, wmode, ws_ab_*, yclid, yv
+			Blocked parameters: _encoding, _hsenc, _hsmi, _openstat, $/ref@amazon.*, 77campaign, action_object_*, action_ref_*, action_type_*, ad_*, adset_*, aff_platform, aff_trace_key, algo_*, aqs, assetId, assetType, bav, bih, biw, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, cn, cp, csi, cvid, d@banggood.com, dni, dpr, dq, e@linkedin.com, ei@google.*, ek, elq*, elqTrack, elqTrackId, ems_l, F@digifot.com, fb_*, feature, feeditemid, form, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mc_*, midToken, mkt_*, N@digifot.com, nb, ncid, ndsp, nid, nr_email_referer, oq, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, psc, pv, qp, qs@bing.com, recipientId, ref_, refsrc, rni, RSS*, sc, sc_*, sc@bing.com, sclient, scm@*.aliexpress.com, scroll, sei, siteId, sk, source@sourceforge.net, sp, spm@*.aliexpress.com, sr, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, wmode, ws_ab_*, yclid, yv
 			URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
-			Test blocked parameters: n/a
+			Click [Save preferences]
 		Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
 		Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
-			Add to Blacklist: cred_submit, /_login, /adfs/ls/, /sso/, /saml/, rover.ebay.co, /openid/, microsofttranslator.com/, translate.google.com/, youtube.com/embed/, t.umblr.com/redirect, chart.googleapis.com/chart, /wsfederation, medium.com/, archive.org/, securityheaders.com/, _sso=, paypal.com/, action=login, logout=, virustotal.com/, /websso/, /SAML2/
+			Blacklist (Append):
+				action=login
+				/adfs/ls/
+				archive.org/
+				chart.googleapis.com/chart
+				cred_submit
+				/_login
+				logout=
+				medium.com/
+				microsofttranslator.com/
+				/openid/
+				paypal.com/
+				rover.ebay.co
+				securityheaders.com/
+				/saml/
+				/SAML2/
+				_sso=
+				/sso/
+				t.umblr.com/redirect
+				translate.google.com/
+				virustotal.com/
+				/websso/
+				/wsfederation
+				youtube.com/embed/
+			Notifications
+				Enable popup: Uncheck
+				Show notifications for this many seconds: 10
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
