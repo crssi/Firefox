@@ -1,4 +1,5 @@
 /******
+HOME:			 https://github.com/crssi/Firefox
 INFO:      Supplement for ghacks-user.js; 23.5.2017 (commit: 0a63b65); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
            Extensions under Essential section are... Essential !!!
@@ -70,9 +71,11 @@ EXTENSIONS:
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
-			Import configuration
+			Settings
+				 Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/Config-uBlockOrigin.txt
 		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/
-			Import configuration
+			About
+				Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/Config-uMatrix.txt
 
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
