@@ -2,8 +2,7 @@
 INFO:      Supplement for ghacks-user.js; 23.5.2017 (commit: a635ae5); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
            Extensions under Essential section are... Essential !!!
-SEE ALSO:  https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.1.1-Setting-Extension-Permission-Exceptions
-           https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data
+SEE ALSO:  https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data
 NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprinting to false
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
