@@ -1,0 +1,1 @@
+{"request":[],"sendHeader":[],"receiveHeader":[{"enable":1,"name":"remove all ETag's","ruleType":"modifyReceiveHeader","matchType":"all","pattern":"","exclude":"","isFunction":true,"code":"for (let a in val) {\n    if (val[a].name.toLowerCase() === 'etag') { val[a].value = ''; }\n}","id":3}]}
