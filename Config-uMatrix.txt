@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.3.8",
-  "when": 1527109436400,
+  "when": 1527110665800,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
