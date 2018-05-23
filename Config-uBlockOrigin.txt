@@ -1,6 +1,6 @@
 {
-  "timeStamp": 1525372785200,
-  "version": "1.16.4",
+  "timeStamp": 1527109305600,
+  "version": "1.16.6",
   "userSettings": {
     "advancedUserEnabled": true,
     "alwaysDetachLogger": false,
@@ -10,7 +10,7 @@
     "colorBlindFriendly": false,
     "contextMenuEnabled": true,
     "dynamicFilteringEnabled": true,
-    "externalLists": "https://easylist-downloads.adblockplus.org/adwarefilters.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_other.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt\nhttps://filters.adtidy.org/extension/chromium/filters/3.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://filters.adtidy.org/extension/chromium/filters/6.txt\nhttps://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyIFrame.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyScript.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyXHR.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt\nhttps://raw.githubusercontent.com/keraf/NoCoin/master/src/blacklist.txt\nhttps://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt\nhttps://ssl.bblck.me/blacklists/ublock-origin.txt\nhttps://www.kiboke-studio.hr/i-dont-care-about-cookies/abp/",
+    "externalLists": "https://easylist-downloads.adblockplus.org/adwarefilters.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_other.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt\nhttps://filters.adtidy.org/extension/chromium/filters/3.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://filters.adtidy.org/extension/chromium/filters/6.txt\nhttps://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyIFrame.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyScript.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyXHR.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Workers.txt\nhttps://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt\nhttps://raw.githubusercontent.com/keraf/NoCoin/master/src/blacklist.txt\nhttps://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt\nhttps://ssl.bblck.me/blacklists/ublock-origin.txt\nhttps://www.kiboke-studio.hr/i-dont-care-about-cookies/abp/",
     "firewallPaneMinimized": false,
     "hyperlinkAuditingDisabled": true,
     "ignoreGenericCosmeticFilters": false,
@@ -71,7 +71,7 @@
     "suspendTabsUntilReady": false,
     "userResourcesLocation": "unset"
   },
-  "netWhitelist": "chrome-extension-scheme\nchrome-scheme\nmoz-extension-scheme\nnewtab.about-scheme\nopera-scheme\nvivaldi-scheme",
+  "netWhitelist": "chrome-extension-scheme\nchrome-scheme\nnewtab.about-scheme\nopera-scheme\nvivaldi-scheme",
   "dynamicFilteringString": "* ajax.aspnetcdn.com * noop\n* ajax.googleapis.com * noop\n* ajax.microsoft.com * noop\n* cdn.jsdelivr.net * noop\n* cdnjs.cloudflare.com * noop\n* code.jquery.com * noop\n* duckduckgo.com * allow\n* lib.sinaapp.com * noop\n* libs.baidu.com * noop\n* upcdn.b0.upaiyun.com * noop\n* yandex.st * noop\n* yastatic.net * noop\nbehind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
   "urlFilteringString": "",
   "hostnameSwitchesString": "no-csp-reports: * true\nno-large-media: behind-the-scene false",
