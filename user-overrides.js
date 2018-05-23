@@ -83,7 +83,15 @@ EXTENSIONS:
 		?ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
 		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
-		
+			General
+				Automatic Mode: Check
+				Container Name Prefix: %domain% #
+				Random Container Color: Check
+				Container Icon: fingerprint
+				Container Number: Reuse available numbers
+				Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+				Click [Save]
+				
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 		?VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
