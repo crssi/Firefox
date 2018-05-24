@@ -91,7 +91,18 @@ EXTENSIONS:
 				Container Number: Reuse available numbers
 				Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
 				Click [Save]
-
+			Isolation
+				Global
+					Navigating in Tabs should open new Temporary Containers: If the Navigation Target Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+					?????? Mouse Clicks on Links should open new Temporary Containers [Middle Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+					?????? Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+					Click [Save]
+				Multi-Account Containers
+					Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
+					Click [Save]
+			Advanced
+				General
+					?????? Instead of creating a new Tab replace the currently active Tab: Check
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 		?VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
