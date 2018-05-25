@@ -77,38 +77,40 @@ EXTENSIONS:
 			About
 				Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
+  CONTAINERS:
+  	Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/stoically/multi-account-containers/)
+  	Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
+  	Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
+  		General
+  			Automatic Mode: Check
+  			Container Name Prefix: %domain% #
+  			Random Container Color: Check
+  			Container Icon: fingerprint
+  			Container Number: Reuse available numbers
+  			Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+  			Click [Save]
+  		Isolation
+  			Global
+  				Navigating in Tabs should open new Temporary Containers: If the Navigation Target Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+  				?????? Mouse Clicks on Links should open new Temporary Containers [Middle Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+  				?????? Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+  				Click [Save]
+				Multi-Account Containers
+  				Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
+  				Click [Save]
+  		Advanced
+  			General
+  				?????? Instead of creating a new Tab replace the currently active Tab: Check
+
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-		Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/stoically/multi-account-containers/)
-		Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
-		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
-			General
-				Automatic Mode: Check
-				Container Name Prefix: %domain% #
-				Random Container Color: Check
-				Container Icon: fingerprint
-				Container Number: Reuse available numbers
-				Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
-				Click [Save]
-			Isolation
-				Global
-					Navigating in Tabs should open new Temporary Containers: If the Navigation Target Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-					?????? Mouse Clicks on Links should open new Temporary Containers [Middle Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-					?????? Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-					Click [Save]
-				Multi-Account Containers
-					Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
-					Click [Save]
-			Advanced
-				General
-					?????? Instead of creating a new Tab replace the currently active Tab: Check
+		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
+		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
 	UNDER INVESTIGATION:
 		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/ (https://mybrowseraddon.com/change-timezone.html)
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol)
-		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
-		VTzilla 2.0; https://addons.mozilla.org/firefox/addon/vtzilla/
 
 ******/
 
