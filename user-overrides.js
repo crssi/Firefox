@@ -72,10 +72,10 @@ EXTENSIONS:
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
 			Settings
-				Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
+				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
 		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/
 			About
-				Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
+				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
   CONTAINERS:
   	Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/stoically/multi-account-containers/)
