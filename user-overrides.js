@@ -100,7 +100,7 @@ EXTENSIONS:
   				Click [Save]
   		Advanced
   			General
-  				?????? Instead of creating a new Tab replace the currently active Tab: Check
+  				Instead of creating a new Tab replace the currently active Tab: Check
 
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
