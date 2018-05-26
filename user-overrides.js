@@ -92,8 +92,6 @@ EXTENSIONS:
   		Isolation
   			Global
   				Navigating in Tabs should open new Temporary Containers: If the Navigation Target Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-  				?????? Mouse Clicks on Links should open new Temporary Containers [Middle Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-  				?????? Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
   				Click [Save]
 				Multi-Account Containers
   				Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
