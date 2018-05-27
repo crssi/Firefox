@@ -121,7 +121,12 @@ EXTENSIONS:
 	/* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
 	/* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
 	/* 2701  */ user_pref("network.cookie.cookieBehavior", 0); // block 3rd party with uM and deal with 1st party cookies using WE (C-AD)
-	/* 5000- */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
+	/* 2803  */ user_pref("privacy.clearOnShutdown.cookies", true); // clear cookies nn shutdown
+	/* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
+	/* 5000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
+	/* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
+	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true);
+	/* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
 	/* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
 	/* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
 	/* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
@@ -136,11 +141,13 @@ EXTENSIONS:
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
 	/* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable copy/cut/paste
+	/* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
+	/* 2682  */ user_pref("security.csp.experimentalEnabled", false);
 	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
-	/* 5000- */ user_pref("dom.disable_open_during_load", false); // enable popup
+	/* 5000  */ user_pref("dom.disable_open_during_load", false); // enable popup
 
 /*** UPDATE ***/
-	/* 0300- */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
+	/* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
 	/* 0301b */ user_pref("extensions.update.enabled", true); // enable extensions update auto check
 	/* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
 	/* 0303  */ user_pref("app.update.service.enabled", true); // enable update service
