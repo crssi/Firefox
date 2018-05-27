@@ -87,7 +87,7 @@ EXTENSIONS:
   			[PERSONAL CHOICE] Random Container Color: Check
   			[PERSONAL CHOICE] Container Icon: fingerprint
   			[PERSONAL CHOICE] Container Number: Reuse available numbers
-  			[PERSONAL CHOICE] Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+?  			[PERSONAL CHOICE] Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
   			Click [Save]
   		Isolation
   			Global
@@ -96,9 +96,9 @@ EXTENSIONS:
 				Multi-Account Containers
   				Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
   				Click [Save]
-  		Advanced
-  			General
-  				Instead of creating a new Tab replace the currently active Tab: Check
+?  		Advanced
+?  			General
+?  				[PERSONAL CHOICE] Instead of creating a new Tab replace the currently active Tab: Check
 
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
@@ -118,10 +118,16 @@ EXTENSIONS:
 	/* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
 	/* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
 	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party extension, like uM or Smart Referer
+	/* 1701  */ user_pref("privacy.userContext.ui.enabled", true); // enable Container Tabs setting in preferences
+	/* 1702  */ user_pref("privacy.userContext.enabled", true); // Enable Container Tabs
+	/* 1703  */ user_pref("privacy.usercontext.about_newtab_segregation.enabled", true); // enable a private container for thumbnail loads
+	/* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
 	/* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
 	/* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
 	/* 2701  */ user_pref("network.cookie.cookieBehavior", 0); // block 3rd party with uM and deal with 1st party cookies using WE (C-AD)
 	/* 2803  */ user_pref("privacy.clearOnShutdown.cookies", true); // clear cookies nn shutdown
+	/* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
+	/* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // height at start
 	/* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
 	/* 5000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 	/* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -161,10 +167,10 @@ EXTENSIONS:
 	/* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true);
 	/* 0850b */ user_pref("browser.urlbar.suggest.openpage", true);
 
-/*** ENTERPRISE SPECIFIC : Change comtrade.com to your domain(s) - comma separated ***/
+/*** ENTERPRISE SPECIFIC ***/
 	user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-	user_pref("network.negotiate-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO
-	user_pref("network.automatic-ntlm-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO
+	user_pref("network.negotiate-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO for comma separated domain list
+	user_pref("network.automatic-ntlm-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO for comma separated domain list
 	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 	user_pref("plugins.load_appdir_plugins", true); // enable Skype meeting open URL
 
