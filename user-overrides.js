@@ -77,17 +77,17 @@ EXTENSIONS:
 			About
 				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
-  CONTAINERS:
+  [PERSONAL CHOICE] CONTAINERS:
   	Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/stoically/multi-account-containers/)
   	Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   	Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
   		General
   			Automatic Mode: Check
-  			Container Name Prefix: %domain% #
-  			Random Container Color: Check
-  			Container Icon: fingerprint
-  			Container Number: Reuse available numbers
-  			Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+  			[PERSONAL CHOICE] Container Name Prefix: %domain% #
+  			[PERSONAL CHOICE] Random Container Color: Check
+  			[PERSONAL CHOICE] Container Icon: fingerprint
+  			[PERSONAL CHOICE] Container Number: Reuse available numbers
+  			[PERSONAL CHOICE] Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
   			Click [Save]
   		Isolation
   			Global
