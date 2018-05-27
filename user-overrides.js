@@ -132,7 +132,6 @@ EXTENSIONS:
 	/* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
 /*** BREAKAGE TWEAKS ***/
-	// /* ????  */ user_pref("security.sandbox.content.level", 4); // sandboxie.com doesn't work with FF 60 (default = 5)
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
 	/* 1202  */ user_pref("security.tls.version.min", 2); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
@@ -145,6 +144,7 @@ EXTENSIONS:
 	/* 2682  */ user_pref("security.csp.experimentalEnabled", false);
 	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 	/* 5000  */ user_pref("dom.disable_open_during_load", false); // enable popup
+	// /* 5000  */ user_pref("security.sandbox.content.level", 4); // sandboxie.com doesn't work with FF 60 (default = 5)
 
 /*** UPDATE ***/
 	/* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
