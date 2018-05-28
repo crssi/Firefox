@@ -99,12 +99,12 @@ EXTENSIONS:
 
 	PERSONAL CHOICE:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 	UNDER INVESTIGATION:
 		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/ (https://mybrowseraddon.com/change-timezone.html)
+		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol)
 
 ******/
