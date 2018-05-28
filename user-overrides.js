@@ -87,7 +87,7 @@ EXTENSIONS:
   			[PERSONAL CHOICE] Random Container Color: Check
   			[PERSONAL CHOICE] Container Icon: fingerprint
   			[PERSONAL CHOICE] Container Number: Reuse available numbers
-?  			[PERSONAL CHOICE] Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+  			[PERSONAL CHOICE] Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
   			Click [Save]
   		Isolation
   			Global
