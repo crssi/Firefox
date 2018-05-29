@@ -132,6 +132,7 @@ EXTENSIONS:
 	/* 5000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 	/* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
 	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true);
+	/* 5000  */ user_pref("network.manage-offline-status", false); // prevent FF to go into offline when loosing connection
 	/* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
 	/* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
 	/* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
