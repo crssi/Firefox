@@ -112,6 +112,7 @@ EXTENSIONS:
 
 /*** PERSONAL TWEAKS ***/
 	/* 0102  */ user_pref("browser.startup.page", 0); // set blank page at start up
+	/* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
 	/* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
 	/* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
 	/* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
@@ -161,7 +162,6 @@ EXTENSIONS:
 	/* 0807  */ user_pref("browser.search.suggest.enabled", true);
 	/* 0808  */ user_pref("browser.urlbar.suggest.searches", true);
 	/* 0850a */ user_pref("browser.urlbar.autocomplete.enabled", true);
-	/* 0850a */ user_pref("browser.urlbar.suggest.history", true);
 	/* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true);
 	/* 0850b */ user_pref("browser.urlbar.suggest.openpage", true);
 
