@@ -11,8 +11,8 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 2. Append this file to user.js that was downloaded on step 1.
 3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
 4. Firefox -> Settings -> Search
-		Default Search Engine = duckduckgo
-		One-Click Search Engines = delete all except DuckDuckGo
+		Default Search Engine: duckduckgo
+		One-Click Search Engines: delete all except DuckDuckGo
 5. Install essentials extensions (see Extensions section down bellow), review also extensions in other sections
 
 
