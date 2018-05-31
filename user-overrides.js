@@ -1,9 +1,9 @@
 /******
 HOME:      https://github.com/crssi/Firefox
 INFO:      Supplement for ghacks-user.js; 31.5.2017 (commit: 3264fbd); https://github.com/ghacksuserjs/ghacks-user.js
-IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
+IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/
            Extensions under Essential section are... Essential !!!
-SEE ALSO:  https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data
+SEE ALSO:  https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data/
 NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprinting to false
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -31,7 +31,7 @@ EXTENSIONS:
 		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://github.com/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
 		Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
-		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor); https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
+		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/); https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
 			Export and Import
 				Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
 				Import: Click [Save]
@@ -79,7 +79,7 @@ EXTENSIONS:
 				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
   [PERSONAL CHOICE] CONTAINERS:
-  	Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/stoically/multi-account-containers/)
+  	Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/mozilla/multi-account-containers/)
   	Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   	Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
   		General
@@ -106,7 +106,7 @@ EXTENSIONS:
 	UNDER INVESTIGATION:
 		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/ (https://mybrowseraddon.com/change-timezone.html)
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol)
+		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 
 ******/
 
