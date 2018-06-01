@@ -70,11 +70,11 @@ EXTENSIONS:
 				Show notifications for this many seconds: 10
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
-		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
+		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 			Settings
 				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
 				Insane mode: Tick the unchecked filters under Filter lists -> Custom (click + to expand)
-		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/
+		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/ (https://github.com/uBlockOrigin/uMatrix-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 			About
 				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
