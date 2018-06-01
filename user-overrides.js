@@ -110,6 +110,7 @@ EXTENSIONS:
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 
 		Missing graphic @ https://hardware.metrics.mozilla.com/
+		-||- https://www.soundsnap.com/tags/phone_ring
 
 ******/
 
