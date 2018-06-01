@@ -21,14 +21,16 @@
 @@||zdassets.com^$third-party,image,stylesheet
 
 ! ALLOW JS library, since they are covered by Decentraleyes WE
-@@||ajax.googleapis.com^$third-party,script
 @@||ajax.aspnetcdn.com^$third-party,script
+@@||ajax.googleapis.com^$third-party,script
 @@||ajax.microsoft.com^$third-party,script
+@@||ajax.proxy.ustclug.org^$third-party,script
+@@||cdn.jsdelivr.net^$third-party,script
 @@||cdnjs.cloudflare.com^$third-party,script
 @@||code.jquery.com^$third-party,script
-@@||cdn.jsdelivr.net^$third-party,script
-@@||yastatic.net^$third-party,script
-@@||yandex.st^$third-party,script
-@@||libs.baidu.com^$third-party,script
 @@||lib.sinaapp.com^$third-party,script
+@@||libs.baidu.com^$third-party,script
+@@||sdn.geekzu.org^$third-party,script
 @@||upcdn.b0.upaiyun.com^$third-party,script
+@@||yandex.st^$third-party,script
+@@||yastatic.net^$third-party,script
