@@ -105,6 +105,7 @@ EXTENSIONS:
 
 	UNDER INVESTIGATION:
 		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/ (https://mybrowseraddon.com/change-timezone.html)
+		Containerise; https://addons.mozilla.org/en-US/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 
