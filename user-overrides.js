@@ -21,7 +21,7 @@ EXTENSIONS:
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
 		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
 			Cookie Settings
-				Enable Automatic Cleaning? Delay Before Cleaning: Check, 10 Seconds
+				Enable Automatic Cleaning? Delay Before Cleaning: Check, 120 Seconds
 				Enable Cleanup on Domain Change: Check
 				Enable Cleanup Log and Counter: Uncheck
 				Show Number of Cookies for that Domain: Uncheck
