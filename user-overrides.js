@@ -109,6 +109,8 @@ EXTENSIONS:
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 
+		Missing graphic @ https://hardware.metrics.mozilla.com/
+
 ******/
 
 /*** PERSONAL TWEAKS ***/
