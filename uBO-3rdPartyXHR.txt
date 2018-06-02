@@ -5,8 +5,7 @@
 ||$third-party,xmlhttprequest
 
 ! Allow extensions like uBO/uM to get the filter list updates
-@||$third-party,xmlhttprequest,domain=moz-extension-scheme
-@@||hexxiumcreations.github.io^$third-party,xmlhttprequest,domain=moz-extension-scheme
+@@||$third-party,xmlhttprequest,domain=moz-extension-scheme
 
 @@weather*^$third-party,xmlhttprequest
 
