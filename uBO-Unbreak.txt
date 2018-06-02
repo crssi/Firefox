@@ -2,6 +2,9 @@
 ! Expires: 2 days
 ! Homepage: https://github.com/crssi/Firefox
 
+! Allow extensions like uBO/uM to get the filter list updates
+@@||$domain=moz-extension-scheme
+
 @@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
 @@||assets.adobedtm.com^$third-party,script
