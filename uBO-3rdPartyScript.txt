@@ -31,6 +31,7 @@
 @@||deviantart.net^$third-party,script,domain=deviantart.com
 @@||ebaystatic.com^$third-party,script,domain=ebay.com|ebay.de|ebay.co.uk
 @@||eu-wotp.wgcdn.co^$third-party,script,domain=worldoftanks.eu
+@@||files.upscore.com^$third-party,script
 @@||fncstatic.com^$third-party,script,subdocument,domain=foxnews.com
 @@||forbesimg.com^$third-party,script,domain=forbes.com
 @@||foxbusiness.com^$third-party,script,domain=foxnews.com
