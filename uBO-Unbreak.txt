@@ -23,6 +23,9 @@
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
 
+! https://github.com/metaphoricgiraffe/tracking-filters/issues/7
+@@||*/signalr/*$first-party,xmlhttprequest
+
 ! ALLOW JS library, since they are covered by Decentraleyes WE
 @@||ajax.aspnetcdn.com^$third-party,script
 @@||ajax.googleapis.com^$third-party,script
