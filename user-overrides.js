@@ -10,6 +10,7 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 2. Append this file to user.js that was downloaded on step 1.
 ? 3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
+		https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
 4. Firefox -> Settings -> Search
 		Default Search Engine: duckduckgo
 		One-Click Search Engines: delete all except DuckDuckGo
