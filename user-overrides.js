@@ -9,7 +9,7 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 2. Append this file to user.js that was downloaded on step 1.
-3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
+? 3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
 4. Firefox -> Settings -> Search
 		Default Search Engine: duckduckgo
 		One-Click Search Engines: delete all except DuckDuckGo
