@@ -18,6 +18,7 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 
 EXTENSIONS:
 	ESSENTIAL:
+		AudioContext Fingerprint Defender; https://addons.mozilla.org/firefox/addon/audioctx-fingerprint-defender/ (https://mybrowseraddon.com/audiocontext-defender.html); https://audiofingerprint.openwpm.com/
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
 		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
 			Cookie Settings
@@ -109,9 +110,6 @@ EXTENSIONS:
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 
-		Missing graphic @ https://hardware.metrics.mozilla.com/
-		-||- https://www.soundsnap.com/tags/phone_ring
-
 ******/
 
 /*** PERSONAL TWEAKS ***/
@@ -151,6 +149,7 @@ EXTENSIONS:
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
 	/* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable copy/cut/paste
+	/* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false except if using WE "AudioContext Fingerprint Defender" or simmilar
 	/* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
 	/* 2682  */ user_pref("security.csp.experimentalEnabled", false);
 	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
