@@ -16,11 +16,12 @@
 @@||aliapp.org^$third-party,script,domain=aliexpress.com
 @@||alicdn.com^$third-party,script,domain=aliexpress.com
 @@||alipay.com^$third-party,script,domain=aliexpress.com
-@@||alipsec.com^$third-party,script,domain=aliexpress.com
-@@||alipcsec.com:*^$third-party,script,domain=aliexpress.com
-@@||aliyun.com^$third-party,script,domain=aliexpress.com
 @@||alipayobjects.com^$third-party,script,domain=alipay.com
+@@||alipcsec.com:*^$third-party,script,domain=aliexpress.com
+@@||alipsec.com^$third-party,script,domain=aliexpress.com
+@@||aliyun.com^$third-party,script,domain=aliexpress.com
 @@||assets.gitlab-static.net^$third-party,script,domain=gitlab.com
+@@||blogsmithmedia.com^$third-party,script
 @@||bstatic.com^$third-party,script,domain=booking.com
 @@||c.s-microsoft.com^$third-party,script,domain=microsoft.com
 @@||cbsistatic.com^$third-party,script,domain=cnet.com
@@ -28,6 +29,7 @@
 @@||cloudfront.net^$third-party,script
 @@||cnbcfm.com^$third-party,script,domain=cnbc.com
 @@||comcast.com^$third-party,script,domain=xfinity.com
+@@||delivery.vidible.tv^$third-party,script
 @@||deviantart.net^$third-party,script,domain=deviantart.com
 @@||ebaystatic.com^$third-party,script,domain=ebay.com|ebay.de|ebay.co.uk
 @@||eu-wotp.wgcdn.co^$third-party,script,domain=worldoftanks.eu
