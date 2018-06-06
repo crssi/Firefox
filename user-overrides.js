@@ -9,8 +9,7 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 2. Append this file to user.js that was downloaded on step 1.
-? 3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
-		https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
+3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
 4. Firefox -> Settings -> Search
 		Default Search Engine: duckduckgo
 		One-Click Search Engines: delete all except DuckDuckGo
@@ -71,6 +70,7 @@ EXTENSIONS:
 				Enable popup: Uncheck
 				Show notifications for this many seconds: 10
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
+			or HTTPS by default; https://addons.mozilla.org/firefox/addon/https-by-default/ (https://github.com/Rob--W/https-by-default/)
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 			Settings
