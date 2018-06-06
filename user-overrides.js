@@ -90,8 +90,8 @@ EXTENSIONS:
   			[PERSONAL CHOICE] Container Name Prefix: %domain% #
   			[PERSONAL CHOICE] Random Container Color: Check
   			[PERSONAL CHOICE] Container Icon: fingerprint
-  			[PERSONAL CHOICE] Container Number: Reuse available numbers
-  			[PERSONAL CHOICE] Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+  			Container Number: Reuse available numbers
+  			Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
   			Click [Save]
   		Isolation
   			Global
@@ -101,14 +101,12 @@ EXTENSIONS:
   				Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
   				Click [Save]
 
-	PERSONAL CHOICE:
+	PERSONAL/INTERESTING CHOICES:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
+		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
-
-	UNDER INVESTIGATION:
-		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 
 ******/
 
