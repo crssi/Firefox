@@ -37,3 +37,4 @@ www.facebook.com###u_0_3z
 ##.cf.modal
 ##.underlay
 www.reddit.com##.cookie-infobar.with-btn.with-icon.md-container-small.reddit-infobar
+##.ng-star-inserted.cookies
