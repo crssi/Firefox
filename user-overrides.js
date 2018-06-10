@@ -101,9 +101,8 @@ EXTENSIONS:
   				Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
   				Click [Save]
 
-	PERSONAL/INTERESTING CHOICES:
+	SOME INTERESTING EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
