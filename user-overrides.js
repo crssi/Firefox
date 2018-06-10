@@ -71,7 +71,7 @@ EXTENSIONS:
 			Notifications
 				Enable popup: Uncheck
 				Show notifications for this many seconds: 10
-		* Use HTTPS by default instead: Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
+		* Use "HTTPS by default" instead: Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 			Settings
@@ -83,7 +83,7 @@ EXTENSIONS:
 
   [PERSONAL CHOICE] CONTAINERS:
 		Containerise; https://addons.mozilla.org/en-US/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-		* Use Containerise instead: Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/mozilla/multi-account-containers/)
+		* Use "Containerise" instead: Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/mozilla/multi-account-containers/)
   	Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   	Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
   		General
