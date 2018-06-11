@@ -66,6 +66,7 @@
 @@||sndimg.com^$third-party,script
 @@||sni-dat.com^$third-party,script
 @@||snidigital.com^$third-party,script
+@@||spiceworksstatic.com^$third-party,script,domain=spiceworks.com
 @@||ssl-images-amazon.com^$third-party,script
 @@||twimg.com^$third-party,script,domain=twitter.com
 @@||twitchcdn.net^$third-party,script,domain=twitch.tv
