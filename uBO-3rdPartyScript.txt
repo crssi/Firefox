@@ -75,6 +75,7 @@
 @@||vimeocdn.com^$third-party,script
 @@||wikipedia.org^$third-party,script
 @@||wp.com^$third-party,script
+@@||wsimg.com^$third-party,script,domain=godaddy.com
 @@||yimg.com^$third-party,script
 @@||yourshoutbox.com^$third-party,script
 @@||ytimg.com^$third-party,script
