@@ -54,6 +54,7 @@
 @@||msocdn.com^$third-party,script,domain=live.com|office.com
 @@||nbcuni.com^$third-party,script,domain=cnbc.com
 @@||nflxext.com^$third-party,script,domain=netflix.com
+@@||office.net^$third-party,script,domain=live.com
 @@||office365.com^$third-party,script,domain=live.com
 @@||platform.twitter.com/js/*$third-party,script
 @@||platform.twitter.com/widgets.js$third-party,script
