@@ -1,4 +1,9 @@
-!nonTLDs
+! Title: crssi: Deny
+! Expires: 2 days
+! Homepage: https://github.com/crssi/Firefox
+! https://raw.githubusercontent.com/crssi/Firefox/master/uM-Deny.txt
+
+!DOMAINs
 addthis.com
 
 !TLDs
