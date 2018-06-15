@@ -139,7 +139,7 @@ EXTENSIONS:
 
 /*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-	/* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
+	/* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1 - testing value of 2
 	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", true); // allow secure and non-secure content - remove this line
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", true); // allow secure and non-secure content; false - now testing true phase
