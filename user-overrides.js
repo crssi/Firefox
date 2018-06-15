@@ -142,7 +142,7 @@ EXTENSIONS:
 	/* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", true); // allow secure and non-secure content - remove this line
-	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
+	/* 1241  */ user_pref("security.mixed_content.block_display_content", true); // allow secure and non-secure content; false - now testing true phase
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
 	/* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable copy/cut/paste
