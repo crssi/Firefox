@@ -11,7 +11,7 @@ pxi.pub
 ! https://rawgit.com/gunesacar/01f75d8a57f13484283f5ab1474d22ea/raw/dd85dce582b137c922cf83ec9bac80c981abc4b9/canvas_fp_urls.html
 49winners.com
 addthis.com
-amazonaws.com
+!amazonaws.com
 cya2.net
 domainsigma.com
 freecall.com
@@ -103,7 +103,7 @@ am15.net
 amazon-adsystem.com
 amazon.co.uk
 amazon.fr
-amazonaws.com
+!amazonaws.com
 americanas.com.br
 amgdgt.com
 angsrvr.com
@@ -1205,9 +1205,9 @@ robertsspaceindustries.com
 rslt-tm.com
 rtbf.be
 runningbare.com.au
-s3-ap-northeast-1.amazonaws.com
-s3-ap-southeast-1.amazonaws.com
-s3-us-west-1.amazonaws.com
+!s3-ap-northeast-1.amazonaws.com
+!s3-ap-southeast-1.amazonaws.com
+!s3-us-west-1.amazonaws.com
 !s3.amazonaws.com
 sa-mp.im
 safe-swaps.com
