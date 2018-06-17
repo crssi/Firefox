@@ -26,6 +26,7 @@
 @@||c.s-microsoft.com^$third-party,script,domain=microsoft.com
 @@||cbsistatic.com^$third-party,script,domain=cnet.com
 @@||cdn.auth0.com^$third-party,script,domain=foxnews.com
+@@||client.hip.live.com/GetHIP/*$third-party,script
 @@||cloudfront.net^$third-party,script
 @@||cnbcfm.com^$third-party,script,domain=cnbc.com
 @@||comcast.com^$third-party,script,domain=xfinity.com

@@ -5,6 +5,7 @@
 ||$third-party,subdocument
 
 !@@||brightcove.com^$third-party,subdocument
+@@||*/lwa/WebPages/LwaClient.aspx$third-party,subdocument
 @@||accounts.google.*/ServiceLogin$third-party,subdocument
 @@||alicdn.com^$third-party,subdocument,domain=aliexpress.com
 @@||appspot.com^$third-party,subdocument,domain=cloud.google.com
@@ -43,6 +44,6 @@
 @@||wsimg.com^$third-party,subdocument,domain=godaddy.com
 @@||yimg.com^$third-party,subdocument,domain=yahoo.com
 @@||yourshoutbox.com^$third-party,subdocument
+@@||youtube-nocookie.com/embed/$third-party,subdocument
 @@||youtube.com/embed/$third-party,subdocument
 @@||youtubemp3api.com/@api/*$third-party,subdocument,domain=easy-youtube-mp3.com
-@@||youtube-nocookie.com/embed/$third-party,subdocument
