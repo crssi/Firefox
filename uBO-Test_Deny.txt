@@ -1,17 +1,17 @@
-! https://github.com/englehardt/cookies-that-give-you-away/blob/master/data/identity_leaks.txt
-! https://webtransparency.cs.princeton.edu/webcensus/
+!# https://github.com/englehardt/cookies-that-give-you-away/blob/master/data/identity_leaks.txt
+!# https://webtransparency.cs.princeton.edu/webcensus/
 
-! https://webtransparency.cs.princeton.edu/webcensus/audio_fp_scripts.html
+!# https://webtransparency.cs.princeton.edu/webcensus/audio_fp_scripts.html
 ad-score.com
 cdn-net.com
 liverail.com
 lrcdn.net
 pxi.pub
 
-! https://rawgit.com/gunesacar/01f75d8a57f13484283f5ab1474d22ea/raw/dd85dce582b137c922cf83ec9bac80c981abc4b9/canvas_fp_urls.html
+!# https://rawgit.com/gunesacar/01f75d8a57f13484283f5ab1474d22ea/raw/dd85dce582b137c922cf83ec9bac80c981abc4b9/canvas_fp_urls.html
 49winners.com
 addthis.com
-!amazonaws.com
+! amazonaws.com
 cya2.net
 domainsigma.com
 freecall.com
@@ -30,7 +30,7 @@ shorte.st
 vcmedia.vn
 voipbuster.com
 
-! https://securehomes.esat.kuleuven.be/~gacar/persistent/cookie_sync_domains.html
+!# https://securehomes.esat.kuleuven.be/~gacar/persistent/cookie_sync_domains.html
 01net.com
 0427d7.se
 1111.com.tw
@@ -100,7 +100,7 @@ am15.net
 amazon-adsystem.com
 amazon.co.uk
 amazon.fr
-!amazonaws.com
+! amazonaws.com
 americanas.com.br
 amgdgt.com
 angsrvr.com
@@ -750,14 +750,14 @@ zimbio.com
 zopim.com
 zwaar.net
 
-! https://webtransparency.cs.princeton.edu/webcensus/webrtc_scripts.html
+!# https://webtransparency.cs.princeton.edu/webcensus/webrtc_scripts.html
 2ip.com.ua
 2nyan.org
 4it.me
 activeconversion.com
 adthis.org
 advanced.name
-!alicdn.com
+! alicdn.com
 alipayobjects.com
 augur.io
 bancsabadell.com
@@ -823,7 +823,7 @@ williams-oliver.ru
 xn-xx.co
 xvideos.com
 
-! https://webtransparency.cs.princeton.edu/webcensus/font_scripts.html
+!# https://webtransparency.cs.princeton.edu/webcensus/font_scripts.html
 amegybank.com
 benefitsaccess.org
 cabforce.com
@@ -852,7 +852,7 @@ vcmedia.vn
 vectrabank.com
 zionsbank.com
 
-! https://webtransparency.cs.princeton.edu/webcensus/canvas_scripts.html
+!# https://webtransparency.cs.princeton.edu/webcensus/canvas_scripts.html
 100credit.com
 10bo1010.com
 126.net
@@ -875,7 +875,7 @@ affec.tv
 aixuedai.com
 alephbeta.org
 alfafile.net
-!alicdn.com
+! alicdn.com
 altayyaronline.com
 americanairlines.*
 anexia-it.com
@@ -1148,10 +1148,10 @@ robertsspaceindustries.com
 rslt-tm.com
 rtbf.be
 runningbare.com.au
-!s3-ap-northeast-1.amazonaws.com
-!s3-ap-southeast-1.amazonaws.com
-!s3-us-west-1.amazonaws.com
-!s3.amazonaws.com
+! s3-ap-northeast-1.amazonaws.com
+! s3-ap-southeast-1.amazonaws.com
+! s3-us-west-1.amazonaws.com
+! s3.amazonaws.com
 sa-mp.im
 safe-swaps.com
 saveinstore.com
