@@ -100,6 +100,7 @@ EXTENSIONS:
 				Multi-Account Containers
   				Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
   				Click [Save]
+		NOTE: CTRL+SHIFT+T = Undo closed tab(s)
 
 	SOME INTERESTING EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
