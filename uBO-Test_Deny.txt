@@ -590,7 +590,7 @@ similargroup.com
 similarweb.com
 simplereach.com
 simpli.fi
-sitepoint.com
+||sitepoint.com^third-party
 sitescout.com
 skimresources.com
 slate.com
