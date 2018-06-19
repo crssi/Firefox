@@ -15,7 +15,7 @@
 @@||fbcdn.*^$third-party,image,media
 @@||google.*^$domain=google.
 @@||gravatar.com^$third-party,image,stylesheet
-@@||content.jwplatform.com^$third-party,xmlhttprequest
+@@||content.jwplatform.com^$third-party,xmlhttprequest,script
 @@||maps.google.*/maps*$third-party,script,image
 @@||maps.googleapis.com/maps*$script,image,xmlhttprequest
 @@||mozilla.org^$third-party,xmlhttprequest,domain=mozilla.com
