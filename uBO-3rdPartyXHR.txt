@@ -50,6 +50,7 @@
 @@||olsvc.com^$third-party,xmlhttprequest,domain=live.com
 @@||paypalobjects.com^$third-party,xmlhttprequest,domain=paypal.com
 @@||piguiqproxy.com^$third-party,xmlhttprequest,domain=mp3pn.info
+@@||player.vimeo.com/external/*$third-party,xmlhttprequest
 @@||skype.com^$third-party,xmlhttprequest,domain=live.com
 @@||skypeassets.com^$third-party,xmlhttprequest,domain=live.com
 @@||sndcdn.com^$third-party,xmlhttprequest,domain=soundcloud.com
