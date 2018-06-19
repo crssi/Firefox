@@ -30,6 +30,7 @@
 @@||cloudfront.net^$third-party,script
 @@||cnbcfm.com^$third-party,script,domain=cnbc.com
 @@||comcast.com^$third-party,script,domain=xfinity.com
+@@||content.jwplatform.com^$third-party,script
 @@||delivery.vidible.tv^$third-party,script
 @@||deviantart.net^$third-party,script,domain=deviantart.com
 @@||ebaystatic.com^$third-party,script,domain=ebay.com|ebay.de|ebay.co.uk
