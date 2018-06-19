@@ -102,7 +102,7 @@ EXTENSIONS:
   				Click [Save]
 		NOTE: CTRL+SHIFT+T = Undo closed tab(s)
 
-	SOME INTERESTING EXTENSIONS:
+	INTERESTING EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
