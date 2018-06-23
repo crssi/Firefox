@@ -13,7 +13,7 @@
 @@||facebook.*^$domain=facebook.com
 @@||fbcdn.*^$domain=facebook.com
 @@||fbcdn.*^$third-party,image,media
-@@||google.*^$domain=google.
+@@||google.*^$domain=google.com
 @@||gravatar.com^$third-party,image,stylesheet
 @@||content.jwplatform.com^$third-party,xmlhttprequest,script
 @@||maps.google.*/maps*$third-party,script,image
