@@ -51,6 +51,7 @@
 @@||livejournal.net^$third-party,script,subdocument,domain=livejournal.com
 @@||maxcdn.bootstrapcdn.com^$third-party,script
 @@||media-amazon.com^$third-party,script
+@@||medium.com^$third-party,script
 @@||microsoft.*^$third-party,script,domain=live.com|office.com
 @@||microsoftonline*.com^$third-party,script,domain=microsoftonline.com
 @@||msocdn.com^$third-party,script,domain=live.com|office.com
