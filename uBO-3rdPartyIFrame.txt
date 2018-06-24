@@ -13,6 +13,7 @@
 @@||blogger.com/comment-iframe.$third-party,subdocument
 @@||braintreegateway.com^$third-party,subdocument
 @@||cldmail.ru^$third-party,subdocument,domain=mail.ru
+@@||checkfront.com/reserve/*$third-party,subdocument
 @@||dropbox.com*^$third-party,subdocument,domain=dropboxpayments.com
 @@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
 @@||giphy.com/embed/$third-party,subdocument
