@@ -29,6 +29,8 @@
 ||booster3000.si^$third-party
 ||calculoid.com^$third-party,script
 ||cdn-cnj.si^$third-party,script
+||checkfront.com/lib/Control.Geocoder*.js$third-party,script
+||checkfront.com/reserve/lib/jquery.cookie*.js$third-party,script
 ||chimpstatic.com^$third-party
 ||contentpass.net^$important
 ||delvenetworks.com^$third-party,script
@@ -40,9 +42,9 @@
 ||firebase.com^$third-party
 ||future-fie-assets.co.uk^$third-party
 ||gcdn.co^$third-party,script
+||google-analytics.*^$important
 ||google.*^$third-party
 ||googleadservices.*^$important
-||google-analytics.*^$important
 ||googlesyndication.*^$important
 ||googletagservices.*^$important
 ||gravatar.com^$third-party

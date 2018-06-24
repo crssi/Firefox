@@ -19,6 +19,7 @@
 @@||maps.google.*/maps*$third-party,script,image
 @@||maps.googleapis.com/maps*$script,image,xmlhttprequest
 @@||mozilla.org^$third-party,xmlhttprequest,domain=mozilla.com
+@@||omara.cdn-cnj.si^$third-party,script
 @@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
 @@||translate.googleusercontent.com
 @@||ytimg.com^$third-party,script

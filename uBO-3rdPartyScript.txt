@@ -7,6 +7,7 @@
 @@$third-party,script,domain=player.theplatform.com
 @@weather*^$third-party,script
 
+!@@||content.jwplatform.com^$third-party,script
 @@||account.azureedge.net^$third-party,script,domain=account.live.com
 @@||accounts-static.cdn.mozilla.net^$third-party,script,domain=accounts.firefox.com
 @@||addons-amo.cdn.mozilla.net^$third-party,script,domain=addons.mozilla.org
@@ -26,11 +27,11 @@
 @@||c.s-microsoft.com^$third-party,script,domain=microsoft.com
 @@||cbsistatic.com^$third-party,script,domain=cnet.com
 @@||cdn.auth0.com^$third-party,script,domain=foxnews.com
+@@||checkfront.com/lib/interface*.js$third-party,script
 @@||client.hip.live.com/GetHIP/*$third-party,script
 @@||cloudfront.net^$third-party,script
 @@||cnbcfm.com^$third-party,script,domain=cnbc.com
 @@||comcast.com^$third-party,script,domain=xfinity.com
-!@@||content.jwplatform.com^$third-party,script
 @@||delivery.vidible.tv^$third-party,script
 @@||deviantart.net^$third-party,script,domain=deviantart.com
 @@||ebaystatic.com^$third-party,script,domain=ebay.com|ebay.de|ebay.co.uk

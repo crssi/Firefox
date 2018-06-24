@@ -5,6 +5,7 @@
 ||$third-party,subdocument
 
 !@@||brightcove.com^$third-party,subdocument
+!@@||gfycat.com/ifr/*$third-party,subdocument
 @@||*/lwa/WebPages/LwaClient.aspx$third-party,subdocument
 @@||accounts.google.*/ServiceLogin$third-party,subdocument
 @@||alicdn.com^$third-party,subdocument,domain=aliexpress.com
@@ -16,7 +17,6 @@
 @@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
 @@||giphy.com/embed/$third-party,subdocument
 @@||github.*^$third-party,subdocument,domain=github.com
-!@@||gfycat.com/ifr/*$third-party,subdocument
 @@||google.*/maps/*$third-party,subdocument
 @@||google.*/recaptcha/$third-party,subdocument
 @@||googleapis.com^$third-party,subdocument,domain=google.com|google.si
