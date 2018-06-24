@@ -16,6 +16,7 @@
 @@||checkfront.com/reserve/*$third-party,subdocument
 @@||dropbox.com*^$third-party,subdocument,domain=dropboxpayments.com
 @@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
+@@||fncstatic.com^$third-party,subdocument,domain=foxnews.com
 @@||giphy.com/embed/$third-party,subdocument
 @@||github.*^$third-party,subdocument,domain=github.com
 @@||google.*/maps/*$third-party,subdocument
