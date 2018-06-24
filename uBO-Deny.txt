@@ -97,6 +97,7 @@
 ||themessagecloud.com^$third-party
 ||tinymce.com^$third-party
 ||trustpilot.com^$third-party
+||twitter.*^$third-party
 ||unpkg.com^$third-party
 ||upscore.com^$third-party
 ||urbanairship.com^$third-party
