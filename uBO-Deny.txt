@@ -29,8 +29,8 @@
 ||booster3000.si^$third-party
 ||calculoid.com^$third-party,script
 ||cdn-cnj.si^$third-party,script
-||checkfront.com/lib/Control.Geocoder*.js$third-party,script
-||checkfront.com/reserve/lib/jquery.cookie*.js$third-party,script
+||*checkfront.com/lib/Control.Geocoder$third-party,script
+||*checkfront.com/reserve/lib/jquery.cookie$third-party,script
 ||chimpstatic.com^$third-party
 ||contentpass.net^$important
 ||delvenetworks.com^$third-party,script
