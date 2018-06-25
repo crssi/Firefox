@@ -1,8 +1,8 @@
 /******
 * name: ghacks user.js
 * date: 30 May 2018
-* version 60: Call Me Pants, Maybe
-*   "Your stare was holding, ripped JEANS, skin was showin'"
+* version 61-alpha: You Can't Hurry Pants
+*   "My mama said, "You can't hurry pants. No, you'll just have to wait""
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -227,7 +227,6 @@ user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozi
  * As Firefox transitions to Kinto, the blocklists have been broken down into entries for certs to be
  * revoked, extensions and plugins to be disabled, and gfx environments that cause problems or crashes ***/
 user_pref("services.blocklist.update_enabled", true);
-user_pref("services.blocklist.signing.enforced", true);
 /* 0403: disable individual unwanted/unneeded parts of the Kinto blocklists ***/
    // user_pref("services.blocklist.onecrl.collection", ""); // revoked certificates
    // user_pref("services.blocklist.addons.collection", "");
@@ -471,7 +470,8 @@ user_pref("network.proxy.autoconfig_url.include_path", false); // default: false
  * TRR = Trusted Recursive Resolver
  * .mode: 0=off, 1=race, 2=TRR first, 3=TRR only, 4=race for stats, but always use native result
  * [WARNING] DoH bypasses hosts and gives info to yet another party (e.g. Cloudflare)
- * [1] https://www.ghacks.net/2018/04/02/configure-dns-over-https-in-firefox/ ***/
+ * [1] https://www.ghacks.net/2018/04/02/configure-dns-over-https-in-firefox/
+ * [2] https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/ ***/
    // user_pref("network.trr.mode", 0);
    // user_pref("network.trr.bootstrapAddress", "");
    // user_pref("network.trr.uri", "");
@@ -1086,7 +1086,7 @@ user_pref("dom.popup_allowed_events", "click dblclick");
      including service and shared workers. Shared workers can be utilized by multiple scripts and
      communicate between browsing contexts (windows/tabs/iframes) and can even control your cache.
 
-     [WARNING] Disabling workers *will* break sites (e.g. Google Street View, Twitter).
+     [WARNING] Disabling "web workers" might break sites
      [UPDATE] uMatrix 1.2.0+ allows a per-scope control for workers (2301-deprecated) and service workers (2302)
               #Required reading [#] https://github.com/gorhill/uMatrix/releases/tag/1.2.0
 
@@ -1419,7 +1419,6 @@ user_pref("dom.caches.enabled", false);
  * [2] https://developer.mozilla.org/docs/Web/API/Storage_API
  * [3] https://blog.mozilla.org/l10n/2017/03/07/firefox-l10n-report-aurora-54/ ***/
    // user_pref("dom.storageManager.enabled", false); // (FF51+)
-   // user_pref("browser.storageManager.enabled", false); // controls "Site Data" UI visibility (FF53+)
 
 /*** 2800: SHUTDOWN [SETUP]
      You should set the values to what suits you best. Be aware that the settings below clear
@@ -2104,6 +2103,7 @@ user_pref("extensions.shield-recipe-client.api_url", "");
    // [-] https://bugzilla.mozilla.org/1433324
 user_pref("browser.newtabpage.activity-stream.enabled", false);
 // 2301: disable workers
+   // [WARNING] Disabling workers *will* break sites (e.g. Google Street View, Twitter)
    // [NOTE] CVE-2016-5259, CVE-2016-2812, CVE-2016-1949, CVE-2016-5287 (fixed)
    // [-] https://bugzilla.mozilla.org/1434934
 user_pref("dom.workers.enabled", false);
@@ -2118,7 +2118,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 31.5.2017 (commit: 3264fbd); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 20.6.2017 (commit: 05021ac); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data/
@@ -2126,20 +2126,22 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
-2. Append this file to user.js that was downloaded on step 1.
-3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name
+2. Append this file to user.js that was downloaded in step 1.
+3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
 4. Firefox -> Settings -> Search
 		Default Search Engine: duckduckgo
 		One-Click Search Engines: delete all except DuckDuckGo
-5. Install essentials extensions (see Extensions section down bellow), review also extensions in other sections
+5. Install essentials extensions (see Extensions section down bellow) and setup by instructions
+6. In enterprise organizations add domain list to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
 
 
 EXTENSIONS:
 	ESSENTIAL:
+		AudioContext Fingerprint Defender; https://addons.mozilla.org/firefox/addon/audioctx-fingerprint-defender/ (https://mybrowseraddon.com/audiocontext-defender.html); https://audiofingerprint.openwpm.com/
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
 		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
 			Cookie Settings
-				Enable Automatic Cleaning? Delay Before Cleaning: Check, 10 Seconds
+				Enable Automatic Cleaning? Delay Before Cleaning: Check, 120 Seconds
 				Enable Cleanup on Domain Change: Check
 				Enable Cleanup Log and Counter: Uncheck
 				Show Number of Cookies for that Domain: Uncheck
@@ -2188,16 +2190,17 @@ EXTENSIONS:
 				Show notifications for this many seconds: 10
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
-		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions)
+		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 			Settings
 				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
 				Insane mode: Tick the unchecked filters under Filter lists -> Custom (click + to expand)
-		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/
+		uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/ (https://github.com/uBlockOrigin/uMatrix-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 			About
 				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
   [PERSONAL CHOICE] CONTAINERS:
-  	Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/mozilla/multi-account-containers/)
+		Containerise; https://addons.mozilla.org/en-US/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
+		* Use "Containerise" instead: Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/mozilla/multi-account-containers/)
   	Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   	Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
   		General
@@ -2205,8 +2208,8 @@ EXTENSIONS:
   			[PERSONAL CHOICE] Container Name Prefix: %domain% #
   			[PERSONAL CHOICE] Random Container Color: Check
   			[PERSONAL CHOICE] Container Icon: fingerprint
-  			[PERSONAL CHOICE] Container Number: Reuse available numbers
-  			[PERSONAL CHOICE] Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+  			Container Number: Reuse available numbers
+  			Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
   			Click [Save]
   		Isolation
   			Global
@@ -2215,16 +2218,13 @@ EXTENSIONS:
 				Multi-Account Containers
   				Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
   				Click [Save]
+		NOTE: CTRL+SHIFT+T = Undo closed tab(s)
 
-	PERSONAL CHOICE:
+	INTERESTING EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
+		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
-
-	UNDER INVESTIGATION:
-		Change Timezone (Time Shift); https://addons.mozilla.org/firefox/addon/change-timezone-time-shift/ (https://mybrowseraddon.com/change-timezone.html)
-		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 
 ******/
 
@@ -2258,18 +2258,19 @@ EXTENSIONS:
 
 /*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-	/* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
+	// /* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1 - testing value of 2
 	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
-	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
-	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
+	// /* 1240  */ user_pref("security.mixed_content.block_active_content", true); // allow secure and non-secure content - remove this line
+	// /* 1241  */ user_pref("security.mixed_content.block_display_content", true); // allow secure and non-secure content; false - now testing true phase
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
-	/* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable copy/cut/paste
+	// /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable copy/cut/paste
+	/* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false except if using WE "AudioContext Fingerprint Defender" or simmilar
 	/* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
 	/* 2682  */ user_pref("security.csp.experimentalEnabled", false);
-	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
-	/* 5000  */ user_pref("dom.disable_open_during_load", false); // enable popup
-	// /* 5000  */ user_pref("security.sandbox.content.level", 4); // sandboxie.com doesn't work with FF 60 (default = 5)
+	/* 4001??*/ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
+	// /* 5000  */ user_pref("dom.disable_open_during_load", false); // enable popup
+	/* 5000  */ user_pref("security.sandbox.content.level", 4); // sandboxie.com doesn't work with FF 60 (default = 5)
 
 /*** UPDATE ***/
 	/* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
@@ -2287,8 +2288,8 @@ EXTENSIONS:
 
 /*** ENTERPRISE SPECIFIC ***/
 	user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-	user_pref("network.negotiate-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO for comma separated domain list
-	user_pref("network.automatic-ntlm-auth.trusted-uris", "comtrade.com, comtradecloud.com"); // enable SSO for comma separated domain list
+	user_pref("network.negotiate-auth.trusted-uris", "comtrade.com,comtradecloud.com"); // enable SSO for comma separated domain list
+	user_pref("network.automatic-ntlm-auth.trusted-uris", "comtrade.com,comtradecloud.com"); // enable SSO for comma separated domain list
 	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 	user_pref("plugins.load_appdir_plugins", true); // enable Skype meeting open URL
 
