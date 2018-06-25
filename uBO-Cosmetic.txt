@@ -38,3 +38,4 @@ www.facebook.com###u_0_3z
 ##.underlay
 www.reddit.com##.cookie-infobar.with-btn.with-icon.md-container-small.reddit-infobar
 ##.ng-star-inserted.cookies
+###cookie_module
