@@ -80,6 +80,7 @@
 @@||uvnimg.com^$third-party,script
 @@||vimeocdn.com^$third-party,script
 @@||wikipedia.org^$third-party,script
+@@||wgcdn.co^$third-party,script,domain=wargaming.net
 @@||wp.com^$third-party,script
 @@||wsimg.com^$third-party,script,domain=godaddy.com
 @@||yimg.com^$third-party,script
