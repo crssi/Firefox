@@ -44,28 +44,29 @@ EXTENSIONS:
 		Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
 		Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
 			Blacklist (Append):
-				action=login
+				_sso=
+				/_login
 				/adfs/ls/
+				/openid/
+				/saml/
+				/SAML2/
+				/sso/
+				/websso/
+				/wsfederation
+				action=login
 				archive.org/
 				chart.googleapis.com/chart
 				cred_submit
-				/_login
 				logout=
 				medium.com/
 				microsofttranslator.com/
-				/openid/
 				paypal.com/
 				rover.ebay.co
 				securityheaders.com/
-				/saml/
-				/SAML2/
-				_sso=
-				/sso/
+				ssllabs.com/
 				t.umblr.com/redirect
 				translate.google.com/
 				virustotal.com/
-				/websso/
-				/wsfederation
 				youtube.com/embed/
 			Notifications
 				Enable popup: Uncheck
