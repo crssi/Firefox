@@ -22,6 +22,7 @@
 @@||mozilla.org^$third-party,xmlhttprequest,domain=mozilla.com
 @@||omara.cdn-cnj.si^$third-party,script
 @@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
+@@||platform.twitter.com^$third-party,stylesheet
 @@||translate.googleusercontent.com
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
