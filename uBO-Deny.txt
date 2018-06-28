@@ -128,7 +128,7 @@
 ||co.nz^$important
 ||co.ua^$important
 ||co^
-@@||eu-wotp.wgcdn.co^$domain=worldoftanks.eu
+@@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
 ||com.au^$important
 ||com.tw^$important
 ||computer^$important
