@@ -45,6 +45,7 @@
 @@||mega.co.nz^$third-party,xmlhttprequest,domain=mega.nz
 @@||microsoft.*^$third-party,xmlhttprequest,domain=live.com|office.com|office365.com|sharepoint.com
 @@||mozilla.*^$third-party,xmlhttprequest,domain=mozilla.org
+@@||netdna.bootstrapcdn.com^$third-party,script,domain=gsmarena.com
 @@||nflxext.com^$third-party,xmlhttprequest,domain=netflix.com
 @@||office.com^$third-party,xmlhttprequest,domain=live.com
 @@||office365.com^$third-party,xmlhttprequest,domain=live.com
