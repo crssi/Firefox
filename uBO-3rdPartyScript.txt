@@ -61,6 +61,7 @@
 @@||nflxext.com^$third-party,script,domain=netflix.com
 @@||office.net^$third-party,script,domain=live.com
 @@||office365.com^$third-party,script,domain=live.com
+@@||paypalobjects.com^$third-party,script
 @@||platform.twitter.com/js/*$third-party,script
 @@||platform.twitter.com/widgets.js$third-party,script
 @@||player.theplatform.com^$third-party,script
