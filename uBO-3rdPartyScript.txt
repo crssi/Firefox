@@ -69,6 +69,7 @@
 @@||redditstatic.com^$third-party,script,domain=reddit.com|redditmedia.com
 @@||scribdassets.com^$third-party,script,domain=scribd.com
 @@||skype.com^$third-party,script,domain=live.com
+@@||sndcdn.com^$third-party,script,domain=soundcloud.com
 @@||sndimg.com^$third-party,script
 @@||sni-dat.com^$third-party,script
 @@||snidigital.com^$third-party,script
