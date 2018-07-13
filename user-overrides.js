@@ -155,7 +155,7 @@ EXTENSIONS:
 	/* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false except if using WE "AudioContext Fingerprint Defender" or simmilar
 	/* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
 	/* 2682  */ user_pref("security.csp.experimentalEnabled", false);
-	/* 4001??*/ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
+	/* 4001 ?*/ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 	// /* 5000 -*/ user_pref("dom.disable_open_during_load", false); // enable popup
 	/* 5000 -*/ user_pref("security.sandbox.content.level", 5); // sandboxie.com doesn't work with FF 60 (default = 5); resolved in Sandboxie 5.26
 
