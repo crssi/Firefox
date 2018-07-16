@@ -19,7 +19,6 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 
 EXTENSIONS:
 	ESSENTIAL:
-		AudioContext Fingerprint Defender; https://addons.mozilla.org/firefox/addon/audioctx-fingerprint-defender/ (https://mybrowseraddon.com/audiocontext-defender.html); https://audiofingerprint.openwpm.com/
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
 		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
 			Cookie Settings
