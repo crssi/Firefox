@@ -173,7 +173,7 @@
 ||ren^$important
 ||review^$important
 ||rocks^$important
-||ru^$important
+!||ru^$important
 ||science^$important
 ||site^$important
 ||solutions^$important
