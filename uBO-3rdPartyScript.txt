@@ -66,6 +66,7 @@
 @@||platform.twitter.com/widgets.js$third-party,script
 @@||player.theplatform.com^$third-party,script
 @@||players.brightcove.net^$third-party,script
+@@||razerzone.com^$third-party,script,domain=razer.com
 @@||redditstatic.com^$third-party,script,domain=reddit.com|redditmedia.com
 @@||scribdassets.com^$third-party,script,domain=scribd.com
 @@||skype.com^$third-party,script,domain=live.com
