@@ -108,6 +108,7 @@ EXTENSIONS:
 
 	INTERESTING EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
+		Detect Cloudflare; https://addons.mozilla.org/firefox/addon/detect-cloudflare/ (https://github.com/traktofon/cf-detect)
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
