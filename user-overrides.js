@@ -53,9 +53,11 @@ EXTENSIONS:
 				/websso/
 				/wsfederation
 				action=login
-				archive.org/
-				chart.googleapis.com/chart
 				cred_submit
+				https://archive.is/
+				https://chart.googleapis.com/chart
+				https://web.archive.org/
+				https://webcache.googleusercontent.com/
 				logout=
 				medium.com/
 				microsofttranslator.com/
