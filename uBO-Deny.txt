@@ -173,7 +173,7 @@
 ||ren^
 ||review^
 ||rocks^
-!||ru^
+||ru^$domain=~mail.ru
 ||science^
 ||site^
 ||solutions^
