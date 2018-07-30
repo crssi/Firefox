@@ -12,8 +12,8 @@
 @@||appspot.com^$third-party,subdocument,domain=cloud.google.com
 @@||blogger.com/comment-iframe.$third-party,subdocument
 @@||braintreegateway.com^$third-party,subdocument
-@@||cldmail.ru^$third-party,subdocument,domain=mail.ru
 @@||checkfront.com/reserve/*$third-party,subdocument
+@@||cldmail.ru^$third-party,subdocument,domain=mail.ru
 @@||dropbox.com*^$third-party,subdocument,domain=dropboxpayments.com
 @@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
 @@||fncstatic.com^$third-party,subdocument,domain=foxnews.com
@@ -40,6 +40,8 @@
 @@||sharepoint.com^$third-party,subdocument,domain=live.com
 @@||skype.com^$third-party,subdocument,domain=live.com
 @@||soundcloud.com/player/*$third-party,subdocument
+@@||stripe.com^$third-party,subdocument
+@@||stripe.network^$third-party,subdocument,domain=stripe.com
 @@||tickcounter.com^$third-party,subdocument
 @@||tumblr.com^$third-party,subdocument,domain=instagram.com
 @@||twitter.com/i/videos/$third-party,subdocument

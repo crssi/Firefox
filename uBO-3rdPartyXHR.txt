@@ -16,8 +16,8 @@
 @@||algolianet.com^$third-party,xmlhttprequest,domain=fanatical.com
 @@||algolianet.com^$third-party,xmlhttprequest,domain=fontawesome.com
 @@||aliapp.org^$third-party,xmlhttprequest,domain=aliexpress.com
-@@||alicdn.com^$third-party,xmlhttprequest,domain=aliexpress.com
 @@||alicdn.com/ae-login/*$third-party,xmlhttprequest
+@@||alicdn.com^$third-party,xmlhttprequest,domain=aliexpress.com
 @@||alipay.com^$third-party,xmlhttprequest,domain=aliexpress.com
 @@||amazonaws.com^$third-party,xmlhttprequest
 @@||amazonaws.com^$third-party,xmlhttprequest,domain=github.com
@@ -50,13 +50,17 @@
 @@||office.com^$third-party,xmlhttprequest,domain=live.com
 @@||office365.com^$third-party,xmlhttprequest,domain=live.com
 @@||olsvc.com^$third-party,xmlhttprequest,domain=live.com
+@@||payments-*.amazon.com^$third-party,xmlhttprequest
 @@||paypalobjects.com^$third-party,xmlhttprequest
 @@||piguiqproxy.com^$third-party,xmlhttprequest,domain=mp3pn.info
 @@||player.vimeo.com/external/*$third-party,xmlhttprequest
+@@||runkitcdn.com^$third-party,xmlhttprequest
 @@||skype.com^$third-party,xmlhttprequest,domain=live.com
 @@||skypeassets.com^$third-party,xmlhttprequest,domain=live.com
 @@||sndcdn.com^$third-party,xmlhttprequest,domain=soundcloud.com
 @@||sourcegraph.com^$third-party,xmlhttprequest,domain=github.com
+@@||stripe.com^$third-party,xmlhttprequest,domain=stripe.network
+@@||stripensrq.global.ssl.fastly.net^$third-party,xmlhttprequest,domain=stripe.network
 @@||tech26.de^$third-party,xmlhttprequest,domain=n26.com
 @@||ttvnw.net^$third-party,xmlhttprequest
 @@||twitchcdn.net^$third-party,xmlhttprequest

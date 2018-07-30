@@ -8,6 +8,7 @@
 @@weather*^$third-party,script
 
 !@@||content.jwplatform.com^$third-party,script
+@@||account.amazon.com^$third-party,script
 @@||account.azureedge.net^$third-party,script,domain=account.live.com
 @@||accounts-static.cdn.mozilla.net^$third-party,script,domain=accounts.firefox.com
 @@||addons-amo.cdn.mozilla.net^$third-party,script,domain=addons.mozilla.org
@@ -61,6 +62,8 @@
 @@||nflxext.com^$third-party,script,domain=netflix.com
 @@||office.net^$third-party,script,domain=live.com
 @@||office365.com^$third-party,script,domain=live.com
+@@||payments-*.amazon.com^$third-party,script
+@@||payments-amazon.com^$third-party,script
 @@||paypalobjects.com^$third-party,script
 @@||platform.twitter.com/js/*$third-party,script
 @@||platform.twitter.com/widgets.js$third-party,script
@@ -76,14 +79,15 @@
 @@||snidigital.com^$third-party,script
 @@||spiceworksstatic.com^$third-party,script,domain=spiceworks.com
 @@||ssl-images-amazon.com^$third-party,script
+@@||stripe.com^$third-party,script
 @@||twimg.com^$third-party,script,domain=twitter.com
 @@||twitchcdn.net^$third-party,script,domain=twitch.tv
 @@||twitchsvc.net^$third-party,script,domain=twitch.tv
 @@||univision.com^$third-party,script
 @@||uvnimg.com^$third-party,script
 @@||vimeocdn.com^$third-party,script
-@@||wikipedia.org^$third-party,script
 @@||wgcdn.co^$third-party,script,domain=wargaming.net
+@@||wikipedia.org^$third-party,script
 @@||wp.com^$third-party,script
 @@||wsimg.com^$third-party,script,domain=godaddy.com
 @@||yimg.com^$third-party,script
