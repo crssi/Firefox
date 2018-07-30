@@ -125,7 +125,7 @@
 ||cm^$important
 ||co.in^$important
 ||co.mz^$important
-||co.nz^$important
+!||co.nz^$important
 ||co.ua^$important
 ||co^$domain=~schizofreni.co
 ||com.au^$important
