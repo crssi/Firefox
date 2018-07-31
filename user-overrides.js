@@ -3,7 +3,7 @@ HOME:      https://github.com/crssi/Firefox
 INFO:      Supplement for ghacks-user.js; 17.7.2017 (commit: cbea3ad); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/
            Extensions under Essential section are... Essential !!!
-SEE ALSO:  https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data/
+SEE ALSO:  https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/
 NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprinting to false
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -83,7 +83,7 @@ EXTENSIONS:
 				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
   [PERSONAL CHOICE] CONTAINERS:
-		Containerise; https://addons.mozilla.org/en-US/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
+		Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
 		* Use "Containerise" instead of: Firefox Multi-Account Containers; https://addons.mozilla.org/firefox/addon/multi-account-containers/ (https://github.com/mozilla/multi-account-containers/)
   	Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   	Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
