@@ -8,7 +8,9 @@
 @@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
 @@||assets.adobedtm.com^$third-party,script
+@@||cdn.nrholding.net/*/*/$third-party,image
 @@||cloudfront.net$third-party,image,font,stylesheet
+@@||content.jwplatform.com^$third-party,xmlhttprequest,script
 @@||drive.google.com^$third-party,image
 @@||facebook.*^$domain=facebook.com
 @@||fbcdn.*^$domain=facebook.com
@@ -16,7 +18,6 @@
 @@||google.*^$domain=google.com
 @@||google.*^$third-party,script,domain=youtube.com
 @@||gravatar.com^$third-party,image,stylesheet
-@@||content.jwplatform.com^$third-party,xmlhttprequest,script
 @@||jwpcdn.com^$third-party,font
 @@||maps.google.*/maps*$third-party,script,image
 @@||maps.googleapis.com/maps*$script,image,xmlhttprequest
