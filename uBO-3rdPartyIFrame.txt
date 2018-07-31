@@ -28,6 +28,7 @@
 @@||ishoutbox.com^$third-party,subdocument
 @@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
 @@||live.com^$third-party,subdocument,domain=microsoft.com
+@@||mapsengine.google.com/map/embed$third-party,subdocument
 @@||mozilla.*^$third-party,subdocument,domain=mozilla.org
 @@||mozillademos.org^$third-party,subdocument,domain=mozilla.org
 @@||office.com^$third-party,subdocument,domain=microsoftonline.com
