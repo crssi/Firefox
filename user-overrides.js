@@ -118,6 +118,7 @@ EXTENSIONS:
 	INVESTIGATE:
 		Claire; https://addons.mozilla.org/firefox/addon/cloudflare-claire/ (https://github.com/cloudflare/claire)
 		Detect Cloudflare; https://addons.mozilla.org/firefox/addon/detect-cloudflare/ (https://github.com/traktofon/cf-detect)
+		Universal Bypass; https://addons.mozilla.org/firefox/addon/universal-bypass/ (https://universal-bypass.org/)
 
 ******/
 
