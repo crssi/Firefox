@@ -108,7 +108,7 @@
 ||zdassets.com^$third-party
 ||zendesk.com^$third-party
 
-!Blocked TLDs, https://github.com/Erulezz/directadmin-spamassassin-block-tlds
+!Blocked TLDs, https://github.com/Erulezz/directadmin-spamassassin-block-tlds and https://www.spamhaus.org/statistics/tlds/
 ||accountant^
 ||ar^
 ||bg^
@@ -118,7 +118,7 @@
 ||br^
 ||camera^
 ||cc^
-||cf^
+||cf^$important
 ||christmas^
 ||click^
 ||club^
@@ -133,17 +133,18 @@
 ||computer^
 ||country^
 ||cricket^
-||date^
+||date^$important
 ||diet^
 ||download^
 ||email^
 ||es^
 ||faith^
-||ga^
+||fun^$important
+||ga^$important
 ||gb^
 ||gdn^
 ||global^
-||gq^
+||gq^$important
 ||guru^
 ||help^
 ||in^
@@ -155,8 +156,8 @@
 ||loan^
 ||lol^
 ||media^
-||men^
-||ml^
+||men^$important
+||ml^$important
 ||mom^
 ||news^
 ||ninja^
@@ -171,7 +172,7 @@
 ||realtor^
 ||reise^
 ||ren^
-||review^
+||review^$important
 ||rocks^
 ||ru^$domain=~mail.ru
 ||science^
@@ -180,7 +181,7 @@
 ||space^
 ||stream^
 ||tech^
-||tk^
+||tk^$important
 ||today^
 ||top^
 ||tr^
@@ -196,4 +197,5 @@
 ||work^
 ||xin^
 ||xyz^
+||yokohama^$important
 ||zip^
