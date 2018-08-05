@@ -1,1 +1,0 @@
-# See https://raw.githubusercontent.com/meh/smart-referer/gh-pages/whitelist.txt
