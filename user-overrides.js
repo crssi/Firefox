@@ -163,7 +163,6 @@ EXTENSIONS:
 	/* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
 	/* 2682  */ user_pref("security.csp.experimentalEnabled", false);
 	/* 4001 ?*/ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
-	/* 5000 -*/ user_pref("security.sandbox.content.level", 5); // sandboxie.com doesn't work with FF 60 (default = 5); resolved in Sandboxie 5.26
 
 /*** UPDATE ***/
 	/* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
