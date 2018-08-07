@@ -127,7 +127,7 @@ EXTENSIONS:
 	/* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
 	/* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
 	/* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-	// /* 2701  */ user_pref("network.cookie.cookieBehavior", 0); // block 3rd party with uM and deal with 1st party cookies using WE (C-AD)
+	/* 2701  */ user_pref("network.cookie.cookieBehavior", 1); // block 3rd party with uM and deal with 1st party cookies using WE (C-AD)
 	/* 2803  */ user_pref("privacy.clearOnShutdown.cookies", true); // clear cookies on shutdown
 	/* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
 	/* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // height at start
