@@ -104,10 +104,6 @@ EXTENSIONS:
   				Click [Save]
 		NOTE: CTRL+SHIFT+T = Undo closed tab(s)
 
-		Facebook Container; https://addons.mozilla.org/firefox/addon/facebook-container/
-		Google Container; https://addons.mozilla.org/firefox/addon/google-container
-		Twitter Container; https://addons.mozilla.org/firefox/addon/twitter-container/
-
 	INTERESTING EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
 		Detect Cloudflare; https://addons.mozilla.org/firefox/addon/detect-cloudflare/ (https://github.com/traktofon/cf-detect)
