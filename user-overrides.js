@@ -124,7 +124,6 @@ EXTENSIONS:
 	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party extension, like uM or Smart Referer
 	/* 1701  */ user_pref("privacy.userContext.ui.enabled", true); // enable Container Tabs setting in preferences
 	/* 1702  */ user_pref("privacy.userContext.enabled", true); // Enable Container Tabs
-	/* 1703  */ user_pref("privacy.usercontext.about_newtab_segregation.enabled", true); // enable a private container for thumbnail loads
 	/* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
 	/* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
 	/* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
