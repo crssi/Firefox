@@ -115,7 +115,6 @@ EXTENSIONS:
 ******/
 
 /*** PERSONAL TWEAKS ***/
-	// /* 0102 -*/ user_pref("browser.startup.page", 0); // set blank page at start up
 	/* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
 	/* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
 	/* 0701  */ user_pref("network.dns.disableIPv6", true); // disable IPv6
