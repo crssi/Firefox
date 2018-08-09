@@ -116,11 +116,10 @@ EXTENSIONS:
 /*** PERSONAL TWEAKS ***/
 	/* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
 	/* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
-	/* 0701  */ user_pref("network.dns.disableIPv6", true); // disable IPv6
 	/* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
 	/* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
 	/* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
-	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party extension, like uM or Smart Referer
+	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
 	/* 1701  */ user_pref("privacy.userContext.ui.enabled", true); // enable Container Tabs setting in preferences
 	/* 1702  */ user_pref("privacy.userContext.enabled", true); // Enable Container Tabs
 	/* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
@@ -142,8 +141,6 @@ EXTENSIONS:
 
 /*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-	/* 1202 -*/ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
-	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
@@ -173,6 +170,9 @@ EXTENSIONS:
 	user_pref("plugins.load_appdir_plugins", true); // enable Skype meeting open URL
 
 /*** INVESTIGATE ***/
+	/* 0701  */ user_pref("network.dns.disableIPv6", true); // disable IPv6
+	/* 1202 -*/ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
+	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	/* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
 	/* 2654  */ user_pref("browser.download.forbid_open_with", false); // enable to open download content
 	// /* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
