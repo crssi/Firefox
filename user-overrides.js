@@ -104,7 +104,7 @@ EXTENSIONS:
   				Click [Save]
 		NOTE: CTRL+SHIFT+T = Undo closed tab(s)
 
-	INTERESTING EXTENSIONS:
+	USEFUL EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
