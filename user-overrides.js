@@ -145,7 +145,6 @@ EXTENSIONS:
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
 	/* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false except if using WE "AudioContext Fingerprint Defender" or simmilar
 	/* 2682  */ user_pref("security.csp.experimentalEnabled", false);
-	/* 4001 ?*/ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 
 /*** UPDATE ***/
 	/* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
@@ -170,12 +169,13 @@ EXTENSIONS:
 
 /*** INVESTIGATE ***/
 	/* 0701  */ user_pref("network.dns.disableIPv6", true); // disable IPv6
-	/* 1202 -*/ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
+	/* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	/* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	/* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
 	/* 2650  */ user_pref("browser.download.folderList", 2); // default download location (0=desktop 1=downloads 2=last used)
 	/* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
 	/* 2654  */ user_pref("browser.download.forbid_open_with", false); // enable to open download content
 	// /* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
+	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 
 user_pref("_user.js.parrot", "Success!");
