@@ -113,7 +113,7 @@ EXTENSIONS:
 
 ******/
 
-/*** PERSONAL TWEAKS ***/
+/*** ANNOYANCES TWEAKS ***/
 	/* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
 	/* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
 	/* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
