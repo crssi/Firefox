@@ -12,7 +12,7 @@
 @@||24ur.si^$third-party,xmlhttprequest,domain=24ur.com
 @@||akamaihd.net^$third-party,xmlhttprequest
 @@||akamaized.net^$third-party,xmlhttprequest
-@@||algolia.net^$third-party,xmlhttprequest,domain=fontawesome.com
+@@||algolia.net^$third-party,xmlhttprequest,domain=fontawesome.com|twitch.tv
 @@||algolianet.com^$third-party,xmlhttprequest,domain=fanatical.com
 @@||algolianet.com^$third-party,xmlhttprequest,domain=fontawesome.com
 @@||aliapp.org^$third-party,xmlhttprequest,domain=aliexpress.com
