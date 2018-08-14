@@ -130,8 +130,6 @@ EXTENSIONS:
 	/* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
 	/* 5000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 	/* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
-	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true);
-	/* 5000  */ user_pref("network.manage-offline-status", false); // prevent FF to go into offline when loosing connection
 	/* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
 	/* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
 	/* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
@@ -139,6 +137,7 @@ EXTENSIONS:
 
 /*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
+	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
@@ -175,5 +174,7 @@ EXTENSIONS:
 	/* 2654  */ user_pref("browser.download.forbid_open_with", false); // enable to open download content
 	// /* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
 	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
+	// /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true);
+	// /* 5000  */ user_pref("network.manage-offline-status", false); // prevent FF to go into offline when loosing connection
 
 user_pref("_user.js.parrot", "Success!");
