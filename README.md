@@ -1,5 +1,5 @@
-# Firefox tightened profile
-Supplement for [ghacks-user.js](https://github.com/ghacksuserjs/ghacks-user.js): 20.6.2017 (commit: 05021ac)
+## Firefox not overly tightened profile
+This is supplement for [ghacks-user.js](https://github.com/ghacksuserjs/ghacks-user.js): 20.6.2017 (commit: 05021ac)
 
 **IMPORTANT:**
 
