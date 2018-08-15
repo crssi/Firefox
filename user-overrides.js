@@ -115,6 +115,7 @@ EXTENSIONS:
 /*** ANNOYANCES TWEAKS ***/
 	/* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
 	/* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
+	/* 0701  */ user_pref("network.dns.disableIPv6", true); // disable IPv6
 	/* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
 	/* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
 	/* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
@@ -130,6 +131,7 @@ EXTENSIONS:
 	/* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
 	/* 5000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 	/* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
+	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true);
 	/* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
 	/* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
 	/* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
@@ -144,6 +146,7 @@ EXTENSIONS:
 	/* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
 	/* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false except if using WE "AudioContext Fingerprint Defender" or simmilar
 	/* 2682  */ user_pref("security.csp.experimentalEnabled", false);
+	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 
 /*** UPDATE ***/
 	/* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
@@ -166,13 +169,10 @@ EXTENSIONS:
 	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 
 /*** INVESTIGATE ***/
-	/* 0701  */ user_pref("network.dns.disableIPv6", true); // disable IPv6
 	// /* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	// /* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	// /* 2654  */ user_pref("browser.download.forbid_open_with", false); // enable to open download content
 	// /* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
-	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
-	// /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true);
 	// /* 5000  */ user_pref("network.manage-offline-status", false); // prevent FF to go into offline when loosing connection
 
 user_pref("_user.js.parrot", "Success!");
