@@ -13,8 +13,8 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 4. Firefox -> Settings -> Search
 		Default Search Engine: duckduckgo
 		One-Click Search Engines: delete all except DuckDuckGo
-5. Install essentials extensions (see Extensions section down bellow) and setup by instructions
-6. In enterprise organizations add domain list to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
+5. Install essential extensions (see Extensions section) and setup by instructions
+6. For enterprise use, insert domain list (comma separated) to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
 
 
 EXTENSIONS:
@@ -162,7 +162,7 @@ EXTENSIONS:
 	/* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true);
 	/* 0850b */ user_pref("browser.urlbar.suggest.openpage", true);
 
-/*** ENTERPRISE SPECIFIC ***/
+/*** ENTERPRISE USE SPECIFIC ***/
 	user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
 	user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 	user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
