@@ -143,6 +143,7 @@ EXTENSIONS:
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
+	/* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
 	/* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
 	/* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false except if using WE "AudioContext Fingerprint Defender" or simmilar
 	/* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
