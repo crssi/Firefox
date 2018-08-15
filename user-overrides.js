@@ -123,8 +123,6 @@ EXTENSIONS:
 	/* 1702  */ user_pref("privacy.userContext.enabled", true); // Enable Container Tabs
 	/* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
 	/* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
-	/* 2701  */ user_pref("network.cookie.cookieBehavior", 1); // block 3rd party with uM and deal with 1st party cookies using WE (C-AD)
-	/* 2803  */ user_pref("privacy.clearOnShutdown.cookies", true); // clear cookies on shutdown
 	/* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
 	/* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // height at start
 	/* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
@@ -169,7 +167,7 @@ EXTENSIONS:
 	// /* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	// /* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	/* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-	/* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
+	/* 2650  */ user_pref("browser.download.folderList", 2); // default download location (0=desktop 1=downloads 2=last used)
 	/* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
 	/* 2654  */ user_pref("browser.download.forbid_open_with", false); // enable to open download content
 	// /* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
