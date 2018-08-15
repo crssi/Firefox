@@ -84,7 +84,6 @@ EXTENSIONS:
 
   [PERSONAL CHOICE] CONTAINERS:
 		Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-  	// Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   	Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
   		General
   			Automatic Mode: Check
@@ -175,4 +174,6 @@ EXTENSIONS:
 	// /* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
 	// /* 5000  */ user_pref("network.manage-offline-status", false); // prevent FF to go into offline when loosing connection
 
+	// Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
+	
 user_pref("_user.js.parrot", "Success!");
