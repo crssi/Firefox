@@ -131,7 +131,6 @@ EXTENSIONS:
 	/* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
 	/* 5000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 	/* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
-	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true);
 	/* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
 	/* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
 	/* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
@@ -167,6 +166,10 @@ EXTENSIONS:
 	user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 	user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
+
+/*** RESET TO DEFAULT ***/
+	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", false);
+
 
 /*** INVESTIGATE ***/
 	// /* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
