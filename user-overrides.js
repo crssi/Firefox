@@ -104,6 +104,7 @@ EXTENSIONS:
 
 	USEFUL EXTENSIONS:
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
+		// Detect Cloudflare; https://addons.mozilla.org/firefox/addon/detect-cloudflare/ (https://github.com/traktofon/cf-detect)
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		// Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/ (https://fastaddons.com/)
