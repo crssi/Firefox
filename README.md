@@ -1,27 +1,34 @@
-# Firefox
-HOME:      https://github.com/crssi/Firefox<br />
-INFO:      Supplement for ghacks-user.js; 20.6.2017 (commit: 05021ac); https://github.com/ghacksuserjs/ghacks-user.js<br />
-IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/<br />
-           Extensions under Essential section are... Essential !!!<br />
-SEE ALSO:  https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data/<br />
-NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprinting to false<br />
+# Firefox tightened profile
+Supplement for [ghacks-user.js](https://github.com/ghacksuserjs/ghacks-user.js): 20.6.2017 (commit: 05021ac)
 
-1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
-   Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
-2. Append this file to user.js that was downloaded in step 1.
-3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
-4. Firefox -> Settings -> Search
-		Default Search Engine: duckduckgo
-		One-Click Search Engines: delete all except DuckDuckGo
-5. Install essentials extensions (see Extensions section down bellow) and setup by instructions
-6. In enterprise organizations add domain list to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
+**IMPORTANT:**
+
+[Implementation instructions](https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/)
+
+SEE ALSO:  https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data/
+**NOTE:**      To setup Firefox Sync, then temporarily set privacy.resistFingerprinting to false
+
+1. Download [user.js](https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js) and place it into the profile folder
+**Note:** To find location of the profile folder enter `about:support` into address bar, click `Open Folder` button under `Application Basics` section on `Profile Folder`  
+3. Download [user-overrides.js](https://raw.githubusercontent.com/crssi/Firefox/master/user-overrides.js) and append it to the `user.js` that was downloaded in step 1
+4. Go to the profile folder, remove file `SiteSecurityServiceState.txt`" and create folder with the same name ([more info](https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/))
+5. Firefox -> Settings -> Search
+	Default Search Engine: duckduckgo
+	One-Click Search Engines: delete all except DuckDuckGo
+6. Install essentials extensions (see Extensions section down bellow) and setup by instructions
+7. In enterprise organizations add domain list to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
 
 
 EXTENSIONS:<br />
-	ESSENTIAL:<br />
-		AudioContext Fingerprint Defender; https://addons.mozilla.org/firefox/addon/audioctx-fingerprint-defender/ (https://mybrowseraddon.com/audiocontext-defender.html); https://audiofingerprint.openwpm.com/<br />
-		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)<br />
-		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)<br />
+
+#### ESSENTIAL:
+
+ - **AudioContext Fingerprint Defender**; https://addons.mozilla.org/firefox/addon/audioctx-fingerprint-defender/
+ https://mybrowseraddon.com/audiocontext-defender.html
+ https://audiofingerprint.openwpm.com/
+- **CanvasBlocker**; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
+- **Cookie AutoDelete**; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ 
+https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/
 			Cookie Settings<br />
 				Enable Automatic Cleaning? Delay Before Cleaning: Check, 120 Seconds<br />
 				Enable Cleanup on Domain Change: Check<br />
@@ -43,31 +50,34 @@ EXTENSIONS:<br />
 			Click [Save preferences]<br />
 		Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)<br />
 		Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)<br />
-			Blacklist (Append):<br />
-				action=login<br />
-				/adfs/ls/<br />
-				archive.org/<br />
-				chart.googleapis.com/chart<br />
-				cred_submit<br />
-				/_login<br />
-				logout=<br />
-				medium.com/<br />
-				microsofttranslator.com/<br />
-				/openid/<br />
-				paypal.com/<br />
-				rover.ebay.co<br />
-				securityheaders.com/<br />
-				/saml/<br />
-				/SAML2/<br />
-				_sso=<br />
-				/sso/<br />
-				t.umblr.com/redirect<br />
-				translate.google.com/<br />
-				virustotal.com/<br />
-				/websso/<br />
-				/wsfederation<br />
-				youtube.com/embed/<br />
-			Notifications<br />
+			Blacklist (Append):
+			
+
+    action=login
+	/adfs/ls/
+	archive.org/
+	chart.googleapis.com/chart
+	cred_submit
+	/_login
+	logout=
+	medium.com/
+	microsofttranslator.com/
+	/openid/
+	paypal.com/
+	rover.ebay.co
+	securityheaders.com/
+	/saml/
+	/SAML2/
+	_sso=
+	/sso/
+	t.umblr.com/redirect
+	translate.google.com/
+	virustotal.com/
+	/websso/
+	/wsfederation
+	youtube.com/embed/
+
+Notifications<br />
 				Enable popup: Uncheck<br />
 				Show notifications for this many seconds: 10<br />
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)<br />
