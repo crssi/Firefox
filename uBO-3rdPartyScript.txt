@@ -79,6 +79,7 @@
 @@||snidigital.com^$third-party,script
 @@||spiceworksstatic.com^$third-party,script,domain=spiceworks.com
 @@||ssl-images-amazon.com^$third-party,script
+@@||static.squarespace.com/universal/*$third-party,script
 @@||stripe.com^$third-party,script
 @@||twimg.com^$third-party,script,domain=twitter.com
 @@||twitchcdn.net^$third-party,script,domain=twitch.tv
