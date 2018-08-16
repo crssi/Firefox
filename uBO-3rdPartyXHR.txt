@@ -66,6 +66,7 @@
 @@||twitchcdn.net^$third-party,xmlhttprequest
 @@||twitchsvc.net^$third-party,xmlhttprequest
 @@||univision.com^$third-party,xmlhttprequest
+@@||use.typekit.net^$third-party,xmlhttprequest
 @@||video.twimg.com^$third-party,xmlhttprequest
 @@||videos.news.co.uk^$third-party,xmlhttprequest
 @@||vimeocdn.com^$third-party,xmlhttprequest

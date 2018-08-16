@@ -85,6 +85,7 @@
 @@||twitchsvc.net^$third-party,script,domain=twitch.tv
 @@||univision.com^$third-party,script
 @@||unrealengine.com^$third-party,script
+@@||use.typekit.net^$third-party,script
 @@||uvnimg.com^$third-party,script
 @@||vimeocdn.com^$third-party,script
 @@||wgcdn.co^$third-party,script,domain=wargaming.net
