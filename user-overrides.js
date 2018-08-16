@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 15.8.2017 (commit: b7661e8); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 16.8.2017 (commit: 776e32c); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/
@@ -168,6 +168,7 @@ youtube.com/embed/
 	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 
 /*** RESET TO DEFAULT ***/
+	/* 0850d */ user_pref("browser.urlbar.autoFill.typed", true);
 	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", false);
 
 
