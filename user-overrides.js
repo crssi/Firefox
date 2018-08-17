@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 16.8.2017 (commit: 776e32c); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 17.8.2017 (commit: 5b6ed92); https://github.com/ghacksuserjs/ghacks-user.js
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/
@@ -114,7 +114,6 @@ youtube.com/embed/
 /*** ANNOYANCES TWEAKS ***/
 	/* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
 	/* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
-	/* 0701  */ user_pref("network.dns.disableIPv6", true); // disable IPv6
 	/* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
 	/* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
 	/* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
