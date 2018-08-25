@@ -57,6 +57,7 @@ action=login
 archive.is/
 chart.googleapis.com/chart
 cred_submit
+i-dont-care-about-cookies.eu/
 logout=
 medium.com/
 microsofttranslator.com/
