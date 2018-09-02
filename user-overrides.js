@@ -104,7 +104,7 @@ youtube.com/embed/
 	USEFUL EXTENSIONS:
 		Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues)
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-		// Detect Cloudflare; https://addons.mozilla.org/firefox/addon/detect-cloudflare/ (https://github.com/traktofon/cf-detect/)
+		// Detect Cloudflare+; https://addons.mozilla.org/firefox/addon/detect-cloudflare-plus/ (https://github.com/claustromaniac/detect-cloudflare-plus/)
 		// Download Cleaner Lite; https://addons.mozilla.org/firefox/addon/download-cleaner-lite/ (https://github.com/fuzzykiller/download-cleaner-lite/)
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		// Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
