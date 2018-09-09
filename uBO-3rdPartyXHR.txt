@@ -22,6 +22,7 @@
 @@||amazonaws.com^$third-party,xmlhttprequest
 @@||amazonaws.com^$third-party,xmlhttprequest,domain=github.com
 @@||amgload.net^$third-party,xmlhttprequest,domain=mp3pn.info
+@@||api.dohop.com^$third-party,xmlhttprequest
 @@||assets.gitlab-static.net^$third-party,xmlhttprequest,domain=gitlab.com
 @@||azureedge.net^$third-party,xmlhttprequest,domain=live.com
 @@||bbc.co.uk^$third-party,xmlhttprequest,domain=bbc.com
@@ -29,6 +30,7 @@
 @@||boltdns.net^$third-party,xmlhttprequest
 @@||cloudfront.net^$third-party,xmlhttprequest
 @@||discourse-cdn-sjc1.com^$third-party,xmlhttprequest,script,domain=discuss.atom.io
+@@||dohop-blue.global.ssl.fastly.net^$third-party,xmlhttprequest,domain=dohop.com
 @@||dropboxstatic.com^$third-party,xmlhttprequest,domain=dropbox.com
 @@||edge.api.brightcove.com^$third-party,xmlhttprequest
 @@||fanatical.cdn.prismic.io^$third-party,xmlhttprequest,domain=fanatical.com
@@ -54,6 +56,7 @@
 @@||paypalobjects.com^$third-party,xmlhttprequest
 @@||piguiqproxy.com^$third-party,xmlhttprequest,domain=mp3pn.info
 @@||player.vimeo.com/external/*$third-party,xmlhttprequest
+@@||royalmail.net^$xmlhttprequest,domain=royalmail.com
 @@||runkitcdn.com^$third-party,xmlhttprequest
 @@||skype.com^$third-party,xmlhttprequest,domain=live.com
 @@||skypeassets.com^$third-party,xmlhttprequest,domain=live.com
