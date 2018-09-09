@@ -34,6 +34,7 @@ EXTENSIONS:
 		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
 		Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
 		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/); https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
+			NOTE: Not needed when disk and memory caching is disabled: browser.cache.memory.enable, browser.cache.disk.enable
 			Export and Import
 				Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
 				Import: Click [Save]
