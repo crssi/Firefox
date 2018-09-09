@@ -137,7 +137,7 @@ youtube.com/embed/
 	/* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
 	/* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
-/*** BREAKAGE AND SECURITY TWEAKS ***/
+/*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
 	/* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
