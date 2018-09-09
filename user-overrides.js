@@ -121,7 +121,6 @@ youtube.com/embed/
 	/* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
 	/* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
 	/* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
-	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
 	/* 1701  */ user_pref("privacy.userContext.ui.enabled", true); // enable Container Tabs setting in preferences
 	/* 1702  */ user_pref("privacy.userContext.enabled", true); // Enable Container Tabs
 	/* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
@@ -138,10 +137,12 @@ youtube.com/embed/
 	/* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
 	/* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
-/*** BREAKAGE TWEAKS ***/
+/*** BREAKAGE AND SECURITY TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
+	/* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
+	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
 	/* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
 	/* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
 	/* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
