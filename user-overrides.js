@@ -139,7 +139,6 @@ youtube.com/embed/
 
 /*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-	/* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
 	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
@@ -175,8 +174,8 @@ youtube.com/embed/
 	/* 0850d */ user_pref("browser.urlbar.autoFill.typed", true);
 	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", false);
 
-
 /*** INVESTIGATE ***/
+	/* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
 	// /* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	// /* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	// /* 2682  */ user_pref("security.csp.experimentalEnabled", false);
