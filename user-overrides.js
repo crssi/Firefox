@@ -20,6 +20,7 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 EXTENSIONS:
 	ESSENTIAL:
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
+			Options -> Expert mode -> Misc -> Block data URL pages: Uncheck
 		Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
 		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
 			Cookie Settings
