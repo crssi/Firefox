@@ -176,7 +176,7 @@ youtube.com/embed/
 	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", false);
 
 /*** INVESTIGATE ***/
-	// /* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
+	/* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
 	// /* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	// /* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
 	// /* 2682  */ user_pref("security.csp.experimentalEnabled", false);
