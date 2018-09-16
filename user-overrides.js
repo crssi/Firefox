@@ -161,12 +161,12 @@ youtube.com/embed/
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
 	/* 0000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 	/* 0000  */ user_pref("browser.search.widget.inNavBar", true); // use navigation bar for search
-	/* 0801  */ user_pref("keyword.enabled", true);
-	/* 0807  */ user_pref("browser.search.suggest.enabled", true);
-	/* 0808  */ user_pref("browser.urlbar.suggest.searches", true);
-	/* 0850a */ user_pref("browser.urlbar.autocomplete.enabled", true);
-	/* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true);
-	/* 0850b */ user_pref("browser.urlbar.suggest.openpage", true);
+	/* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
+	/* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
+	/* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
+	/* 0850a */ user_pref("browser.urlbar.autocomplete.enabled", true); // enable autocomplete in search
+	/* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true); // suggest bookmarks in search results
+	/* 0850b */ user_pref("browser.urlbar.suggest.openpage", true); // suggest open pages/tabs in search results
 
 /*** ENTERPRISE USE SPECIFIC ***/
 	user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
