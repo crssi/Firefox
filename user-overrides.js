@@ -158,7 +158,8 @@ youtube.com/embed/
 	/* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
 	/* 0303  */ user_pref("app.update.service.enabled", true); // enable update service
 
-/*** LOCATION BAR / SEARCH BAR / SUGGESTIONS : Install extension "DuckDuckGo (HTTPS / SSL)" or any other privacy search provider ***/
+/*** LOCATION BAR / SEARCH BAR / SUGGESTIONS : Set DuckDuckGo as a search provider ***/
+	/* 0000  */ user_pref("browser.urlbar.placeholderName","DuckDuckGo");
 	/* 0801  */ user_pref("keyword.enabled", true);
 	/* 0807  */ user_pref("browser.search.suggest.enabled", true);
 	/* 0808  */ user_pref("browser.urlbar.suggest.searches", true);
