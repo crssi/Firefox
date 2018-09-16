@@ -172,10 +172,6 @@ youtube.com/embed/
 	user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 
-/*** RESET TO DEFAULT ***/
-	/* 0850d */ user_pref("browser.urlbar.autoFill.typed", true);
-	/* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", false);
-
 /*** INVESTIGATE ***/
 	// /* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
 	// /* 1212  */ user_pref("security.OCSP.require", false); // OCSP soft fail
