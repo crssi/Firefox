@@ -141,6 +141,7 @@ youtube.com/embed/
 
 /*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
+	// /* 1222  */ user_pref("security.cert_pinning.enforcement_level", 1); // uncomment for fiddler
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
 	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
@@ -159,7 +160,7 @@ youtube.com/embed/
 	/* 0303  */ user_pref("app.update.service.enabled", true); // enable update service
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
-	/* 0000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
+	/* 5000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 	/* 0000  */ user_pref("browser.search.widget.inNavBar", false); // use navigation bar for search
 	/* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
 	/* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
@@ -169,10 +170,10 @@ youtube.com/embed/
 	/* 0850b */ user_pref("browser.urlbar.suggest.openpage", true); // suggest open pages/tabs in search results
 
 /*** ENTERPRISE USE SPECIFIC ***/
-	user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-	user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-	user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-	user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
+	/* 5000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
+	/* 5000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+	/* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+	/* 5000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 
 /*** INVESTIGATE ***/
 	// /* 1202  */ user_pref("security.tls.version.min", 1); // some SSL pages still uses TLS 1.0 and breaks with the value higher than 1
