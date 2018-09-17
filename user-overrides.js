@@ -160,7 +160,7 @@ youtube.com/embed/
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
 	/* 0000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
-	/* 0000  */ user_pref("browser.search.widget.inNavBar", true); // use navigation bar for search
+	/* 0000  */ user_pref("browser.search.widget.inNavBar", false); // use navigation bar for search
 	/* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
 	/* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
 	/* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
