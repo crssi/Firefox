@@ -10,6 +10,8 @@
 ||startpage.com/english/*$image,important
 ||startpage.com/tst2/*$image,important
 
+! ||twitter.*^$third-party
+! ||nrholding.net^$third-party
 ||*/fingerprintjs2*$script,important
 ||1105media.com^$third-party
 ||a2sky.com^$third-party
@@ -76,7 +78,6 @@
 ||n26.*^$domain=~n26.com
 ||nir.regmedia.co.uk^$third-party
 ||nmaib9.com^$third-party
-||nrholding.net^$third-party
 ||oneall.com^$third-party
 ||onesignal.com^$third-party
 ||outbrain.com^$third-party
@@ -97,7 +98,6 @@
 ||themessagecloud.com^$third-party
 ||tinymce.com^$third-party
 ||trustpilot.com^$third-party
-||twitter.*^$third-party
 ||unpkg.com^$third-party
 ||upscore.com^$third-party
 ||urbanairship.com^$third-party

@@ -43,6 +43,7 @@
 @@||foxbusiness.com^$third-party,script,domain=foxnews.com
 @@||futurecdn.net^$third-party,script,domain=techradar.com
 @@||gbtcdn.com^$third-party,script,domain=gearbest.com
+@@||gcdn.co^$third-party,script,domain=worldoftanks.eu|wargaming.net
 @@||gfx.ms^$third-party,script,domain=live.com|office365.com|microsoft.com|office.com
 @@||gstatic.com^$third-party,script,domain=google.com
 @@||ignimgs.com^$third-party,script,domain=ign.com
