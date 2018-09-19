@@ -24,6 +24,7 @@
 @@||aliyun.com^$third-party,script,domain=aliexpress.com
 @@||assets.gitlab-static.net^$third-party,script,domain=gitlab.com
 @@||blogsmithmedia.com^$third-party,script
+@@||bootstrapcdn.com^$third-party,script
 @@||bstatic.com^$third-party,script,domain=booking.com
 @@||c.s-microsoft.com^$third-party,script,domain=microsoft.com
 @@||cbsistatic.com^$third-party,script,domain=cnet.com
