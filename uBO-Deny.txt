@@ -18,6 +18,7 @@
 ||addthis.com^$important
 ||adsensecustomsearchads.*^$important
 ||adserver.yahoo.com^$important
+||adservice.google.*^$important
 ||adtech.*^$important
 ||agilemeasure.com^$third-party
 ||algolianet.com^$third-party
