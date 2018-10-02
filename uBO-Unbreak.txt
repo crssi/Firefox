@@ -35,6 +35,8 @@
 @@||ajax.googleapis.com^$third-party,script
 @@||ajax.microsoft.com^$third-party,script
 @@||ajax.proxy.ustclug.org^$third-party,script
+@@||apps.bdimg.com^$third-party,script
+@@||cdn.bootcss.com^$third-party,script
 @@||cdn.jsdelivr.net^$third-party,script
 @@||cdnjs.cloudflare.com^$third-party,script
 @@||code.jquery.com^$third-party,script
