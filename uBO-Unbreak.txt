@@ -30,7 +30,7 @@
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
 
-! ALLOW JS library, since they are covered by Decentraleyes WE
+! ALLOW JS library, since they are covered by Decentraleyes WE, see to https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions#for-umatrix-and-ublock-origin-non-easy-mode-users
 @@||ajax.aspnetcdn.com^$third-party,script
 @@||ajax.googleapis.com^$third-party,script
 @@||ajax.microsoft.com^$third-party,script
