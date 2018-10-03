@@ -119,7 +119,6 @@ youtube.com/embed/
 /*** ANNOYANCES TWEAKS ***/
 	/* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
 	/* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
-	/* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
 	/* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
 	/* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
 	/* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
@@ -141,7 +140,6 @@ youtube.com/embed/
 
 /*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-	// /* 1222  */ user_pref("security.cert_pinning.enforcement_level", 1); // uncomment for fiddler
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
 	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
@@ -151,7 +149,6 @@ youtube.com/embed/
 	/* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
 	/* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false except if using WE "AudioContext Fingerprint Defender" or simmilar
 	/* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
-	/* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 
 /*** UPDATE ***/
 	/* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
@@ -174,6 +171,11 @@ youtube.com/embed/
 	/* 5000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 	/* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 	/* 5000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
+
+/*** EXPERIMENTAL ***/
+  // /* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
+  // /* 1222  */ user_pref("security.cert_pinning.enforcement_level", 1); // uncomment for fiddler
+  // /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 
 
 user_pref("_user.js.parrot", "Success!");
