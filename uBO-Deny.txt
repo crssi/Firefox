@@ -87,7 +87,6 @@
 ||pkmods.com$inline-script
 ||pmcatalyst-ae.com^$third-party
 ||polldaddy.com^$third-party
-||polyfill.io^$third-party
 ||prismic.io^$third-party
 ||pushance.com^$third-party
 ||pusher.com^$third-party
