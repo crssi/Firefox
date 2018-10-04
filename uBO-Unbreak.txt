@@ -27,6 +27,7 @@
 @@||platform.twitter.com^$third-party,stylesheet,image
 @@||translate.googleusercontent.com
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
+@@||www.google-analytics.com/analytics.js$third-party,script
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
 
