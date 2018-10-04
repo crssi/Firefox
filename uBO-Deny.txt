@@ -89,11 +89,12 @@
 ||pmcatalyst-ae.com^$third-party
 ||polldaddy.com^$third-party
 ||prismic.io^$third-party
-||purch.com^$third-party
+||purch.com^$third-party,important
 ||pushance.com^$third-party
 ||pusher.com^$third-party
 ||salesforceliveagent.com^$third-party
 ||sb.scorecardresearch.com^$important
+||servebom.com^$third-party,important
 ||shopify.com^$third-party,script
 ||shopifycdn.com^$third-party,script
 ||smartfocus.com^$third-party
