@@ -37,6 +37,7 @@
 ||calculoid.com^$third-party,script
 ||cdn-cnj.si^$third-party,script
 ||chimpstatic.com^$third-party
+||cloudinary.com^$third-party
 ||contentpass.net^$important
 ||delvenetworks.com^$third-party,script
 ||doubleclick.*^$important
@@ -78,6 +79,7 @@
 ||mallgroup.com^$third-party
 ||medium.com^$third-party,script
 ||moengage.com^$third-party
+||montiapm.com^$third-party
 ||n26.*^$domain=~n26.com
 ||nir.regmedia.co.uk^$third-party
 ||nmaib9.com^$third-party
