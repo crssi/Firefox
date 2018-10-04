@@ -28,7 +28,7 @@
 ||api2.kme.si^$third-party,xmlhttprequest
 ||askmediagroup.com^$third-party
 ||beacon.krxd.net^$important
-||bestofmedia.com^$important
+||bestofmedia.com^$third-party
 ||bf-ad.*^$important
 ||blitzen.com^$third-party
 ||booster3000.si^$third-party
@@ -89,6 +89,7 @@
 ||pmcatalyst-ae.com^$third-party
 ||polldaddy.com^$third-party
 ||prismic.io^$third-party
+||purch.com^$third-party
 ||pushance.com^$third-party
 ||pusher.com^$third-party
 ||salesforceliveagent.com^$third-party
