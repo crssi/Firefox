@@ -13,6 +13,8 @@
 ! ||twitter.*^$third-party
 ! ||nrholding.net^$third-party
 ||*/fingerprintjs2*$script,important
+||*.checkfront.com/lib/Control.Geocoder*.js$script
+||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
 ||1105media.com^$third-party
 ||a2sky.com^$third-party
 ||addthis.com^$important
@@ -34,8 +36,6 @@
 ||booster3000.si^$third-party
 ||calculoid.com^$third-party,script
 ||cdn-cnj.si^$third-party,script
-||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
-||*.checkfront.com/lib/Control.Geocoder*.js$script
 ||chimpstatic.com^$third-party
 ||contentpass.net^$important
 ||delvenetworks.com^$third-party,script
@@ -99,6 +99,7 @@
 ||shopifycdn.com^$third-party,script
 ||smartfocus.com^$third-party
 ||smind.*^$third-party
+||spot.im^$third-party
 ||syndication.twitter.*^
 ||themessagecloud.com^$third-party
 ||tinymce.com^$third-party
@@ -106,6 +107,7 @@
 ||unpkg.com^$third-party
 ||upscore.com^$third-party
 ||urbanairship.com^$third-party
+||vidible.tv^
 ||wibbitz.com^$third-party
 ||wistia.*^$third-party
 ||yahoo.*^$third-party
