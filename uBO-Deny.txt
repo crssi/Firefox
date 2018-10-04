@@ -28,6 +28,7 @@
 ||api2.kme.si^$third-party,xmlhttprequest
 ||askmediagroup.com^$third-party
 ||beacon.krxd.net^$important
+||bestofmedia.com^$important
 ||bf-ad.*^$important
 ||blitzen.com^$third-party
 ||booster3000.si^$third-party
