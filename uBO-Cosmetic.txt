@@ -40,6 +40,12 @@ wego.here.com##.bottom-right.slideIn.pointer.tooltip
 wego.here.com##.download
 wego.here.com##.branding > .here_logo
 
+! mail.ru
+cloud.mail.ru##.b-layer__overlay
+cloud.mail.ru##.b-layer__container_disko-popup.b-layer__container_popup.b-layer__container
+cloud.mail.ru##.b-layer__wrapper3_disko-popup.b-layer__wrapper3_popup.b-layer__wrapper3
+cloud.mail.ru##.b-layer__wrapper_disko-popup.b-layer__wrapper_popup.b-layer__wrapper
+
 ! OTHER
 ##.cf.modal
 ##.underlay
