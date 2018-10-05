@@ -15,6 +15,7 @@
 @@||facebook.*^$domain=facebook.com
 @@||fbcdn.*^$domain=facebook.com
 @@||fbcdn.*^$third-party,image,media
+@@||google-analytics.com/analytics.js$third-party,script,domain=amainhobbies.com
 @@||google.*^$domain=google.com
 @@||google.*^$third-party,script,domain=youtube.com
 @@||gravatar.com^$third-party,image,stylesheet
@@ -27,7 +28,6 @@
 @@||platform.twitter.com^$third-party,stylesheet,image
 @@||translate.googleusercontent.com
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
-@@||www.google-analytics.com/analytics.js$third-party,script
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
 
