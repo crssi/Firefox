@@ -78,6 +78,8 @@
 ||mailchimp.com^$third-party
 ||mailerlite.com^$third-party
 ||mallgroup.com^$third-party
+||maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate$script,important
+||maps.googleapis.com/maps/api/js/QuotaService.RecordEvent$script,important
 ||medium.com^$third-party,script
 ||moengage.com^$third-party
 ||montiapm.com^$third-party
