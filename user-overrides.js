@@ -22,14 +22,6 @@ EXTENSIONS:
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
 			Options -> Expert mode -> Misc -> Block data URL pages: Uncheck
 		Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-		// Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
-		// 	Cookie Settings
-		// 		Enable Automatic Cleaning? Delay Before Cleaning: Check, 120 Seconds
-		// 		Enable Cleanup on Domain Change: Check
-		// 		Enable Cleanup Log and Counter: Uncheck
-		// 		Show Number of Cookies for that Domain: Uncheck
-		// 		Show Notification After Cookie Cleanup: Uncheck
-		// 		Enable Support for Firefox's Container Tabs: Check
 		CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
 		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
