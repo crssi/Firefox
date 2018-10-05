@@ -22,18 +22,21 @@ EXTENSIONS:
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
 			Options -> Expert mode -> Misc -> Block data URL pages: Uncheck
 		Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-		Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
-			Cookie Settings
-				Enable Automatic Cleaning? Delay Before Cleaning: Check, 120 Seconds
-				Enable Cleanup on Domain Change: Check
-				Enable Cleanup Log and Counter: Uncheck
-				Show Number of Cookies for that Domain: Uncheck
-				Show Notification After Cookie Cleanup: Uncheck
-				Enable Support for Firefox's Container Tabs: Check
+		// Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
+		// 	Cookie Settings
+		// 		Enable Automatic Cleaning? Delay Before Cleaning: Check, 120 Seconds
+		// 		Enable Cleanup on Domain Change: Check
+		// 		Enable Cleanup Log and Counter: Uncheck
+		// 		Show Number of Cookies for that Domain: Uncheck
+		// 		Show Notification After Cookie Cleanup: Uncheck
+		// 		Enable Support for Firefox's Container Tabs: Check
 		CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
 		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
 		Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
+    Forget Me Not - Forget cookies & other data; https://addons.mozilla.org/firefox/addon/forget_me_not/ (https://github.com/Lusito/forget-me-not/)
+      Settings
+        Click [Restore from file...]: Download https://raw.githubusercontent.com/crssi/Firefox/master/forget-me-not-Settings.json
 		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/); https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
 			NOTE: Not needed when disk and memory caching is disabled: browser.cache.memory.enable, browser.cache.disk.enable
 			Export and Import
@@ -88,11 +91,15 @@ youtube.com/embed/
   			Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
   			Click [Save]
   		Isolation
+        Per Domain
+          Domain pattern: *
+            Always open in new Temporary Containers: enabled
+          Domain pattern: duckduckgo.com
+            Always open in new Temporary Containers: enabled
   			Global
-  				Navigating in Tabs should open new Temporary Containers: If the Navigation Target Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-  				Click [Save]
-				Multi-Account Containers
-  				Open new Temporary Containers if a Permanent Container Tab tries to load a Domain that isn't assigned to "Always open in" that container: Enabled
+  				Navigating in Tabs should open new Temporary Containers: Never
+          Mouse Clicks on Links should open new Temporary Containers
+            Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
   				Click [Save]
 			NOTE: CTRL+SHIFT+T = Undo closed tab(s)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
@@ -103,15 +110,17 @@ youtube.com/embed/
 			About
 				Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
-	USEFUL EXTENSIONS:
-		Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues)
+	USEFUL/INTERESTING EXTENSIONS:
+		Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues/)
+    Container Tabs Sidebar; https://addons.mozilla.org/firefox/addon/container-tabs-sidebar/ (https://github.com/maciekmm/container-tabs-sidebar/)
+    Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
+    Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-		// Detect Cloudflare+; https://addons.mozilla.org/firefox/addon/detect-cloudflare-plus/ (https://github.com/claustromaniac/detect-cloudflare-plus/)
-		// Download Cleaner Lite; https://addons.mozilla.org/firefox/addon/download-cleaner-lite/ (https://github.com/fuzzykiller/download-cleaner-lite/)
+		Download Cleaner Lite; https://addons.mozilla.org/firefox/addon/download-cleaner-lite/ (https://github.com/fuzzykiller/download-cleaner-lite/)
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-		// Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
+		Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
 		ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/ (https://fastaddons.com/)
-		// Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
+		Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 ******/
