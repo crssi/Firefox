@@ -21,7 +21,6 @@ EXTENSIONS:
 	ESSENTIAL:
 		CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
 			Options -> Expert mode -> Misc -> Block data URL pages: Uncheck
-		Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
 		CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
 		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
@@ -105,6 +104,7 @@ youtube.com/embed/
 	USEFUL/INTERESTING EXTENSIONS:
 		Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues/)
     // Container Tabs Sidebar; https://addons.mozilla.org/firefox/addon/container-tabs-sidebar/ (https://github.com/maciekmm/container-tabs-sidebar/)
+    // Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
     Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
     Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
