@@ -177,6 +177,6 @@ youtube.com/embed/
   // /* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
   // /* 1222  */ user_pref("security.cert_pinning.enforcement_level", 1); // uncomment for fiddler
   // /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
-
+  // /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true);
 
 user_pref("_user.js.parrot", "Success!");
