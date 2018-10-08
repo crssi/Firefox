@@ -105,6 +105,7 @@
 ||smartfocus.com^$third-party
 ||smind.*^$third-party
 ||s0.wp.com^
+||sportradar.com^$third-party
 ||spot.im^$third-party
 ||syndication.twitter.*^
 ||themessagecloud.com^$third-party
