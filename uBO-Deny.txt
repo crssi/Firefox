@@ -102,6 +102,7 @@
 ||servebom.com^$third-party,important
 ||shopify.com^$third-party,script
 ||shopifycdn.com^$third-party,script
+||sitebot.ai^$third-party
 ||smartfocus.com^$third-party
 ||smind.*^$third-party
 ||s0.wp.com^
