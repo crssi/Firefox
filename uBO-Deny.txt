@@ -38,6 +38,7 @@
 ||cdn-cnj.si^$third-party,script
 ||chimpstatic.com^$third-party
 ||cloudinary.com^$third-party
+||coordinatedcub.com^$third-party
 ||contentpass.net^$important
 ||delvenetworks.com^$third-party,script
 ||doubleclick.*^$important
