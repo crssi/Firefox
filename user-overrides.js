@@ -58,6 +58,7 @@ logout=
 medium.com/
 microsofttranslator.com/
 paypal.com/
+reddit.com/
 rover.ebay.co
 securityheaders.com/
 ssllabs.com/
