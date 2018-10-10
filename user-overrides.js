@@ -40,19 +40,39 @@ EXTENSIONS:
 		Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
 		Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
 			Blacklist (Append, withozt indentation to simplify copy/paste):
-_sso=
 /_login
+/abp
+/account
 /adfs/ls/
+/auth
+/cookie
+/cred_submit
+/download
+/login
+/logoff
+/logon
+/logout
+/oauth
 /openid/
+/preferences
+/profile
+/register
 /saml/
 /SAML2/
+/signin
+/signoff
+/signon
+/signout
+/signup
 /sso/
+/subscribe
+/verification
 /websso/
 /wsfederation
+_sso=
 action=login
 archive.is/
 chart.googleapis.com/chart
-cred_submit
 i-dont-care-about-cookies.eu/
 logout=
 medium.com/
@@ -70,7 +90,6 @@ webcache.googleusercontent.com/
 youtube.com/embed/
 			Notifications
 				Enable popup: Uncheck
-				Show notifications for this many seconds: 10
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://github.com/meh/smart-referer/)
 		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
