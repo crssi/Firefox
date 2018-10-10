@@ -40,6 +40,7 @@ EXTENSIONS:
 		Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
 		Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
 			Blacklist (Append, withozt indentation to simplify copy/paste):
+_sso=
 /_login
 /abp
 /account
@@ -69,7 +70,6 @@ EXTENSIONS:
 /verification
 /websso/
 /wsfederation
-_sso=
 action=login
 archive.is/
 chart.googleapis.com/chart
