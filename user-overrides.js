@@ -184,6 +184,7 @@ youtube.com/embed/
 	/* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
 	/* 0850a */ user_pref("browser.urlbar.autocomplete.enabled", true); // enable autocomplete in search
 	/* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true); // suggest bookmarks in search results
+  /* 0850b */ user_pref("browser.urlbar.suggest.openpage", true); // suggest open pages/tabs in search results
   /* 5000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 
 /*** ENTERPRISE USE SPECIFIC ***/
@@ -193,10 +194,6 @@ youtube.com/embed/
 	/* 5000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 
 /*** EXPERIMENTAL ***/
-  // /* 0850b */ user_pref("browser.urlbar.suggest.openpage", true); // suggest open pages/tabs in search results
-  // /* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
   // /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true);
-  // /* 1222  */ user_pref("security.cert_pinning.enforcement_level", 1); // uncomment for fiddler
-  // /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks Cookie AutoDelete and some login pages
 
 user_pref("_user.js.parrot", "Success!");
