@@ -9,7 +9,7 @@
 			"pattern": "",
 			"exclude": "",
 			"isFunction": true,
-			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() === 'origin') {\nif (detail.url.split('/', 3)[2].endsWith(header.value.split('//')[1].replace(/(^www\\.)/,''))) { return; }\n\t\tif (header.value == 'null') { return; }\n\t\tif (header.value == 'https://www.youtube.com' && detail.url.split('/', 3)[2].endsWith('.googlevideo.com')) { return; }\n\t\theader.value = detail.url.split('/', 3).join('/');\n\t\treturn;\n\t}\n}",
+			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() === 'origin') {\nif (detail.url.split('/', 3)[2].endsWith(header.value.split('//')[1].replace(/(^www\\.)/,''))) { return; }\n//\t\tif (header.value == 'null') { return; }\n\t\tif (header.value == 'https://www.youtube.com' && detail.url.split('/', 3)[2].endsWith('.googlevideo.com')) { return; }\n\t\theader.value = detail.url.split('/', 3).join('/');\n\t\treturn;\n\t}\n}",
 			"id": 5
 		}
 	],
@@ -33,7 +33,7 @@
 			"pattern": "",
 			"exclude": "",
 			"isFunction": true,
-			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() == 'access-control-allow-origin') {\n\t\tif (header.value == 'https://www.youtube.com') { return; }\n\t\tif (header.value == \"null\")\n\t\t{\n\t\t\theader.value = detail.originUrl.split('/', 3).join('/');\n\t\t\treturn;\n\t\t}\n\t\theader.value = '*';\n\t\treturn;\n\t}\n}\nval.push({'name': 'Access-Control-Allow-Origin', 'value': detail.originUrl.split('/', 3).join('/')});",
+			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() == 'access-control-allow-origin') {\n\t\tif (header.value == 'https://www.youtube.com') { return; }\n//\t\tif (header.value == \"null\")\n//\t\t{\n//\t\t\theader.value = detail.originUrl.split('/', 3).join('/');\n//\t\t\treturn;\n//\t\t}\n\t\theader.value = '*';\n\t\treturn;\n\t}\n}\nval.push({'name': 'Access-Control-Allow-Origin', 'value': detail.originUrl.split('/', 3).join('/')});",
 			"id": 6
 		}
 	]
