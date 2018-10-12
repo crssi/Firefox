@@ -188,10 +188,10 @@ youtube.com/embed/
   /* 5000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 
 /*** ENTERPRISE USE SPECIFIC ***/
+  /* 5000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 	/* 5000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-	/* 5000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-	/* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-	/* 5000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
+	// /* 5000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+	// /* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
 /*** EXPERIMENTAL ***/
   // /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true);
