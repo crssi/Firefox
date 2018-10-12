@@ -195,6 +195,6 @@ youtube.com/embed/
 
 /*** EXPERIMENTAL ***/
   // /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true);
-  // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241
+  // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
 
 user_pref("_user.js.parrot", "Success!");
