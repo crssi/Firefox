@@ -23,7 +23,7 @@ EXTENSIONS:
 			Options -> Expert mode -> Misc -> Block data URL pages: Uncheck
 		CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
 		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
-		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
+    disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
 		Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
     Forget Me Not - Forget cookies & other data; https://addons.mozilla.org/firefox/addon/forget_me_not/ (https://github.com/Lusito/forget-me-not/)
       Settings
@@ -123,16 +123,10 @@ youtube.com/embed/
 
 	USEFUL/INTERESTING EXTENSIONS:
 		Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues/)
-    // Container Tabs Sidebar; https://addons.mozilla.org/firefox/addon/container-tabs-sidebar/ (https://github.com/maciekmm/container-tabs-sidebar/)
-    // Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
     Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
     Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-		// Download Cleaner Lite; https://addons.mozilla.org/firefox/addon/download-cleaner-lite/ (https://github.com/fuzzykiller/download-cleaner-lite/)
-		// I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-		// Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
-		// ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/ (https://fastaddons.com/)
-		// Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/ (https://gitlab.com/mjanetmars/switch-container/)
+		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 ******/
@@ -196,5 +190,14 @@ youtube.com/embed/
 /*** EXPERIMENTAL ***/
   // /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true);
   // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
+  // MixedContentHunter; https://addons.mozilla.org/firefox/addon/mixedcontenthunter/
+
+/*** RECONSIDER ***/
+  // Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
+  // ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/ (https://fastaddons.com/)
+  // Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/ (https://gitlab.com/mjanetmars/switch-container/)
+  // Container Tabs Sidebar; https://addons.mozilla.org/firefox/addon/container-tabs-sidebar/ (https://github.com/maciekmm/container-tabs-sidebar/)
+  // Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
+  // Download Cleaner Lite; https://addons.mozilla.org/firefox/addon/download-cleaner-lite/ (https://github.com/fuzzykiller/download-cleaner-lite/)
 
 user_pref("_user.js.parrot", "Success!");
