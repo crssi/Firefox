@@ -23,11 +23,11 @@ EXTENSIONS:
 			Options -> Expert mode -> Misc -> Block data URL pages: Uncheck
 		CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
 		Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
-    disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
+		disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
 		Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
-    Forget Me Not - Forget cookies & other data; https://addons.mozilla.org/firefox/addon/forget_me_not/ (https://github.com/Lusito/forget-me-not/)
-      Settings
-        Click [Restore from file...]: Download https://raw.githubusercontent.com/crssi/Firefox/master/forget-me-not-Settings.json
+		Forget Me Not - Forget cookies & other data; https://addons.mozilla.org/firefox/addon/forget_me_not/ (https://github.com/Lusito/forget-me-not/)
+			Settings
+				Click [Restore from file...]: Download https://raw.githubusercontent.com/crssi/Firefox/master/forget-me-not-Settings.json
 		Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/); https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
 			NOTE: Not needed when disk and memory caching is disabled: browser.cache.memory.enable, browser.cache.disk.enable
 			Export and Import
@@ -93,25 +93,25 @@ youtube.com/embed/
 		Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
 		Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
 		Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
-  		General
-  			Automatic Mode: Check
-  			[PERSONAL CHOICE] Container Name Prefix: %domain% #
-  			[PERSONAL CHOICE] Random Container Color: Check
-  			[PERSONAL CHOICE] Container Icon: fingerprint
-  			Container Number: Reuse available numbers
-  			Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
-  			Click [Save]
-  		Isolation
-        Per Domain
-          Domain pattern: *
-            Always open in new Temporary Containers: enabled
-          Domain pattern: duckduckgo.com
-            Always open in new Temporary Containers: enabled
-  			Global
-  				Navigating in Tabs should open new Temporary Containers: Never
-          Mouse Clicks on Links should open new Temporary Containers
-            Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-  				Click [Save]
+			General
+				Automatic Mode: Check
+				[PERSONAL CHOICE] Container Name Prefix: %domain% #
+				[PERSONAL CHOICE] Random Container Color: Check
+				[PERSONAL CHOICE] Container Icon: fingerprint
+				Container Number: Reuse available numbers
+				Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+				Click [Save]
+			Isolation
+				Per Domain
+					Domain pattern: *
+						Always open in new Temporary Containers: enabled
+					Domain pattern: duckduckgo.com
+						Always open in new Temporary Containers: enabled
+				Global
+					Navigating in Tabs should open new Temporary Containers: Never
+						Mouse Clicks on Links should open new Temporary Containers
+						Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+					Click [Save]
 			NOTE: CTRL+SHIFT+T = Undo closed tab(s)
 		uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
 			Settings
@@ -123,8 +123,8 @@ youtube.com/embed/
 
 	USEFUL/INTERESTING EXTENSIONS:
 		Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues/)
-    Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
-    Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
+		Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
+		Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
 		Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
 		I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 		URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
@@ -178,26 +178,26 @@ youtube.com/embed/
 	/* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
 	/* 0850a */ user_pref("browser.urlbar.autocomplete.enabled", true); // enable autocomplete in search
 	/* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true); // suggest bookmarks in search results
-  /* 0850b */ user_pref("browser.urlbar.suggest.openpage", true); // suggest open pages/tabs in search results
-  /* 5000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
+	/* 0850b */ user_pref("browser.urlbar.suggest.openpage", true); // suggest open pages/tabs in search results
+	/* 5000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 
 /*** ENTERPRISE USE SPECIFIC ***/
-  /* 5000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
+	/* 5000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
 	/* 5000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-  // /* 5000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-  // /* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+	// /* 5000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+	// /* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
 /*** EXPERIMENTAL ***/
-  // /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true);
-  // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
-  // MixedContentHunter; https://addons.mozilla.org/firefox/addon/mixedcontenthunter/
+	// /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true);
+	// /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
+	// MixedContentHunter; https://addons.mozilla.org/firefox/addon/mixedcontenthunter/
 
 /*** RECONSIDER ***/
-  // Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
-  // ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/ (https://fastaddons.com/)
-  // Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/ (https://gitlab.com/mjanetmars/switch-container/)
-  // Container Tabs Sidebar; https://addons.mozilla.org/firefox/addon/container-tabs-sidebar/ (https://github.com/maciekmm/container-tabs-sidebar/)
-  // Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-  // Download Cleaner Lite; https://addons.mozilla.org/firefox/addon/download-cleaner-lite/ (https://github.com/fuzzykiller/download-cleaner-lite/)
+	// Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
+	// ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/ (https://fastaddons.com/)
+	// Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/ (https://gitlab.com/mjanetmars/switch-container/)
+	// Container Tabs Sidebar; https://addons.mozilla.org/firefox/addon/container-tabs-sidebar/ (https://github.com/maciekmm/container-tabs-sidebar/)
+	// Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
+	// Download Cleaner Lite; https://addons.mozilla.org/firefox/addon/download-cleaner-lite/ (https://github.com/fuzzykiller/download-cleaner-lite/)
 
 user_pref("_user.js.parrot", "Success!");
