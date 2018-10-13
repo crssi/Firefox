@@ -157,6 +157,7 @@ youtube.com/embed/
 
 /*** BREAKAGE TWEAKS ***/
 	/* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
+  /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true); // disable old SSL/TLS - vulnerable to a MiTM attack
 	/* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
 	/* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
 	/* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
@@ -190,16 +191,6 @@ youtube.com/embed/
 	// /* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
 /*** EXPERIMENTAL ***/
-	// /* 1201  */ user_pref("security.ssl.require_safe_negotiation", true);
 	// /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
-	// MixedContentHunter; https://addons.mozilla.org/firefox/addon/mixedcontenthunter/
 
-/*** RECONSIDER ***/
-	// Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
-	// ScrollAnywhere; https://addons.mozilla.org/firefox/addon/scroll_anywhere/ (https://fastaddons.com/)
-	// Switch Container; https://addons.mozilla.org/firefox/addon/switch-container/ (https://gitlab.com/mjanetmars/switch-container/)
-	// Container Tabs Sidebar; https://addons.mozilla.org/firefox/addon/container-tabs-sidebar/ (https://github.com/maciekmm/container-tabs-sidebar/)
-	// Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-	// Download Cleaner Lite; https://addons.mozilla.org/firefox/addon/download-cleaner-lite/ (https://github.com/fuzzykiller/download-cleaner-lite/)
-
-user_pref("_user.js.parrot", "Success!");
+user_pref("_user.js.parrot", "Birdie flies high!");
