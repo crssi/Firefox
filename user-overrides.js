@@ -105,8 +105,10 @@ youtube.com/embed/
 				Per Domain
 					Domain pattern: *
 						Always open in new Temporary Containers: enabled
+						Click [Add or Edit]
 					Domain pattern: duckduckgo.com
 						Always open in new Temporary Containers: enabled
+						Click [Add or Edit]
 				Global
 					Navigating in Tabs should open new Temporary Containers: Never
 						Mouse Clicks on Links should open new Temporary Containers
