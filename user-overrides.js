@@ -151,6 +151,7 @@ youtube.com/embed/
 	/* 5000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 	/* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
 	/* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
+	/* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
 	/* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
 	/* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
 	/* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
