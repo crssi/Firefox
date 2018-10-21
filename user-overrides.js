@@ -192,6 +192,7 @@ youtube.com/embed/
 	// /* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
 /*** EXPERIMENTAL ***/
+	/* 0201b */ user_pref("permissions.default.geo", 0); // 0=always ask (default), 1=allow, 2=block
 	// /* 1610  */ user_pref("privacy.donottrackheader.enabled", false); // disable the DNT (Do Not Track) HTTP header
 	// /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
 
