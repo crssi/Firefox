@@ -155,7 +155,6 @@ youtube.com/embed/
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
-  /* 5000  */ user_pref("layout.spellcheckDefault", 2); // 0=none, 1-multi-line, 2=multi-line & single-line
   /* 5000  */ user_pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org"); // dark theme
   /* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
