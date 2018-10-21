@@ -144,6 +144,7 @@ youtube.com/embed/
 	/* 1702  */ user_pref("privacy.userContext.enabled", true); // Enable Container Tabs
 	/* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
 	/* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
+	/* 2508  */ user_pref("layers.acceleration.disabled", false); // don't disable hardware acceleration
 	/* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
 	/* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
 	/* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
