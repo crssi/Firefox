@@ -136,7 +136,6 @@ youtube.com/embed/
 /*** ANNOYANCES TWEAKS ***/
   /* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
   /* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
-  /* 1006  */ user_pref("permissions.memory_only", true); // permission changes are session only
   /* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
@@ -196,6 +195,7 @@ youtube.com/embed/
 
 /*** EXPERIMENTAL ***/
   // /* 0201b */ user_pref("permissions.default.geo", 0); // 0=always ask (default), 1=allow, 2=block
+  // /* 1006  */ user_pref("permissions.memory_only", true); // permission changes are session only
   // /* 1610  */ user_pref("privacy.donottrackheader.enabled", false); // disable the DNT (Do Not Track) HTTP header
   // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
 
