@@ -78,6 +78,7 @@ logout=
 medium.com/
 microsofttranslator.com/
 paypal.com/
+phish-report.mozilla.com/
 reddit.com/
 rover.ebay.co
 securityheaders.com/
