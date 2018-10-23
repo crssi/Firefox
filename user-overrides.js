@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 20.10.2018 (commit: 587194c); https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js (https://github.com/ghacksuserjs/ghacks-user.js)
+INFO:      Supplement for ghacks-user.js; 23.10.2018 (commit: 24f7847); https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js (https://github.com/ghacksuserjs/ghacks-user.js)
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/
@@ -199,5 +199,6 @@ youtube.com/embed/
   // /* 1006  */ user_pref("permissions.memory_only", true); // permission changes are session only
   // /* 1610  */ user_pref("privacy.donottrackheader.enabled", false); // disable the DNT (Do Not Track) HTTP header
   // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
+  // user_pref("media.autoplay.default", 1);
 
 user_pref("_user.js.parrot", "Birdie flies high!");
