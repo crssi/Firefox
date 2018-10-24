@@ -144,7 +144,6 @@ youtube.com/embed/
   /* 1702  */ user_pref("privacy.userContext.enabled", true); // Enable Container Tabs
   /* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
-  /* 2508  */ user_pref("layers.acceleration.disabled", false); // don't disable hardware acceleration
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
@@ -165,7 +164,7 @@ youtube.com/embed/
   /* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
-  /* 2030  */ user_pref("media.autoplay.enabled", true); // false introduces funny things
+  /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
   /* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
@@ -198,7 +197,7 @@ youtube.com/embed/
   // /* 0201b */ user_pref("permissions.default.geo", 0); // 0=always ask (default), 1=allow, 2=block
   // /* 1006  */ user_pref("permissions.memory_only", true); // permission changes are session only
   // /* 1610  */ user_pref("privacy.donottrackheader.enabled", false); // disable the DNT (Do Not Track) HTTP header
+  // /* 2508  */ user_pref("layers.acceleration.disabled", false); // don't disable hardware acceleration
   // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
-  // user_pref("media.autoplay.default", 0);
 
 user_pref("_user.js.parrot", "Birdie flies high!");
