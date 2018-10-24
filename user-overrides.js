@@ -199,6 +199,6 @@ youtube.com/embed/
   // /* 1006  */ user_pref("permissions.memory_only", true); // permission changes are session only
   // /* 1610  */ user_pref("privacy.donottrackheader.enabled", false); // disable the DNT (Do Not Track) HTTP header
   // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
-  // user_pref("media.autoplay.default", 1);
+  // user_pref("media.autoplay.default", 0);
 
 user_pref("_user.js.parrot", "Birdie flies high!");
