@@ -33,7 +33,7 @@
 			"pattern": "",
 			"exclude": "",
 			"isFunction": true,
-			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() == 'access-control-allow-origin') {\n\t\tif (header.value == 'https://www.youtube.com') { return; }\n\t\theader.value = '*';\n\t\treturn;\n\t}\n}\nval.push({'name': 'Access-Control-Allow-Origin', 'value': detail.originUrl.split('/', 3).join('/')});",
+			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() == 'access-control-allow-origin') {\n\t\tif (header.value == 'https://www.youtube.com' || header.value == 'https://twitter.com') { return; }\n\t\theader.value = '*';\n\t\treturn;\n\t}\n}\nval.push({'name': 'Access-Control-Allow-Origin', 'value': detail.originUrl.split('/', 3).join('/')});",
 			"id": 2
 		}
 	]
