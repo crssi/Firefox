@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 23.10.2018 (commit: 24f7847); https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js (https://github.com/ghacksuserjs/ghacks-user.js)
+INFO:      Supplement for ghacks-user.js; 24.10.2018 (commit: 1abe1fd); https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js (https://github.com/ghacksuserjs/ghacks-user.js)
 IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/
            Extensions under Essential section are... Essential !!!
 SEE ALSO:  https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/
