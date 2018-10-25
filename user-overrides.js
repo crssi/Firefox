@@ -168,7 +168,7 @@ youtube.com/embed/
   /* 2206  */ user_pref("full-screen-api.enabled", true); // false breaks fullscreen
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-  /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false except if using WE CanvasBlocker
+  /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 2662  */ user_pref("extensions.webextensions.restrictedDomains", ""); // allow extensions on mozilla domains
 
 /*** UPDATE ***/
@@ -194,10 +194,7 @@ youtube.com/embed/
   // /* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
 /*** EXPERIMENTAL ***/
-  // /* 0201b */ user_pref("permissions.default.geo", 0); // 0=always ask (default), 1=allow, 2=block
-  // /* 1006  */ user_pref("permissions.memory_only", true); // permission changes are session only
   // /* 1610  */ user_pref("privacy.donottrackheader.enabled", false); // disable the DNT (Do Not Track) HTTP header
   // /* 2508  */ user_pref("layers.acceleration.disabled", false); // don't disable hardware acceleration
-  // /* 5000  */ user_pref("security.mixed_content.upgrade_display_content", true); // 1240,1241; https://www.bennish.net/mixed-content.html
 
 user_pref("_user.js.parrot", "Birdie flies high!");
