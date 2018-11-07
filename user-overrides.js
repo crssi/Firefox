@@ -194,8 +194,6 @@ youtube.com/embed/
   // /* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
 /*** EXPERIMENTAL ***/
-  // /* 1610  */ user_pref("privacy.donottrackheader.enabled", false); // disable the DNT (Do Not Track) HTTP header
-  // /* 2508  */ user_pref("layers.acceleration.disabled", false); // don't disable hardware acceleration
   // uBO: https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist
 
 user_pref("_user.js.parrot", "Birdie flies high!");
