@@ -62,6 +62,7 @@
 @@||skypeassets.com^$third-party,xmlhttprequest,domain=live.com
 @@||sndcdn.com^$third-party,xmlhttprequest,domain=soundcloud.com
 @@||sourcegraph.com^$third-party,xmlhttprequest,domain=github.com
+@@||streamlock.net^$third-party,xmlhttprequest
 @@||stripe.com^$third-party,xmlhttprequest,domain=stripe.network
 @@||stripensrq.global.ssl.fastly.net^$third-party,xmlhttprequest,domain=stripe.network
 @@||tech26.de^$third-party,xmlhttprequest,domain=n26.com
