@@ -129,6 +129,7 @@ youtube.com/embed/
     Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
     Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
     Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
+    CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/
     I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
     URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
