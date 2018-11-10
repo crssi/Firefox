@@ -111,8 +111,7 @@ youtube.com/embed/
             Always open in new Temporary Containers: enabled
             Click [Add or Edit]
         Global
-          Navigating in Tabs should open new Temporary Containers: Never
-            Mouse Clicks on Links should open new Temporary Containers
+          Mouse Clicks on Links should open new Temporary Containers
             Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
           Click [Save]
       NOTE: CTRL+SHIFT+T = Undo closed tab(s)
