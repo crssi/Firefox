@@ -174,6 +174,7 @@ youtube.com/embed/
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
+  /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // allow addon web site to work as intended, also 2662 must be default
 
 /*** UPDATE ***/
   /* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
