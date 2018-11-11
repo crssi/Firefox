@@ -198,7 +198,4 @@ youtube.com/embed/
   // /* 5000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 5000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
-/*** EXPERIMENTAL ***/
-  // uBO: https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist
-
 user_pref("_user.js.parrot", "Birdie flies high!");
