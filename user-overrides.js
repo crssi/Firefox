@@ -20,7 +20,7 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
 EXTENSIONS:
   ESSENTIAL:
     CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-      Options -> Expert mode -> Misc -> Block data URL pages: Uncheck
+      Expert mode -> Misc -> Block data URL pages: Uncheck
     Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
       Cookie Settings
         Enable Automatic Cleaning? Delay Before Cleaning: 120 seconds
@@ -34,8 +34,7 @@ EXTENSIONS:
     Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
     disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
     Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
-    Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/); https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
-      NOTE: Not needed when disk and memory caching is disabled: browser.cache.memory.enable, browser.cache.disk.enable
+    Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/)
       Export and Import
         Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
         Import: Click [Save]
