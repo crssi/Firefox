@@ -21,13 +21,19 @@ EXTENSIONS:
   ESSENTIAL:
     CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
       Options -> Expert mode -> Misc -> Block data URL pages: Uncheck
+    Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
+      Cookie Settings
+        Enable Automatic Cleaning? Delay Before Cleaning: 120 seconds
+        Enable Cleanup on Domain Change: Check
+        Enable Cleanup Log and Counter: Uncheck
+        Show Number of Cookies for that Domain: Check
+        Show Notification After Cookie Cleanup: Uncheck
+        Enable Support for Firefox's Container Tabs: Check
+        Localstorage Cleanup (Firefox 58+): Check
     CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
     Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
     disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
     Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
-    Forget Me Not - Forget cookies & other data; https://addons.mozilla.org/firefox/addon/forget_me_not/ (https://github.com/Lusito/forget-me-not/)
-      Settings
-        Click [Restore from file...]: Download https://raw.githubusercontent.com/crssi/Firefox/master/forget-me-not-Settings.json
     Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/); https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
       NOTE: Not needed when disk and memory caching is disabled: browser.cache.memory.enable, browser.cache.disk.enable
       Export and Import
