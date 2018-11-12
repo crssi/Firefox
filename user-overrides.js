@@ -37,6 +37,11 @@ EXTENSIONS:
         Show Notification After Cookie Cleanup: Uncheck
         Enable Support for Firefox's Container Tabs: Check
         Localstorage Cleanup (Firefox 58+): Check
+    CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/
+      Enabled at startup: Check
+      Force value of access-control-allow-origin: empty
+      Activation whitelist: empty
+      Remember to save your changes: Click [Save]
     CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
     Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
     disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
@@ -140,7 +145,6 @@ youtube.com/embed/
     Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
     Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
     Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-    CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/
     I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
     URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
