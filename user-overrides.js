@@ -1,10 +1,7 @@
 /******
 HOME:      https://github.com/crssi/Firefox
 INFO:      Supplement for ghacks-user.js; 7.11.2018 (commit: b6b9733); https://github.com/ghacksuserjs/ghacks-user.js
-IMPORTANT: Read https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation/
-           Extensions under Essential section are... Essential !!!
-SEE ALSO:  https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/
-NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprinting to false
+NOTE:      Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
@@ -15,7 +12,17 @@ NOTE:      To setup Firefox Sync, then temporarily set privacy.resistFingerprint
     One-Click Search Engines: delete all except DuckDuckGo
 5. Install essential extensions (see Extensions section) and setup by instructions
 6. For enterprise use, insert domain list (comma separated) to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
-
+7. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
+   places.sqlite - Bookmarks
+   favicons.sqlite - Bookmarks icons
+   cert9.db - Certificates
+   handlers.json - Download actions
+   key4.db - Passwords
+   logins.json - Passwords
+   persdict.dat - Personal dictionary
+   pkcs11.txt - Security device settings
+   content-prefs.sqlite - Site-specific preferences
+   permissions.sqlite - Site-specific preferences
 
 EXTENSIONS:
   ESSENTIAL:
