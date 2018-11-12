@@ -9,7 +9,7 @@
 			"pattern": "",
 			"exclude": "",
 			"isFunction": true,
-			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() === 'origin') {\n\t\theader.value = detail.url.split('/', 3).join('/');\n\t\treturn;\n\t}\n}",
+			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() === 'origin') {\n\t\tif (detail.url.split('/', 3)[2].endsWith(header.value.split('//')[1].replace(/(^www\\.)/,''))) { return; }\n\t\theader.value = detail.url.split('/', 3).join('/');\n\t\treturn;\n\t}\n}",
 			"group": "Ungrouped"
 		}
 	],
