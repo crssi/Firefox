@@ -24,39 +24,38 @@ NOTE:      Before proceeding further, make a backup of your current profile
    content-prefs.sqlite - Site-specific preferences
    permissions.sqlite - Site-specific preferences
 
-EXTENSIONS:
-  ESSENTIAL:
-    CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-      Expert mode -> Misc -> Block data URL pages: Uncheck
-    Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
-      Cookie Settings
-        Enable Automatic Cleaning? Delay Before Cleaning: 120 seconds
-        Enable Cleanup on Domain Change: Check
-        Enable Cleanup Log and Counter: Uncheck
-        Show Number of Cookies for that Domain: Check
-        Show Notification After Cookie Cleanup: Uncheck
-        Enable Support for Firefox's Container Tabs: Check
-        Localstorage Cleanup (Firefox 58+): Check
-    CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/
-      Enabled at startup: Check
-      Force value of access-control-allow-origin: empty
-      Activation whitelist: empty
-      Remember to save your changes: Click [Save]
-    CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
-    Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
-    disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
-    Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
-    Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/)
-      Export and Import
-        Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
-        Import: Click [Save]
-    Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
-      Blocked parameters: _encoding, _hsenc, _hsmi, _openstat, $/ref@amazon.*, !cn@mail.google.com, !sc@*.googlevideo.com, !sp@*.startpage.com, 77campaign, action_object_*, action_ref_*, action_type_*, ad_*, adset_*, aff_platform, aff_trace_key, algo_*, aqs, assetId, assetType, bav, bih, biw, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, cn, cp, csi, cvid, d@banggood.com, dni, dpr, dq, e@linkedin.com, ei@google.*, ek, elq*, elqTrack, elqTrackId, ems_l, F@digifot.com, fb_*, feature, feeditemid, form, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mc_*, midToken, mkt_*, N@digifot.com, nb, ncid, ndsp, nid, nr_email_referer, oq, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, psc, pv, qp, qs@bing.com, recipientId, ref_, refsrc, rni, RSS*, sc, sc_*, sclient, scm@*.aliexpress.com, scroll, sei, siteId, sk, source@sourceforge.net, sp, spm@*.aliexpress.com, sr, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, wmode, ws_ab_*, yclid, yv, fbclid
-      URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
-      Click [Save preferences]
-    Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
-    Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
-      Blacklist (Append, withozt indentation to simplify copy/paste):
+ESSENTIAL EXTENSIONS:
+  CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
+    Expert mode -> Misc -> Block data URL pages: Uncheck
+  Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
+    Cookie Settings
+      Enable Automatic Cleaning? Delay Before Cleaning: 120 seconds
+      Enable Cleanup on Domain Change: Check
+      Enable Cleanup Log and Counter: Uncheck
+      Show Number of Cookies for that Domain: Check
+      Show Notification After Cookie Cleanup: Uncheck
+      Enable Support for Firefox's Container Tabs: Check
+      Localstorage Cleanup (Firefox 58+): Check
+  CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/
+    Enabled at startup: Check
+    Force value of access-control-allow-origin: empty
+    Activation whitelist: empty
+    Remember to save your changes: Click [Save]
+  CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
+  Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
+  disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
+  Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
+  Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/)
+    Export and Import
+      Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
+      Import: Click [Save]
+  Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
+    Blocked parameters: _encoding, _hsenc, _hsmi, _openstat, $/ref@amazon.*, !cn@mail.google.com, !sc@*.googlevideo.com, !sp@*.startpage.com, 77campaign, action_object_*, action_ref_*, action_type_*, ad_*, adset_*, aff_platform, aff_trace_key, algo_*, aqs, assetId, assetType, bav, bih, biw, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, cn, cp, csi, cvid, d@banggood.com, dni, dpr, dq, e@linkedin.com, ei@google.*, ek, elq*, elqTrack, elqTrackId, ems_l, F@digifot.com, fb_*, feature, feeditemid, form, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mc_*, midToken, mkt_*, N@digifot.com, nb, ncid, ndsp, nid, nr_email_referer, oq, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, psc, pv, qp, qs@bing.com, recipientId, ref_, refsrc, rni, RSS*, sc, sc_*, sclient, scm@*.aliexpress.com, scroll, sei, siteId, sk, source@sourceforge.net, sp, spm@*.aliexpress.com, sr, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, wmode, ws_ab_*, yclid, yv, fbclid
+    URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
+    Click [Save preferences]
+  Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
+  Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
+    Blacklist (Append, withozt indentation to simplify copy/paste):
 _sso=
 /_login
 /abp
@@ -106,47 +105,47 @@ virustotal.com/
 web.archive.org/
 webcache.googleusercontent.com/
 youtube.com/embed/
-      Notifications
-        Enable popup: Uncheck
-    Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
-    Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
-    Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
-      General
-        Automatic Mode: Check
-        [PERSONAL CHOICE] Container Name Prefix: %domain% #
-        [PERSONAL CHOICE] Random Container Color: Check
-        [PERSONAL CHOICE] Container Icon: fingerprint
-        Container Number: Reuse available numbers
-        Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+    Notifications
+      Enable popup: Uncheck
+  Smart HTTPS (revived); https://addons.mozilla.org/firefox/addon/smart-https-revived/ (https://mybrowseraddon.com/smart-https.html)
+  Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
+  Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
+    General
+      Automatic Mode: Check
+      [PERSONAL CHOICE] Container Name Prefix: %domain% #
+      [PERSONAL CHOICE] Random Container Color: Check
+      [PERSONAL CHOICE] Container Icon: fingerprint
+      Container Number: Reuse available numbers
+      Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+      Click [Save]
+    Isolation
+      Per Domain
+        Domain pattern: *
+          Always open in new Temporary Containers: enabled
+          Click [Add or Edit]
+        Domain pattern: duckduckgo.com
+          Always open in new Temporary Containers: enabled
+          Click [Add or Edit]
+      Global
+        Mouse Clicks on Links should open new Temporary Containers
+          Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
         Click [Save]
-      Isolation
-        Per Domain
-          Domain pattern: *
-            Always open in new Temporary Containers: enabled
-            Click [Add or Edit]
-          Domain pattern: duckduckgo.com
-            Always open in new Temporary Containers: enabled
-            Click [Add or Edit]
-        Global
-          Mouse Clicks on Links should open new Temporary Containers
-            Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-          Click [Save]
-      NOTE: CTRL+SHIFT+T = Undo closed tab(s)
-    uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
-      Settings
-        Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
-        [Insane mode] Tick the unchecked filters under Filter lists -> Custom (click + to expand)
-    uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/ (https://github.com/uBlockOrigin/uMatrix-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
-      About
-        Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
+    NOTE: CTRL+SHIFT+T = Undo closed tab(s)
+  uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
+    Settings
+      Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
+      [Insane mode] Tick the unchecked filters under Filter lists -> Custom (click + to expand)
+  uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/ (https://github.com/uBlockOrigin/uMatrix-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
+    About
+      Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
-  USEFUL/INTERESTING EXTENSIONS:
-    Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues/)
-    Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
-    Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
-    Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-    I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-    URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
+USEFUL EXTENSIONS:
+  Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues/)
+  Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
+  Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
+  Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
+  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
+  URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 ******/
 
