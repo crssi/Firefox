@@ -150,6 +150,8 @@ USEFUL EXTENSIONS:
 ******/
 
 /*** ANNOYANCES TWEAKS ***/
+  /* 0000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
+  /* 0000  */ user_pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org"); // dark theme
   /* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
   /* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
   /* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
@@ -164,12 +166,10 @@ USEFUL EXTENSIONS:
   /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
   /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // height at start
   /* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
-  /* 5000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
-  /* 5000  */ user_pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org"); // dark theme
   /* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
   /* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
@@ -193,13 +193,13 @@ USEFUL EXTENSIONS:
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0000  */ user_pref("browser.search.widget.inNavBar", false); // use navigation bar for search
+  /* 0000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 0850a */ user_pref("browser.urlbar.autocomplete.enabled", true); // enable autocomplete in search
   /* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true); // suggest bookmarks in search results
   /* 0850b */ user_pref("browser.urlbar.suggest.openpage", true); // suggest open pages/tabs in search results
-  /* 5000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 
 /*** ENTERPRISE USE SPECIFIC ***/
   /* 5000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
