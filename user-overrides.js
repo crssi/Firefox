@@ -36,7 +36,7 @@ ESSENTIAL EXTENSIONS:
       Show Notification After Cookie Cleanup: Uncheck
       Enable Support for Firefox's Container Tabs: Check
       Localstorage Cleanup (Firefox 58+): Check
-  CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/
+  CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/ (https://github.com/spenibus/cors-everywhere-firefox-addon/)
     Enabled at startup: Check
     Force value of access-control-allow-origin: empty
     Activation whitelist: empty
