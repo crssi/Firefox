@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 20.11.2018 (commit: 0ff610c); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 21.11.2018 (commit: 2ae3a3e); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -158,9 +158,6 @@ USEFUL EXTENSIONS:
   /* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
-  /* 1701  */ user_pref("privacy.userContext.ui.enabled", true); // enable Container Tabs setting in preferences
-  /* 1702  */ user_pref("privacy.userContext.enabled", true); // Enable Container Tabs
-  /* 1704  */ user_pref("privacy.userContext.longPressBehavior", 2); // long press on + tab
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
