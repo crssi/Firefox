@@ -174,7 +174,6 @@ USEFUL EXTENSIONS:
 
 /*** BREAKAGE TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-  /* 1240  */ user_pref("security.mixed_content.block_active_content", false); // allow secure and non-secure content
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
   /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
