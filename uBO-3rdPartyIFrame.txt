@@ -4,7 +4,6 @@
 
 ||$third-party,subdocument
 
-!@@||brightcove.com^$third-party,subdocument
 !@@||gfycat.com/ifr/*$third-party,subdocument
 @@||*/lwa/WebPages/LwaClient.aspx$third-party,subdocument
 @@||accounts.google.*/ServiceLogin$third-party,subdocument
@@ -36,6 +35,7 @@
 @@||paypalobjects.com^$third-party,subdocument,domain=paypal.com
 @@||player.theplatform.com^$third-party,subdocument
 @@||player.vimeo.com^$third-party,subdocument
+@@||players.brightcove.net^$third-party,subdocument
 @@||redditmedia.com^$third-party,subdocument,domain=reddit.com
 @@||render.githubusercontent.com^$third-party,subdocument,domain=github.com
 @@||sharepoint.com^$third-party,subdocument,domain=live.com
