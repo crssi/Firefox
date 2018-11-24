@@ -42,6 +42,7 @@
 @@||jshell.net^$third-party,xmlhttprequest
 @@||licdn.com^$third-party,xmlhttprequest,domain=linkedin.com
 @@||live.com^$third-party,xmlhttprequest,domain=office.com
+@@||kaspersky.*^$third-party,xmlhttprequest
 @@||maps.google.com/maps*$third-party,xmlhttprequest
 @@||medium.com^$third-party,xmlhttprequest
 @@||mega.co.nz^$third-party,xmlhttprequest,domain=mega.nz
