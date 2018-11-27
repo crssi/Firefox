@@ -28,6 +28,7 @@
 @@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
 @@||live.com^$third-party,subdocument,domain=microsoft.com
 @@||mapsengine.google.com/map/embed$third-party,subdocument
+@@||mcafeemobilesecurity.com^$third-party,subdocument,domain=mcafee.com
 @@||mozilla.*^$third-party,subdocument,domain=mozilla.org
 @@||mozillademos.org^$third-party,subdocument,domain=mozilla.org
 @@||office.com^$third-party,subdocument,domain=microsoftonline.com
@@ -47,6 +48,7 @@
 @@||tumblr.com^$third-party,subdocument,domain=instagram.com
 @@||twitter.com/i/videos/$third-party,subdocument
 @@||vox-cdn.com^$third-party,subdocument
+@@||wavesecure.com^$third-party,subdocument,domain=mcafee.com
 @@||wsimg.com^$third-party,subdocument,domain=godaddy.com
 @@||yimg.com^$third-party,subdocument,domain=yahoo.com
 @@||yourshoutbox.com^$third-party,subdocument
