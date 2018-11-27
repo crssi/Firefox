@@ -9,6 +9,7 @@
 
 !@@||content.jwplatform.com^$third-party,script
 !@@||fsdn.com^$third-party,script,domain=sourceforge.net
+!@@||instagram.com^$third-party,script
 @@||account.amazon.com^$third-party,script
 @@||account.azureedge.net^$third-party,script,domain=account.live.com
 @@||accounts-static.cdn.mozilla.net^$third-party,script,domain=accounts.firefox.com
@@ -52,7 +53,6 @@
 @@||ignimgs.com^$third-party,script,domain=ign.com
 @@||imgsmail.ru^$third-party,script,domain=mail.ru
 @@||imgur.com^$third-party,script
-@@||instagram.com^$third-party,script
 @@||kinja-static.com^$third-party,script
 @@||libs.cdn.renault.com$third-party,script
 @@||licdn.com^$third-party,script,domain=linkedin.com
