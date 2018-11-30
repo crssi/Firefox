@@ -64,7 +64,7 @@
 ||incartupsell.com^$third-party
 ||inspectlet.com^$third-party,important
 ||intercomcdn.com^$third-party
-||instagram.com^$third-party
+!||instagram.com^$third-party
 ||ipinfo.io^$third-party
 ||iprom.net^$third-party
 ||ipromcloud.com^$third-party
