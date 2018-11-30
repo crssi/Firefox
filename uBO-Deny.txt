@@ -92,6 +92,7 @@
 ||oneall.com^$third-party
 ||onesignal.com^$third-party
 ||outbrain.com^$third-party
+||piano.io$third-party
 ||pkmods.com$inline-script
 ||pmcatalyst-ae.com^$third-party
 ||polldaddy.com^$third-party
