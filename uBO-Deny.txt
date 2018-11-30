@@ -113,6 +113,7 @@
 ||syndication.twitter.*^
 ||themessagecloud.com^$third-party
 ||tinymce.com^$third-party
+||tinypass.com^$third-party
 ||trustpilot.com^$third-party
 ||unpkg.com^$third-party
 ||upscore.com^$third-party
