@@ -59,6 +59,7 @@
 @@||player.vimeo.com/external/*$third-party,xmlhttprequest
 @@||royalmail.net^$xmlhttprequest,domain=royalmail.com
 @@||runkitcdn.com^$third-party,xmlhttprequest
+@@||sa.searchnode.net^$third-party,xmlhttprequest
 @@||skype.com^$third-party,xmlhttprequest,domain=live.com
 @@||skypeassets.com^$third-party,xmlhttprequest,domain=live.com
 @@||sndcdn.com^$third-party,xmlhttprequest,domain=soundcloud.com
