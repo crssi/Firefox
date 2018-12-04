@@ -141,7 +141,8 @@ USEFUL EXTENSIONS:
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
-ARCHIVE:
+EXPERIMENTAL/INVESTIGATION:
+  See also: https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks
   Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/)
     Export and Import
       Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
