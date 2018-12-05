@@ -45,7 +45,7 @@ ESSENTIAL EXTENSIONS:
     Click [Save preferences]
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
-    Blacklist (Append, withozt indentation to simplify copy/paste):
+    Blacklist (Append, without indentation to simplify copy/paste):
 _sso=
 /_login
 /abp
