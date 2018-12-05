@@ -38,7 +38,6 @@ ESSENTIAL EXTENSIONS:
       Localstorage Cleanup (Firefox 58+): Check
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
-  disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
   Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
@@ -145,6 +144,7 @@ USEFUL EXTENSIONS:
 
 EXPERIMENTAL/INVESTIGATION:
   See also: https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks
+  disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
   Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/)
     Export and Import
       Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
