@@ -40,6 +40,7 @@ ESSENTIAL EXTENSIONS:
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
   Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
+  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
   Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/)
     Export and Import
       Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
@@ -146,7 +147,6 @@ USEFUL EXTENSIONS:
 
 EXPERIMENTAL/INVESTIGATION:
   See also: https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks
-  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
   CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/ (https://github.com/spenibus/cors-everywhere-firefox-addon/)
     Enabled at startup: Check
     Force value of access-control-allow-origin: empty
