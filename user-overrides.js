@@ -146,7 +146,6 @@ USEFUL EXTENSIONS:
 
 EXPERIMENTAL/INVESTIGATION:
   See also: https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks
-  disqus-undirect; https://addons.mozilla.org/firefox/addon/disqus-undirect/
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
   CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/ (https://github.com/spenibus/cors-everywhere-firefox-addon/)
     Enabled at startup: Check
