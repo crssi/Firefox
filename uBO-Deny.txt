@@ -48,6 +48,7 @@
 ||feedgrabbr.com^$third-party
 ||firebase.com^$third-party
 ||future-fie-assets.co.uk^$third-party
+||future.net.uk^$third-party
 ||google-analytics.*^$third-party,script
 ||google-analytics.*^$third-party,~script,important
 ||google.*^$third-party
