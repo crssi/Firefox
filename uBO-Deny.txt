@@ -58,6 +58,7 @@
 ||gravatar.com^$third-party
 ||groupbycloud.com^$third-party
 ||guim.co.uk^$third-party,script
+||hawksearch.com^$third-party
 ||hextom.com^$third-party
 ||hsforms.net^$third-party
 ||hubspot.com^$third-party
