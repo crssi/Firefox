@@ -24,6 +24,7 @@
 @@||alipcsec.com:*^$third-party,script,domain=aliexpress.com
 @@||alipsec.com^$third-party,script,domain=aliexpress.com
 @@||aliyun.com^$third-party,script,domain=aliexpress.com
+@@||api.digitalriver.com^$third-party,script
 @@||assets.gitlab-static.net^$third-party,script,domain=gitlab.com
 @@||blogsmithmedia.com^$third-party,script
 @@||bootstrapcdn.com^$third-party,script
