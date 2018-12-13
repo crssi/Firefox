@@ -162,7 +162,8 @@ EXPERIMENTAL/INVESTIGATION:
   /* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
   /* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
-  /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like glyphs
+  /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like fonts
+  /* 1406  */ user_pref("layout.css.font-loading-api.enabled", true); // can't help myself, but I like fonts
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
