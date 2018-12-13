@@ -36,6 +36,7 @@
 ||booster3000.si^$third-party
 ||calculoid.com^$third-party,script
 ||cdn-cnj.si^$third-party,script
+||cdn.krxd.net^
 ||chimpstatic.com^$third-party
 ||cloudinary.com^$third-party
 ||coordinatedcub.com^$third-party
