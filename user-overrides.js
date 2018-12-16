@@ -146,27 +146,22 @@ USEFUL EXTENSIONS:
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 EXPERIMENTAL/INVESTIGATION:
-  See also: https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks
-  CORS Everywhere; https://addons.mozilla.org/firefox/addon/cors-everywhere/ (https://github.com/spenibus/cors-everywhere-firefox-addon/)
-    Enabled at startup: Check
-    Force value of access-control-allow-origin: empty
-    Activation whitelist: empty
-    Remember to save your changes: Click [Save]
+  See: https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks
 
 ******/
 
 /*** ANNOYANCES TWEAKS ***/
   /* 0000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
   /* 0000  */ user_pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org"); // dark theme
-  /* 0862  */ user_pref("places.history.enabled", false); // disable history, but can also be cleared when exiting FF, see 2803
+  /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
   /* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
-  /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // can't help myself, but I like fonts
-  /* 1404  */ user_pref("gfx.font_rendering.opentype_svg.enabled", true); // can't help myself, but I like fonts
-  /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // can't help myself, but I like fonts
-  /* 1406  */ user_pref("layout.css.font-loading-api.enabled", true); // can't help myself, but I like fonts
-  /* 1408  */ user_pref("gfx.font_rendering.graphite.enabled", true); // can't help myself, but I like fonts
-  /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window to be forcibly opened fullsize
+  /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // but, I like fonts
+  // /* 1404  */ user_pref("gfx.font_rendering.opentype_svg.enabled", true); // but, I like fonts
+  /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // but, I like fonts
+  /* 1406  */ user_pref("layout.css.font-loading-api.enabled", true); // but, I like fonts
+  // /* 1408  */ user_pref("gfx.font_rendering.graphite.enabled", true); // but, I like fonts
+  /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
@@ -184,7 +179,7 @@ EXPERIMENTAL/INVESTIGATION:
 /*** BREAKAGE TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
-  /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd party Smart Referer WE
+  /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party like Smart Referer WE
   /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
