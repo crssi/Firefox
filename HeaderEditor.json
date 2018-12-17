@@ -1,29 +1,33 @@
 {
-	"request": [],
-	"sendHeader": [
+	"request": [
 		{
 			"enable": true,
-			"name": "Origin anonymizer - Request",
-			"ruleType": "modifySendHeader",
-			"matchType": "all",
-			"pattern": "",
+			"name": "[global] clean image links",
+			"ruleType": "redirect",
+			"matchType": "regexp",
+			"pattern": "(https?://.*\\.)(bmp|jpg|jpeg|gif|png|svg|tiff).*",
 			"exclude": "",
-			"isFunction": true,
-			"code": "for (const header of val) {\n\tif (header.name.toLowerCase() === 'origin') {\n\t\tif (detail.url.split('/', 3)[2].endsWith(header.value.split('//')[1].replace(/(^www\\.)/,''))) { return; }\n\t\theader.value = detail.url.split('/', 3).join('/');\n\t\treturn;\n\t}\n}",
-			"group": "Ungrouped"
+			"group": "Ungrouped",
+			"isFunction": false,
+			"action": "redirect",
+			"to": "$1$2"
 		}
 	],
+	"sendHeader": [],
 	"receiveHeader": [
 		{
 			"enable": true,
-			"name": "remove ETag",
+			"name": "ETag Removal",
 			"ruleType": "modifyReceiveHeader",
 			"matchType": "all",
 			"pattern": "",
 			"exclude": "",
-			"isFunction": true,
-			"code": "for (let header in val) {\n\tif (val[header].name.toLowerCase() === 'etag') {\n\t\tval[header].value = '';\n\t\tbreak;\n\t}\n}",
-			"group": "Ungrouped"
+			"group": "Ungrouped",
+			"isFunction": false,
+			"action": {
+				"name": "etag",
+				"value": ""
+			}
 		}
 	]
 }
