@@ -40,7 +40,6 @@ ESSENTIAL EXTENSIONS:
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
   Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
-  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
   Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/)
     Export and Import
       Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
@@ -146,10 +145,7 @@ USEFUL EXTENSIONS:
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 EXPERIMENTAL/INVESTIGATION:
-  See: https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks
-  /* 1404  / user_pref("gfx.font_rendering.opentype_svg.enabled", true); // but, I like fonts
-  /* 1406  / user_pref("layout.css.font-loading-api.enabled", true); // but, I like fonts
-  /* 1408  / user_pref("gfx.font_rendering.graphite.enabled", true); // but, I like fonts
+  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
 
 ******/
 
