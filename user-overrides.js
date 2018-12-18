@@ -147,7 +147,6 @@ EXPERIMENTAL/INVESTIGATION:
       Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
       Import: Click [Save]
 
-
 ******/
 
 /*** ANNOYANCES TWEAKS ***/
