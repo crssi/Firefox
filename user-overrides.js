@@ -146,6 +146,10 @@ EXPERIMENTAL/INVESTIGATION:
     Export and Import
       Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
       Import: Click [Save]
+  Privacy Possum; https://addons.mozilla.org/firefox/addon/privacy-possum/ (https://github.com/cowlicks/privacypossum/)
+    https://github.com/cowlicks/privacypossum/blob/master/docs/cydec-anti-fingerprinting-comparison.md
+    https://gitlab.com/krathalan/firefox-tweaks
+    https://gitlab.com/krathalan/firefox-tweaks/blob/master/Extras/uBO_filter_lists.md#annoyances
 
 ******/
 
