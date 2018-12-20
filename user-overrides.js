@@ -46,6 +46,12 @@ ESSENTIAL EXTENSIONS:
     URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
     Click [Save preferences]
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
+    Type filters
+      xmlhttprequest (XHR): Check
+    Exclusions
+      Exclude root domain matches: Check
+      Exclusions: www.youtube.com *.googlevideo.// COMBAK:
+    Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
     Blacklist (Append, without indentation to simplify copy/paste):
