@@ -27,15 +27,6 @@ NOTE:      Before proceeding further, make a backup of your current profile
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     Expert mode -> Misc -> Block data URL pages: Uncheck
-  Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
-    Cookie Settings
-      Enable Automatic Cleaning? Delay Before Cleaning: 120 seconds
-      Enable Cleanup on Domain Change: Check
-      Enable Cleanup Log and Counter: Uncheck
-      Show Number of Cookies for that Domain: Check
-      Show Notification After Cookie Cleanup: Uncheck
-      Enable Support for Firefox's Container Tabs: Check
-      Localstorage Cleanup (Firefox 58+): Check
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
@@ -152,10 +143,15 @@ EXPERIMENTAL/INVESTIGATION:
     Export and Import
       Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
       Import: Click [Save]
-  Privacy Possum; https://addons.mozilla.org/firefox/addon/privacy-possum/ (https://github.com/cowlicks/privacypossum/)
-    https://github.com/cowlicks/privacypossum/blob/master/docs/cydec-anti-fingerprinting-comparison.md
-    https://gitlab.com/krathalan/firefox-tweaks
-    https://gitlab.com/krathalan/firefox-tweaks/blob/master/Extras/uBO_filter_lists.md#annoyances
+  Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
+    Cookie Settings
+      Enable Automatic Cleaning? Delay Before Cleaning: 120 seconds
+      Enable Cleanup on Domain Change: Check
+      Enable Cleanup Log and Counter: Uncheck
+      Show Number of Cookies for that Domain: Check
+      Show Notification After Cookie Cleanup: Uncheck
+      Enable Support for Firefox's Container Tabs: Check
+      Localstorage Cleanup (Firefox 58+): Check
 
 ******/
 
