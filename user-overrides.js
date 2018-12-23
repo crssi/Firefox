@@ -10,7 +10,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
 4. Firefox -> Settings -> Search
     Default Search Engine: duckduckgo
     One-Click Search Engines: delete all except DuckDuckGo
-5. Install essential extensions (see Extensions section) and setup by instructions
+5. Install extensions (see Extensions section) and setup by instructions
 6. For enterprise use, insert domain list (comma separated) to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
 7. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    places.sqlite - Bookmarks
@@ -24,14 +24,16 @@ NOTE:      Before proceeding further, make a backup of your current profile
    content-prefs.sqlite - Site-specific preferences
    permissions.sqlite - Site-specific preferences
 
-ESSENTIAL EXTENSIONS:
+EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     Expert mode -> Misc -> Block data URL pages: Uncheck
+  Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues/)
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
   Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
+  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
     Blocked parameters: !cn@mail.google.com, !sc@*.googlevideo.com, !sp@*.startpage.com, $/ref@amazon.*, $:, 77campaign, AdID, AffiliateGuid, CAMPAIGN, CampaignID, F@digifot.com, ImpressionGuid, Itemid, N@digifot.com, ORIGIN, RSS*, _encoding, _hsenc, _hsmi, _openstat, _trkparms, action_object_*, action_ref_*, action_type_*, ad_*, adid, adserverid, adserveroptimizerid, adset_*, adtype, adurl, aff_platform, aff_trace_key, affiliate, algo_*, aqs, assetId, assetType, bav, bih, biw, btsid, bvm, callback@bilibili.com, campaignId, campaign_*, clickid, clkulrenc, cn, cp, csi, cvid, d@banggood.com, dni, dpr, dq, e@linkedin.com, ei@google.*, ek, elq*, ems_l, fb, fb_action_ids, fb_action_types, fb_ref, fb_source, fbclid, feature, feeditemid, first_visit, form, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mc_*, midToken, mkt_*, nb, ncid, ndsp, nid, nr_email_referer, num_ads, p@banggood.com, pbx, pd_rd_*, pf_rd_*, piggiebackcookie, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, psc, pubclick, pubid, pv, qp, qs@bing.com, recipientId, ref_, refsrc, rni, sc, sc_*, sclient, scroll, sei, siteId, sk, source@sourceforge.net, sp, sr, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, trackid, tracking, trk, trkEmail, tt_*, usegapi, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, wmode, ws_ab_*, yclid, yv
     URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
@@ -130,28 +132,9 @@ youtube.com/embed/
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
 USEFUL EXTENSIONS:
-  Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/issues/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-  Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
-  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-  Project Insight; https://addons.mozilla.org/firefox/addon/project-insight/
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
-
-EXPERIMENTAL/INVESTIGATION:
-  Header Editor; https://addons.mozilla.org/firefox/addon/header-editor/ (https://github.com/FirefoxBar/HeaderEditor/)
-    Export and Import
-      Download rule: https://raw.githubusercontent.com/crssi/Firefox/master/HeaderEditor.json
-      Import: Click [Save]
-  Cookie AutoDelete; https://addons.mozilla.org/firefox/addon/cookie-autodelete/ (https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/)
-    Cookie Settings
-      Enable Automatic Cleaning? Delay Before Cleaning: 120 seconds
-      Enable Cleanup on Domain Change: Check
-      Enable Cleanup Log and Counter: Uncheck
-      Show Number of Cookies for that Domain: Check
-      Show Notification After Cookie Cleanup: Uncheck
-      Enable Support for Firefox's Container Tabs: Check
-      Localstorage Cleanup (Firefox 58+): Check
 
 ******/
 
