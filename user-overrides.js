@@ -13,16 +13,16 @@ NOTE:      Before proceeding further, make a backup of your current profile
 5. Install extensions (see Extensions section) and setup by instructions
 6. For enterprise use, insert domain list (comma separated) to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
 7. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
-   places.sqlite - Bookmarks
-   favicons.sqlite - Bookmarks icons
    cert9.db - Certificates
+   content-prefs.sqlite - Site-specific preferences
+   favicons.sqlite - Bookmarks icons
    handlers.json - Download actions
    key4.db - Passwords
    logins.json - Passwords
+   permissions.sqlite - Site-specific preferences
    persdict.dat - Personal dictionary
    pkcs11.txt - Security device settings
-   content-prefs.sqlite - Site-specific preferences
-   permissions.sqlite - Site-specific preferences
+   places.sqlite - Bookmarks
 
 EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
