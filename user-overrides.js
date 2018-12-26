@@ -43,7 +43,7 @@ EXTENSIONS:
       xmlhttprequest (XHR): Check
     Exclusions
       Exclude root domain matches: Check
-      Exclusions: www.youtube.com *.googlevideo.// COMBAK:
+      Exclusions: www.youtube.com *.googlevideo.com
     Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
