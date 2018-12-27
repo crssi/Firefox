@@ -136,6 +136,7 @@ youtube.com/embed/
 USEFUL EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
+  True Sight; https://addons.mozilla.org/firefox/addon/detect-cloudflare-plus/ (https://github.com/claustromaniac/detect-cloudflare-plus/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 ******/
