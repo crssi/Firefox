@@ -7,12 +7,14 @@ NOTE:      Before proceeding further, make a backup of your current profile
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 2. Append this file to user.js that was downloaded in step 1.
 3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
-4. Firefox -> Settings -> Search
+4. Firefox -> Options -> Search
     Default Search Engine: duckduckgo
     One-Click Search Engines: delete all except DuckDuckGo
-5. Install extensions (see Extensions section) and setup by instructions
-6. For enterprise use, insert domain list (comma separated) to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
-7. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
+5. Firefox -> Options -> Tabs -> Settings...
+    Remove all containers
+6. Install extensions (see Extensions section) and setup by instructions
+7. For enterprise use, insert domain list (comma separated) to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
+8. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    cert9.db - Certificates
    content-prefs.sqlite - Site-specific preferences
    favicons.sqlite - Bookmarks icons
