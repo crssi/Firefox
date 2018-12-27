@@ -12,7 +12,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
     One-Click Search Engines: delete all except DuckDuckGo
 5. Firefox -> Options -> Tabs -> Settings...
     Remove all containers
-6. Install extensions (see Extensions section) and setup by instructions
+6. Install extensions (see Extensions section) and setup by instructions; IMPORTANT NOTE: all changes are addition to default
 7. For enterprise use, insert domain list (comma separated) to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
 8. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    cert9.db - Certificates
@@ -42,6 +42,7 @@ EXTENSIONS:
     Click [Save preferences]
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
+      script: Check
       xmlhttprequest (XHR): Check
     Exclusions
       Exclude root domain matches: Check
