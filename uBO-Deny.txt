@@ -38,6 +38,7 @@
 ||calculoid.com^$third-party,script
 ||cdn-cnj.si^$third-party,script
 ||cdn.krxd.net^
+||cdn.transifex.com^ # https://semantic-ui.com/introduction/new.html
 ||chimpstatic.com^$third-party
 ||cloudinary.com^$third-party
 ||coordinatedcub.com^$third-party
