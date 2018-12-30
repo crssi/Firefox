@@ -112,9 +112,9 @@ youtube.com/embed/
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     General
       Automatic Mode: Check
-      [PERSONAL CHOICE] Container Name Prefix: %domain% #
-      [PERSONAL CHOICE] Random Container Color: Check
-      [PERSONAL CHOICE] Container Icon: fingerprint
+      Container Name Prefix: %domain% #
+      Random Container Color: Check
+      Container Icon: fingerprint
       Container Number: Reuse available numbers
       Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
       Click [Save]
@@ -153,8 +153,8 @@ USEFUL EXTENSIONS:
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
   /* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
-  /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // but, I like fonts
-  /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // but, I like fonts
+  /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
+  /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
