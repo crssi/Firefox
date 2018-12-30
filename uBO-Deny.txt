@@ -104,6 +104,7 @@
 ||purch.com^$third-party,important
 ||pushance.com^$third-party
 ||pusher.com^$third-party
+||s*.wp.com^$third-party,script,xmlhttprequest
 ||salesforceliveagent.com^$third-party
 ||sb.scorecardresearch.com^$important
 ||servebom.com^$third-party,important
@@ -112,9 +113,9 @@
 ||sitebot.ai^$third-party
 ||smartfocus.com^$third-party
 ||smind.*^$third-party
-||s*.wp.com^$third-party,script,xmlhttprequest
 ||sportradar.com^$third-party
 ||spot.im^$third-party
+||swiftypecdn.com^$third-party,script
 ||syndication.twitter.*^
 ||themessagecloud.com^$third-party
 ||tinymce.com^$third-party
