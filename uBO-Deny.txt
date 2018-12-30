@@ -112,7 +112,7 @@
 ||sitebot.ai^$third-party
 ||smartfocus.com^$third-party
 ||smind.*^$third-party
-!||s0.wp.com^
+||s*.wp.com^$third-party,script,xmlhttprequest
 ||sportradar.com^$third-party
 ||spot.im^$third-party
 ||syndication.twitter.*^
