@@ -52,6 +52,7 @@ EXTENSIONS:
 *.youtube.com *.ytimg.com
 *.google*.* *.google*.*
 *.google*.* *.gstatic.com
+*.ali*.com *.ali*.com
     Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
