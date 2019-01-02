@@ -36,8 +36,8 @@ EXTENSIONS:
   Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-  Librefox HTTP Watcher - Red flag]; https://addons.mozilla.org/firefox/addon/librefox-http-watcher-red-flag/ (https://github.com/intika/)
-    Firefox Themes: Other Theme
+  Librefox HTTP Watcher - Red flag; https://addons.mozilla.org/firefox/addon/librefox-http-watcher-red-flag/ (https://github.com/intika/)
+    Firefox Themes: Firefox Dark
     Red Color Warning: Apply red color to the whole browser
     Click [Save]
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
