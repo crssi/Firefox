@@ -37,8 +37,13 @@ EXTENSIONS:
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
 <<<<<<< HEAD
+<<<<<<< HEAD
   Librefox HTTP Watcher - Red flag; https://addons.mozilla.org/firefox/addon/librefox-http-watcher-red-flag/ (https://github.com/intika/)
     Firefox Themes: Firefox Dark
+=======
+  Librefox HTTP Watcher - Red flag]; https://addons.mozilla.org/firefox/addon/librefox-http-watcher-red-flag/ (https://github.com/intika/)
+    Firefox Themes: Other Theme
+>>>>>>> parent of 8f17e88... Update user-overrides.js
     Red Color Warning: Apply red color to the whole browser
     Click [Save]
 =======
