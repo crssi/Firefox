@@ -1,0 +1,80 @@
+/* 
+https://www.reddit.com/r/FirefoxCSS/comments/7dkhuh/color_your_url_bar_based_on_website_security/
+https://fosspost.org/tutorials/how-to-customize-firefox-57-user-interface
+*/
+
+
+toolbar {
+  --toolbar-bgcolor: rgb(68, 68, 68);
+  --lwt-toolbar-field-background-color: rgb(32, 32, 32);
+}
+
+
+#urlbar {
+  position: relative;
+  z-index: 1;
+}
+
+#identity-box:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+
+/* about:about */
+#urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
+  background: #a4000f; /* Firefox Red 70 */
+}
+
+/* about:config */
+#urlbar[pageproxystate='valid'] #identity-box.chromeUI:after {
+  background: #0a84ff; /* Firefox Blue 50 */
+  opacity: 0.2;
+}
+
+/* uBlock Origin Dashboard */
+#urlbar[pageproxystate='valid'] #identity-box.extensionPage:after {
+  background: #0a84ff; /* Firefox Blue 50 */
+  opacity: 0.2;
+}
+
+/* https://mixed.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
+  background: #a47f00; /* Firefox Yellow 70 */
+  opacity: 0.2;
+}
+
+/* http://http.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.notSecureText:after {
+  background: #a4000f; /* Firefox Red 70 */
+  animation: blinker 1s linear infinite;
+}
+
+/* https://self-signed.badssl.com/ but add certificate exception */
+#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
+  background: #a47f00; /* Firefox Yellow 70 */
+  animation: blinker 1s linear infinite;
+}
+
+/* https://very.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
+  background: #a4000f;  /* Firefox Red 70 */
+  animation: blinker 1s linear infinite;
+}
+
+/* https://mixed-script.badssl.com/ but disable protection */
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
+  background: #a47f00; /* Firefox Yellow 70 */
+  animation: blinker 1s linear infinite;
+}
