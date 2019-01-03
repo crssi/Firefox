@@ -4,7 +4,7 @@ https://fosspost.org/tutorials/how-to-customize-firefox-57-user-interface
 */
 
 toolbar {
-  --toolbar-bgcolor: rgb(80, 84, 88);
+  --toolbar-bgcolor: rgb(68, 72, 76);
   --lwt-toolbar-field-background-color: rgb(34, 38, 42);
 }
 
