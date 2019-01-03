@@ -48,16 +48,13 @@ EXTENSIONS:
     Exclusions
       Exclude root domain matches: Check
       Exclusions:
-
 *.youtube.com *
 *.google*.* *
 *.ali*.com *.ali*.com
-
     Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
     Blacklist (Append, without indentation to simplify copy/paste):
-
 _sso=
 /_login
 /abp
@@ -108,7 +105,6 @@ virustotal.com/
 web.archive.org/
 webcache.googleusercontent.com/
 youtube.com/embed/
-
     Notifications
       Enable popup: Uncheck
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
