@@ -48,6 +48,18 @@ toolbar {
   opacity: 0.2;
 }
 
+/* https://www.google.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.verifiedDomain:after{
+  background: #058b00; /* Firefox Green 70 */
+  opacity: 0.2;
+}
+
+/* https://www.github.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
+  background: #058b00; /* Firefox Green 70 */
+  opacity: 0.4;
+}
+
 /* https://mixed.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
   background: #a47f00; /* Firefox Yellow 70 */
@@ -55,8 +67,13 @@ toolbar {
 }
 
 /* http://http.badssl.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.notSecureText:after {
+#urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
   background: #a4000f; /* Firefox Red 70 */
+  /* animation: blinker 1s linear infinite; */
+}
+
+/* http://badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
   animation: blinker 1s linear infinite;
 }
 
@@ -76,16 +93,4 @@ toolbar {
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
   background: #a47f00; /* Firefox Yellow 70 */
   animation: blinker 1s linear infinite;
-}
-
-/* https://www.google.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.verifiedDomain:after{
-  background: #058b00; /* Firefox Green 70 */
-  opacity: 0.2;
-}
-
-/* https://www.github.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
-  background: #058b00; /* Firefox Green 70 */
-  opacity: 0.4;
 }
