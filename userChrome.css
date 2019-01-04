@@ -52,16 +52,10 @@ toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
   opacity: 0.2;
 }
 
-/* https://www.google.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.verifiedDomain:after{
-  background: #058b00; /* Firefox Green 70 */
-  opacity: 0.2;
-}
-
 /* https://www.github.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
   background: #058b00; /* Firefox Green 70 */
-  opacity: 0.6;
+  opacity: 0.2;
 }
 
 /* https://mixed.badssl.com/ */
