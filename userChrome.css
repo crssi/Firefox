@@ -8,6 +8,10 @@ toolbar {
   --lwt-toolbar-field-background-color: rgb(34, 38, 42);
 }
 
+toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
+  display: none;
+}
+
 
 #urlbar {
   position: relative;
@@ -23,7 +27,6 @@ toolbar {
   left: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.8;
 }
 
 @keyframes blinker {
@@ -34,6 +37,7 @@ toolbar {
 /* about:about */
 #urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
   background: #a4000f; /* Firefox Red 70 */
+  opacity: 0.4;
 }
 
 /* about:config */
@@ -57,40 +61,45 @@ toolbar {
 /* https://www.github.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
   background: #058b00; /* Firefox Green 70 */
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 /* https://mixed.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
   background: #a47f00; /* Firefox Yellow 70 */
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 /* http://http.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
   background: #a4000f; /* Firefox Red 70 */
-  /* animation: blinker 1s linear infinite; */
+  opacity: 0.8;
 }
 
 /* http://badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
+  background: #a4000f; /* Firefox Red 70 */
+  opacity: 1.0;
   animation: blinker 1s linear infinite;
 }
 
 /* https://self-signed.badssl.com/ but add certificate exception */
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
   background: #a47f00; /* Firefox Yellow 70 */
+  opacity: 0.6;
   animation: blinker 1s linear infinite;
 }
 
 /* https://very.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
   background: #a4000f;  /* Firefox Red 70 */
+  opacity: 0.6;
   animation: blinker 1s linear infinite;
 }
 
 /* https://mixed-script.badssl.com/ but disable protection */
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
   background: #a47f00; /* Firefox Yellow 70 */
+  opacity: 0.6;
   animation: blinker 1s linear infinite;
 }
