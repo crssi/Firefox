@@ -77,3 +77,15 @@ toolbar {
   background: #a47f00; /* Firefox Yellow 70 */
   animation: blinker 1s linear infinite;
 }
+
+/* https://www.google.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.verifiedDomain:after{
+  background: #058b00; /* Firefox Green 70 */
+  opacity: 0.2;
+}
+
+/* https://www.github.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
+  background: #058b00; /* Firefox Green 70 */
+  opacity: 0.4;
+}
