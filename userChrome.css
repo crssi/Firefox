@@ -55,7 +55,7 @@ toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
 /* https://www.github.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
   background: #058b00; /* Firefox Green 70 */
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 /* https://mixed.badssl.com/ */
