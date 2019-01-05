@@ -30,7 +30,7 @@ toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
 }
 
 @keyframes blinker {
-  50% { opacity: 0; }
+  50% { opacity: 0.4; }
 }
 
 
@@ -74,26 +74,26 @@ toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
   background: #a4000f; /* Firefox Red 70 */
   opacity: 1.0;
-  animation: blinker 1s linear infinite;
+  animation: blinker 2s linear infinite;
 }
 
 /* https://self-signed.badssl.com/ but add certificate exception */
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
   background: #a47f00; /* Firefox Yellow 70 */
   opacity: 0.6;
-  animation: blinker 1s linear infinite;
+  animation: blinker 2s linear infinite;
 }
 
 /* https://very.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
   background: #a4000f;  /* Firefox Red 70 */
   opacity: 0.6;
-  animation: blinker 1s linear infinite;
+  animation: blinker 2s linear infinite;
 }
 
 /* https://mixed-script.badssl.com/ but disable protection */
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
   background: #a47f00; /* Firefox Yellow 70 */
   opacity: 0.6;
-  animation: blinker 1s linear infinite;
+  animation: blinker 2s linear infinite;
 }
