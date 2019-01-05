@@ -54,7 +54,7 @@ EXTENSIONS:
     Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
-    Blacklist (Append, without indentation to simplify copy/paste):
+    Blacklist:
 _sso=
 /_login
 /abp
