@@ -43,13 +43,13 @@ toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
 /* about:config */
 #urlbar[pageproxystate='valid'] #identity-box.chromeUI:after {
   background: #0a84ff; /* Firefox Blue 50 */
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 /* uBlock Origin Dashboard */
 #urlbar[pageproxystate='valid'] #identity-box.extensionPage:after {
   background: #0a84ff; /* Firefox Blue 50 */
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 /* https://www.github.com/ */
