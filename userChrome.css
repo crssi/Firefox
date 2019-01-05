@@ -3,11 +3,13 @@ https://www.reddit.com/r/FirefoxCSS/comments/7dkhuh/color_your_url_bar_based_on_
 https://fosspost.org/tutorials/how-to-customize-firefox-57-user-interface
 */
 
+/* make active tab more visible */
 toolbar {
   --toolbar-bgcolor: rgb(68, 72, 76);
   --lwt-toolbar-field-background-color: rgb(34, 38, 42);
 }
 
+/* Remove Temporary Container icon */
 toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
   display: none;
 }
