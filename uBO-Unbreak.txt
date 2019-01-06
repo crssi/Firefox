@@ -5,6 +5,7 @@
 ! Allow extensions like uBO/uM to get the filter list updates
 @@||$domain=moz-extension-scheme
 
+@@/clarity-*.js$first-party,script
 @@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
 @@||assets.adobedtm.com^$third-party,script
@@ -26,7 +27,6 @@
 @@||omara.cdn-cnj.si^$third-party,script
 @@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
 @@||platform.twitter.com^$third-party,stylesheet,image
-!@@||staticxx.facebook.com^$subdocument,domain=klip.si
 @@||translate.googleusercontent.com
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
 @@||ytimg.com^$third-party,script
