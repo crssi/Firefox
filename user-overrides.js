@@ -87,7 +87,7 @@ _sso=
 /websso/
 /wsfederation
 action=login
-alipay.com
+alipay.com/
 archive.is/
 chart.googleapis.com/chart
 i-dont-care-about-cookies.eu/
