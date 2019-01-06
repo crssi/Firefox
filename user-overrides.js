@@ -14,7 +14,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
 6. Firefox -> Options -> Tabs -> Settings...
     Remove all containers
 7. Install extensions (see Extensions section) and setup by instructions; IMPORTANT NOTE: all changes are addition to default
-8. For enterprise use, insert domain list (comma separated) to enable SSO for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris under enterprise specific section
+8. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 9. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    cert9.db - Certificates
    content-prefs.sqlite - Site-specific preferences
@@ -51,7 +51,6 @@ EXTENSIONS:
       Exclusions:
 *.youtube.com *
 *.google*.* *
-*.ali*.com *.ali*.com
     Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
