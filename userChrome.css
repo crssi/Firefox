@@ -74,7 +74,7 @@ toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
   background: #a4000f; /* Firefox Red 70 */
   opacity: 1.0;
-  animation: blinker 2s linear infinite;
+  animation: blinker 1s linear infinite;
 }
 
 /* https://self-signed.badssl.com/ but add certificate exception */
