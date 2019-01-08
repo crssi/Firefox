@@ -10,11 +10,7 @@ toolbar {
 }
 
 /* Remove Temporary Container icon */
-toolbarbutton[label='Open a new Tab in a new Temporary Container'] {
-  display: none;
-}
-
-toolbarbutton[label='Open a new Tab in a new Temporary Container (Alt+C)'] {
+toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   display: none;
 }
 
