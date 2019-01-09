@@ -196,3 +196,14 @@
 !||xyz^
 !||yokohama^
 !||zip^
+
+! 1/8/2019, 3:16:12 PM trustedreviews.com
+||ti-media.net^
+||eagleapi.io^
+! 1/8/2019, 3:19:59 PM techradar.com
+||hawk-assets.co.uk^
+||hawk-tech.co.uk^
+||future-fie.co.uk^
+||futurecdn.net^$xmlhttprequest
+! 1/8/2019, 3:34:55 PM logitechg.com
+||channelsight.com^$xmlhttprequest
