@@ -36,7 +36,7 @@ EXTENSIONS:
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
   Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa/)
-  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
+  HTTP to HTTPS; https://addons.mozilla.org/firefox/addon/http-to-https/ (https://github.com/balvin-perrie/http-to-https)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
     Blocked parameters: _encoding, _hsenc, _hsmi, _openstat, _trkparms, !cn@mail.google.com, !sc@*.googlevideo.com, !sp@*.startpage.com, $/ref@amazon.*, 77campaign, action_object_*, action_ref_*, action_type_*, ad_*, adid, AdID, adserverid, adserveroptimizerid, adset_*, adtype, adurl, aff_platform, aff_trace_key, affiliate, AffiliateGuid, algo_*, aqs, assetId, assetType, bav, bih, biw, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, CampaignID, clickid, clkulrenc, cn, CNDID, cp, csi, cvid, d@banggood.com, dni, dpr, dq, e@linkedin.com, ei@google.*, ek, elq*, ems_l, fb, fb_action_ids, fb_action_types, fb_ref, fb_source, fbclid, feature, feeditemid, first_visit, form, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, ImpressionGuid, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mbid, mc_*, midToken, mkt_*, nb, ncid, ndsp, nid, nr_email_referer, num_ads, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, piggiebackcookie, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, psc, pubclick, pubid, pv, qp, qs@bing.com, recipientId, ref_, refsrc, rni, RSS*, sc, sc_*, sclient, scroll, sei, siteId, sk, source@sourceforge.net, sp, spJobID, spMailingID, spReportId, spUserID, sr, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, tracking, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, wmode, ws_ab_*, yclid, yv
@@ -145,6 +145,9 @@ USEFUL EXTENSIONS:
   Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   True Sight; https://addons.mozilla.org/firefox/addon/detect-cloudflare-plus/ (https://github.com/claustromaniac/detect-cloudflare-plus/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
+
+INVESTIGATION (do not install):
+  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/); Future candidate replace for "HTTP to HTTPS"
 
 ******/
 
