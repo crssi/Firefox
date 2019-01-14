@@ -65,10 +65,26 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   background: #a47f00; /* Firefox Yellow 70 */
 }
 
+/* https://self-signed.badssl.com/ but add certificate exception */
+#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
+  background: #a4000f; /* Firefox Red 70 */
+}
+
 /* http://http.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
   background: #a4000f; /* Firefox Red 70 */
   opacity: 0.4;
+}
+
+#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after {
+  background: #a4000f; /* Firefox Red 70 */
+  opacity: 0.4;
+}
+
+/* https://very.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
+  background: #a4000f;  /* Firefox Red 70 */
+  opacity: 0.8;
 }
 
 /* http://badssl.com/ */
@@ -76,15 +92,4 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   background: #a4000f; /* Firefox Red 70 */
   opacity: 1.0;
   animation: blinker 1.2s linear infinite;
-}
-
-/* https://self-signed.badssl.com/ but add certificate exception */
-#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
-  background: #a4000f; /* Firefox Red 70 */
-}
-
-/* https://very.badssl.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
-  background: #a4000f;  /* Firefox Red 70 */
-  opacity: 0.8;
 }
