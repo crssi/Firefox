@@ -1,6 +1,9 @@
 /*
 https://www.reddit.com/r/FirefoxCSS/comments/7dkhuh/color_your_url_bar_based_on_website_security/
 https://fosspost.org/tutorials/how-to-customize-firefox-57-user-interface
+https://github.com/Aris-t2/CustomCSSforFx
+https://github.com/FirefoxBar/userChrome.js-Collections-
+https://github.com/overdodactyl/ShadowFox
 */
 
 /* make active tab more visible */
@@ -55,7 +58,6 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 /* https://www.github.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
   background: #058b00; /* Firefox Green 70 */
-  opacity: 0.1;
 }
 
 /* https://mixed.badssl.com/ */
@@ -73,7 +75,7 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
   background: #a4000f; /* Firefox Red 70 */
   opacity: 1.0;
-  animation: blinker 2s linear infinite;
+  animation: blinker 1.2s linear infinite;
 }
 
 /* https://self-signed.badssl.com/ but add certificate exception */
@@ -86,10 +88,3 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   background: #a4000f;  /* Firefox Red 70 */
   opacity: 0.8;
 }
-
-/* https://very.badssl.com/
-#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
-  background: #a4000f;
-  opacity: 0.8;
-}
-*/
