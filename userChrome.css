@@ -86,6 +86,12 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 }
 
 /* https://very.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
+  background: #a4000f;  /* Firefox Red 70 */
+  opacity: 0.8;
+}
+
+/* https://very.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
   background: #a4000f;  /* Firefox Red 70 */
   opacity: 0.8;
