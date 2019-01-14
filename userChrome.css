@@ -29,6 +29,7 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   left: 0;
   pointer-events: none;
   z-index: -1;
+  opacity: 0.2;
 }
 
 @keyframes blinker {
@@ -39,19 +40,16 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 /* about:about */
 #urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
   background: #a4000f; /* Firefox Red 70 */
-  opacity: 0.2;
 }
 
 /* about:config */
 #urlbar[pageproxystate='valid'] #identity-box.chromeUI:after {
   background: #0a84ff; /* Firefox Blue 50 */
-  opacity: 0.2;
 }
 
 /* uBlock Origin Dashboard */
 #urlbar[pageproxystate='valid'] #identity-box.extensionPage:after {
   background: #0a84ff; /* Firefox Blue 50 */
-  opacity: 0.2;
 }
 
 /* https://www.github.com/ */
@@ -63,7 +61,6 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 /* https://mixed.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
   background: #a47f00; /* Firefox Yellow 70 */
-  opacity: 0.2;
 }
 
 /* http://http.badssl.com/ */
@@ -82,7 +79,6 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 /* https://self-signed.badssl.com/ but add certificate exception */
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
   background: #a4000f; /* Firefox Red 70 */
-  opacity: 0.2;
 }
 
 /* https://very.badssl.com/ */
@@ -91,8 +87,9 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   opacity: 0.8;
 }
 
-/* https://very.badssl.com/ */
+/* https://very.badssl.com/
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
-  background: #a4000f;  /* Firefox Red 70 */
+  background: #a4000f;
   opacity: 0.8;
 }
+*/
