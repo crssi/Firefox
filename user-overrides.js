@@ -143,7 +143,6 @@ USEFUL EXTENSIONS:
   Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-  True Sight; https://addons.mozilla.org/firefox/addon/detect-cloudflare-plus/ (https://github.com/claustromaniac/detect-cloudflare-plus/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 ******/
@@ -181,7 +180,7 @@ USEFUL EXTENSIONS:
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   // /* 4001  */ user_pref("privacy.firstparty.isolate", false); // True may break cross-domain logins and site functionality
-  /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // allow addon web site to work as intended, also 2662 must be default
+  /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
 
 /*** UPDATE ***/
   /* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
@@ -205,4 +204,4 @@ USEFUL EXTENSIONS:
   // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
-user_pref("_user.js.parrot", "Birdie flies high!");
+user_pref("_user.js.parrot", "Eagle has landed.");
