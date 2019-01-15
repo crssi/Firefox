@@ -43,6 +43,7 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 /* about:about */
 #urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
   background: #a4000f; /* Firefox Red 70 */
+  opacity: 0.4;
 }
 
 /* about:config */
