@@ -17,6 +17,21 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   display: none;
 }
 
+/* make sidebar lighter */
+.sidebar-placesTreechildren {
+	color: black;
+	background-color: rgb(249,249,250);
+}
+
+.sidebar-placesTreechildren::-moz-tree-image {
+  color: black !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text {
+  color: black !important;
+}
+
+
 
 #urlbar {
   position: relative;
