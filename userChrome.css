@@ -4,6 +4,8 @@ https://fosspost.org/tutorials/how-to-customize-firefox-57-user-interface
 https://github.com/Aris-t2/CustomCSSforFx
 https://github.com/FirefoxBar/userChrome.js-Collections-
 https://github.com/overdodactyl/ShadowFox
+https://developer.mozilla.org/en-US/docs/tag/XUL_Tutorial
+https://github.com/Timvde/UserChrome-Tweaks
 */
 
 /* make active tab more visible */
@@ -12,10 +14,14 @@ toolbar {
   --lwt-toolbar-field-background-color: rgb(34, 38, 42);
 }
 
+
+
 /* Remove Temporary Container icon */
 toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   display: none;
 }
+
+
 
 /* make sidebar lighter */
 .sidebar-placesTreechildren {
@@ -33,6 +39,18 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 
 
 
+/* only show close buttons on tabs when hovering */
+.tabbrowser-tab .tab-close-button {
+  display: none !important;
+}
+
+.tabbrowser-tab:hover .tab-close-button {
+  display: -moz-box !important;
+}
+
+
+
+/* urlbar colorization */
 #urlbar {
   position: relative;
   z-index: 1;
