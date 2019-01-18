@@ -41,11 +41,13 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 
 /* only show close buttons on tabs when hovering */
 .tabbrowser-tab .tab-close-button {
-  display: none !important;
+  /*display: none !important;*/
+  visibility: hidden;
 }
 
 .tabbrowser-tab:hover .tab-close-button {
-  display: -moz-box !important;
+  /*display: -moz-box !important;*/
+  visibility: visible;
 }
 
 
