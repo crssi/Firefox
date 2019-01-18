@@ -26,7 +26,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
    persdict.dat - Personal dictionary
    pkcs11.txt - Security device settings
    places.sqlite - Bookmarks
-9. To overcome fixed size Firefox window annoyance at Firefox start, right-click on Firefox shortcut -> Properties -> On Shortcu tab select "Maximized" under "Run" property
+9. To overcome fixed size Firefox window annoyance at Firefox start, right-click on Firefox shortcut -> Properties -> On "Shortcut" tab select "Maximized" under "Run" property
 
 EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
