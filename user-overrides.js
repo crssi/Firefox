@@ -3,19 +3,19 @@ HOME:      https://github.com/crssi/Firefox
 INFO:      Supplement for ghacks-user.js; 17.1.2019 (commit: f1e6d16); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
-1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
+0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
-2. Append this file to user.js that was downloaded in step 1.
-3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
-4. In the "profile folder" create a folder "chrome" and copy userChrome.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
-5. Firefox -> Options -> Search
+1. Append this file to user.js that was downloaded in step 1.
+2. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
+3. In the "profile folder" create a folder "chrome" and copy userChrome.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
+4. Firefox -> Options -> Search
     Default Search Engine: duckduckgo
     One-Click Search Engines: delete all except DuckDuckGo
-6. Firefox -> Options -> Tabs -> Settings...
+5. Firefox -> Options -> Tabs -> Settings...
     Remove all containers
-7. Install extensions (see Extensions section) and setup by instructions; IMPORTANT NOTE: all changes are addition to default
-8. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
-9. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
+6. Install extensions (see Extensions section) and setup by instructions; IMPORTANT NOTE: all changes are addition to default
+7. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
+8. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    cert9.db - Certificates
    content-prefs.sqlite - Site-specific preferences
    favicons.sqlite - Bookmarks icons
@@ -26,6 +26,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
    persdict.dat - Personal dictionary
    pkcs11.txt - Security device settings
    places.sqlite - Bookmarks
+9. To overcome fixed size Firefox window annoyance at Firefox start, right-click on Firefox shortcut -> Properties -> On Shortcu tab select "Maximized" under "Run" property
 
 EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
