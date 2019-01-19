@@ -8,6 +8,15 @@ https://developer.mozilla.org/en-US/docs/tag/XUL_Tutorial
 https://github.com/Timvde/UserChrome-Tweaks
 */
 
+/* hide annoying tracking icon in url bar */
+#tracking-protection-icon-box {
+  display: none !important;
+}
+#tracking-protection-container {
+  display: none !important;
+}
+
+
 /* make active tab more visible */
 toolbar {
   --toolbar-bgcolor: rgb(68, 72, 76);
@@ -41,6 +50,7 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 .tabbrowser-tab:hover .tab-close-button {
   display: -moz-box !important;
 }
+/* sound icon position fix*/
 .tabbrowser-tab .tab-icon-sound {
 	margin-right: 18px;
 }
