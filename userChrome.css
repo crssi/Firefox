@@ -15,12 +15,10 @@ toolbar {
 }
 
 
-
 /* Remove Temporary Container icon */
 toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   display: none;
 }
-
 
 
 /* make sidebar lighter */
@@ -28,28 +26,27 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 	color: black;
 	background-color: rgb(249,249,250);
 }
-
 .sidebar-placesTreechildren::-moz-tree-image {
   color: black !important;
 }
-
 .sidebar-placesTreechildren::-moz-tree-cell-text {
   color: black !important;
 }
 
 
-
 /* only show close buttons on tabs when hovering */
 .tabbrowser-tab .tab-close-button {
   display: none !important;
-  /*visibility: hidden;*/
 }
-
 .tabbrowser-tab:hover .tab-close-button {
   display: -moz-box !important;
-  /*visibility: visible;*/
 }
-
+.tabbrowser-tab .tab-icon-sound {
+	margin-right: 18px;
+}
+.tabbrowser-tab:hover .tab-icon-sound {
+  margin-right: 0px;
+}
 
 
 /* urlbar colorization */
@@ -57,7 +54,6 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   position: relative;
   z-index: 1;
 }
-
 #identity-box:after {
   content: '';
   position: absolute;
@@ -67,65 +63,54 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   left: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.2;
+  opacity: .2;
 }
-
 @keyframes blinker {
-  50% { opacity: 0.4; }
+  50% { opacity: .4; }
 }
-
 
 /* about:about */
 #urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
   background: #a4000f; /* Firefox Red 70 */
-  opacity: 0.4;
+  opacity: .4;
 }
-
 /* about:config */
 #urlbar[pageproxystate='valid'] #identity-box.chromeUI:after {
   background: #0a84ff; /* Firefox Blue 50 */
 }
-
 /* uBlock Origin Dashboard */
 #urlbar[pageproxystate='valid'] #identity-box.extensionPage:after {
   background: #0a84ff; /* Firefox Blue 50 */
 }
-
 /* https://www.github.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
   background: #058b00; /* Firefox Green 70 */
 }
-
 /* https://mixed.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
   background: #a47f00; /* Firefox Yellow 70 */
 }
-
 /* https://self-signed.badssl.com/ but add certificate exception */
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
   background: #a4000f; /* Firefox Red 70 */
 }
-
 /* http://http.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
   background: #a4000f; /* Firefox Red 70 */
-  opacity: 0.4;
+  opacity: .4;
 }
-
 #urlbar[pageproxystate='valid'] #identity-box.weakCipher:after {
   background: #a4000f; /* Firefox Red 70 */
-  opacity: 0.4;
+  opacity: .4;
 }
-
 /* https://very.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
   background: #a4000f;  /* Firefox Red 70 */
-  opacity: 0.8;
+  opacity: .8;
 }
-
 /* http://badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
   background: #a4000f; /* Firefox Red 70 */
-  opacity: 1.0;
+  opacity: 1;
   animation: blinker 1.2s linear infinite;
 }
