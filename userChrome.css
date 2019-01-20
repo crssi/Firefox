@@ -28,7 +28,9 @@ toolbar {
 toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   display: none;
 }
-
+#userContext-indicator {
+  display: none;
+}
 
 /* make sidebar lighter */
 .sidebar-placesTreechildren {
