@@ -76,6 +76,7 @@
 ||jetlore.com^$third-party
 ||jwpcdn.com^$third-party
 ||jwplatform.com^$third-party
+||knowyourapps.com^$third-party
 ||letspin.io^$third-party
 ||limelight.com^$third-party,script
 ||linkedin.*^$third-party
