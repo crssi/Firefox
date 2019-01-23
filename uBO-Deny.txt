@@ -12,9 +12,10 @@
 
 ! ||twitter.*^$third-party
 ! ||nrholding.net^$third-party
-||*/fingerprintjs2*$script,important
+!||instagram.com^$third-party
 ||*.checkfront.com/lib/Control.Geocoder*.js$script
 ||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
+||*/fingerprintjs2*$script,important
 ||1105media.com^$third-party
 ||a2sky.com^$third-party
 ||addthis.com^$important
@@ -38,11 +39,12 @@
 ||calculoid.com^$third-party,script
 ||cdn-cnj.si^$third-party,script
 ||cdn.krxd.net^
+||cdn.ravenjs.com^$third-party,script
 ||cdn.transifex.com^ # https://semantic-ui.com/introduction/new.html
 ||chimpstatic.com^$third-party
 ||cloudinary.com^$third-party
-||coordinatedcub.com^$third-party
 ||contentpass.net^$important
+||coordinatedcub.com^$third-party
 ||delvenetworks.com^$third-party,script
 ||doubleclick.*^$important
 ||evidon.com^$third-party
@@ -52,8 +54,8 @@
 ||firebase.com^$third-party
 ||future-fie-assets.co.uk^$third-party
 ||future.net.uk^$third-party
-||google-analytics.*^$third-party,script
 ||google-analytics.*^$third-party,~script,important
+||google-analytics.*^$third-party,script
 ||google.*^$third-party
 ||googleadservices.*^$important
 ||googlesyndication.*^$important
@@ -68,7 +70,6 @@
 ||incartupsell.com^$third-party
 ||inspectlet.com^$third-party,important
 ||intercomcdn.com^$third-party
-!||instagram.com^$third-party
 ||ipinfo.io^$third-party
 ||iprom.net^$third-party
 ||ipromcloud.com^$third-party
@@ -100,6 +101,7 @@
 ||pkmods.com$inline-script
 ||pmcatalyst-ae.com^$third-party
 ||polldaddy.com^$third-party
+||popupmaker.com^$third-party
 ||prismic.io^$third-party
 ||purch.com^$third-party,important
 ||pushance.com^$third-party
