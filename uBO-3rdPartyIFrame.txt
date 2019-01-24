@@ -15,6 +15,8 @@
 @@||checkfront.com/reserve/*$third-party,subdocument
 @@||cldmail.ru^$third-party,subdocument,domain=mail.ru
 @@||dropbox.com*^$third-party,subdocument,domain=dropboxpayments.com
+@@||dropboxcaptcha.com^$third-party,subdocument,domain=dropbox.com
+@@||dropboxusercontent.com^$third-party,subdocument,domain=dropbox.com
 @@||e.infogram.com^$third-party,subdocument
 @@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
 @@||fncstatic.com^$third-party,subdocument,domain=foxnews.com
