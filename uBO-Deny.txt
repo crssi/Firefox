@@ -40,7 +40,8 @@
 ||cdn-cnj.si^$third-party,script
 ||cdn.krxd.net^
 ||cdn.ravenjs.com^$third-party,script
-||cdn.transifex.com^ # https://semantic-ui.com/introduction/new.html
+! https://semantic-ui.com/introduction/new.html
+||cdn.transifex.com^
 ||chimpstatic.com^$third-party
 ||cloudinary.com^$third-party
 ||contentpass.net^$important
