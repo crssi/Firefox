@@ -2,18 +2,18 @@
 ! Expires: 2 days
 ! Homepage: https://github.com/crssi/Firefox
 
-! youtube.com
+!!! youtube.com
 www.youtube.com##div[class^="ytp-ce-"]
 www.youtube.com##div[class^="ytp-pause-overlay"]
 www.youtube.com##div[class^="branding-img-container"]
 www.youtube.com##div[class^="ytp-chrome-top-buttons"]
 
-! duckduckgo
+!!! duckduckgo
 duckduckgo.com##.js-badge-link.ddg-extension-hide.badge-link--fadein.badge-link--top.badge-link
 duckduckgo.com##.js-results-sidebar.results--sidebar
 duckduckgo.com##.header--aside
 
-! microsoft.com
+!!! microsoft.com
 technet.microsoft.com##.stdr-content.stdr-vote
 social.technet.microsoft.com###divNRMain > table > tbody > tr > td > table > tbody > tr > td
 docs.microsoft.com##.or-f.or-o.or-c-mv.or-b
@@ -21,35 +21,38 @@ docs.microsoft.com##.or-o.or-c-pf
 support.microsoft.com##.x-hidden-focus.epb-default-color.epb-container.f-information.m-alert
 msdn.microsoft.com##.stdr-content.stdr-vote
 
-! github.com
+!!! github.com
 ||assets-cdn.github.com/images/modules/site/site-signup-prompt.png$image
 github.com##.rounded-1.mb-4.text-center.p-4.signup-prompt
 
-! aliexpress.com
+!!! aliexpress.com
 www.aliexpress.com##.ui-mask
 www.aliexpress.com##.ui-newuser-layer-dialog.ui-window-transition.ui-window-normal.ui-window
 
-! facebook
+!!! facebook
 www.facebook.com###dialog_0
 www.facebook.com###u_0_3z
 
-! here.com
+!!! here.com
 wego.here.com##.wrapper > .content
 wego.here.com##.head
 wego.here.com##.bottom-right.slideIn.pointer.tooltip
 wego.here.com##.download
 wego.here.com##.branding > .here_logo
 
-! mail.ru
+!!! mail.ru
 cloud.mail.ru##.b-layer__overlay
 cloud.mail.ru##.b-layer__container_disko-popup.b-layer__container_popup.b-layer__container
 cloud.mail.ru##.b-layer__wrapper3_disko-popup.b-layer__wrapper3_popup.b-layer__wrapper3
 cloud.mail.ru##.b-layer__wrapper_disko-popup.b-layer__wrapper_popup.b-layer__wrapper
 
-! OTHER
+!!! OTHER
 ##.cf.modal
 ##.underlay
 www.reddit.com##.cookie-infobar.with-btn.with-icon.md-container-small.reddit-infobar
 ##.ng-star-inserted.cookies
 ###cookie_module
 ##.butterBar-message
+! https://www.windowscentral.com/how-troubleshoot-and-fix-common-problems-outlook
+##.detective--splash.swal-modal
+##.swal-overlay--show-modal.swal-overlay
