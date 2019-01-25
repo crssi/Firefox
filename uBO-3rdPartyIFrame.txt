@@ -53,6 +53,7 @@
 @@||vox-cdn.com^$third-party,subdocument
 @@||wavesecure.com^$third-party,subdocument,domain=mcafee.com
 @@||wsimg.com^$third-party,subdocument,domain=godaddy.com
+@@||www.zuora.com/apps/PublicHostedPageLite.do$third-party,subdocument
 @@||yimg.com^$third-party,subdocument,domain=yahoo.com
 @@||yourshoutbox.com^$third-party,subdocument
 @@||youtube-nocookie.com/embed/$third-party,subdocument
