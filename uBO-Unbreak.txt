@@ -28,6 +28,7 @@
 @@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
 @@||platform.twitter.com^$third-party,stylesheet,image
 @@||translate.googleusercontent.com
+@@||use.typekit.net^$third-party,font,stylesheet
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
