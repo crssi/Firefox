@@ -33,12 +33,13 @@ www.aliexpress.com##.ui-newuser-layer-dialog.ui-window-transition.ui-window-norm
 www.facebook.com###dialog_0
 www.facebook.com###u_0_3z
 
-!!! here.com
+!!! wego.here.com
 wego.here.com##.wrapper > .content
 wego.here.com##.head
 wego.here.com##.bottom-right.slideIn.pointer.tooltip
 wego.here.com##.download
 wego.here.com##.branding > .here_logo
+wego.here.com##.active.fullBanner
 
 !!! mail.ru
 cloud.mail.ru##.b-layer__overlay
