@@ -104,6 +104,7 @@ translate.google.com/
 virustotal.com/
 web.archive.org/
 webcache.googleusercontent.com/
+wego.here.com/
 youtube.com/embed/
     Notifications
       Enable popup: Uncheck
