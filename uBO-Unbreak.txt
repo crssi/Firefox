@@ -17,7 +17,7 @@
 @@||fbcdn.*^$domain=facebook.com
 @@||fbcdn.*^$third-party,image,media
 @@||google-analytics.com/analytics.js$third-party,script,domain=amainhobbies.com
-@@||google.*^$domain=google.com
+@@||google.*^$domain=google.com|googleapis.com
 @@||google.*^$third-party,script,domain=youtube.com
 @@||gravatar.com^$third-party,image,stylesheet
 @@||jwpcdn.com^$third-party,font
