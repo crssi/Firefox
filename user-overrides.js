@@ -150,7 +150,7 @@ USEFUL EXTENSIONS:
 
 /*** ANNOYANCES TWEAKS ***/
   /* 0000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
-  /* 0000  */ user_pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org"); // dark theme
+  // /* 0000  */ user_pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org"); // dark theme
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
   /* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
@@ -180,7 +180,7 @@ USEFUL EXTENSIONS:
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
-  /* 4001  */ user_pref("privacy.firstparty.isolate", false); // True may break cross-domain logins and site functionality
+  // /* 4001  */ user_pref("privacy.firstparty.isolate", false); // True may break cross-domain logins and site functionality
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
 
 /*** UPDATE ***/
