@@ -6,23 +6,23 @@ https://github.com/FirefoxBar/userChrome.js-Collections-
 https://github.com/overdodactyl/ShadowFox
 https://developer.mozilla.org/en-US/docs/tag/XUL_Tutorial
 https://github.com/Timvde/UserChrome-Tweaks
+https://github.com/bogachenko/freefox/blob/master/firefox/chrome/userChrome.css
+https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%20features/userChrome.css
 */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+/* Removed space before the first tab */
+.titlebar-placeholder[type="pre-tabs"],
+.titlebar-placeholder[type="post-tabs"] {
+    display: none!important
+}
 
 /* hide annoying tracking icon in url bar */
 #tracking-protection-icon-box {
   display: none !important;
 }
-#tracking-protection-container {
-  display: none !important;
-}
-
-
-/* make active tab more visible */
-toolbar {
-  --toolbar-bgcolor: rgb(68, 72, 76);
-  --lwt-toolbar-field-background-color: rgb(34, 38, 42);
-}
-
 
 /* Remove Temporary Container icon */
 toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
@@ -32,7 +32,28 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
   display: none;
 }
 
-/* make sidebar lighter */
+/* Menu customization */
+#appMenu-edit-controls,
+#appMenu-library-button,
+#appMenuRestoreLastSession,
+#context_bookmarkTab,
+#context_closeOtherTabs,
+#context_closeTab,
+#context_closeTabsToTheEnd,
+#context_duplicateTab,
+#context_moveTabOptions,
+#context_selectAllTabs {
+    display: none !important;
+}
+
+
+/* make active tab more visible
+toolbar {
+  --toolbar-bgcolor: rgb(68, 72, 76);
+  --lwt-toolbar-field-background-color: rgb(34, 38, 42);
+} */
+
+/* make sidebar lighter
 .sidebar-placesTreechildren {
 	color: black;
 	background-color: rgb(249,249,250);
@@ -42,8 +63,7 @@ toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
 }
 .sidebar-placesTreechildren::-moz-tree-cell-text {
   color: black !important;
-}
-
+} */
 
 /* only show close buttons on tabs when hovering */
 .tabbrowser-tab .tab-close-button {
