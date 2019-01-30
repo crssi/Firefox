@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 18.1.2019 (commit: 1c09ec3); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 30.1.2019 (commit: f047fe9); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -37,7 +37,7 @@ EXTENSIONS:
   Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
-    Blocked parameters: _encoding, _hsenc, _hsmi, _openstat, _trkparms, !cn@mail.google.com, !sc@*.googlevideo.com, $/ref@amazon.*, 77campaign, action_object_*, action_ref_*, action_type_*, adid, AdID, adserverid, adserveroptimizerid, adset_*, adtype, adurl, aff_platform, aff_trace_key, affiliate, AffiliateGuid, algo_expid, algo_pvid, aqs, assetId, assetType, bav, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, CampaignID, clickid, clkulrenc, cn, CNDID, cp, csi, cvid, d@banggood.com, dni, dq, e@linkedin.com, ei@google.*, ek, elq*, ems_l, fb, fb_action_ids, fb_action_types, fb_ref, fb_source, fbclid, feeditemid, first_visit, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, ImpressionGuid, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mbid, mc_*, midToken, mkt_*, ncid, ndsp, nid, nr_email_referer, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, piggiebackcookie, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, pubclick, pubid, pv, qs@bing.com, recipientId, ref_, refsrc, rni, RSS*, sc, sc_*, sclient, scroll, sei, siteId, source@sourceforge.net, spJobID, spm, spMailingID, spReportId, spUserID, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, tracking, transAbTest, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, ws_ab_test, yclid, yv
+    Blocked parameters: _encoding, _hsenc, _hsmi, _openstat, _trkparms, !cn@mail.google.com, !cp@*.google.com, $/ref@amazon.*, 77campaign, action_object_*, action_ref_*, action_type_*, adid, AdID, adserverid, adserveroptimizerid, adset_*, adtype, adurl, aff_platform, aff_trace_key, affiliate, AffiliateGuid, algo_expid, algo_pvid, aqs, assetId, assetType, bav, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, CampaignID, clickid, clkulrenc, cn, CNDID, cp, csi, cvid, d@banggood.com, dni, dq, e@linkedin.com, ei@google.*, ek, elq*, ems_l, fb, fb_action_ids, fb_action_types, fb_ref, fb_source, fbclid, feeditemid, first_visit, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, ImpressionGuid, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mbid, mc_*, midToken, mkt_*, ncid, ndsp, nid, nr_email_referer, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, piggiebackcookie, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, pubclick, pubid, pv, qs@bing.com, recipientId, ref_, refsrc, rni, RSS*, sc@bing.com, sc_*, sclient, scroll, sei, siteId, source@sourceforge.net, spJobID, spm, spMailingID, spReportId, spUserID, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, tracking, transAbTest, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, ws_ab_test, yclid, yv
     URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
     Click [Save preferences]
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
@@ -114,7 +114,7 @@ youtube.com/embed/
       Automatic Mode: Check
       Container Name Prefix: %domain% #
       Random Container Color: Check
-      Container Icon: fingerprint
+      Container Icon: circle
       Container Number: Reuse available numbers
       Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
       Click [Save]
@@ -130,6 +130,10 @@ youtube.com/embed/
         Mouse Clicks on Links should open new Temporary Containers
           Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
         Click [Save]
+    Advanced
+      General
+        Automatic Mode: Don't reopen New Tabs in Temporary Containers but instead on navigation. Prevents initial flickering and increases compatibility with other Add-ons that intervene with initial tab opening but New Tabs can set and read cookies in the default container
+      Click [Save]
     NOTE: CTRL+SHIFT+T = Undo closed tab(s)
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
     Settings
@@ -151,17 +155,12 @@ USEFUL EXTENSIONS:
 
 /*** ANNOYANCES TWEAKS ***/
   /* 0000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
-  // /* 0000  */ user_pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org"); // dark theme
-  /* 0862  */ user_pref("places.history.enabled", false); // disable history
-  /* 0515  */ user_pref("extensions.screenshots.disabled", true); // disable screenshots
-  /* 1020  */ user_pref("browser.sessionstore.max_tabs_undo", 10); // remember last 10 closed tabs for undo
+  /*?0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
-  /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // height at start
   /* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -181,24 +180,18 @@ USEFUL EXTENSIONS:
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
-  // /* 4001  */ user_pref("privacy.firstparty.isolate", false); // True may break cross-domain logins and site functionality
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
 
 /*** UPDATE ***/
   /* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
-  /* 0301b */ user_pref("extensions.update.enabled", true); // enable extensions update auto check
   /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
   /* 0303  */ user_pref("app.update.service.enabled", true); // enable update service
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
-  /* 0000  */ user_pref("browser.search.widget.inNavBar", false); // use navigation bar for search
   /* 0000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
-  /* 0850a */ user_pref("browser.urlbar.autocomplete.enabled", true); // enable autocomplete in search
-  /* 0850b */ user_pref("browser.urlbar.suggest.bookmark", true); // suggest bookmarks in search results
-  /* 0850b */ user_pref("browser.urlbar.suggest.openpage", true); // suggest open pages/tabs in search results
 
 /*** ENTERPRISE USE SPECIFIC ***/
   /* 0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
