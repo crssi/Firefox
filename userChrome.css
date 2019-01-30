@@ -14,8 +14,7 @@ https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%
 
 
 /* Removed space before the first tab */
-.titlebar-spacer[type="pre-tabs"],
-.titlebar-spacer[type="post-tabs"] {
+.titlebar-spacer[type="pre-tabs"] {
     display: none !important;
 }
 
@@ -25,11 +24,11 @@ https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%
 }
 
 /* Remove Temporary Container icon */
-toolbarbutton[label^='Open a new Tab in a new Temporary Container'] {
+toolbarbutton[label*='Temporary Container'] {
   display: none;
 }
-#userContext-indicator {
-  display: none;
+#userContext-label {
+  color: var(--toolbar-color) !important;
 }
 
 /* Menu customization */
@@ -74,7 +73,7 @@ toolbar {
 }
 /* sound icon position fix*/
 .tabbrowser-tab .tab-icon-sound {
-	margin-right: 18px;
+  margin-right: 18px;
 }
 .tabbrowser-tab:hover .tab-icon-sound {
   margin-right: 0px;
@@ -98,51 +97,43 @@ toolbar {
   opacity: .2;
 }
 @keyframes blinker {
-  50% { opacity: .4; }
+  50% { opacity: .6; }
 }
 
 /* about:about */
 #urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
-  background: #a4000f; /* Firefox Red 70 */
-  opacity: .4;
+  background: #a4000f;
 }
-/* about:config */
-#urlbar[pageproxystate='valid'] #identity-box.chromeUI:after {
-  background: #0a84ff; /* Firefox Blue 50 */
+/* fix for mixedDisplayContentLoadedActiveBlocked */
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
+  background: var(--toolbar-bgcolor);
 }
-/* uBlock Origin Dashboard */
+/* about:config and moz-extension:* */
+#urlbar[pageproxystate='valid'] #identity-box.chromeUI:after,
 #urlbar[pageproxystate='valid'] #identity-box.extensionPage:after {
-  background: #0a84ff; /* Firefox Blue 50 */
+  background: #0a84ff;
 }
+
 /* https://www.github.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
-  background: #058b00; /* Firefox Green 70 */
+  background: #058b00;
 }
 /* https://mixed.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
-  background: #a47f00; /* Firefox Yellow 70 */
+  background: #f0dc00;
 }
+
 /* https://self-signed.badssl.com/ but add certificate exception */
-#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
-  background: #a4000f; /* Firefox Red 70 */
-}
-/* http://http.badssl.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
-  background: #a4000f; /* Firefox Red 70 */
-  opacity: .4;
-}
-#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after {
-  background: #a4000f; /* Firefox Red 70 */
-  opacity: .4;
-}
-/* https://very.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.notSecure:after,
+#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
+#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after,
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
-  background: #a4000f;  /* Firefox Red 70 */
-  opacity: .8;
+  background: #a4000f;
 }
+
 /* http://badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
-  background: #a4000f; /* Firefox Red 70 */
+  background: #a4000f;
   opacity: 1;
-  animation: blinker 1.2s linear infinite;
+  animation: blinker 1.6s linear infinite;
 }
