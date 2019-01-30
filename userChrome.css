@@ -18,10 +18,10 @@ https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%
     display: none !important;
 }
 
-/* hide annoying tracking icon in url bar */
+/* hide annoying tracking icon in url bar
 #tracking-protection-icon-box {
   display: none !important;
-}
+} */
 
 /* Remove Temporary Container icon */
 toolbarbutton[label*='Temporary Container'] {
