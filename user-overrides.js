@@ -161,6 +161,8 @@ USEFUL EXTENSIONS:
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /*?4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
+  /*?4502  */ user_pref("privacy.window.maxInnerHeight", 900); // height at start
   /* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -192,6 +194,7 @@ USEFUL EXTENSIONS:
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
+  /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
 
 /*** ENTERPRISE USE SPECIFIC ***/
   /* 0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
