@@ -36,7 +36,14 @@ toolbarbutton[label*='Temporary Container'] {
 #context_closeTabsToTheEnd,
 #context_duplicateTab,
 #context_moveTabOptions,
-#context_selectAllTabs {
+#context_reopenInContainer,
+#context-openlink,
+#context-openlinkintab,
+#context-openlinkprivate,
+#context_selectAllTabs
+#placesContext_open\:newprivatewindow,
+#placesContext_open\:newwindow,
+#placesContext_openContainer\:tabs {
     display: none !important;
 }
 
