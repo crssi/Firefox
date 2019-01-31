@@ -18,12 +18,7 @@ https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%
     display: none !important;
 }
 
-/* hide annoying tracking icon in url bar
-#tracking-protection-icon-box {
-  display: none !important;
-} */
-
-/* Remove Temporary Container icon */
+/* Remove Temporary Container icon and fix label color */
 toolbarbutton[label*='Temporary Container'] {
   display: none;
 }
@@ -45,25 +40,6 @@ toolbarbutton[label*='Temporary Container'] {
     display: none !important;
 }
 
-
-/* make active tab more visible
-toolbar {
-  --toolbar-bgcolor: rgb(68, 72, 76);
-  --lwt-toolbar-field-background-color: rgb(34, 38, 42);
-} */
-
-/* make sidebar lighter
-.sidebar-placesTreechildren {
-	color: black;
-	background-color: rgb(249,249,250);
-}
-.sidebar-placesTreechildren::-moz-tree-image {
-  color: black !important;
-}
-.sidebar-placesTreechildren::-moz-tree-cell-text {
-  color: black !important;
-} */
-
 /* only show close buttons on tabs when hovering */
 .tabbrowser-tab .tab-close-button {
   display: none !important;
@@ -80,7 +56,7 @@ toolbar {
 }
 
 
-/* urlbar colorization */
+/* urlbar colorization, test site https://badssl.com/ */
 #urlbar {
   position: relative;
   z-index: 1;
@@ -114,16 +90,16 @@ toolbar {
   background: #0a84ff;
 }
 
-/* https://www.github.com/ */
+/* Verified Identity */
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
   background: #058b00;
 }
-/* https://mixed.badssl.com/ */
+/* Mixed Display Content */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
   background: #f0dc00;
 }
 
-/* https://self-signed.badssl.com/ but add certificate exception */
+/* Not Secure, Weak Cipher, Cert User overriden, Mixed Active Content */
 #urlbar[pageproxystate='valid'] #identity-box.notSecure:after,
 #urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after,
@@ -131,7 +107,7 @@ toolbar {
   background: #a4000f;
 }
 
-/* http://badssl.com/ */
+/* Insecure Logins */
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
   background: #a4000f;
   opacity: 1;
