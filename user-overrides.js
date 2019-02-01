@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 30.1.2019 (commit: f047fe9); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 31.1.2019 (commit: 524b5f7); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -8,10 +8,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
 1. Append this file to user.js that was downloaded in step 1.
 2. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
 3. In the "profile folder" create a folder "chrome" and copy userChrome.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
-4.?Firefox -> Options -> Home -> Home -> New Windows and Tabs
-  ?  Homepage and new windows: Blank Page
-  ?  New tabs: Blank Page
-   Firefox -> Options -> Search
+4. Firefox -> Options -> Search
      Default Search Engine: duckduckgo
      One-Click Search Engines: delete all except DuckDuckGo
    Firefox -> Options -> General -> General -> Tabs -> Settings...
@@ -29,7 +26,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
    persdict.dat - Personal dictionary
    pkcs11.txt - Security device settings
    places.sqlite - Bookmarks
-8. To overcome fixed size Firefox window annoyance at Firefox start, right-click on Firefox shortcut -> Properties -> On "Shortcut" tab select "Maximized" under "Run" property
+8. To overcome fixed size Firefox window annoyance at Firefox start, right-click on Firefox shortcut -> Properties -> "Shortcut" tab -> select "Maximized" under "Run" property
 
 EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
@@ -133,9 +130,9 @@ youtube.com/embed/
         Mouse Clicks on Links should open new Temporary Containers
           Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
         Click [Save]
-    Advanced
-      General
-        Automatic Mode: Don't reopen New Tabs in Temporary Containers but instead on navigation. Prevents initial flickering and increases compatibility with other Add-ons that intervene with initial tab opening but New Tabs can set and read cookies in the default container
+?    Advanced
+?      General
+?        Automatic Mode: Don't reopen New Tabs in Temporary Containers but instead on navigation. Prevents initial flickering and increases compatibility with other Add-ons that intervene with initial tab opening but New Tabs can set and read cookies in the default container
       Click [Save]
     NOTE: CTRL+SHIFT+T = Undo closed tab(s)
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
