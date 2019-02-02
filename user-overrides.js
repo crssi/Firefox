@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 31.1.2019 (commit: 524b5f7); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 1.2.2019 (commit: ec0e580); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -101,6 +101,7 @@ securityheaders.com/
 ssllabs.com/
 t.umblr.com/redirect
 translate.google.com/
+ubi.com/
 virustotal.com/
 web.archive.org/
 webcache.googleusercontent.com/
@@ -120,20 +121,15 @@ youtube.com/embed/
       Click [Save]
     Isolation
       Per Domain
-        Domain pattern: *
-          Always open in new Temporary Containers: enabled
-          Click [Add or Edit]
         Domain pattern: duckduckgo.com
-          Always open in new Temporary Containers: enabled
+          Always open in new Temporary Containers: Enabled
+          Navigating in Tabs should open new Temporary Containers: Allways
+          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Allways
           Click [Add or Edit]
       Global
         Mouse Clicks on Links should open new Temporary Containers
           Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
         Click [Save]
-?    Advanced
-?      General
-?        Automatic Mode: Don't reopen New Tabs in Temporary Containers but instead on navigation. Prevents initial flickering and increases compatibility with other Add-ons that intervene with initial tab opening but New Tabs can set and read cookies in the default container
-      Click [Save]
     NOTE: CTRL+SHIFT+T = Undo closed tab(s)
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
     Settings
@@ -155,14 +151,12 @@ USEFUL EXTENSIONS:
 
 /*** ANNOYANCES TWEAKS ***/
   /* 0000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
-  /*?0862  */ user_pref("places.history.enabled", false); // disable history
+  /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  /*?4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // width at start
-  /*?4502  */ user_pref("privacy.window.maxInnerHeight", 900); // height at start
   /* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -176,7 +170,7 @@ USEFUL EXTENSIONS:
 /*** BREAKAGE TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher... I don't like this
-  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure content
+  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party like Smart Referer WE
   /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
