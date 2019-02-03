@@ -34,7 +34,6 @@ EXTENSIONS:
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
-  Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
     Blocked parameters: _encoding, _hsenc, _hsmi, _openstat, _trkparms, !cn@mail.google.com, !cp@*.google.com, $/ref@amazon.*, 77campaign, action_object_*, action_ref_*, action_type_*, adid, AdID, adserverid, adserveroptimizerid, adset_*, adtype, adurl, aff_platform, aff_trace_key, affiliate, AffiliateGuid, algo_expid, algo_pvid, aqs, assetId, assetType, bav, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, CampaignID, clickid, clkulrenc, cn, CNDID, cp, csi, cvid, d@banggood.com, dni, dq, e@linkedin.com, ei@google.*, ek, elq*, ems_l, fb, fb_action_ids, fb_action_types, fb_ref, fb_source, fbclid, feeditemid, first_visit, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, ImpressionGuid, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mbid, mc_*, midToken, mkt_*, ncid, ndsp, nid, nr_email_referer, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, piggiebackcookie, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, pubclick, pubid, pv, qs@bing.com, recipientId, ref_, refsrc, rni, RSS*, sc@bing.com, sc_*, sclient, scroll, sei, siteId, source@sourceforge.net, spJobID, spm, spMailingID, spReportId, spUserID, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, tracking, transAbTest, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, vet, wid@gearbest.com, ws_ab_test, yclid, yv
@@ -195,5 +194,7 @@ USEFUL EXTENSIONS:
   /* 0000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+
+user_pref("dom.targetBlankNoOpener.enabled", true); // At last. Replaces WE: Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
 
 user_pref("_user.js.parrot", "Eagle has landed.");
