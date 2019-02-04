@@ -13,6 +13,7 @@
 @@||cloudfront.net$third-party,image,font,stylesheet
 @@||content.jwplatform.com^$third-party,xmlhttprequest,script
 @@||drive.google.com^$third-party,image
+@@||dropboxstatic.com/*/social_icon$stylesheet,domain=dropbox.com
 @@||facebook.*^$domain=facebook.com
 @@||fbcdn.*^$domain=facebook.com
 @@||fbcdn.*^$third-party,image,media
