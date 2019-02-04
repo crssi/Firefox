@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 1.2.2019 (commit: ec0e580); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 4.2.2019 (commit: a0508ec); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -46,9 +46,10 @@ EXTENSIONS:
     Exclusions
       Exclude root domain matches: Check
       Exclusions:
-*.youtube.com *
-*.google*.* *
 *.ali*.com *.ali*.com
+*.google*.* *
+*.paypal*.com *.paypal*.com
+*.youtube.com *
     Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
