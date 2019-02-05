@@ -5,6 +5,15 @@
 ! Allow extensions like uBO/uM to get the filter list updates
 @@||$domain=moz-extension-scheme
 
+! iFrames/subdocument
+@@||instagram.com/p/$third-party,subdocument
+@@||accounts.google.*/ServiceLogin$third-party,subdocument
+@@||checkfront.com/reserve/*$third-party,subdocument
+@@||google.*/maps/*$third-party,subdocument
+@@||google.*/recaptcha/$third-party,subdocument
+@@||googleapis.com^$third-party,subdocument,domain=google.com|google.si
+@@||googleusercontent.com^$third-party,subdocument,domain=google.com|google.si
+
 @@/clarity-*.js$first-party,script
 @@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
