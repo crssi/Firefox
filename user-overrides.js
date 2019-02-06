@@ -124,7 +124,6 @@ youtube.com/embed/
       Per Domain
         Domain pattern: duckduckgo.com
           Always open in new Temporary Containers: Enabled
-          Navigating in Tabs should open new Temporary Containers: Allways
           Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Allways
           Click [Add or Edit]
       Global
@@ -158,17 +157,21 @@ USEFUL EXTENSIONS:
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
+  /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
   /* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
+  /* 5000  */ user_pref("general.warnOnAboutConfig", false); // remove about:config warning
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
   /* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
-/*** BREAKAGE TWEAKS ***/
+/*** BREAKAGE AND SECURITY TWEAKS ***/
+  /* 0000  */ user_pref("dom.targetBlankNoOpener.enabled", true); // At last. Replaces WE: Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher... I don't like this
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
@@ -196,7 +199,5 @@ USEFUL EXTENSIONS:
   /* 0000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-
-user_pref("dom.targetBlankNoOpener.enabled", true); // At last. Replaces WE: Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
 
 user_pref("_user.js.parrot", "Eagle has landed.");
