@@ -122,12 +122,12 @@ menuitem[label*='Open Link in New Temporary Container Tab'] {
 #urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after,
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
-  background: #f0dc00; /* #a4000f; */
+  background: #f0dc00;
 }
 
 /* http://badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
-  background: #ff0011; /* #a4000f; */
-  opacity: .5;
-  animation: blinker 1.5s linear infinite;
+  background: #ff0011;
+  opacity: .6;
+  animation: blinker 1.6s linear infinite;
 }
