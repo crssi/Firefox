@@ -4,7 +4,7 @@ INFO:      Supplement for ghacks-user.js; 5.2.2019 (commit: 74c8f29); https://gi
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
-   Note: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
+   NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 1. Append this file to user.js that was downloaded in step 1.
 2. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
 3. In the "profile folder" create a folder "chrome" and copy userChrome.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
@@ -17,7 +17,10 @@ NOTE:      Before proceeding further, make a backup of your current profile
      Enable DNS over HTTPS: Check
      Custom: https://dns.quad9.net/dns-query
      [OK]
-5. Install extensions (see Extensions section) and setup by instructions; IMPORTANT NOTE: all changes are addition to default
+     NOTE: See also https://cleanbrowsing.org/guides/dnsoverhttps
+           Do NOT enable for enterprise environment!
+5. Install extensions (see Extensions section) and setup by instructions
+   NOTE: all changes are addition to default
 6. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 7. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    cert9.db - Certificates
@@ -31,6 +34,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
    pkcs11.txt - Security device settings
    places.sqlite - Bookmarks
 8. To overcome fixed size Firefox window annoyance at Firefox start, right-click on Firefox shortcut -> Properties -> "Shortcut" tab -> select "Maximized" under "Run" property
+   NOTE: It is not wise to do that!
 
 EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
