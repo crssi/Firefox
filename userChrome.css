@@ -1,4 +1,5 @@
 /*
+https://www.reddit.com/r/FirefoxCSS/
 https://www.reddit.com/r/FirefoxCSS/comments/7dkhuh/color_your_url_bar_based_on_website_security/
 https://fosspost.org/tutorials/how-to-customize-firefox-57-user-interface
 https://github.com/Aris-t2/CustomCSSforFx
@@ -8,6 +9,10 @@ https://developer.mozilla.org/en-US/docs/tag/XUL_Tutorial
 https://github.com/Timvde/UserChrome-Tweaks
 https://github.com/bogachenko/freefox/blob/master/firefox/chrome/userChrome.css
 https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%20features/userChrome.css
+https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/
+https://www.reddit.com/r/firefox/comments/7dvtw0/guide_how_to_edit_your_context_menu/
+https://imgur.com/e9AaMx3
+https://imgur.com/b5gEfUy
 */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -15,18 +20,30 @@ https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%
 
 /* Removed space before the first tab */
 .titlebar-spacer[type="pre-tabs"] {
-    display: none !important;
+  display: none !important;
 }
 
-/* Remove Temporary Container icon and fix label color */
+
+/* Remove Temporary Container icon */
 toolbarbutton[label*='Temporary Container'] {
+  display: none;
+}
+menuitem[label*='Open Link in New Temporary Container Tab'] {
   display: none;
 }
 #userContext-label {
   color: var(--toolbar-color) !important;
 }
 
+
 /* Menu customization */
+#placesContext_open\:newwindow,
+#placesContext_open\:newprivatewindow,
+#context_reopenInContainer,
+#placesContext_openContainer\:tabs,
+#context-openlinkintab,
+#context-openlink,
+#context-openlinkprivate,
 #appMenu-edit-controls,
 #appMenu-library-button,
 #appMenuRestoreLastSession,
@@ -36,16 +53,10 @@ toolbarbutton[label*='Temporary Container'] {
 #context_closeTabsToTheEnd,
 #context_duplicateTab,
 #context_moveTabOptions,
-#context_reopenInContainer,
-#context-openlink,
-#context-openlinkintab,
-#context-openlinkprivate,
-#context_selectAllTabs
-#placesContext_open\:newprivatewindow,
-#placesContext_open\:newwindow,
-#placesContext_openContainer\:tabs {
+#context_selectAllTabs {
     display: none !important;
 }
+
 
 /* only show close buttons on tabs when hovering */
 .tabbrowser-tab .tab-close-button {
@@ -63,7 +74,7 @@ toolbarbutton[label*='Temporary Container'] {
 }
 
 
-/* urlbar colorization, test site https://badssl.com/ */
+/* urlbar colorization */
 #urlbar {
   position: relative;
   z-index: 1;
@@ -80,12 +91,12 @@ toolbarbutton[label*='Temporary Container'] {
   opacity: .2;
 }
 @keyframes blinker {
-  50% { opacity: .6; }
+  50% { opacity: .3; }
 }
 
 /* about:about */
 #urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
-  background: #a4000f;
+  background: #0a84ff;
 }
 /* fix for mixedDisplayContentLoadedActiveBlocked */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
@@ -97,26 +108,26 @@ toolbarbutton[label*='Temporary Container'] {
   background: #0a84ff;
 }
 
-/* Verified Identity */
+/* https://www.github.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
   background: #058b00;
 }
-/* Mixed Display Content */
+/* https://mixed.badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
-  background: #f0dc00;
+  background: var(--toolbar-bgcolor);
 }
 
-/* Not Secure, Weak Cipher, Cert User overriden, Mixed Active Content */
+/* https://self-signed.badssl.com/ but add certificate exception */
 #urlbar[pageproxystate='valid'] #identity-box.notSecure:after,
 #urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after,
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
-  background: #a4000f;
+  background: #f0dc00; /* #a4000f; */
 }
 
-/* Insecure Logins */
+/* http://badssl.com/ */
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
-  background: #a4000f;
-  opacity: 1;
-  animation: blinker 1.6s linear infinite;
+  background: #ff0011; /* #a4000f; */
+  opacity: .5;
+  animation: blinker 1.5s linear infinite;
 }
