@@ -13,6 +13,10 @@ NOTE:      Before proceeding further, make a backup of your current profile
      One-Click Search Engines: delete all except DuckDuckGo
    Firefox -> Options -> General -> General -> Tabs -> Settings...
      Remove all containers
+   Firefox -> Options -> General -> Network Settings -> Settings...
+     Enable DNS over HTTPS: Check
+     Custom: https://dns.quad9.net/dns-query
+     [OK]
 5. Install extensions (see Extensions section) and setup by instructions; IMPORTANT NOTE: all changes are addition to default
 6. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 7. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
@@ -150,6 +154,7 @@ USEFUL EXTENSIONS:
 ******/
 
 /*** ANNOYANCES TWEAKS ***/
+  /*!0000  */ user_pref("network.connectivity-service.enabled", false);
   /* 0000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
@@ -171,7 +176,7 @@ USEFUL EXTENSIONS:
   /* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
-  /* 0000  */ user_pref("dom.targetBlankNoOpener.enabled", true); // At last. Replaces WE: Don't touch my tabs!; (rel=noopener) https://addons.mozilla.org/firefox/addon/dont-touch-my-tabs/
+  /*!0000  */ user_pref("dom.targetBlankNoOpener.enabled", true); // default = true on FF 67+; Replaces "Don't touch my tabs! WE
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher... I don't like this
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
