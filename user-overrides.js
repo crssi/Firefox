@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 7.2.2019 (commit: d81e8ae); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 7.2.2019 (commit: 3847f97); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -180,7 +180,6 @@ USEFUL EXTENSIONS:
   /* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
-  /*!0000  */ user_pref("dom.targetBlankNoOpener.enabled", true); // default = true on FF 67+; Replaces "Don't touch my tabs! WE
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher... I don't like this
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
