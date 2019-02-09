@@ -187,7 +187,7 @@ USEFUL EXTENSIONS:
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
-  /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality
+  /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
 
 /*** UPDATE ***/
