@@ -125,7 +125,6 @@ youtube.com/embed/
       Automatic Mode: Check
       Container Name Prefix: %domain% #
       Random Container Color: Check
-      Container Icon: circle
       Container Number: Reuse available numbers
       Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
       Click [Save]
