@@ -35,6 +35,7 @@
 @@||maps.googleapis.com/maps*$script,image,xmlhttprequest
 @@||mozilla.org^$third-party,xmlhttprequest,domain=mozilla.com
 @@||omara.cdn-cnj.si^$third-party,script
+@@||paypal.com^$third-party,subdocument,popup
 @@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
 @@||platform.twitter.com^$third-party,stylesheet,image
 @@||translate.googleusercontent.com
