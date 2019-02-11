@@ -130,6 +130,9 @@ youtube.com/embed/
       Click [Save]
     Isolation
       Per Domain
+        Domain pattern: *
+          Always open in new Temporary Containers: enabled
+          Click [Add or Edit]
         Domain pattern: duckduckgo.com
           Always open in new Temporary Containers: Enabled
           Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Always
