@@ -13,12 +13,6 @@ NOTE:      Before proceeding further, make a backup of your current profile
      One-Click Search Engines: delete all except DuckDuckGo
    Firefox -> Options -> General -> General -> Tabs -> Settings...
      Remove all containers
-   Firefox -> Options -> General -> Network Settings -> Settings...
-     Enable DNS over HTTPS: Check
-     Custom: https://dns.quad9.net/dns-query
-     [OK]
-     NOTE: See also https://cleanbrowsing.org/guides/dnsoverhttps
-           Do NOT enable for enterprise environment!
 5. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
 6. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
@@ -135,6 +129,7 @@ youtube.com/embed/
           Click [Add or Edit]
         Domain pattern: duckduckgo.com
           Always open in new Temporary Containers: Enabled
+          Mouse Clicks on Links should open new Temporary Containers [Middle Mouse]: Always
           Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Always
           Click [Add or Edit]
       Global
