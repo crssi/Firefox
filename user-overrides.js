@@ -189,9 +189,9 @@ USEFUL EXTENSIONS:
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
 
 /*** UPDATE ***/
-  /* 0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
+  /*?0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
   /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
-  /* 0303  */ user_pref("app.update.service.enabled", true); // enable update service
+  /*?0303  */ user_pref("app.update.service.enabled", true); // enable update service
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
