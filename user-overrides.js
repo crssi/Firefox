@@ -155,8 +155,7 @@ USEFUL EXTENSIONS:
 
 ******/
 
-/*** ANNOYANCES TWEAKS ***/
-  /* 0000  */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
+/*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
@@ -172,12 +171,14 @@ USEFUL EXTENSIONS:
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
   /* 5000  */ user_pref("general.warnOnAboutConfig", false); // remove about:config warning
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
+  /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
   /* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
   /* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
+  /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher... I don't like this
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party like Smart Referer WE
@@ -188,17 +189,12 @@ USEFUL EXTENSIONS:
   /*?4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
 
-/*** UPDATE ***/
-  /*?0300  */ user_pref("app.update.checkInstallTime.days", 0); // FF update check every day
-  /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
-  /*?0303  */ user_pref("app.update.service.enabled", true); // enable update service
-
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
-  /* 0000  */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
+  /* 5000x */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 
 /*** ENTERPRISE USE SPECIFIC ***/
   /* 0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
