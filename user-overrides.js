@@ -10,6 +10,7 @@ NOTE:      Before proceeding further, make a backup of your current profile
 3. In the "profile folder" create a folder "chrome" and copy userChrome.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
 4. Firefox -> Options -> Search
      Default Search Engine: duckduckgo
+     Show search suggestions ahead of browsing history in address bar results: Uncheck
      One-Click Search Engines: delete all except DuckDuckGo
    Firefox -> Options -> General -> General -> Tabs -> Settings...
      Remove all containers
@@ -194,8 +195,8 @@ USEFUL EXTENSIONS:
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
-  /* 5000x */ user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity"); // first 5 from bookmarks, then result from search engine
-  /* 5000x */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
+  // /*?5000x */ user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity"); // first 5 from bookmarks, then result from search engine
+  // /* 5000x */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 
 /*** ENTERPRISE USE SPECIFIC ***/
   /* 0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
