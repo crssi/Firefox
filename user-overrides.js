@@ -194,6 +194,7 @@ USEFUL EXTENSIONS:
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
+  /* 5000x */ user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity"); // first 5 from bookmarks, then result from search engine
   /* 5000x */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
 
 /*** ENTERPRISE USE SPECIFIC ***/
