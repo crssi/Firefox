@@ -14,6 +14,7 @@
 @@||googleapis.com^$third-party,subdocument,domain=google.com|google.si
 @@||googleusercontent.com^$third-party,subdocument,domain=google.com|google.si
 
+||hudo.com^$inline-script
 @@/clarity-*.js$first-party,script
 @@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
