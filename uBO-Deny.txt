@@ -29,7 +29,8 @@
 ||amazon-adsystem.*^$important
 ||ampcid.google.*^$important
 ||api.stacksocial.com^
-||api2.kme.si^$third-party,xmlhttprequest
+!||api2.kme.si^$third-party,xmlhttprequest
+||kme.si^$third-party,~image
 ||askmediagroup.com^$third-party
 ||beacon.krxd.net^$important
 ||bestofmedia.com^$third-party
