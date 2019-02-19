@@ -61,3 +61,4 @@
 @@||youtube-nocookie.com/embed/$third-party,subdocument
 @@||youtube.com/embed/$third-party,subdocument
 @@||youtubemp3api.com/@api/*$third-party,subdocument,domain=easy-youtube-mp3.com
+@@||ypsilon.net^$third-party,subdocument
