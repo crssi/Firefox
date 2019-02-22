@@ -115,6 +115,10 @@ youtube.com/embed/
     Notifications
       Enable popup: Uncheck
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
+    Add to exceptions:
+      *.google.* > *.google.com
+      *.google.* > *.googleapis.com
+      *.google.* > *.gstatic.com (<- This line needs some more investigation)
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     General
       Automatic Mode: Check
