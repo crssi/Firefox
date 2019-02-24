@@ -184,6 +184,7 @@ USEFUL EXTENSIONS:
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
+  // /*?1212  */ user_pref("security.OCSP.require", false); // allow connction when OCSP not reacheable... I don't like this
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher... I don't like this
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party like Smart Referer WE
