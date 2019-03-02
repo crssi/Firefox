@@ -13,6 +13,7 @@ https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-u
 https://www.reddit.com/r/firefox/comments/7dvtw0/guide_how_to_edit_your_context_menu/
 https://imgur.com/e9AaMx3
 https://imgur.com/b5gEfUy
+https://support.mozilla.org/en-US/questions/1214459
 */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -24,36 +25,19 @@ https://imgur.com/b5gEfUy
 }
 
 
-/* Remove Temporary Container icon */
-toolbarbutton[label*='Temporary Container'] {
-  display: none;
-}
-menuitem[label*='Open Link in New Temporary Container Tab'] {
-  display: none;
-}
-#userContext-label {
-  color: var(--toolbar-color) !important;
-}
-
-
 /* Menu customization */
-#placesContext_open\:newwindow,
+#appMenu-private-window-button,
+#appMenuRestoreLastSession,
 #placesContext_open\:newprivatewindow,
-#context_reopenInContainer,
-#placesContext_openContainer\:tabs,
-#context-openlinkintab,
 #context-openlink,
 #context-openlinkprivate,
-#appMenu-edit-controls,
-#appMenu-library-button,
-#appMenuRestoreLastSession,
 #context_bookmarkTab,
 #context_closeOtherTabs,
 #context_closeTab,
 #context_closeTabsToTheEnd,
-#context_duplicateTab,
 #context_moveTabOptions,
-#context_selectAllTabs {
+#context_selectAllTabs
+{
     display: none !important;
 }
 
