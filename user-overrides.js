@@ -140,6 +140,11 @@ youtube.com/embed/
         Mouse Clicks on Links should open new Temporary Containers
           Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
         Click [Save]
+    Advanced
+      General
+        Context Menu
+          Show Temporary Container entry in the right click on Links context menu: Uncheck
+      Click [Save]
     NOTE: CTRL+SHIFT+T = Undo closed tab(s)
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
     Settings
