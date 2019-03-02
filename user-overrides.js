@@ -143,7 +143,7 @@ youtube.com/embed/
     Advanced
       General
         Context Menu
-          Show Temporary Container entry in the right click on Links context menu: Uncheck
+          Show Temporary Container entry in the right click on links context menu: Uncheck
       Click [Save]
     NOTE: CTRL+SHIFT+T = Undo closed tab(s)
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
