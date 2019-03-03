@@ -134,7 +134,7 @@ youtube.com/embed/
         Domain pattern: duckduckgo.com
           Always open in new Temporary Containers: Enabled
           Mouse Clicks on Links should open new Temporary Containers [Middle Mouse]: Always
-          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Always
+          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
           Click [Add or Edit]
       Global
         Mouse Clicks on Links should open new Temporary Containers
