@@ -96,7 +96,7 @@
 ||moengage.com^$third-party
 ||montiapm.com^$third-party
 ||n26.*^$domain=~n26.com
-||newrelic.com^$third-party
+||newrelic.com^
 ||nir.regmedia.co.uk^$third-party
 ||nmaib9.com^$third-party
 ||oath.com^$third-party
@@ -109,7 +109,7 @@
 ||polldaddy.com^$third-party
 ||popupmaker.com^$third-party
 ||prismic.io^$third-party
-||privacy-center.org^$third-party
+||privacy-center.org^
 ||purch.com^$third-party,important
 ||pushance.com^$third-party
 ||pusher.com^$third-party
