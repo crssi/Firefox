@@ -113,6 +113,8 @@
 ||purch.com^$third-party,important
 ||pushance.com^$third-party
 ||pusher.com^$third-party
+||s.aolcdn.com/ads/*$third-party,script
+||s.yimg.com^$third-party,script
 ||s*.wp.com^$third-party,script,xmlhttprequest
 ||salesforceliveagent.com^$third-party
 ||sb.scorecardresearch.com^$important
