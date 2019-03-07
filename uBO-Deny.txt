@@ -28,6 +28,7 @@
 ||alooma.com^$third-party
 ||amazon-adsystem.*^$important
 ||ampcid.google.*^$important
+||aolcdn.com/ads/*$third-party,script
 ||api.stacksocial.com^
 !||api2.kme.si^$third-party,xmlhttprequest
 ||kme.si^$third-party,~image
@@ -36,6 +37,7 @@
 ||bestofmedia.com^$third-party
 ||bf-ad.*^$important
 ||blitzen.com^$third-party
+||blogsmithmedia.com^$third-party,xmlhttprequest
 ||booster3000.si^$third-party
 ||calculoid.com^$third-party,script
 ||cdn-cnj.si^$third-party,script
@@ -114,7 +116,6 @@
 ||pushance.com^$third-party
 ||pusher.com^$third-party
 ||s.aolcdn.com/ads/*$third-party,script
-||s.yimg.com^$third-party,script
 ||s*.wp.com^$third-party,script,xmlhttprequest
 ||salesforceliveagent.com^$third-party
 ||sb.scorecardresearch.com^$important
@@ -140,6 +141,7 @@
 ||wibbitz.com^$third-party
 ||wistia.*^$third-party
 ||yahoo.*^$third-party
+||yimg.com^$third-party,script
 ||yottlyscript.com^$third-party
 ||zdassets.com^$third-party
 ||zendesk.com^$third-party
