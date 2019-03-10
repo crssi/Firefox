@@ -208,9 +208,9 @@ USEFUL EXTENSIONS:
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
-  // /*?0850c */ user_pref("browser.urlbar.maxRichResults", 18);
+  /* 0850c */ user_pref("browser.urlbar.maxRichResults", 18);
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
-  // /*?0850x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity");
+  /* 0850x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity");
 
 /*** ENTERPRISE USE SPECIFIC ***/
   /* 0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store
