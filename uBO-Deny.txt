@@ -133,6 +133,7 @@
 ||tinymce.com^$third-party
 ||tinypass.com^$third-party
 ||trustpilot.com^$third-party
+||tsmedia.si^$third-party
 ||typography.com^$third-party,~stylesheet
 !||unpkg.com^$third-party
 ||upscore.com^$third-party
