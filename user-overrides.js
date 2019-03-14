@@ -197,7 +197,7 @@ USEFUL EXTENSIONS:
   // /*?2010  */ user_pref("webgl.disabled", false);
   // /*?2010  */ user_pref("webgl.min_capability_mode", false);
   // /*?2012  */ user_pref("webgl.enable-webgl2", true);
-  // /*?2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
+  /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   // /*?2422  */ user_pref("javascript.options.wasm", true); // disable WebAssembly
