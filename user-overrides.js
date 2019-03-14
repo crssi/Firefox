@@ -194,13 +194,13 @@ USEFUL EXTENSIONS:
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connction when OCSP not reacheable... I don't like this
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party like Smart Referer WE
-  // /*?2010  */ user_pref("webgl.disabled", false);
-  // /*?2010  */ user_pref("webgl.min_capability_mode", false);
-  // /*?2012  */ user_pref("webgl.enable-webgl2", true);
+  // /*?2010  */ user_pref("webgl.disabled", false); // WebGl
+  // /*?2010  */ user_pref("webgl.min_capability_mode", false); // WebGl
+  // /*?2012  */ user_pref("webgl.enable-webgl2", true); // WebGl
   /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-  // /*?2422  */ user_pref("javascript.options.wasm", true); // disable WebAssembly
+  // /*?2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
