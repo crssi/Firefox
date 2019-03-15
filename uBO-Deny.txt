@@ -48,6 +48,7 @@
 ||chimpstatic.com^$third-party
 ||cloudinary.com^$third-party
 ||contentpass.net^$important
+||cookieinfoscript.com^$third-party
 ||coordinatedcub.com^$third-party
 ||delvenetworks.com^$third-party,script
 ||doubleclick.*^$important
@@ -139,6 +140,7 @@
 ||upscore.com^$third-party
 ||urbanairship.com^$third-party
 ||vidible.tv^
+||wayin.com^$third-party
 ||wibbitz.com^$third-party
 ||wistia.*^$third-party
 ||yahoo.*^$third-party
