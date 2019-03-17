@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 13.3.2019 (commit: 68584a3); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 17.3.2019 (commit: d9e24e5); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -198,7 +198,7 @@ USEFUL/INTERESTING EXTENSIONS:
   // /*?2010  */ user_pref("webgl.disabled", false); // WebGl
   // /*?2010  */ user_pref("webgl.min_capability_mode", false); // WebGl
   // /*?2012  */ user_pref("webgl.enable-webgl2", true); // WebGl
-  /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
+  /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed, 1=Blocked (default), 2=Prompt
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   // /*?2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
