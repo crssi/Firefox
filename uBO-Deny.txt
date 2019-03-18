@@ -47,6 +47,7 @@
 ||cdn.transifex.com^
 ||chimpstatic.com^$third-party
 ||cloudinary.com^$third-party
+||consensu.org^$third-party
 ||contentpass.net^$important
 ||cookieinfoscript.com^$third-party
 ||coordinatedcub.com^$third-party
