@@ -104,6 +104,7 @@
 ||nir.regmedia.co.uk^$third-party
 ||nmaib9.com^$third-party
 ||oath.com^$third-party
+||olark.com^$third-party
 ||oneall.com^$third-party
 ||onesignal.com^$third-party
 ||outbrain.com^$third-party
