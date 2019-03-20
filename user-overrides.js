@@ -185,7 +185,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
   /* 5000  */ user_pref("general.warnOnAboutConfig", false); // remove about:config warning
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
-  /* 5000x */ user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // Set DuckDuckGo as a search provider
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
   /* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
