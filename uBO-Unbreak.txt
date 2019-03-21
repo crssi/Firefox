@@ -30,6 +30,7 @@
 @@||google-analytics.com/analytics.js$third-party,script,domain=amainhobbies.com
 @@||google.*^$domain=google.com|googleapis.com
 @@||google.*^$third-party,script,domain=youtube.com
+@@||google.com/uds/*visualization$third-party,script,stylesheet
 @@||gravatar.com^$third-party,image,stylesheet
 @@||jwpcdn.com^$third-party,font
 @@||maps.google.*/maps*$third-party,script,image
