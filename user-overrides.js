@@ -50,12 +50,14 @@ EXTENSIONS:
     Exclusions
       Exclude root domain matches: Check
       Exclusions:
+* *.braintreegateway.com
 *.ali*.com *.ali*.com
 *.google*.* *
 *.notabug.io oauth.reddit.com
 *.paypal*.com *.paypal*.com
 *.powerbi.com *.windows.net
 *.youtube*.com *
+github.com *.githubassets.com
     Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
