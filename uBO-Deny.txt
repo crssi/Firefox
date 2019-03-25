@@ -118,10 +118,12 @@
 ||purch.com^$third-party,important
 ||pushance.com^$third-party
 ||pusher.com^$third-party
+||quantserve.com^$third-party
 ||s.aolcdn.com/ads/*$third-party,script
 ||s*.wp.com^$third-party,script,xmlhttprequest
 ||salesforceliveagent.com^$third-party
-||sb.scorecardresearch.com^$important
+!||sb.scorecardresearch.com^$important
+||scorecardresearch.com^$important
 ||servebom.com^$third-party,important
 ||shopify.com^$third-party,script
 ||shopifycdn.com^$third-party,script
