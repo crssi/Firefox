@@ -172,7 +172,7 @@ USEFUL/INTERESTING EXTENSIONS:
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
-  /* 0862  */ user_pref("places.history.enabled", false); // disable history
+  // /*?0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
@@ -185,7 +185,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
-  /* 5000  */ user_pref("general.warnOnAboutConfig", false); // remove about:config warning
+  // /*?5000  */ user_pref("general.warnOnAboutConfig", false); // remove about:config warning
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
   /* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
@@ -198,15 +198,16 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
-  // /*?2010  */ user_pref("webgl.disabled", false); // WebGl
-  // /*?2010  */ user_pref("webgl.min_capability_mode", false); // WebGl
-  // /*?2012  */ user_pref("webgl.enable-webgl2", true); // WebGl
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-  // /*?2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
+
+  // /*?2010  */ user_pref("webgl.disabled", false); // WebGl
+  // /*?2010  */ user_pref("webgl.min_capability_mode", false); // WebGl
+  // /*?2012  */ user_pref("webgl.enable-webgl2", true); // WebGl
+  // /*?2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
