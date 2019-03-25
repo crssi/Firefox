@@ -33,6 +33,7 @@
 !||api2.kme.si^$third-party,xmlhttprequest
 ||kme.si^$third-party,~image
 ||askmediagroup.com^$third-party
+||baidu.com^$third-party
 ||beacon.krxd.net^$important
 ||bestofmedia.com^$third-party
 ||bf-ad.*^$important
@@ -118,6 +119,7 @@
 ||purch.com^$third-party,important
 ||pushance.com^$third-party
 ||pusher.com^$third-party
+||qq.com^$third-party
 ||quantserve.com^$third-party
 ||s.aolcdn.com/ads/*$third-party,script
 ||s*.wp.com^$third-party,script,xmlhttprequest
