@@ -14,6 +14,7 @@
 @@||arte.tv/player/*$third-party,subdocument
 @@||blogger.com/comment-iframe.$third-party,subdocument
 @@||braintreegateway.com^$third-party,subdocument
+@@||cdn.embedly.com/widgets/*$third-party,subdocument
 @@||checkfront.com/reserve/*$third-party,subdocument
 @@||cldmail.ru^$third-party,subdocument,domain=mail.ru
 @@||dropbox.com*^$third-party,subdocument,domain=dropboxpayments.com
