@@ -61,6 +61,7 @@
 ||firebase.com^$third-party
 ||future-fie-assets.co.uk^$third-party
 ||future.net.uk^$third-party
+||getsitecontrol.com^$third-party
 ||google-analytics.*^$third-party,~script,important
 ||google-analytics.*^$third-party,script
 ||google.*^$third-party
