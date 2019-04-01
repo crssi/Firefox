@@ -11,6 +11,7 @@
 @@||accounts.google.*/ServiceLogin$third-party,subdocument
 @@||alicdn.com^$third-party,subdocument,domain=aliexpress.com
 @@||appspot.com^$third-party,subdocument,domain=cloud.google.com
+@@||arkoselabs.com^$third-party,subdocument
 @@||arte.tv/player/*$third-party,subdocument
 @@||blogger.com/comment-iframe.$third-party,subdocument
 @@||braintreegateway.com^$third-party,subdocument
