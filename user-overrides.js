@@ -145,8 +145,6 @@ youtube.com/embed/
         Click [Save]
     Advanced
       General
-        Context Menu
-          Show Temporary Container entry in the right click on links context menu: Uncheck
         Automatic Mode: Don't reopen New Tabs in Temporary Containers but instead on navigation.
       Click [Save]
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
