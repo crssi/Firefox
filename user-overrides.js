@@ -177,7 +177,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
   /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
-  /* 5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
@@ -206,6 +205,7 @@ USEFUL/INTERESTING EXTENSIONS:
   // /*?2010  */ user_pref("webgl.min_capability_mode", false); // WebGl
   // /*?2012  */ user_pref("webgl.enable-webgl2", true); // WebGl
   // /*?2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
+  // /*?5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
