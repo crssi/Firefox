@@ -63,6 +63,7 @@ github.com *.githubassets.com
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
     Blacklist:
 _sso=
+.alipay.com
 /_login
 //disq.us/
 /abp
@@ -97,8 +98,11 @@ action=login
 alipay.com/
 archive.is/
 chart.googleapis.com/chart
+hosts-file.net/
 i-dont-care-about-cookies.eu/
 logout=
+malc0de.com/
+malwaredomainlist.com/
 medium.com/
 microsofttranslator.com/
 paypal.com/
@@ -201,11 +205,10 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false) //do not dynamically resize the inner window
 
-  // /*?2010  */ user_pref("webgl.disabled", false); // WebGl
-  // /*?2010  */ user_pref("webgl.min_capability_mode", false); // WebGl
-  // /*?2012  */ user_pref("webgl.enable-webgl2", true); // WebGl
-  // /*?2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
-  // /*?5000  */ user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
+  // /* 2010  */ user_pref("webgl.disabled", false); // WebGl
+  // /* 2010  */ user_pref("webgl.min_capability_mode", false); // WebGl
+  // /* 2012  */ user_pref("webgl.enable-webgl2", true); // WebGl
+  // /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
