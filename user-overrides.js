@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 27.3.2019 (commit: bee47f3); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 3.4.2019 (commit: 79e316a); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -198,6 +198,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
+  /* 1820  */ user_pref("media.gmp-manager.updateEnabled", true); // video breakage
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
@@ -214,7 +215,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
-  /* 0850c */ user_pref("browser.urlbar.maxRichResults", 18);
+  /* 0850c */ user_pref("browser.urlbar.maxRichResults", 18); // number of urlbar search results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
   /* 0850x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity");
 
