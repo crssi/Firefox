@@ -212,7 +212,7 @@ USEFUL/INTERESTING EXTENSIONS:
   // /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
-  /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // setting browser.urlbar.matchBuckets resets 0801 and must be applied first
+  /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // browser.urlbar.matchBuckets resets 0801 and must be applied first
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
