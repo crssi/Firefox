@@ -135,12 +135,13 @@ youtube.com/embed/
       Click [Save]
     Isolation
       Per Domain
-        Domain pattern: *
-          Always open in new Temporary Containers: Enabled
-          Click [Add or Edit]
         Domain pattern: duckduckgo.com
           Always open in new Temporary Containers: Enabled
-          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Always
+          Click [Add or Edit]
+        Domain pattern: *
+          Always open in new Temporary Containers: Enabled
+          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Use Global
           Click [Add or Edit]
       Global
         Mouse Clicks on Links should open new Temporary Containers
