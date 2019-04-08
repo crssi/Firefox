@@ -135,7 +135,7 @@
 ||smind.*^$third-party
 ||sportradar.com^$third-party
 ||spot.im^$third-party
-||swiftypecdn.com^$third-party,script
+!||swiftypecdn.com^$third-party,script
 ||syndication.twitter.*^
 ||themessagecloud.com^$third-party
 ||tinymce.com^$third-party
