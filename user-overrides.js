@@ -48,7 +48,6 @@ EXTENSIONS:
       script: Check
       xmlhttprequest (XHR): Check
     Exclusions
-      Exclude root domain matches: Check
       Exclusions:
 * *.braintreegateway.com
 *.ali*.com *.ali*.com
@@ -205,11 +204,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false) //do not dynamically resize the inner window
-
-  // /* 2010  */ user_pref("webgl.disabled", false); // WebGl
-  // /* 2010  */ user_pref("webgl.min_capability_mode", false); // WebGl
-  // /* 2012  */ user_pref("webgl.enable-webgl2", true); // WebGl
-  // /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // browser.urlbar.matchBuckets resets 0801 and must be applied first
