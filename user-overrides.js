@@ -51,6 +51,7 @@ EXTENSIONS:
       Exclusions:
 * *.braintreegateway.com
 *.ali*.com *.ali*.com
+*.azure.com *.microsoft.com
 *.google*.* *
 *.notabug.io oauth.reddit.com
 *.paypal*.com *.paypal*.com
