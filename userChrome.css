@@ -25,12 +25,15 @@ https://support.mozilla.org/en-US/questions/1214459
 }
 
 
-/* Menu customization */
+/* Menu customization; ? #context-openlinkin* */
 #appMenu-private-window-button,
 #appMenuRestoreLastSession,
 #placesContext_open\:newprivatewindow,
 #context-openlink,
 #context-openlinkprivate,
+#context-openlinkintab,
+#context-openlinkincurrent,
+#context-openlinkincontainertab,
 #context_bookmarkTab,
 #context_closeOtherTabs,
 #context_closeTab,
