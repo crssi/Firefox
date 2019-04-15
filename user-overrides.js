@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 11.4.2019 (commit: 585415b); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 15.4.2019 (commit: c203461); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -34,7 +34,6 @@ NOTE:      Before proceeding further, make a backup of your current profile
 EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     Expert mode -> Misc -> Block data URL pages: Uncheck
-?  ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
@@ -165,6 +164,7 @@ USEFUL/INTERESTING EXTENSIONS:
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
+  ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
   Containerise; https://addons.mozilla.orgfirefox/addon/containerise/ (https://github.com/kintesh/containerise/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
@@ -173,7 +173,7 @@ USEFUL/INTERESTING EXTENSIONS:
 ******/
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
-  /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
+  /*?0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
