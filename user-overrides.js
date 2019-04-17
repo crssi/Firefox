@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 15.4.2019 (commit: c203461); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 17.4.2019 (commit: fd10c35); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -183,16 +183,18 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
   /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
-  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR
+  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR, deprecated in FF 67+
+  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr,addons", false); // disable CFR, FF 67+
+  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR, FF 67+
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
-  /* 5000  */ user_pref("general.warnOnAboutConfig", false); // remove about:config warning
+  /*?5000  */ user_pref("general.warnOnAboutConfig", false); // remove about:config warning
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
-  /* 5002  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
-  /* 5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
-  /* 5028  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
+  /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
+  /*?5026  */ user_pref("reader.parse-on-load.enabled", false); // disable reader view
+  /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
