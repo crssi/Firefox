@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 17.4.2019 (commit: fd10c35); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 19.4.2019 (commit: 408d1d0); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -173,7 +173,6 @@ USEFUL/INTERESTING EXTENSIONS:
 ******/
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
-  /*?0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable extensions auto update
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
