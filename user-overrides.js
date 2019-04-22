@@ -174,7 +174,6 @@ USEFUL/INTERESTING EXTENSIONS:
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
-  /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
   /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
   /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
@@ -182,7 +181,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
   /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
-  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR, deprecated in FF 67+
+  /*?5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false); // disable CFR, deprecated in FF 67+
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr,addons", false); // disable CFR, FF 67+
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR, FF 67+
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -192,6 +191,19 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
+
+/*** RELAXING ***/
+  /* 0702  */ user_pref("network.http.spdy.enabled", true); // http2
+  /* 0702  */ user_pref("network.http.spdy.enabled.deps", true); // http2
+  /* 0702  */ user_pref("network.http.spdy.enabled.http2", true); // http2
+  /* 0702  */ user_pref("network.http.spdy.websockets", true); // http2
+  /* 0703  */ user_pref("network.http.altsvc.enabled", true); // AltSvc
+  /* 0703  */ user_pref("network.http.altsvc.oe", true); // AltSvc
+  /*!1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
+  /* 2420  */ user_pref("javascript.options.asmjs", true); // asm.js
+  /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
+  /* 2500  */ user_pref("layers.acceleration.disabled", false); // HWA
+  /* 2609  */ user_pref("mathml.disabled", false); // Mathematical Markup Language
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
