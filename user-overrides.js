@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 19.4.2019 (commit: 408d1d0); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 22.4.2019 (commit: 358ddfd); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -193,19 +193,10 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 
 /*** RELAXING ***/
-  // /* 0702  */ user_pref("network.http.spdy.enabled", true); // http2
-  // /* 0702  */ user_pref("network.http.spdy.enabled.deps", true); // http2
-  // /* 0702  */ user_pref("network.http.spdy.enabled.http2", true); // http2
-  // /* 0702  */ user_pref("network.http.spdy.websockets", true); // http2
-  // /* 0703  */ user_pref("network.http.altsvc.enabled", true); // AltSvc
-  // /* 0703  */ user_pref("network.http.altsvc.oe", true); // AltSvc
   /*!1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
-  /*!1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
   /*!1820  */ user_pref("media.gmp-manager.updateEnabled", true); // video breakage
   /* 2420  */ user_pref("javascript.options.asmjs", true); // asm.js
   /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
-  /* 2500  */ user_pref("layers.acceleration.disabled", false); // HWA
-  /* 2609  */ user_pref("mathml.disabled", false); // Mathematical Markup Language
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
