@@ -199,7 +199,9 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0702  */ user_pref("network.http.spdy.websockets", true); // http2
   /* 0703  */ user_pref("network.http.altsvc.enabled", true); // AltSvc
   /* 0703  */ user_pref("network.http.altsvc.oe", true); // AltSvc
+  /*!1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /*!1401  */ user_pref("browser.display.use_document_fonts", 1); // I <3 fonts
+  /*!1820  */ user_pref("media.gmp-manager.updateEnabled", true); // video breakage
   /* 2420  */ user_pref("javascript.options.asmjs", true); // asm.js
   /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
   /* 2500  */ user_pref("layers.acceleration.disabled", false); // HWA
@@ -209,9 +211,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
-  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
-  /* 1820  */ user_pref("media.gmp-manager.updateEnabled", true); // video breakage
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
