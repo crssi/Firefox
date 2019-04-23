@@ -18,6 +18,7 @@
 ||*/fingerprintjs2*$script,important
 ||1105media.com^$third-party
 ||a2sky.com^$third-party
+||adicio.com^$third-party
 ||addthis.com^$important
 ||adsensecustomsearchads.*^$important
 ||adserver.yahoo.com^$important
@@ -98,6 +99,7 @@
 ||mallgroup.com^$third-party
 ||maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate$script,important
 ||maps.googleapis.com/maps/api/js/QuotaService.RecordEvent$script,important
+||marketo.com^$third-party
 ||medium.com^$third-party,script
 ||moengage.com^$third-party
 ||montiapm.com^$third-party
