@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 23.4.2019 (commit: 986c900); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 24.4.2019 (commit: f849e1c); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -39,7 +39,7 @@ EXTENSIONS:
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
-    Blocked parameters: _hsenc, _hsmi, _openstat, _trkparms, !cn@mail.google.com, $/ref@amazon.*, 77campaign, action_object_*, action_ref_*, action_type_*, adid, AdID, adserverid, adserveroptimizerid, adset_*, adtype, adurl, aff_platform, aff_trace_key, affiliate, AffiliateGuid, algo_expid, algo_pvid, aqs, assetType, bav, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, CampaignID, clickid, clkulrenc, CNDID, csi, cvid, d@banggood.com, dni, dq, e@linkedin.com, ek, elq*, ems_l, fb_action_ids, fb_action_types, fb_ref, fb_source, fbclid, feeditemid, first_visit, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gs_rn, gws_rd, hmb_*, iact, icid, ijn, ImpressionGuid, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mbid, mc_*, midToken, mkt_*, ncid, ndsp, nid, nr_email_referer, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, piggiebackcookie, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, pubclick, pubid, qs@bing.com, recipientId, refsrc, rni, RSS*, sc@bing.com, sclient, scroll, sei, siteId, source@sourceforge.net, spJobID, spm, spMailingID, spReportId, spUserID, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, tracking, transAbTest, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, wid@gearbest.com, ws_ab_test, yclid
+    Blocked parameters: _hsenc, _hsmi, _openstat, _trkparms, !cn@mail.google.com, $/ref@amazon.*, 77campaign, action_object_*, action_ref_*, action_type_*, adid, AdID, adserverid, adserveroptimizerid, adset_*, adtype, adurl, aff_platform, aff_trace_key, affiliate, AffiliateGuid, algo_expid, algo_pvid, aqs, assetType, bav, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, CampaignID, clickid, clkulrenc, CNDID, csi, cvid, d@banggood.com, dni, dq, e@linkedin.com, ek, elq*, ems_l, fb_action_ids, fb_action_types, fb_ref, fb_source, fbclid, feeditemid, first_visit, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gws_rd, hmb_*, iact, icid, ijn, ImpressionGuid, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mbid, mc_*, midToken, mkt_*, ncid, ndsp, nid, nr_email_referer, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, piggiebackcookie, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, pubclick, pubid, qs@bing.com, recipientId, refsrc, rni, RSS*, sc@bing.com, sclient, scroll, sei, siteId, source@sourceforge.net, spJobID, spm, spMailingID, spReportId, spUserID, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, tracking, transAbTest, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, wid@gearbest.com, ws_ab_test, yclid
     URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
     Click [Save preferences]
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
@@ -175,7 +175,6 @@ USEFUL/INTERESTING EXTENSIONS:
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
-  /* 1405  */ user_pref("gfx.downloadable_fonts.woff2.enabled", true); // I <3 fonts
   /* 2030  */ user_pref("media.autoplay.default", 0); // disable auto-play of HTML5 media (FF63+), 0=Allowed (default), 1=Blocked, 2=Prompt
   /* 2205  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
