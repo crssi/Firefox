@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 24.4.2019 (commit: d4f7590); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 27.4.2019 (commit: 98f65da); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -193,7 +193,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 
 /*** RELAXING ***/
-  /*!1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /*!1820  */ user_pref("media.gmp-manager.updateEnabled", true); // video breakage
   /* 2420  */ user_pref("javascript.options.asmjs", true); // asm.js
   /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
@@ -202,6 +201,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
+  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow secure and non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
@@ -211,7 +211,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false) //do not dynamically resize the inner window
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
-  /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // browser.urlbar.matchBuckets resets 0801 and must be applied first
+  /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // browser.urlbar.matchBuckets resets 0801 and must be applied before
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
