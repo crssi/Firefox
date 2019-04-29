@@ -181,8 +181,8 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
   /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
-  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr,addons", false); // disable CFR, FF 67+
-  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR, FF 67+
+  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr,addons", false); // disable CFR
+  /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
