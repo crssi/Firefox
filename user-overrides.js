@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 27.4.2019 (commit: 25b8b40); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 29.4.2019 (commit: b28677a); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -193,7 +193,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 
 /*** RELAXING ***/
-  /*!1820  */ user_pref("media.gmp-manager.updateEnabled", true); // video breakage
   /* 2420  */ user_pref("javascript.options.asmjs", true); // asm.js
   /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
 
