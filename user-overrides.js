@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 30.4.2019 (commit: c3a74a7); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 30.4.2019 (commit: 99eb835); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -190,10 +190,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
-
-/*** RELAXING ***/
-  /* 2420  */ user_pref("javascript.options.asmjs", true); // asm.js
-  /* 2422  */ user_pref("javascript.options.wasm", true); // WebAssembly
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
