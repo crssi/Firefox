@@ -1,0 +1,116 @@
+{
+  "version": "0.97",
+  "date": 1556611626300,
+  "preferences": {
+    "automaticMode": {
+      "active": true,
+      "newTab": "navigation"
+    },
+    "notifications": false,
+    "container": {
+      "namePrefix": "%domain% #",
+      "color": "red",
+      "colorRandom": true,
+      "icon": "circle",
+      "iconRandom": false,
+      "numberMode": "reuse",
+      "removal": "2minutes"
+    },
+    "iconColor": "default",
+    "isolation": {
+      "global": {
+        "navigation": {
+          "action": "never"
+        },
+        "mouseClick": {
+          "middle": {
+            "action": "notsamedomain",
+            "container": "default"
+          },
+          "ctrlleft": {
+            "action": "never",
+            "container": "default"
+          },
+          "left": {
+            "action": "never",
+            "container": "default"
+          }
+        },
+        "excluded": {}
+      },
+      "domain": {
+        "duckduckgo.com": {
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {}
+        },
+        "*": {
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
+        }
+      },
+      "mac": {
+        "action": "disabled"
+      }
+    },
+    "browserActionPopup": false,
+    "pageAction": false,
+    "contextMenu": true,
+    "keyboardShortcuts": {
+      "AltC": true,
+      "AltP": true,
+      "AltN": false,
+      "AltShiftC": false,
+      "AltX": false
+    },
+    "replaceTabs": false,
+    "ignoreRequestsToAMO": true,
+    "ignoreRequestsToPocket": true,
+    "cookies": {
+      "domain": {}
+    },
+    "deletesHistory": {
+      "automaticMode": "never",
+      "contextMenu": false,
+      "containerAlwaysPerDomain": "never",
+      "containerIsolation": "never",
+      "containerRemoval": "instant",
+      "containerMouseClicks": "never",
+      "statistics": false
+    },
+    "statistics": false
+  }
+}
