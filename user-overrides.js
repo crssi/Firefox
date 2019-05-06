@@ -126,31 +126,34 @@ youtube.com/embed/
       *.google.* > *.googleapis.com
 ?      *.google.* > *.google*.*
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
-    General
-      Automatic Mode: Check
-      Container Name Prefix: %domain% #
-      Random Container Color: Check
-      Container Number: Reuse available numbers
-      Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
-      Click [Save]
-    Isolation
-      Per Domain
-        Domain pattern: duckduckgo.com
-          Always open in new Temporary Containers: Enabled
-          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-          Click [Add or Edit]
-        Domain pattern: *
-          Always open in new Temporary Containers: Enabled
-          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Use Global
-          Click [Add or Edit]
-      Global
-        Mouse Clicks on Links should open new Temporary Containers
-          Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-        Click [Save]
-    Advanced
-      General
-        Automatic Mode: Don't reopen New Tabs in Temporary Containers but instead on navigation.
-      Click [Save]
+    Export/Import
+      Import Preferences
+        Click [Browse...]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
+?    General
+?      Automatic Mode: Check
+?      Container Name Prefix: %domain% #
+?      Random Container Color: Check
+?      Container Number: Reuse available numbers
+?      Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
+?      Click [Save]
+?    Isolation
+?      Per Domain
+?        Domain pattern: duckduckgo.com
+?          Always open in new Temporary Containers: Enabled
+?          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+?          Click [Add or Edit]
+?        Domain pattern: *
+?          Always open in new Temporary Containers: Enabled
+?          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Use Global
+?          Click [Add or Edit]
+?      Global
+?        Mouse Clicks on Links should open new Temporary Containers
+?          Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
+?        Click [Save]
+?    Advanced
+?      General
+?        Automatic Mode: Don't reopen New Tabs in Temporary Containers but instead on navigation.
+?      Click [Save]
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
     Settings
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
