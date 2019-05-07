@@ -24,6 +24,8 @@
 ||hudo.com^$inline-script
 @@/clarity-*.js$first-party,script
 @@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
+@@||advertising.com^$first-party
+||advertising.com^$~document
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
 @@||assets.adobedtm.com^$third-party,script
 @@||cdn.nrholding.net/*/*/$third-party,image
