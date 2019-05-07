@@ -16,6 +16,7 @@
 @@||instagram.com/p/$third-party,subdocument
 @@||accounts.google.*/ServiceLogin$third-party,subdocument
 @@||checkfront.com/reserve/*$third-party,subdocument
+@@||codepen.io^$third-party,subdocument
 @@||google.*/maps/*$third-party,subdocument
 @@||google.*/recaptcha/$third-party,subdocument
 @@||googleapis.com^$third-party,subdocument,domain=google.com|google.si
