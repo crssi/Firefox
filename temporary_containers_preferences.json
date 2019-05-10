@@ -60,6 +60,27 @@
           },
           "excluded": {}
         },
+        "*.google.*": {
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {}
+        },
         "*": {
           "always": {
             "action": "enabled",
