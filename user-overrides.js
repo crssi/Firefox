@@ -115,6 +115,7 @@ securityheaders.com/
 ssllabs.com/
 t.umblr.com/redirect
 translate.google.com/
+twitter.com/
 ubi.com/
 virustotal.com/
 web.archive.org/
