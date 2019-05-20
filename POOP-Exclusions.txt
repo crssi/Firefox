@@ -1,0 +1,9 @@
+* *.braintreegateway.com
+*.ali*.com *.ali*.com
+*.azure.com *.microsoft.com
+*.google*.* *
+*.notabug.io oauth.reddit.com
+*.paypal*.com *.paypal*.com
+*.powerbi.com *.windows.net
+*.youtube*.com *
+github.com *.githubassets.com

@@ -1,6 +1,6 @@
 /******
 HOME:      https://github.com/crssi/Firefox
-INFO:      Supplement for ghacks-user.js; 8.5.2019 (commit: fc801db); https://github.com/ghacksuserjs/ghacks-user.js
+INFO:      Supplement for ghacks-user.js; 14.5.2019 (commit: 5d5a9ac); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE:      Before proceeding further, make a backup of your current profile
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -34,15 +34,12 @@ NOTE:      Before proceeding further, make a backup of your current profile
 EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     Expert mode -> Misc -> Block data URL pages: Uncheck
-  Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
-  Containerise; https://addons.mozilla.orgfirefox/addon/containerise/ (https://github.com/kintesh/containerise/)
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa/)
   Google search link fix; https://addons.mozilla.org/firefox/addon/google-search-link-fix/ (https://github.com/palant/searchlinkfix/)
-  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
-    Blocked parameters: _hsenc, _hsmi, _openstat, _trkparms, $/ref@amazon.*, 77campaign, action_object_*, action_ref_*, action_type_*, adid, AdID, adserverid, adserveroptimizerid, adset_*, adtype, adurl, aff_platform, aff_trace_key, affiliate, AffiliateGuid, algo_expid, algo_pvid, aqs, assetType, bav, btsid, bvm, callback@bilibili.com, CAMPAIGN, campaign_*, campaignId, CampaignID, clickid, clkulrenc, CNDID, csi, cvid, d@banggood.com, dni, dq, e@linkedin.com, ek, elq*, ems_l, fb_action_ids, fb_action_types, fb_ref, fb_source, fbclid, feeditemid, first_visit, forward, fromEmail, ga_*, gclid, goalType, gs_gbg, gs_l, gs_mss, gws_rd, hmb_*, iact, icid, ijn, ImpressionGuid, Itemid, kw, li@linkedin.com, lipi, lkid@gearbest.com, loc_, mailid, mbid, mc_*, midToken, mkt_*, ncid, ndsp, nid, nr_email_referer, ORIGIN, p@banggood.com, pbx, pd_rd_*, pf_rd_*, piggiebackcookie, pk_campaign, pk_kwd, position@sourceforge.net, pq, prmd, pubclick, pubid, qs@bing.com, recipientId, ref_@imdb.com, refsrc, rni, RSS*, sc@bing.com, sclient, scroll, sei, siteId, source@sourceforge.net, spJobID, spm, spMailingID, spReportId, spUserID, sr_share, stick, subid, tag@amazon.*, tbnid, tctx, terminal_id, trackId, tracking, transAbTest, trk, trkEmail, tt_*, ut, utm_*, ved, vero_*, wid@gearbest.com, ws_ab_test, yclid
+    Blocked parameters:
     URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
     Click [Save preferences]
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
@@ -51,77 +48,12 @@ EXTENSIONS:
       xmlhttprequest (XHR): Check
     Exclusions
       Exclusions:
-* *.braintreegateway.com
-*.ali*.com *.ali*.com
-*.azure.com *.microsoft.com
-*.google*.* *
-*.notabug.io oauth.reddit.com
-*.paypal*.com *.paypal*.com
-*.powerbi.com *.windows.net
-*.youtube*.com *
-github.com *.githubassets.com
+
     Click [Save]
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
     Blacklist:
-_sso=
-.alipay.com
-/_login
-//disq.us/
-/abp
-/account
-/adfs/ls/
-/auth
-/cookie
-/cred_submit
-/download
-/login
-/logoff
-/logon
-/logout
-/oauth
-/openid/
-/preferences
-/profile
-/register
-/saml/
-/SAML2/
-/signin
-/signoff
-/signon
-/signout
-/signup
-/sso/
-/subscribe
-/verification
-/websso/
-/wsfederation
-action=login
-alipay.com/
-archive.is/
-chart.googleapis.com/chart
-hosts-file.net/
-i-dont-care-about-cookies.eu/
-logout=
-malc0de.com/
-malwaredomainlist.com/
-medium.com/
-microsofttranslator.com/
-paypal.com/
-phish-report.mozilla.com/
-reddit.com/
-rover.ebay.co
-securityheaders.com/
-ssllabs.com/
-t.umblr.com/redirect
-translate.google.com/
-twitter.com/
-ubi.com/
-virustotal.com/
-web.archive.org/
-webcache.googleusercontent.com/
-wego.here.com/
-youtube.com/embed/
+
     Notifications
       Enable popup: Uncheck
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
@@ -133,35 +65,6 @@ youtube.com/embed/
     Export/Import
       Import Preferences
         Click [Browse...]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
-?    General
-?      Automatic Mode: Check
-?      Container Name Prefix: %domain% #
-?      Random Container Color: Check
-?      Container Number: Reuse available numbers
-?      Delete no longer needed Temporary Containers: 2 minutes after the last tab in it closes
-?      Click [Save]
-?    Isolation
-?      Per Domain
-?        Domain pattern: duckduckgo.com
-?          Always open in new Temporary Containers: Enabled
-?          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-?          Click [Add or Edit]
-?        Domain pattern: *.google.*
-?          Always open in new Temporary Containers: Enabled
-?          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-?          Click [Add or Edit]
-?        Domain pattern: *
-?          Always open in new Temporary Containers: Enabled
-?          Mouse Clicks on Links should open new Temporary Containers [Left Mouse]: Use Global
-?          Click [Add or Edit]
-?      Global
-?        Mouse Clicks on Links should open new Temporary Containers
-?          Middle Mouse: If the clicked Link Domain does not match the active Tabs Domain (Subdomains won't get isolated)
-?        Click [Save]
-?    Advanced
-?      General
-?        Automatic Mode: Don't reopen New Tabs in Temporary Containers but instead on navigation.
-?      Click [Save]
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://github.com/Synzvato/decentraleyes/wiki/Frequently-Asked-Questions
     Settings
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
@@ -172,10 +75,13 @@ youtube.com/embed/
 USEFUL/INTERESTING EXTENSIONS:
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
+  Containerise; https://addons.mozilla.orgfirefox/addon/containerise/ (https://github.com/kintesh/containerise/)
+  Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
+  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Kimetrak; https://addons.mozilla.org/firefox/addon/kimetrak/ (https://github.com/davlgd/kimetrak/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
@@ -185,6 +91,7 @@ USEFUL/INTERESTING EXTENSIONS:
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
+  /*?1406  */ user_pref("layout.css.font-loading-api.enabled", true); // enable CSS Font Loading API
   /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
