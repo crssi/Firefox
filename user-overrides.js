@@ -117,7 +117,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false) //do not dynamically resize the inner window
+  /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", "") //do not dynamically resize the inner window
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // browser.urlbar.matchBuckets resets 0801 and must be applied before
