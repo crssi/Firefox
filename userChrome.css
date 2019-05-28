@@ -104,11 +104,16 @@ https://support.mozilla.org/en-US/questions/1214459
 }
 
 /* https://self-signed.badssl.com/ but add certificate exception */
-#urlbar[pageproxystate='valid'] #identity-box.notSecure:after,
 #urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after,
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
   background: #f0dc00;
+}
+
+/* notSecure */
+#urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
+  background: #ff0011;
+  opacity: .4;
 }
 
 /* http://badssl.com/ */
