@@ -93,6 +93,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /* 2654  */ user_pref("browser.download.forbid_open_with", true); // disable "open with" in download dialog
   /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
   /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr,addons", false); // disable CFR
