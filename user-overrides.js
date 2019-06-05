@@ -58,6 +58,7 @@ EXTENSIONS:
     Add to exceptions:
       *.google.* > *.google.com
       *.google.* > *.googleapis.com
+      *.icloud.com > *.apple.com
 ?      *.google.* > *.google*.*
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     Export/Import
