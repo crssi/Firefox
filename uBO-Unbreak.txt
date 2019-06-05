@@ -28,6 +28,7 @@
 @@||advertising.com^$first-party
 ||advertising.com^$~document
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
+@@||apple.com^$subdocument,domain=icloud.com
 @@||assets.adobedtm.com^$third-party,script
 @@||cdn.nrholding.net/*/*/$third-party,image
 @@||cloudfront.net$third-party,image,font,stylesheet
