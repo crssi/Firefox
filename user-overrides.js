@@ -8,12 +8,15 @@ NOTE:      Before proceeding further, make a backup of your current profile
 1. Append this file to user.js that was downloaded in step 0.
 2. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
 3. In the "profile folder" create a folder "chrome" and copy userChrome.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
-4. Firefox -> Options -> Search
+4. Firefox -> Options -> General -> General -> Tabs -> Settings...
+     Remove all containers
+   Firefox -> Options -> Search
      Default Search Engine: duckduckgo
      Show search suggestions ahead of browsing history in address bar results: Uncheck
      One-Click Search Engines: delete all except DuckDuckGo
-   Firefox -> Options -> General -> General -> Tabs -> Settings...
-     Remove all containers
+   Firefox -> Options -> Privacy & Security -> Content Blocking -> Custom
+     Criptominers: Check
+     Fingerprinters: Check
 5. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
 6. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
