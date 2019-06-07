@@ -159,6 +159,10 @@
 ||zdassets.com^$third-party
 ||zendesk.com^$third-party
 
+||phncdn.com^$~stylesheet,~image,~font
+||rdtcdn.com^$~stylesheet,~image,~font
+||icfcdn.com^$~stylesheet,~image,~font
+
 !!Blocked TLDs, https://github.com/Erulezz/directadmin-spamassassin-block-tlds and https://www.spamhaus.org/statistics/tlds/
 !||accountant^
 !||ads^
