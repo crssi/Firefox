@@ -93,7 +93,6 @@ USEFUL/INTERESTING EXTENSIONS:
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
-  /* 1406  */ user_pref("layout.css.font-loading-api.enabled", true); // enable CSS Font Loading API
   /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
