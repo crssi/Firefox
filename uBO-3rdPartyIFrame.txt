@@ -6,7 +6,7 @@
 
 !@@||gfycat.com/ifr/*$third-party,subdocument
 @@*/lwa/WebPages/LwaClient.aspx$third-party,subdocument
-@@*/saml/*$subdocument
+@@*/saml/*$third-party,subdocument
 @@$third-party,subdocument,domain=times.si
 @@||instagram.com/p/$third-party,subdocument
 @@||accounts.google.*/ServiceLogin$third-party,subdocument
