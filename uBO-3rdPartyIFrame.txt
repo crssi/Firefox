@@ -5,9 +5,10 @@
 ||$third-party,subdocument
 
 !@@||gfycat.com/ifr/*$third-party,subdocument
+@@*/lwa/WebPages/LwaClient.aspx$third-party,subdocument
+@@*/saml/*$subdocument
 @@$third-party,subdocument,domain=times.si
 @@||instagram.com/p/$third-party,subdocument
-@@||*/lwa/WebPages/LwaClient.aspx$third-party,subdocument
 @@||accounts.google.*/ServiceLogin$third-party,subdocument
 @@||alicdn.com^$third-party,subdocument,domain=aliexpress.com
 @@||appspot.com^$third-party,subdocument,domain=cloud.google.com
