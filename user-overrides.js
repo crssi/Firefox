@@ -1,8 +1,8 @@
 /******
 HOME: https://github.com/crssi/Firefox
-FILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 INFO: Supplement for ghacks-user.js; 15.6.2019 (commit: e338186); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
+PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
 0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
