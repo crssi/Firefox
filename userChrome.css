@@ -19,6 +19,12 @@ https://support.mozilla.org/en-US/questions/1214459
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
+/* LetterBox color */
+.browserStack {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+
 /* Removed space before the first tab */
 .titlebar-spacer[type="pre-tabs"] {
   display: none !important;
