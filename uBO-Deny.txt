@@ -75,7 +75,7 @@
 ||guim.co.uk^$third-party,script
 ||hawksearch.com^$third-party
 ||hextom.com^$third-party
-||hotjar.*^$third-party
+||hotjar.*^$important,third-party
 ||hsforms.net^$third-party
 ||hubspot.com^$third-party
 ||incartupsell.com^$third-party
