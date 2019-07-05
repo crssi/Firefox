@@ -32,6 +32,7 @@
 ||aolcdn.com/ads/*$third-party,script
 ||api.stacksocial.com^
 !||api2.kme.si^$third-party,xmlhttprequest
+||arctur.*^$third-party
 ||kme.si^$third-party,~image
 ||askmediagroup.com^$third-party
 ||baidu.com^$third-party
@@ -74,6 +75,7 @@
 ||guim.co.uk^$third-party,script
 ||hawksearch.com^$third-party
 ||hextom.com^$third-party
+||hotjar.*^$third-party
 ||hsforms.net^$third-party
 ||hubspot.com^$third-party
 ||incartupsell.com^$third-party
