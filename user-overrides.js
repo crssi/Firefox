@@ -119,7 +119,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
-  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
+  /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", false); // allow non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
