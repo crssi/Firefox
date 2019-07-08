@@ -20,8 +20,8 @@ https://support.mozilla.org/en-US/questions/1214459
 
 
 /* LetterBox color */
-.browserStack {
-  background-color: rgb(0, 0, 0) !important;
+#tabbrowser-tabpanels{
+  background-color: rgb(46,54,69) !important;
 }
 
 
