@@ -120,8 +120,8 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
-  /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
-  /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", false); // allow non-secure passive content
+  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
+  /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", false); // allow non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
@@ -129,7 +129,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  /*?4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
+  // /*?4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
   /* 5000x */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
