@@ -87,9 +87,12 @@ USEFUL/INTERESTING EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
+  FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/ (not WE, stand alone application)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   Kimetrak; https://addons.mozilla.org/firefox/addon/kimetrak/ (https://github.com/davlgd/kimetrak/)
+  PasswordFox; http://www.nirsoft.net/utils/passwordfox.html (not WE, stand alone application)
   Plain Text Linker; https://addons.mozilla.org/firefox/addon/plain-text-linker/ (https://gitlab.com/Marnes/plain-text-linker/)
+  Simple URL Extender; https://addons.mozilla.org/firefox/addon/simple-url-extender/
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
 
@@ -120,8 +123,8 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
-  /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
-  /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", false); // allow non-secure passive content
+  // /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
+  /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
