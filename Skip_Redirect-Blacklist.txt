@@ -30,6 +30,7 @@ _sso=
 /verification
 /websso/
 /wsfederation
+9inchurl.com/
 action=login
 alipay.com/
 archive.is/

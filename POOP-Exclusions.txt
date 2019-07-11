@@ -1,6 +1,7 @@
 * *.braintreegateway.com
 *.ali*.com *.ali*.com
 *.azure.com *.microsoft.com
+*.dropbox.com *.dropbox*.com
 *.google*.* *
 *.notabug.io oauth.reddit.com
 *.paypal*.com *.paypal*.com
