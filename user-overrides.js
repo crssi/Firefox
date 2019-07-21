@@ -126,14 +126,11 @@ USEFUL/INTERESTING EXTENSIONS:
   /*?0390b */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
-  // /*?1223  */ user_pref("security.cert_pinning.enforcement_level", 1 // 1=allow user MiTM (such as your antivirus)
   /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   // /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-  // /*?2420  */ user_pref("javascript.options.asmjs", true); // allow asmjs
-  // /*?2420  */ user_pref("javascript.options.wasm", true); // allow wasm
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
