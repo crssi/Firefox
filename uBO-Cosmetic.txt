@@ -60,3 +60,5 @@ www.reddit.com##.cookie-infobar.with-btn.with-icon.md-container-small.reddit-inf
 
 !!! github find on page context dissapearance workaround
 github.com##div.blob-wrapper:style(overflow: visible visible !important)
+
+imdb.com##.front-row-container
