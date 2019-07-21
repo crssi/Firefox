@@ -35,6 +35,7 @@
 @@||imgur.com^$third-party,subdocument
 @@||ishoutbox.com^$third-party,subdocument
 @@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
+@@||jwpsrv.com^$third-party,subdocument
 @@||live.com^$third-party,subdocument,domain=microsoft.com
 @@||mapsengine.google.com/map/embed$third-party,subdocument
 @@||mcafeemobilesecurity.com^$third-party,subdocument,domain=mcafee.com
