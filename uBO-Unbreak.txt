@@ -30,7 +30,7 @@
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
 @@||apple.com^$subdocument,domain=icloud.com
 @@||assets.adobedtm.com^$third-party,script
-@@||cdn.jwplayer.com^$third-party,image,xmlhttprequest
+@@||cdn.jwplayer.com^$third-party,xmlhttprequest
 @@||cdn.nrholding.net/*/*/$third-party,image
 @@||cloudfront.net$third-party,image,font,stylesheet
 @@||content.jwplatform.com^$third-party,xmlhttprequest,script
