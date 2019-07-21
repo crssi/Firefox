@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 9.7.2019 (commit: 11dcc54); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 17.7.2019 (commit: 9aa8e27); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -121,14 +121,19 @@ USEFUL/INTERESTING EXTENSIONS:
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
+  /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable auto-installing Firefox extensions
+  /*?0390a */ user_pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/success.txt"); // Captive Portal detection - WiFi login pages
+  /*?0390b */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // allow weak cipher
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
-  // /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
-  /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+  // /*?1223  */ user_pref("security.cert_pinning.enforcement_level", 1 // 1=allow user MiTM (such as your antivirus)
+  /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
+  // /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-  /*?2426  */ user_pref("dom.IntersectionObserver.enabled", true); // should be removed soon after FF 69+
+  // /*?2420  */ user_pref("javascript.options.asmjs", true); // allow asmjs
+  // /*?2420  */ user_pref("javascript.options.wasm", true); // allow wasm
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
@@ -148,5 +153,9 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+
+/*** RESET TO DEFAULT ***/
+  /* 0864  */ user_pref("dom.forms.datetime", true);
+  /* 2426  */ user_pref("dom.IntersectionObserver.enabled", true);
 
 user_pref("_user.js.parrot", "Eagle has landed.");
