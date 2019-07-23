@@ -116,6 +116,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
+  /* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
