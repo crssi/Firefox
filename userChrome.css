@@ -89,7 +89,8 @@ https://support.mozilla.org/en-US/questions/1214459
 #urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
   background: #0a84ff;
 }
-/* fix for mixedDisplayContentLoadedActiveBlocked */
+/* fix for mixedDisplayContent */
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after,
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
   background: var(--toolbar-bgcolor);
 }
