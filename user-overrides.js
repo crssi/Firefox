@@ -61,10 +61,8 @@ EXTENSIONS:
       Enable popup: Uncheck
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
     Add to exceptions:
-      *.google.* > *.google.com
-      *.google.* > *.googleapis.com
+      *.google.* > *.google*.*
       *.icloud.com > *.apple.com
-?      *.google.* > *.google*.*
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     Export/Import
       Import Preferences
@@ -91,8 +89,8 @@ USEFUL/INTERESTING EXTENSIONS:
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   ?Kimetrak; https://addons.mozilla.org/firefox/addon/kimetrak/ (https://github.com/davlgd/kimetrak/)
   ?PasswordFox; http://www.nirsoft.net/utils/passwordfox.html (not WE, stand alone application)
-  *Plain Text Linker; https://addons.mozilla.org/firefox/addon/plain-text-linker/ (https://gitlab.com/Marnes/plain-text-linker/)
-  *Simple URL Extender; https://addons.mozilla.org/firefox/addon/simple-url-extender/
+  ?*Plain Text Linker; https://addons.mozilla.org/firefox/addon/plain-text-linker/ (https://gitlab.com/Marnes/plain-text-linker/)
+  ?*Simple URL Extender; https://addons.mozilla.org/firefox/addon/simple-url-extender/
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   *SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
 
