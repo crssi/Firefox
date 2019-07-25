@@ -19,9 +19,8 @@ https://support.mozilla.org/en-US/questions/1214459
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
-/* LetterBox color */
 #tabbrowser-tabpanels{
-  background-color: rgb(46,54,69) !important;
+  background-color: rgb(45,55,70) !important;
 }
 
 
@@ -80,10 +79,10 @@ https://support.mozilla.org/en-US/questions/1214459
   left: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: .2;
+  opacity: .3;
 }
 @keyframes blinker {
-  50% { opacity: .3; }
+  50% { opacity: .2; }
 }
 
 /* about:about */
@@ -106,21 +105,14 @@ https://support.mozilla.org/en-US/questions/1214459
 }
 
 /* https://self-signed.badssl.com/ but add certificate exception */
-#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
-#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after,
-#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
+#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
   background: #f0dc00;
 }
 
 /* notSecure */
-#urlbar[pageproxystate='valid'] #identity-box.notSecure:after,
-#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
+#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
+#urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
   background: #ff0011;
-}
-
-/* http://badssl.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
-  background: #ff0011;
-  opacity: .6;
-  animation: blinker 1.6s linear infinite;
+  opacity: .4;
+  animation: blinker 2s linear infinite;
 }
