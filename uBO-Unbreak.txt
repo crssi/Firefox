@@ -52,7 +52,7 @@
 @@||omara.cdn-cnj.si^$third-party,script
 @@||paypal.com^$third-party,subdocument,popup
 @@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
-@@||platform.twitter.com^$third-party,stylesheet,image
+@@||platform.twitter.com^$third-party,stylesheet,image,script
 @@||translate.googleusercontent.com
 @@||use.typekit.net^$third-party,font,stylesheet,script
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net

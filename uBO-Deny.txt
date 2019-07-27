@@ -10,7 +10,6 @@
 ||startpage.com/english/*$image,important
 ||startpage.com/tst2/*$image,important
 
-! ||twitter.*^$third-party
 ! ||nrholding.net^$third-party
 ||*.checkfront.com/lib/Control.Geocoder*.js$script
 ||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
@@ -147,6 +146,7 @@
 ||tinypass.com^$third-party
 ||trustpilot.com^$third-party
 ||tsmedia.si^$third-party
+||twitter.*^$third-party
 ||typography.com^$third-party,~stylesheet
 !||unpkg.com^$third-party
 ||upscore.com^$third-party
