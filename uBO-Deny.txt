@@ -80,6 +80,7 @@
 ||hubspot.com^$third-party
 ||incartupsell.com^$third-party
 ||inspectlet.com^$third-party,important
+||instagram.*^$third-party
 ||intercomcdn.com^$third-party
 ||ipinfo.io^$third-party
 ||iprom.net^$third-party
