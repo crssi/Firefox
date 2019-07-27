@@ -86,12 +86,13 @@ USEFUL/INTERESTING EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
-  ?* FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/ (not WE, stand alone application)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
-  ?* PasswordFox; http://www.nirsoft.net/utils/passwordfox.html (not WE, stand alone application)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
   Text Link webext; https://addons.mozilla.org/firefox/addon/text-link-webext/ (https://github.com/nekoziroo/Text-Link-webext/)
+
+  ?* FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/ (not WE, stand alone application)
+  ?* PasswordFox; http://www.nirsoft.net/utils/passwordfox.html (not WE, stand alone application)
 
 ******/
 
