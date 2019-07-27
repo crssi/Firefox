@@ -120,8 +120,8 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable auto-installing Firefox extensions
-  /*?0390a */ user_pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/success.txt"); // Captive Portal detection - WiFi login pages
-  /*?0390b */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
+  /*?0390  */ user_pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/success.txt"); // Captive Portal detection - WiFi login pages
+  /*?0390  */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   // /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
