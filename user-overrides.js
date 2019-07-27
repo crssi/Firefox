@@ -148,6 +148,19 @@ USEFUL/INTERESTING EXTENSIONS:
   // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
+/*** SPECIFIC BREAKAGE RELAXING ***/
+  // /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
+  // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
+  // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
+  // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
+  // /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL
+  // /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
+  // /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
+  // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
+  // /* 2022  */ user_pref("media.getusermedia.browser.enabled", true); // enable screensharing
+  // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", true); // enable screensharing
+  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
+
 /*** RESET TO DEFAULT ***/
   /* 0864  */ user_pref("dom.forms.datetime", true);
   /* 2426  */ user_pref("dom.IntersectionObserver.enabled", true);
