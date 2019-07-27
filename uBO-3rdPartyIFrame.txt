@@ -32,6 +32,7 @@
 @@||google.*/recaptcha/$third-party,subdocument
 @@||googleapis.com^$third-party,subdocument,domain=google.com|google.si
 @@||googleusercontent.com^$third-party,subdocument,domain=google.com|google.si|github.com
+@@||instagram.com^$third-party,subdocument
 @@||imgur.com^$third-party,subdocument
 @@||ishoutbox.com^$third-party,subdocument
 @@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
