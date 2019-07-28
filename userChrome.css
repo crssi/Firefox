@@ -112,6 +112,7 @@ https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme
 }
 
 /* notSecure */
+#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after,
 #urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
 #urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
   background: #ff0011;
