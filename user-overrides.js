@@ -90,6 +90,7 @@ USEFUL/INTERESTING EXTENSIONS:
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
   Text Link webext; https://addons.mozilla.org/firefox/addon/text-link-webext/ (https://github.com/nekoziroo/Text-Link-webext/)
+  WebGL Fingerprint Defender; https://addons.mozilla.org/firefox/addon/webgl-fingerprint-defender/ (https://mybrowseraddon.com/webgl-defender.html)
 
   ?* FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/ (not WE, stand alone application)
   ?* PasswordFox; http://www.nirsoft.net/utils/passwordfox.html (not WE, stand alone application)
@@ -154,7 +155,7 @@ USEFUL/INTERESTING EXTENSIONS:
   // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
   // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
-  // /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, FP problem
+  // /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
   // /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   // /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
