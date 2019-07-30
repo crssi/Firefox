@@ -2,6 +2,7 @@
 *.ali*.com *.ali*.com
 *.azure.com *.microsoft.com
 *.dropbox.com *.dropbox*.com
+*.facebook.com *.fbcdn.net
 *.google*.* *
 *.notabug.io oauth.reddit.com
 *.paypal*.com *.paypal*.com
