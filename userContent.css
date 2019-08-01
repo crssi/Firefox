@@ -1,3 +1,6 @@
+/*
+https://www.reddit.com/r/FirefoxCSS/comments/ayjagi/firefox_white_flash_on_opening_new_window_and/
+*/
 @-moz-document url("about:home"),url("about:blank"),url("about:newtab"),url("about:privatebrowsing") {
   body{ background-color: rgb(46,54,69) !important }
 }
