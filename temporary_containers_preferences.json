@@ -1,6 +1,6 @@
 {
-  "version": "0.97",
-  "date": 1556611626300,
+  "version": "1.2",
+  "date": 1564255398900,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -14,7 +14,11 @@
       "icon": "circle",
       "iconRandom": false,
       "numberMode": "reuse",
-      "removal": "2minutes"
+      "removal": "15minutes",
+      "colorRandomExcluded": [
+        "toolbar"
+      ],
+      "iconRandomExcluded": []
     },
     "iconColor": "default",
     "isolation": {
@@ -36,10 +40,12 @@
             "container": "default"
           }
         },
-        "excluded": {}
+        "excluded": {},
+        "excludedContainers": []
       },
-      "domain": {
-        "duckduckgo.com": {
+      "domain": [
+        {
+          "pattern": "duckduckgo.com",
           "always": {
             "action": "enabled",
             "allowedInPermanent": false
@@ -58,9 +64,11 @@
               "action": "notsamedomain"
             }
           },
-          "excluded": {}
+          "excluded": {},
+          "_index": 0
         },
-        "*.google.*": {
+        {
+          "pattern": "*.google.*",
           "always": {
             "action": "enabled",
             "allowedInPermanent": false
@@ -79,9 +87,11 @@
               "action": "notsamedomain"
             }
           },
-          "excluded": {}
+          "excluded": {},
+          "_index": 1
         },
-        "*": {
+        {
+          "pattern": "*",
           "always": {
             "action": "enabled",
             "allowedInPermanent": false
@@ -100,12 +110,14 @@
               "action": "global"
             }
           },
-          "excluded": {}
+          "excluded": {},
+          "_index": 2
         }
-      },
+      ],
       "mac": {
         "action": "disabled"
-      }
+      },
+      "active": true
     },
     "browserActionPopup": false,
     "pageAction": false,
@@ -115,11 +127,10 @@
       "AltP": true,
       "AltN": false,
       "AltShiftC": false,
-      "AltX": false
+      "AltX": false,
+      "AltO": false
     },
     "replaceTabs": false,
-    "ignoreRequestsToAMO": true,
-    "ignoreRequestsToPocket": true,
     "cookies": {
       "domain": {}
     },
@@ -130,8 +141,30 @@
       "containerIsolation": "never",
       "containerRemoval": "instant",
       "containerMouseClicks": "never",
-      "statistics": false
+      "statistics": false,
+      "active": false,
+      "contextMenuBookmarks": false
     },
-    "statistics": false
+    "statistics": false,
+    "closeRedirectorTabs": {
+      "active": true,
+      "delay": 2000,
+      "domains": [
+        "t.co",
+        "outgoing.prod.mozaws.net",
+        "slack-redir.net"
+      ]
+    },
+    "contextMenuBookmarks": false,
+    "ignoreRequests": [
+      "getpocket.com",
+      "addons.mozilla.org"
+    ],
+    "ui": {
+      "expandPreferences": true,
+      "popupDefaultTab": "isolation-global"
+    },
+    "ignoreRequestsToAMO": true,
+    "ignoreRequestsToPocket": true
   }
 }
