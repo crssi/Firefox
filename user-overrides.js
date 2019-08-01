@@ -78,20 +78,20 @@ EXTENSIONS:
 USEFUL/INTERESTING EXTENSIONS:
   Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
+  Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
+  WebGL Fingerprint Defender; https://addons.mozilla.org/firefox/addon/webgl-fingerprint-defender/ (https://mybrowseraddon.com/webgl-defender.html)
 
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   ?* Close Unused Blank Tabs; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs/
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
-  Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
   Text Link webext; https://addons.mozilla.org/firefox/addon/text-link-webext/ (https://github.com/nekoziroo/Text-Link-webext/)
-  WebGL Fingerprint Defender; https://addons.mozilla.org/firefox/addon/webgl-fingerprint-defender/ (https://mybrowseraddon.com/webgl-defender.html)
 
   ?* FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/ (not WE, stand alone application)
   ?* PasswordFox; http://www.nirsoft.net/utils/passwordfox.html (not WE, stand alone application)
