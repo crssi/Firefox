@@ -3,4 +3,5 @@ _hsenc, _hsmi, _openstat, _trkparms, $/ref@amazon.*, 77campaign, action_object_*
 
 
 [Under investigation (do not use)]:
-@linkedin.com: refId, trkInfo, atp, trackingId, originalReferer
+@linkedin.com: refId, trkInfo, atp, trackingId, originalReferer, origin@linkedin.com
+@steam: snr
