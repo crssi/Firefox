@@ -10,7 +10,7 @@ www.youtube.com##div[class^="ytp-chrome-top-buttons"]
 
 !!! duckduckgo
 duckduckgo.com##.js-badge-link.ddg-extension-hide.badge-link--fadein.badge-link--top.badge-link
-duckduckgo.com##.js-results-sidebar.results--sidebar
+!duckduckgo.com##.js-results-sidebar.results--sidebar
 duckduckgo.com##.header--aside
 
 !!! microsoft.com
