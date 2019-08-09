@@ -54,6 +54,7 @@
 @@||sharepoint.com^$third-party,subdocument,domain=live.com
 @@||skype.com^$third-party,subdocument,domain=live.com
 @@||soundcloud.com/player/*$third-party,subdocument
+@@||stacksnippets.net^$third-party,subdocument
 @@||stripe.com^$third-party,subdocument
 @@||stripe.network^$third-party,subdocument,domain=stripe.com
 @@||tickcounter.com^$third-party,subdocument
