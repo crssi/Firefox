@@ -101,7 +101,7 @@
 ||maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate$script,important
 ||maps.googleapis.com/maps/api/js/QuotaService.RecordEvent$script,important
 ||marketo.com^$third-party
-||medium.com^$third-party,script
+||medium.com^$third-party,~script
 ||moengage.com^$third-party
 ||montiapm.com^$third-party
 ||n26.*^$domain=~n26.com
