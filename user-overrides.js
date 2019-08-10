@@ -33,7 +33,7 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
    pkcs11.txt - Security device settings
    places.sqlite - Bookmarks
 
-EXTENSIONS:
+ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     On install page click apply to Convenient and Stealth settings
     Expert mode -> Misc -> Block data URL pages: Uncheck
@@ -72,8 +72,9 @@ EXTENSIONS:
   uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/ (https://github.com/uBlockOrigin/uMatrix-issues/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
     About
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
+  WebGL Fingerprint Defender; https://addons.mozilla.org/firefox/addon/webgl-fingerprint-defender/ (https://mybrowseraddon.com/webgl-defender.html)
 
-USEFUL/INTERESTING EXTENSIONS:
+ADDITIONAL EXTENSIONS:
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
   Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
@@ -81,10 +82,11 @@ USEFUL/INTERESTING EXTENSIONS:
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
-  WebGL Fingerprint Defender; https://addons.mozilla.org/firefox/addon/webgl-fingerprint-defender/ (https://mybrowseraddon.com/webgl-defender.html)
 
+USEFUL/INTERESTING EXTENSIONS:
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
+  Dynamic Zoom; https://addons.mozilla.org/firefox/addon/dynamic-zoom/ (https://github.com/ingolemo/firefox-dynamic-zoom/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
@@ -157,9 +159,9 @@ USEFUL/INTERESTING EXTENSIONS:
   // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
   // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
-  // /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
-  // /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
-  // /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
+  /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
+  /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
+  /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   // /* 2022  */ user_pref("media.getusermedia.browser.enabled", true); // enable screensharing
   // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", true); // enable screensharing
