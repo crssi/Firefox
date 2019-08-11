@@ -159,12 +159,15 @@ USEFUL/INTERESTING EXTENSIONS:
   // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
   // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
+
   // /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
   // /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   // /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
+
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   // /* 2022  */ user_pref("media.getusermedia.browser.enabled", true); // enable screensharing
   // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", true); // enable screensharing
+  
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
 
 /*** RESET TO DEFAULT ***/
