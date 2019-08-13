@@ -2,6 +2,7 @@ _sso=
 .alipay.com
 /_login
 //disq.us/
+//slack-redir.net/link
 /abp
 /account
 /adfs/ls/
