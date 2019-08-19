@@ -13,6 +13,7 @@
 ! ||nrholding.net^$third-party
 ||*.checkfront.com/lib/Control.Geocoder*.js$script
 ||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
+||*/client.min.js$script
 ||*/fingerprintjs2*$script,important
 ||1105media.com^$third-party
 ||a2sky.com^$third-party
