@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 4.8.2019 (commit: aff595b); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 19.8.2019 (commit: 90ef9e6); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -80,23 +80,23 @@ ADDITIONAL EXTENSIONS:
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
   Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
+  Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
-  Dynamic Zoom; https://addons.mozilla.org/firefox/addon/dynamic-zoom/ (https://github.com/ingolemo/firefox-dynamic-zoom/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
-  Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
   Text Link webext; https://addons.mozilla.org/firefox/addon/text-link-webext/ (https://github.com/nekoziroo/Text-Link-webext/)
   Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
 
-  ?* FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/ (not WE, stand alone application)
-  ?* PasswordFox; http://www.nirsoft.net/utils/passwordfox.html (not WE, stand alone application)
+EXTERNAL APPLICATION:
+  FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/
+  PasswordFox; http://www.nirsoft.net/utils/passwordfox.html
 
 ******/
 
@@ -132,6 +132,9 @@ USEFUL/INTERESTING EXTENSIONS:
   /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   // /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
+  /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
+  /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
+  /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
@@ -160,14 +163,10 @@ USEFUL/INTERESTING EXTENSIONS:
   // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
 
-  // /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
-  // /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
-  // /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
-
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   // /* 2022  */ user_pref("media.getusermedia.browser.enabled", true); // enable screensharing
   // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", true); // enable screensharing
-  
+
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
 
 /*** RESET TO DEFAULT ***/
