@@ -78,7 +78,6 @@ ADDITIONAL EXTENSIONS:
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
   Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
-  Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
@@ -87,6 +86,7 @@ ADDITIONAL EXTENSIONS:
 USEFUL/INTERESTING EXTENSIONS:
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
+  Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
@@ -119,6 +119,8 @@ EXTERNAL APPLICATION:
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
+  /* 5000x */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tabs
+  /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
@@ -140,7 +142,7 @@ EXTERNAL APPLICATION:
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  /*?4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
+  // /*?4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
