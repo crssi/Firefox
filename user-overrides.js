@@ -118,7 +118,7 @@ EXTERNAL APPLICATION:
   /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
-  /* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
+  //?/* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
   /* 5000x */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tabs
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
@@ -131,8 +131,7 @@ EXTERNAL APPLICATION:
   /*?0390  */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
-  /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
-  // /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
@@ -142,7 +141,6 @@ EXTERNAL APPLICATION:
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  // /*?4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
@@ -160,9 +158,12 @@ EXTERNAL APPLICATION:
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
 /*** SPECIFIC BREAKAGE RELAXING ***/
+  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+
   // /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
   // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
   // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
+
   // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
 
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
@@ -170,6 +171,9 @@ EXTERNAL APPLICATION:
   // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", true); // enable screensharing
 
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
+
+  // /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
+
 
 /*** RESET TO DEFAULT ***/
   /* 0864  */ user_pref("dom.forms.datetime", true);
