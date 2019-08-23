@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 26 June 2019
-* version 68-alpha: Knock on Pants
+* date: 18 August 2019
+* version 68-beta: Knock on Pants
 *   "It's like thunder, lightning... the way you wear me is frightening"
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
@@ -586,6 +586,7 @@ user_pref("browser.cache.disk.enable", false);
  * [1] http://kb.mozillazine.org/Browser.cache.disk_cache_ssl ***/
 user_pref("browser.cache.disk_cache_ssl", false);
 /* 1003: disable memory cache
+/* capacity: -1=determine dynamically (default), 0=none, n=memory capacity in kilobytes
  * [NOTE] Not recommended due to performance issues ***/
    // user_pref("browser.cache.memory.enable", false);
    // user_pref("browser.cache.memory.capacity", 0); // [HIDDEN PREF]
@@ -869,7 +870,6 @@ user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.usercontext.about_newtab_segregation.enabled", true); // [DEFAULT: true in FF61+]
 /* 1704: set behaviour on "+ Tab" button to display container menu [FF53+] [SETUP-CHROME]
  * 0=no menu (default), 1=show when clicked, 2=show on long press
- * [NOTE] The menu does not contain a non-container tab option (use Ctrl+T to open non-container tab)
  * [1] https://bugzilla.mozilla.org/1328756 ***/
 user_pref("privacy.userContext.longPressBehavior", 2);
 
@@ -1039,11 +1039,15 @@ user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!
  * the website for it to look at the clipboard
  * [1] https://www.ghacks.net/2014/01/08/block-websites-reading-modifying-clipboard-contents-firefox/ ***/
 user_pref("dom.event.clipboardevents.enabled", false);
-/* 2403: disable clipboard commands (cut/copy) from "non-privileged" content [FF41+]
+/* 2403: disable middlemouse paste leaking clipboard content on Linux after autoscroll
+ * Defense in depth if clipboard events are enabled (see 2402)
+ * [1] https://bugzilla.mozilla.org/1528289 */
+user_pref("middlemouse.paste", false); // [DEFAULT: false on Windows]
+/* 2404: disable clipboard commands (cut/copy) from "non-privileged" content [FF41+]
  * this disables document.execCommand("cut"/"copy") to protect your clipboard
  * [1] https://bugzilla.mozilla.org/1170911 ***/
 user_pref("dom.allow_cut_copy", false);
-/* 2404: disable "Confirm you want to leave" dialog on page close
+/* 2405: disable "Confirm you want to leave" dialog on page close
  * Does not prevent JS leaks of the page close event.
  * [1] https://developer.mozilla.org/docs/Web/Events/beforeunload
  * [2] https://support.mozilla.org/questions/1043508 ***/
@@ -1188,9 +1192,6 @@ user_pref("pdfjs.disabled", false); // [DEFAULT: false]
 /* 2621: disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS]
  * [1] https://www.ghacks.net/2016/03/25/block-firefox-chrome-windows-store/ ***/
 user_pref("network.protocol-handler.external.ms-windows-store", false);
-/* 2622: disable middlemouse paste leaking on Linux
- * [1] https://bugzilla.mozilla.org/1528289 */
-user_pref("middlemouse.paste", false); // [DEFAULT: false on Windows]
 
 /** DOWNLOADS ***/
 /* 2650: discourage downloading to desktop
@@ -1775,19 +1776,18 @@ user_pref("security.csp.experimentalEnabled", true);
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
 
-
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 23.7.2019 (commit: 6618bf5); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 21.8.2019 (commit: 5166811); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
-0. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
+1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
-1. Append this file to user.js that was downloaded in step 0.
-2. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
-3. In the "profile folder" create a folder "chrome" and copy userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
-4. Firefox -> Options -> General -> General -> Tabs -> Settings...
+2. Append this file to user.js that was downloaded in the previous step
+3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
+4. In the "profile folder" create a folder "chrome" and copy userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
+5. Firefox -> Options -> General -> General -> Tabs -> Settings...
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
@@ -1796,10 +1796,10 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
    Firefox -> Options -> Privacy & Security -> Content Blocking -> Custom
      Criptominers: Check
      Fingerprinters: Check
-5. Install extensions (see Extensions section) and setup by instructions
+6. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
-6. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
-7. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
+7. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
+8. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    cert9.db - Certificates
    content-prefs.sqlite - Site-specific preferences
    favicons.sqlite - Bookmarks icons
@@ -1810,17 +1810,14 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
    persdict.dat - Personal dictionary
    pkcs11.txt - Security device settings
    places.sqlite - Bookmarks
-8. To overcome fixed size Firefox window annoyance at Firefox start, right-click on Firefox shortcut -> Properties -> "Shortcut" tab -> select "Maximized" under "Run" property
-   NOTE: It is not wise to do that!
 
-EXTENSIONS:
+ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     On install page click apply to Convenient and Stealth settings
     Expert mode -> Misc -> Block data URL pages: Uncheck
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
     Exclude domains from inspections: account.godaddy.com;racunalniske-novice.com
-  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa/)
   Google search link fix; https://addons.mozilla.org/firefox/addon/google-search-link-fix/ (https://github.com/palant/searchlinkfix/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
     Blocked parameters: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-Blocked_parameters.txt
@@ -1852,28 +1849,32 @@ EXTENSIONS:
   uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/ (https://github.com/uBlockOrigin/uMatrix-issues/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
     About
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
-
-USEFUL/INTERESTING EXTENSIONS:
-  Close unused blank tabs Plus; https://addons.mozilla.org/en-US/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
-  Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-  Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
-  Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-  Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
-  URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
   WebGL Fingerprint Defender; https://addons.mozilla.org/firefox/addon/webgl-fingerprint-defender/ (https://mybrowseraddon.com/webgl-defender.html)
 
+ADDITIONAL EXTENSIONS:
+  Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
+  Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
+  Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
+  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
+  Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
+  Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
+  URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
+
+USEFUL/INTERESTING EXTENSIONS:
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
+  Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
+  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
   Text Link webext; https://addons.mozilla.org/firefox/addon/text-link-webext/ (https://github.com/nekoziroo/Text-Link-webext/)
-  Undo Close Tab; https://addons.mozilla.org/en-US/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
+  Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
 
-  ?* FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/ (not WE, stand alone application)
-  ?* PasswordFox; http://www.nirsoft.net/utils/passwordfox.html (not WE, stand alone application)
+EXTERNAL APPLICATION:
+  FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/
+  PasswordFox; http://www.nirsoft.net/utils/passwordfox.html
 
 ******/
 
@@ -1895,7 +1896,9 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
-  /* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
+  //?/* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
+  /* 5000x */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tabs
+  /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
@@ -1906,16 +1909,17 @@ USEFUL/INTERESTING EXTENSIONS:
   /*?0390  */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
-  /*?1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
-  // /*?1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
+  /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
+  /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
+  /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  /*?4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
-  /* 5000x */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
+  /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // browser.urlbar.matchBuckets resets 0801 and must be applied before
@@ -1926,23 +1930,28 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
 
 /*** ENTERPRISE USE SPECIFIC ***/
-  /*?0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
+  /* 0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
   /* 0000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
 /*** SPECIFIC BREAKAGE RELAXING ***/
+  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+
   // /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
   // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM (Content Decryption Module); Netflix, Amazon Prime, Hulu...
   // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
+
   // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
-  // /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
-  // /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
-  // /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
+
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   // /* 2022  */ user_pref("media.getusermedia.browser.enabled", true); // enable screensharing
   // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", true); // enable screensharing
+
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
+
+  // /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
+
 
 /*** RESET TO DEFAULT ***/
   /* 0864  */ user_pref("dom.forms.datetime", true);
