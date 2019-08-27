@@ -1,5 +1,6 @@
 * *.braintreegateway.com
 *.ali*.com *.ali*.com
+*.amazon.* *.*amazon.com
 *.azure.com *.microsoft.com
 *.dropbox.com *.dropbox*.com
 *.facebook.com *.fbcdn.net
