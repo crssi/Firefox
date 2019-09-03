@@ -16,6 +16,7 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
      Show search suggestions ahead of browsing history in address bar results: Uncheck
      One-Click Search Engines: delete all except DuckDuckGo
    Firefox -> Options -> Privacy & Security -> Content Blocking -> Custom
+     Trackers: In all windows
      Criptominers: Check
      Fingerprinters: Check
 6. Install extensions (see Extensions section) and setup by instructions
@@ -64,7 +65,7 @@ ESSENTIAL EXTENSIONS:
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     Export/Import
       Import Preferences
-        Click [Browse...]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
+        Click [Import from local file]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
     Settings
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
