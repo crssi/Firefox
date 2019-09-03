@@ -39,6 +39,7 @@
 @@||jwpsrv.com^$third-party,subdocument
 @@||live.com^$third-party,subdocument,domain=microsoft.com
 @@||mapsengine.google.com/map/embed$third-party,subdocument
+@@||microsoftazuread-sso.com^$third-party,domain=microsoftonline.com
 @@||mcafeemobilesecurity.com^$third-party,subdocument,domain=mcafee.com
 @@||mozilla.*^$third-party,subdocument,domain=mozilla.org
 @@||mozillademos.org^$third-party,subdocument,domain=mozilla.org
