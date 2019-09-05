@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 3.9.2019 (commit: 44d9cea); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 5.9.2019 (commit: 2c73461); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -15,10 +15,6 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
      Default Search Engine: duckduckgo
      Show search suggestions ahead of browsing history in address bar results: Uncheck
      One-Click Search Engines: delete all except DuckDuckGo
-   Firefox -> Options -> Privacy & Security -> Content Blocking -> Custom
-     Trackers: In all windows
-     Criptominers: Check
-     Fingerprinters: Check
 6. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
 7. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
