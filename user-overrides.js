@@ -15,6 +15,10 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
      Default Search Engine: duckduckgo
      Show search suggestions ahead of browsing history in address bar results: Uncheck
      One-Click Search Engines: delete all except DuckDuckGo
+   Firefox -> Options -> Privacy & Security -> Content Blocking -> Custom
+     Trackers: In all windows
+     Criptominers: Check
+     Fingerprinters: Check
 6. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
 7. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
