@@ -1,6 +1,6 @@
 /******
 * name: ghacks user.js
-* date: 1 September 2019
+* date: 4 September 2019
 * version 69-beta: Pants One More Time
 *   "When I'm not with pants I lose my mind. Give me a sign. Hit me, pants, one more time."
 * authors: v52+ github | v51- www.ghacks.net
@@ -261,11 +261,6 @@ user_pref("browser.crashReports.unsubmittedCheck.enabled", false); // [FF51+]
 /* 0351: disable backlogged Crash Reports
  * [SETTING] Privacy & Security>Firefox Data Collection & Use>Allow Firefox to send backlogged crash reports  ***/
 user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); // [FF58+]
-/* 0370: disable Pocket [FF46+]
- * Pocket is a third party (now owned by Mozilla) "save for later" cloud service
- * [1] https://en.wikipedia.org/wiki/Pocket_(application)
- * [2] https://www.gnu.gl/blog/Posts/multiple-vulnerabilities-in-pocket/ ***/
-user_pref("extensions.pocket.enabled", false);
 /* 0390: disable Captive Portal detection
  * [1] https://www.eff.org/deeplinks/2017/08/how-captive-portals-interfere-wireless-security-and-privacy
  * [2] https://wiki.mozilla.org/Necko/CaptivePortal ***/
@@ -1632,6 +1627,7 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
       // [SETTING] General>Browsing>Recommend extensions as you browse
    // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR [FF67+]
       // [SETTING] General>Browsing>Recommend features as you browse
+   // user_pref("extensions.pocket.enabled", false); // disable and hide Pocket [FF46+]
    // user_pref("identity.fxaccounts.enabled", false); // disable and hide Firefox Accounts and Sync [FF60+] [RESTART]
    // user_pref("network.manage-offline-status", false); // see bugzilla 620472
    // user_pref("reader.parse-on-load.enabled", false); // "Reader View"
@@ -1783,9 +1779,10 @@ user_pref("plugins.click_to_play", true); // [DEFAULT: true in FF25+]
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
 
+
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 3.9.2019 (commit: 44d9cea); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 7.9.2019 (commit: 3210ab0); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1801,6 +1798,7 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
      Show search suggestions ahead of browsing history in address bar results: Uncheck
      One-Click Search Engines: delete all except DuckDuckGo
    Firefox -> Options -> Privacy & Security -> Content Blocking -> Custom
+     Trackers: In all windows
      Criptominers: Check
      Fingerprinters: Check
 6. Install extensions (see Extensions section) and setup by instructions
@@ -1849,7 +1847,7 @@ ESSENTIAL EXTENSIONS:
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     Export/Import
       Import Preferences
-        Click [Browse...]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
+        Click [Import from local file]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
     Settings
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.zip
@@ -1903,9 +1901,10 @@ EXTERNAL APPLICATION:
   /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
-  /* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
   /* 5000x */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tabs
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
+  /* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
+  /* 5000x */ user_pref("extensions.pocket.enabled", false); // disable and hide Pocket
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
@@ -1922,12 +1921,13 @@ EXTERNAL APPLICATION:
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
+  /* 2701  */ user_pref("network.cookie.cookieBehavior", 4); // (Block) Third-party trackers. Should be 1, except if using WE TC auto mode
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
-  /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // browser.urlbar.matchBuckets resets 0801 and must be applied before
+  /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // this resets 0801 and must be applied before
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
