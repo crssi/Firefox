@@ -16,7 +16,6 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
      Show search suggestions ahead of browsing history in address bar results: Uncheck
      One-Click Search Engines: delete all except DuckDuckGo
    Firefox -> Options -> Privacy & Security -> Content Blocking -> Custom
-     Trackers: In all windows
      Criptominers: Check
      Fingerprinters: Check
 6. Install extensions (see Extensions section) and setup by instructions
