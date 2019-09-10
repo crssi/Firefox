@@ -6,6 +6,8 @@
 @@||$domain=moz-extension-scheme
 
 
+@@||media.brightcove.com^$media,domain=players.brightcove.net
+
 ! broadway.com
 ! maybe remove list https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
 @@||players.brightcove.net^$third-party,script
