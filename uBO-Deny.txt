@@ -99,8 +99,8 @@
 ||mailchimp.com^$third-party
 ||mailerlite.com^$third-party
 ||mallgroup.com^$third-party
-||maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate$script,important
-||maps.googleapis.com/maps/api/js/QuotaService.RecordEvent$script,important
+!||maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate$script,important
+!||maps.googleapis.com/maps/api/js/QuotaService.RecordEvent$script,important
 ||marketo.com^$third-party
 ||medium.com^$third-party,~script,~image
 ||moengage.com^$third-party
