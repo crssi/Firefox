@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 8.9.2019 (commit: 3a9440a); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 21.9.2019 (commit: e1b0eae); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -68,7 +68,6 @@ ESSENTIAL EXTENSIONS:
   uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/ (https://github.com/uBlockOrigin/uMatrix-issues/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
     About
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
-  WebGL Fingerprint Defender; https://addons.mozilla.org/firefox/addon/webgl-fingerprint-defender/ (https://mybrowseraddon.com/webgl-defender.html)
 
 ADDITIONAL EXTENSIONS THAT I AM USING:
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
@@ -125,11 +124,12 @@ EXTERNAL APPLICATION:
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable auto-installing Firefox extensions
+  /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
-  /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; do not use without "WebGL Fingerprint Defender" WE
+  /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; should be true, except if using WE CanvasBlocker
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
