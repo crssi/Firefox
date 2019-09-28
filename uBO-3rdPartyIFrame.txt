@@ -35,6 +35,7 @@
 @@||instagram.com^$third-party,subdocument
 @@||imgur.com^$third-party,subdocument
 @@||ishoutbox.com^$third-party,subdocument
+@@||janraincapture.com/widget/*$third-party,subdocument
 @@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
 @@||jwpsrv.com^$third-party,subdocument
 @@||live.com^$third-party,subdocument,domain=microsoft.com
