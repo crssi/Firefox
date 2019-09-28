@@ -88,7 +88,7 @@
 !||jwpcdn.com^$third-party
 !||jwplatform.com^$third-party
 !||jwpsrv.com^$third-party
-||jwp*.com^$third-party,~script
+||jwp*.com^$third-party,~script,~media,~image
 ||knowyourapps.com^$third-party
 ||letspin.io^$third-party
 ||limelight.com^$third-party,script
