@@ -31,6 +31,7 @@
 ||advertising.com^$~document
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
 @@||apple.com^$subdocument,domain=icloud.com
+@@||assets-jpcust.jwpsrv.com^$third-party,image
 @@||assets.adobedtm.com^$third-party,script
 @@||cdn.jwplayer.com^$third-party,xmlhttprequest
 @@||cdn.nrholding.net/*/*/$third-party,image
@@ -47,7 +48,6 @@
 @@||google.com/uds/*visualization$third-party,script,stylesheet
 @@||gravatar.com^$third-party,image,stylesheet
 @@||instagram.com^$third-party,script
-@@||assets-jpcust.jwpsrv.com^$third-party,image
 @@||jwpcdn.com^$third-party,font
 @@||maps.google.*/maps*$third-party,script,image
 @@||maps.googleapis.com/maps*$script,image,xmlhttprequest
@@ -56,8 +56,10 @@
 @@||paypal.com^$third-party,subdocument,popup
 @@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
 @@||platform.twitter.com^$third-party,stylesheet,image,script
+@@||play.vidyard.com^$third-party,subdocument,script
 @@||translate.googleusercontent.com
 @@||use.typekit.net^$third-party,font,stylesheet,script
+@@||vidyard.com^$domain=play.vidyard.com
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
