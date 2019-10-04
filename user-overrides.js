@@ -55,9 +55,8 @@ ESSENTIAL EXTENSIONS:
     Notifications
       Enable popup: Uncheck
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
-    Add to exceptions:
-      *.google.* > *.google*.*
-      *.icloud.com > *.apple.com
+    Whiteliste Sources:
+      Add: https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     Export/Import
       Import Preferences
