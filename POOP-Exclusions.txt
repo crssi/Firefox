@@ -1,4 +1,5 @@
 * *.braintreegateway.com
+* edge.api.brightcove.com
 *.ali*.com *.ali*.com
 *.amazon.* *.*amazon.com
 *.azure.com *.microsoft.com
@@ -10,5 +11,7 @@
 *.paypal*.com *.paypal*.com
 *.powerbi.com *.windows.net
 *.reddit.com *.redd.it
+*.ubisoft.com *ubi*
 *.youtube*.com *
+*vimeo.com *vimeo*.*
 github.com *.githubassets.com
