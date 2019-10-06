@@ -27,6 +27,7 @@
 ||hudo.com^$inline-script
 @@/clarity-*.js$first-party,script
 @@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
+@@||ads.api.24ur.si^$xmlhttprequest,domain=24ur.com
 @@||advertising.com^$first-party
 ||advertising.com^$~document
 @@||apis.google.com^$third-party,script,domain=content.googleapis.com
