@@ -46,7 +46,7 @@
 @@||mozillademos.org^$third-party,subdocument,domain=mozilla.org
 @@||office.com^$third-party,subdocument,domain=microsoftonline.com
 @@||office365.com^$third-party,subdocument,domain=office.com
-@@||openspeedtest.com/results/*$third-party,subdocument
+@@||openspeedtest.com^$third-party,subdocument
 @@||paypal.com^$third-party,subdocument,popup
 @@||paypalobjects.com^$third-party,subdocument,domain=paypal.com
 @@||player.theplatform.com^$third-party,subdocument
