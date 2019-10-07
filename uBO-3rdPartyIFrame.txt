@@ -40,12 +40,13 @@
 @@||jwpsrv.com^$third-party,subdocument
 @@||live.com^$third-party,subdocument,domain=microsoft.com
 @@||mapsengine.google.com/map/embed$third-party,subdocument
-@@||microsoftazuread-sso.com^$third-party,domain=microsoftonline.com
 @@||mcafeemobilesecurity.com^$third-party,subdocument,domain=mcafee.com
+@@||microsoftazuread-sso.com^$third-party,domain=microsoftonline.com
 @@||mozilla.*^$third-party,subdocument,domain=mozilla.org
 @@||mozillademos.org^$third-party,subdocument,domain=mozilla.org
 @@||office.com^$third-party,subdocument,domain=microsoftonline.com
 @@||office365.com^$third-party,subdocument,domain=office.com
+@@||openspeedtest.com/results/*$third-party,subdocument
 @@||paypal.com^$third-party,subdocument,popup
 @@||paypalobjects.com^$third-party,subdocument,domain=paypal.com
 @@||player.theplatform.com^$third-party,subdocument
