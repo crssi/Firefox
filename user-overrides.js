@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 5.10.2019 (commit: 624e50f); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 15.10.2019 (commit: 5b82afd); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -177,7 +177,9 @@ EXTERNAL APPLICATION:
 
 
 /*** RESET TO DEFAULT ***/
+  /* 0804  */ user_pref("browser.sessionhistory.max_entries", 50);
   /* 0864  */ user_pref("dom.forms.datetime", true);
+  /* 2010  */ user_pref("webgl.dxgl.enabled", true);
   /* 2426  */ user_pref("dom.IntersectionObserver.enabled", true);
 
 user_pref("_user.js.parrot", "Eagle has landed.");
