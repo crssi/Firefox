@@ -482,11 +482,6 @@ user_pref("keyword.enabled", false);
 user_pref("browser.fixup.alternate.enabled", false);
 /* 0803: display all parts of the url in the location bar ***/
 user_pref("browser.urlbar.trimURLs", false);
-/* 0804: limit history leaks via enumeration (PER TAB: back/forward)
- * This is a PER TAB session history. You still have a full history stored under all history
- * default=50, minimum=1=currentpage, 2 is the recommended minimum as some pages
- * use it as a means of referral (e.g. hotlinking), 4 or 6 or 10 may be more practical ***/
-user_pref("browser.sessionhistory.max_entries", 10);
 /* 0805: disable coloring of visited links - CSS history leak
  * [NOTE] This has NEVER been fully "resolved": in Mozilla/docs it is stated it's
  * only in 'certain circumstances', also see latest comments in [2]
@@ -921,7 +916,6 @@ user_pref("media.peerconnection.ice.no_host", true); // [FF51+]
  * [1] https://www.contextis.com/resources/blog/webgl-new-dimension-browser-exploitation/
  * [2] https://security.stackexchange.com/questions/13799/is-webgl-a-security-concern ***/
 user_pref("webgl.disabled", true);
-user_pref("webgl.dxgl.enabled", false); // [WINDOWS]
 user_pref("webgl.enable-webgl2", false);
 /* 2012: limit WebGL ***/
 user_pref("webgl.min_capability_mode", true);
@@ -1797,9 +1791,10 @@ user_pref("plugins.click_to_play", true); // [DEFAULT: true in FF25+]
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
 
+
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 5.10.2019 (commit: 624e50f); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 15.10.2019 (commit: 5b82afd); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1976,7 +1971,9 @@ EXTERNAL APPLICATION:
 
 
 /*** RESET TO DEFAULT ***/
+  /* 0804  */ user_pref("browser.sessionhistory.max_entries", 50);
   /* 0864  */ user_pref("dom.forms.datetime", true);
+  /* 2010  */ user_pref("webgl.dxgl.enabled", true);
   /* 2426  */ user_pref("dom.IntersectionObserver.enabled", true);
 
 user_pref("_user.js.parrot", "Eagle has landed.");
