@@ -6,6 +6,7 @@
 *.dropbox.com *.dropbox*.com
 *.facebook.com *.fbcdn.net
 *.google*.* *
+*.microsoft.com *.windows.com
 *.minecraft.net *.mojang.com
 *.notabug.io oauth.reddit.com
 *.paypal*.com *.paypal*.com
