@@ -1,8 +1,8 @@
 /******
 * name: ghacks user.js
-* date: 4 September 2019
-* version 69-beta: Pants One More Time
-*   "When I'm not with pants I lose my mind. Give me a sign. Hit me, pants, one more time."
+* date: 20 September 2019
+* version 70-alpha: Pinpants Wizard
+*   "Ever since I was a young pants, I've played the silver ball"
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -246,8 +246,7 @@ user_pref("datareporting.healthreport.uploadEnabled", false);
  * [1] https://bugzilla.mozilla.org/1195552 ***/
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 /* 0342: disable Studies (see 0503)
- * [NOTE] This pref has no effect when Health Reports (0340) are disabled
- * [SETTING] Privacy & Security>Firefox Data Collection & Use>...>Allow Firefox to install and run studies ***/
+ * [SETTING] Privacy & Security>Firefox Data Collection & Use>Allow Firefox to install and run studies ***/
 user_pref("app.shield.optoutstudies.enabled", false);
 /* 0343: disable personalized Extension Recommendations in about:addons and AMO [FF65+]
  * [NOTE] This pref has no effect when Health Reports (0340) are disabled
@@ -375,7 +374,7 @@ user_pref("network.prefetch-next", false);
  * [1] https://www.ghacks.net/2013/04/27/firefox-prefetching-what-you-need-to-know/
  * [2] https://developer.mozilla.org/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control ***/
 user_pref("network.dns.disablePrefetch", true);
-user_pref("network.dns.disablePrefetchFromHTTPS", true); // [HIDDEN PREF]
+user_pref("network.dns.disablePrefetchFromHTTPS", true); // [HIDDEN PREF ESR] [DEFAULT: true FF70+]
 /* 0603: disable predictor / prefetching ***/
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false); // [FF48+]
@@ -428,16 +427,6 @@ user_pref("network.http.altsvc.oe", false);
  * as a remote Tor node will handle the DNS request
  * [1] https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers ***/
 user_pref("network.proxy.socks_remote_dns", true);
-/* 0707: disable (or setup) DNS-over-HTTPS (DoH) [FF60+]
- * TRR = Trusted Recursive Resolver
- * 0=off by default, 1=race (removed in FF69), 2=TRR first, 3=TRR only,
- * 4=race for stats but always use native result (removed in FF69), 5=explicitly off
- * [WARNING] DoH bypasses hosts and gives info to yet another party (e.g. Cloudflare)
- * [1] https://www.ghacks.net/2018/04/02/configure-dns-over-https-in-firefox/
- * [2] https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/ ***/
-   // user_pref("network.trr.mode", 0);
-   // user_pref("network.trr.bootstrapAddress", "");
-   // user_pref("network.trr.uri", "");
 /* 0708: disable FTP [FF60+]
  * [1] https://www.ghacks.net/2018/02/20/firefox-60-with-new-preference-to-disable-ftp/ ***/
    // user_pref("network.ftp.enabled", false);
@@ -596,7 +585,7 @@ user_pref("browser.cache.disk.enable", false);
 /* 1003: disable memory cache
 /* capacity: -1=determine dynamically (default), 0=none, n=memory capacity in kilobytes ***/
    // user_pref("browser.cache.memory.enable", false);
-   // user_pref("browser.cache.memory.capacity", 0); // [HIDDEN PREF]
+   // user_pref("browser.cache.memory.capacity", 0); // [HIDDEN PREF ESR]
 /* 1006: disable permissions manager from writing to disk [RESTART]
  * [NOTE] This means any permission changes are session only
  * [1] https://bugzilla.mozilla.org/967812 ***/
@@ -771,10 +760,8 @@ user_pref("browser.ssl_override_behavior", 1);
  * [TEST] https://expired.badssl.com/ ***/
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 /* 1273: display "insecure" icon and "Not Secure" text on HTTP sites ***/
-user_pref("security.insecure_connection_icon.enabled", true); // [FF59+]
+user_pref("security.insecure_connection_icon.enabled", true); // [FF59+] [DEFAULT: true FF70+]
 user_pref("security.insecure_connection_text.enabled", true); // [FF60+]
-   // user_pref("security.insecure_connection_icon.pbmode.enabled", true); // [FF59+] private windows only
-   // user_pref("security.insecure_connection_text.pbmode.enabled", true); // [FF60+] private windows only
 
 /*** [SECTION 1400]: FONTS ***/
 user_pref("_user.js.parrot", "1400 syntax error: the parrot's bereft of life!");
@@ -870,7 +857,7 @@ user_pref("privacy.userContext.ui.enabled", true);
  * [SETTING] General>Tabs>Enable Container Tabs ***/
 user_pref("privacy.userContext.enabled", true);
 /* 1703: enable a private container for thumbnail loads [FF51+] ***/
-user_pref("privacy.usercontext.about_newtab_segregation.enabled", true); // [DEFAULT: true in FF61+]
+user_pref("privacy.usercontext.about_newtab_segregation.enabled", true); // [DEFAULT: true FF61+]
 /* 1704: set behaviour on "+ Tab" button to display container menu [FF53+] [SETUP-CHROME]
  * 0=no menu (default), 1=show when clicked, 2=show on long press
  * [1] https://bugzilla.mozilla.org/1328756 ***/
@@ -1139,7 +1126,7 @@ user_pref("devtools.chrome.enabled", false);
 /* 2608: disable WebIDE to prevent remote debugging and ADB extension download
  * [1] https://trac.torproject.org/projects/tor/ticket/16222 ***/
 user_pref("devtools.debugger.remote-enabled", false);
-user_pref("devtools.webide.enabled", false);
+user_pref("devtools.webide.enabled", false); // [DEFAULT: false FF70+]
 user_pref("devtools.webide.autoinstallADBExtension", false); // [FF64+]
 /* 2609: disable MathML (Mathematical Markup Language) [FF51+] [SETUP-HARDEN]
  * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#misc
@@ -1246,7 +1233,7 @@ user_pref("security.dialog_enable_delay", 700);
 user_pref("_user.js.parrot", "2700 syntax error: the parrot's joined the bleedin' choir invisible!");
 /* 2701: disable 3rd-party cookies and site-data [SETUP-WEB]
  * 0=Accept cookies and site data, 1=(Block) All third-party cookies, 2=(Block) All cookies,
- * 3=(Block) Cookies from unvisited sites, 4=(Block) Third-party trackers (FF63+) (default FF69+)
+ * 3=(Block) Cookies from unvisited websites, 4=(Block) Cross-site and social media trackers (FF63+) (default FF69+)
  * [NOTE] You can set exceptions under site permissions or use an extension
  * [SETTING] Privacy & Security>Content Blocking>Custom>Choose what to block>Cookies ***/
 user_pref("network.cookie.cookieBehavior", 1);
@@ -1366,6 +1353,7 @@ user_pref("privacy.sanitize.timeSpan", 0);
  ** 1542309 - isolate top-level domain URLs when host is in the public suffix list (FF68+)
  ** 1506693 - isolate pdfjs range-based requests (FF68+)
  ** 1330467 - isolate site permissions (FF69+)
+ ** 1534339 - isolate IPv6 (FF72+)
 ***/
 user_pref("_user.js.parrot", "4000 syntax error: the parrot's pegged out");
 /* 4001: enable First Party Isolation [FF51+]
@@ -1381,7 +1369,7 @@ user_pref("privacy.firstparty.isolate", true);
  * [2] https://bugzilla.mozilla.org/1492607
  * [3] https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage ***/
 user_pref("privacy.firstparty.isolate.restrict_opener_access", true); // [DEFAULT: true]
-   // user_pref("privacy.firstparty.isolate.block_post_message", true); // [HIDDEN PREF]
+   // user_pref("privacy.firstparty.isolate.block_post_message", true); // [HIDDEN PREF ESR]
 
 /*** [SECTION 4500]: RFP (RESIST FINGERPRINTING)
    This master switch will be used for a wide range of items, many of which will
@@ -1646,133 +1634,11 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
 
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
-     Documentation denoted as [-]. Items deprecated prior to FF61 have been archived at [1], which
+     Documentation denoted as [-]. Items deprecated prior to FF69 have been archived at [1], which
      also provides a link-clickable, viewer-friendly version of the deprecated bugzilla tickets
      [1] https://github.com/ghacksuserjs/ghacks-user.js/issues/123
 ***/
 user_pref("_user.js.parrot", "9999 syntax error: the parrot's deprecated!");
-/* ESR60.x still uses all the following prefs
-// [NOTE] replace the * with a slash in the line above to re-enable them
-// FF61
-// 0501: disable experiments
-   // [1] https://wiki.mozilla.org/Telemetry/Experiments
-   // [-] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1420908,1450801
-user_pref("experiments.enabled", false);
-user_pref("experiments.manifest.uri", "");
-user_pref("experiments.supported", false);
-user_pref("experiments.activeExperiment", false);
-// 2612: disable remote JAR files being opened, regardless of content type [FF42+]
-   // [1] https://bugzilla.mozilla.org/1173171
-   // [2] https://www.fxsitecompat.com/en-CA/docs/2015/jar-protocol-support-has-been-disabled-by-default/
-   // [-] https://bugzilla.mozilla.org/1427726
-user_pref("network.jar.block-remote-files", true);
-// 2613: disable JAR from opening Unsafe File Types
-   // [-] https://bugzilla.mozilla.org/1427726
-user_pref("network.jar.open-unsafe-types", false);
-// * * * /
-// FF62
-// 1803: disable Java plugin
-   // [-] (part5) https://bugzilla.mozilla.org/1461243
-user_pref("plugin.state.java", 0);
-// * * * /
-// FF63
-// 0205: disable GeoIP-based search results
-   // [NOTE] May not be hidden if Firefox has changed your settings due to your locale
-   // [-] https://bugzilla.mozilla.org/1462015
-user_pref("browser.search.countryCode", "US"); // [HIDDEN PREF]
-// 0301a: disable auto-update checks for Firefox
-   // [SETTING] General>Firefox Updates>Never check for updates
-   // [-] https://bugzilla.mozilla.org/1420514
-   // user_pref("app.update.enabled", false);
-// 0503: disable "Savant" Shield study [FF61+]
-   // [-] https://bugzilla.mozilla.org/1457226
-user_pref("shield.savant.enabled", false);
-// 1031: disable favicons in tabs and new bookmarks - merged into browser.chrome.site_icons
-   // [-] https://bugzilla.mozilla.org/1453751
-   // user_pref("browser.chrome.favicons", false);
-// 2030: disable autoplay of HTML5 media - replaced by media.autoplay.default
-   // This may break video playback on various sites
-   // [-] https://bugzilla.mozilla.org/1470082
-user_pref("media.autoplay.enabled", false);
-// 2704: set cookie lifetime in days (see 2703)
-   // [-] https://bugzilla.mozilla.org/1457170
-   // user_pref("network.cookie.lifetime.days", 90); // [DEFAULT: 90]
-// 5000's: enable "Ctrl+Tab cycles through tabs in recently used order" - replaced by browser.ctrlTab.recentlyUsedOrder
-   // [-] https://bugzilla.mozilla.org/1473595
-   // user_pref("browser.ctrlTab.previews", true);
-// * * * /
-// FF64
-// 0516: disable Onboarding [FF55+]
-   // Onboarding is an interactive tour/setup for new installs/profiles and features. Every time
-   // about:home or about:newtab is opened, the onboarding overlay is injected into that page
-   // [NOTE] Onboarding uses Google Analytics [2], and leaks resource://URIs [3]
-   // [1] https://wiki.mozilla.org/Firefox/Onboarding
-   // [2] https://github.com/mozilla/onboard/commit/db4d6c8726c89a5d6a241c1b1065827b525c5baf
-   // [3] https://bugzilla.mozilla.org/863246#c154
-   // [-] https://bugzilla.mozilla.org/1462415
-user_pref("browser.onboarding.enabled", false);
-// 2608: disable WebIDE ADB extension downloads - both renamed
-   // [1] https://trac.torproject.org/projects/tor/ticket/16222
-   // [-] https://bugzilla.mozilla.org/1491315
-user_pref("devtools.webide.autoinstallADBHelper", false);
-user_pref("devtools.webide.adbAddonURL", "");
-// 2681: disable CSP violation events [FF59+]
-   // [1] https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent
-   // [-] https://bugzilla.mozilla.org/1488165
-user_pref("security.csp.enable_violation_events", false);
-// * * * /
-// FF65
-// 0850a: disable location bar autocomplete and suggestion types
-   // If you enforce any of the suggestion types (see the other 0850a), you MUST enforce 'autocomplete'
-   //   - If *ALL* of the suggestion types are false, 'autocomplete' must also be false
-   //   - If *ANY* of the suggestion types are true, 'autocomplete' must also be true
-   // [-] https://bugzilla.mozilla.org/1502392
-user_pref("browser.urlbar.autocomplete.enabled", false);
-// 0908: remove user & password info when attempting to fix an entered URL (i.e. 0802 is true)
-   // e.g. //user:password@foo -> //user@(prefix)foo(suffix) NOT //user:password@(prefix)foo(suffix)
-   // [-] https://bugzilla.mozilla.org/1510580
-user_pref("browser.fixup.hide_user_pass", true); // [DEFAULT: true]
-// * * * /
-// FF66
-// 0380: disable Browser Error Reporter [FF60+]
-   // [1] https://support.mozilla.org/en-US/kb/firefox-nightly-error-collection
-   // [2] https://firefox-source-docs.mozilla.org/browser/browser/BrowserErrorReporter.html
-   // [-] https://bugzilla.mozilla.org/1509888
-user_pref("browser.chrome.errorReporter.enabled", false);
-user_pref("browser.chrome.errorReporter.submitUrl", "");
-// 0502: disable Mozilla permission to silently opt you into tests
-   // [-] https://bugzilla.mozilla.org/1415625
-user_pref("network.allow-experiments", false);
-// * * * /
-// FF67
-// 2428: enforce DOMHighResTimeStamp API
-   // [WARNING] Required for normalization of timestamps and any timer resolution mitigations
-   // [-] https://bugzilla.mozilla.org/1485264
-user_pref("dom.event.highrestimestamp.enabled", true); // [DEFAULT: true]
-// 5000's: disable CFR [FF64+] - split into two new prefs: *cfr.addons, *cfr.features
-   // [SETTING] General>Browsing>Recommend extensions as you browse
-   // [1] https://support.mozilla.org/en-US/kb/extension-recommendations
-   // [-] https://bugzilla.mozilla.org/1528953
-   // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false);
-// * * * /
-// FF68
-// 0105b: disable Activity Stream Legacy Snippets
-   // [-] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1546190,1540939
-user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
-user_pref("browser.aboutHomeSnippets.updateUrl", "");
-// 0307: disable auto updating of lightweight themes (LWT)
-   // Not to be confused with themes in 0301* + 0302*, which use the FF55+ Theme API
-   // Mozilla plan to convert existing LWTs and remove LWT support in the future, see [1]
-   // [1] https://blog.mozilla.org/addons/2018/09/20/future-themes-here/
-   // [-] (part3b) https://bugzilla.mozilla.org/1525762
-user_pref("lightweightThemes.update.enabled", false);
-// 2682: enable CSP 1.1 experimental hash-source directive [FF29+]
-   // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=855326,883975
-   // [-] https://bugzilla.mozilla.org/1386214
-user_pref("security.csp.experimentalEnabled", true);
-// * * * /
-// ***/
-
 /* ESR68.x still uses all the following prefs
 // [NOTE] replace the * with a slash in the line above to re-enable them
 // FF69
@@ -1781,7 +1647,7 @@ user_pref("security.csp.experimentalEnabled", true);
    // user_pref("gfx.downloadable_fonts.woff2.enabled", false);
 // 1802: enforce click-to-play for plugins
    // [-] https://bugzilla.mozilla.org/1519434
-user_pref("plugins.click_to_play", true); // [DEFAULT: true in FF25+]
+user_pref("plugins.click_to_play", true); // [DEFAULT: true FF25+]
 // 2033: disable autoplay for muted videos [FF63+] - replaced by 'media.autoplay.default' options (2030)
    // [-] https://bugzilla.mozilla.org/1562331
    // user_pref("media.autoplay.allow-muted", false);
@@ -1791,10 +1657,9 @@ user_pref("plugins.click_to_play", true); // [DEFAULT: true in FF25+]
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
 
-
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 15.10.2019 (commit: 5b82afd); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 8.11.2019 (commit: 895f8d0); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1897,8 +1762,6 @@ EXTERNAL APPLICATION:
   /* 2650  */ user_pref("browser.download.folderList", 1); // default download location (0=desktop 1=downloads 2=last used)
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 2654  */ user_pref("browser.download.forbid_open_with", true); // disable "open with" in download dialog
-  /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
-  /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -1909,7 +1772,6 @@ EXTERNAL APPLICATION:
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tabs
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
-  /* 5000x */ user_pref("extensions.htmlaboutaddons.enabled", false); // I don't like the new abbout:addons
   /* 5000x */ user_pref("extensions.pocket.enabled", false); // disable and hide Pocket
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
 
@@ -1966,6 +1828,9 @@ EXTERNAL APPLICATION:
   // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", true); // enable screensharing
 
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
+
+  // /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
+  // /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
 
   // /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
 
