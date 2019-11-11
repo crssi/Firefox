@@ -3,6 +3,7 @@
 *.ali*.com *.ali*.com
 *.amazon.* *.*amazon.com
 *.azure.com *.microsoft.com
+*.cnet.com cnetvideo.cbsistatic.com
 *.dropbox.com *.dropbox*.com
 *.facebook.com *.fbcdn.net
 *.google*.* *
