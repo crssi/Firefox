@@ -44,13 +44,14 @@
 @@||fbcdn.*^$domain=facebook.com
 @@||fbcdn.*^$third-party,image,media
 @@||google-analytics.com/analytics.js$third-party,script,domain=amainhobbies.com
+@@||google.*/cse/*$third-party,script,stylesheet,domain=pastebin.com
 @@||google.*^$domain=google.com|googleapis.com
 @@||google.*^$third-party,script,domain=youtube.com
-@@||google.*/cse/*$third-party,script,stylesheet,domain=pastebin.com
 @@||google.com/uds/*visualization$third-party,script,stylesheet
 @@||gravatar.com^$third-party,image,stylesheet
 @@||instagram.com^$third-party,script
 @@||jwpcdn.com^$third-party,font
+@@||maps-api-ssl.google.com^$third-party,script,image
 @@||maps.google.*/maps*$third-party,script,image
 @@||maps.googleapis.com/maps*$script,image,xmlhttprequest
 @@||mozilla.org^$third-party,xmlhttprequest,domain=mozilla.com
