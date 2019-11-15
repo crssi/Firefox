@@ -36,6 +36,7 @@ action=login
 alipay.com/
 archive.is/
 chart.googleapis.com/chart
+hideproxy.me/
 hosts-file.net/
 i-dont-care-about-cookies.eu/
 logout=
