@@ -46,6 +46,7 @@
 @@||google-analytics.com/analytics.js$third-party,script,domain=amainhobbies.com
 @@||google.*^$domain=google.com|googleapis.com
 @@||google.*^$third-party,script,domain=youtube.com
+@@||google.*/cse/*$third-party,script,stylesheet,domain=pastebin.com
 @@||google.com/uds/*visualization$third-party,script,stylesheet
 @@||gravatar.com^$third-party,image,stylesheet
 @@||instagram.com^$third-party,script
