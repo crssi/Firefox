@@ -60,6 +60,7 @@
 @@||platform.twitter.com^$third-party,stylesheet,image,script
 @@||play.vidyard.com^$third-party,subdocument,script
 @@||translate.googleusercontent.com
+@@||ubisoft.com^$third-party,domain=ubi.com
 @@||use.typekit.net^$third-party,font,stylesheet,script
 @@||vidyard.com^$domain=play.vidyard.com
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
