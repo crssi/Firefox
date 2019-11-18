@@ -639,15 +639,14 @@ user_pref("alerts.showFavicons", false); // [DEFAULT: false]
 ***/
 user_pref("_user.js.parrot", "1200 syntax error: the parrot's a stiff!");
 /** SSL (Secure Sockets Layer) / TLS (Transport Layer Security) ***/
-/* 1201: disable old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
- * [SETUP-WEB] <2% of secure sites do NOT support the newer "secure" renegotiation, see [2]
- * [1] https://wiki.mozilla.org/Security:Renegotiation
- * [2] https://www.ssllabs.com/ssl-pulse/ ***/
+/* 1201: disable old SSL/TLS "insecure" negotiation (vulnerable to a MiTM attack)
+ * [1] https://wiki.mozilla.org/Security:Renegotiation ***/
 user_pref("security.ssl.require_safe_negotiation", true);
 /* 1202: control TLS versions with min and max
  * 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
  * [WARNING] Leave these at default, otherwise you alter your TLS fingerprint.
- * Firefox telemetry (April 2019) shows only 0.5% of TLS web traffic uses 1.0 or 1.1 ***/
+ * Firefox telemetry (April 2019) shows only 0.5% of TLS web traffic uses 1.0 or 1.1
+ * [1] https://www.ssllabs.com/ssl-pulse/ ***/
    // user_pref("security.tls.version.min", 3);
    // user_pref("security.tls.version.max", 4);
 /* 1203: disable SSL session tracking [FF36+]
@@ -856,8 +855,6 @@ user_pref("privacy.userContext.ui.enabled", true);
 /* 1702: enable Container Tabs [FF50+]
  * [SETTING] General>Tabs>Enable Container Tabs ***/
 user_pref("privacy.userContext.enabled", true);
-/* 1703: enable a private container for thumbnail loads [FF51+] ***/
-user_pref("privacy.usercontext.about_newtab_segregation.enabled", true); // [DEFAULT: true FF61+]
 /* 1704: set behaviour on "+ Tab" button to display container menu [FF53+] [SETUP-CHROME]
  * 0=no menu (default), 1=show when clicked, 2=show on long press
  * [1] https://bugzilla.mozilla.org/1328756 ***/
@@ -1052,6 +1049,7 @@ user_pref("javascript.options.asmjs", false);
    // user_pref("javascript.options.ion", false);
    // user_pref("javascript.options.baselinejit", false);
 /* 2422: disable WebAssembly [FF52+] [SETUP-PERF]
+ * [NOTE] In FF71+ this no longer affects extensions (1576254)
  * [1] https://developer.mozilla.org/docs/WebAssembly ***/
 user_pref("javascript.options.wasm", false);
 /* 2426: disable Intersection Observer API [FF55+]
@@ -1133,6 +1131,7 @@ user_pref("devtools.webide.autoinstallADBExtension", false); // [FF64+]
  * [1] https://bugzilla.mozilla.org/1173199 ***/
    // user_pref("mathml.disabled", true);
 /* 2610: disable in-content SVG (Scalable Vector Graphics) [FF53+]
+ * [NOTE] In FF70+ and ESR68.1.0+ this no longer affects extensions (1564208)
  * [WARNING] Expect breakage incl. youtube player controls. Best left for a "hardened" profile.
  * [1] https://bugzilla.mozilla.org/1216893 ***/
    // user_pref("svg.disabled", true);
@@ -1161,7 +1160,7 @@ user_pref("webchannel.allowObject.urlWhitelist", "");
  * [3] CVE-2017-5383: https://www.mozilla.org/security/advisories/mfsa2017-02/
  * [4] https://www.xudongz.com/blog/2017/idn-phishing/ ***/
 user_pref("network.IDN_show_punycode", true);
-/* 2620: enable Firefox's built-in PDF reader [SETUP-CHROME]
+/* 2620: enforce Firefox's built-in PDF reader [SETUP-CHROME]
  * This setting controls if the option "Display in Firefox" is available in the setting below
  *   and by effect controls whether PDFs are handled in-browser or externally ("Ask" or "Open With")
  * PROS: pdfjs is lightweight, open source, and as secure/vetted as any pdf reader out there (more than most)
@@ -1621,24 +1620,145 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
    // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [WINDOWS] [MAC]
    // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
    // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
+/* UX: FEATURES: disable and hide the icons and menus ***/
+   // user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF70+]
+   // user_pref("extensions.pocket.enabled", false); // Pocket Account [FF46+]
+   // user_pref("identity.fxaccounts.enabled", false); // Firefox Accounts & Sync [FF60+] [RESTART]
+   // user_pref("reader.parse-on-load.enabled", false); // Reader View
 /* OTHER ***/
    // user_pref("browser.bookmarks.max_backups", 2);
    // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR [FF67+]
       // [SETTING] General>Browsing>Recommend extensions as you browse
    // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR [FF67+]
       // [SETTING] General>Browsing>Recommend features as you browse
-   // user_pref("extensions.pocket.enabled", false); // disable and hide Pocket [FF46+]
-   // user_pref("identity.fxaccounts.enabled", false); // disable and hide Firefox Accounts and Sync [FF60+] [RESTART]
    // user_pref("network.manage-offline-status", false); // see bugzilla 620472
-   // user_pref("reader.parse-on-load.enabled", false); // "Reader View"
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
 
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
-     Documentation denoted as [-]. Items deprecated prior to FF69 have been archived at [1], which
+     Documentation denoted as [-]. Items deprecated prior to FF61 have been archived at [1], which
      also provides a link-clickable, viewer-friendly version of the deprecated bugzilla tickets
      [1] https://github.com/ghacksuserjs/ghacks-user.js/issues/123
 ***/
 user_pref("_user.js.parrot", "9999 syntax error: the parrot's deprecated!");
+/* FF61
+// 0501: disable experiments
+   // [1] https://wiki.mozilla.org/Telemetry/Experiments
+   // [-] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1420908,1450801
+user_pref("experiments.enabled", false);
+user_pref("experiments.manifest.uri", "");
+user_pref("experiments.supported", false);
+user_pref("experiments.activeExperiment", false);
+// 2612: disable remote JAR files being opened, regardless of content type [FF42+]
+   // [1] https://bugzilla.mozilla.org/1173171
+   // [2] https://www.fxsitecompat.com/en-CA/docs/2015/jar-protocol-support-has-been-disabled-by-default/
+   // [-] https://bugzilla.mozilla.org/1427726
+user_pref("network.jar.block-remote-files", true);
+// 2613: disable JAR from opening Unsafe File Types
+   // [-] https://bugzilla.mozilla.org/1427726
+user_pref("network.jar.open-unsafe-types", false);
+// ***/
+/* FF62
+// 1803: disable Java plugin
+   // [-] (part5) https://bugzilla.mozilla.org/1461243
+user_pref("plugin.state.java", 0);
+// ***/
+/* FF63
+// 0205: disable GeoIP-based search results
+   // [NOTE] May not be hidden if Firefox has changed your settings due to your locale
+   // [-] https://bugzilla.mozilla.org/1462015
+user_pref("browser.search.countryCode", "US"); // [HIDDEN PREF]
+// 0301a: disable auto-update checks for Firefox
+   // [SETTING] General>Firefox Updates>Never check for updates
+   // [-] https://bugzilla.mozilla.org/1420514
+   // user_pref("app.update.enabled", false);
+// 0503: disable "Savant" Shield study [FF61+]
+   // [-] https://bugzilla.mozilla.org/1457226
+user_pref("shield.savant.enabled", false);
+// 1031: disable favicons in tabs and new bookmarks - merged into browser.chrome.site_icons
+   // [-] https://bugzilla.mozilla.org/1453751
+   // user_pref("browser.chrome.favicons", false);
+// 2030: disable autoplay of HTML5 media - replaced by media.autoplay.default
+   // This may break video playback on various sites
+   // [-] https://bugzilla.mozilla.org/1470082
+user_pref("media.autoplay.enabled", false);
+// 2704: set cookie lifetime in days (see 2703)
+   // [-] https://bugzilla.mozilla.org/1457170
+   // user_pref("network.cookie.lifetime.days", 90); // [DEFAULT: 90]
+// 5000's: enable "Ctrl+Tab cycles through tabs in recently used order" - replaced by browser.ctrlTab.recentlyUsedOrder
+   // [-] https://bugzilla.mozilla.org/1473595
+   // user_pref("browser.ctrlTab.previews", true);
+// ***/
+/* FF64
+// 0516: disable Onboarding [FF55+]
+   // Onboarding is an interactive tour/setup for new installs/profiles and features. Every time
+   // about:home or about:newtab is opened, the onboarding overlay is injected into that page
+   // [NOTE] Onboarding uses Google Analytics [2], and leaks resource://URIs [3]
+   // [1] https://wiki.mozilla.org/Firefox/Onboarding
+   // [2] https://github.com/mozilla/onboard/commit/db4d6c8726c89a5d6a241c1b1065827b525c5baf
+   // [3] https://bugzilla.mozilla.org/863246#c154
+   // [-] https://bugzilla.mozilla.org/1462415
+user_pref("browser.onboarding.enabled", false);
+// 2608: disable WebIDE ADB extension downloads - both renamed
+   // [1] https://trac.torproject.org/projects/tor/ticket/16222
+   // [-] https://bugzilla.mozilla.org/1491315
+user_pref("devtools.webide.autoinstallADBHelper", false);
+user_pref("devtools.webide.adbAddonURL", "");
+// 2681: disable CSP violation events [FF59+]
+   // [1] https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent
+   // [-] https://bugzilla.mozilla.org/1488165
+user_pref("security.csp.enable_violation_events", false);
+// ***/
+/* FF65
+// 0850a: disable location bar autocomplete and suggestion types
+   // If you enforce any of the suggestion types (see the other 0850a), you MUST enforce 'autocomplete'
+   //   - If *ALL* of the suggestion types are false, 'autocomplete' must also be false
+   //   - If *ANY* of the suggestion types are true, 'autocomplete' must also be true
+   // [-] https://bugzilla.mozilla.org/1502392
+user_pref("browser.urlbar.autocomplete.enabled", false);
+// 0908: remove user & password info when attempting to fix an entered URL (i.e. 0802 is true)
+   // e.g. //user:password@foo -> //user@(prefix)foo(suffix) NOT //user:password@(prefix)foo(suffix)
+   // [-] https://bugzilla.mozilla.org/1510580
+user_pref("browser.fixup.hide_user_pass", true); // [DEFAULT: true]
+// ***/
+/* FF66
+// 0380: disable Browser Error Reporter [FF60+]
+   // [1] https://support.mozilla.org/en-US/kb/firefox-nightly-error-collection
+   // [2] https://firefox-source-docs.mozilla.org/browser/browser/BrowserErrorReporter.html
+   // [-] https://bugzilla.mozilla.org/1509888
+user_pref("browser.chrome.errorReporter.enabled", false);
+user_pref("browser.chrome.errorReporter.submitUrl", "");
+// 0502: disable Mozilla permission to silently opt you into tests
+   // [-] https://bugzilla.mozilla.org/1415625
+user_pref("network.allow-experiments", false);
+// ***/
+/* FF67
+// 2428: enforce DOMHighResTimeStamp API
+   // [WARNING] Required for normalization of timestamps and any timer resolution mitigations
+   // [-] https://bugzilla.mozilla.org/1485264
+user_pref("dom.event.highrestimestamp.enabled", true); // [DEFAULT: true]
+// 5000's: disable CFR [FF64+] - split into two new prefs: *cfr.addons, *cfr.features
+   // [SETTING] General>Browsing>Recommend extensions as you browse
+   // [1] https://support.mozilla.org/en-US/kb/extension-recommendations
+   // [-] https://bugzilla.mozilla.org/1528953
+   // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false);
+// ***/
+/* FF68
+// 0105b: disable Activity Stream Legacy Snippets
+   // [-] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1546190,1540939
+user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
+user_pref("browser.aboutHomeSnippets.updateUrl", "");
+// 0307: disable auto updating of lightweight themes (LWT)
+   // Not to be confused with themes in 0301* + 0302*, which use the FF55+ Theme API
+   // Mozilla plan to convert existing LWTs and remove LWT support in the future, see [1]
+   // [1] https://blog.mozilla.org/addons/2018/09/20/future-themes-here/
+   // [-] (part3b) https://bugzilla.mozilla.org/1525762
+user_pref("lightweightThemes.update.enabled", false);
+// 2682: enable CSP 1.1 experimental hash-source directive [FF29+]
+   // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=855326,883975
+   // [-] https://bugzilla.mozilla.org/1386214
+user_pref("security.csp.experimentalEnabled", true);
+// ***/
+
 /* ESR68.x still uses all the following prefs
 // [NOTE] replace the * with a slash in the line above to re-enable them
 // FF69
@@ -1659,7 +1779,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 8.11.2019 (commit: 895f8d0); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 17.11.2019 (commit: b0221ec); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
