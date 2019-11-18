@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 10.11.2019 (commit: 0cfb2fb); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 17.11.2019 (commit: b0221ec); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -165,15 +165,8 @@ EXTERNAL APPLICATION:
   // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
 
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
-  // /* 2022  */ user_pref("media.getusermedia.browser.enabled", true); // enable screensharing
-  // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", true); // enable screensharing
 
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
-
-  // /* 4502  */ user_pref("privacy.window.maxInnerWidth", 1600); // set 1600px width at start
-  // /* 4502  */ user_pref("privacy.window.maxInnerHeight", 900); // set 900px height at start
-
-  // /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); //do not dynamically resize the inner window
 
 
 /*** RESET TO DEFAULT ***/
