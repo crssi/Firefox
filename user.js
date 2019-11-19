@@ -1208,7 +1208,8 @@ user_pref("extensions.autoDisableScopes", 15); // [DEFAULT: 15]
    // user_pref("extensions.webextensions.restrictedDomains", "");
 
 /** SECURITY ***/
-/* 2680: enable CSP (Content Security Policy)
+/* 2680: enforce CSP (Content Security Policy)
+ * [WARNING] CSP is a very important and widespread security feature. Don't disable it!
  * [1] https://developer.mozilla.org/docs/Web/HTTP/CSP ***/
 user_pref("security.csp.enable", true); // [DEFAULT: true]
 /* 2684: enforce a security delay on some confirmation dialogs such as install, open/save
@@ -1323,6 +1324,7 @@ user_pref("privacy.cpd.sessions", true); // Active Logins
 user_pref("privacy.cpd.siteSettings", false); // Site Preferences
 /* 2805: clear Session Restore data when sanitizing on shutdown or manually [FF34+]
  * [NOTE] Not needed if Session Restore is not used (see 0102) or is already cleared with history (see 2803)
+ * [NOTE] privacy.clearOnShutdown.openWindows prevents resuming from crashes (see 1022)
  * [NOTE] privacy.cpd.openWindows has a bug that causes an additional window to open ***/
    // user_pref("privacy.clearOnShutdown.openWindows", true);
    // user_pref("privacy.cpd.openWindows", true);
@@ -1352,7 +1354,7 @@ user_pref("privacy.sanitize.timeSpan", 0);
  ** 1542309 - isolate top-level domain URLs when host is in the public suffix list (FF68+)
  ** 1506693 - isolate pdfjs range-based requests (FF68+)
  ** 1330467 - isolate site permissions (FF69+)
- ** 1534339 - isolate IPv6 (FF72+)
+ ** 1534339 - isolate IPv6 (coming soon)
 ***/
 user_pref("_user.js.parrot", "4000 syntax error: the parrot's pegged out");
 /* 4001: enable First Party Isolation [FF51+]
@@ -1621,7 +1623,7 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
    // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
    // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
 /* UX: FEATURES: disable and hide the icons and menus ***/
-   // user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF70+]
+   // user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
    // user_pref("extensions.pocket.enabled", false); // Pocket Account [FF46+]
    // user_pref("identity.fxaccounts.enabled", false); // Firefox Accounts & Sync [FF60+] [RESTART]
    // user_pref("reader.parse-on-load.enabled", false); // Reader View
@@ -1779,7 +1781,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 17.11.2019 (commit: b0221ec); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 19.11.2019 (commit: a0e0a2a); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1904,6 +1906,7 @@ EXTERNAL APPLICATION:
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
+  /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
   /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; should be true, except if using WE CanvasBlocker
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
@@ -1940,8 +1943,6 @@ EXTERNAL APPLICATION:
   // /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
-
-  // /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
 
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
 
