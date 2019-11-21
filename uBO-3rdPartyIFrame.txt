@@ -26,14 +26,15 @@
 @@||e.infogram.com^$third-party,subdocument
 @@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
 @@||fncstatic.com^$third-party,subdocument,domain=foxnews.com
+@@||forms.hsforms.com^$third-party,subdocument
 @@||giphy.com/embed/$third-party,subdocument
 @@||github.*^$third-party,subdocument
 @@||google.*/maps/*$third-party,subdocument
 @@||google.*/recaptcha/$third-party,subdocument
 @@||googleapis.com^$third-party,subdocument,domain=google.com|google.si
 @@||googleusercontent.com^$third-party,subdocument,domain=google.com|google.si|github.com
-@@||instagram.com^$third-party,subdocument
 @@||imgur.com^$third-party,subdocument
+@@||instagram.com^$third-party,subdocument
 @@||ishoutbox.com^$third-party,subdocument
 @@||janraincapture.com/widget/*$third-party,subdocument
 @@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
