@@ -68,6 +68,14 @@
 @@||ytimg.com^$third-party,script
 @@||zdassets.com^$third-party,image,stylesheet
 
+
+! corp-internal.com
+@@||fast.wistia.com^$third-party,script
+@@||embed.wistia.com^$third-party,media,image
+
+! https://devcentral.f5.com/s/articles/the-big-ip-application-security-manager-part-7-geolocation
+@@||content.force.com^$third-party,image
+
 ! ALLOW JS library, since they are covered by Decentraleyes WE, see: https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions#for-umatrix-and-ublock-origin-non-easy-mode-users
 @@||ajax.aspnetcdn.com^$third-party,script
 @@||ajax.googleapis.com^$third-party,script
