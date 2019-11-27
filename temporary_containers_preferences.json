@@ -1,6 +1,6 @@
 {
-  "version": "1.2",
-  "date": 1564255398900,
+  "version": "1.5",
+  "date": 1574888166700,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -14,7 +14,7 @@
       "icon": "circle",
       "iconRandom": false,
       "numberMode": "reuse",
-      "removal": "15minutes",
+      "removal": 900000,
       "colorRandomExcluded": [
         "toolbar"
       ],
@@ -128,7 +128,8 @@
       "AltN": false,
       "AltShiftC": false,
       "AltX": false,
-      "AltO": false
+      "AltO": false,
+      "AltI": false
     },
     "replaceTabs": false,
     "cookies": {
@@ -139,7 +140,7 @@
       "contextMenu": false,
       "containerAlwaysPerDomain": "never",
       "containerIsolation": "never",
-      "containerRemoval": "instant",
+      "containerRemoval": 0,
       "containerMouseClicks": "never",
       "statistics": false,
       "active": false,
