@@ -148,7 +148,7 @@
 ||trustpilot.com^$third-party
 ||tsmedia.si^$third-party
 ||twitter.*^$third-party
-||typography.com^$third-party,~stylesheet
+||typography.com^$third-party,~stylesheet,~xmlhttprequest
 !||unpkg.com^$third-party
 ||upscore.com^$third-party
 ||urbanairship.com^$third-party
