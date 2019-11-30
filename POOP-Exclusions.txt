@@ -9,6 +9,7 @@
 *.google*.* *
 *.microsoft.com *.windows.com
 *.minecraft.net *.mojang.com
+*.netflix.* *.nflx*.net
 *.notabug.io oauth.reddit.com
 *.paypal*.com *.paypal*.com
 *.powerbi.com *.windows.net
