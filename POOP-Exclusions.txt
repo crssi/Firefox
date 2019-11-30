@@ -13,6 +13,7 @@
 *.paypal*.com *.paypal*.com
 *.powerbi.com *.windows.net
 *.reddit.com *.redd.it
+*.telemach.* *.united.cloud
 *.ubisoft.com *ubi*
 *.youtube*.com *
 *vimeo.com *vimeo*.*
