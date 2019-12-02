@@ -166,10 +166,4 @@ EXTERNAL APPLICATION:
 
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
 
-/*** RESET TO DEFAULT ***/
-  /* 0804  */ user_pref("browser.sessionhistory.max_entries", 50);
-  /* 0864  */ user_pref("dom.forms.datetime", true);
-  /* 2010  */ user_pref("webgl.dxgl.enabled", true);
-  /* 2426  */ user_pref("dom.IntersectionObserver.enabled", true);
-
 user_pref("_user.js.parrot", "Eagle has landed.");
