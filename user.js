@@ -1903,8 +1903,6 @@ EXTERNAL APPLICATION:
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
-  /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
-  /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
   /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; should be true, except if using WE CanvasBlocker
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
@@ -1939,6 +1937,8 @@ EXTERNAL APPLICATION:
 
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
 
+  // /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
+  // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
 
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
