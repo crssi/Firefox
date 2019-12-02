@@ -619,11 +619,14 @@ user_pref("toolkit.winRegisterApplicationRestart", false);
  * profile/shortcutCache directory. The .ico remains after the shortcut is deleted.
  * If set to false then the shortcuts use a generic Firefox icon ***/
 user_pref("browser.shell.shortcutFavicons", false);
-/* 1031: disable favicons in tabs and new bookmarks
- * bookmark favicons are stored as data blobs in favicons.sqlite ***/
+/* 1031: disable favicons in history and bookmarks
+ * Stored as data blobs in favicons.sqlite, these don't reveal anything that your
+ * actual history (and bookmarks) already do. Your history is more detailed, so
+ * control that instead; e.g. disable history, clear history on close, use PB mode
+ * [NOTE] favicons.sqlite is sanitized on Firefox close, not in-session ***/
    // user_pref("browser.chrome.site_icons", false);
 /* 1032: disable favicons in web notifications ***/
-user_pref("alerts.showFavicons", false); // [DEFAULT: false]
+   // user_pref("alerts.showFavicons", false); // [DEFAULT: false]
 
 /*** [SECTION 1200]: HTTPS (SSL/TLS / OCSP / CERTS / HPKP / CIPHERS)
    Your cipher and other settings can be used in server side fingerprinting
@@ -1778,7 +1781,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 24.11.2019 (commit: 19b392b); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 2.12.2019 (commit: fb263f5); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1903,6 +1906,9 @@ EXTERNAL APPLICATION:
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
+  /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
+  /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
+  /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
   /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; should be true, except if using WE CanvasBlocker
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
@@ -1937,18 +1943,8 @@ EXTERNAL APPLICATION:
 
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
 
-  // /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
-  // /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
-  // /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
-
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
 
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
-
-/*** RESET TO DEFAULT ***/
-  /* 0804  */ user_pref("browser.sessionhistory.max_entries", 50);
-  /* 0864  */ user_pref("dom.forms.datetime", true);
-  /* 2010  */ user_pref("webgl.dxgl.enabled", true);
-  /* 2426  */ user_pref("dom.IntersectionObserver.enabled", true);
 
 user_pref("_user.js.parrot", "Eagle has landed.");
