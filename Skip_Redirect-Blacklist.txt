@@ -39,6 +39,7 @@ chart.googleapis.com/chart
 hideproxy.me/
 hosts-file.net/
 i-dont-care-about-cookies.eu/
+icloud.com/
 logout=
 malc0de.com/
 malwaredomainlist.com/
