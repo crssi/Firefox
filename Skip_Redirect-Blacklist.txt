@@ -19,6 +19,8 @@ _sso=
 /preferences
 /profile
 /register
+/safe-browsing/
+/safebrowsing/
 /saml/
 /SAML2/
 /signin
@@ -32,6 +34,7 @@ _sso=
 /websso/
 /wsfederation
 9inchurl.com/
+aa419.org/
 action=login
 alipay.com/
 archive.is/
