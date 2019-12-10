@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 3.12.2019 (commit: 3f6340b); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 9.12.2019 (commit: 30daf86); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -153,7 +153,7 @@ EXTERNAL APPLICATION:
   // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
-/*** SPECIFIC BREAKAGE RELAXING ***/
+/*** TODO ***/
   // /* 0390  */ user_pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/success.txt"); // Captive Portal - WiFi login pages
   // /* 0390  */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
 
