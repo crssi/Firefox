@@ -1,3 +1,3 @@
-*.google.*>*.google*.*
-*.paloaltonetworks.com>*.cloudfront.net
-*.travelriskmap.com>*
+.google.*>.google**.*
+.paloaltonetworks.com>.cloudfront.net
+.travelriskmap.com>*
