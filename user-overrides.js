@@ -13,7 +13,6 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
-     Show search suggestions ahead of browsing history in address bar results: Uncheck
      One-Click Search Engines: delete all except DuckDuckGo
 6. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
