@@ -1,8 +1,8 @@
 /******
 * name: ghacks user.js
-* date: 24 November 2019
-* version 70-beta: Pinpants Wizard
-*   "Ever since I was a young pants, I've played the silver ball"
+* date: 06 December 2019
+* version 71-beta: Dancing Pants
+*   "Ooh-ooh, see that girl, watch that scene, dig in the dancing pants"
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -82,6 +82,11 @@
  * after startup for any warnings/error messages related to non-applied prefs
  * [1] https://blog.mozilla.org/nnethercote/2018/03/09/a-new-preferences-parser-for-firefox/ ***/
 user_pref("_user.js.parrot", "START: Oh yes, the Norwegian Blue... what's wrong with it?");
+
+/* 0000: disable about:config warning
+ * The XUL version can still be accessed in FF71+ @ chrome://global/content/config.xul ***/
+user_pref("general.warnOnAboutConfig", false); // for the XUL version
+user_pref("browser.aboutConfig.showWarning", false); // for the new HTML version [FF71+]
 
 /*** [SECTION 0100]: STARTUP ***/
 user_pref("_user.js.parrot", "0100 syntax error: the parrot's dead!");
@@ -635,8 +640,15 @@ user_pref("browser.shell.shortcutFavicons", false);
 ***/
 user_pref("_user.js.parrot", "1200 syntax error: the parrot's a stiff!");
 /** SSL (Secure Sockets Layer) / TLS (Transport Layer Security) ***/
-/* 1201: disable old SSL/TLS "insecure" negotiation (vulnerable to a MiTM attack)
- * [1] https://wiki.mozilla.org/Security:Renegotiation ***/
+/* 1201: require safe negotiation
+ * Blocks connections to servers that don't support RFC 5746 [2] as they're potentially
+ * vulnerable to a MiTM attack [3]. A server *without* RFC 5746 can be safe from the attack
+ * if it disables renegotiations but the problem is that the browser can't know that.
+ * Setting this pref to true is the only way for the browser to ensure there will be
+ * no unsafe renegotiations on the channel between the browser and the server.
+ * [1] https://wiki.mozilla.org/Security:Renegotiation
+ * [2] https://tools.ietf.org/html/rfc5746
+ * [3] https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555 ***/
 user_pref("security.ssl.require_safe_negotiation", true);
 /* 1202: control TLS versions with min and max
  * 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
@@ -742,8 +754,10 @@ user_pref("security.mixed_content.block_object_subrequest", true);
    // user_pref("security.ssl3.rsa_aes_256_sha", false);
 
 /** UI (User Interface) ***/
-/* 1270: display warning (red padlock) for "broken security" (see 1201)
- * [1] https://wiki.mozilla.org/Security:Renegotiation ***/
+/* 1270: display warning on the padlock for "broken security" (if 1201 is false)
+ * Bug: warning padlock not indicated for subresources on a secure page! [2]
+ * [1] https://wiki.mozilla.org/Security:Renegotiation
+ * [2] https://bugzilla.mozilla.org/1353705 ***/
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 /* 1271: control "Add Security Exception" dialog on SSL warnings
  * 0=do neither 1=pre-populate url 2=pre-populate url + pre-fetch cert (default)
@@ -1120,11 +1134,9 @@ user_pref("browser.uitour.url", "");
  * [SETTING] Devtools>Advanced Settings>Enable browser chrome and add-on debugging toolboxes
  * [1] https://github.com/pyllyukko/user.js/issues/179#issuecomment-246468676 ***/
 user_pref("devtools.chrome.enabled", false);
-/* 2608: disable WebIDE to prevent remote debugging and ADB extension download
+/* 2608: disable remote debugging
  * [1] https://trac.torproject.org/projects/tor/ticket/16222 ***/
 user_pref("devtools.debugger.remote-enabled", false);
-user_pref("devtools.webide.enabled", false); // [DEFAULT: false FF70+]
-user_pref("devtools.webide.autoinstallADBExtension", false); // [FF64+]
 /* 2609: disable MathML (Mathematical Markup Language) [FF51+] [SETUP-HARDEN]
  * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#misc
  * [1] https://bugzilla.mozilla.org/1173199 ***/
@@ -1262,10 +1274,6 @@ user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true); // [FF58+]
 user_pref("dom.indexedDB.enabled", true); // [DEFAULT: true]
 /* 2730: disable offline cache ***/
 user_pref("browser.cache.offline.enable", false);
-/* 2731: enforce websites to ask to store data for offline use
- * [1] https://support.mozilla.org/questions/1098540
- * [2] https://bugzilla.mozilla.org/959985 ***/
-user_pref("offline-apps.allow_by_default", false);
 /* 2740: disable service worker cache and cache storage
  * [NOTE] We clear service worker cache on exiting Firefox (see 2803)
  * [1] https://w3c.github.io/ServiceWorker/#privacy ***/
@@ -1353,7 +1361,7 @@ user_pref("privacy.sanitize.timeSpan", 0);
  ** 1542309 - isolate top-level domain URLs when host is in the public suffix list (FF68+)
  ** 1506693 - isolate pdfjs range-based requests (FF68+)
  ** 1330467 - isolate site permissions (FF69+)
- ** 1534339 - isolate IPv6 (coming soon)
+ ** 1534339 - isolate IPv6 (FF73+)
 ***/
 user_pref("_user.js.parrot", "4000 syntax error: the parrot's pegged out");
 /* 4001: enable First Party Isolation [FF51+]
@@ -1604,8 +1612,6 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
    // user_pref("browser.tabs.warnOnOpen", false);
    // user_pref("full-screen-api.warning.delay", 0);
    // user_pref("full-screen-api.warning.timeout", 0);
-   // user_pref("general.warnOnAboutConfig", false);
-   // user_pref("browser.aboutConfig.showWarning", false); // [FF67+]
 /* APPEARANCE ***/
    // user_pref("browser.download.autohideButton", false); // [FF57+]
    // user_pref("toolkit.cosmeticAnimations.enabled", false); // [FF55+]
@@ -1622,7 +1628,7 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
    // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [WINDOWS] [MAC]
    // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
    // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
-/* UX: FEATURES: disable and hide the icons and menus ***/
+/* UX FEATURES: disable and hide the icons and menus ***/
    // user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
    // user_pref("extensions.pocket.enabled", false); // Pocket Account [FF46+]
    // user_pref("identity.fxaccounts.enabled", false); // Firefox Accounts & Sync [FF60+] [RESTART]
@@ -1774,6 +1780,18 @@ user_pref("plugins.click_to_play", true); // [DEFAULT: true FF25+]
    // [-] https://bugzilla.mozilla.org/1562331
    // user_pref("media.autoplay.allow-muted", false);
 // * * * /
+// FF71
+// 2608: disable WebIDE and ADB extension download
+   // [1] https://trac.torproject.org/projects/tor/ticket/16222
+   // [-] https://bugzilla.mozilla.org/1539462
+user_pref("devtools.webide.enabled", false); // [DEFAULT: false FF70+]
+user_pref("devtools.webide.autoinstallADBExtension", false); // [FF64+]
+// 2731: enforce websites to ask to store data for offline use
+   // [1] https://support.mozilla.org/questions/1098540
+   // [2] https://bugzilla.mozilla.org/959985
+   // [-] https://bugzilla.mozilla.org/1574480
+user_pref("offline-apps.allow_by_default", false);
+// * * * /
 // ***/
 
 /* END: internal custom pref to test for syntax errors ***/
@@ -1781,7 +1799,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 2.12.2019 (commit: fb263f5); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 9.12.2019 (commit: 30daf86); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1850,6 +1868,7 @@ ESSENTIAL EXTENSIONS:
       Click [Restore from file...]: Download and unzip from https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.zip
 
 ADDITIONAL EXTENSIONS THAT I AM USING:
+  Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
   Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
   Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
@@ -1860,14 +1879,10 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
-  Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
-  Copy As Text (Copy As Plain Text); https://addons.mozilla.org/firefox/addon/copy-as-text/
-  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/ETag-Stoppa/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
-  Text Link webext; https://addons.mozilla.org/firefox/addon/text-link-webext/ (https://github.com/nekoziroo/Text-Link-webext/)
   Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
 
 EXTERNAL APPLICATION:
@@ -1937,7 +1952,7 @@ EXTERNAL APPLICATION:
   // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
 
-/*** SPECIFIC BREAKAGE RELAXING ***/
+/*** TODO ***/
   // /* 0390  */ user_pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/success.txt"); // Captive Portal - WiFi login pages
   // /* 0390  */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
 
