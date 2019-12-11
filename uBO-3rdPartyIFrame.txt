@@ -45,6 +45,7 @@
 @@||mcafeemobilesecurity.com^$third-party,subdocument,domain=mcafee.com
 @@||microsoftazuread-sso.com^$third-party,domain=microsoftonline.com
 @@||microsoftonline.com^$third-party,subdocument,domain=microsoft.com
+@@||microsoftonline.com^$third-party,subdocument,domain=office.com
 @@||mozilla.*^$third-party,subdocument,domain=mozilla.org
 @@||mozillademos.org^$third-party,subdocument,domain=mozilla.org
 @@||office.com^$third-party,subdocument,domain=microsoftonline.com
