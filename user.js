@@ -1935,7 +1935,6 @@ EXTERNAL APPLICATION:
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
-  /* 5000x */ user_pref("privacy.trackingprotection.cryptomining.enabled", true); // block cryptominers
   /* 5000x */ user_pref("privacy.trackingprotection.fingerprinting.enabled", true); // block fingerprinters
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
