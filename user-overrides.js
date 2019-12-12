@@ -113,7 +113,6 @@ EXTERNAL APPLICATION:
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
-  /* 0302b */ user_pref("extensions.update.autoUpdateDefault", true); // enable auto-installing Firefox extensions
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
