@@ -20,6 +20,7 @@
 *.paypal*.com *.paypal*.com
 *.powerbi.com *.windows.net
 *.reddit.com *.redd.it
+*.reddit.com *.reddit*.com
 *.telemach.* *.united.cloud
 *.ubisoft.com *ubi*
 *.youtube*.com *
