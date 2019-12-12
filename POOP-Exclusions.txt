@@ -8,7 +8,8 @@
 *.dropbox.com *.dropbox*.com
 *.facebook.com *.fbcdn.net
 *.google*.* *
-*.microsoft.com *.office.com
+*.microsoft.com *.live.com
+*.microsoft.com *.office.*
 *.microsoft.com *.sharepoint.com
 *.microsoft.com *.windows.com
 *.minecraft.net *.mojang.com
