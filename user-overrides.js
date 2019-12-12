@@ -101,12 +101,11 @@ EXTERNAL APPLICATION:
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
-  /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab
+  /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmark in a new tab
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
   /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
-  /* 5000x */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tabs
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 5000x */ user_pref("extensions.pocket.enabled", false); // disable and hide Pocket
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
