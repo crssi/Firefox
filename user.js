@@ -1868,11 +1868,11 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
   Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-  Context Plus; https://addons.mozilla.org/firefox/addon/context-plus/ (https://github.com/totallymike/contextPlus/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
+  Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
@@ -1925,12 +1925,9 @@ EXTERNAL APPLICATION:
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
-  /* 2701  */ user_pref("network.cookie.cookieBehavior", 4); // (Block) Cross-site and social media trackers. Should be 1, except if using WE TC auto mode
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
-  /* 5000x */ user_pref("privacy.trackingprotection.fingerprinting.enabled", true); // block fingerprinters
-  /* 5000x */ user_pref("privacy.trackingprotection.socialtracking.enabled", true); // block socialtracking
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // this resets 0801 and must be applied before
@@ -1953,6 +1950,8 @@ EXTERNAL APPLICATION:
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
 
   // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
+  // /* 2022  */ user_pref("media.getusermedia.browser.enabled", false); // enable screensharing
+  // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", false); // enable screensharing
 
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
 
