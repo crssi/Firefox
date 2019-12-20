@@ -1,8 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 06 December 2019
-* version 71-beta: Dancing Pants
-*   "Ooh-ooh, see that girl, watch that scene, dig in the dancing pants"
+* date: 19 December 2019
+* version 72-alpha
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -84,7 +83,8 @@
 user_pref("_user.js.parrot", "START: Oh yes, the Norwegian Blue... what's wrong with it?");
 
 /* 0000: disable about:config warning
- * The XUL version can still be accessed in FF71+ @ chrome://global/content/config.xul ***/
+ * The XUL version can still be accessed in FF71+ @ chrome://global/content/config.xul
+ * and in FF73+ @ chrome://global/content/config.xhtml ***/
 user_pref("general.warnOnAboutConfig", false); // for the XUL version
 user_pref("browser.aboutConfig.showWarning", false); // for the new HTML version [FF71+]
 
@@ -199,7 +199,7 @@ user_pref("_user.js.parrot", "0300 syntax error: the parrot's not pinin' for the
    // user_pref("extensions.update.enabled", false);
 /* 0302a: disable auto-INSTALLING Firefox updates [NON-WINDOWS FF65+]
  * [NOTE] In FF65+ on Windows this SETTING (below) is now stored in a file and the pref was removed
- * [SETTING] General>Firefox Updates>Check for updates but let you choose... ***/
+ * [SETTING] General>Firefox Updates>Check for updates but let you choose to install them ***/
 user_pref("app.update.auto", false);
 /* 0302b: disable auto-INSTALLING extension and theme updates (after the check in 0301b)
  * [SETTING] about:addons>Extensions>[cog-wheel-icon]>Update Add-ons Automatically (toggle) ***/
@@ -256,7 +256,7 @@ user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("app.shield.optoutstudies.enabled", false);
 /* 0343: disable personalized Extension Recommendations in about:addons and AMO [FF65+]
  * [NOTE] This pref has no effect when Health Reports (0340) are disabled
- * [SETTING] Privacy & Security>Firefox Data Collection & Use>...>Allow Firefox to make personalized extension rec.
+ * [SETTING] Privacy & Security>Firefox Data Collection & Use>Allow Firefox to make personalized extension recommendations
  * [1] https://support.mozilla.org/kb/personalized-extension-recommendations ***/
 user_pref("browser.discovery.enabled", false);
 /* 0350: disable Crash Reports ***/
@@ -360,7 +360,6 @@ user_pref("browser.ping-centre.telemetry", false);
 /* 0517: disable Form Autofill
  * [NOTE] Stored data is NOT secure (uses a JSON file)
  * [NOTE] Heuristics controls Form Autofill on forms without @autocomplete attributes
- * [SETTING] Privacy & Security>Forms & Passwords>Autofill addresses
  * [1] https://wiki.mozilla.org/Firefox/Features/Form_Autofill
  * [2] https://www.ghacks.net/2017/05/24/firefoxs-new-form-autofill-is-awesome/ ***/
 user_pref("extensions.formautofill.addresses.enabled", false); // [FF55+]
@@ -410,7 +409,7 @@ user_pref("network.dns.disableIPv6", true);
  * HTTP2 raises concerns with "multiplexing" and "server push", does nothing to
  * enhance privacy, and opens up a number of server-side fingerprinting opportunities.
  * [WARNING] Disabling this made sense in the past, and doesn't break anything, but HTTP2 is
- * at 35% (April 2019) and growing [5]. Don't be that one person using HTTP1.1 on HTTP2 sites
+ * at 40% (December 2019) and growing [5]. Don't be that one person using HTTP1.1 on HTTP2 sites
  * [1] https://http2.github.io/faq/
  * [2] https://blog.scottlogic.com/2014/11/07/http-2-a-quick-look.html
  * [3] https://http2.github.io/http2-spec/#rfc.section.10.8
@@ -517,11 +516,12 @@ user_pref("browser.urlbar.speculativeConnect.enabled", false);
 /* 0850e: disable location bar one-off searches [FF51+]
  * [1] https://www.ghacks.net/2016/08/09/firefox-one-off-searches-address-bar/ ***/
    // user_pref("browser.urlbar.oneOffSearches", false);
-/* 0860: disable search and form history [SETUP-WEB]
- * [WARNING] Autocomplete form data is still (in April 2019) easily read by third parties, see [1]
- * [NOTE] We also clear formdata on exiting Firefox (see 2803)
+/* 0860: disable search and form history
+ * [SETUP-WEB] Be aware thet autocomplete form data can be read by third parties, see [1] [2]
+ * [NOTE] We also clear formdata on exit (see 2803)
  * [SETTING] Privacy & Security>History>Custom Settings>Remember search and form history
- * [1] https://blog.mindedsecurity.com/2011/10/autocompleteagain.html ***/
+ * [1] https://blog.mindedsecurity.com/2011/10/autocompleteagain.html
+ * [2] https://bugzilla.mozilla.org/381681 ***/
 user_pref("browser.formfill.enable", false);
 /* 0862: disable browsing and download history
  * [NOTE] We also clear history and downloads on exiting Firefox (see 2803)
@@ -539,11 +539,11 @@ user_pref("browser.taskbar.previews.enable", false);
 user_pref("_user.js.parrot", "0900 syntax error: the parrot's expired!");
 /* 0901: disable saving passwords
  * [NOTE] This does not clear any passwords already saved
- * [SETTING] Privacy & Security>Forms & Passwords>Ask to save logins and passwords for websites ***/
+ * [SETTING] Privacy & Security>Logins and Passwords>Ask to save logins and passwords for websites ***/
    // user_pref("signon.rememberSignons", false);
-/* 0902: use a master password (recommended if you save passwords)
+/* 0902: use a master password
  * There are no preferences for this. It is all handled internally.
- * [SETTING] Privacy & Security>Forms & Passwords>Use a master password
+ * [SETTING] Privacy & Security>Logins and Passwords>Use a master password
  * [1] https://support.mozilla.org/kb/use-master-password-protect-stored-logins ***/
 /* 0903: set how often Firefox should ask for the master password
  * 0=the first time (default), 1=every time it's needed, 2=every n minutes (see 0904) ***/
@@ -553,7 +553,8 @@ user_pref("security.ask_for_password", 2);
 user_pref("security.password_lifetime", 5);
 /* 0905: disable auto-filling username & password form fields
  * can leak in cross-site forms *and* be spoofed
- * [NOTE] Username & password is still available when you enter the field ***/
+ * [NOTE] Username & password is still available when you enter the field
+ * [SETTING] Privacy & Security>Logins and Passwords>Autofill logins and passwords ***/
 user_pref("signon.autofillForms", false);
 /* 0909: disable formless login capture for Password Manager [FF51+] ***/
 user_pref("signon.formlessCapture.enabled", false);
@@ -722,7 +723,7 @@ user_pref("security.family_safety.mode", 0);
    // user_pref("security.nocertdb", true); // [HIDDEN PREF]
 /* 1223: enforce strict pinning
  * PKP (Public Key Pinning) 0=disabled 1=allow user MiTM (such as your antivirus), 2=strict
- * [WARNING] If you rely on an AV (antivirus) to protect your web browsing
+ * [SETUP-WEB] If you rely on an AV (antivirus) to protect your web browsing
  * by inspecting ALL your web traffic, then leave at current default=1
  * [1] https://trac.torproject.org/projects/tor/ticket/16206 ***/
 user_pref("security.cert_pinning.enforcement_level", 2);
@@ -788,9 +789,10 @@ user_pref("browser.display.use_document_fonts", 0);
 /* 1404: disable rendering of SVG OpenType fonts
  * [1] https://wiki.mozilla.org/SVGOpenTypeFonts - iSECPartnersReport recommends to disable this ***/
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
-/* 1408: disable graphite which FF49 turned back on by default
- * In the past it had security issues. Update: This continues to be the case, see [1]
- * [1] https://www.mozilla.org/security/advisories/mfsa2017-15/#CVE-2017-7778 ***/
+/* 1408: disable graphite
+ * Graphite has had many critical security issues in the past, see [1]
+ * [1] https://www.mozilla.org/security/advisories/mfsa2017-15/#CVE-2017-7778
+ * [2] https://en.wikipedia.org/wiki/Graphite_(SIL) ***/
 user_pref("gfx.font_rendering.graphite.enabled", false);
 /* 1409: limit system font exposure to a whitelist [FF52+] [RESTART]
  * If the whitelist is empty, then whitelisting is considered disabled and all fonts are allowed.
@@ -847,8 +849,8 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 0); // [DEFAULT: 0]
  * [1] https://bugzilla.mozilla.org/1305144 ***/
 user_pref("network.http.referer.hideOnionSource", true);
 /* 1610: ALL: enable the DNT (Do Not Track) HTTP header
- * [NOTE] DNT is enforced with Tracking Protection regardless of this pref
- * [SETTING] Privacy & Security>Content Blocking>Send websites a "Do Not Track"... ***/
+ * [NOTE] DNT is enforced with Enhanced Tracking Protection regardless of this pref
+ * [SETTING] Privacy & Security>Enhanced Tracking Protection>Send websites a "Do Not Track" signal... ***/
 user_pref("privacy.donottrackheader.enabled", true);
 
 /*** [SECTION 1700]: CONTAINERS
@@ -1027,14 +1029,12 @@ user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!
    // user_pref("dom.event.contextmenu.enabled", false);
 /* 2402: disable website access to clipboard events/content
  * [SETUP-WEB] This will break some sites functionality such as pasting into facebook, wordpress
- * this applies to onCut, onCopy, onPaste events - i.e. you have to interact with
- * the website for it to look at the clipboard
- * [1] https://www.ghacks.net/2014/01/08/block-websites-reading-modifying-clipboard-contents-firefox/ ***/
+ * This applies to onCut/onCopy/onPaste events - i.e. it requires interaction with the website
+ * [WARNING] If both 'middlemouse.paste' and 'general.autoScroll' are true (at least one
+ * is default false) then enabling this pref can leak clipboard content, see [2]
+ * [1] https://www.ghacks.net/2014/01/08/block-websites-reading-modifying-clipboard-contents-firefox/
+ * [2] https://bugzilla.mozilla.org/1528289 */
 user_pref("dom.event.clipboardevents.enabled", false);
-/* 2403: disable middlemouse paste leaking clipboard content on Linux after autoscroll
- * Defense in depth if clipboard events are enabled (see 2402)
- * [1] https://bugzilla.mozilla.org/1528289 */
-user_pref("middlemouse.paste", false); // [DEFAULT: false on Windows]
 /* 2404: disable clipboard commands (cut/copy) from "non-privileged" content [FF41+]
  * this disables document.execCommand("cut"/"copy") to protect your clipboard
  * [1] https://bugzilla.mozilla.org/1170911 ***/
@@ -1161,8 +1161,8 @@ user_pref("permissions.manager.defaultsUrl", "");
 /* 2617: remove webchannel whitelist ***/
 user_pref("webchannel.allowObject.urlWhitelist", "");
 /* 2619: enforce Punycode for Internationalized Domain Names to eliminate possible spoofing
- * Firefox has *some* protections, but it is better to be safe than sorry. The downside: it will also
- * display legitimate IDN's punycoded, which might be undesirable for users of non-latin alphabets
+ * Firefox has *some* protections, but it is better to be safe than sorry
+ * [SETUP-WEB] Might be undesirable for non-latin alphabet users since legitimate IDN's are also punycoded
  * [TEST] https://www.xn--80ak6aa92e.com/ (www.apple.com)
  * [1] https://wiki.mozilla.org/IDN_Display_Algorithm
  * [2] https://en.wikipedia.org/wiki/IDN_homograph_attack
@@ -1244,8 +1244,10 @@ user_pref("_user.js.parrot", "2700 syntax error: the parrot's joined the bleedin
  * 0=Accept cookies and site data, 1=(Block) All third-party cookies, 2=(Block) All cookies,
  * 3=(Block) Cookies from unvisited websites, 4=(Block) Cross-site and social media trackers (FF63+) (default FF69+)
  * [NOTE] You can set exceptions under site permissions or use an extension
- * [SETTING] Privacy & Security>Content Blocking>Custom>Choose what to block>Cookies ***/
+ * [NOTE] Enforcing category to custom ensures ETP related prefs are always honored
+ * [SETTING] Privacy & Security>Enhanced Tracking Protection>Custom>Cookies ***/
 user_pref("network.cookie.cookieBehavior", 1);
+user_pref("browser.contentblocking.category", "custom");
 /* 2702: set third-party cookies (i.e ALL) (if enabled, see 2701) to session-only
    and (FF58+) set third-party non-secure (i.e HTTP) cookies to session-only
    [NOTE] .sessionOnly overrides .nonsecureSessionOnly except when .sessionOnly=false and
@@ -1623,7 +1625,7 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
    // user_pref("browser.tabs.closeWindowWithLastTab", false);
    // user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab [FF57+]
    // user_pref("browser.urlbar.decodeURLsOnCopy", true); // see bugzilla 1320061 [FF53+]
-   // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [WINDOWS] [MAC]
+   // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [DEFAULT: false on Linux]
    // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
    // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
 /* UX FEATURES: disable and hide the icons and menus ***/
@@ -1641,130 +1643,11 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
 
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
-     Documentation denoted as [-]. Items deprecated prior to FF61 have been archived at [1], which
+     Documentation denoted as [-]. Items deprecated prior to FF68 have been archived at [1], which
      also provides a link-clickable, viewer-friendly version of the deprecated bugzilla tickets
      [1] https://github.com/ghacksuserjs/ghacks-user.js/issues/123
 ***/
 user_pref("_user.js.parrot", "9999 syntax error: the parrot's deprecated!");
-/* FF61
-// 0501: disable experiments
-   // [1] https://wiki.mozilla.org/Telemetry/Experiments
-   // [-] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1420908,1450801
-user_pref("experiments.enabled", false);
-user_pref("experiments.manifest.uri", "");
-user_pref("experiments.supported", false);
-user_pref("experiments.activeExperiment", false);
-// 2612: disable remote JAR files being opened, regardless of content type [FF42+]
-   // [1] https://bugzilla.mozilla.org/1173171
-   // [2] https://www.fxsitecompat.com/en-CA/docs/2015/jar-protocol-support-has-been-disabled-by-default/
-   // [-] https://bugzilla.mozilla.org/1427726
-user_pref("network.jar.block-remote-files", true);
-// 2613: disable JAR from opening Unsafe File Types
-   // [-] https://bugzilla.mozilla.org/1427726
-user_pref("network.jar.open-unsafe-types", false);
-// ***/
-/* FF62
-// 1803: disable Java plugin
-   // [-] (part5) https://bugzilla.mozilla.org/1461243
-user_pref("plugin.state.java", 0);
-// ***/
-/* FF63
-// 0205: disable GeoIP-based search results
-   // [NOTE] May not be hidden if Firefox has changed your settings due to your locale
-   // [-] https://bugzilla.mozilla.org/1462015
-user_pref("browser.search.countryCode", "US"); // [HIDDEN PREF]
-// 0301a: disable auto-update checks for Firefox
-   // [SETTING] General>Firefox Updates>Never check for updates
-   // [-] https://bugzilla.mozilla.org/1420514
-   // user_pref("app.update.enabled", false);
-// 0503: disable "Savant" Shield study [FF61+]
-   // [-] https://bugzilla.mozilla.org/1457226
-user_pref("shield.savant.enabled", false);
-// 1031: disable favicons in tabs and new bookmarks - merged into browser.chrome.site_icons
-   // [-] https://bugzilla.mozilla.org/1453751
-   // user_pref("browser.chrome.favicons", false);
-// 2030: disable autoplay of HTML5 media - replaced by media.autoplay.default
-   // This may break video playback on various sites
-   // [-] https://bugzilla.mozilla.org/1470082
-user_pref("media.autoplay.enabled", false);
-// 2704: set cookie lifetime in days (see 2703)
-   // [-] https://bugzilla.mozilla.org/1457170
-   // user_pref("network.cookie.lifetime.days", 90); // [DEFAULT: 90]
-// 5000's: enable "Ctrl+Tab cycles through tabs in recently used order" - replaced by browser.ctrlTab.recentlyUsedOrder
-   // [-] https://bugzilla.mozilla.org/1473595
-   // user_pref("browser.ctrlTab.previews", true);
-// ***/
-/* FF64
-// 0516: disable Onboarding [FF55+]
-   // Onboarding is an interactive tour/setup for new installs/profiles and features. Every time
-   // about:home or about:newtab is opened, the onboarding overlay is injected into that page
-   // [NOTE] Onboarding uses Google Analytics [2], and leaks resource://URIs [3]
-   // [1] https://wiki.mozilla.org/Firefox/Onboarding
-   // [2] https://github.com/mozilla/onboard/commit/db4d6c8726c89a5d6a241c1b1065827b525c5baf
-   // [3] https://bugzilla.mozilla.org/863246#c154
-   // [-] https://bugzilla.mozilla.org/1462415
-user_pref("browser.onboarding.enabled", false);
-// 2608: disable WebIDE ADB extension downloads - both renamed
-   // [1] https://trac.torproject.org/projects/tor/ticket/16222
-   // [-] https://bugzilla.mozilla.org/1491315
-user_pref("devtools.webide.autoinstallADBHelper", false);
-user_pref("devtools.webide.adbAddonURL", "");
-// 2681: disable CSP violation events [FF59+]
-   // [1] https://developer.mozilla.org/docs/Web/API/SecurityPolicyViolationEvent
-   // [-] https://bugzilla.mozilla.org/1488165
-user_pref("security.csp.enable_violation_events", false);
-// ***/
-/* FF65
-// 0850a: disable location bar autocomplete and suggestion types
-   // If you enforce any of the suggestion types (see the other 0850a), you MUST enforce 'autocomplete'
-   //   - If *ALL* of the suggestion types are false, 'autocomplete' must also be false
-   //   - If *ANY* of the suggestion types are true, 'autocomplete' must also be true
-   // [-] https://bugzilla.mozilla.org/1502392
-user_pref("browser.urlbar.autocomplete.enabled", false);
-// 0908: remove user & password info when attempting to fix an entered URL (i.e. 0802 is true)
-   // e.g. //user:password@foo -> //user@(prefix)foo(suffix) NOT //user:password@(prefix)foo(suffix)
-   // [-] https://bugzilla.mozilla.org/1510580
-user_pref("browser.fixup.hide_user_pass", true); // [DEFAULT: true]
-// ***/
-/* FF66
-// 0380: disable Browser Error Reporter [FF60+]
-   // [1] https://support.mozilla.org/en-US/kb/firefox-nightly-error-collection
-   // [2] https://firefox-source-docs.mozilla.org/browser/browser/BrowserErrorReporter.html
-   // [-] https://bugzilla.mozilla.org/1509888
-user_pref("browser.chrome.errorReporter.enabled", false);
-user_pref("browser.chrome.errorReporter.submitUrl", "");
-// 0502: disable Mozilla permission to silently opt you into tests
-   // [-] https://bugzilla.mozilla.org/1415625
-user_pref("network.allow-experiments", false);
-// ***/
-/* FF67
-// 2428: enforce DOMHighResTimeStamp API
-   // [WARNING] Required for normalization of timestamps and any timer resolution mitigations
-   // [-] https://bugzilla.mozilla.org/1485264
-user_pref("dom.event.highrestimestamp.enabled", true); // [DEFAULT: true]
-// 5000's: disable CFR [FF64+] - split into two new prefs: *cfr.addons, *cfr.features
-   // [SETTING] General>Browsing>Recommend extensions as you browse
-   // [1] https://support.mozilla.org/en-US/kb/extension-recommendations
-   // [-] https://bugzilla.mozilla.org/1528953
-   // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false);
-// ***/
-/* FF68
-// 0105b: disable Activity Stream Legacy Snippets
-   // [-] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1546190,1540939
-user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
-user_pref("browser.aboutHomeSnippets.updateUrl", "");
-// 0307: disable auto updating of lightweight themes (LWT)
-   // Not to be confused with themes in 0301* + 0302*, which use the FF55+ Theme API
-   // Mozilla plan to convert existing LWTs and remove LWT support in the future, see [1]
-   // [1] https://blog.mozilla.org/addons/2018/09/20/future-themes-here/
-   // [-] (part3b) https://bugzilla.mozilla.org/1525762
-user_pref("lightweightThemes.update.enabled", false);
-// 2682: enable CSP 1.1 experimental hash-source directive [FF29+]
-   // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=855326,883975
-   // [-] https://bugzilla.mozilla.org/1386214
-user_pref("security.csp.experimentalEnabled", true);
-// ***/
-
 /* ESR68.x still uses all the following prefs
 // [NOTE] replace the * with a slash in the line above to re-enable them
 // FF69
@@ -1797,7 +1680,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 18.12.2019 (commit: a1cdbc8); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 19.12.2019 (commit: 07c128a); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1878,6 +1761,7 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
 USEFUL/INTERESTING EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
+  Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
   Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
