@@ -18,7 +18,7 @@ $tmpProfilePath = "$tmpFolder\Firefox\Profiles\$($newProfilePath.split('\')[-1])
 $userProfileFiles = @('cert9.db','content-prefs.sqlite','favicons.sqlite','handlers.json','key4.db','logins.json','permissions.sqlite','persdict.dat','pkcs11.txt','places.sqlite')
 $userProfileFiles | ForEach-Object { Copy-Item -Path "$oldProfilePath\$_" -Destination "$tmpProfilePath\$_" -Force -ErrorAction SilentlyContinue }
 
-Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$((Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')).zip"
+Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$((Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')).zip" -CompressionLevel Fastest
 Write-Verbose -Message "Backup: $($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$((Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')).zip"
 
 Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force
@@ -32,7 +32,7 @@ Start-Process -FilePath 'firefox.exe' -ArgumentList '-safe-mode'
 
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue) -eq $null)
 $firefoxSafeModeApp = New-Object -ComObject wscript.shell
-$firefoxSafeModeApp.AppActivate('Firefox Safe Mode')
+$firefoxSafeModeApp.AppActivate('Firefox Safe Mode') | Out-Null
 Start-Sleep -Milliseconds 1000
 $firefoxSafeModeApp.SendKeys('~')
 Remove-Variable -Name firefoxSafeModeApp
