@@ -1,4 +1,6 @@
-﻿Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | ? { $_.CloseMainWindow() | Out-Null }
+﻿if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
+
+Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | ? { $_.CloseMainWindow() | Out-Null }
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue) -ne $null)
 
 $tmpFile = New-TemporaryFile
