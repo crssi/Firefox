@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1577551755700,
+  "when": 1577557118300,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -182,6 +182,8 @@
     "* lib.sinaapp.com * allow",
     "* libs.baidu.com * allow",
     "* localhost * block",
+    "* s.ytimg.com css allow",
+    "* s.ytimg.com script allow",
     "* sdn.geekzu.org * allow",
     "* ssl.p.jwpcdn.com script allow",
     "* upcdn.b0.upaiyun.com * allow",
