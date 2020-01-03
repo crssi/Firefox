@@ -138,7 +138,7 @@
 ||sitebot.ai^$third-party
 ||smartfocus.com^$third-party
 ||smind.*^$third-party
-||sportradar.com^$third-party
+!||sportradar.com^$third-party
 ||spot.im^$third-party
 !||swiftypecdn.com^$third-party,script
 ||syndication.twitter.*^
