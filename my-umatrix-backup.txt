@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1577557118300,
+  "when": 1578312457000,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -41,7 +41,6 @@
     "popupScopeLevel": "site",
     "processHyperlinkAuditing": true,
     "selectedHostsFiles": [
-      "http://www.urlvir.com/export-hosts/",
       "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt",
       "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
       "https://hosts-file.net/emd.txt",
@@ -178,14 +177,10 @@
     "* cdn.jsdelivr.net * allow",
     "* cdnjs.cloudflare.com * allow",
     "* code.jquery.com * allow",
-    "* content.jwplatform.com script allow",
     "* lib.sinaapp.com * allow",
     "* libs.baidu.com * allow",
     "* localhost * block",
-    "* s.ytimg.com css allow",
-    "* s.ytimg.com script allow",
     "* sdn.geekzu.org * allow",
-    "* ssl.p.jwpcdn.com script allow",
     "* upcdn.b0.upaiyun.com * allow",
     "* yandex.st * allow",
     "* yastatic.net * allow",
