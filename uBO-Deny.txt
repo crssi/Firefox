@@ -167,7 +167,7 @@
 ||icfcdn.com^$~stylesheet,~image,~font
 
 ! 1/8/2019, 3:16:12 PM trustedreviews.com
-||ti-media.net^
+||ti-media.net^$~stylesheet,~image
 ||eagleapi.io^
 ! 1/8/2019, 3:19:59 PM techradar.com
 ||hawk-assets.co.uk^

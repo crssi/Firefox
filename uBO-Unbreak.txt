@@ -76,6 +76,14 @@
 ! https://devcentral.f5.com/s/articles/the-big-ip-application-security-manager-part-7-geolocation
 @@||content.force.com^$third-party,image
 
+! 1/6/2020 https://www.cnet.com/news/samsung-shows-the-wall-microled-tv-at-292-inches-8k-at-150-inches/
+@@||cbsi.com/dist/optanon.js$script
+@@||cookielaw.org/*/otBannerSdk.js$script
+@@||cookielaw.org/*/otPcPanel.json$xhr
+@@||cookielaw.org/*/otSDKStub.js$script
+@@||cookielaw.org/consent/*$xhr
+@@||tiqcdn.com/*/utag.js$script
+
 ! ALLOW JS library, since they are covered by Decentraleyes WE, see: https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions#for-umatrix-and-ublock-origin-non-easy-mode-users
 @@||ajax.aspnetcdn.com^$third-party,script
 @@||ajax.googleapis.com^$third-party,script
