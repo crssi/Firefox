@@ -49,6 +49,7 @@
 @@||google.*^$third-party,script,domain=youtube.com
 @@||google.com/uds/*visualization$third-party,script,stylesheet
 @@||gravatar.com^$third-party,image,stylesheet
+@@||ibb.co^$third-party,image
 @@||instagram.com^$third-party,script
 @@||jwpcdn.com^$third-party,font
 @@||maps-api-ssl.google.com^$third-party,script,image
