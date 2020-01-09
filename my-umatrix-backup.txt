@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1578312457000,
+  "when": 1578506138400,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -17,7 +17,6 @@
     "deleteLocalStorage": false,
     "displayTextSize": "15px",
     "externalHostsFiles": [
-      "http://www.urlvir.com/export-hosts/",
       "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt",
       "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
       "https://hosts-file.net/emd.txt",
