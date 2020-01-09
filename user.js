@@ -113,7 +113,6 @@ user_pref("browser.newtab.preload", false);
 /* 0105a: disable Activity Stream telemetry ***/
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
 /* 0105b: disable Activity Stream Snippets
  * Runs code received from a server (aka Remote Code Execution) and sends information back to a metrics server
  * [1] https://abouthome-snippets-service.readthedocs.io/ ***/
@@ -238,7 +237,6 @@ user_pref("toolkit.telemetry.shutdownPingSender.enabled", false); // [FF55+]
 user_pref("toolkit.telemetry.updatePing.enabled", false); // [FF56+]
 user_pref("toolkit.telemetry.bhrPing.enabled", false); // [FF57+] Background Hang Reporter
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false); // [FF57+]
-user_pref("toolkit.telemetry.hybridContent.enabled", false); // [FF59+]
 /* 0331: disable Telemetry Coverage
  * [1] https://blog.mozilla.org/data/2018/08/20/effectively-measuring-search-in-firefox/ ***/
 user_pref("toolkit.telemetry.coverage.opt-out", true); // [HIDDEN PREF]
@@ -1265,14 +1263,6 @@ user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true); // [FF58+]
  * [WARNING] This will break a LOT of sites' functionality AND extensions!
  * You are better off using an extension for more granular control ***/
    // user_pref("dom.storage.enabled", false);
-/* 2720: enforce IndexedDB (IDB) as enabled
- * IDB is required for extensions and Firefox internals (even before FF63 in [1])
- * To control *website* IDB data, control allowing cookies and service workers, or use
- * Temporary Containers. To mitigate *website* IDB, FPI helps (4001), and/or sanitize
- * on close (Offline Website Data, see 2800) or on-demand (Ctrl-Shift-Del), or automatically
- * via an extension. Note that IDB currently cannot be sanitized by host.
- * [1] https://blog.mozilla.org/addons/2018/08/03/new-backend-for-storage-local-api/ ***/
-user_pref("dom.indexedDB.enabled", true); // [DEFAULT: true]
 /* 2730: disable offline cache ***/
 user_pref("browser.cache.offline.enable", false);
 /* 2740: disable service worker cache and cache storage
@@ -1677,6 +1667,23 @@ user_pref("devtools.webide.autoinstallADBExtension", false); // [FF64+]
    // [-] https://bugzilla.mozilla.org/1574480
 user_pref("offline-apps.allow_by_default", false);
 // * * * /
+// FF72
+// 0105a: disable Activity Stream telemetry
+   // [-] https://bugzilla.mozilla.org/1597697
+user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
+// 0330: disable Hybdrid Content telemetry
+   // [-] https://bugzilla.mozilla.org/1520491
+user_pref("toolkit.telemetry.hybridContent.enabled", false); // [FF59+]
+// 2720: enforce IndexedDB (IDB) as enabled
+   // IDB is required for extensions and Firefox internals (even before FF63 in [1])
+   // To control *website* IDB data, control allowing cookies and service workers, or use
+   // Temporary Containers. To mitigate *website* IDB, FPI helps (4001), and/or sanitize
+   // on close (Offline Website Data, see 2800) or on-demand (Ctrl-Shift-Del), or automatically
+   // via an extension. Note that IDB currently cannot be sanitized by host.
+   // [1] https://blog.mozilla.org/addons/2018/08/03/new-backend-for-storage-local-api/
+   // [-] https://bugzilla.mozilla.org/1488583
+user_pref("dom.indexedDB.enabled", true); // [DEFAULT: true]
+// * * * /
 // ***/
 
 /* END: internal custom pref to test for syntax errors ***/
@@ -1684,7 +1691,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 25.12.2019 (commit: 18ad40a); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 8.1.2020 (commit: e431b32); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1783,6 +1790,7 @@ EXTERNAL APPLICATION:
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 2654  */ user_pref("browser.download.forbid_open_with", true); // disable "open with" in download dialog
+  /* 2803  */ user_pref("privacy.clearOnShutdown.cookies", false); // don't remove Cookies, should be true except if using TC WE Auto mode
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -1810,12 +1818,18 @@ EXTERNAL APPLICATION:
   /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; should be true, except if using WE CanvasBlocker
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
+  /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
+  /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
+  /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
+  // /* 5000e */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+  // /* 5000e */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
+  /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
   /* 5000x */ user_pref("privacy.trackingprotection.fingerprinting.enabled", false); // make sure to be false, since its not ready yet
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
@@ -1826,22 +1840,10 @@ EXTERNAL APPLICATION:
   /* 0850c */ user_pref("browser.urlbar.maxRichResults", 18); // number of urlbar search results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
 
-/*** ENTERPRISE USE SPECIFIC ***/
-  /* 0000  */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
-  /* 0000  */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-  // /* 0000  */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-  // /* 0000  */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-
 /*** TODO ***/
   // /* 0390  */ user_pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/success.txt"); // Captive Portal - WiFi login pages
   // /* 0390  */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
 
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
-
-  // /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
-  // /* 2022  */ user_pref("media.getusermedia.browser.enabled", false); // enable screensharing
-  // /* 2022  */ user_pref("media.getusermedia.audiocapture.enabled", false); // enable screensharing
-
-  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
 
 user_pref("_user.js.parrot", "Eagle has landed.");
