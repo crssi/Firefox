@@ -1705,7 +1705,7 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
      One-Click Search Engines: delete all except DuckDuckGo
-6. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) for network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
+6. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) into preferences network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 7. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
 8. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
@@ -1823,14 +1823,12 @@ EXTERNAL APPLICATION:
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
+  // /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when using TC WE Auto mode?
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-  // /* 5000e */ user_pref("network.automatic-ntlm-auth.trusted-uris", ""); // enable SSO for comma separated domain list
-  // /* 5000e */ user_pref("network.negotiate-auth.trusted-uris", ""); // enable SSO for comma separated domain list
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
-  /* 5000x */ user_pref("privacy.trackingprotection.fingerprinting.enabled", false); // make sure to be false, since its not ready yet
 
 /*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
   /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // this resets 0801 and must be applied before
