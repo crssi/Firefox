@@ -1774,10 +1774,9 @@ USEFUL/INTERESTING EXTENSIONS:
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
-  SmartProxy; https://addons.mozilla.org/firefox/addon/smartproxy/ (https://github.com/salarcode/SmartProxy/)
   Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
 
-EXTERNAL APPLICATION:
+EXTERNAL APPLICATIONS:
   FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/
   PasswordFox; http://www.nirsoft.net/utils/passwordfox.html
 
@@ -1823,7 +1822,7 @@ EXTERNAL APPLICATION:
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
-  // /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when using TC WE Auto mode?
+  /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need non-cross site 3rd party cookies blocked when using TC WE Auto mode?
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
