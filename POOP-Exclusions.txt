@@ -6,7 +6,7 @@
 *.azure.com *.windows.net
 *.cnet.com cnetvideo.cbsistatic.com
 *.dropbox.com *.dropbox*.com
-*.ebay*.* *ebay.*
+*.ebay*.* *.ebay*.*
 *.facebook.com *.fbcdn.net
 *.google*.* *
 *.microsoft.com *.live.com
