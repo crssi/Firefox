@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 19 December 2019
-* version 72-alpha
+* date: 20 January 2020
+* version 72-beta
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -1637,8 +1637,8 @@ user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
 
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
-     Documentation denoted as [-]. Items deprecated prior to FF68 have been archived at [1], which
-     also provides a link-clickable, viewer-friendly version of the deprecated bugzilla tickets
+     Documentation denoted as [-]. Items deprecated in FF68 or earlier have been archived at [1],
+     which also provides a link-clickable, viewer-friendly version of the deprecated bugzilla tickets
      [1] https://github.com/ghacksuserjs/ghacks-user.js/issues/123
 ***/
 user_pref("_user.js.parrot", "9999 syntax error: the parrot's deprecated!");
@@ -1691,7 +1691,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 8.1.2020 (commit: e431b32); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 15.1.2020 (commit: 5d2c5de); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1772,6 +1772,7 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
 USEFUL/INTERESTING EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
+  Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)

@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 8.1.2020 (commit: e431b32); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 15.1.2020 (commit: 5d2c5de); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -81,6 +81,7 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
 USEFUL/INTERESTING EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
+  Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
