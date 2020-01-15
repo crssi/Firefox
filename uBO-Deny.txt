@@ -27,7 +27,7 @@
 ||agilemeasure.com^$third-party
 ||algolianet.com^$third-party
 ||alooma.com^$third-party
-||amazon-adsystem.*^$important
+||amazon-adsystem.*^
 ||ampcid.google.*^$important
 ||aolcdn.com/ads/*$third-party,script
 ||api.stacksocial.com^
