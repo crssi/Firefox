@@ -1,4 +1,4 @@
-if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
+﻿if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
 
 Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | ? { $_.CloseMainWindow() | Out-Null }
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue) -ne $null)
@@ -9,7 +9,7 @@ $tmpFolder = New-Item -Path $tmpFile.DirectoryName -Name $tmpFile.Name -ItemType
 Remove-Variable -Name tmpFile
 
 Import-Module -Name BitsTransfer
-Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder
+Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder -ErrorAction Stop
 
 Expand-Archive -Path "$tmpFolder\Profile.zip" -DestinationPath $tmpFolder
 
@@ -21,7 +21,7 @@ $userProfileFiles = @('cert9.db','content-prefs.sqlite','favicons.sqlite','handl
 $userProfileFiles | ForEach-Object { Copy-Item -Path "$oldProfilePath\$_" -Destination "$tmpProfilePath\$_" -Force -ErrorAction SilentlyContinue }
 
 $timestamp = (Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')
-Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip" -CompressionLevel Fastest
+Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip" -CompressionLevel Fastest -ErrorAction Stop
 
 Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force
 
