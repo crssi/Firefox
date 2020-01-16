@@ -1,4 +1,4 @@
-﻿if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
+if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
 
 Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | ? { $_.CloseMainWindow() | Out-Null }
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue) -ne $null)
@@ -32,8 +32,9 @@ Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath
 
 Start-Process -FilePath 'firefox.exe' -ArgumentList '-safe-mode'
 
-do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue) -eq $null)
+do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue) -eq $null)
 $firefoxSafeModeApp = New-Object -ComObject wscript.shell
+Start-Sleep -Milliseconds 1000
 $firefoxSafeModeApp.AppActivate('Firefox Safe Mode') | Out-Null
 Start-Sleep -Milliseconds 2500
 $firefoxSafeModeApp.SendKeys('~')
@@ -42,7 +43,5 @@ Remove-Variable -Name firefoxSafeModeApp
 Start-Sleep -Milliseconds 2500
 Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | ? { $_.CloseMainWindow() | Out-Null }
 
-do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue) -ne $null)
+do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue) -ne $null)
 Start-Process -FilePath 'firefox.exe'
-
-Write-Verbose -Message "Backup: $($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip"
