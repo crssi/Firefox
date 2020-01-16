@@ -9,7 +9,7 @@ $tmpFolder = New-Item -Path $tmpFile.DirectoryName -Name $tmpFile.Name -ItemType
 Remove-Variable -Name tmpFile
 
 Import-Module -Name BitsTransfer
-Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder -ErrorAction Stop
+try { Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder } catch { Exit }
 
 Expand-Archive -Path "$tmpFolder\Profile.zip" -DestinationPath $tmpFolder
 
@@ -21,7 +21,7 @@ $userProfileFiles = @('cert9.db','content-prefs.sqlite','favicons.sqlite','handl
 $userProfileFiles | ForEach-Object { Copy-Item -Path "$oldProfilePath\$_" -Destination "$tmpProfilePath\$_" -Force -ErrorAction SilentlyContinue }
 
 $timestamp = (Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')
-Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip" -CompressionLevel Fastest -ErrorAction Stop
+try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip" -CompressionLevel Fastest } catch { Remove-Item -Path $tmpFolder -Recurse -Force; Exit }
 
 Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force
 
