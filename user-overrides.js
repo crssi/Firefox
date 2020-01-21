@@ -99,7 +99,6 @@ EXTERNAL APPLICATIONS:
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 2654  */ user_pref("browser.download.forbid_open_with", true); // disable "open with" in download dialog
-  /* 2803  */ user_pref("privacy.clearOnShutdown.cookies", false); // don't remove Cookies, should be true except if using TC WE Auto mode
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -150,7 +149,6 @@ EXTERNAL APPLICATIONS:
 /*** TODO ***/
   // /* 0390  */ user_pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/success.txt"); // Captive Portal - WiFi login pages
   // /* 0390  */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
-
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
 
 user_pref("_user.js.parrot", "Eagle has landed.");
