@@ -9,6 +9,7 @@
 *.ebay*.* *.ebay*.*
 *.facebook.com *.fbcdn.net
 *.google*.* *
+*.icloud.com *.apple*.com
 *.microsoft.com *.live.com
 *.microsoft.com *.office.*
 *.microsoft.com *.sharepoint.com
