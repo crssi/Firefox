@@ -43,6 +43,7 @@
 @@||facebook.*^$domain=facebook.com
 @@||fbcdn.*^$domain=facebook.com
 @@||fbcdn.*^$third-party,image,media
+@@||gfycat.com/ifr/*$third-party,subdocument
 @@||google-analytics.com/analytics.js$third-party,script,domain=amainhobbies.com
 @@||google.*/cse/*$third-party,script,stylesheet,domain=pastebin.com
 @@||google.*^$domain=google.com|googleapis.com
