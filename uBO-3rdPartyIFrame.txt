@@ -25,6 +25,7 @@
 @@||dropboxusercontent.com^$third-party,subdocument,domain=dropbox.com
 @@||e.infogram.com^$third-party,subdocument
 @@||fiddle.jshell.*^$third-party,subdocument,domain=jsfiddle.net
+@@||flightstats.com^$third-party,subdocument
 @@||fncstatic.com^$third-party,subdocument,domain=foxnews.com
 @@||forms.hsforms.com^$third-party,subdocument
 @@||gateway.hbogo.eu^$third-party,subdocument,domain=hbogo.si
