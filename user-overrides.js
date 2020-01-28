@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 15.1.2020 (commit: 5d2c5de); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 24.1.2020 (commit: 7619e31); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -33,6 +33,7 @@ ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     On install page click apply to Convenient and Stealth settings
     General -> Expert mode: Check
+    APIs -> DOMRect API -> Protected API features -> getBoundingClientRect: Uncheck
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
@@ -76,16 +77,16 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
-  Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
-  Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
+  Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
+  Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
 
 EXTERNAL APPLICATIONS:
