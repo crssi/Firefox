@@ -134,7 +134,6 @@ EXTERNAL APPLICATIONS:
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
-  /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need non-cross site 3rd party cookies blocked when using TC WE Auto mode?
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
@@ -153,5 +152,6 @@ EXTERNAL APPLICATIONS:
   // /* 0390  */ user_pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/success.txt"); // Captive Portal - WiFi login pages
   // /* 0390  */ user_pref("network.captive-portal-service.enabled", true); // Captive Portal detection - WiFi login pages
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+  // /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need non-cross site 3rd party cookies blocked when using TC WE Auto mode?
 
 user_pref("_user.js.parrot", "Eagle has landed.");
