@@ -42,6 +42,7 @@
 @@||jsfiddle.net^$third-party,subdocument,domain=svgjs.com
 @@||jwpsrv.com^$third-party,subdocument
 @@||live.com^$third-party,subdocument,domain=microsoft.com
+@@||liveleak.com^$third-party,subdocument
 @@||mapsengine.google.com/map/embed$third-party,subdocument
 @@||mcafeemobilesecurity.com^$third-party,subdocument,domain=mcafee.com
 @@||microsoftazuread-sso.com^$third-party,domain=microsoftonline.com
