@@ -10,73 +10,73 @@
 
 ! broadway.com
 ! maybe remove list https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
-@@||players.brightcove.net^$third-party,script
-@@||brightcove.com^$third-party,xmlhttprequest
-@@||media.brightcove.com^$third-party,image
+@@||players.brightcove.net^$3p,script
+@@||brightcove.com^$3p,xmlhttprequest
+@@||media.brightcove.com^$3p,image
 
 ! iFrames/subdocument
-@@||instagram.com/p/$third-party,subdocument
-@@||accounts.google.*/ServiceLogin$third-party,subdocument
-@@||checkfront.com/reserve/*$third-party,subdocument
-@@||codepen.io^$third-party,subdocument
-@@||google.*/maps/*$third-party,subdocument
-@@||google.*/recaptcha/$third-party,subdocument
-@@||googleapis.com^$third-party,subdocument,domain=google.com|google.si
-@@||googleusercontent.com^$third-party,subdocument,domain=google.com|google.si
+@@||instagram.com/p/$3p,subdocument
+@@||accounts.google.*/ServiceLogin$3p,subdocument
+@@||checkfront.com/reserve/*$3p,subdocument
+@@||codepen.io^$3p,subdocument
+@@||google.*/maps/*$3p,subdocument
+@@||google.*/recaptcha/$3p,subdocument
+@@||googleapis.com^$3p,subdocument,domain=google.com|google.si
+@@||googleusercontent.com^$3p,subdocument,domain=google.com|google.si
 
 ||hudo.com^$inline-script
 @@/clarity-*.js$first-party,script
-@@||24ur.*^$third-party,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
+@@||24ur.*^$3p,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
 @@||ads.api.24ur.si^$xmlhttprequest,domain=24ur.com
 @@||advertising.com^$first-party
 ||advertising.com^$~document
-@@||apis.google.com^$third-party,script,domain=content.googleapis.com
+@@||apis.google.com^$3p,script,domain=content.googleapis.com
 @@||apple.com^$subdocument,domain=icloud.com
-@@||assets-jpcust.jwpsrv.com^$third-party,image
-@@||assets.adobedtm.com^$third-party,script
-@@||cdn.jwplayer.com^$third-party,xmlhttprequest
-@@||cdn.nrholding.net/*/*/$third-party,image
-@@||cloudfront.net$third-party,image,font,stylesheet
-@@||content.jwplatform.com^$third-party,xmlhttprequest,script
-@@||drive.google.com^$third-party,image
+@@||assets-jpcust.jwpsrv.com^$3p,image
+@@||assets.adobedtm.com^$3p,script
+@@||cdn.jwplayer.com^$3p,xmlhttprequest
+@@||cdn.nrholding.net/*/*/$3p,image
+@@||cloudfront.net$3p,image,font,stylesheet
+@@||content.jwplatform.com^$3p,xmlhttprequest,script
+@@||drive.google.com^$3p,image
 @@||dropboxstatic.com/*/social_icon$stylesheet,domain=dropbox.com
 @@||facebook.*^$domain=facebook.com
 @@||fbcdn.*^$domain=facebook.com
-@@||fbcdn.*^$third-party,image,media
-@@||gfycat.com/ifr/*$third-party,subdocument
-@@||google-analytics.com/analytics.js$third-party,script,domain=amainhobbies.com
-@@||google.*/cse/*$third-party,script,stylesheet,domain=pastebin.com
+@@||fbcdn.*^$3p,image,media
+@@||gfycat.com/ifr/*$3p,subdocument
+@@||google-analytics.com/analytics.js$3p,script,domain=amainhobbies.com
+@@||google.*/cse/*$3p,script,stylesheet,domain=pastebin.com
 @@||google.*^$domain=google.com|googleapis.com
-@@||google.*^$third-party,script,domain=youtube.com
-@@||google.com/uds/*visualization$third-party,script,stylesheet
-@@||gravatar.com^$third-party,image,stylesheet
-@@||ibb.co^$third-party,image
-@@||instagram.com^$third-party,script
-@@||jwpcdn.com^$third-party,font
-@@||maps-api-ssl.google.com^$third-party,script,image
-@@||maps.google.*/maps*$third-party,script,image
+@@||google.*^$3p,script,domain=youtube.com
+@@||google.com/uds/*visualization$3p,script,stylesheet
+@@||gravatar.com^$3p,image,stylesheet
+@@||ibb.co^$3p,image
+@@||instagram.com^$3p,script
+@@||jwpcdn.com^$3p,font
+@@||maps-api-ssl.google.com^$3p,script,image
+@@||maps.google.*/maps*$3p,script,image
 @@||maps.googleapis.com/maps*$script,image,xmlhttprequest
-@@||mozilla.org^$third-party,xmlhttprequest,domain=mozilla.com
-@@||omara.cdn-cnj.si^$third-party,script
-@@||paypal.com^$third-party,subdocument,popup
-@@||pictures.zooplus.com^$third-party,script,image,domain=www.zoohit.si
-@@||platform.twitter.com^$third-party,stylesheet,image,script
-@@||play.vidyard.com^$third-party,subdocument,script
+@@||mozilla.org^$3p,xmlhttprequest,domain=mozilla.com
+@@||omara.cdn-cnj.si^$3p,script
+@@||paypal.com^$3p,subdocument,popup
+@@||pictures.zooplus.com^$3p,script,image,domain=www.zoohit.si
+@@||platform.twitter.com^$3p,stylesheet,image,script
+@@||play.vidyard.com^$3p,subdocument,script
 @@||translate.googleusercontent.com
-@@||ubisoft.com^$third-party,domain=ubi.com
-@@||use.typekit.net^$third-party,font,stylesheet,script
+@@||ubisoft.com^$3p,domain=ubi.com
+@@||use.typekit.net^$3p,font,stylesheet,script
 @@||vidyard.com^$domain=play.vidyard.com
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
-@@||ytimg.com^$third-party,script
-@@||zdassets.com^$third-party,image,stylesheet,script
+@@||ytimg.com^$3p,script
+@@||zdassets.com^$3p,image,stylesheet,script
 
 
 ! corp-internal.com
-@@||fast.wistia.com^$third-party,script
-@@||embed.wistia.com^$third-party,media,image
+@@||fast.wistia.com^$3p,script
+@@||embed.wistia.com^$3p,media,image
 
 ! https://devcentral.f5.com/s/articles/the-big-ip-application-security-manager-part-7-geolocation
-@@||content.force.com^$third-party,image
+@@||content.force.com^$3p,image
 
 ! 1/6/2020 https://www.cnet.com/news/samsung-shows-the-wall-microled-tv-at-292-inches-8k-at-150-inches/
 @@||cbsi.com/dist/optanon.js$script
@@ -87,18 +87,18 @@
 @@||tiqcdn.com/*/utag.js$script
 
 ! ALLOW JS library, since they are covered by Decentraleyes WE, see: https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions#for-umatrix-and-ublock-origin-non-easy-mode-users
-@@||ajax.aspnetcdn.com^$third-party,script
-@@||ajax.googleapis.com^$third-party,script
-@@||ajax.microsoft.com^$third-party,script
-@@||ajax.proxy.ustclug.org^$third-party,script
-@@||apps.bdimg.com^$third-party,script
-@@||cdn.bootcss.com^$third-party,script
-@@||cdn.jsdelivr.net^$third-party,script
-@@||cdnjs.cloudflare.com^$third-party,script
-@@||code.jquery.com^$third-party,script
-@@||lib.sinaapp.com^$third-party,script
-@@||libs.baidu.com^$third-party,script
-@@||sdn.geekzu.org^$third-party,script
-@@||upcdn.b0.upaiyun.com^$third-party,script
-@@||yandex.st^$third-party,script
-@@||yastatic.net^$third-party,script
+@@||ajax.aspnetcdn.com^$3p,script
+@@||ajax.googleapis.com^$3p,script
+@@||ajax.microsoft.com^$3p,script
+@@||ajax.proxy.ustclug.org^$3p,script
+@@||apps.bdimg.com^$3p,script
+@@||cdn.bootcss.com^$3p,script
+@@||cdn.jsdelivr.net^$3p,script
+@@||cdnjs.cloudflare.com^$3p,script
+@@||code.jquery.com^$3p,script
+@@||lib.sinaapp.com^$3p,script
+@@||libs.baidu.com^$3p,script
+@@||sdn.geekzu.org^$3p,script
+@@||upcdn.b0.upaiyun.com^$3p,script
+@@||yandex.st^$3p,script
+@@||yastatic.net^$3p,script
