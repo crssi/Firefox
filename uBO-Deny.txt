@@ -39,7 +39,7 @@
 ||bestofmedia.com^$3p
 ||bf-ad.*^$important
 ||blitzen.com^$3p
-||blogsmithmedia.com^$3p,xmlhttprequest
+||blogsmithmedia.com^$3p,xhr
 ||booster3000.si^$3p
 ||calculoid.com^$3p,script
 ||cdn-cnj.si^$3p,script
@@ -128,7 +128,7 @@
 ||qq.com^$3p
 ||quantserve.com^$3p
 ||s.aolcdn.com/ads/*$3p,script
-||s*.wp.com^$3p,script,xmlhttprequest
+||s*.wp.com^$3p,script,xhr
 ||salesforceliveagent.com^$3p
 !||sb.scorecardresearch.com^$important
 ||scorecardresearch.com^$important
@@ -148,7 +148,7 @@
 ||trustpilot.com^$3p
 ||tsmedia.si^$3p
 ||twitter.*^$3p
-||typography.com^$3p,~stylesheet,~xmlhttprequest
+||typography.com^$3p,~stylesheet,~xhr
 !||unpkg.com^$3p
 ||upscore.com^$3p
 ||urbanairship.com^$3p
@@ -173,6 +173,6 @@
 ||hawk-assets.co.uk^
 ||hawk-tech.co.uk^
 ||future-fie.co.uk^
-||futurecdn.net^$xmlhttprequest
+||futurecdn.net^$xhr
 ! 1/8/2019, 3:34:55 PM logitechg.com
-||channelsight.com^$xmlhttprequest
+||channelsight.com^$xhr
