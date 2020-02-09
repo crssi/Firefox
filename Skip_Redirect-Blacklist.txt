@@ -47,6 +47,7 @@ icloud.com/
 logout=
 malc0de.com/
 malwaredomainlist.com/
+mandrillapp.com/track/
 medium.com/
 microsofttranslator.com/
 paypal.com/

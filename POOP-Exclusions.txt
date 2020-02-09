@@ -1,5 +1,6 @@
 * *.braintreegateway.com
 * edge.api.brightcove.com
+*.*inn.com *.*inn.com
 *.ali*.com *.ali*.com
 *.amazon.* *.*amazon.com
 *.azure.com *.microsoft.com
