@@ -25,7 +25,6 @@
 ||adservice.google.*^$important
 ||adtech.*^$important
 ||agilemeasure.com^$3p
-||algolianet.com^$3p
 ||alooma.com^$3p
 ||amazon-adsystem.*^
 ||ampcid.google.*^$important
