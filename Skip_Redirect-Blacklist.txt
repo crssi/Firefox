@@ -61,7 +61,6 @@ translate.google.com/
 twitter.com/
 ubi.com/
 virustotal.com/
-web.archive.org/
 webcache.googleusercontent.com/
 wego.here.com/
 youtube.com/embed/
