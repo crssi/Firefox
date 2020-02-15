@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1579722540500,
+  "when": 1581778308000,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -19,7 +19,6 @@
     "externalHostsFiles": [
       "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt",
       "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
-      "https://hosts-file.net/emd.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
       "https://v.firebog.net/hosts/Airelle-hrsk.txt",
@@ -41,7 +40,6 @@
     "selectedHostsFiles": [
       "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt",
       "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
-      "https://hosts-file.net/emd.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
       "https://v.firebog.net/hosts/Airelle-hrsk.txt",
