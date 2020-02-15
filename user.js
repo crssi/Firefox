@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 24 January 2020
-* version 72
+* date: 14 February 2020
+* version 73-alpha
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -1080,10 +1080,6 @@ user_pref("_user.js.parrot", "2500 syntax error: the parrot's shuffled off 'is m
  * [NOTE] From FF52+ Battery Status API is only available in chrome/privileged code. see [1]
  * [1] https://bugzilla.mozilla.org/1313580 ***/
    // user_pref("dom.battery.enabled", false);
-/* 2504: disable virtual reality devices
- * Optional protection depending on your connected devices
- * [1] https://developer.mozilla.org/docs/Web/API/WebVR_API ***/
-   // user_pref("dom.vr.enabled", false);
 /* 2505: disable media device enumeration [FF29+]
  * [NOTE] media.peerconnection.enabled should also be set to false (see 2001)
  * [1] https://wiki.mozilla.org/Media/getUserMedia
@@ -1104,6 +1100,15 @@ user_pref("dom.webaudio.enabled", false);
  * [1] https://github.com/WICG/media-capabilities
  * [2] https://wicg.github.io/media-capabilities/#security-privacy-considerations ***/
    // user_pref("media.media-capabilities.enabled", false);
+/* 2520: disable virtual reality devices
+ * Optional protection depending on your connected devices
+ * [1] https://developer.mozilla.org/docs/Web/API/WebVR_API ***/
+   // user_pref("dom.vr.enabled", false);
+/* 2521: set a default permission for Virtual Reality (see 2520) [FF73+]
+ * 0=always ask (default), 1=allow, 2=block
+ * [SETTING] to add site exceptions: Page Info>Permissions>Access Virtual Reality Devices
+ * [SETTING] to manage site exceptions: Options>Privacy & Security>Permissions>Virtual Reality>Settings ***/
+   // user_pref("permissions.default.xr", 0);
 
 /*** [SECTION 2600]: MISCELLANEOUS ***/
 user_pref("_user.js.parrot", "2600 syntax error: the parrot's run down the curtain!");
@@ -1429,10 +1434,11 @@ user_pref("privacy.firstparty.isolate", true);
       FF65: pointerEvent.pointerid (1492766)
  ** 1485266 - disable exposure of system colors to CSS or canvas (see 4615) (FF67+)
  ** 1407366 - enable inner window letterboxing (see 4504) (FF67+)
- ** 1540726 - return "light" with prefers-color-scheme (see 4616) (FF67+)
+ ** 1494034 - return "light" with prefers-color-scheme (see 4616) (FF67+)
       [1] https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
  ** 1564422 - spoof audioContext outputLatency (FF70+)
  ** 1595823 - spoof audioContext sampleRate (FF72+)
+ ** 1607316 - spoof pointer as coarse and hover as none (ANDROID) (FF74+)
 ***/
 user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs");
 /* 4501: enable privacy.resistFingerprinting [FF41+]
@@ -1555,12 +1561,12 @@ user_pref("dom.w3c_pointer_events.enabled", false);
 // * * * /
 // FF67+
 // 4615: [2618] disable exposure of system colors to CSS or canvas [FF44+]
-  // [NOTE] See second listed bug: may cause black on black for elements with undefined colors
-  // [SETUP-CHROME] Might affect CSS in themes and extensions
-  // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=232227,1330876
+   // [NOTE] See second listed bug: may cause black on black for elements with undefined colors
+   // [SETUP-CHROME] Might affect CSS in themes and extensions
+   // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=232227,1330876
 user_pref("ui.use_standins_for_native_colors", true);
 // 4616: enforce prefers-color-scheme as light [FF67+]
-  // 0=light, 1=dark : This overrides your OS value
+   // 0=light, 1=dark : This overrides your OS value
 user_pref("ui.systemUsesDarkTheme", 0); // [HIDDEN PREF]
 // * * * /
 // ***/
@@ -1691,7 +1697,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 10.2.2020 (commit: 03f558b); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 14.2.2020 (commit: 5f3e3b2); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
