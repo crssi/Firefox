@@ -40,6 +40,7 @@ action=login
 alipay.com/
 archive.is/
 chart.googleapis.com/chart
+duckduckgo.com/
 github.io/
 hideproxy.me/
 hosts-file.net/
