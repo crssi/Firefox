@@ -7,7 +7,7 @@
 
 
 ! CNAME
-@@||youtube-ui.*.google.com^$3p,image,xhr,stylesheet,domain=www.youtube.com
+@@||google.com^$3p,domain=www.youtube.com
 
 
 @@||media.brightcove.com^$media,domain=players.brightcove.net
