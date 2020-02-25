@@ -6,7 +6,7 @@
 
 !CNAME
 @@||amazonaws.com^$3p,subdocument
-
+||amazonaws.com/*banners*$3p,subdocument,important
 
 !@@||gfycat.com/ifr/*$3p,subdocument
 @@*/lwa/WebPages/LwaClient.aspx$3p,subdocument
