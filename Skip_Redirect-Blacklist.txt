@@ -40,6 +40,7 @@ action=login
 alipay.com/
 archive.is/
 chart.googleapis.com/chart
+github.io/
 hideproxy.me/
 hosts-file.net/
 i-dont-care-about-cookies.eu/
