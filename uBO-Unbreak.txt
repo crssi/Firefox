@@ -9,8 +9,7 @@
 ! CNAME
 @@||gstaticadssl.*.google.com^$3p,font
 @@||footprint.net^$3p,image
-@@||google.com^$3p,domain=youtube.com
-@@||google.com^$3p,xhr,domain=youtube-nocookie.com
+@@||google.com^$3p,domain=youtube.com,youtube-nocookie.com
 
 
 @@||media.brightcove.com^$media,domain=players.brightcove.net
