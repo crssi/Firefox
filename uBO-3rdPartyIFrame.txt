@@ -74,6 +74,7 @@
 @@||tumblr.com^$3p,subdocument,domain=instagram.com
 @@||twitter.com/i/videos/$3p,subdocument
 @@||vox-cdn.com^$3p,subdocument
+@@||wargaming.net^$3p,subdocument,domain=worldoftanks.eu
 @@||wavesecure.com^$3p,subdocument,domain=mcafee.com
 @@||wsimg.com^$3p,subdocument,domain=godaddy.com
 @@||www.zuora.com/apps/PublicHostedPageLite.do$3p,subdocument
