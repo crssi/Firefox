@@ -1,6 +1,6 @@
 {
-  "version": "1.7",
-  "date": 1576000010900,
+  "version": "1.8",
+  "date": 1582731613600,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -13,7 +13,7 @@
       "colorRandom": true,
       "icon": "circle",
       "iconRandom": false,
-      "numberMode": "reuse",
+      "numberMode": "keepuntilrestart",
       "removal": 900000,
       "colorRandomExcluded": [
         "toolbar"
@@ -40,7 +40,9 @@
             "container": "default"
           }
         },
-        "excluded": {},
+        "excluded": {
+          "duckduckgo.com": {}
+        },
         "excludedContainers": []
       },
       "domain": [
@@ -166,6 +168,9 @@
       "popupDefaultTab": "isolation-global"
     },
     "ignoreRequestsToAMO": true,
-    "ignoreRequestsToPocket": true
+    "ignoreRequestsToPocket": true,
+    "scripts": {
+      "domain": {}
+    }
   }
 }
