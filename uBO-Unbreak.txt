@@ -10,6 +10,7 @@
 @@||gstaticadssl.*.google.com^$3p,font
 @@||footprint.net^$3p,image
 @@||google.com^$3p,domain=youtube.com,youtube-nocookie.com
+@@||ytimg.*.google.com^$3p,image
 
 
 @@||media.brightcove.com^$media,domain=players.brightcove.net
