@@ -8,7 +8,7 @@
 
 ! CNAME
 @@||gstaticadssl.*.google.com^$3p,font
-@@||footprint.net^$3p,image
+@@||footprint.net^$3p,image,xhr
 @@||google.com^$3p,domain=youtube.com,youtube-nocookie.com
 @@||ytimg.*.google.com^$3p,image
 
