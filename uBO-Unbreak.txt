@@ -11,6 +11,7 @@
 @@||footprint.net^$3p,image,xhr
 @@||google.com^$3p,domain=youtube.com,youtube-nocookie.com
 @@||ytimg.*.google.com^$3p,image
+@@||facebook.com^$3p,script,stylesheet,domain=instagram.com
 
 
 @@||media.brightcove.com^$media,domain=players.brightcove.net
