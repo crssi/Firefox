@@ -18,8 +18,8 @@
 ||*/fp.js$script,important
 ||1105media.com^$3p
 ||a2sky.com^$3p
-||adicio.com^$3p
 ||addthis.com^$important
+||adicio.com^$3p
 ||adsensecustomsearchads.*^$important
 ||adserver.yahoo.com^$important
 ||adservice.google.*^$important
@@ -30,9 +30,10 @@
 ||ampcid.google.*^$important
 ||aolcdn.com/ads/*$3p,script
 ||api.stacksocial.com^
+||app-measurement.com^$important
 ||arctur.*^$3p
-||kme.si^$3p,~image
 ||askmediagroup.com^$3p
+||kme.si^$3p,~image
 ||baidu.com^$3p
 ||beacon.krxd.net^$important
 ||bestofmedia.com^$3p
