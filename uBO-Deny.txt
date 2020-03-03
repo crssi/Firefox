@@ -123,7 +123,7 @@
 ||qq.com^$3p
 ||quantserve.com^$3p
 ||s.aolcdn.com/ads/*$3p,script
-||s*.wp.com^$3p,script,xhr
+!||s*.wp.com^$3p,script,xhr
 ||salesforceliveagent.com^$3p
 ||scorecardresearch.com^$important
 ||servebom.com^$3p,important
