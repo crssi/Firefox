@@ -99,6 +99,7 @@
 ||mallgroup.com^$3p
 ||marketo.com^$3p
 ||medium.com^$3p,~script,~image
+||metric.gstatic.com^
 ||moengage.com^$3p
 ||montiapm.com^$3p
 ||n26.*^$domain=~n26.com
