@@ -8,7 +8,7 @@
 
 ! CNAME
 @@||gstaticadssl.*.google.com^$3p,font
-@@||footprint.net^$3p,image,xhr
+@@||footprint.net^$3p,image,xhr,domain=www.24ur.com
 @@||google.com^$3p,domain=youtube.com|youtube-nocookie.com
 @@||ytimg.*.google.com^$3p,image
 @@||facebook.com^$3p,script,stylesheet,domain=instagram.com
