@@ -58,6 +58,7 @@
 ||fbcdn.*^$3p
 ||feedgrabbr.com^$3p
 ||firebase.com^$3p
+||footprint.net^
 ||future-fie-assets.co.uk^$3p
 ||future.net.uk^$3p
 ||getsitecontrol.com^$3p
