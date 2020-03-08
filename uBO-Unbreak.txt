@@ -66,6 +66,7 @@
 @@||maps.google.*/maps*$3p,script,image
 @@||maps.googleapis.com/maps*$script,image,xhr
 @@||mozilla.org^$3p,xhr,domain=mozilla.com
+@@||msa.trafficmanager.net^$3p,xhr
 @@||omara.cdn-cnj.si^$3p,script
 @@||paypal.com^$3p,subdocument,popup
 @@||pictures.zooplus.com^$3p,script,image,domain=www.zoohit.si
