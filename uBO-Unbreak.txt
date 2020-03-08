@@ -42,7 +42,6 @@
 @@||apple.com^$subdocument,domain=icloud.com
 @@||assets-jpcust.jwpsrv.com^$3p,image
 @@||assets.adobedtm.com^$3p,script
-@@||cdn.cookielaw.org^$3p
 @@||cdn.jwplayer.com^$3p,xhr
 @@||cdn.nrholding.net/*/*/$3p,image
 @@||cloudfront.net$3p,image,font,stylesheet
