@@ -16,6 +16,7 @@
 ||*/fingerprintjs2*$script,important
 ||*/fp.js$script,important
 ||1105media.com^$3p
+||2o7.net^
 ||a2sky.com^$3p
 ||addthis.com^$important
 ||adicio.com^$3p
