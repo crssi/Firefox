@@ -52,6 +52,7 @@ malwaredomainlist.com/
 mandrillapp.com/track/
 medium.com/
 microsofttranslator.com/
+on.crisp.email/
 paypal.com/
 phish-report.mozilla.com/
 reddit.com/
