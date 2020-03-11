@@ -94,20 +94,3 @@
 @@||cookielaw.org/*/otSDKStub.js$script
 @@||cookielaw.org/consent/*$xhr
 @@||tiqcdn.com/*/utag.js$script
-
-! ALLOW JS library, since they are covered by Decentraleyes WE, see: https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions#for-umatrix-and-ublock-origin-non-easy-mode-users
-@@||ajax.aspnetcdn.com^$3p,script
-@@||ajax.googleapis.com^$3p,script
-@@||ajax.microsoft.com^$3p,script
-@@||ajax.proxy.ustclug.org^$3p,script
-@@||apps.bdimg.com^$3p,script
-@@||cdn.bootcss.com^$3p,script
-@@||cdn.jsdelivr.net^$3p,script
-@@||cdnjs.cloudflare.com^$3p,script
-@@||code.jquery.com^$3p,script
-@@||lib.sinaapp.com^$3p,script
-@@||libs.baidu.com^$3p,script
-@@||sdn.geekzu.org^$3p,script
-@@||upcdn.b0.upaiyun.com^$3p,script
-@@||yandex.st^$3p,script
-@@||yastatic.net^$3p,script
