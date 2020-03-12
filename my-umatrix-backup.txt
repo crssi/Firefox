@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1581778308000,
+  "when": 1583763573800,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -17,16 +17,17 @@
     "deleteLocalStorage": false,
     "displayTextSize": "15px",
     "externalHostsFiles": [
-      "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt",
+      "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
       "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
+      "https://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname",
+      "https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt",
       "https://v.firebog.net/hosts/Airelle-hrsk.txt",
       "https://v.firebog.net/hosts/Cybercrime.txt",
       "https://v.firebog.net/hosts/MalImmortal.txt",
       "https://v.firebog.net/hosts/Prigent-Malware.txt",
       "https://v.firebog.net/hosts/Shalla-mal.txt",
-      "https://www.squidblacklist.org/downloads/dg-malicious.acl",
       "https://zonefiles.io/f/compromised/domains/live/"
     ],
     "externalRecipeFiles": [],
@@ -38,16 +39,17 @@
     "popupScopeLevel": "site",
     "processHyperlinkAuditing": true,
     "selectedHostsFiles": [
-      "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter.txt",
+      "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
       "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
+      "https://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname",
+      "https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt",
       "https://v.firebog.net/hosts/Airelle-hrsk.txt",
       "https://v.firebog.net/hosts/Cybercrime.txt",
       "https://v.firebog.net/hosts/MalImmortal.txt",
       "https://v.firebog.net/hosts/Prigent-Malware.txt",
       "https://v.firebog.net/hosts/Shalla-mal.txt",
-      "https://www.squidblacklist.org/downloads/dg-malicious.acl",
       "https://zonefiles.io/f/compromised/domains/live/",
       "malware-0",
       "malware-1"
