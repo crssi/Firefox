@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 14 February 2020
-* version 73-alpha
+* date: 11 March 2020
+* version 74-alpha
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -150,10 +150,10 @@ user_pref("_user.js.parrot", "0200 syntax error: the parrot's definitely decease
  * [SETTING] to add site exceptions: Page Info>Permissions>Access Your Location
  * [SETTING] to manage site exceptions: Options>Privacy & Security>Permissions>Location>Settings ***/
    // user_pref("permissions.default.geo", 2);
-/* 0203: use Mozilla geolocation service instead of Google when geolocation is enabled
+/* 0203: use Mozilla geolocation service instead of Google when geolocation is enabled [FF74+]
  * Optionally enable logging to the console (defaults to false) ***/
-user_pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
-   // user_pref("geo.wifi.logging.enabled", true); // [HIDDEN PREF]
+user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
+   // user_pref("geo.provider.network.logging.enabled", true); // [HIDDEN PREF]
 /* 0204: disable using the OS's geolocation service ***/
 user_pref("geo.provider.ms-windows-location", false); // [WINDOWS]
 user_pref("geo.provider.use_corelocation", false); // [MAC]
@@ -204,8 +204,8 @@ user_pref("app.update.auto", false);
  * [SETTING] about:addons>Extensions>[cog-wheel-icon]>Update Add-ons Automatically (toggle) ***/
    // user_pref("extensions.update.autoUpdateDefault", false);
 /* 0306: disable extension metadata
- * used when installing/updating an extension, and in daily background update checks: if false, it
- * hides the expanded text description (if it exists) when you "show more details about an addon" ***/
+ * used when installing/updating an extension, and in daily background update checks:
+ * when false, extension detail tabs will have no description ***/
    // user_pref("extensions.getAddons.cache.enabled", false);
 /* 0308: disable search engine updates (e.g. OpenSearch)
  * [NOTE] This does not affect Mozilla's built-in or Web Extension search engines
@@ -867,10 +867,10 @@ user_pref("privacy.userContext.ui.enabled", true);
 /* 1702: enable Container Tabs [FF50+]
  * [SETTING] General>Tabs>Enable Container Tabs ***/
 user_pref("privacy.userContext.enabled", true);
-/* 1704: set behaviour on "+ Tab" button to display container menu [FF53+] [SETUP-CHROME]
- * 0=no menu (default), 1=show when clicked, 2=show on long press
- * [1] https://bugzilla.mozilla.org/1328756 ***/
-user_pref("privacy.userContext.longPressBehavior", 2);
+/* 1703: set behaviour on "+ Tab" button to display container menu on left click [FF74+]
+ * [NOTE] The menu is always shown on long press and right click
+ * [SETTING] General>Tabs>Enable Container Tabs>Settings>Select a container for each new tab ***/
+   // user_pref("privacy.userContext.newTabContainerOnLeftClick.enabled", true);
 
 /*** [SECTION 1800]: PLUGINS ***/
 user_pref("_user.js.parrot", "1800 syntax error: the parrot's pushing up daisies!");
@@ -1690,6 +1690,18 @@ user_pref("toolkit.telemetry.hybridContent.enabled", false); // [FF59+]
    // [-] https://bugzilla.mozilla.org/1488583
 user_pref("dom.indexedDB.enabled", true); // [DEFAULT: true]
 // * * * /
+// FF74
+// 0203: use Mozilla geolocation service instead of Google when geolocation is enabled
+   // Optionally enable logging to the console (defaults to false)
+   // [-] https://bugzilla.mozilla.org/1613627
+user_pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
+   // user_pref("geo.wifi.logging.enabled", true); // [HIDDEN PREF]
+// 1704: set behaviour on "+ Tab" button to display container menu [FF53+] [SETUP-CHROME]
+   // 0=no menu (default), 1=show when clicked, 2=show on long press
+   // [1] https://bugzilla.mozilla.org/1328756
+   // [-] https://bugzilla.mozilla.org/1606265
+user_pref("privacy.userContext.longPressBehavior", 2);
+// * * * /
 // ***/
 
 /* END: internal custom pref to test for syntax errors ***/
@@ -1697,7 +1709,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 14.2.2020 (commit: 5f3e3b2); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 12.3.2020 (commit: 6f7e09a); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
