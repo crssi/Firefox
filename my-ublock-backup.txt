@@ -1,6 +1,6 @@
 {
-  "timeStamp": 1584023511700,
-  "version": "1.25.0",
+  "timeStamp": 1584134906200,
+  "version": "1.25.2",
   "userSettings": {
     "advancedUserEnabled": true,
     "alwaysDetachLogger": true,
@@ -78,6 +78,7 @@
     "autoUpdateAssetFetchPeriod": 120,
     "autoUpdateDelayAfterLaunch": 180,
     "autoUpdatePeriod": 7,
+    "benchmarkDatasetURL": "unset",
     "blockingProfiles": "11111/#F00 11011/#C0F 11001/#00F 00001",
     "cacheStorageAPI": "unset",
     "cacheStorageCompression": true,
@@ -117,8 +118,8 @@
     "vivaldi-scheme"
   ],
   "netWhitelist": "addons.mozilla.org\nchrome-extension-scheme\nchrome-scheme\nnewtab.about-scheme\nopera-scheme\nvivaldi-scheme",
-  "dynamicFilteringString": "* ajax.aspnetcdn.com * noop\n* ajax.googleapis.com * noop\n* ajax.microsoft.com * noop\n* cdn.jsdelivr.net * noop\n* cdnjs.cloudflare.com * noop\n* code.jquery.com * noop\n* duckduckgo.com * allow\n* lib.sinaapp.com * noop\n* libs.baidu.com * noop\n* upcdn.b0.upaiyun.com * noop\n* yandex.st * noop\n* yastatic.net * noop\nbehind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* ajax.proxy.ustclug.org * noop\n* sdn.geekzu.org * noop\n* apps.bdimg.com * noop\n* cdn.bootcss.com * noop\n* cdn.staticfile.org * noop\n* lib.baomitu.com * noop\n* mat1.gtimg.com * noop\n* maxcdn.bootstrapcdn.com * noop\n* netdna.bootstrapcdn.com * noop\n* stackpath.bootstrapcdn.com * noop",
+  "dynamicFilteringString": "* ajax.aspnetcdn.com * noop\n* ajax.googleapis.com * noop\n* ajax.microsoft.com * noop\n* cdn.jsdelivr.net * noop\n* cdnjs.cloudflare.com * noop\n* code.jquery.com * noop\n* duckduckgo.com * allow\n* lib.sinaapp.com * noop\n* libs.baidu.com * noop\n* upcdn.b0.upaiyun.com * noop\n* yandex.st * noop\n* yastatic.net * noop\nbehind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* ajax.proxy.ustclug.org * noop\n* sdn.geekzu.org * noop\n* apps.bdimg.com * noop\n* cdn.bootcss.com * noop",
   "urlFilteringString": "",
   "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
-  "userFilters": "@@||$domain=moz-extension-scheme\n\n! 3/10/2020 coronavirus-map.com -> http://coronavirus-realtime.com/ check background\n!@@||maps.arcgis.com^$subdocument\n\n! 3/11/2020 apple.com\n@@||apple.com.akadns.net^$subdocument,domain=apple.com\n@@||cdn-apple.com^$3p,domain=apple.com\n"
+  "userFilters": "@@||$domain=moz-extension-scheme\n"
 }
