@@ -155,6 +155,7 @@
 ||yahoo.*^$3p
 ||yimg.com^$3p,script
 ||yottlyscript.com^$3p
+||youtube.com/youtubei/v1/log_event*$xhr
 ||zdassets.com^$3p
 ||zendesk.com^$3p
 
