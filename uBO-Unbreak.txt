@@ -39,10 +39,12 @@
 @@||advertising.com^$1p
 ||advertising.com^$~document
 @@||apis.google.com^$3p,script,domain=content.googleapis.com
+@@||apple.com.akadns.net^$subdocument,domain=apple.com
 @@||apple.com^$subdocument,domain=icloud.com
 @@||assets-jpcust.jwpsrv.com^$3p,image
 @@||assets.adobedtm.com^$3p,script
 @@||brightcove.map.fastly.net^$3p,xhr
+@@||cdn-apple.com^$3p,domain=apple.com
 @@||cdn.jwplayer.com^$3p,xhr
 @@||cdn.nrholding.net/*/*/$3p,image
 @@||cloudfront.net$3p,image,font,stylesheet
@@ -63,6 +65,7 @@
 @@||instagram.com^$3p,script
 @@||jwpcdn.com^$3p,font
 @@||maps-api-ssl.google.com^$3p,script,image
+
 @@||maps.google.*/maps*$3p,script,image
 @@||maps.googleapis.com/maps*$script,image,xhr
 @@||mozilla.org^$3p,xhr,domain=mozilla.com
