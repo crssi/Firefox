@@ -49,6 +49,7 @@
 @@||jwpsrv.com^$3p,subdocument
 @@||live.com^$3p,subdocument,domain=microsoft.com
 @@||liveleak.com^$3p,subdocument
+@@||maps.arcgis.com^$3p,subdocument
 @@||mapsengine.google.com/map/embed$3p,subdocument
 @@||mcafeemobilesecurity.com^$3p,subdocument,domain=mcafee.com
 @@||microsoftazuread-sso.com^$3p,domain=microsoftonline.com
