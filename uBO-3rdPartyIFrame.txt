@@ -70,6 +70,7 @@
 @@||sharepoint.com^$3p,subdocument,domain=live.com
 @@||skype.com^$3p,subdocument,domain=live.com
 @@||soundcloud.com/player/*$3p,subdocument
+@@||sso.rokus-klett.si^$3p,subdocument,domain=znamzavec.si
 @@||stacksnippets.net^$3p,subdocument
 @@||stripe.com^$3p,subdocument
 @@||stripe.network^$3p,subdocument,domain=stripe.com
