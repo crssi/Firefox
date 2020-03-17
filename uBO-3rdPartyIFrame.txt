@@ -26,6 +26,7 @@
 @@||checkfront.com/reserve/*$3p,subdocument
 @@||cldmail.ru^$3p,subdocument,domain=mail.ru
 @@||comtrade.com^$3p,subdocument
+@@||d1ozf2ksnk66sq.cloudfront.net^$3p,subdocument,domain=client-api.arkoselabs.com
 @@||dropbox.com*^$3p,subdocument,domain=dropboxpayments.com
 @@||dropboxcaptcha.com^$3p,subdocument,domain=dropbox.com
 @@||dropboxusercontent.com^$3p,subdocument,domain=dropbox.com
