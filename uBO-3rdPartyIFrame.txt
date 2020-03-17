@@ -27,6 +27,7 @@
 @@||cldmail.ru^$3p,subdocument,domain=mail.ru
 @@||comtrade.com^$3p,subdocument
 @@||d1ozf2ksnk66sq.cloudfront.net^$3p,subdocument,domain=client-api.arkoselabs.com
+@@||docs.google.com^$3p,subdocument,domain=dropbox.com
 @@||dropbox.com*^$3p,subdocument,domain=dropboxpayments.com
 @@||dropboxcaptcha.com^$3p,subdocument,domain=dropbox.com
 @@||dropboxusercontent.com^$3p,subdocument,domain=dropbox.com
@@ -60,6 +61,7 @@
 @@||mozillademos.org^$3p,subdocument,domain=mozilla.org
 @@||office.com^$3p,subdocument,domain=microsoftonline.com
 @@||office365.com^$3p,subdocument,domain=office.com
+@@||officeapps.live.com^$3p,subdocument,domain=dropbox.com
 @@||openspeedtest.com^$3p,subdocument
 @@||paypal.com^$3p,subdocument,popup
 @@||paypalobjects.com^$3p,subdocument,domain=paypal.com
@@ -67,6 +69,7 @@
 @@||player.vimeo.com^$3p,subdocument
 @@||players.brightcove.net^$3p,subdocument
 @@||redditmedia.com^$3p,subdocument,domain=reddit.com
+@@||reddit.map.fastly.net^$3p,subdocument,domain=redditmedia.com
 @@||render.githubusercontent.com^$3p,subdocument,domain=github.com
 @@||sharepoint.com^$3p,subdocument,domain=live.com
 @@||skype.com^$3p,subdocument,domain=live.com
