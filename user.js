@@ -918,7 +918,6 @@ user_pref("webgl.disabled", true);
 user_pref("webgl.enable-webgl2", false);
 /* 2012: limit WebGL ***/
 user_pref("webgl.min_capability_mode", true);
-user_pref("webgl.disable-extensions", true);
 user_pref("webgl.disable-fail-if-major-performance-caveat", true);
 /* 2022: disable screensharing ***/
 user_pref("media.getusermedia.screensharing.enabled", false);
@@ -1701,6 +1700,9 @@ user_pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?ke
    // [1] https://bugzilla.mozilla.org/1328756
    // [-] https://bugzilla.mozilla.org/1606265
 user_pref("privacy.userContext.longPressBehavior", 2);
+// 2012: limit WebGL
+   // [-] https://bugzilla.mozilla.org/1477756
+user_pref("webgl.disable-extensions", true);
 // * * * /
 // ***/
 
@@ -1826,6 +1828,7 @@ EXTERNAL APPLICATIONS:
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
+  /* 1203  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
