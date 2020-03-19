@@ -63,6 +63,7 @@
 @@||office365.com^$3p,subdocument,domain=office.com
 @@||officeapps.live.com^$3p,subdocument,domain=dropbox.com
 @@||openspeedtest.com^$3p,subdocument
+@@||orbitvu.co^$3p,subdocument
 @@||paypal.com^$3p,subdocument,popup
 @@||paypalobjects.com^$3p,subdocument,domain=paypal.com
 @@||player.theplatform.com^$3p,subdocument
