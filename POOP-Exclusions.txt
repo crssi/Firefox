@@ -1,4 +1,5 @@
 * *.braintreegateway.com
+* *.crisp.chat
 * edge.api.brightcove.com
 *.*inn.com *.*inn.com
 *.ali*.com *.ali*.com
@@ -11,6 +12,7 @@
 *.facebook.com *.fbcdn.net
 *.google*.* *
 *.icloud.com *.apple*.com
+*.imdb.com *.api.amazonvideo.com
 *.live.com *.office365.com
 *.microsoft.com *.live.com
 *.microsoft.com *.office.*
