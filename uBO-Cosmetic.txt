@@ -56,6 +56,7 @@ www.reddit.com##.cookie-infobar.with-btn.with-icon.md-container-small.reddit-inf
 ! https://www.windowscentral.com/how-troubleshoot-and-fix-common-problems-outlook
 ##.detective--splash.swal-modal
 ##.swal-overlay--show-modal.swal-overlay
+www.facebook.com###headerArea
 
 !!! github find on page context dissapearance workaround
 github.com##div.blob-wrapper:style(overflow: visible visible !important)
