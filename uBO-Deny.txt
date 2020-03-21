@@ -62,6 +62,7 @@
 ||footprint.net^
 ||future-fie-assets.co.uk^$3p
 ||future.net.uk^$3p
+||get-native.eu^$3p
 ||getsitecontrol.com^$3p
 ||google-analytics.*^$3p,~script,important
 ||google-analytics.*^$3p,script
