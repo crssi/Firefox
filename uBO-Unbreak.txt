@@ -66,6 +66,7 @@
 @@||ibb.co^$3p,image
 @@||instagram.com^$3p,script
 @@||jwpcdn.com^$3p,font
+@@||jwpcdn.com/player/plugins/vast/$3p,script
 @@||maps-api-ssl.google.com^$3p,script,image
 
 @@||maps.google.*/maps*$3p,script,image
