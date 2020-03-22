@@ -55,7 +55,7 @@
 ||delvenetworks.com^$3p,script
 ||doubleclick.*^$important
 ||evidon.com^$3p
-||facebook.*^$3p,~domain=instagram.com
+||facebook.*^$3p,domain=~instagram.com
 ||fbcdn.*^$3p
 ||feedgrabbr.com^$3p
 ||firebase.com^$3p
