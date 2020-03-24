@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1584882754700,
+  "timeStamp": 1585059751600,
   "version": "1.25.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -117,7 +117,7 @@
     "vivaldi-scheme"
   ],
   "netWhitelist": "addons.mozilla.org\nchrome-extension-scheme\nchrome-scheme\nnewtab.about-scheme\nopera-scheme\nvivaldi-scheme",
-  "dynamicFilteringString": "* ajax.aspnetcdn.com * noop\n* ajax.googleapis.com * noop\n* ajax.microsoft.com * noop\n* cdn.jsdelivr.net * noop\n* cdnjs.cloudflare.com * noop\n* code.jquery.com * noop\n* duckduckgo.com * allow\n* lib.sinaapp.com * noop\n* libs.baidu.com * noop\n* upcdn.b0.upaiyun.com * noop\n* yandex.st * noop\n* yastatic.net * noop\nbehind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* ajax.proxy.ustclug.org * noop\n* sdn.geekzu.org * noop\n* apps.bdimg.com * noop\n* cdn.bootcss.com * noop",
+  "dynamicFilteringString": "* ajax.aspnetcdn.com * noop\n* ajax.googleapis.com * noop\n* ajax.microsoft.com * noop\n* cdn.jsdelivr.net * noop\n* cdnjs.cloudflare.com * noop\n* code.jquery.com * noop\n* duckduckgo.com * allow\n* lib.sinaapp.com * noop\n* libs.baidu.com * noop\n* upcdn.b0.upaiyun.com * noop\n* yandex.st * noop\n* yastatic.net * noop\nbehind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* ajax.proxy.ustclug.org * noop\n* sdn.geekzu.org * noop\n* apps.bdimg.com * noop\n* cdn.bootcss.com * noop\n* cdn.staticfile.org * noop\n* lib.baomitu.com * noop\n* mat1.gtimg.com * noop\n* maxcdn.bootstrapcdn.com * noop\n* netdna.bootstrapcdn.com * noop\n* stackpath.bootstrapcdn.com * noop\n* unpkg.com * noop\n* use.fontawesome.com * noop",
   "urlFilteringString": "",
   "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
   "userFilters": "@@||$domain=moz-extension-scheme\n"
