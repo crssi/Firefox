@@ -114,6 +114,7 @@
 ||oneall.com^$3p
 ||onesignal.com^$3p
 ||outbrain.com^$3p
+||paht.tech^
 ||piano.io$3p
 ||pkmods.com$inline-script
 ||pmcatalyst-ae.com^$3p
