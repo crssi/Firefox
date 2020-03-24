@@ -59,7 +59,7 @@
 ||fbcdn.*^$3p
 ||feedgrabbr.com^$3p
 ||firebase.com^$3p
-||footprint.net^
+||footprint.net^3p,~image
 ||future-fie-assets.co.uk^$3p
 ||future.net.uk^$3p
 ||get-native.eu^$3p
