@@ -68,7 +68,6 @@
 @@||jwpcdn.com^$3p,font
 @@||jwpcdn.com/player/plugins/vast/$3p,script
 @@||maps-api-ssl.google.com^$3p,script,image
-
 @@||maps.google.*/maps*$3p,script,image
 @@||maps.googleapis.com/maps*$script,image,xhr
 @@||mozilla.org^$3p,xhr,domain=mozilla.com
@@ -83,6 +82,7 @@
 @@||use.typekit.net^$3p,font,stylesheet,script
 @@||vidyard.com^$domain=play.vidyard.com
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
+@@||youtube-ui.*.google.com^$3p,script
 @@||ytimg.com^$3p,script
 @@||zdassets.com^$3p,image,stylesheet,script
 
