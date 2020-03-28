@@ -1055,7 +1055,7 @@ user_pref("dom.vibrator.enabled", false);
  * [6] https://rh0dev.github.io/blog/2017/the-return-of-the-jit/ ***/
 user_pref("javascript.options.asmjs", false);
 /* 2421: disable Ion and baseline JIT to help harden JS against exploits
- * [NOTE] In FF75+ these no longer affect extensions (1599226)
+ * [NOTE] Disabling JIT also disables Ion. In FF75+ disabling Ion no longer affects extensions (1599226)
  * [WARNING] If false, causes the odd site issue and there is also a performance loss
  * [1] https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0817 ***/
    // user_pref("javascript.options.ion", false);
@@ -1221,7 +1221,7 @@ user_pref("browser.download.hide_plugins_without_extensions", false);
  * [1] archived: https://archive.is/DYjAM ***/
 user_pref("extensions.enabledScopes", 5); // [HIDDEN PREF]
 user_pref("extensions.autoDisableScopes", 15); // [DEFAULT: 15]
-/* 2662: disable webextension restrictions on certain mozilla domains (also see 4503) [FF60+]
+/* 2662: disable webextension restrictions on certain mozilla domains (you also need 4503) [FF60+]
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1384330,1406795,1415644,1453988 ***/
    // user_pref("extensions.webextensions.restrictedDomains", "");
 
@@ -1719,7 +1719,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 27.3.2020 (commit: ee35d7c); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 28.3.2020 (commit: 55ae994); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1755,8 +1755,9 @@ ESSENTIAL EXTENSIONS:
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
+  Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
+    Exclude domains from inspections: account.godaddy.com;racunalniske-novice.com
   Google search link fix; https://addons.mozilla.org/firefox/addon/google-search-link-fix/ (https://github.com/palant/searchlinkfix/)
-  LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://gitlab.com/nobody42/localcdn)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
     Blocked parameters: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-Blocked_parameters.txt
     URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
