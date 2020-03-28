@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 27.3.2020 (commit: ee35d7c); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 28.3.2020 (commit: 55ae994); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
