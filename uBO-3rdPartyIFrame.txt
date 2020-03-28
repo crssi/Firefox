@@ -91,5 +91,6 @@
 @@||yourshoutbox.com^$3p,subdocument
 @@||youtube-nocookie.com/embed/$3p,subdocument
 @@||youtube.com/embed/$3p,subdocument
+@@||youtube.com^$subdocument,domain=google.com
 @@||youtubemp3api.com/@api/*$3p,subdocument,domain=easy-youtube-mp3.com
 @@||ypsilon.net^$3p,subdocument
