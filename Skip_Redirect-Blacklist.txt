@@ -1,5 +1,6 @@
 _sso=
 .alipay.com
+*/oauth
 /_login
 //azure.microsoft.com/email/\?destination=https%3A%2F%2Fportal.azure.com%2F
 //disq.us/
@@ -15,7 +16,6 @@ _sso=
 /logoff
 /logon
 /logout
-/oauth
 /openid/
 /preferences
 /profile
