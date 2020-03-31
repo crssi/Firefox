@@ -134,6 +134,7 @@ EXTERNAL APPLICATIONS:
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
+  /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
