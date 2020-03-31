@@ -1,3 +1,5 @@
+.apple.com>.*apple*.com
 .google.*>.google**.*
+.icloud.com>.*apple*.com
 .paloaltonetworks.com>.cloudfront.net
 .travelriskmap.com>*
