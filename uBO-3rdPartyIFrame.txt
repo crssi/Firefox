@@ -47,6 +47,7 @@
 @@||instagram.com^$3p,subdocument
 @@||ishoutbox.com^$3p,subdocument
 @@||janraincapture.com/widget/*$3p,subdocument
+@@||jetpack.wordpress.com/jetpack-comment/*$3p,subdocument
 @@||jsfiddle.net^$3p,subdocument,domain=svgjs.com
 @@||jwpsrv.com^$3p,subdocument
 @@||live.com^$3p,subdocument,domain=microsoft.com
