@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1585405971400,
+  "when": 1585848296600,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -17,8 +17,6 @@
     "deleteLocalStorage": false,
     "displayTextSize": "15px",
     "externalHostsFiles": [
-      "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
-      "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
       "https://v.firebog.net/hosts/Cybercrime.txt",
@@ -36,8 +34,6 @@
     "popupScopeLevel": "site",
     "processHyperlinkAuditing": true,
     "selectedHostsFiles": [
-      "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
-      "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
       "https://v.firebog.net/hosts/Cybercrime.txt",
