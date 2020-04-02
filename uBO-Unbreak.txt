@@ -82,7 +82,7 @@
 @@||use.typekit.net^$3p,font,stylesheet,script
 @@||vidyard.com^$domain=play.vidyard.com
 @@||wgcdn.co^$domain=worldoftanks.eu|wargaming.net
-@@||youtube-ui.*.google.com^$3p,script
+@@||youtube-ui.*.google.com^$3p,subdocument,script
 @@||youtube.com^$1p
 @@||ytimg.com^$3p,script
 @@||zdassets.com^$3p,image,stylesheet,script
