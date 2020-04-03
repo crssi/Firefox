@@ -2,7 +2,7 @@
 ! Expires: 2 days
 ! Homepage: https://github.com/crssi/Firefox
 
-!||$3p,subdocument
+||$3p,subdocument
 
 !CNAME
 @@||akamaiedge.net^$3p,subdocument
