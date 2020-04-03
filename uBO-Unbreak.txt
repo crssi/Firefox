@@ -7,13 +7,14 @@
 
 
 ! CNAME
+@@||blogger.*.google.com^$3p,domain=blogspot.com
 @@||facebook.com^$3p,script,stylesheet,domain=instagram.com
 @@||footprint.net^$3p,domain=24ur.com
 @@||google.com^$3p,domain=youtube.com|youtube-nocookie.com
 @@||gstaticadssl.*.google.com^$3p,font
-@@||ytimg.*.google.com^$3p,image
 @@||twimg.*^$3p,image
 @@||twitter.map.fastly.net^$domain=twitter.com
+@@||ytimg.*.google.com^$3p,image
 
 
 @@||media.brightcove.com^$media,domain=players.brightcove.net
