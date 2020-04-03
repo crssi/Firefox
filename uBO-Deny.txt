@@ -94,7 +94,6 @@
 ||limelight.com^$3p,script
 ||linkedin.*^$3p
 ||list-manage.com^$3p
-||lithium.com^$3p,script
 ||livenetlife.com^$3p
 ||mailchimp.com^$3p
 ||mailerlite.com^$3p
