@@ -42,7 +42,6 @@
 ||blogsmithmedia.com^$3p,xhr
 ||booster3000.si^$3p
 ||calculoid.com^$3p,script
-||cdn-cnj.si^$3p,script
 ||cdn.krxd.net^
 ||cdn.ravenjs.com^$3p,script
 ||cdn.transifex.com^
@@ -127,7 +126,6 @@
 ||qq.com^$3p
 ||quantserve.com^$3p
 ||s.aolcdn.com/ads/*$3p,script
-!||s*.wp.com^$3p,script,xhr
 ||salesforceliveagent.com^$3p
 ||scorecardresearch.com^$important
 ||servebom.com^$3p,important
@@ -136,9 +134,7 @@
 ||sitebot.ai^$3p
 ||smartfocus.com^$3p
 ||smind.*^$3p
-!||sportradar.com^$3p
 ||spot.im^$3p
-!||swiftypecdn.com^$3p,script
 ||syndication.twitter.*^
 ||themessagecloud.com^$3p
 ||tinymce.com^$3p
