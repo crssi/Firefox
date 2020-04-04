@@ -5,4 +5,4 @@
 .travelriskmap.com>*
 .google*.*>.google*.*
 .google*.*>.gstatic.com
-.google**.*>.ytimg.com
+.google**.*>*.ytimg.com
