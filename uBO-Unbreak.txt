@@ -78,6 +78,7 @@
 @@||pictures.zooplus.com^$3p,script,image,domain=www.zoohit.si
 @@||platform.twitter.com^$3p,stylesheet,image,script
 @@||play.vidyard.com^$3p,subdocument,script
+@@||pulsar.ebay.com^$domain=pulsar.ebay.com
 @@||translate.googleusercontent.com
 @@||ubisoft.com^$3p,domain=ubi.com
 @@||use.typekit.net^$3p,font,stylesheet,script
