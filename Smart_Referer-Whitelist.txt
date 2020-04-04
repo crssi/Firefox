@@ -4,3 +4,6 @@
 .paloaltonetworks.com>.cloudfront.net
 .travelriskmap.com>*
 .google.*>.gstatic.com
+
+.google*.*>.google*.*
+.google*.*>.gstatic.com
