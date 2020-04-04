@@ -3,7 +3,8 @@
 .icloud.com>.**apple**.*
 .paloaltonetworks.com>.cloudfront.net
 .travelriskmap.com>*
-.google.*>.gstatic.com
+
 
 .google*.*>.google*.*
 .google*.*>.gstatic.com
+.google*.*>.ytimg.com
