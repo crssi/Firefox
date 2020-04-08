@@ -14,7 +14,8 @@
 *.google*.* *
 *.icloud.com *.apple*.com
 *.imdb.com *.api.amazonvideo.com
-*.live.com *.office365.com
+*.live.com *.office*.*
+*.live.com *.skype*.com
 *.microsoft.com *.live.com
 *.microsoft.com *.office.*
 *.microsoft.com *.sharepoint.com
