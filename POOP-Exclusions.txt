@@ -1,6 +1,7 @@
 * *.braintreegateway.com
 * *.crisp.chat
 * edge.api.brightcove.com
+* shopify-chat.shopifycloud.com
 *.*inn.com *.*inn.com
 *.ali*.com *.ali*.com
 *.amazon.* *.*amazon.com
