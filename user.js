@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 05 April 2020
-* version 74-beta
+* date: 07 April 2020
+* version 75-alpha
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -125,6 +125,9 @@ user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false); // [FF66+]
 /* 0105d: disable Activity Stream recent Highlights in the Library [FF57+] ***/
    // user_pref("browser.library.activity-stream.enabled", false);
+/* 0105e: disable Activity Stream Top Sites
+ * The new "megabar" in FF75+ suggests top sites even if you don't use AS */
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 /* 0110: start Firefox in PB (Private Browsing) mode
  * [NOTE] In this mode *all* windows are "private windows" and the PB mode icon is not displayed
  * [WARNING] The P in PB mode is misleading: it means no "persistent" disk storage such as history,
@@ -1724,7 +1727,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 6.4.2020 (commit: e7d2086); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 8.4.2020 (commit: 7e71b66); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1755,7 +1758,7 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-    On install page click apply to Convenient and Stealth settings
+    On install page click apply for Convenient and Stealth settings
     General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
