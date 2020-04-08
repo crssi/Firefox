@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 6.4.2020 (commit: e7d2086); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 8.4.2020 (commit: 7e71b66); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -31,7 +31,7 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-    On install page click apply to Convenient and Stealth settings
+    On install page click apply for Convenient and Stealth settings
     General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
