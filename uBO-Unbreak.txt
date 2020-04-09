@@ -12,12 +12,15 @@
 @@||footprint.net^$3p,domain=24ur.com
 @@||google.com^$3p,domain=youtube.com|youtube-nocookie.com
 @@||gstaticadssl.*.google.com^$3p,font
+@@||live.com^$subdocument,cname
 @@||twimg.*^$3p,image
 @@||twitter.map.fastly.net^$domain=twitter.com
 @@||ytimg.*.google.com^$3p,image
 
 
 @@||media.brightcove.com^$media,domain=players.brightcove.net
+
+@@||*-msedge.net^$subdocument,domain=microsoft.com
 
 ! broadway.com
 ! maybe remove list https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
@@ -104,20 +107,3 @@
 @@||cookielaw.org/*/otSDKStub.js$script
 @@||cookielaw.org/consent/*$xhr
 @@||tiqcdn.com/*/utag.js$script
-
-! ALLOW JS library, since they are covered by Decentraleyes WE, see: https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions#for-umatrix-and-ublock-origin-non-easy-mode-users
-!@@||ajax.aspnetcdn.com^$3p,script
-!@@||ajax.googleapis.com^$3p,script
-!@@||ajax.microsoft.com^$3p,script
-!@@||ajax.proxy.ustclug.org^$3p,script
-!@@||apps.bdimg.com^$3p,script
-!@@||cdn.bootcss.com^$3p,script
-!@@||cdn.jsdelivr.net^$3p,script
-!@@||cdnjs.cloudflare.com^$3p,script
-!@@||code.jquery.com^$3p,script
-!@@||lib.sinaapp.com^$3p,script
-!@@||libs.baidu.com^$3p,script
-!@@||sdn.geekzu.org^$3p,script
-!@@||upcdn.b0.upaiyun.com^$3p,script
-!@@||yandex.st^$3p,script
-!@@||yastatic.net^$3p,script
