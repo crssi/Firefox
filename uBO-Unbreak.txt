@@ -19,8 +19,9 @@
 
 
 @@||media.brightcove.com^$media,domain=players.brightcove.net
-
 @@||*-msedge.net^$subdocument,domain=microsoft.com
+
+@@||nextdns.io^
 
 ! broadway.com
 ! maybe remove list https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
