@@ -18,30 +18,13 @@
 @@||ytimg.*.google.com^$3p,image
 
 
-@@||media.brightcove.com^$media,domain=players.brightcove.net
-@@||*-msedge.net^$subdocument,domain=microsoft.com
-
 @@||nextdns.io^
-
-! broadway.com
-! maybe remove list https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
-@@||players.brightcove.net^$3p,script
-@@||brightcove.com^$3p,xhr
-@@||media.brightcove.com^$3p,image
-
-! iFrames/subdocument
-@@||instagram.com/p/$3p,subdocument
-@@||accounts.google.*/ServiceLogin$3p,subdocument
-@@||checkfront.com/reserve/*$3p,subdocument
-@@||codepen.io^$3p,subdocument
-@@||google.*/maps/*$3p,subdocument
-@@||google.*/recaptcha/$3p,subdocument
-@@||googleapis.com^$3p,subdocument,domain=google.com|google.si
-@@||googleusercontent.com^$3p,subdocument,domain=google.com|google.si
 
 ||hudo.com^$inline-script
 @@/clarity-*.js$1p,script
+@@||*-msedge.net^$subdocument,domain=microsoft.com
 @@||24ur.*^$3p,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
+@@||accounts.google.*/ServiceLogin$3p,subdocument
 @@||ads.api.24ur.si^$xhr,domain=24ur.com
 @@||advertising.com^$1p
 ||advertising.com^$~document
@@ -50,31 +33,42 @@
 @@||apple.com^$subdocument,domain=icloud.com
 @@||assets-jpcust.jwpsrv.com^$3p,image
 @@||assets.adobedtm.com^$3p,script
+@@||brightcove.com^$3p,xhr
 @@||brightcove.map.fastly.net^$3p,xhr
 @@||cdn-apple.com^$3p,domain=apple.com
 @@||cdn.jwplayer.com^$3p,xhr
 @@||cdn.nrholding.net/*/*/$3p,image
+@@||checkfront.com/reserve/*$3p,subdocument
 @@||cloudfront.net$3p,image,font,stylesheet
+@@||codepen.io^$3p,subdocument
 @@||content.jwplatform.com^$3p,xhr,script
 @@||drive.google.com^$3p,image
 @@||dropboxstatic.com/*/social_icon$stylesheet,domain=dropbox.com
 @@||facebook.*^$domain=facebook.com
-@@||fbcdn.*^$domain=facebook.com
 @@||fbcdn.*^$3p,image,media
+@@||fbcdn.*^$domain=facebook.com
 @@||gfycat.com/ifr/*$3p,subdocument
 @@||google-analytics.com/analytics.js$3p,script,domain=amainhobbies.com
 @@||google.*/cse/*$3p,script,stylesheet,domain=pastebin.com
-@@||google.*^$domain=google.com|googleapis.com
+@@||google.*/maps/*$3p,subdocument
+@@||google.*/recaptcha/$3p,subdocument
 @@||google.*^$3p,script,domain=youtube.com
+@@||google.*^$domain=google.com|googleapis.com
 @@||google.com/uds/*visualization$3p,script,stylesheet
+@@||googleapis.com^$3p,subdocument,domain=google.com|google.si
+@@||googleusercontent.com^$3p,subdocument,domain=google.com|google.si
 @@||gravatar.com^$3p,image,stylesheet
 @@||ibb.co^$3p,image
+@@||instagram.com/p/$3p,subdocument
 @@||instagram.com^$3p,script
-@@||jwpcdn.com^$3p,font
 @@||jwpcdn.com/player/plugins/vast/$3p,script
+@@||jwpcdn.com^$3p,font
+@@||jwpltx.com^$3p,image
 @@||maps-api-ssl.google.com^$3p,script,image
 @@||maps.google.*/maps*$3p,script,image
 @@||maps.googleapis.com/maps*$script,image,xhr
+@@||media.brightcove.com^$3p,image
+@@||media.brightcove.com^$media,domain=players.brightcove.net
 @@||mozilla.org^$3p,xhr,domain=mozilla.com
 @@||msa.trafficmanager.net^$3p,xhr
 @@||omara.cdn-cnj.si^$3p,script
@@ -82,6 +76,7 @@
 @@||pictures.zooplus.com^$3p,script,image,domain=www.zoohit.si
 @@||platform.twitter.com^$3p,stylesheet,image,script
 @@||play.vidyard.com^$3p,subdocument,script
+@@||players.brightcove.net^$3p,script
 @@||pulsar.ebay.com^$domain=pulsar.ebay.com
 @@||translate.googleusercontent.com
 @@||ubisoft.com^$3p,domain=ubi.com
