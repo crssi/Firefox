@@ -66,6 +66,8 @@ imdb.com##.front-row-container
 ||*/betlink*$subdocument
 
 ||www.partis.si/tmp/*$image
+partis.si#@#.all > div:nth-of-type(1)
+partis.si#@#.all > div:nth-of-type(2)
 
 mxtoolbox.com##.mx-inline-ad-link
 mxtoolbox.com##footer.container-fluid
