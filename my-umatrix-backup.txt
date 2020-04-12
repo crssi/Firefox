@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1585848296600,
+  "when": 1586694679000,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -17,12 +17,19 @@
     "deleteLocalStorage": false,
     "displayTextSize": "15px",
     "externalHostsFiles": [
+      "https://gist.githubusercontent.com/BBcan177/4a8bf37c131be4803cb2/raw/2577a3a8474432c49e09169da6fe2cad3f98f09f/MS-2",
+      "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
+      "https://phishing.army/download/phishing_army_blocklist_extended.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
+      "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts",
+      "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains",
       "https://v.firebog.net/hosts/Cybercrime.txt",
       "https://v.firebog.net/hosts/MalImmortal.txt",
       "https://v.firebog.net/hosts/Prigent-Malware.txt",
       "https://v.firebog.net/hosts/Shalla-mal.txt",
+      "https://www.joewein.net/dl/bl/dom-bl-base.txt",
       "https://zonefiles.io/f/compromised/domains/live/"
     ],
     "externalRecipeFiles": [],
@@ -34,12 +41,19 @@
     "popupScopeLevel": "site",
     "processHyperlinkAuditing": true,
     "selectedHostsFiles": [
+      "https://gist.githubusercontent.com/BBcan177/4a8bf37c131be4803cb2/raw/2577a3a8474432c49e09169da6fe2cad3f98f09f/MS-2",
+      "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
+      "https://phishing.army/download/phishing_army_blocklist_extended.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+      "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
+      "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts",
+      "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains",
       "https://v.firebog.net/hosts/Cybercrime.txt",
       "https://v.firebog.net/hosts/MalImmortal.txt",
       "https://v.firebog.net/hosts/Prigent-Malware.txt",
       "https://v.firebog.net/hosts/Shalla-mal.txt",
+      "https://www.joewein.net/dl/bl/dom-bl-base.txt",
       "https://zonefiles.io/f/compromised/domains/live/",
       "malware-0",
       "malware-1"
