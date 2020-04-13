@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 9.4.2020 (commit: 8c7149c); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 13.4.2020 (commit: d7c276b); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -131,7 +131,6 @@ EXTERNAL APPLICATIONS:
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
-  /* 2402  */ user_pref("dom.event.clipboardevents.enabled", true); // enable access to clipboard events/content
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
