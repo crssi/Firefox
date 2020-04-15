@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 13.4.2020 (commit: d7c276b); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 14.4.2020 (commit: b90e723); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -14,7 +14,7 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
      One-Click Search Engines: delete all except DuckDuckGo
-6. For enterprise use, insert domain list (comma separated) to enable SSO (about:config) into preferences network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
+6. To enable SSO within specific realm/domain (enterprise), enter domain list (comma separated without spaces) (about:config) into preferences network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 7. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
 8. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
