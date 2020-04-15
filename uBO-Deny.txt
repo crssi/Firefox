@@ -60,7 +60,7 @@
 ||firebase.com^$3p
 ||footprint.net^3p,~image
 ||future-fie-assets.co.uk^$3p
-||future.net.uk^$3p
+||future.net.uk^$3p,~script
 ||get-native.eu^$3p
 ||getsitecontrol.com^$3p
 ||google-analytics.*^$3p,~script,important
