@@ -102,12 +102,6 @@ https://www.reddit.com/r/FirefoxCSS/comments/ayjagi/firefox_white_flash_on_openi
   background: #0a84ff;
 }
 
-/* https://www.github.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
-  background: #058b00;
-  opacity: .2;
-}
-
 /* https://self-signed.badssl.com/ but add certificate exception */
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
   background: #f0dc00;
