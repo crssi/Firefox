@@ -74,3 +74,5 @@ mxtoolbox.com##footer.container-fluid
 
 ! 4/15/2020 https://www.laptopmag.com
 ##.hawk-main-transparent
+
+dnschecker.org##.right_column_custom_m_p.my-2.col-lg-7
