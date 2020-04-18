@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1586694679000,
+  "when": 1587219698300,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -17,7 +17,6 @@
     "deleteLocalStorage": false,
     "displayTextSize": "15px",
     "externalHostsFiles": [
-      "https://gist.githubusercontent.com/BBcan177/4a8bf37c131be4803cb2/raw/2577a3a8474432c49e09169da6fe2cad3f98f09f/MS-2",
       "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
       "https://phishing.army/download/phishing_army_blocklist_extended.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
@@ -41,7 +40,6 @@
     "popupScopeLevel": "site",
     "processHyperlinkAuditing": true,
     "selectedHostsFiles": [
-      "https://gist.githubusercontent.com/BBcan177/4a8bf37c131be4803cb2/raw/2577a3a8474432c49e09169da6fe2cad3f98f09f/MS-2",
       "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
       "https://phishing.army/download/phishing_army_blocklist_extended.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
