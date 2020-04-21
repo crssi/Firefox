@@ -148,7 +148,7 @@
 ||vidible.tv^
 ||wayin.com^$3p
 ||wibbitz.com^$3p
-||wistia.*^$3p
+||wistia.*^$3p,~image,~xhr
 ||yahoo.*^$3p
 ||yimg.com^$3p,script
 ||yottlyscript.com^$3p
