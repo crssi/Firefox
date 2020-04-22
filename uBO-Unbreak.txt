@@ -16,6 +16,9 @@
 @@||twimg.*^$3p,image
 @@||twitter.map.fastly.net^$domain=twitter.com
 @@||ytimg.*.google.com^$3p,image
+! victorinox.com
+@@||rsc.cdn77.org^
+
 
 
 @@||nextdns.io^
@@ -104,3 +107,8 @@
 @@||cookielaw.org/*/otSDKStub.js$script
 @@||cookielaw.org/consent/*$xhr
 @@||tiqcdn.com/*/utag.js$script
+
+
+! shorteners
+@@||shareasale.com^$1p
+@@||amzn.to^$1p
