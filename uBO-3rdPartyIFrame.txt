@@ -71,7 +71,7 @@
 @@||player.vimeo.com^$3p,subdocument
 @@||players.brightcove.net^$3p,subdocument
 @@||redditmedia.com^$3p,subdocument,domain=reddit.com
-@@||reddit.map.fastly.net^$3p,subdocument,domain=redditmedia.com
+@@||reddit.map.fastly.net^$3p,subdocument,domain=reddit.com|redditmedia.com
 @@||render.githubusercontent.com^$3p,subdocument,domain=github.com
 @@||sharepoint.com^$3p,subdocument,domain=live.com
 @@||skype.com^$3p,subdocument,domain=live.com
