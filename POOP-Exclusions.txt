@@ -28,4 +28,5 @@
 *.ubisoft.com *ubi*
 *.youtube*.com *
 *vimeo.com *vimeo*.*
+f.vision *.dnsf.vision
 github.com *.github*.com
