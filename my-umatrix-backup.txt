@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1587219698300,
+  "when": 1587848115300,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -24,6 +24,7 @@
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
       "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts",
       "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains",
+      "https://raw.githubusercontent.com/scafroglia93/blocklists/master/blocklists-main.txt",
       "https://v.firebog.net/hosts/Cybercrime.txt",
       "https://v.firebog.net/hosts/MalImmortal.txt",
       "https://v.firebog.net/hosts/Prigent-Malware.txt",
@@ -47,6 +48,7 @@
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
       "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts",
       "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains",
+      "https://raw.githubusercontent.com/scafroglia93/blocklists/master/blocklists-main.txt",
       "https://v.firebog.net/hosts/Cybercrime.txt",
       "https://v.firebog.net/hosts/MalImmortal.txt",
       "https://v.firebog.net/hosts/Prigent-Malware.txt",
