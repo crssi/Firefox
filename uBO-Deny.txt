@@ -150,7 +150,6 @@
 ||wibbitz.com^$3p
 ||wistia.*^$3p,~image,~xhr
 ||yahoo.*^$3p
-||yimg.com^$3p,script
 ||yottlyscript.com^$3p
 ||youtube.com/youtubei/v1/log_event*$xhr
 ||zdassets.com^$3p
@@ -170,3 +169,8 @@
 ||futurecdn.net^$xhr
 ! 1/8/2019, 3:34:55 PM logitechg.com
 ||channelsight.com^$xhr
+
+
+
+!||yimg.com^$3p,script
+!@@||sep.yimg.com^$3p,script
