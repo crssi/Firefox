@@ -92,7 +92,7 @@
 @@||youtube.com^$1p
 @@||ytimg.com^$3p,script
 @@||zdassets.com^$3p,image,stylesheet,script
-
+@@||zopim.com^$3p,script,websocket,image
 
 ! corp-internal.com
 @@||fast.wistia.com^$3p,script
