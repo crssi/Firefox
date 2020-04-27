@@ -64,6 +64,7 @@
 @@||ibb.co^$3p,image
 @@||instagram.com/p/$3p,subdocument
 @@||instagram.com^$3p,script
+@@||ixopay.com^$3p,subdocument
 @@||jwpcdn.com/player/plugins/vast/$3p,script
 @@||jwpcdn.com^$3p,font
 @@||jwpltx.com^$3p,image
