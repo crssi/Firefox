@@ -152,7 +152,7 @@
 ||yahoo.*^$3p
 ||yottlyscript.com^$3p
 ||youtube.com/youtubei/v1/log_event*$xhr
-||zdassets.com^$3p
+||zdassets.com^$3p,~xhr
 ||zendesk.com^$3p
 
 ||phncdn.com^$~stylesheet,~image,~font
@@ -169,8 +169,3 @@
 ||futurecdn.net^$xhr
 ! 1/8/2019, 3:34:55 PM logitechg.com
 ||channelsight.com^$xhr
-
-
-
-!||yimg.com^$3p,script
-!@@||sep.yimg.com^$3p,script
