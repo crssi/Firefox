@@ -83,6 +83,7 @@
 @@||tickcounter.com^$3p,subdocument
 @@||tumblr.com^$3p,subdocument,domain=instagram.com
 @@||twitter.com/i/videos/$3p,subdocument
+@@||vice.map.fastly.net^$3p,subdocument,domain=vice.com
 @@||vox-cdn.com^$3p,subdocument
 @@||wargaming.net^$3p,subdocument,domain=worldoftanks.eu
 @@||wavesecure.com^$3p,subdocument,domain=mcafee.com
