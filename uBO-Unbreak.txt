@@ -50,6 +50,7 @@
 @@||facebook.*^$domain=facebook.com
 @@||fbcdn.*^$3p,image,media
 @@||fbcdn.*^$domain=facebook.com
+@@||filesusr.com^$1p
 @@||gfycat.com/ifr/*$3p,subdocument
 @@||google-analytics.com/analytics.js$3p,script,domain=amainhobbies.com
 @@||google.*/cse/*$3p,script,stylesheet,domain=pastebin.com
