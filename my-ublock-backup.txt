@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1589049143900,
+  "timeStamp": 1589133591100,
   "version": "1.26.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -10,7 +10,7 @@
     "colorBlindFriendly": false,
     "contextMenuEnabled": true,
     "dynamicFilteringEnabled": true,
-    "externalLists": "https://badmojr.github.io/1Hosts/mini/adblock.txt\nhttps://cdn.adblockcdn.com/filters/easylist_lite.txt\nhttps://easylist-downloads.adblockplus.org/adwarefilters.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_other.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt\nhttps://filters.adtidy.org/extension/chromium/filters/15.txt\nhttps://filters.adtidy.org/extension/chromium/filters/3.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt\nhttps://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/UsefulAdsFilter/sections/usefulads.txt\nhttps://raw.githubusercontent.com/FadeMind/hosts.extras/master/StreamingAds/hosts\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyIFrame.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt\nhttps://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt\nhttps://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains\nhttps://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname\nhttps://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt\nhttps://raw.githubusercontent.com/ookangzheng/dbl-oisd-nl/master/abp.txt\nhttps://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist\nhttps://v.firebog.net/hosts/Prigent-Ads.txt",
+    "externalLists": "https://badmojr.github.io/1Hosts/mini/adblock.txt\nhttps://cdn.adblockcdn.com/filters/easylist_lite.txt\nhttps://easylist-downloads.adblockplus.org/adwarefilters.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_other.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt\nhttps://filters.adtidy.org/extension/chromium/filters/15.txt\nhttps://filters.adtidy.org/extension/chromium/filters/3.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt\nhttps://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/UsefulAdsFilter/sections/usefulads.txt\nhttps://raw.githubusercontent.com/FadeMind/hosts.extras/master/StreamingAds/hosts\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-3rdPartyIFrame.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt\nhttps://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt\nhttps://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains\nhttps://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname\nhttps://raw.githubusercontent.com/ookangzheng/dbl-oisd-nl/master/abp.txt\nhttps://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist\nhttps://v.firebog.net/hosts/Prigent-Ads.txt",
     "firewallPaneMinimized": false,
     "hyperlinkAuditingDisabled": true,
     "ignoreGenericCosmeticFilters": false,
@@ -32,7 +32,6 @@
     "adguard-generic",
     "adguard-mobile",
     "easylist",
-    "easyprivacy",
     "fanboy-enhanced",
     "fanboy-cookiemonster",
     "fanboy-social",
@@ -64,7 +63,6 @@
     "https://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt",
     "https://raw.githubusercontent.com/lightswitch05/hosts/master/ads-and-tracking-extended.txt",
     "https://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt",
-    "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt",
     "https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist",
     "https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt",
     "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
