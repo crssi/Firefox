@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 15 April 2020
-* version 75-beta
+* date: 7 May 2020
+* version 76-beta
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -272,12 +272,10 @@ user_pref("network.connectivity-service.enabled", false);
 /*** [SECTION 0400]: BLOCKLISTS / SAFE BROWSING (SB) ***/
 user_pref("_user.js.parrot", "0400 syntax error: the parrot's passed on!");
 /** BLOCKLISTS ***/
-/* 0401: enforce Firefox blocklist, but sanitize blocklist url
+/* 0401: enforce Firefox blocklist
  * [NOTE] It includes updates for "revoked certificates"
- * [1] https://blog.mozilla.org/security/2015/03/03/revoking-intermediate-certificates-introducing-onecrl/
- * [2] https://trac.torproject.org/projects/tor/ticket/16931 ***/
+ * [1] https://blog.mozilla.org/security/2015/03/03/revoking-intermediate-certificates-introducing-onecrl/ ***/
 user_pref("extensions.blocklist.enabled", true); // [DEFAULT: true]
-user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%APP_ID%/%APP_VERSION%/");
 
 /** SAFE BROWSING (SB)
     Safe Browsing has taken many steps to preserve privacy. *IF* required, a full url is never
@@ -738,6 +736,10 @@ user_pref("security.mixed_content.block_display_content", true);
 /* 1243: block unencrypted requests from Flash on encrypted pages to mitigate MitM attacks [FF59+]
  * [1] https://bugzilla.mozilla.org/1190623 ***/
 user_pref("security.mixed_content.block_object_subrequest", true);
+/* 1244: enable https-only-mode [FF76+]
+ * [NOTE] This is experimental
+ * [1] https://bugzilla.mozilla.org/1613063 */
+   // user_pref("dom.security.https_only_mode", true);
 
 /** CIPHERS [WARNING: do not meddle with your cipher suite: see the section 1200 intro] ***/
 /* 1261: disable 3DES (effective key size < 128)
@@ -779,7 +781,7 @@ user_pref("security.insecure_connection_text.enabled", true); // [FF60+]
 user_pref("_user.js.parrot", "1400 syntax error: the parrot's bereft of life!");
 /* 1401: disable websites choosing fonts (0=block, 1=allow)
  * This can limit most (but not all) JS font enumeration which is a high entropy fingerprinting vector
- * [SETUP-WEB] Disabling fonts can uglify the web a fair bit.
+ * [SETUP-WEB] Can break some PDFs (missing text). Limiting to default fonts can "uglify" the web
  * [SETTING] General>Language and Appearance>Fonts & Colors>Advanced>Allow pages to choose... ***/
 user_pref("browser.display.use_document_fonts", 0);
 /* 1403: disable icon fonts (glyphs) and local fallback rendering
@@ -1132,7 +1134,7 @@ user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
 /* 2605: block web content in file processes [FF55+]
  * [SETUP-WEB] You may want to disable this for corporate or developer environments
  * [1] https://bugzilla.mozilla.org/1343184 ***/
-user_pref("browser.tabs.remote.allowLinkedWebInFileUriProcess", false);
+user_pref("browser.tabs.remote.allowLinkedWebInFileUriProcess", false); // [DEFAULT: false FF76+]
 /* 2606: disable UITour backend so there is no chance that a remote page can use it ***/
 user_pref("browser.uitour.enabled", false);
 user_pref("browser.uitour.url", "");
@@ -1415,7 +1417,8 @@ user_pref("privacy.firstparty.isolate", true);
       FF57: The version number will match current ESR (1393283, 1418672, 1418162, 1511763)
       FF59: The OS will be reported as Windows, OSX, Android, or Linux (to reduce breakage) (1404608)
       FF66: The OS in HTTP Headers will be reduced to Windows or Android (1509829)
-      FF68: Reported OS versions updated to Windows 10, OS 10.14, and Adnroid 8.1 (1511434)
+      FF68: Reported OS versions updated to Windows 10, OS 10.14, and Android 8.1 (1511434)
+      FF78: Reported OS versions updated to OS 10.15 and Android 9.0 (1635011)
  ** 1369319 - disable device sensor API (see 4604) (FF56+)
  ** 1369357 - disable site specific zoom (see 4605) (FF56+)
  ** 1337161 - hide gamepads from content (see 4606) (FF56+)
@@ -1718,6 +1721,12 @@ user_pref("privacy.userContext.longPressBehavior", 2);
    // [-] https://bugzilla.mozilla.org/1477756
 user_pref("webgl.disable-extensions", true);
 // * * * /
+// FF76
+// 0401: sanitize blocklist url
+   // [2] https://trac.torproject.org/projects/tor/ticket/16931
+   // [-] https://bugzilla.mozilla.org/1618188
+user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%APP_ID%/%APP_VERSION%/");
+// * * * /
 // ***/
 
 /* END: internal custom pref to test for syntax errors ***/
@@ -1727,7 +1736,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 16.4.2020 (commit: dff5bb4); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 7.5.2020 (commit: bb1e5bf); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1762,15 +1771,11 @@ ESSENTIAL EXTENSIONS:
     General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
+  ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
-  Decentraleyes; https://addons.mozilla.org/firefox/addon/decentraleyes/ (https://git.synz.io/Synzvato/decentraleyes/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
-    Exclude domains from inspections: account.godaddy.com;racunalniske-novice.com
-  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   Google search link fix; https://addons.mozilla.org/firefox/addon/google-search-link-fix/ (https://github.com/palant/searchlinkfix/)
-  Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
-    Blocked parameters: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-Blocked_parameters.txt
-    URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
-    Click [Save preferences]
+  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
+  LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://gitlab.com/nobody42/localcdn/)
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
       script: Check
@@ -1798,23 +1803,25 @@ ESSENTIAL EXTENSIONS:
       Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.txt
 
 ADDITIONAL EXTENSIONS THAT I AM USING:
-  Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
   Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
+  Bitwarden - Free Password Manager; https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/ (https://github.com/bitwarden/, https://bitwarden.com/)
+  Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
+  IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   Undo Close Tab; https://addons.mozilla.org/firefox/addon/undoclosetabbutton/ (https://github.com/M-Reimer/undoclosetab/)
+  xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
 
 EXTERNAL APPLICATIONS:
   FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/
@@ -1823,17 +1830,23 @@ EXTERNAL APPLICATIONS:
 ******/
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
-  /* 0862  */ user_pref("places.history.enabled", false); // disable history
+  /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:15,suggestion:Infinity"); // this resets 0801 and must be applied before
+  /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
+  /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
+  /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
+  /* 0850c */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
+  /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill  /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I just <3 fonts
   /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  /* 2654  */ user_pref("browser.download.forbid_open_with", true); // disable "open with" in download dialog
+  // /* 2654  */ user_pref("browser.download.forbid_open_with", true); // disable "open with" in download dialog
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmark in a new tab
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
+  /* 5000  */ user_pref("browser.urlbar.openViewOnFocus", false); // close urlbar dropdown when empty
   /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
@@ -1848,7 +1861,9 @@ EXTERNAL APPLICATIONS:
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
-  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
+  // /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
+  /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+  // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
@@ -1868,17 +1883,5 @@ EXTERNAL APPLICATIONS:
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
-
-/*** LOCATION BAR / SEARCH BAR / SUGGESTIONS ***/
-  /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:16,suggestion:Infinity"); // this resets 0801 and must be applied before
-  /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
-  /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
-  /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
-  /* 0850c */ user_pref("browser.urlbar.maxRichResults", 18); // number of urlbar search results
-  /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
-  /* 5000  */ user_pref("browser.urlbar.openViewOnFocus", false); // close urlbar dropdown when empty
-
-/*** TODO ***/
-  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
 
 user_pref("_user.js.parrot", "Eagle has landed.");
