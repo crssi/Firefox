@@ -24,6 +24,7 @@
 @@||braintreegateway.com^$3p,subdocument
 @@||cdn.embedly.com/widgets/*$3p,subdocument
 @@||checkfront.com/reserve/*$3p,subdocument
+@@||checkoutshopper-live.adyen.com^$3p,subdocument
 @@||cldmail.ru^$3p,subdocument,domain=mail.ru
 @@||comtrade.com^$3p,subdocument
 @@||d1ozf2ksnk66sq.cloudfront.net^$3p,subdocument,domain=client-api.arkoselabs.com
