@@ -87,6 +87,7 @@
 @@||sendgrid.net^
 @@||surveyrouter.com^$1p
 @@||translate.googleusercontent.com
+@@||twitter.com/i/videos/$3p,subdocument
 @@||ubisoft.com^$3p,domain=ubi.com
 @@||use.typekit.net^$3p,font,stylesheet,script
 @@||vidyard.com^$domain=play.vidyard.com
