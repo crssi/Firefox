@@ -84,6 +84,7 @@
 @@||players.brightcove.net^$3p,script
 @@||pulsar.ebay.com^$domain=pulsar.ebay.com
 @@||rsc.cdn77.org^$3p,image
+@@||sendgrid.net^
 @@||surveyrouter.com^$1p
 @@||translate.googleusercontent.com
 @@||ubisoft.com^$3p,domain=ubi.com
