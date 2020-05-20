@@ -86,7 +86,8 @@
 @@||rsc.cdn77.org^$3p,image
 @@||sendgrid.net^
 @@||surveyrouter.com^$1p
-@@||translate.googleusercontent.com
+@@||translate.googleusercontent.com^
+@@||thetacdn.net^$3p,image
 @@||twitter.com/i/videos/$3p,subdocument
 @@||ubisoft.com^$3p,domain=ubi.com
 @@||use.typekit.net^$3p,font,stylesheet,script
