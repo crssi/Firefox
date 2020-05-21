@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1589049283100,
+  "when": 1590008923900,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -68,7 +68,6 @@
   },
   "rules": [
     "* * * allow",
-    "* * other block",
     "* 0 * block",
     "* 10 * block",
     "* 100.100 * block",
