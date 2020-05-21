@@ -1,7 +1,7 @@
 {
   "app": "uMatrix",
   "version": "1.4.0",
-  "when": 1590008923900,
+  "when": 1590052502400,
   "settings": {
     "alwaysDetachLogger": false,
     "autoUpdate": true,
@@ -18,9 +18,7 @@
     "displayTextSize": "15px",
     "externalHostsFiles": [
       "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
-      "https://phishing.army/download/phishing_army_blocklist.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
-      "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
       "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts",
       "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains",
@@ -28,7 +26,6 @@
       "https://v.firebog.net/hosts/Cybercrime.txt",
       "https://v.firebog.net/hosts/MalImmortal.txt",
       "https://v.firebog.net/hosts/Shalla-mal.txt",
-      "https://www.joewein.net/dl/bl/dom-bl-base.txt",
       "https://zonefiles.io/f/compromised/domains/live/"
     ],
     "externalRecipeFiles": [],
@@ -41,9 +38,7 @@
     "processHyperlinkAuditing": true,
     "selectedHostsFiles": [
       "https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt",
-      "https://phishing.army/download/phishing_army_blocklist.txt",
       "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
-      "https://raw.githubusercontent.com/infinitytec/blocklists/master/scams-and-phishing.txt",
       "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
       "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts",
       "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains",
@@ -51,7 +46,6 @@
       "https://v.firebog.net/hosts/Cybercrime.txt",
       "https://v.firebog.net/hosts/MalImmortal.txt",
       "https://v.firebog.net/hosts/Shalla-mal.txt",
-      "https://www.joewein.net/dl/bl/dom-bl-base.txt",
       "https://zonefiles.io/f/compromised/domains/live/",
       "malware-0",
       "malware-1"
