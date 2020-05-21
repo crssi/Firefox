@@ -7,12 +7,10 @@
 
 
 ! CNAME
-@@||blogger.*.google.com^$3p,domain=blogspot.com
 @@||facebook.com^$3p,script,stylesheet,domain=instagram.com
 @@||footprint.net^$3p,domain=24ur.com
 @@||google.com^$3p,domain=youtube.com|youtube-nocookie.com
 @@||gstaticadssl.*.google.com^$3p,font
-@@||live.com^$subdocument,cname
 @@||twimg.*^$3p,image
 @@||twitter.map.fastly.net^$domain=twitter.com
 @@||ytimg.*.google.com^$3p,image
@@ -25,15 +23,11 @@
 
 ||hudo.com^$inline-script
 @@/clarity-*.js$1p,script
-@@||*-msedge.net^$subdocument,domain=microsoft.com
-@@||24ur.*^$3p,domain=cekin.si|voyo.si|dominvrt.si|vizita.si|okusno.je|zadovoljna.si|moskisvet.com|bibaleze.si|dominvrt.si
 @@||accounts.google.*/ServiceLogin$3p,subdocument
 @@||ads.api.24ur.si^$xhr,domain=24ur.com
 @@||advertising.com^$1p
 ||advertising.com^$~document
 @@||apis.google.com^$3p,script,domain=content.googleapis.com|dropbox.com
-@@||apple.com.akadns.net^$subdocument,domain=apple.com
-@@||apple.com^$subdocument,domain=icloud.com
 @@||assets-jpcust.jwpsrv.com^$3p,image
 @@||assets.adobedtm.com^$3p,script
 @@||brightcove.com^$3p,xhr
@@ -41,9 +35,7 @@
 @@||cdn-apple.com^$3p,domain=apple.com
 @@||cdn.jwplayer.com^$3p,xhr
 @@||cdn.nrholding.net/*/*/$3p,image
-@@||checkfront.com/reserve/*$3p,subdocument
 @@||cloudfront.net$3p,image,font,stylesheet
-@@||codepen.io^$3p,subdocument
 @@||content.jwplatform.com^$3p,xhr,script
 @@||drive.google.com^$3p,image
 @@||dropboxstatic.com/*/social_icon$stylesheet,domain=dropbox.com
@@ -51,7 +43,6 @@
 @@||fbcdn.*^$3p,image,media
 @@||fbcdn.*^$domain=facebook.com
 @@||filesusr.com^$1p
-@@||gfycat.com/ifr/*$3p,subdocument
 @@||google-analytics.com/analytics.js$3p,script,domain=amainhobbies.com
 @@||google.*/cse/*$3p,script,stylesheet,domain=pastebin.com
 @@||google.*/maps/*$3p,subdocument
@@ -65,7 +56,6 @@
 @@||ibb.co^$3p,image
 @@||instagram.com/p/$3p,subdocument
 @@||instagram.com^$3p,script
-@@||ixopay.com^$3p,subdocument
 @@||jwpcdn.com/player/plugins/vast/$3p,script
 @@||jwpcdn.com^$3p,font
 @@||jwpltx.com^$3p,image
@@ -83,7 +73,6 @@
 @@||play.vidyard.com^$3p,subdocument,script
 @@||players.brightcove.net^$3p,script
 @@||pulsar.ebay.com^$domain=pulsar.ebay.com
-@@||rsc.cdn77.org^$3p,image
 @@||sendgrid.net^
 @@||surveyrouter.com^$1p
 @@||translate.googleusercontent.com^
@@ -118,3 +107,18 @@
 ! shorteners
 @@||shareasale.com^$1p
 @@||amzn.to^$1p
+
+@@*/lwa/WebPages/LwaClient.aspx$3p,subdocument
+@@*/saml/*$3p,subdocument
+@@||appspot.com^$3p,subdocument,domain=cloud.google.com
+@@||blogger.*.google.com^$3p,subdocument
+@@||blogger.com/comment-iframe.$3p,subdocument
+@@||docs.google.com^$3p,subdocument,domain=dropbox.com
+@@||e.infogram.com^$3p,subdocument
+@@||forms.hsforms.com^$3p,subdocument
+@@||jwpsrv.com^$3p,subdocument
+@@||mapsengine.google.com/map/embed$3p,subdocument
+@@||tumblr.com^$3p,subdocument,domain=instagram.com
+@@||wavesecure.com^$3p,subdocument,domain=mcafee.com
+@@||yumpu.com^$3p,subdocument
+||amazonaws.com/*banners*$3p,subdocument,important
