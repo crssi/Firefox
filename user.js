@@ -1432,7 +1432,7 @@ user_pref("privacy.firstparty.isolate", true);
  ** 1354633 - limit MediaError.message to a whitelist (FF57+)
  ** 1382533 - enable fingerprinting resistance for Presentation API (FF57+)
       This blocks exposure of local IP Addresses via mDNS (Multicast DNS)
- **  967895 - enable site permission prompt before allowing canvas data extraction (FF58+)
+ **  967895 - spoof canvas and enable site permission prompt before allowing canvas data extraction (FF58+)
       FF59: Added to site permissions panel (1413780) Only prompt when triggered by user input (1376865)
  ** 1372073 - spoof/block fingerprinting in MediaDevices API (FF59+)
       Spoof: enumerate devices reports one "Internal Camera" and one "Internal Microphone" if
@@ -1455,6 +1455,7 @@ user_pref("privacy.firstparty.isolate", true);
  ** 1564422 - spoof audioContext outputLatency (FF70+)
  ** 1595823 - spoof audioContext sampleRate (FF72+)
  ** 1607316 - spoof pointer as coarse and hover as none (ANDROID) (FF74+)
+ ** 1621433 - randomize canvas (previously FF58+ returned an all-white canvas) (FF78+)
 ***/
 user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs");
 /* 4501: enable privacy.resistFingerprinting [FF41+]
@@ -1736,7 +1737,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 7.5.2020 (commit: bb1e5bf); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 15.5.2020 (commit: 4bc5b89); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -1744,7 +1745,7 @@ PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
    NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 2. Append this file to user.js that was downloaded in the previous step
 3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
-4. In the "profile folder" create a folder "chrome" and copy userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
+4. In the "profile folder" create a folder "chrome" and copy in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css
 5. Firefox -> Options -> General -> General -> Tabs -> Settings...
      Remove all containers
    Firefox -> Options -> Search
@@ -1771,11 +1772,15 @@ ESSENTIAL EXTENSIONS:
     General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
-  ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
+  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   Google search link fix; https://addons.mozilla.org/firefox/addon/google-search-link-fix/ (https://github.com/palant/searchlinkfix/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://gitlab.com/nobody42/localcdn/)
+  Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
+    Blocked parameters: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-Blocked_parameters.txt
+    URL request types: font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
+    Click [Save preferences]
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
       script: Check
@@ -1798,9 +1803,6 @@ ESSENTIAL EXTENSIONS:
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
     Settings
       Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.txt
-  uMatrix; https://addons.mozilla.org/firefox/addon/umatrix/ (https://github.com/uBlockOrigin/uMatrix-issues/); https://git.synz.io/Synzvato/decentraleyes/wikis/Frequently-Asked-Questions
-    About
-      Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-umatrix-backup.txt
 
 ADDITIONAL EXTENSIONS THAT I AM USING:
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
@@ -1840,7 +1842,7 @@ EXTERNAL APPLICATIONS:
   /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  // /* 2654  */ user_pref("browser.download.forbid_open_with", true); // disable "open with" in download dialog
+  /* 5000  */ user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -1862,8 +1864,6 @@ EXTERNAL APPLICATIONS:
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
-  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
-  // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
@@ -1883,5 +1883,9 @@ EXTERNAL APPLICATIONS:
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
+
+/*** TODO ***/
+  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+  // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
 
 user_pref("_user.js.parrot", "Eagle has landed.");
