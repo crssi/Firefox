@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 7.5.2020 (commit: bb1e5bf); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 15.5.2020 (commit: 4bc5b89); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -35,8 +35,8 @@ ESSENTIAL EXTENSIONS:
     General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
-  ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
+  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   Google search link fix; https://addons.mozilla.org/firefox/addon/google-search-link-fix/ (https://github.com/palant/searchlinkfix/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://gitlab.com/nobody42/localcdn/)
@@ -105,7 +105,7 @@ EXTERNAL APPLICATIONS:
   /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  // /* 2654  */ user_pref("browser.download.forbid_open_with", true); // disable "open with" in download dialog
+  /* 5000  */ user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -127,8 +127,6 @@ EXTERNAL APPLICATIONS:
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
-  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
-  // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
@@ -148,5 +146,9 @@ EXTERNAL APPLICATIONS:
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
+
+/*** TODO ***/
+  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+  // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
 
 user_pref("_user.js.parrot", "Eagle has landed.");
