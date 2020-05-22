@@ -1,36 +1,171 @@
 /*
-https://www.reddit.com/r/FirefoxCSS/
-https://www.reddit.com/r/FirefoxCSS/comments/7dkhuh/color_your_url_bar_based_on_website_security/
-https://fosspost.org/tutorials/how-to-customize-firefox-57-user-interface
-https://github.com/Aris-t2/CustomCSSforFx
-https://github.com/FirefoxBar/userChrome.js-Collections-
-https://github.com/overdodactyl/ShadowFox
-https://developer.mozilla.org/en-US/docs/tag/XUL_Tutorial
-https://github.com/Timvde/UserChrome-Tweaks
-https://github.com/bogachenko/freefox/blob/master/firefox/chrome/userChrome.css
-https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%20features/userChrome.css
-https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/
-https://www.reddit.com/r/firefox/comments/7dvtw0/guide_how_to_edit_your_context_menu/
-https://imgur.com/e9AaMx3
-https://imgur.com/b5gEfUy
-https://support.mozilla.org/en-US/questions/1214459
-https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme
-https://www.reddit.com/r/FirefoxCSS/comments/ayjagi/firefox_white_flash_on_opening_new_window_and/
+	https://www.reddit.com/r/FirefoxCSS/
+	https://www.reddit.com/r/FirefoxCSS/comments/7dkhuh/color_your_url_bar_based_on_website_security/
+	https://fosspost.org/tutorials/how-to-customize-firefox-57-user-interface
+	https://github.com/Aris-t2/CustomCSSforFx
+	https://github.com/FirefoxBar/userChrome.js-Collections-
+	https://github.com/overdodactyl/ShadowFox
+	https://developer.mozilla.org/en-US/docs/tag/XUL_Tutorial
+	https://github.com/Timvde/UserChrome-Tweaks
+	https://github.com/bogachenko/freefox/blob/master/firefox/chrome/userChrome.css
+	https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Theme%20features/userChrome.css
+	https://www.howtogeek.com/334716/how-to-customize-firefoxs-user-interface-with-userchrome.css/
+	https://www.reddit.com/r/firefox/comments/7dvtw0/guide_how_to_edit_your_context_menu/
+	https://imgur.com/e9AaMx3
+	https://imgur.com/b5gEfUy
+	https://support.mozilla.org/en-US/questions/1214459
+	https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme
+	https://www.reddit.com/r/FirefoxCSS/comments/ayjagi/firefox_white_flash_on_opening_new_window_and/
+	https://www.userchrome.org/megabar-styling-firefox-address-bar.html
 */
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/*** Megabar Styler General - version 2020-04-19: https://www.userchrome.org/megabar-styling-firefox-address-bar.html ***/
+  :root {
+    --mbarstyler-popout-pixels: 2px;
+    --mbarstyler-top-bar-display: none;
+    --mbarstyler-title-font-size: 14px;
+    --mbarstyler-url-font-size: 12px;
+    --mbarstyler-max-rows-without-scrolling: 15;
+    --mbarstyler-bottom-border-width: 1px;
+    --mbarstyler-match-weight: 700;
+    --mbarstyler-match-background-opacity: 0.0;
+  }
+
+  #urlbar[breakout][breakout-extend] {
+    top: calc(5px - var(--mbarstyler-popout-pixels)) !important;
+    left: calc(0px - var(--mbarstyler-popout-pixels)) !important;
+    width: calc(100% + (2 * var(--mbarstyler-popout-pixels))) !important;
+    padding: var(--mbarstyler-popout-pixels) !important;
+  }
+
+  [uidensity="compact"] #urlbar[breakout][breakout-extend] {
+    top: calc(3px - var(--mbarstyler-popout-pixels)) !important;
+  }
+
+  [uidensity="touch"] #urlbar[breakout][breakout-extend] {
+    top: calc(4px - var(--mbarstyler-popout-pixels)) !important;
+  }
+
+  #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+    height: var(--urlbar-height) !important;
+    padding: 0 !important;
+  }
+
+  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    animation: none !important;;
+  }
+
+  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    box-shadow: none !important;
+  }
+
+  .urlbarView-row:first-of-type {
+    display: var(--mbarstyler-top-bar-display) !important;
+  }
+
+  .urlbarView-row .urlbarView-title {
+    font-size: var(--mbarstyler-title-font-size) !important;
+  }
+  .urlbarView-row .urlbarView-secondary,
+  .urlbarView-row .urlbarView-url,
+  .urlbarView-row .urlbarView-action {
+    font-size: var(--mbarstyler-url-font-size) !important;
+  }
+
+  #urlbarView-results, #urlbar-results {
+    height: unset !important;
+    max-height: calc(2.5 * (var(--mbarstyler-title-font-size) + var(--mbarstyler-bottom-border-width)) * var(--mbarstyler-max-rows-without-scrolling)) !important;
+  }
+  #urlbar-results {
+    overflow-y: auto !important;
+  }
+
+  #urlbar-results {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .urlbarView-row:not(:last-of-type) {
+    border-bottom: var(--mbarstyler-bottom-border-width) solid rgba(0, 0, 0, 0.1) !important;
+  }
+
+  [lwt-popup-darktext] .urlbarView-row:not([selected]) .urlbarView-title strong,
+  [lwt-popup-darktext] .urlbarView-row:not([selected]) .urlbarView-url strong {
+    font-weight: var(--mbarstyler-match-weight) !important;
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, calc(var(--mbarstyler-match-background-opacity) * 2));
+    background-color: rgba(0, 0, 0, var(--mbarstyler-match-background-opacity));
+    border-radius: 2px;
+  }
+
+  [lwt-popup-brighttext] .urlbarView-row:not([selected]) .urlbarView-title strong,
+  [lwt-popup-brighttext] .urlbarView-row:not([selected]) .urlbarView-url strong {
+    font-weight: var(--mbarstyler-match-weight) !important;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, calc(var(--mbarstyler-match-background-opacity) * 2));
+    background-color: rgba(255, 255, 255, var(--mbarstyler-match-background-opacity));
+    border-radius: 2px;
+  }
+
+  #urlbarView-results, #urlbar-results {
+    max-height: calc(1.625 * (var(--mbarstyler-title-font-size) + var(--mbarstyler-url-font-size) + var(--mbarstyler-bottom-border-width)) * var(--mbarstyler-max-rows-without-scrolling)) !important;
+  }
+
+  .urlbarView-row-inner {
+    flex-wrap: wrap !important;
+    padding-top: 0 !important;
+    padding-bottom: 2px !important;
+  }
+
+  .urlbarView-no-wrap {
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+    position: relative;
+  }
+
+  .urlbarView-row[has-url] > .urlbarView-row-inner > .urlbarView-url {
+    padding-inline-start: calc(6px + 2px + /* favicon */ 16px) !important;
+    margin-top: calc(2px + (var(--mbarstyler-url-font-size) - var(--mbarstyler-title-font-size)));
+  }
+
+  .urlbarView.megabar[actionoverride] .urlbarView-row[has-url] .urlbarView-title-separator,
+  .urlbarView.megabar .urlbarView-row[has-url]:not([type$=tab]) .urlbarView-title-separator,
+  .urlbarView.megabar .urlbarView-row[type=remotetab]:-moz-any(:hover, [selected]) .urlbarView-title-separator {
+    display: none !important;
+  }
+
+    .urlbarView-row[type="switchtab"][has-url="true"] .urlbarView-url {
+      visibility: visible !important;
+    }
+
+    .urlbarView:not([actionoverride]) .urlbarView-row[type="switchtab"][has-url="true"] .urlbarView-url::before {
+      content: "Switch to Tab: ";
+      font-style: italic;
+      color: var(--urlbar-popup-action-color);
+    }
+
+    .urlbarView[actionoverride] .urlbarView-row[type="switchtab"][has-url="true"] .urlbarView-url::before {
+      content: "Open: ";
+      font-style: italic;
+      color: var(--urlbar-popup-action-color);
+    }
+
+    .urlbarView-row[type="switchtab"][has-url="true"] .urlbarView-action,
+    .urlbarView-row[type="switchtab"][has-url="true"] .urlbarView-title-separator {
+      display: none !important;
+    }
+/*** End of: Megabar Styler ***/
+
+
+
 
 
 #tabbrowser-tabpanels{
   background-color: rgb(46,54,69) !important;
 }
 
-
 /* Removed space before the first tab */
 .titlebar-spacer[type="pre-tabs"] {
   display: none !important;
 }
-
 
 /* Menu customization; ? #context-openlinkin* */
 #appMenu-private-window-button,
@@ -50,7 +185,6 @@ https://www.reddit.com/r/FirefoxCSS/comments/ayjagi/firefox_white_flash_on_openi
     display: none !important;
 }
 
-
 /* only show close buttons on tabs when hovering */
 .tabbrowser-tab .tab-close-button {
   display: none !important;
@@ -66,12 +200,12 @@ https://www.reddit.com/r/FirefoxCSS/comments/ayjagi/firefox_white_flash_on_openi
   margin-right: 0px;
 }
 
-
 /* urlbar colorization */
 #urlbar {
   position: relative;
   z-index: 1;
 }
+
 #identity-box:after {
   content: '';
   position: absolute;
@@ -80,38 +214,41 @@ https://www.reddit.com/r/FirefoxCSS/comments/ayjagi/firefox_white_flash_on_openi
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: -1;
+  /* z-index: 0; */
   opacity: .3;
 }
+
 @keyframes blinker {
   50% { opacity: .2; }
 }
 
-/* about:about */
-#urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
-  background: #0a84ff;
-}
-/* fix for mixedDisplayContent */
-#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after,
-#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
-  background: var(--toolbar-bgcolor);
-}
-/* about:config and moz-extension:* */
-#urlbar[pageproxystate='valid'] #identity-box.chromeUI:after,
-#urlbar[pageproxystate='valid'] #identity-box.extensionPage:after {
-  background: #0a84ff;
-}
+	/* about:about */
+	#urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after {
+	  background: #0a84ff;
+	}
 
-/* https://self-signed.badssl.com/ but add certificate exception */
-#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
-  background: #f0dc00;
-}
+	/* fix for mixedDisplayContent */
+	#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after,
+	#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
+	  background: var(--toolbar-bgcolor);
+	}
 
-/* notSecure */
-#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after,
-#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
-#urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
-  background: #ff0011;
-  opacity: .4;
-  animation: blinker 2s linear infinite;
-}
+	/* about:config and moz-extension:* */
+	#urlbar[pageproxystate='valid'] #identity-box.chromeUI:after,
+	#urlbar[pageproxystate='valid'] #identity-box.extensionPage:after {
+	  background: #0a84ff;
+	}
+
+	/* https://self-signed.badssl.com/ but add certificate exception */
+	#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
+	  background: #f0dc00;
+	}
+
+	/* notSecure */
+	#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after,
+	#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after,
+	#urlbar[pageproxystate='valid'] #identity-box.notSecure:after {
+	  background: #ff0011;
+	  opacity: .4;
+	  animation: blinker 2s linear infinite;
+	}
