@@ -24,9 +24,9 @@
     --mbarstyler-popout-pixels: 2px;
     --mbarstyler-top-bar-display: none;
     --mbarstyler-title-font-size: 14px;
-    --mbarstyler-url-font-size: 12px;
-    --mbarstyler-max-rows-without-scrolling: 15;
-    --mbarstyler-bottom-border-width: 1px;
+    --mbarstyler-url-font-size: 11px;
+    --mbarstyler-max-rows-without-scrolling: 16;
+    --mbarstyler-bottom-border-width: 2px;
     --mbarstyler-match-weight: 700;
     --mbarstyler-match-background-opacity: 0.0;
   }
