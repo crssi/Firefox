@@ -1888,5 +1888,6 @@ EXTERNAL APPLICATIONS:
 /*** TODO ***/
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
-
+  // /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
+  
 user_pref("_user.js.parrot", "Eagle has landed.");
