@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 15.5.2020 (commit: 4bc5b89); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 24.5.2020 (commit: ff9bf76); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
@@ -152,5 +152,5 @@ EXTERNAL APPLICATIONS:
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
   // /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
-  
+
 user_pref("_user.js.parrot", "Eagle has landed.");
