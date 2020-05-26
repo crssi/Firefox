@@ -94,6 +94,8 @@
 @@||twitter.com/i/videos/$3p,subdocument
 @@||twitter.map.fastly.net^$domain=twitter.com
 @@||ubisoft.com^$3p,domain=ubi.com
+@@||udimg.com^$1p
+@@||udimg.com^$3p,domain=urbandictionary.com
 @@||use.typekit.net^$3p,font,stylesheet,script
 @@||vidyard.com^$domain=play.vidyard.com
 @@||wavesecure.com^$3p,subdocument,domain=mcafee.com
