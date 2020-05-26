@@ -28,11 +28,12 @@ Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath
 
 Start-Process -FilePath 'firefox.exe' -ArgumentList '-safe-mode'
 $firefoxApp = New-Object -ComObject wscript.shell
+
+Start-Sleep -Milliseconds 3000
 do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox Safe Mode') -eq $false)
 $firefoxApp.SendKeys('~')
 Remove-Variable -Name firefoxApp
 
 Start-Sleep -Milliseconds 3000
-
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
 Start-Process -FilePath 'firefox.exe'
