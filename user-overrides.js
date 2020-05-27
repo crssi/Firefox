@@ -2,7 +2,6 @@
 HOME: https://github.com/crssi/Firefox
 INFO: Supplement for ghacks-user.js; 24.5.2020 (commit: ff9bf76); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
-PROFILE: https://github.com/crssi/Firefox/raw/master/Profile.zip
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
    NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
@@ -101,7 +100,8 @@ EXTERNAL APPLICATIONS:
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 0850c */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
-  /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill  /* 0862  */ user_pref("places.history.enabled", false); // disable history
+  /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
+  /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I just <3 fonts
   /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
@@ -151,6 +151,7 @@ EXTERNAL APPLICATIONS:
 /*** TODO ***/
   // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
+  // /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
   // /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
 
 user_pref("_user.js.parrot", "Eagle has landed.");
