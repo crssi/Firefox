@@ -4,6 +4,7 @@
 * edge.api.brightcove.com
 * shopify-chat.shopifycloud.com
 *.*inn.com *.*inn.com
+*.24liveblog.com *.24liveplus.com
 *.ali*.com *.ali*.com
 *.amazon.* *.*amazon.com
 *.azure.com *
@@ -13,6 +14,7 @@
 *.facebook.com *.fbcdn.net
 *.google*.* *
 *.icloud.com *.apple*.com
+*.imdb.com *.akamaihd.net
 *.imdb.com *.amazonvideo.com
 *.live.com *
 *.microsoft.com *
