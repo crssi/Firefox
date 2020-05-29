@@ -149,7 +149,7 @@
 ||wayin.com^$3p
 ||wibbitz.com^$3p
 ||wistia.*^$3p,~image,~xhr
-||yahoo.*^$3p,~domain=yahoo.com
+||yahoo.*^$3p,~domain=www.yahoo.com
 ||yottlyscript.com^$3p
 ||youtube.com/youtubei/v1/log_event*$xhr
 ||zdassets.com^$3p,~xhr
