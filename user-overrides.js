@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 24.5.2020 (commit: ff9bf76); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 29.5.2020 (commit: f6e6de8); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -105,6 +105,7 @@ EXTERNAL APPLICATIONS:
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I just <3 fonts
   /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
+  /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 5000  */ user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
@@ -127,7 +128,7 @@ EXTERNAL APPLICATIONS:
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
-  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // allow non-secure passive content
+  /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
@@ -141,17 +142,11 @@ EXTERNAL APPLICATIONS:
   /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
-  /* 2701  */ user_pref("network.cookie.cookieBehavior", 0); // allow all cookies, we have TC Automode to deal with leftovers
+  /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
-/*** TODO ***/
-  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
-  // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable https-only-mode
-  // /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
-  // /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
-
-user_pref("_user.js.parrot", "Eagle has landed.");
+user_pref("_user.js.parrot", "Eagle has landed!");
