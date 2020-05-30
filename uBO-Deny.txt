@@ -79,7 +79,7 @@
 ||hubspot.com^$3p
 ||incartupsell.com^$3p
 ||inspectlet.com^$3p,important
-||instagram.*^$3p
+||instagram.*^$3p,~subdocument
 ||inswebt.com^
 ||intercomcdn.com^$3p
 ||ipinfo.io^$3p
