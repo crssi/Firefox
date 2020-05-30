@@ -23,8 +23,6 @@
 @@||blogger.*.google.com^$3p,subdocument
 @@||blogger.com/comment-iframe.$3p,subdocument
 @@||brightcove.*^$3p,xhr
-!@@||brightcove.com^$3p,xhr
-!@@||brightcove.map.fastly.net^$3p,xhr
 @@||cbsi.com/dist/optanon.js$script
 @@||cdn-apple.com^$3p,domain=apple.com
 @@||cdn.jwplayer.com^$3p,xhr
@@ -41,11 +39,7 @@
 @@||dropboxstatic.com/*/social_icon$stylesheet,domain=dropbox.com
 @@||e.infogram.com^$3p,subdocument
 @@||embed.wistia.com^$3p,media,image
-@@||facebook.*^$domain=facebook.com
-@@||facebook.com^$3p,script,stylesheet,domain=instagram.com
 @@||fast.wistia.com^$3p,script
-@@||fbcdn.*^$3p,image,media
-@@||fbcdn.*^$domain=facebook.com
 @@||filesusr.com^$1p
 @@||google-analytics.com/analytics.js$3p,script,domain=amainhobbies.com
 @@||google.*/cse/*$3p,script,stylesheet,domain=pastebin.com
@@ -60,8 +54,6 @@
 @@||gravatar.com^$3p,image,stylesheet
 @@||gstaticadssl.*.google.com^$3p,font
 @@||ibb.co^$3p,image
-@@||instagram.com/p/$3p,subdocument
-@@||instagram.com^$3p,script
 @@||jwpcdn.com/player/plugins/vast/$3p,script
 @@||jwpcdn.com^$3p,font
 @@||jwpltx.com^$3p,image
@@ -106,3 +98,13 @@
 @@||ytimg.com^$3p,script
 @@||zdassets.com^$3p,image,stylesheet,script
 @@||zopim.com^$3p,script,websocket,image
+
+
+!!! facebook.com
+@@||*-instagram.*.facebook.com^$3p,subdocument
+@@||facebook.com^$3p,script,stylesheet,domain=instagram.com
+@@||fbcdn.*^$3p,image,media
+@@||instagram.com/p/$3p,subdocument
+@@||instagram.com^$3p,script
+@@||facebook.*^$domain=facebook.com|instagram.com|messenger.com|workplace.com|oculus.com|oculusvr.com|oculusbrand.com|oculusforbusiness.com|onavo.com
+@@||fbcdn.*^$domain=facebook.com|instagram.com|messenger.com|workplace.com|oculus.com|oculusvr.com|oculusbrand.com|oculusforbusiness.com|onavo.com
