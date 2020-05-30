@@ -1,6 +1,6 @@
 {
   "version": "1.8",
-  "date": 1582731613600,
+  "date": 1590859066400,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -66,11 +66,38 @@
               "action": "notsamedomain"
             }
           },
-          "excluded": {},
+          "excluded": {
+            "*.duckduckgo.com": {}
+          },
           "_index": 0
         },
         {
-          "pattern": "*.google.*",
+          "pattern": "*.duckduckgo.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {
+            "duckduckgo.com": {}
+          }
+        },
+        {
+          "pattern": "google.*",
           "always": {
             "action": "enabled",
             "allowedInPermanent": false
@@ -89,8 +116,616 @@
               "action": "notsamedomain"
             }
           },
-          "excluded": {},
+          "excluded": {
+            "*.google.*": {}
+          },
           "_index": 1
+        },
+        {
+          "pattern": "*.google.*",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {
+            "google.*": {}
+          }
+        },
+        {
+          "pattern": "facebook.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.facebook.com": {},
+            "fb.com": {},
+            "*.fb.com": {}
+          }
+        },
+        {
+          "pattern": "*.facebook.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "facebook.com": {},
+            "fb.com": {},
+            "*.fb.com": {}
+          }
+        },
+        {
+          "pattern": "instagram.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.instagram.com": {}
+          }
+        },
+        {
+          "pattern": "*.instagram.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "instagram.com": {}
+          }
+        },
+        {
+          "pattern": "messenger.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.messenger.com": {},
+            "m.me": {},
+            "*.m.me": {},
+            "messengerdevelopers.com": {},
+            "*.messengerdevelopers.com": {}
+          }
+        },
+        {
+          "pattern": "*.messenger.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "messenger.com": {},
+            "m.me": {},
+            "*.m.me": {},
+            "messengerdevelopers.com": {},
+            "*.messengerdevelopers.com": {}
+          }
+        },
+        {
+          "pattern": "fb.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.fb.com": {},
+            "facebook.com": {},
+            "*.facebook.com": {}
+          }
+        },
+        {
+          "pattern": "*.fb.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "fb.com": {},
+            "facebook.com": {},
+            "*.facebook.com": {}
+          }
+        },
+        {
+          "pattern": "m.me",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.m.me": {},
+            "messenger.com": {},
+            "*.messenger.com": {}
+          }
+        },
+        {
+          "pattern": "*.m.me",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "m.me": {},
+            "messenger.com": {},
+            "*.messenger.com": {}
+          }
+        },
+        {
+          "pattern": "oculus*.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "oculus*.com": {},
+            "*.oculus*.com": {}
+          }
+        },
+        {
+          "pattern": "*.oculus*.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "oculus*.com": {},
+            "*.oculus*.com": {}
+          }
+        },
+        {
+          "pattern": "workplace.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "workplace.com": {},
+            "*.workplace.com": {}
+          }
+        },
+        {
+          "pattern": "*.workplace.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "workplace.com": {},
+            "*.workplace.com": {}
+          }
+        },
+        {
+          "pattern": "messengerdevelopers.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.messengerdevelopers.com": {}
+          }
+        },
+        {
+          "pattern": "*.messengerdevelopers.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "messengerdevelopers.com": {}
+          }
+        },
+        {
+          "pattern": "onavo.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.onavo.com": {}
+          }
+        },
+        {
+          "pattern": "*.onavo.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "onavo.com": {}
+          }
+        },
+        {
+          "pattern": "twitter.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.twitter.com": {},
+            "t.co": {},
+            "*.t.co": {}
+          }
+        },
+        {
+          "pattern": "*.twitter.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "twitter.com": {},
+            "t.co": {},
+            "*.t.co": {}
+          }
+        },
+        {
+          "pattern": "t.co",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "twitter.com": {},
+            "*.twitter.com": {}
+          }
+        },
+        {
+          "pattern": "*.t.co",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "t.co": {},
+            "twitter.com": {},
+            "*.twitter.com": {}
+          }
         },
         {
           "pattern": "*",
@@ -114,6 +749,56 @@
           },
           "excluded": {},
           "_index": 2
+        },
+        {
+          "pattern": "youtube.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.youtube.com": {}
+          }
+        },
+        {
+          "pattern": "*.youtube.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "youtube.com": {}
+          }
         }
       ],
       "mac": {
@@ -165,7 +850,7 @@
     ],
     "ui": {
       "expandPreferences": true,
-      "popupDefaultTab": "isolation-global"
+      "popupDefaultTab": "actions"
     },
     "ignoreRequestsToAMO": true,
     "ignoreRequestsToPocket": true,
