@@ -102,7 +102,7 @@
 ! nextdns.io and intercom
 @@||api-iam.intercom.io^$xhr
 @@||intercom.io^$websocket
-@@||js.intercomcdn.com^$script,font
+@@||js.intercomcdn.com^$script,font,media
 @@||nextdns.io^
 @@||widget.intercom.io^$script
 
