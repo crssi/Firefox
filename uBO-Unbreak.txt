@@ -66,7 +66,6 @@
 @@||media.brightcove.com^$media,domain=players.brightcove.net
 @@||mozilla.org^$3p,xhr,domain=mozilla.com
 @@||msa.trafficmanager.net^$3p,xhr
-@@||nextdns.io^
 @@||omara.cdn-cnj.si^$3p,script
 @@||paypal.com^$3p,subdocument,popup
 @@||pictures.zooplus.com^$3p,script,image,domain=www.zoohit.si
@@ -100,6 +99,12 @@
 @@||zdassets.com^$3p,image,stylesheet,script
 @@||zopim.com^$3p,script,websocket,image
 
+! nextdns.io and intercom
+@@||api-iam.intercom.io^$xhr
+@@||intercom.io^$websocket
+@@||js.intercomcdn.com^$script,font
+@@||nextdns.io^
+@@||widget.intercom.io^$script
 
 !!! facebook.com
 @@||*-instagram.*.facebook.com^$3p,subdocument
