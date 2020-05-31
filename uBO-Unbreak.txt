@@ -100,11 +100,9 @@
 @@||zopim.com^$3p,script,websocket,image
 
 ! nextdns.io and intercom
-@@||api-iam.intercom.io^$xhr
-@@||intercom.io^$websocket
-@@||js.intercomcdn.com^$script,font,media
+@@||intercom.io^
+@@||intercomcdn.com^
 @@||nextdns.io^
-@@||widget.intercom.io^$script
 
 !!! facebook.com
 @@||*-instagram.*.facebook.com^$3p,subdocument
