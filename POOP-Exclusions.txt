@@ -1,3 +1,4 @@
+* *.akamaihd.net
 * *.braintreegateway.com
 * *.crisp.chat
 * api.spectrumcustomizer.com
@@ -14,7 +15,6 @@
 *.facebook.com *.fbcdn.net
 *.google*.* *
 *.icloud.com *.apple*.com
-*.imdb.com *.akamaihd.net
 *.imdb.com *.amazonvideo.com
 *.live.com *
 *.microsoft.com *
