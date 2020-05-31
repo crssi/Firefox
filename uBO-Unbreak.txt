@@ -78,6 +78,7 @@
 @@||sendgrid.net^
 @@||shareasale.com^$1p
 @@||surveyrouter.com^$1p
+@@||tealium.cbsnews.com^$script,1p
 @@||thetacdn.net^$3p,image
 @@||tiqcdn.com/*/utag.js$script
 @@||translate.googleusercontent.com^
