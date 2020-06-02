@@ -123,7 +123,6 @@ EXTERNAL APPLICATIONS:
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
-  /* 0709  */ user_pref("network.file.disable_unc_paths", false); // true breaks CanvasBlocker extension
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
@@ -148,5 +147,6 @@ EXTERNAL APPLICATIONS:
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
+  /* 5000x */ user_pref("dom.quotaManager.useDOSDevicePathSyntax", false); // workaround for CB UNC breakage; fixed in FF78+
 
 user_pref("_user.js.parrot", "Eagle has landed!");
