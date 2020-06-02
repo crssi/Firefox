@@ -1138,7 +1138,7 @@ user_pref("browser.uitour.url", "");
 user_pref("devtools.chrome.enabled", false);
 /* 2608: disable remote debugging
  * [1] https://trac.torproject.org/projects/tor/ticket/16222 ***/
-user_pref("devtools.debugger.remote-enabled", false);
+user_pref("devtools.debugger.remote-enabled", false); // [DEFAULT: false]
 /* 2609: disable MathML (Mathematical Markup Language) [FF51+] [SETUP-HARDEN]
  * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#misc
  * [1] https://bugzilla.mozilla.org/1173199 ***/
@@ -1491,7 +1491,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 29.5.2020 (commit: f6e6de8); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 1.6.2020 (commit: ecc6255); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -1521,7 +1521,7 @@ NOTE: Before proceeding further, make a backup of your current profile
 
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-    On install page click apply for Convenient and Stealth settings
+    On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
     General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
@@ -1615,6 +1615,7 @@ EXTERNAL APPLICATIONS:
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
+  /* 0709  */ user_pref("network.file.disable_unc_paths", false); // true breaks CanvasBlocker extension
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
