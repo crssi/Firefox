@@ -23,7 +23,7 @@
   :root {
     --mbarstyler-popout-pixels: 2px;
     --mbarstyler-top-bar-display: none;
-    --mbarstyler-title-font-size: 15px;
+    --mbarstyler-title-font-size: 14px;
     --mbarstyler-url-font-size: 12px;
     --mbarstyler-max-rows-without-scrolling: 16;
     --mbarstyler-bottom-border-width: 1px;
