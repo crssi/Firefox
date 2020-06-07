@@ -14,7 +14,6 @@
 @@||accounts.google.*/ServiceLogin$3p,subdocument
 @@||ads.api.24ur.si^$xhr,domain=24ur.com
 @@||advertising.com^$1p
-||advertising.com^$~document
 @@||amzn.to^$1p
 @@||apis.google.com^$3p,script,domain=content.googleapis.com|dropbox.com
 @@||appspot.com^$3p,subdocument,domain=cloud.google.com
