@@ -29,6 +29,7 @@
 @@||cloudfront.net$3p,image,font,stylesheet
 @@||content.force.com^$3p,image
 @@||content.jwplatform.com^$3p,xhr,script
+@@||contextual.media.net^$3p,script
 @@||cookielaw.org/*/otBannerSdk.js$script
 @@||cookielaw.org/*/otPcPanel.json$xhr
 @@||cookielaw.org/*/otSDKStub.js$script
