@@ -24,6 +24,7 @@
 ||adserver.yahoo.com^$important
 ||adservice.google.*^$important
 ||adtech.*^$important
+||advertising.com^$~document
 ||agilemeasure.com^$3p
 ||alooma.com^$3p
 ||amazon-adsystem.*^
