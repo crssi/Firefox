@@ -75,3 +75,5 @@ mxtoolbox.com##footer.container-fluid
 
 ! 4/15/2020 https://www.laptopmag.com
 ##.hawk-main-transparent
+
+##.spu-bg
