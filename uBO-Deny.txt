@@ -12,7 +12,7 @@
 
 ||*.checkfront.com/lib/Control.Geocoder*.js$script
 ||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
-||*/client.min.js$script,important
+!||*/client.min.js$script
 ||*/fingerprintjs2*$script,important
 ||*/fp.js$script,important
 ||1105media.com^$3p
