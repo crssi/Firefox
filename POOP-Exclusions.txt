@@ -5,7 +5,7 @@
 * edge.api.brightcove.com
 * shopify-chat.shopifycloud.com
 *.*inn.com *.*inn.com
-*.24liveblog.com *.24liveplus.com
+*.24live*.com *.24live*.com
 *.ali*.com *.ali*.com
 *.amazon.* *.*amazon.com
 *.azure.com *
@@ -32,3 +32,4 @@
 *vimeo.com *vimeo*.*
 f.vision *.dnsf.vision
 github.com *.github*.com
+yastatic.net *.yandex.*
