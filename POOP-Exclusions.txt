@@ -31,5 +31,6 @@
 *.youtube*.com *
 *vimeo.com *vimeo*.*
 f.vision *.dnsf.vision
+fast.com *.nflxvideo.net
 github.com *.github*.com
 yastatic.net *.yandex.*
