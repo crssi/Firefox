@@ -154,7 +154,7 @@
 ||yottlyscript.com^$3p
 ||youtube.com/youtubei/v1/log_event*$xhr
 ||zdassets.com^$3p,~xhr
-||zendesk.com^$3p
+||zendesk.com^$3p~image
 
 ! 1/8/2019, 3:16:12 PM trustedreviews.com
 ||ti-media.net^$~stylesheet,~image
