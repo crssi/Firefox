@@ -7,7 +7,7 @@
 *.*inn.com *.*inn.com
 *.24live*.com *.24live*.com
 *.ali*.com *.ali*.com
-*.amazon.* *.*amazon.com
+*.amazon.* *amazon*.com
 *.azure.com *
 *.cnet.com cnetvideo.cbsistatic.com
 *.dropbox.com *.dropbox*.com
@@ -15,7 +15,7 @@
 *.facebook.com *.fbcdn.net
 *.google*.* *
 *.icloud.com *.apple*.com
-*.imdb.com *.amazonvideo.com
+*.imdb.com *amazon*.com
 *.live.com *
 *.microsoft.com *
 *.minecraft.net *.mojang.com
