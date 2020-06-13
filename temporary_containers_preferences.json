@@ -1,6 +1,6 @@
 {
-  "version": "1.8",
-  "date": 1591348665900,
+  "version": "1.9beta1",
+  "date": 1592049330900,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -40,9 +40,7 @@
             "container": "default"
           }
         },
-        "excluded": {
-          "duckduckgo.com": {}
-        },
+        "excluded": {},
         "excludedContainers": []
       },
       "domain": [
@@ -53,7 +51,7 @@
             "allowedInPermanent": false
           },
           "navigation": {
-            "action": "global"
+            "action": "notsamedomain"
           },
           "mouseClick": {
             "middle": {
@@ -63,17 +61,20 @@
               "action": "global"
             },
             "left": {
-              "action": "notsamedomain"
+              "action": "global"
             }
           },
-          "excluded": {},
+          "excluded": {
+            "duckduckgo.com": {}
+          },
           "_index": 0
         },
         {
-          "pattern": "*.google.*",
+          "pattern": "accounts.google.com",
           "always": {
             "action": "enabled",
-            "allowedInPermanent": false
+            "allowedInPermanent": true,
+            "allowedInTemporary": true
           },
           "navigation": {
             "action": "global"
@@ -86,17 +87,126 @@
               "action": "global"
             },
             "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*": {}
+          }
+        },
+        {
+          "pattern": "accounts.youtube.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": true,
+            "allowedInTemporary": true
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*": {}
+          }
+        },
+        {
+          "pattern": "/^https?://(?=(.+\\.)?(google|youtube)\\.([^.]+|co\\.uk)/)((?!accounts\\.?(google|youtube)\\.([^.]+|co\\.uk)/)).*$/",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.google.*": {},
+            "*.youtube.com": {}
+          }
+        },
+        {
+          "pattern": "/^https?://(.+\\.)?(facebook|instagram|messenger)\\.com/.*/",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
               "action": "notsamedomain"
             }
           },
-          "excluded": {},
-          "_index": 1
+          "excluded": {
+            "facebook.com": {},
+            "*.facebook.com": {},
+            "instagram.com": {},
+            "*.instagram.com": {},
+            "messenger.com": {},
+            "*.messenger.com": {}
+          }
+        },
+        {
+          "pattern": "/^https?://(.+\\.)?(twitter\\.com|t\\.co)/.*/",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {
+            "twitter.com": {},
+            "t.co": {}
+          }
         },
         {
           "pattern": "*",
           "always": {
             "action": "enabled",
-            "allowedInPermanent": false
+            "allowedInPermanent": false,
+            "allowedInTemporary": true
           },
           "navigation": {
             "action": "global"
@@ -112,8 +222,7 @@
               "action": "global"
             }
           },
-          "excluded": {},
-          "_index": 2
+          "excluded": {}
         }
       ],
       "mac": {
@@ -135,7 +244,58 @@
     },
     "replaceTabs": false,
     "cookies": {
-      "domain": {}
+      "domain": {
+        "https://duckduckgo.com/": [
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "5",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "2"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "am",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "here-maps"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "av",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "1"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "n",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "1"
+          }
+        ]
+      }
     },
     "deletesHistory": {
       "automaticMode": "never",
@@ -159,18 +319,16 @@
       ]
     },
     "contextMenuBookmarks": false,
-    "ignoreRequests": [
-      "getpocket.com",
-      "addons.mozilla.org"
-    ],
+    "ignoreRequests": [],
     "ui": {
       "expandPreferences": true,
-      "popupDefaultTab": "isolation-global"
+      "popupDefaultTab": "isolation-per-domain"
     },
     "ignoreRequestsToAMO": true,
     "ignoreRequestsToPocket": true,
     "scripts": {
-      "domain": {}
+      "domain": {},
+      "active": true
     }
   }
 }

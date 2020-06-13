@@ -1,0 +1,176 @@
+{
+  "version": "1.8",
+  "date": 1591348665900,
+  "preferences": {
+    "automaticMode": {
+      "active": true,
+      "newTab": "navigation"
+    },
+    "notifications": false,
+    "container": {
+      "namePrefix": "%domain% #",
+      "color": "red",
+      "colorRandom": true,
+      "icon": "circle",
+      "iconRandom": false,
+      "numberMode": "keepuntilrestart",
+      "removal": 900000,
+      "colorRandomExcluded": [
+        "toolbar"
+      ],
+      "iconRandomExcluded": []
+    },
+    "iconColor": "default",
+    "isolation": {
+      "global": {
+        "navigation": {
+          "action": "never"
+        },
+        "mouseClick": {
+          "middle": {
+            "action": "notsamedomain",
+            "container": "default"
+          },
+          "ctrlleft": {
+            "action": "never",
+            "container": "default"
+          },
+          "left": {
+            "action": "never",
+            "container": "default"
+          }
+        },
+        "excluded": {
+          "duckduckgo.com": {}
+        },
+        "excludedContainers": []
+      },
+      "domain": [
+        {
+          "pattern": "duckduckgo.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {},
+          "_index": 0
+        },
+        {
+          "pattern": "*.google.*",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {},
+          "_index": 1
+        },
+        {
+          "pattern": "*",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {},
+          "_index": 2
+        }
+      ],
+      "mac": {
+        "action": "disabled"
+      },
+      "active": true
+    },
+    "browserActionPopup": false,
+    "pageAction": false,
+    "contextMenu": true,
+    "keyboardShortcuts": {
+      "AltC": true,
+      "AltP": true,
+      "AltN": false,
+      "AltShiftC": false,
+      "AltX": false,
+      "AltO": false,
+      "AltI": false
+    },
+    "replaceTabs": false,
+    "cookies": {
+      "domain": {}
+    },
+    "deletesHistory": {
+      "automaticMode": "never",
+      "contextMenu": false,
+      "containerAlwaysPerDomain": "never",
+      "containerIsolation": "never",
+      "containerRemoval": 0,
+      "containerMouseClicks": "never",
+      "statistics": false,
+      "active": false,
+      "contextMenuBookmarks": false
+    },
+    "statistics": false,
+    "closeRedirectorTabs": {
+      "active": true,
+      "delay": 2000,
+      "domains": [
+        "t.co",
+        "outgoing.prod.mozaws.net",
+        "slack-redir.net"
+      ]
+    },
+    "contextMenuBookmarks": false,
+    "ignoreRequests": [
+      "getpocket.com",
+      "addons.mozilla.org"
+    ],
+    "ui": {
+      "expandPreferences": true,
+      "popupDefaultTab": "isolation-global"
+    },
+    "ignoreRequestsToAMO": true,
+    "ignoreRequestsToPocket": true,
+    "scripts": {
+      "domain": {}
+    }
+  }
+}
