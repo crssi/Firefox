@@ -1,7 +1,5 @@
 _sso=
-.alipay.com
 .encReferrer=
-/oauth
 /_login
 //azure.microsoft.com/email/\?destination=https%3A%2F%2Fportal.azure.com%2F
 //disq.us/
@@ -17,6 +15,7 @@ _sso=
 /logoff
 /logon
 /logout
+/oauth
 /openid/
 /preferences
 /profile
@@ -38,12 +37,13 @@ _sso=
 9inchurl.com/
 aa419.org/
 action=login
-alipay.com/
+alipay.com
 archive.is/
 chart.googleapis.com/chart
 docs.google.com/
 duckduckgo.com/
 github.io/
+googleusercontent.com/
 hideproxy.me/
 hosts-file.net/
 i-dont-care-about-cookies.eu/
@@ -66,6 +66,5 @@ translate.google.com/
 twitter.com/
 ubi.com/
 virustotal.com/
-googleusercontent.com/
 wego.here.com/
 youtube.com/embed/

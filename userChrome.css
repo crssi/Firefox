@@ -165,7 +165,7 @@
 
 
 
-#tabbrowser-tabpanels{
+#tabbrowser-tabpanels {
   background-color: rgb(46,54,69) !important;
 }
 
@@ -187,10 +187,17 @@
 #context_closeTab,
 #context_closeTabsToTheEnd,
 #context_moveTabOptions,
-#context_selectAllTabs
-{
+#context_selectAllTabs {
     display: none !important;
 }
+
+/* hide 'No Container' and separator at 'Open Link in New Container Tab' context submenu */
+/*
+menuitem[data-usercontextid="0"],
+menuitem[data-usercontextid="0"]+menuseparator {
+  display: none
+}
+*/
 
 /* only show close buttons on tabs when hovering */
 .tabbrowser-tab .tab-close-button {
@@ -221,7 +228,6 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  /* z-index: 0; */
   opacity: .3;
 }
 

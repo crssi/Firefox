@@ -1,6 +1,6 @@
 {
-  "version": "1.9beta1",
-  "date": 1592049330900,
+  "version": "1.8",
+  "date": 1592223834100,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -120,7 +120,33 @@
           }
         },
         {
-          "pattern": "/^https?://(?=(.+\\.)?(google|youtube)\\.([^.]+|co\\.uk)/)((?!accounts\\.?(google|youtube)\\.([^.]+|co\\.uk)/)).*$/",
+          "pattern": "*.google.*",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.google.*": {},
+            "*.youtube.com": {}
+          }
+        },
+        {
+          "pattern": "*.youtube.com",
           "always": {
             "action": "enabled",
             "allowedInPermanent": false,
@@ -206,7 +232,7 @@
           "always": {
             "action": "enabled",
             "allowedInPermanent": false,
-            "allowedInTemporary": true
+            "allowedInTemporary": false
           },
           "navigation": {
             "action": "global"
@@ -245,7 +271,31 @@
     "replaceTabs": false,
     "cookies": {
       "domain": {
-        "https://duckduckgo.com/": [
+        "duckduckgo.com": [
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "n",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "1"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "av",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "1"
+          },
           {
             "domain": "duckduckgo.com",
             "expirationDate": "",
@@ -267,32 +317,8 @@
             "path": "",
             "sameSite": "",
             "secure": "",
-            "url": "https://duckduckgo.com/",
+            "url": "https://duckduckgo.com/ ",
             "value": "here-maps"
-          },
-          {
-            "domain": "duckduckgo.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "av",
-            "path": "",
-            "sameSite": "",
-            "secure": "",
-            "url": "https://duckduckgo.com/",
-            "value": "1"
-          },
-          {
-            "domain": "duckduckgo.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "n",
-            "path": "",
-            "sameSite": "",
-            "secure": "",
-            "url": "https://duckduckgo.com/",
-            "value": "1"
           }
         ]
       }
@@ -327,7 +353,14 @@
     "ignoreRequestsToAMO": true,
     "ignoreRequestsToPocket": true,
     "scripts": {
-      "domain": {},
+      "domain": {
+        "*.google.*": [
+          {
+            "code": "/*\n* ClearURLs\n* Copyright (c) 2017-2020 Kevin Röbert\n*\n* This program is free software: you can redistribute it and/or modify\n* it under the terms of the GNU Lesser General Public License as published by\n* the Free Software Foundation, either version 3 of the License, or\n* (at your option) any later version.\n*\n* This program is distributed in the hope that it will be useful,\n* but WITHOUT ANY WARRANTY; without even the implied warranty of\n* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n* GNU Lesser General Public License for more details.\n*\n* You should have received a copy of the GNU Lesser General Public License\n* along with this program.  If not, see <http://www.gnu.org/licenses/>.\n*\n* Based on:\n*   Remove Google Redirection\n*   https://github.com/kodango/Remove-Google-Redirection/blob/master/extension/chrome/remove-google-redirection.user.js\n*   Copyright (c) 2017 kodango\n*   MIT License: https://github.com/kodango/Remove-Google-Redirection/blob/master/LICENSE\n*/\n(function (window) {\n    \"use strict\";\n\n    function injectFunction() {\n        let ele = document.createElement('script');\n        let s = document.getElementsByTagName('script')[0];\n\n        ele.type = 'text/javascript';\n        ele.textContent = \"Object.defineProperty(window, 'rwt', {\" +\n        \"    value: function() { return true; },\" +\n        \"    writable: false,\" +\n        \"    configurable: false\" +\n        \"});\";\n\n        s.parentNode.insertBefore(ele, s);\n    }\n\n    /*\n    * The main entry\n    */\n    function main()\n    {\n        injectFunction();\n\n        document.addEventListener('mouseover', function (event) {\n            let a = event.target, depth = 1;\n\n            while (a && a.tagName !== 'A' && depth-- > 0) {\n                a = a.parentNode;\n            }\n\n            if (a && a.tagName === 'A') {\n                try {\n                    a.removeAttribute('data-cthref');\n                    delete a.dataset.cthref;\n                } catch(e) {\n                    console.log(e);\n                }\n            }\n        }, true);\n    }\n\n    main();\n})(window);\n",
+            "runAt": "document_end"
+          }
+        ]
+      },
       "active": true
     }
   }
