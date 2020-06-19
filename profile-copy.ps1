@@ -1,3 +1,5 @@
+# Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/crssi/Firefox/master/profile-copy.ps1'))
+
 if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
 
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
@@ -14,16 +16,15 @@ try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPat
 
 Expand-Archive -Path "$tmpFolder\Profile.zip" -DestinationPath $tmpFolder
 
-Get-Content -Path "$tmpFolder\Firefox\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $newProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
+Get-Content -Path "$tmpFolder\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $newProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
 Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $oldProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
-$tmpProfilePath = "$tmpFolder\Firefox\Profiles\$($newProfilePath.split('\')[-1])"
+$tmpProfilePath = "$tmpFolder\Profiles\$($newProfilePath.split('\')[-1])"
 
 $userProfileFiles = @('cert9.db','content-prefs.sqlite','favicons.sqlite','handlers.json','key4.db','logins.json','permissions.sqlite','persdict.dat','pkcs11.txt','places.sqlite')
 $userProfileFiles | ForEach-Object { Copy-Item -Path "$oldProfilePath\$_" -Destination "$tmpProfilePath\$_" -Force -ErrorAction SilentlyContinue }
 
 Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force
-Move-Item -Path "$tmpFolder\Firefox" -Destination "$($env:APPDATA)\Mozilla\Firefox" -Force
-Remove-Item -Path $tmpFolder -Recurse -Force
+Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -Force
 
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
 $files = @('extensions.json','pkcs11.txt','compatibility.ini','pluginreg.dat')
