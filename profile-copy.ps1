@@ -43,12 +43,8 @@ Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath,Utf
 
 Start-Process -FilePath 'firefox.exe' -ArgumentList 'about:addons'
 do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
+Start-Sleep -Milliseconds 1000
+[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
 [System.Windows.Forms.Messagebox]::Show("Please, enable all addons !","User action required !")
 
-#Start-Process -FilePath 'firefox.exe'
-#$firefoxApp = New-Object -ComObject wscript.shell
-#do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
-#Start-Sleep -Milliseconds 2000
-#do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'Firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
-#Start-Sleep -Milliseconds 2000
-#Start-Process -FilePath 'firefox.exe'
+#Exit
