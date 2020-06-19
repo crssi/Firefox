@@ -9,12 +9,13 @@ $tmpFolder = New-Item -Path $tmpFile.DirectoryName -Name $tmpFile.Name -ItemType
 Remove-Variable -Name tmpFile
 
 Import-Module -Name BitsTransfer
-try { Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder } catch { Exit }
+try { Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/profile.zip -Destination $tmpFolder } catch { Exit }
 
 $timestamp = (Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')
 try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip" -CompressionLevel Fastest } catch { Remove-Item -Path $tmpFolder -Recurse -Force; Exit }
 
-Expand-Archive -Path "$tmpFolder\Profile.zip" -DestinationPath $tmpFolder
+Expand-Archive -Path "$tmpFolder\profile.zip" -DestinationPath $tmpFolder
+Remove-Item -Path "$tmpFolder\profile.zip" -Force
 
 Get-Content -Path "$tmpFolder\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $newProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
 Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $oldProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
@@ -42,7 +43,8 @@ Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath,Utf
 
 Start-Process -FilePath 'firefox.exe'
 $firefoxApp = New-Object -ComObject wscript.shell
+do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
 Start-Sleep -Milliseconds 2000
-do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'Firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
 Start-Sleep -Milliseconds 2000
 Start-Process -FilePath 'firefox.exe'
