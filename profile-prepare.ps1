@@ -15,4 +15,4 @@ forEach ($file in $files) {
 Get-ChildItem $profilePath\storage\default | where { $_.name -notmatch '\^userContextId' } | Remove-Item -Force
 Get-ChildItem $profilePath\addonStartup.json.lz4 | Remove-Item -Force
 
-Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$env:UserProfile\Documents\GitHub\Firefox\profile.zip" -CompressionLevel Optimal -Force
+Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$env:UserProfile\Documents\GitHub\Firefox\Profile.zip" -CompressionLevel Optimal -Force
