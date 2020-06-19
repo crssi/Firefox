@@ -9,7 +9,7 @@ $tmpFolder = New-Item -Path $tmpFile.DirectoryName -Name $tmpFile.Name -ItemType
 Remove-Variable -Name tmpFile
 
 Import-Module -Name BitsTransfer
-try { Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/profile.zip -Destination $tmpFolder } catch { Exit }
+try { Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder -ErrorAction Stop } catch { Exit }
 
 $timestamp = (Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')
 try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip" -CompressionLevel Fastest } catch { Remove-Item -Path $tmpFolder -Recurse -Force; Exit }
