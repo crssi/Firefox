@@ -26,14 +26,18 @@ Move-Item -Path "$tmpFolder\Firefox" -Destination "$($env:APPDATA)\Mozilla\Firef
 Remove-Item -Path $tmpFolder -Recurse -Force
 Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath
 
-Start-Process -FilePath 'firefox.exe' -ArgumentList '-safe-mode'
-$firefoxApp = New-Object -ComObject wscript.shell
+Start-Process -FilePath 'firefox.exe' -ArgumentList 'about:addons'
+do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
+[System.Windows.Forms.Messagebox]::Show("Please, enable all addons !","User action required !")
 
-Start-Sleep -Milliseconds 3000
-do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox Safe Mode') -eq $false)
-$firefoxApp.SendKeys('~')
-Remove-Variable -Name firefoxApp
-
-Start-Sleep -Milliseconds 3000
-do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
-Start-Process -FilePath 'firefox.exe'
+#Start-Process -FilePath 'firefox.exe' -ArgumentList '-safe-mode'
+#$firefoxApp = New-Object -ComObject wscript.shell
+#
+#Start-Sleep -Milliseconds 3000
+#do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox Safe Mode') -eq $false)
+#$firefoxApp.SendKeys('~')
+#Remove-Variable -Name firefoxApp
+#
+#Start-Sleep -Milliseconds 3000
+#do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+#Start-Process -FilePath 'firefox.exe'
