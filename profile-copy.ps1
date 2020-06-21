@@ -28,18 +28,18 @@ Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force
 Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -Force
 
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
-$files = @('extensions.json','pkcs11.txt','compatibility.ini','pluginreg.dat')
+$files = @('extensions.json','compatibility.ini','pluginreg.dat')
 forEach ($file in $files) {
-    $data = Get-Content -Encoding UTF8 -Path $newProfilePath\$file
-    $data = $data.Replace('%appdata%/',"$($env:APPDATA.Replace('\','/').Replace(' ','%20'))/")
-    $data = $data.Replace('%appdata%\\',"$($env:APPDATA.Replace('\','\\'))\\")
-    $data = $data.Replace('%programfiles%/',"$($env:ProgramFiles.Replace('\','/').Replace(' ','%20'))/")
-    $data = $data.Replace('%programfiles%\\',"$($env:ProgramFiles.Replace('\','\\'))\\")
-    $data = $data.Replace('%programfiles%\',"$($env:ProgramFiles)\")
-    [System.IO.File]::WriteAllLines("$newProfilePath\$file", $data, $Utf8NoBomEncoding)
+    $content = Get-Content -Encoding UTF8 -Path $newProfilePath\$file
+    $content = $content.Replace('%appdata%/',"$($env:APPDATA.Replace('\','/').Replace(' ','%20'))/")
+    $content = $content.Replace('%appdata%\\',"$($env:APPDATA.Replace('\','\\'))\\")
+    $content = $content.Replace('%programfiles%/',"$($env:ProgramFiles.Replace('\','/').Replace(' ','%20'))/")
+    $content = $content.Replace('%programfiles%\\',"$($env:ProgramFiles.Replace('\','\\'))\\")
+    $content = $content.Replace('%programfiles%\',"$($env:ProgramFiles)\")
+    [System.IO.File]::WriteAllLines("$newProfilePath\$file", $content, $Utf8NoBomEncoding)
 }
 
-Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath,Utf8NoBomEncoding,files,file,data
+Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath,Utf8NoBomEncoding,files,file,content
 
 Start-Process -FilePath 'firefox.exe' -ArgumentList 'about:addons'
 do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
