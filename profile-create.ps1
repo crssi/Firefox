@@ -1,3 +1,4 @@
+# https://github.com/avih/dejsonlz4
 Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $profilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
 
