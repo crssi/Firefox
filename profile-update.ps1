@@ -1,4 +1,4 @@
-# Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/crssi/Firefox/master/profile-copy.ps1'))
+# Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/crssi/Firefox/master/profile-update.ps1'))
 
 if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
 
@@ -48,4 +48,4 @@ Start-Sleep -Milliseconds 3000
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
 [System.Windows.Forms.Messagebox]::Show("IMPORTANT: Enable all addons !","User action required !")
 
-#Exit
+Exit
