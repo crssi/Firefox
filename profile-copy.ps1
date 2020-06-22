@@ -42,9 +42,10 @@ forEach ($file in $files) {
 Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath,Utf8NoBomEncoding,files,file,content
 
 Start-Process -FilePath 'firefox.exe' -ArgumentList 'about:addons'
+$firefoxApp = New-Object -ComObject wscript.shell
 do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
-Start-Sleep -Milliseconds 1000
+Start-Sleep -Milliseconds 3000
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
-[System.Windows.Forms.Messagebox]::Show("Please, enable all addons !","User action required !")
+[System.Windows.Forms.Messagebox]::Show("IMPORTANT: Enable all addons !","User action required !")
 
 #Exit
