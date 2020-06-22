@@ -48,4 +48,4 @@ Start-Sleep -Milliseconds 3000
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
 [System.Windows.Forms.Messagebox]::Show("IMPORTANT: Enable all addons !","User action required !")
 
-Exit
+#Exit
