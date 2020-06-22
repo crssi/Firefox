@@ -3,6 +3,7 @@
 if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
 
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'proxsign' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
 
 Remove-Item -Path ($tmpFile = New-TemporaryFile)
 $tmpFolder = New-Item -Path $tmpFile.DirectoryName -Name $tmpFile.Name -ItemType 'directory'
@@ -48,4 +49,4 @@ Start-Sleep -Milliseconds 3000
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
 [System.Windows.Forms.Messagebox]::Show("IMPORTANT: Enable all addons !","User action required !")
 
-#Exit
+Exit
