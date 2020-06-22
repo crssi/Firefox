@@ -12,7 +12,7 @@ Import-Module -Name BitsTransfer
 try { Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder -ErrorAction Stop } catch { Exit }
 
 $timestamp = (Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')
-try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip" -CompressionLevel Fastest } catch { Remove-Item -Path $tmpFolder -Recurse -Force; Exit }
+try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$timestamp.zip" -CompressionLevel Fastest } catch { Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false; Exit }
 
 Expand-Archive -Path "$tmpFolder\profile.zip" -DestinationPath $tmpFolder
 Remove-Item -Path "$tmpFolder\profile.zip" -Force
@@ -24,7 +24,7 @@ $tmpProfilePath = "$tmpFolder\Profiles\$($newProfilePath.split('\')[-1])"
 $userProfileFiles = @('cert9.db','content-prefs.sqlite','favicons.sqlite','handlers.json','key4.db','logins.json','permissions.sqlite','persdict.dat','pkcs11.txt','places.sqlite')
 $userProfileFiles | ForEach-Object { Copy-Item -Path "$oldProfilePath\$_" -Destination "$tmpProfilePath\$_" -Force -ErrorAction SilentlyContinue }
 
-Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force
+Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force -Confirm:$false
 Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -Force
 
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
