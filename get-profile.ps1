@@ -50,15 +50,15 @@ Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath,Utf
 
 Start-Process -FilePath 'firefox.exe'
 
-Exit
-
-
-
-Start-Process -FilePath 'firefox.exe' -ArgumentList 'about:addons'
-$firefoxApp = New-Object -ComObject wscript.shell
-do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
-Start-Sleep -Milliseconds 3000
-[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
-[System.Windows.Forms.Messagebox]::Show("IMPORTANT: Enable all addons !","User action required !")
-
-Exit
+#Exit
+#
+#
+#
+#Start-Process -FilePath 'firefox.exe' -ArgumentList 'about:addons'
+#$firefoxApp = New-Object -ComObject wscript.shell
+#do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
+#Start-Sleep -Milliseconds 3000
+#[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
+#[System.Windows.Forms.Messagebox]::Show("IMPORTANT: Enable all addons !","User action required !")
+#
+#Exit
