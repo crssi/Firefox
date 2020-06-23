@@ -28,37 +28,23 @@ $userProfileFiles | ForEach-Object { Copy-Item -Path "$oldProfilePath\$_" -Desti
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
 $files = @('extensions.json','compatibility.ini','pluginreg.dat','addonStartup.json')
 forEach ($file in $files) {
-    $content = Get-Content -Encoding UTF8 -Path $tmpFolder\$file
+    $content = Get-Content -Encoding UTF8 -Path $tmpProfilePath\$file
     $content = $content.Replace('%appdata%/',"$($env:APPDATA.Replace('\','/').Replace(' ','%20'))/")
     $content = $content.Replace('%appdata%\\',"$($env:APPDATA.Replace('\','\\'))\\")
     $content = $content.Replace('%programfiles%/',"$($env:ProgramFiles.Replace('\','/').Replace(' ','%20'))/")
     $content = $content.Replace('%programfiles%\\',"$($env:ProgramFiles.Replace('\','\\'))\\")
     $content = $content.Replace('%programfiles%\',"$($env:ProgramFiles)\")
-    [System.IO.File]::WriteAllLines("$tmpFolder\$file", $content, $Utf8NoBomEncoding)
+    [System.IO.File]::WriteAllLines("$tmpProfilePath\$file", $content, $Utf8NoBomEncoding)
 }
 
-& "$tmpFolder\jsonlz4.exe" @("$tmpFolder\addonStartup.json","$tmpFolder\addonStartup.json.lz4")
-Remove-Item -Path "$tmpFolder\addonStartup.json" -Force
-Remove-Item -Path "$tmpFolder\jsonlz4.exe" -Force
+& "$tmpProfilePath\jsonlz4.exe" @("$tmpProfilePath\addonStartup.json","$tmpProfilePath\addonStartup.json.lz4")
+Remove-Item -Path "$tmpProfilePath\addonStartup.json" -Force
+Remove-Item -Path "$tmpProfilePath\jsonlz4.exe" -Force
 
 Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force -Confirm:$false
 Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -Force
 
 Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath,Utf8NoBomEncoding,files,file,content
 
-
-
 Start-Process -FilePath 'firefox.exe'
-
-#Exit
-#
-#
-#
-#Start-Process -FilePath 'firefox.exe' -ArgumentList 'about:addons'
-#$firefoxApp = New-Object -ComObject wscript.shell
-#do { Start-Sleep -Milliseconds 500 } while ($firefoxApp.AppActivate('Firefox') -eq $false)
-#Start-Sleep -Milliseconds 3000
-#[System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
-#[System.Windows.Forms.Messagebox]::Show("IMPORTANT: Enable all addons !","User action required !")
-#
-#Exit
+Exit
