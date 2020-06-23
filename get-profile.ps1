@@ -1,4 +1,4 @@
-# Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/crssi/Firefox/master/profile-update.ps1'))
+# Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/crssi/Firefox/master/get-profile.ps1'))
 
 if ($PSVersionTable.PSVersion.Major -le 4) { Exit }
 
