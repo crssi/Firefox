@@ -16,7 +16,7 @@ forEach ($file in $files) {
     [System.IO.File]::WriteAllLines("$profilePath\$file", $content, $Utf8NoBomEncoding)
 }
 
-Get-ChildItem $profilePath\storage\default | where { $_.name -notmatch '\^userContextId' } | Remove-Item -Force -Confirm:$false
+Get-ChildItem $profilePath\storage\default | where { $_.name -notmatch '\^userContextId' } | Remove-Item -Recurse -Force -Confirm:$false
 Get-ChildItem $profilePath\addonStartup.json.lz4 | Remove-Item -Force
 Get-ChildItem $profilePath\pkcs11.txt | Remove-Item -Force
 
