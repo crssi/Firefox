@@ -2,7 +2,10 @@
 Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $profilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
 
-$files = @('extensions.json','pkcs11.txt','compatibility.ini','pluginreg.dat')
+& "$env:UserProfile\Documents\GitHub\Firefox\.Tools\dejsonlz4.exe" @("$profilePath\addonStartup.json.lz4","$profilePath\addonStartup.json")
+Copy-Item "$env:UserProfile\Documents\GitHub\Firefox\.Tools\jsonlz4.exe" $profilePath -Force
+
+$files = @('extensions.json','pkcs11.txt','compatibility.ini','pluginreg.dat','addonStartup.json')
 forEach ($file in $files) {
     $content = Get-Content -Encoding UTF8 -Path $profilePath\$file
     $content = $content.Replace($env:APPDATA.Replace('\','/').Replace(' ','%20'),'%appdata%')
