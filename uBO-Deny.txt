@@ -5,14 +5,8 @@
 ! Allow extensions like uBO/uM to get the filter list updates
 @@||$domain=moz-extension-scheme
 
-! 1x1pixel clear images on startpage.com
-||startpage.com/do/*$image,important
-||startpage.com/english/*$image,important
-||startpage.com/tst2/*$image,important
-
 ||*.checkfront.com/lib/Control.Geocoder*.js$script
 ||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
-!||*/client.min.js$script
 ||*/fingerprintjs2*$script,important
 ||*/fp.js$script,important
 ||1105media.com^$3p
@@ -46,6 +40,7 @@
 ||cdn.krxd.net^
 ||cdn.ravenjs.com^$3p,script
 ||cdn.transifex.com^
+||channelsight.com^$xhr
 ||chimpstatic.com^$3p
 ||cloudinary.com^$3p
 ||consensu.org^$3p
@@ -54,6 +49,7 @@
 ||coordinatedcub.com^$3p
 ||delvenetworks.com^$3p,script
 ||doubleclick.*^$important
+||eagleapi.io^
 ||evidon.com^$3p
 ||facebook.*^$3p,domain=~instagram.com|~messenger.com
 ||fbcdn.*^$3p
@@ -61,7 +57,9 @@
 ||firebase.com^$3p
 ||footprint.net^3p,~image
 ||future-fie-assets.co.uk^$3p
+||future-fie.co.uk^
 ||future.net.uk^$3p,~script
+||futurecdn.net^$xhr
 ||get-native.eu^$3p
 ||getsitecontrol.com^$3p
 ||google-analytics.*^$3p,~script,important
@@ -73,6 +71,8 @@
 ||gravatar.com^$3p
 ||groupbycloud.com^$3p
 ||guim.co.uk^$3p,script
+||hawk-assets.co.uk^
+||hawk-tech.co.uk^
 ||hawksearch.com^$3p
 ||hextom.com^$3p
 ||hotjar.*^$important,3p
@@ -86,9 +86,9 @@
 ||ipinfo.io^$3p
 ||iprom.net^$3p
 ||ipromcloud.com^$3p
-||kme.si^$3p,~image
 ||jetlore.com^$3p
 ||jwp*.com^$3p,~script,~media,~image
+||kme.si^$3p,~image
 ||knowyourapps.com^$3p
 ||letspin.io^$3p
 ||limelight.com^$3p,script
@@ -128,7 +128,9 @@
 ||quantserve.com^$3p
 ||s.aolcdn.com/ads/*$3p,script
 ||salesforceliveagent.com^$3p
+||sandsiv.com^3p
 ||scorecardresearch.com^$important
+||secondego.com^3p
 ||servebom.com^$3p,important
 ||shopify.com^$3p,script
 ||shopifycdn.com^$3p,script
@@ -136,8 +138,12 @@
 ||smartfocus.com^$3p
 ||smind.*^$3p
 ||spot.im^$3p
+||startpage.com/do/*$image,important
+||startpage.com/english/*$image,important
+||startpage.com/tst2/*$image,important
 ||syndication.twitter.*^
 ||themessagecloud.com^$3p
+||ti-media.net^$~stylesheet,~image
 ||tinymce.com^$3p
 ||tinypass.com^$3p
 ||trustpilot.com^$3p
@@ -155,14 +161,3 @@
 ||youtube.com/youtubei/v1/log_event*$xhr
 ||zdassets.com^$3p,~xhr
 ||zendesk.com^$3p~image
-
-! 1/8/2019, 3:16:12 PM trustedreviews.com
-||ti-media.net^$~stylesheet,~image
-||eagleapi.io^
-! 1/8/2019, 3:19:59 PM techradar.com
-||hawk-assets.co.uk^
-||hawk-tech.co.uk^
-||future-fie.co.uk^
-||futurecdn.net^$xhr
-! 1/8/2019, 3:34:55 PM logitechg.com
-||channelsight.com^$xhr
