@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1593070846600,
+  "timeStamp": 1593187361600,
   "version": "1.27.10",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -36,7 +36,7 @@
     "malware-0",
     "malware-1",
     "spam404-0",
-    "fanboy-cookiemonster",
+    "fanboy-annoyance",
     "CHN-0",
     "CZE-0",
     "DEU-0",
