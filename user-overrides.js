@@ -36,7 +36,6 @@ ESSENTIAL EXTENSIONS:
     Misc -> Misc -> Block data URL pages: Uncheck
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
-  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://codeberg.org/nobody/LocalCDN/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
     Override list for default blocked parameters: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-custom_parameters.txt
@@ -79,6 +78,7 @@ USEFUL/INTERESTING EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
+  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   Luminous: JavaScript events blocker; https://addons.mozilla.org/firefox/addon/luminous/ (https://gbaptista.github.io/luminous/doc/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
