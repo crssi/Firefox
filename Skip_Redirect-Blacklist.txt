@@ -3,6 +3,7 @@ _sso=
 /_login
 //azure.microsoft.com/email/\?destination=https%3A%2F%2Fportal.azure.com%2F
 //disq.us/
+//go.redirectingat.com
 //slack-redir.net/link
 /abp
 /account
@@ -19,6 +20,7 @@ _sso=
 /openid/
 /preferences
 /profile
+/ProxiedProxiedWebspace
 /register
 /safe-browsing/
 /safebrowsing/
