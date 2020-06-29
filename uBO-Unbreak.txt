@@ -37,6 +37,7 @@
 @@||docs.google.com^$3p,subdocument,domain=dropbox.com
 @@||drive.google.com^$3p,image
 @@||dropboxstatic.com/*/social_icon$stylesheet,domain=dropbox.com
+@@||e.infogram.com/js/dist/embed.js$3p,script
 @@||e.infogram.com^$3p,subdocument
 @@||embed.wistia.com^$3p,media,image
 @@||fast.wistia.com^$3p,script
