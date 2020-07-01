@@ -71,7 +71,6 @@
 @@||omara.cdn-cnj.si^$3p,script
 @@||paypal.com^$3p,subdocument,popup
 @@||pictures.zooplus.com^$3p,script,image,domain=www.zoohit.si
-@@||platform.twitter.com^$3p,stylesheet,image,script
 @@||play.vidyard.com^$3p,subdocument,script
 @@||players.brightcove.net^$3p,script
 @@||pulsar.ebay.com^$domain=pulsar.ebay.com
@@ -84,9 +83,6 @@
 @@||tiqcdn.com/*/utag.js$script
 @@||translate.googleusercontent.com^
 @@||tumblr.com^$3p,subdocument,domain=instagram.com
-@@||twimg.*^$3p,image
-@@||twitter.com/i/videos/$3p,subdocument
-@@||twitter.map.fastly.net^$domain=twitter.com
 @@||ubisoft.com^$3p,domain=ubi.com
 @@||udimg.com^$1p
 @@||udimg.com^$3p,domain=urbandictionary.com
@@ -101,7 +97,15 @@
 @@||zdassets.com^$3p,image,stylesheet,script
 @@||zopim.com^$3p,script,websocket,image
 
-! nextdns.io and intercom
+!!! twitter
+@@||platform.twitter.com/embed/*$3p,subdocument
+@@||platform.twitter.com^$3p,stylesheet,image,script
+@@||syndication.twitter.com^$image,xhr,domain=platform.twitter.com
+@@||twimg.*^$3p,image
+@@||twitter.com/i/videos/$3p,subdocument
+@@||twitter.map.fastly.net^$domain=twitter.com
+
+!!! nextdns.io and intercom
 @@||intercom.io^
 @@||intercomcdn.com^
 @@||nextdns.io^
