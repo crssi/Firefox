@@ -1,6 +1,6 @@
 {
   "version": "1.8",
-  "date": 1593712153116,
+  "date": 1593713941744,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -70,32 +70,7 @@
           "_index": 0
         },
         {
-          "pattern": "accounts.google.com",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": true,
-            "allowedInTemporary": true
-          },
-          "navigation": {
-            "action": "global"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "global"
-            }
-          },
-          "excluded": {
-            "*": {}
-          }
-        },
-        {
-          "pattern": "accounts.youtube.com",
+          "pattern": "/^https?:\\/\\/accounts\\.(google|youtube)\\.com\\/.*/",
           "always": {
             "action": "enabled",
             "allowedInPermanent": true,
