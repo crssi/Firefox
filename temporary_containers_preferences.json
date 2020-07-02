@@ -1,6 +1,6 @@
 {
   "version": "1.8",
-  "date": 1592223834100,
+  "date": 1593712153116,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -172,7 +172,7 @@
           }
         },
         {
-          "pattern": "/^https?://(.+\\.)?(facebook|instagram|messenger)\\.com/.*/",
+          "pattern": "/^https?:\\/\\/(.+\\.)?(facebook\\.com|instagram\\.com|messenger\\.com|fb\\.com|m\\.me)\\/.*/",
           "always": {
             "action": "enabled",
             "allowedInPermanent": false,
@@ -198,11 +198,13 @@
             "instagram.com": {},
             "*.instagram.com": {},
             "messenger.com": {},
-            "*.messenger.com": {}
+            "*.messenger.com": {},
+            "fb.com": {},
+            "*.fb.com": {}
           }
         },
         {
-          "pattern": "/^https?://(.+\\.)?(twitter\\.com|t\\.co)/.*/",
+          "pattern": "/^https?:\\/\\/(.+\\.)?(twitter\\.com|t\\.co)\\/.*/",
           "always": {
             "action": "enabled",
             "allowedInPermanent": false,
@@ -224,7 +226,9 @@
           },
           "excluded": {
             "twitter.com": {},
-            "t.co": {}
+            "*.twitter.com": {},
+            "t.co": {},
+            "*.t.co": {}
           }
         },
         {
