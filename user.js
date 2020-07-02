@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
 * date: 14 Jun 2020
-* version 77
+* version 78-alpha
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -177,7 +177,7 @@ user_pref("javascript.use_us_english_locale", true); // [HIDDEN PREF]
  * fallback to the "Current locale" based on your application language
  * [SETTING] General>Language and Appearance>Fonts and Colors>Advanced>Text Encoding for Legacy Content
  * [TEST] https://hsivonen.com/test/moz/check-charset.htm
- * [1] https://trac.torproject.org/projects/tor/ticket/20025 ***/
+ * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/20025 ***/
 user_pref("intl.charset.fallback.override", "windows-1252");
 
 /*** [SECTION 0300]: QUIET FOX
@@ -390,7 +390,7 @@ user_pref("_user.js.parrot", "0700 syntax error: the parrot's given up the ghost
 /* 0701: disable IPv6
  * IPv6 can be abused, especially regarding MAC addresses. They also do not play nice
  * with VPNs. That's even assuming your ISP and/or router and/or website can handle it.
- * Firefox telemetry (April 2019) shows only 5% of all connections are IPv6
+ * [STATS] Firefox telemetry (June 2020) shows only 5% of all connections are IPv6
  * [NOTE] This is just an application level fallback. Disabling IPv6 is best done at an
  * OS/network level, and/or configured properly in VPN setups. If you are not masking your IP,
  * then this won't make much difference. If you are masking your IP, then it can only help.
@@ -430,13 +430,13 @@ user_pref("network.proxy.socks_remote_dns", true);
    // user_pref("network.ftp.enabled", false);
 /* 0709: disable using UNC (Uniform Naming Convention) paths [FF61+]
  * [SETUP-CHROME] Can break extensions for profiles on network shares
- * [1] https://trac.torproject.org/projects/tor/ticket/26424 ***/
+ * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/26424 ***/
 user_pref("network.file.disable_unc_paths", true); // [HIDDEN PREF]
 /* 0710: disable GIO as a potential proxy bypass vector
  * Gvfs/GIO has a set of supported protocols like obex, network, archive, computer, dav, cdda,
  * gphoto2, trash, etc. By default only smb and sftp protocols are accepted so far (as of FF64)
  * [1] https://bugzilla.mozilla.org/1433507
- * [2] https://trac.torproject.org/23044
+ * [2] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/23044
  * [3] https://en.wikipedia.org/wiki/GVfs
  * [4] https://en.wikipedia.org/wiki/GIO_(software) ***/
 user_pref("network.gio.supported-protocols", ""); // [HIDDEN PREF]
@@ -495,11 +495,11 @@ user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
  * [1] https://bugzilla.mozilla.org/1348275 ***/
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 /* 0850a: disable location bar suggestion types
- * If all three suggestion types are false, search engine keywords are disabled
  * [SETTING] Privacy & Security>Address Bar>When using the address bar, suggest ***/
    // user_pref("browser.urlbar.suggest.history", false);
    // user_pref("browser.urlbar.suggest.bookmark", false);
    // user_pref("browser.urlbar.suggest.openpage", false);
+   // user_pref("browser.urlbar.suggest.topsites", false); // [FF78+]
 /* 0850c: disable location bar dropdown
  * This value controls the total number of entries to appear in the location bar dropdown
  * [NOTE] Items (bookmarks/history/openpages) with a high "frecency"/"bonus" will always
@@ -637,6 +637,8 @@ user_pref("browser.shell.shortcutFavicons", false);
 /*** [SECTION 1200]: HTTPS (SSL/TLS / OCSP / CERTS / HPKP / CIPHERS)
    Your cipher and other settings can be used in server side fingerprinting
    [TEST] https://www.ssllabs.com/ssltest/viewMyClient.html
+   [TEST] https://browserleaks.com/ssl
+   [TEST] https://ja3er.com/
    [1] https://www.securityartwork.es/2017/02/02/tls-client-fingerprinting-with-bro/
 ***/
 user_pref("_user.js.parrot", "1200 syntax error: the parrot's a stiff!");
@@ -653,10 +655,10 @@ user_pref("_user.js.parrot", "1200 syntax error: the parrot's a stiff!");
 user_pref("security.ssl.require_safe_negotiation", true);
 /* 1202: control TLS versions with min and max
  * 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
+ * [STATS] Firefox telemetry (June 2020) shows only 0.16% of SSL handshakes use 1.0 or 1.1
  * [WARNING] Leave these at default, otherwise you alter your TLS fingerprint.
- * Firefox telemetry (April 2020) shows only 0.25% of TLS web traffic uses 1.0 or 1.1
  * [1] https://www.ssllabs.com/ssl-pulse/ ***/
-   // user_pref("security.tls.version.min", 3);
+   // user_pref("security.tls.version.min", 3); // [DEFAULT: 3 FF78+]
    // user_pref("security.tls.version.max", 4);
 /* 1203: enforce TLS 1.0 and 1.1 downgrades as session only */
 user_pref("security.tls.version.enable-deprecated", false);
@@ -715,7 +717,7 @@ user_pref("security.pki.sha1_enforcement_level", 1);
  * 0=disable detecting Family Safety mode and importing the root
  * 1=only attempt to detect Family Safety mode (don't import the root)
  * 2=detect Family Safety mode and import the root
- * [1] https://trac.torproject.org/projects/tor/ticket/21686 ***/
+ * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/21686 ***/
 user_pref("security.family_safety.mode", 0);
 /* 1222: disable intermediate certificate caching (fingerprinting attack vector) [FF41+] [RESTART]
  * [NOTE] This affects login/cert/key dbs. The effect is all credentials are session-only.
@@ -726,12 +728,12 @@ user_pref("security.family_safety.mode", 0);
  * PKP (Public Key Pinning) 0=disabled 1=allow user MiTM (such as your antivirus), 2=strict
  * [SETUP-WEB] If you rely on an AV (antivirus) to protect your web browsing
  * by inspecting ALL your web traffic, then leave at current default=1
- * [1] https://trac.torproject.org/projects/tor/ticket/16206 ***/
+ * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/16206 ***/
 user_pref("security.cert_pinning.enforcement_level", 2);
 
 /** MIXED CONTENT ***/
 /* 1240: disable insecure active content on https pages
- * [1] https://trac.torproject.org/projects/tor/ticket/21323 ***/
+ * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/21323 ***/
 user_pref("security.mixed_content.block_active_content", true); // [DEFAULT: true]
 /* 1241: disable insecure passive content (such as images) on https pages [SETUP-WEB] ***/
 user_pref("security.mixed_content.block_display_content", true);
@@ -744,28 +746,37 @@ user_pref("security.mixed_content.block_object_subrequest", true);
    // user_pref("dom.security.https_only_mode", true); // [FF76+]
    // user_pref("dom.security.https_only_mode.upgrade_local", true); // [FF77+]
 
-/** CIPHERS [WARNING: do not meddle with your cipher suite: see the section 1200 intro] ***/
-/* 1261: disable 3DES (effective key size < 128)
+/** CIPHERS [WARNING: do not meddle with your cipher suite: see the section 1200 intro]
+ * These are all the ciphers still using SHA-1 and CBC which are weaker than the available alternatives. (see "Cipher Suites" in [1])
+ * Additionally some have other weaknesses like key sizes of 128 (or lower) [2] and/or no Perfect Forward Secrecy [3].
+ * [1] https://browserleaks.com/ssl
+ * [2] https://en.wikipedia.org/wiki/Key_size
+ * [3] https://en.wikipedia.org/wiki/Forward_secrecy
+ ***/
+/* 1261: disable 3DES (effective key size < 128 and no PFS)
  * [1] https://en.wikipedia.org/wiki/3des#Security
  * [2] https://en.wikipedia.org/wiki/Meet-in-the-middle_attack
  * [3] https://www-archive.mozilla.org/projects/security/pki/nss/ssl/fips-ssl-ciphersuites.html ***/
    // user_pref("security.ssl3.rsa_des_ede3_sha", false);
-/* 1262: disable 128 bits ***/
-   // user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
-   // user_pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
 /* 1263: disable DHE (Diffie-Hellman Key Exchange)
  * [1] https://www.eff.org/deeplinks/2015/10/how-to-protect-yourself-from-nsa-attacks-1024-bit-DH ***/
-   // user_pref("security.ssl3.dhe_rsa_aes_128_sha", false); // [DEFAULT: false FF79+]
-   // user_pref("security.ssl3.dhe_rsa_aes_256_sha", false); // [DEFAULT: false FF79+]
-/* 1264: disable the remaining non-modern cipher suites as of FF52 ***/
-   // user_pref("security.ssl3.rsa_aes_128_sha", false);
-   // user_pref("security.ssl3.rsa_aes_256_sha", false);
+   // user_pref("security.ssl3.dhe_rsa_aes_128_sha", false); // [DEFAULT: false FF78+]
+   // user_pref("security.ssl3.dhe_rsa_aes_256_sha", false); // [DEFAULT: false FF78+]
+/* 1264: disable the remaining non-modern cipher suites as of FF78 (in order of preferred by FF) ***/
+   // user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
+   // user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
+   // user_pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
+   // user_pref("security.ssl3.ecdhe_rsa_aes_256_sha", false);
+   // user_pref("security.ssl3.rsa_aes_128_sha", false); // no PFS
+   // user_pref("security.ssl3.rsa_aes_256_sha", false); // no PFS
 
 /** UI (User Interface) ***/
 /* 1270: display warning on the padlock for "broken security" (if 1201 is false)
  * Bug: warning padlock not indicated for subresources on a secure page! [2]
+ * [STATS] SSL Labs (June 2020) reports 98.8% of sites have secure renegotiation [3]
  * [1] https://wiki.mozilla.org/Security:Renegotiation
- * [2] https://bugzilla.mozilla.org/1353705 ***/
+ * [2] https://bugzilla.mozilla.org/1353705
+ * [3] https://www.ssllabs.com/ssl-pulse/ ***/
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
 /* 1271: control "Add Security Exception" dialog on SSL warnings
  * 0=do neither 1=pre-populate url 2=pre-populate url + pre-fetch cert (default)
@@ -789,7 +800,7 @@ user_pref("_user.js.parrot", "1400 syntax error: the parrot's bereft of life!");
 user_pref("browser.display.use_document_fonts", 0);
 /* 1403: disable icon fonts (glyphs) and local fallback rendering
  * [1] https://bugzilla.mozilla.org/789788
- * [2] https://trac.torproject.org/projects/tor/ticket/8455 ***/
+ * [2] https://gitlab.torproject.org/legacy/trac/-/issues/8455 ***/
    // user_pref("gfx.downloadable_fonts.enabled", false); // [FF41+]
    // user_pref("gfx.downloadable_fonts.fallback_delay", -1);
 /* 1404: disable rendering of SVG OpenType fonts
@@ -941,8 +952,10 @@ user_pref("media.getusermedia.audiocapture.enabled", false);
  * [NOTE] You can set exceptions under site permissions
  * [SETTING] Privacy & Security>Permissions>Autoplay>Settings>Default for all websites ***/
    // user_pref("media.autoplay.default", 5);
-/* 2031: disable autoplay of HTML5 media if you interacted with the site [FF66+] ***/
-user_pref("media.autoplay.enabled.user-gestures-needed", false);
+/* 2031: disable autoplay of HTML5 media if you interacted with the site [FF78+]
+ * 0=sticky (default), 1=transient, 2=user
+ * [1] https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation ***/
+user_pref("media.autoplay.blocking_policy", 2);
 
 /*** [SECTION 2200]: WINDOW MEDDLING & LEAKS / POPUPS ***/
 user_pref("_user.js.parrot", "2200 syntax error: the parrot's 'istory!");
@@ -962,7 +975,7 @@ user_pref("dom.disable_window_move_resize", true);
  * This stops malicious window sizes and some screen resolution leaks.
  * You can still right-click a link and open in a new window.
  * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#screen
- * [1] https://trac.torproject.org/projects/tor/ticket/9881 ***/
+ * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/9881 ***/
 user_pref("browser.link.open_newwindow", 3);
 user_pref("browser.link.open_newwindow.restriction", 0);
 /* 2204: disable Fullscreen API (requires user interaction) to prevent screen-resolution leaks
@@ -1142,7 +1155,7 @@ user_pref("browser.uitour.url", "");
  * [1] https://github.com/pyllyukko/user.js/issues/179#issuecomment-246468676 ***/
 user_pref("devtools.chrome.enabled", false);
 /* 2608: disable remote debugging
- * [1] https://trac.torproject.org/projects/tor/ticket/16222 ***/
+ * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/16222 ***/
 user_pref("devtools.debugger.remote-enabled", false); // [DEFAULT: false]
 /* 2609: disable MathML (Mathematical Markup Language) [FF51+] [SETUP-HARDEN]
  * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#misc
@@ -1154,7 +1167,7 @@ user_pref("devtools.debugger.remote-enabled", false); // [DEFAULT: false]
  * [1] https://bugzilla.mozilla.org/1216893 ***/
    // user_pref("svg.disabled", true);
 /* 2611: disable middle mouse click opening links from clipboard
- * [1] https://trac.torproject.org/projects/tor/ticket/10089 ***/
+ * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/10089 ***/
 user_pref("middlemouse.contentLoadURL", false);
 /* 2614: limit HTTP redirects (this does not control redirects with HTML meta tags or JS)
  * [NOTE] A low setting of 5 or under will probably break some sites (e.g. gmail logins)
@@ -1490,266 +1503,13 @@ user_pref("privacy.resistFingerprinting.letterboxing", true); // [HIDDEN PREF]
  * [1] https://bugzilla.mozilla.org/1448423 ***/
 user_pref("browser.startup.blankWindow", false);
 
-/*** [SECTION 4600]: RFP ALTERNATIVES
-   * non-RFP users:
-       Enable the whole section (see the SETUP tag below)
-   * RFP users:
-       Make sure these are reset in about:config. They are redundant. In fact, some
-       even cause RFP to not behave as you would expect and alter your fingerprint
-   * ESR RFP users:
-       Reset those *up to and including* your version. Add those *after* your version
-       as active prefs in your overrides. This is assuming that the patch wasn't also
-       backported to Firefox ESR. Backporting RFP patches to ESR is rare.
-***/
-user_pref("_user.js.parrot", "4600 syntax error: the parrot's crossed the Jordan");
-/* [SETUP-non-RFP] Non-RFP users replace the * with a slash on this line to enable these
-// FF55+
-// 4601: [2514] spoof (or limit?) number of CPU cores [FF48+]
-   // [NOTE] *may* affect core chrome/Firefox performance, will affect content.
-   // [1] https://bugzilla.mozilla.org/1008453
-   // [2] https://trac.torproject.org/projects/tor/ticket/21675
-   // [3] https://trac.torproject.org/projects/tor/ticket/22127
-   // [4] https://html.spec.whatwg.org/multipage/workers.html#navigator.hardwareconcurrency
-   // user_pref("dom.maxHardwareConcurrency", 2);
-// * * * /
-// FF56+
-// 4602: [2411] disable resource/navigation timing
-user_pref("dom.enable_resource_timing", false);
-// 4603: [2412] disable timing attacks
-   // [1] https://wiki.mozilla.org/Security/Reviews/Firefox/NavigationTimingAPI
-user_pref("dom.enable_performance", false);
-// 4604: [2512] disable device sensor API
-   // Optional protection depending on your device
-   // [1] https://trac.torproject.org/projects/tor/ticket/15758
-   // [2] https://blog.lukaszolejnik.com/stealing-sensitive-browser-data-with-the-w3c-ambient-light-sensor-api/
-   // [3] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1357733,1292751
-   // user_pref("device.sensors.enabled", false);
-// 4605: [2515] disable site specific zoom
-   // Zoom levels affect screen res and are highly fingerprintable. This does not stop you using
-   // zoom, it will just not use/remember any site specific settings. Zoom levels on new tabs
-   // and new windows are reset to default and only the current tab retains the current zoom
-user_pref("browser.zoom.siteSpecific", false);
-// 4606: [2501] disable gamepad API - USB device ID enumeration
-   // Optional protection depending on your connected devices
-   // [1] https://trac.torproject.org/projects/tor/ticket/13023
-   // user_pref("dom.gamepad.enabled", false);
-// 4607: [2503] disable giving away network info [FF31+]
-   // e.g. bluetooth, cellular, ethernet, wifi, wimax, other, mixed, unknown, none
-   // [1] https://developer.mozilla.org/docs/Web/API/Network_Information_API
-   // [2] https://wicg.github.io/netinfo/
-   // [3] https://bugzilla.mozilla.org/960426
-user_pref("dom.netinfo.enabled", false); // [DEFAULT: true on Android]
-// 4608: [2021] disable the SpeechSynthesis (Text-to-Speech) part of the Web Speech API
-   // [1] https://developer.mozilla.org/docs/Web/API/Web_Speech_API
-   // [2] https://developer.mozilla.org/docs/Web/API/SpeechSynthesis
-   // [3] https://wiki.mozilla.org/HTML5_Speech_API
-user_pref("media.webspeech.synth.enabled", false);
-// * * * /
-// FF57+
-// 4610: [2506] disable video statistics - JS performance fingerprinting [FF25+]
-   // [1] https://trac.torproject.org/projects/tor/ticket/15757
-   // [2] https://bugzilla.mozilla.org/654550
-user_pref("media.video_stats.enabled", false);
-// 4611: [2509] disable touch events
-   // fingerprinting attack vector - leaks screen res & actual screen coordinates
-   // 0=disabled, 1=enabled, 2=autodetect
-   // Optional protection depending on your device
-   // [1] https://developer.mozilla.org/docs/Web/API/Touch_events
-   // [2] https://trac.torproject.org/projects/tor/ticket/10286
-   // user_pref("dom.w3c_touch_events.enabled", 0);
-// * * * /
-// FF59+
-// 4612: [2511] disable MediaDevices change detection [FF51+]
-   // [1] https://developer.mozilla.org/docs/Web/Events/devicechange
-   // [2] https://developer.mozilla.org/docs/Web/API/MediaDevices/ondevicechange
-user_pref("media.ondevicechange.enabled", false);
-// * * * /
-// FF60+
-// 4613: [2011] disable WebGL debug info being available to websites
-   // [1] https://bugzilla.mozilla.org/1171228
-   // [2] https://developer.mozilla.org/docs/Web/API/WEBGL_debug_renderer_info
-user_pref("webgl.enable-debug-renderer-info", false);
-// * * * /
-// FF65+
-// 4614: [2516] disable PointerEvents
-   // [1] https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent
-user_pref("dom.w3c_pointer_events.enabled", false);
-// * * * /
-// FF67+
-// 4615: [2618] disable exposure of system colors to CSS or canvas [FF44+]
-   // [NOTE] See second listed bug: may cause black on black for elements with undefined colors
-   // [SETUP-CHROME] Might affect CSS in themes and extensions
-   // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=232227,1330876
-user_pref("ui.use_standins_for_native_colors", true);
-// 4616: enforce prefers-color-scheme as light [FF67+]
-   // 0=light, 1=dark : This overrides your OS value
-user_pref("ui.systemUsesDarkTheme", 0); // [HIDDEN PREF]
-// 4617: enforce prefers-reduced-motion as no-preference [FF63+]
-   // 0=no-preference, 1=reduce
-user_pref("ui.prefersReducedMotion", 0); // [HIDDEN PREF]
-// * * * /
-// ***/
-
-/*** [SECTION 4700]: RFP ALTERNATIVES (NAVIGATOR / USER AGENT (UA) SPOOFING)
-     This is FYI ONLY. These prefs are INSUFFICIENT(a) on their own, you need
-     to use RFP (4500) or an extension, in which case they become POINTLESS.
-     (a) Many of the components that make up your UA can be derived by other means.
-         And when those values differ, you provide more bits and raise entropy.
-         Examples of leaks include workers, navigator objects, date locale/formats,
-         iframes, headers, tcp/ip attributes, feature detection, and **many** more.
-     ALL values below intentionally left blank - use RFP, or get a vetted, tested
-         extension and mimic RFP values to *lower* entropy, or randomize to *raise* it
-***/
-user_pref("_user.js.parrot", "4700 syntax error: the parrot's taken 'is last bow");
-/* 4701: navigator.userAgent ***/
-   // user_pref("general.useragent.override", ""); // [HIDDEN PREF]
-/* 4702: navigator.buildID
- * Revealed build time down to the second. In FF64+ it now returns a fixed timestamp
- * [1] https://bugzilla.mozilla.org/583181
- * [2] https://www.fxsitecompat.com/en-CA/docs/2018/navigator-buildid-now-returns-a-fixed-timestamp/ ***/
-   // user_pref("general.buildID.override", ""); // [HIDDEN PREF]
-/* 4703: navigator.appName ***/
-   // user_pref("general.appname.override", ""); // [HIDDEN PREF]
-/* 4704: navigator.appVersion ***/
-   // user_pref("general.appversion.override", ""); // [HIDDEN PREF]
-/* 4705: navigator.platform ***/
-   // user_pref("general.platform.override", ""); // [HIDDEN PREF]
-/* 4706: navigator.oscpu ***/
-   // user_pref("general.oscpu.override", ""); // [HIDDEN PREF]
-
-/*** [SECTION 5000]: PERSONAL
-     Non-project related but useful. If any of these interest you, add them to your overrides ***/
-user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
-/* WELCOME & WHAT's NEW NOTICES ***/
-   // user_pref("browser.startup.homepage_override.mstone", "ignore"); // master switch
-   // user_pref("startup.homepage_welcome_url", "");
-   // user_pref("startup.homepage_welcome_url.additional", "");
-   // user_pref("startup.homepage_override_url", ""); // What's New page after updates
-/* WARNINGS ***/
-   // user_pref("browser.tabs.warnOnClose", false);
-   // user_pref("browser.tabs.warnOnCloseOtherTabs", false);
-   // user_pref("browser.tabs.warnOnOpen", false);
-   // user_pref("full-screen-api.warning.delay", 0);
-   // user_pref("full-screen-api.warning.timeout", 0);
-/* APPEARANCE ***/
-   // user_pref("browser.download.autohideButton", false); // [FF57+]
-   // user_pref("toolkit.cosmeticAnimations.enabled", false); // [FF55+]
-   // user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // [FF68+] allow userChrome/userContent
-/* CONTENT BEHAVIOR ***/
-   // user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
-   // user_pref("clipboard.autocopy", false); // disable autocopy default [LINUX]
-   // user_pref("layout.spellcheckDefault", 2); // 0=none, 1-multi-line, 2=multi-line & single-line
-/* UX BEHAVIOR ***/
-   // user_pref("browser.backspace_action", 2); // 0=previous page, 1=scroll up, 2=do nothing
-   // user_pref("browser.tabs.closeWindowWithLastTab", false);
-   // user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab [FF57+]
-   // user_pref("browser.urlbar.decodeURLsOnCopy", true); // see bugzilla 1320061 [FF53+]
-   // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [DEFAULT: false on Linux]
-   // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
-   // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
-/* UX FEATURES: disable and hide the icons and menus ***/
-   // user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
-   // user_pref("extensions.pocket.enabled", false); // Pocket Account [FF46+]
-   // user_pref("identity.fxaccounts.enabled", false); // Firefox Accounts & Sync [FF60+] [RESTART]
-   // user_pref("reader.parse-on-load.enabled", false); // Reader View
-/* OTHER ***/
-   // user_pref("browser.bookmarks.max_backups", 2);
-   // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR [FF67+]
-      // [SETTING] General>Browsing>Recommend extensions as you browse
-   // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR [FF67+]
-      // [SETTING] General>Browsing>Recommend features as you browse
-   // user_pref("network.manage-offline-status", false); // see bugzilla 620472
-   // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
-
-/*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
-     Documentation denoted as [-]. Items deprecated in FF68 or earlier have been archived at [1],
-     which also provides a link-clickable, viewer-friendly version of the deprecated bugzilla tickets
-     [1] https://github.com/ghacksuserjs/ghacks-user.js/issues/123
-***/
-user_pref("_user.js.parrot", "9999 syntax error: the parrot's deprecated!");
-/* ESR68.x still uses all the following prefs
-// [NOTE] replace the * with a slash in the line above to re-enable them
-// FF69
-// 1405: disable WOFF2 (Web Open Font Format) [FF35+]
-   // [-] https://bugzilla.mozilla.org/1556991
-   // user_pref("gfx.downloadable_fonts.woff2.enabled", false);
-// 1802: enforce click-to-play for plugins
-   // [-] https://bugzilla.mozilla.org/1519434
-user_pref("plugins.click_to_play", true); // [DEFAULT: true FF25+]
-// 2033: disable autoplay for muted videos [FF63+] - replaced by 'media.autoplay.default' options (2030)
-   // [-] https://bugzilla.mozilla.org/1562331
-   // user_pref("media.autoplay.allow-muted", false);
-// * * * /
-// FF71
-// 2608: disable WebIDE and ADB extension download
-   // [1] https://trac.torproject.org/projects/tor/ticket/16222
-   // [-] https://bugzilla.mozilla.org/1539462
-user_pref("devtools.webide.enabled", false); // [DEFAULT: false FF70+]
-user_pref("devtools.webide.autoinstallADBExtension", false); // [FF64+]
-// 2731: enforce websites to ask to store data for offline use
-   // [1] https://support.mozilla.org/questions/1098540
-   // [2] https://bugzilla.mozilla.org/959985
-   // [-] https://bugzilla.mozilla.org/1574480
-user_pref("offline-apps.allow_by_default", false);
-// * * * /
-// FF72
-// 0105a: disable Activity Stream telemetry
-   // [-] https://bugzilla.mozilla.org/1597697
-user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
-// 0330: disable Hybdrid Content telemetry
-   // [-] https://bugzilla.mozilla.org/1520491
-user_pref("toolkit.telemetry.hybridContent.enabled", false); // [FF59+]
-// 2720: enforce IndexedDB (IDB) as enabled
-   // IDB is required for extensions and Firefox internals (even before FF63 in [1])
-   // To control *website* IDB data, control allowing cookies and service workers, or use
-   // Temporary Containers. To mitigate *website* IDB, FPI helps (4001), and/or sanitize
-   // on close (Offline Website Data, see 2800) or on-demand (Ctrl-Shift-Del), or automatically
-   // via an extension. Note that IDB currently cannot be sanitized by host.
-   // [1] https://blog.mozilla.org/addons/2018/08/03/new-backend-for-storage-local-api/
-   // [-] https://bugzilla.mozilla.org/1488583
-user_pref("dom.indexedDB.enabled", true); // [DEFAULT: true]
-// * * * /
-// FF74
-// 0203: use Mozilla geolocation service instead of Google when geolocation is enabled
-   // Optionally enable logging to the console (defaults to false)
-   // [-] https://bugzilla.mozilla.org/1613627
-user_pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
-   // user_pref("geo.wifi.logging.enabled", true); // [HIDDEN PREF]
-// 1704: set behaviour on "+ Tab" button to display container menu [FF53+] [SETUP-CHROME]
-   // 0=no menu (default), 1=show when clicked, 2=show on long press
-   // [1] https://bugzilla.mozilla.org/1328756
-   // [-] https://bugzilla.mozilla.org/1606265
-user_pref("privacy.userContext.longPressBehavior", 2);
-// 2012: limit WebGL
-   // [-] https://bugzilla.mozilla.org/1477756
-user_pref("webgl.disable-extensions", true);
-// * * * /
-// FF76
-// 0401: sanitize blocklist url
-   // [2] https://trac.torproject.org/projects/tor/ticket/16931
-   // [-] https://bugzilla.mozilla.org/1618188
-user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%APP_ID%/%APP_VERSION%/");
-// * * * /
-// FF77
-// 0850e: disable location bar one-off searches [FF51+]
-   // [1] https://www.ghacks.net/2016/08/09/firefox-one-off-searches-address-bar/
-   // [-] https://bugzilla.mozilla.org/1628926
-   // user_pref("browser.urlbar.oneOffSearches", false);
-// 2605: block web content in file processes [FF55+]
-   // [SETUP-WEB] You may want to disable this for corporate or developer environments
-   // [1] https://bugzilla.mozilla.org/1343184
-   // [-] https://bugzilla.mozilla.org/1603007
-user_pref("browser.tabs.remote.allowLinkedWebInFileUriProcess", false);
-// * * * /
-// ***/
-
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
 
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 14.6.2020 (commit: b910048); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 1.7.2020 (commit: b5b0445); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -1761,7 +1521,6 @@ NOTE: Before proceeding further, make a backup of your current profile
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
-     One-Click Search Engines: delete all except DuckDuckGo
 6. To enable SSO within specific realm/domain (enterprise), enter domain list (comma separated without spaces) (about:config) into preferences network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 7. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
@@ -1779,7 +1538,8 @@ NOTE: Before proceeding further, make a backup of your current profile
 
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-    On install page click apply for Convenient, Stealth settings and reCAPTCHA exception    General -> Expert mode: Check
+    On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
+    General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
     Misc -> Misc -> Block data URL pages: Uncheck
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
@@ -1828,6 +1588,7 @@ USEFUL/INTERESTING EXTENSIONS:
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
+  Luminous: JavaScript events blocker; https://addons.mozilla.org/firefox/addon/luminous/ (https://gbaptista.github.io/luminous/doc/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
@@ -1850,7 +1611,6 @@ EXTERNAL APPLICATIONS:
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I just <3 fonts
-  /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
@@ -1872,7 +1632,7 @@ EXTERNAL APPLICATIONS:
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
-  /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate secure token, TC Automode needed
+  /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate USB secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
@@ -1885,8 +1645,6 @@ EXTERNAL APPLICATIONS:
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
-  /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-  /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
@@ -1895,5 +1653,10 @@ EXTERNAL APPLICATIONS:
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
+
+/*** TO INVESTIGATE ***/
+  // /* 2031  */ user_pref("media.autoplay.enabled.user-gestures-needed", true); // Enable autoplay of HTML5 media if interacted with the site
+  // /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
+  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
 
 user_pref("_user.js.parrot", "Eagle has landed!");
