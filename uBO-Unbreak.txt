@@ -11,6 +11,7 @@
 @@*/lwa/WebPages/LwaClient.aspx$3p,subdocument
 @@*/saml/*$3p,subdocument
 @@/clarity-*.js$1p,script
+@@/share-link-$1p,xhr
 @@||accounts.google.*/ServiceLogin$3p,subdocument
 @@||ads.api.24ur.si^$xhr,domain=24ur.com
 @@||advertising.com^$1p
