@@ -125,6 +125,9 @@ user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false); // [FF66+]
 /* 0105d: disable Activity Stream recent Highlights in the Library [FF57+] ***/
    // user_pref("browser.library.activity-stream.enabled", false);
+/* 0105e: clear default topsites
+ * [NOTE] This does not block you from adding your own ***/
+user_pref("browser.newtabpage.activity-stream.default.sites", "");
 /* 0110: start Firefox in PB (Private Browsing) mode
  * [NOTE] In this mode *all* windows are "private windows" and the PB mode icon is not displayed
  * [WARNING] The P in PB mode is misleading: it means no "persistent" disk storage such as history,
@@ -175,7 +178,7 @@ user_pref("javascript.use_us_english_locale", true); // [HIDDEN PREF]
 /* 0212: enforce fallback text encoding to match en-US
  * When the content or server doesn't declare a charset the browser will
  * fallback to the "Current locale" based on your application language
- * [SETTING] General>Language and Appearance>Fonts and Colors>Advanced>Text Encoding for Legacy Content
+ * [SETTING] General>Language and Appearance>Fonts and Colors>Advanced>Text Encoding for Legacy Content (FF72-)
  * [TEST] https://hsivonen.com/test/moz/check-charset.htm
  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/20025 ***/
 user_pref("intl.charset.fallback.override", "windows-1252");
@@ -205,7 +208,7 @@ user_pref("app.update.auto", false);
    // user_pref("extensions.getAddons.cache.enabled", false);
 /* 0308: disable search engine updates (e.g. OpenSearch)
  * [NOTE] This does not affect Mozilla's built-in or Web Extension search engines
- * [SETTING] General>Firefox Updates>Automatically update search engines ***/
+ * [SETTING] General>Firefox Updates>Automatically update search engines (FF72-) ***/
 user_pref("browser.search.update", false);
 /* 0309: disable sending Flash crash reports ***/
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
@@ -1502,6 +1505,9 @@ user_pref("privacy.resistFingerprinting.letterboxing", true); // [HIDDEN PREF]
  * When default true (FF62+) this no longer masks the RFP chrome resizing activity
  * [1] https://bugzilla.mozilla.org/1448423 ***/
 user_pref("browser.startup.blankWindow", false);
+/* 4520: disable chrome animations [FF77+] [RESTART]
+ * [NOTE] pref added in FF63, but applied to chrome in FF77. RFP spoofs this for web content ***/
+user_pref("ui.prefersReducedMotion", 1); // [HIDDEN PREF]
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
@@ -1509,7 +1515,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 1.7.2020 (commit: b5b0445); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 5.7.2020 (commit: 3d18af1); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -1546,6 +1552,8 @@ ESSENTIAL EXTENSIONS:
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://codeberg.org/nobody/LocalCDN/)
+    Block Google Fonts: Uncheck
+    Invert HTML filter: Check
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
     Override list for default blocked parameters: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-custom_parameters.txt
     Blocked parameters: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-custom_parameters.txt
@@ -1646,6 +1654,7 @@ EXTERNAL APPLICATIONS:
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
+  /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
@@ -1656,7 +1665,6 @@ EXTERNAL APPLICATIONS:
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
 /*** TO INVESTIGATE ***/
-  // /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
 
 user_pref("_user.js.parrot", "Eagle has landed!");
