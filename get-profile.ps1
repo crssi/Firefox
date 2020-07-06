@@ -47,4 +47,4 @@ Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -For
 Remove-Variable -Name tmpFolder,oldProfilePath,newProfilePath,tmpProfilePath,Utf8NoBomEncoding,files,file,content
 
 Start-Process -FilePath 'firefox.exe'
-Exit
+#Exit
