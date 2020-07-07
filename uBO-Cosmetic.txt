@@ -12,6 +12,7 @@ www.youtube.com##.ytp-gradient-bottom
 !!! duckduckgo
 duckduckgo.com##.js-badge-link.ddg-extension-hide.badge-link--fadein.badge-link--top.badge-link
 duckduckgo.com##.header--aside
+duckduckgo.com##.feedback-btn.btn
 
 !!! microsoft.com
 technet.microsoft.com##.stdr-content.stdr-vote
