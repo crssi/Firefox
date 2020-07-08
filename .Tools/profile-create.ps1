@@ -4,7 +4,9 @@ Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Objec
 & "$env:UserProfile\Documents\GitHub\Firefox\.Tools\dejsonlz4.exe" @("$profilePath\addonStartup.json.lz4","$profilePath\addonStartup.json")
 Copy-Item "$env:UserProfile\Documents\GitHub\Firefox\.Tools\jsonlz4.exe" $profilePath -Force
 
-forEach ($file in @('extensions.json','pkcs11.txt','compatibility.ini','pluginreg.dat','addonStartup.json')) {
+forEach ($file in @('cert9.db','content-prefs.sqlite','favicons.sqlite','handlers.json','key4.db','logins.json','permissions.sqlite','persdict.dat','pkcs11.txt','places.sqlite')) { Remove-Item -Path $profilePath\$file -Force -ErrorAction SilentlyContinue }
+
+forEach ($file in @('extensions.json','compatibility.ini','pluginreg.dat','addonStartup.json')) {
     $content = Get-Content -Encoding UTF8 -Path $profilePath\$file
     $content = $content.Replace($env:APPDATA.Replace('\','/').Replace(' ','%20'),'%appdata%')
     $content = $content.Replace($env:APPDATA.Replace('\','\\'),'%appdata%')
