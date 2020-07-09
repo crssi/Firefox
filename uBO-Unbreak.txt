@@ -50,6 +50,7 @@
 @@||google.*/recaptcha/$3p,subdocument
 @@||google.*^$3p,script,domain=youtube.com
 @@||google.*^$domain=google.com|googleapis.com
+@@||google.com/recaptcha/api.js?render=*$3p,script
 @@||google.com/uds/*visualization$3p,script,stylesheet
 @@||google.com^$3p,domain=youtube.com|youtube-nocookie.com
 @@||googleapis.com^$3p,subdocument,domain=google.com|google.si
