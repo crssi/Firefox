@@ -101,6 +101,7 @@
 
 !!! twitter
 @@||platform.twitter.com/embed/*$3p,subdocument
+@@||platform.twitter.com/widgets/*$3p,subdocument
 @@||platform.twitter.com^$3p,stylesheet,image,script
 @@||syndication.twitter.com^$image,xhr,domain=platform.twitter.com
 @@||twimg.*^$3p,image
