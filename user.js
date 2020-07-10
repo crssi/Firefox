@@ -461,9 +461,8 @@ user_pref("_user.js.parrot", "0800 syntax error: the parrot's ceased to be!");
 /* 0801: disable location bar using search
  * Don't leak URL typos to a search engine, give an error message instead.
  * Examples: "secretplace,com", "secretplace/com", "secretplace com", "secret place.com"
- * [NOTE] Search buttons in the dropdown work, but hitting 'enter' in the location bar will fail
- * [TIP] You can add keywords to search engines in options (e.g. 'd' for DuckDuckGo) and
- * the dropdown will now auto-select it and you can then hit 'enter' and it will work
+ * [NOTE] This does **not** affect explicit user action such as using search buttons in the
+ * dropdown, or using keyword search shortcuts you configure in options (e.g. 'd' for DuckDuckGo)
  * [SETUP-CHROME] If you don't, or rarely, type URLs, or you use a default search
  * engine that respects privacy, then you probably don't need this ***/
 user_pref("keyword.enabled", false);
@@ -497,6 +496,11 @@ user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 /* 0810: disable location bar making speculative connections [FF56+]
  * [1] https://bugzilla.mozilla.org/1348275 ***/
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
+/* 0811: disable location bar leaking single words to a DNS provider **after searching** [FF78+]
+ * 0=never resolve single words, 1=heuristic (default), 2=always resolve
+ * [NOTE] For FF78 value 1 and 2 are the same and always resolve but that will change in future versions
+ * [1] https://bugzilla.mozilla.org/1642623 ***/
+user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
 /* 0850a: disable location bar suggestion types
  * [SETTING] Privacy & Security>Address Bar>When using the address bar, suggest ***/
    // user_pref("browser.urlbar.suggest.history", false);
@@ -957,6 +961,7 @@ user_pref("media.getusermedia.audiocapture.enabled", false);
    // user_pref("media.autoplay.default", 5);
 /* 2031: disable autoplay of HTML5 media if you interacted with the site [FF78+]
  * 0=sticky (default), 1=transient, 2=user
+ * [NOTE] If you have trouble with some video sites, then add an exception (see 2030)
  * [1] https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation ***/
 user_pref("media.autoplay.blocking_policy", 2);
 
@@ -1515,7 +1520,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 5.7.2020 (commit: 3d18af1); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 10.7.2020 (commit: 1a389c0); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -1640,7 +1645,6 @@ EXTERNAL APPLICATIONS:
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
-  /* 0811  */ user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0); // disable location bar leaking single words to DNS provide
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate USB secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
