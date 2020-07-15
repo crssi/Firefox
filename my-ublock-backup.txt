@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1594818475100,
+  "timeStamp": 1594818875500,
   "version": "1.28.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -10,7 +10,7 @@
     "colorBlindFriendly": false,
     "contextMenuEnabled": true,
     "dynamicFilteringEnabled": false,
-    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/mini/adblock.txt\nhttps://easylist-downloads.adblockplus.org/adwarefilters.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_other.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt\nhttps://filters.adtidy.org/extension/chromium/filters/15.txt\nhttps://filters.adtidy.org/extension/chromium/filters/3.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://gitcdn.xyz/repo/NanoMeow/MDLMirror/master/hosts.txt\nhttps://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt\nhttps://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt\nhttps://mirror.cedia.org.ec/malwaredomains/justdomains\nhttps://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/UsefulAdsFilter/sections/usefulads.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt\nhttps://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts\nhttps://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname\nhttps://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains\nhttps://raw.githubusercontent.com/scafroglia93/blocklists/master/blocklists-main.txt\nhttps://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt",
+    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/mini/adblock.txt\nhttps://easylist-downloads.adblockplus.org/adwarefilters.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_other.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt\nhttps://filters.adtidy.org/extension/chromium/filters/15.txt\nhttps://filters.adtidy.org/extension/chromium/filters/3.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://gitcdn.xyz/repo/NanoMeow/MDLMirror/master/hosts.txt\nhttps://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-hosts.txt\nhttps://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt\nhttps://mirror.cedia.org.ec/malwaredomains/justdomains\nhttps://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/UsefulAdsFilter/sections/usefulads.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt\nhttps://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list\nhttps://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname\nhttps://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains\nhttps://raw.githubusercontent.com/scafroglia93/blocklists/master/blocklists-main.txt\nhttps://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt",
     "firewallPaneMinimized": false,
     "hyperlinkAuditingDisabled": true,
     "ignoreGenericCosmeticFilters": false,
@@ -45,7 +45,6 @@
     "https://abp.oisd.nl//",
     "https://mirror.cedia.org.ec/malwaredomains/justdomains",
     "https://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains",
-    "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts",
     "https://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname",
     "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains",
     "https://raw.githubusercontent.com/scafroglia93/blocklists/master/blocklists-main.txt",
@@ -67,7 +66,8 @@
     "https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt",
     "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
     "https://easylist-downloads.adblockplus.org/yt_annoyances_other.txt",
-    "https://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt"
+    "https://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt",
+    "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list"
   ],
   "hiddenSettings": {
     "allowGenericProceduralFilters": false,
