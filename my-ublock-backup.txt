@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1594818875500,
+  "timeStamp": 1594819627800,
   "version": "1.28.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -33,6 +33,7 @@
     "adguard-generic",
     "adguard-mobile",
     "fanboy-enhanced",
+    "urlhaus-1",
     "spam404-0",
     "adguard-annoyance",
     "ublock-annoyances",
@@ -45,6 +46,7 @@
     "https://abp.oisd.nl//",
     "https://mirror.cedia.org.ec/malwaredomains/justdomains",
     "https://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains",
+    "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list",
     "https://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname",
     "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/malware/domains",
     "https://raw.githubusercontent.com/scafroglia93/blocklists/master/blocklists-main.txt",
@@ -66,8 +68,7 @@
     "https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt",
     "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
     "https://easylist-downloads.adblockplus.org/yt_annoyances_other.txt",
-    "https://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt",
-    "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list"
+    "https://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt"
   ],
   "hiddenSettings": {
     "allowGenericProceduralFilters": false,
