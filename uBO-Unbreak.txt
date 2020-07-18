@@ -75,7 +75,7 @@
 @@||pictures.zooplus.com^$3p,script,image,domain=www.zoohit.si
 @@||play.vidyard.com^$3p,subdocument,script
 @@||players.brightcove.net^$3p,script
-@@||pulsar.ebay.com^$domain=pulsar.ebay.com
+@@||pulsar.ebay.com^$1p
 @@||rsc.cdn77.org^
 @@||sendgrid.net^
 @@||shareasale.com^$1p
