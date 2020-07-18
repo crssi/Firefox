@@ -18,7 +18,7 @@
 ||adserver.yahoo.com^$important
 ||adservice.google.*^$important
 ||adtech.*^$important
-||advertising.com^$~document
+!||advertising.com^$script,image,xhr
 ||agilemeasure.com^$3p
 ||alooma.com^$3p
 ||amazon-adsystem.*^
@@ -160,4 +160,4 @@
 ||yottlyscript.com^$3p
 ||youtube.com/youtubei/v1/log_event*$xhr
 ||zdassets.com^$3p,~xhr
-||zendesk.com^$3p~image
+||zendesk.com^$3p,~image
