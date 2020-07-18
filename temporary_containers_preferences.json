@@ -1,6 +1,6 @@
 {
   "version": "1.8",
-  "date": 1593782760600,
+  "date": 1594973864900,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -277,6 +277,18 @@
             "expirationDate": "",
             "firstPartyDomain": "",
             "httpOnly": "",
+            "name": "1",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "-1"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
             "name": "n",
             "path": "",
             "sameSite": "",
@@ -317,7 +329,7 @@
             "path": "",
             "sameSite": "",
             "secure": "",
-            "url": "https://duckduckgo.com/ ",
+            "url": "https://duckduckgo.com/",
             "value": "here-maps"
           }
         ],
