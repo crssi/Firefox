@@ -75,7 +75,11 @@ www.partis.si###ld-widget-bottom
 mxtoolbox.com##.mx-inline-ad-link
 mxtoolbox.com##footer.container-fluid
 
-! 4/15/2020 https://www.laptopmag.com
+! https://www.laptopmag.com
 ##.hawk-main-transparent
 
 ##.spu-bg
+
+! https://www.nbcbayarea.com/news/coronavirus/face-id-with-a-mask-heres-how-to-unlock-your-iphone-in-the-age-of-covid-19/2294624/
+##[id^="nbc-mpx-video-"]
+##.video-flyout
