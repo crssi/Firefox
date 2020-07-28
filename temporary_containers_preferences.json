@@ -332,20 +332,6 @@
             "url": "https://duckduckgo.com/",
             "value": "here-maps"
           }
-        ],
-        "www.24ur.com": [
-          {
-            "domain": "www.24ur.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "cookies",
-            "path": "",
-            "sameSite": "",
-            "secure": "true",
-            "url": "https://www.24ur.com",
-            "value": "all"
-          }
         ]
       }
     },
