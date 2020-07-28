@@ -109,11 +109,9 @@
 @@||twitter.com/i/videos/$3p,subdocument
 @@||twitter.map.fastly.net^$domain=twitter.com
 
-!!! nextdns.io and intercom
+!!! intercom at nextdns.io
 @@||intercom.io^
-@@||intercomcdn.com^
 @@||intercomassets.com^
-@@||nextdns.io^
 
 !!! facebook.com
 @@||*-instagram.*.facebook.com^$3p,subdocument
