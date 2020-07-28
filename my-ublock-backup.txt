@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1595778764400,
+  "timeStamp": 1595922573700,
   "version": "1.28.4",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -98,7 +98,7 @@
     "extensionUpdateForceReload": false,
     "ignoreRedirectFilters": false,
     "ignoreScriptInjectFilters": false,
-    "filterAuthorMode": false,
+    "filterAuthorMode": true,
     "loggerPopupType": "popup",
     "manualUpdateAssetFetchPeriod": 500,
     "popupFontSize": "unset",
