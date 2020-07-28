@@ -9,6 +9,7 @@
 ||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
 ||*/fingerprintjs2*$script,important
 ||*/fp.js$script,important
+||*/loginmanager_sniff.js$script
 ||1105media.com^$3p
 ||2o7.net^
 ||a2sky.com^$3p
