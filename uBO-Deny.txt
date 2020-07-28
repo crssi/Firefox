@@ -83,7 +83,6 @@
 ||inspectlet.com^$3p,important
 ||instagram.*^$3p,~subdocument
 ||inswebt.com^
-||intercomcdn.com^$3p
 ||ipinfo.io^$3p
 ||iprom.net^$3p
 ||ipromcloud.com^$3p
