@@ -2,6 +2,7 @@
 * *.braintreegateway.com
 * *.crisp.chat
 * api.spectrumcustomizer.com
+* api.woosmap.com
 * edge.api.brightcove.com
 * shopify-chat.shopifycloud.com
 *.*inn.com *.*inn.com
