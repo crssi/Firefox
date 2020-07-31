@@ -132,7 +132,7 @@
 ||scorecardresearch.com^$important
 ||secondego.com^3p
 ||servebom.com^$3p,important
-||shopify.com^$3p,script
+!||shopify.com^$3p,script
 ||shopifycdn.com^$3p,script
 ||sitebot.ai^$3p
 ||smartfocus.com^$3p
