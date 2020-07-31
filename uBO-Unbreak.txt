@@ -12,6 +12,7 @@
 @@*/saml/*$3p,subdocument
 @@/clarity-*.js$1p,script
 @@/share-link-$1p,xhr
+@@||a-msedge.net^$domain=bing.com
 @@||accounts.google.*/ServiceLogin$3p,subdocument
 @@||ads.api.24ur.si^$xhr,domain=24ur.com
 @@||advertising.com^$1p
