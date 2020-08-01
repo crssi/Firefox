@@ -122,3 +122,6 @@
 @@||instagram.com^$3p,script
 @@||facebook.*^$domain=facebook.com|instagram.com|messenger.com|workplace.com|oculus.com|oculusvr.com|oculusbrand.com|oculusforbusiness.com|onavo.com
 @@||fbcdn.*^$domain=facebook.com|instagram.com|messenger.com|workplace.com|oculus.com|oculusvr.com|oculusbrand.com|oculusforbusiness.com|onavo.com
+
+!!! shorteners
+@@||adj.st^
