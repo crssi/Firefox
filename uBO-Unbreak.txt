@@ -5,7 +5,6 @@
 ! Allow extensions like uBO/uM to get the filter list updates
 @@||$domain=moz-extension-scheme
 
-||amazonaws.com/*banners*$3p,subdocument,important
 ||hudo.com^$inline-script
 
 @@*/lwa/WebPages/LwaClient.aspx$3p,subdocument
