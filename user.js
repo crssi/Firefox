@@ -734,6 +734,7 @@ user_pref("security.mixed_content.block_display_content", true);
 user_pref("security.mixed_content.block_object_subrequest", true);
 /* 1244: enable https-only-mode [FF76+]
  * [NOTE] This is experimental
+ * [SETTING] Privacy & Security>HTTPS-Only Mode (FF81+)
  * [1] https://bugzilla.mozilla.org/1613063 */
    // user_pref("dom.security.https_only_mode", true); // [FF76+]
    // user_pref("dom.security.https_only_mode.upgrade_local", true); // [FF77+]
@@ -1361,6 +1362,7 @@ user_pref("privacy.cpd.siteSettings", false); // Site Preferences
 user_pref("privacy.sanitize.timeSpan", 0);
 
 /*** [SECTION 4000]: FPI (FIRST PARTY ISOLATION)
+ 4001: FPI
  ** 1278037 - isolate indexedDB (FF51+)
  ** 1277803 - isolate favicons (FF52+)
  ** 1264562 - isolate OCSP cache (FF52+)
@@ -1379,11 +1381,15 @@ user_pref("privacy.sanitize.timeSpan", 0);
  ** 1506693 - isolate pdfjs range-based requests (FF68+)
  ** 1330467 - isolate site permissions (FF69+)
  ** 1534339 - isolate IPv6 (FF73+)
+ 4003: NETWORK PARTITON
+ ** 1647732 - isolate font cache (FF80+)
+ ** 1649673 - isolate speculative connections (FF80+)
 ***/
 user_pref("_user.js.parrot", "4000 syntax error: the parrot's pegged out");
 /* 4001: enable First Party Isolation [FF51+]
  * [SETUP-WEB] May break cross-domain logins and site functionality until perfected
- * [1] https://bugzilla.mozilla.org/1260931 ***/
+ * [1] https://bugzilla.mozilla.org/1260931
+ * [2] https://bugzilla.mozilla.org/1299996 [META] ***/
 user_pref("privacy.firstparty.isolate", true);
 /* 4002: enforce FPI restriction for window.opener [FF54+]
  * [NOTE] Setting this to false may reduce the breakage in 4001
@@ -1395,6 +1401,9 @@ user_pref("privacy.firstparty.isolate", true);
  * [3] https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage ***/
    // user_pref("privacy.firstparty.isolate.restrict_opener_access", true); // [DEFAULT: true]
    // user_pref("privacy.firstparty.isolate.block_post_message", true); // [HIDDEN PREF ESR]
+/* 4003: enable site partitioning (FF78+)
+ * [1] https://bugzilla.mozilla.org/1590107 [META] */
+user_pref("privacy.partition.network_state", true);
 
 /*** [SECTION 4500]: RFP (RESIST FINGERPRINTING)
    This master switch will be used for a wide range of items, many of which will
@@ -1500,6 +1509,49 @@ user_pref("browser.startup.blankWindow", false);
 /* 4520: disable chrome animations [FF77+] [RESTART]
  * [NOTE] pref added in FF63, but applied to chrome in FF77. RFP spoofs this for web content ***/
 user_pref("ui.prefersReducedMotion", 1); // [HIDDEN PREF]
+
+/*** [SECTION 5000]: PERSONAL
+     Non-project related but useful. If any of these interest you, add them to your overrides ***/
+user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
+/* WELCOME & WHAT's NEW NOTICES ***/
+   // user_pref("browser.startup.homepage_override.mstone", "ignore"); // master switch
+   // user_pref("startup.homepage_welcome_url", "");
+   // user_pref("startup.homepage_welcome_url.additional", "");
+   // user_pref("startup.homepage_override_url", ""); // What's New page after updates
+/* WARNINGS ***/
+   // user_pref("browser.tabs.warnOnClose", false);
+   // user_pref("browser.tabs.warnOnCloseOtherTabs", false);
+   // user_pref("browser.tabs.warnOnOpen", false);
+   // user_pref("full-screen-api.warning.delay", 0);
+   // user_pref("full-screen-api.warning.timeout", 0);
+/* APPEARANCE ***/
+   // user_pref("browser.download.autohideButton", false); // [FF57+]
+   // user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // [FF68+] allow userChrome/userContent
+/* CONTENT BEHAVIOR ***/
+   // user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
+   // user_pref("clipboard.autocopy", false); // disable autocopy default [LINUX]
+   // user_pref("layout.spellcheckDefault", 2); // 0=none, 1-multi-line, 2=multi-line & single-line
+/* UX BEHAVIOR ***/
+   // user_pref("browser.backspace_action", 2); // 0=previous page, 1=scroll up, 2=do nothing
+   // user_pref("browser.tabs.closeWindowWithLastTab", false);
+   // user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab [FF57+]
+   // user_pref("browser.urlbar.decodeURLsOnCopy", true); // see bugzilla 1320061 [FF53+]
+   // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [DEFAULT: false on Linux]
+   // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
+   // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
+/* UX FEATURES: disable and hide the icons and menus ***/
+   // user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
+   // user_pref("extensions.pocket.enabled", false); // Pocket Account [FF46+]
+   // user_pref("identity.fxaccounts.enabled", false); // Firefox Accounts & Sync [FF60+] [RESTART]
+   // user_pref("reader.parse-on-load.enabled", false); // Reader View
+/* OTHER ***/
+   // user_pref("browser.bookmarks.max_backups", 2);
+   // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR [FF67+]
+      // [SETTING] General>Browsing>Recommend extensions as you browse
+   // user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR [FF67+]
+      // [SETTING] General>Browsing>Recommend features as you browse
+   // user_pref("network.manage-offline-status", false); // see bugzilla 620472
+   // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
@@ -1652,6 +1704,7 @@ EXTERNAL APPLICATIONS:
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
+  /* 4618  */ user_pref("layout.css.font-visibility.level", 1); // limit font visbility
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
