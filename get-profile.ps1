@@ -2,7 +2,6 @@
 
 [System.Reflection.Assembly]::LoadWithPartialName(“System.Windows.Forms”) | Out-Null
 if ($PSVersionTable.PSVersion.Major -le 4) { [Windows.Forms.MessageBox]::Show(“ERROR:`nPowershell version 4 or greater is needed!”, “GITHUB/CRSSI/FIREFOX/PROFILE”, [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null;Exit }
-Import-Module -Name BitsTransfer
 
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
 do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'proxsign' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
@@ -11,13 +10,13 @@ try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox" -DestinationPath 
 
 $tmpFolder = New-Item -ItemType Directory -Path (Join-Path $([System.IO.Path]::GetTempPath()) $([System.Guid]::NewGuid()))
 
+Import-Module -Name BitsTransfer
 try { Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder -ErrorAction Stop } catch { Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false; [Windows.Forms.MessageBox]::Show(“ERROR:`nCheck your Internet connectivity and try again.”, “GITHUB/CRSSI/FIREFOX/PROFILE”, [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null; Exit }
-
 Expand-Archive -Path "$tmpFolder\profile.zip" -DestinationPath $tmpFolder
 Remove-Item -Path "$tmpFolder\profile.zip" -Force
 
-Get-Content -Path "$tmpFolder\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $newProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
-$tmpProfilePath = "$tmpFolder\Profiles\$($newProfilePath.split('\')[-1])"
+Get-Content -Path "$tmpFolder\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $tmpProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
+$tmpProfilePath = "$tmpFolder\Profiles\$($tmpProfilePath.split('\')[-1])"
 Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $oldProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
 
 $oldProfileFirefoxVersion = [Int]((Get-Content $oldProfilePath\prefs.js | where { $_ -like "*browser.startup.homepage_override.mstone*" }).Split('"')[3].Split(".")[0])
