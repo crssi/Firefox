@@ -36,6 +36,7 @@
 @@||cookielaw.org/*/otPcPanel.json$xhr
 @@||cookielaw.org/*/otSDKStub.js$script
 @@||cookielaw.org/consent/*$xhr
+@@||data.api.cnn.io^$3p,xhr,domain=cnn.com
 @@||docs.google.com^$3p,subdocument,domain=dropbox.com
 @@||drive.google.com^$3p,image
 @@||dropboxstatic.com/*/social_icon$stylesheet,domain=dropbox.com
