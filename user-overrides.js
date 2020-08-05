@@ -32,7 +32,6 @@ ESSENTIAL EXTENSIONS:
     On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
     General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
-    Misc -> Misc -> Block data URL pages: Uncheck
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
