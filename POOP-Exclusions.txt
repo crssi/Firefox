@@ -28,6 +28,7 @@
 *.reddit.com *.redd.it
 *.reddit.com *.reddit*.com
 *.telemach.* *.united.cloud
+*.twitter.com *.twimg.com
 *.ubisoft.com *ubi*
 *.youtube*.com *
 *vimeo.com *vimeo*.*
