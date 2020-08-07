@@ -23,7 +23,7 @@ Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Objec
 
 $oldProfileFirefoxVersion = [Int]((Get-Content $oldProfilePath\prefs.js | where { $_ -like "*browser.startup.homepage_override.mstone*" }).Split('"')[3].Split(".")[0])
 $newProfileFirefoxVersion = [Int]((Get-Content $tmpProfilePath\prefs.js | where { $_ -like "*browser.startup.homepage_override.mstone*" }).Split('"')[3].Split(".")[0])
-if ($newProfileFirefoxVersion -gt $oldProfileFirefoxVersion) { Remove-Item -Path "$tmpFolder" -Recurse -Force -Confirm:$false; [Windows.Forms.MessageBox]::Show("ERROR:`nUpgrade Firefox to latest version and try again!`n`nStart Firefox > ? menu > Help > About.", "GITHUB/CRSSI/FIREFOX/PROFILE", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null; Exit }
+if ($newProfileFirefoxVersion -gt $oldProfileFirefoxVersion) { Remove-Item -Path "$tmpFolder" -Recurse -Force -Confirm:$false; [Windows.Forms.MessageBox]::Show("ERROR:`nUpgrade Firefox to latest version and try again!`n`nStart Firefox > ☰ menu > Help > About.", "GITHUB/CRSSI/FIREFOX/PROFILE", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null; Exit }
 
  @('cert9.db','content-prefs.sqlite','favicons.sqlite','handlers.json','key4.db','logins.json','permissions.sqlite','persdict.dat','pkcs11.txt','places.sqlite') | ForEach-Object { Copy-Item -Path "$oldProfilePath\$_" -Destination "$tmpProfilePath\$_" -Force -ErrorAction SilentlyContinue }
 
