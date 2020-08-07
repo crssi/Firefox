@@ -22,6 +22,7 @@
 @@||assets-jpcust.jwpsrv.com^$3p,image
 @@||assets.adobedtm.com^$3p,script
 @@||blogger.*.google.com^$3p,subdocument
+@@||blogger.*.google.com^$domain=blogspot.com
 @@||blogger.com/comment-iframe.$3p,subdocument
 @@||brightcove.*^$3p,xhr
 @@||cbsi.com/dist/optanon.js$script
