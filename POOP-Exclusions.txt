@@ -32,6 +32,7 @@
 *.ubisoft.com *ubi*
 *.youtube*.com *
 *vimeo.com *vimeo*.*
+disqus.com *.disqus.com
 f.vision *.dnsf.vision
 fast.com *.nflxvideo.net
 github.com *.github*.com
