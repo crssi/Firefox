@@ -8,9 +8,7 @@ do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'proxsign' -Error
 
 try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$((Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')).zip" -CompressionLevel Fastest } catch { [Windows.Forms.MessageBox]::Show("ERROR:`nNo active Firefox profile found!", "GITHUB/CRSSI/FIREFOX/PROFILE", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null; Exit }
 
-$tmpFolder = "$($env:USERPROFILE)\CRSSI"
-Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false -ErrorAction SilentlyContinue
-New-Item -ItemType Directory -Force -Path $tmpFolder | Out-Null
+$tmpFolder = New-Item -ItemType Directory -Path (Join-Path $([System.IO.Path]::GetTempPath()) $([System.Guid]::NewGuid()))
 
 Import-Module -Name BitsTransfer
 try { Start-BitsTransfer -Source https://github.com/crssi/Firefox/raw/master/Profile.zip -Destination $tmpFolder -ErrorAction Stop } catch { Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false; [Windows.Forms.MessageBox]::Show("ERROR:`nCheck your Internet connectivity and try again.", "GITHUB/CRSSI/FIREFOX/PROFILE", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null; Exit }
@@ -43,7 +41,6 @@ Remove-Item -Path "$tmpProfilePath\jsonlz4.exe" -Force
 
 Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force -Confirm:$false
 Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -Force
-Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false -ErrorAction SilentlyContinue
 
 Start-Process -FilePath 'firefox.exe'
 Exit
