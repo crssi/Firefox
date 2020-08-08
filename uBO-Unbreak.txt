@@ -53,8 +53,9 @@
 @@||google.*/recaptcha/$subdocument
 @@||google.*^$script,domain=youtube.com
 @@||google.*^$domain=google.com|googleapis.com
+@@||google.com/recaptcha/api.js?onload=*$script
 @@||google.com/recaptcha/api.js?render=*$script
-@@||google.com/recaptcha/api.js$script,domain=patrickhlauke.github.io
+@@||google.com/recaptcha/api.js$script,domain=github.io
 @@||google.com/uds/*visualization$script,stylesheet
 @@||google.com^$domain=youtube.com|youtube-nocookie.com
 @@||googleapis.com^$subdocument,domain=google.com|google.si
