@@ -64,9 +64,9 @@ www.facebook.com###headerArea
 github.com##div.blob-wrapper:style(overflow: visible visible !important)
 
 imdb.com##.front-row-container
-||*/betlink*$subdocument
+||*/betlink$subdocument
 
-||www.partis.si/tmp/*$image
+||www.partis.si/tmp/$image
 ||amazonaws.com/banners$3p,subdocument
 partis.si#@#.all > div:nth-of-type(1)
 partis.si#@#.all > div:nth-of-type(2)

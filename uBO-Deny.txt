@@ -7,7 +7,7 @@
 
 ||*.checkfront.com/lib/Control.Geocoder*.js$script
 ||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
-||*/fingerprintjs2*$script,important
+||*/fingerprintjs2$script,important
 ||*/fp.js$script,important
 ||*/loginmanager_sniff.js$script
 ||1105media.com^$3p
@@ -23,10 +23,10 @@
 ||agilemeasure.com^$3p
 ||alooma.com^$3p
 ||amazon-adsystem.*^
-||amazonaws.com/*banners*$3p
+||amazonaws.com/*banners$3p
 ||ampcid.google.*^$important
 ||anlcld.com^
-||aolcdn.com/ads/*$3p,script
+||aolcdn.com/ads/$3p,script
 ||api.stacksocial.com^
 ||app-measurement.com^$important
 ||arctur.*^$3p
@@ -127,7 +127,7 @@
 ||pusher.com^$3p
 ||qq.com^$3p
 ||quantserve.com^$3p
-||s.aolcdn.com/ads/*$3p,script
+||s.aolcdn.com/ads/$3p,script
 ||salesforceliveagent.com^$3p
 ||sandsiv.com^3p
 ||scorecardresearch.com^$important
@@ -139,9 +139,9 @@
 ||smartfocus.com^$3p
 ||smind.*^$3p
 ||spot.im^$3p
-||startpage.com/do/*$image,important
-||startpage.com/english/*$image,important
-||startpage.com/tst2/*$image,important
+||startpage.com/do/$image,important
+||startpage.com/english/$image,important
+||startpage.com/tst2/$image,important
 ||syndication.twitter.*^
 ||themessagecloud.com^$3p
 ||ti-media.net^$~stylesheet,~image
@@ -159,6 +159,6 @@
 ||wistia.*^$3p,~image,~xhr
 ||yahoo.*^$3p,domain=~yahoo.com
 ||yottlyscript.com^$3p
-||youtube.com/youtubei/v1/log_event*$xhr
+||youtube.com/youtubei/v1/log_event$xhr
 ||zdassets.com^$3p,~xhr
 ||zendesk.com^$3p,~image

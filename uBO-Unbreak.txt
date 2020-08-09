@@ -8,7 +8,7 @@
 ||hudo.com^$inline-script
 
 @@*/lwa/WebPages/LwaClient.aspx$subdocument
-@@*/saml/*$subdocument
+@@*/saml/$subdocument
 @@/clarity-*.js$1p,script
 @@/share-link-$1p,xhr
 @@||a-msedge.net^$domain=bing.com
@@ -36,7 +36,7 @@
 @@||cookielaw.org/*/otBannerSdk.js$script
 @@||cookielaw.org/*/otPcPanel.json$xhr
 @@||cookielaw.org/*/otSDKStub.js$script
-@@||cookielaw.org/consent/*$xhr
+@@||cookielaw.org/consent/$xhr
 @@||data.api.cnn.io^$xhr,domain=cnn.com
 @@||docs.google.com^$subdocument,domain=dropbox.com
 @@||drive.google.com^$image
@@ -48,14 +48,12 @@
 @@||filesusr.com^$1p
 @@||forcesafesearch.google.com^
 @@||google-analytics.com/analytics.js$script,domain=amainhobbies.com
-@@||google.*/cse/*$script,stylesheet,domain=pastebin.com
-@@||google.*/maps/*$subdocument
+@@||google.*/cse/$script,stylesheet,domain=pastebin.com
+@@||google.*/maps/$subdocument
 @@||google.*/recaptcha/$subdocument
 @@||google.*^$script,domain=youtube.com
 @@||google.*^$domain=google.com|googleapis.com
-@@||google.com/recaptcha/api.js?onload=*$script
-@@||google.com/recaptcha/api.js?render=*$script
-@@||google.com/recaptcha/api.js$script,domain=github.io
+@@||google.com/recaptcha/api.js$script
 @@||google.com/uds/*visualization$script,stylesheet
 @@||google.com^$domain=youtube.com|youtube-nocookie.com
 @@||googleapis.com^$subdocument,domain=google.com|google.si
@@ -68,8 +66,8 @@
 @@||jwpltx.com^$image
 @@||jwpsrv.com^$subdocument
 @@||maps-api-ssl.google.com^$script,image
-@@||maps.google.*/maps*$script,image
-@@||maps.googleapis.com/maps*$script,image,xhr
+@@||maps.google.*/maps$script,image
+@@||maps.googleapis.com/maps$script,image,xhr
 @@||mapsengine.google.com/map/embed$subdocument
 @@||media.brightcove.com^$image
 @@||media.brightcove.com^$media,domain=players.brightcove.net
@@ -105,8 +103,8 @@
 @@||zopim.com^$script,websocket,image
 
 !!! twitter
-@@||platform.twitter.com/embed/*$subdocument
-@@||platform.twitter.com/widgets/*$subdocument
+@@||platform.twitter.com/embed/$subdocument
+@@||platform.twitter.com/widgets/$subdocument
 @@||platform.twitter.com^$stylesheet,image,script
 @@||syndication.twitter.com^$image,xhr,domain=platform.twitter.com
 @@||twimg.*^$image
