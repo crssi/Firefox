@@ -1,8 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 22 Jul 2020
-* version 79-alpha
-* authors: v52+ github | v51- www.ghacks.net
+* date: 13 Aug 2020
+* version 80-alpha
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
 
@@ -117,7 +116,7 @@ user_pref("browser.newtabpage.activity-stream.telemetry", false);
  * Runs code received from a server (aka Remote Code Execution) and sends information back to a metrics server
  * [1] https://abouthome-snippets-service.readthedocs.io/ ***/
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "{}");
 /* 0105c: disable Activity Stream Top Stories, Pocket-based and/or sponsored content ***/
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
@@ -165,6 +164,13 @@ user_pref("geo.provider.use_gpsd", false); // [LINUX]
  * i.e. ignore all of Mozilla's various search engines in multiple locales ***/
 user_pref("browser.search.geoSpecificDefaults", false);
 user_pref("browser.search.geoSpecificDefaults.url", "");
+/* 0207: disable region updates
+ * [1] https://firefox-source-docs.mozilla.org/toolkit/modules/toolkit_modules/Region.html ***/
+user_pref("browser.region.network.url", ""); // [FF78+]
+user_pref("browser.region.update.enabled", false); // [[FF79+]
+/* 0208: set search region
+ * [NOTE] May not be hidden if Firefox has changed your settings due to your region (see 0207) ***/
+   // user_pref("browser.search.region", "US"); // [HIDDEN PREF]
 
 /** LANGUAGE / LOCALE ***/
 /* 0210: set preferred language for displaying web pages
@@ -340,17 +346,14 @@ user_pref("extensions.systemAddon.update.url", ""); // [FF44+]
  * Currently blocked by 'datareporting.healthreport.uploadEnabled' (see 0340) ***/
 user_pref("browser.ping-centre.telemetry", false);
 /* 0515: disable Screenshots
- * alternatively in FF60+, disable uploading to the Screenshots server
- * [1] https://github.com/mozilla-services/screenshots
- * [2] https://www.ghacks.net/2017/05/28/firefox-screenshots-integrated-in-firefox-nightly/ ***/
+ * alternatively in FF60+, disable uploading to the Screenshots server ***/
    // user_pref("extensions.screenshots.disabled", true); // [FF55+]
    // user_pref("extensions.screenshots.upload-disabled", true); // [FF60+]
 /* 0517: disable Form Autofill
  * [NOTE] Stored data is NOT secure (uses a JSON file)
  * [NOTE] Heuristics controls Form Autofill on forms without @autocomplete attributes
  * [SETTING] Privacy & Security>Forms and Autofill>Autofill addresses (FF74+)
- * [1] https://wiki.mozilla.org/Firefox/Features/Form_Autofill
- * [2] https://www.ghacks.net/2017/05/24/firefoxs-new-form-autofill-is-awesome/ ***/
+ * [1] https://wiki.mozilla.org/Firefox/Features/Form_Autofill ***/
 user_pref("extensions.formautofill.addresses.enabled", false); // [FF55+]
 user_pref("extensions.formautofill.available", "off"); // [FF56+]
 user_pref("extensions.formautofill.creditCards.enabled", false); // [FF56+]
@@ -365,16 +368,14 @@ user_pref("_user.js.parrot", "0600 syntax error: the parrot's no more!");
  * [1] https://developer.mozilla.org/docs/Web/HTTP/Link_prefetching_FAQ ***/
 user_pref("network.prefetch-next", false);
 /* 0602: disable DNS prefetching
- * [1] https://www.ghacks.net/2013/04/27/firefox-prefetching-what-you-need-to-know/
- * [2] https://developer.mozilla.org/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control ***/
+ * [1] https://developer.mozilla.org/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control ***/
 user_pref("network.dns.disablePrefetch", true);
-user_pref("network.dns.disablePrefetchFromHTTPS", true); // [HIDDEN PREF ESR] [DEFAULT: true FF70+]
+user_pref("network.dns.disablePrefetchFromHTTPS", true); // [HIDDEN PREF ESR68 or lower] [DEFAULT: true FF70+]
 /* 0603: disable predictor / prefetching ***/
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false); // [FF48+]
 /* 0605: disable link-mouseover opening connection to linked server
- * [1] https://news.slashdot.org/story/15/08/14/2321202/how-to-quash-firefoxs-silent-requests
- * [2] https://www.ghacks.net/2015/08/16/block-firefox-from-connecting-to-sites-when-you-hover-over-links/ ***/
+ * [1] https://news.slashdot.org/story/15/08/14/2321202/how-to-quash-firefoxs-silent-requests ***/
 user_pref("network.http.speculative-parallel-limit", 0);
 /* 0606: disable "Hyperlink Auditing" (click tracking) and enforce same host in case
  * [1] https://www.bleepingcomputer.com/news/software/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk/ ***/
@@ -422,7 +423,7 @@ user_pref("network.http.altsvc.oe", false);
  * [1] https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers ***/
 user_pref("network.proxy.socks_remote_dns", true);
 /* 0708: disable FTP [FF60+]
- * [1] https://www.ghacks.net/2018/02/20/firefox-60-with-new-preference-to-disable-ftp/ ***/
+ * [1] https://www.fxsitecompat.dev/en-CA/docs/2020/ftp-support-will-be-removed/ ***/
    // user_pref("network.ftp.enabled", false);
 /* 0709: disable using UNC (Uniform Naming Convention) paths [FF61+]
  * [SETUP-CHROME] Can break extensions for profiles on network shares
@@ -528,14 +529,14 @@ user_pref("_user.js.parrot", "0900 syntax error: the parrot's expired!");
  * [NOTE] This does not clear any passwords already saved
  * [SETTING] Privacy & Security>Logins and Passwords>Ask to save logins and passwords for websites ***/
    // user_pref("signon.rememberSignons", false);
-/* 0902: use a master password
+/* 0902: use a primary password
  * There are no preferences for this. It is all handled internally.
- * [SETTING] Privacy & Security>Logins and Passwords>Use a master password
- * [1] https://support.mozilla.org/kb/use-master-password-protect-stored-logins ***/
-/* 0903: set how often Firefox should ask for the master password
+ * [SETTING] Privacy & Security>Logins and Passwords>Use a Primary Password
+ * [1] https://support.mozilla.org/kb/use-primary-password-protect-stored-logins-and-pas ***/
+/* 0903: set how often Firefox should ask for the primary password
  * 0=the first time (default), 1=every time it's needed, 2=every n minutes (see 0904) ***/
 user_pref("security.ask_for_password", 2);
-/* 0904: set how often in minutes Firefox should ask for the master password (see 0903)
+/* 0904: set how often in minutes Firefox should ask for the primary password (see 0903)
  * in minutes, default is 30 ***/
 user_pref("security.password_lifetime", 5);
 /* 0905: disable auto-filling username & password form fields
@@ -577,7 +578,7 @@ user_pref("_user.js.parrot", "1000 syntax error: the parrot's gone to meet 'is m
  * [NOTE] We also clear cache on exiting Firefox (see 2803) ***/
 user_pref("browser.cache.disk.enable", false);
 /* 1003: disable memory cache
-/* capacity: -1=determine dynamically (default), 0=none, n=memory capacity in kilobytes ***/
+ * capacity: -1=determine dynamically (default), 0=none, n=memory capacity in kibibytes ***/
    // user_pref("browser.cache.memory.enable", false);
    // user_pref("browser.cache.memory.capacity", 0); // [HIDDEN PREF ESR]
 /* 1006: disable permissions manager from writing to disk [RESTART]
@@ -585,9 +586,9 @@ user_pref("browser.cache.disk.enable", false);
  * [1] https://bugzilla.mozilla.org/967812 ***/
    // user_pref("permissions.memory_only", true); // [HIDDEN PREF]
 /* 1007: disable media cache from writing to disk in Private Browsing
- * [NOTE] MSE (Media Source Extensions) are already stored in-memory in PB */
+ * [NOTE] MSE (Media Source Extensions) are already stored in-memory in PB ***/
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true); // [FF75+]
-user_pref("media.memory_cache_max_size", 16384);
+user_pref("media.memory_cache_max_size", 65536);
 
 /** SESSIONS & SESSION RESTORE ***/
 /* 1020: exclude "Undo Closed Tabs" in Session Restore ***/
@@ -889,8 +890,7 @@ user_pref("_user.js.parrot", "1800 syntax error: the parrot's pushing up daisies
 /* 1803: disable Flash plugin
  * 0=deactivated, 1=ask, 2=enabled
  * ESR52.x is the last branch to *fully* support NPAPI, FF52+ stable only supports Flash
- * [NOTE] You can still override individual sites via site permissions
- * [1] https://www.ghacks.net/2013/07/09/how-to-make-sure-that-a-firefox-plugin-never-activates-again/ ***/
+ * [NOTE] You can still override individual sites via site permissions ***/
 user_pref("plugin.state.flash", 0);
 /* 1820: disable GMP (Gecko Media Plugins)
  * [1] https://wiki.mozilla.org/GeckoMediaPlugins ***/
@@ -1044,9 +1044,8 @@ user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!
  * [NOTE] This will break some sites' functionality e.g. Outlook, Twitter, Facebook, Wordpress
  * This applies to onCut/onCopy/onPaste events - i.e. it requires interaction with the website
  * [WARNING] If both 'middlemouse.paste' and 'general.autoScroll' are true (at least one
- * is default false) then enabling this pref can leak clipboard content, see [2]
- * [1] https://www.ghacks.net/2014/01/08/block-websites-reading-modifying-clipboard-contents-firefox/
- * [2] https://bugzilla.mozilla.org/1528289 */
+ * is default false) then enabling this pref can leak clipboard content, see [1]
+ * [1] https://bugzilla.mozilla.org/1528289 */
    // user_pref("dom.event.clipboardevents.enabled", false);
 /* 2404: disable clipboard commands (cut/copy) from "non-privileged" content [FF41+]
  * this disables document.execCommand("cut"/"copy") to protect your clipboard
@@ -1197,8 +1196,7 @@ user_pref("network.IDN_show_punycode", true);
  * CAVEAT: JS can still force a pdf to open in-browser by bundling its own code (rare)
  * [SETTING] General>Applications>Portable Document Format (PDF) ***/
 user_pref("pdfjs.disabled", false); // [DEFAULT: false]
-/* 2621: disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS]
- * [1] https://www.ghacks.net/2016/03/25/block-firefox-chrome-windows-store/ ***/
+/* 2621: disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS] ***/
 user_pref("network.protocol-handler.external.ms-windows-store", false);
 /* 2622: enforce no system colors; they can be fingerprinted
  * [SETTING] General>Language and Appearance>Fonts and Colors>Colors>Use system colors ***/
@@ -1460,12 +1458,12 @@ user_pref("privacy.partition.network_state", true);
       FF60: Fix keydown/keyup events (1438795)
  ** 1337157 - disable WebGL debug renderer info (see 4613) (FF60+)
  ** 1459089 - disable OS locale in HTTP Accept-Language headers (ANDROID) (FF62+)
- ** 1479239 - return "no-preference" with prefers-reduced-motion (see 4617) (FF63+)
- ** 1363508 - spoof/suppress Pointer Events (see 4614) (FF64+)
+ ** 1479239 - return "no-preference" with prefers-reduced-motion (see 4614) (FF63+)
+ ** 1363508 - spoof/suppress Pointer Events (see 4615) (FF64+)
       FF65: pointerEvent.pointerid (1492766)
- ** 1485266 - disable exposure of system colors to CSS or canvas (see 4615) (FF67+)
+ ** 1485266 - disable exposure of system colors to CSS or canvas (see 4616) (FF67+)
  ** 1407366 - enable inner window letterboxing (see 4504) (FF67+)
- ** 1494034 - return "light" with prefers-color-scheme (see 4616) (FF67+)
+ ** 1494034 - return "light" with prefers-color-scheme (see 4617) (FF67+)
       [1] https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
  ** 1564422 - spoof audioContext outputLatency (FF70+)
  ** 1595823 - spoof audioContext sampleRate (FF72+)
@@ -1559,7 +1557,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 1.8.2020 (commit: 2809854); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 15.8.2020 (commit: f1e0203); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -1591,7 +1589,6 @@ ESSENTIAL EXTENSIONS:
     On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
     General -> Expert mode: Check
     APIs -> Screen API -> Protect screen API: Uncheck
-    Misc -> Misc -> Block data URL pages: Uncheck
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
@@ -1642,6 +1639,7 @@ USEFUL/INTERESTING EXTENSIONS:
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   Luminous: JavaScript events blocker; https://addons.mozilla.org/firefox/addon/luminous/ (https://gbaptista.github.io/luminous/doc/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
+  Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
@@ -1710,6 +1708,6 @@ EXTERNAL APPLICATIONS:
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
 /*** TO INVESTIGATE ***/
-  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
+  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly; see: https://www.virusbulletin.com/virusbulletin/2018/10/dark-side-webassembly/
 
 user_pref("_user.js.parrot", "Eagle has landed!");
