@@ -13,6 +13,7 @@
 *.cnet.com cnetvideo.cbsistatic.com
 *.dropbox.com *.dropbox*.com
 *.ebay*.* *.ebay*.*
+*.expedia.com *.expedia*.com
 *.facebook.com *.fbcdn.net
 *.google*.* *
 *.icloud.com *.apple*.com
