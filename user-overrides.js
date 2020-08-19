@@ -152,5 +152,7 @@ EXTERNAL APPLICATIONS:
 
 /*** TO INVESTIGATE ***/
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly; see: https://www.virusbulletin.com/virusbulletin/2018/10/dark-side-webassembly/
+  /* 5000x */ user_pref("dom.media.mediasession.enabled", true); // enable Media Control feature support; FF81+ default
+  /* 5000x */ user_pref("media.hardwaremediakeys.enabled", true); // enable Media Control feature support; FF81+ default
 
 user_pref("_user.js.parrot", "Eagle has landed!");
