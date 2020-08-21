@@ -83,3 +83,6 @@ mxtoolbox.com##footer.container-fluid
 ! https://www.nbcbayarea.com/news/coronavirus/face-id-with-a-mask-heres-how-to-unlock-your-iphone-in-the-age-of-covid-19/2294624/
 ##[id^="nbc-mpx-video-"]
 ##.video-flyout
+
+! https://www.pinterest.com/jankasovisova/pepa-pig/
+#@#.outerCookieBar
