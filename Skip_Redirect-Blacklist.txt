@@ -27,6 +27,7 @@ _sso=
 /safebrowsing/
 /saml/
 /SAML2/
+/searchbyimage
 /signin
 /signoff
 /signon
