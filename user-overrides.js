@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 15.8.2020 (commit: f1e0203); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 28.8.2020 (commit: 5fd7f6d); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -108,6 +108,7 @@ EXTERNAL APPLICATIONS:
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /* 4502  */ user_pref("ui.prefersReducedMotion", 0); // remove ugly UXs
   /* 5000  */ user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
@@ -119,8 +120,10 @@ EXTERNAL APPLICATIONS:
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
+  /* 5000x */ user_pref("dom.media.mediasession.enabled", true); // enable Media Control feature support; FF81+ default
   /* 5000x */ user_pref("extensions.pocket.enabled", false); // disable and hide Pocket
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
+  /* 5000x */ user_pref("media.hardwaremediakeys.enabled", true); // enable Media Control feature support; FF81+ default
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
@@ -152,7 +155,5 @@ EXTERNAL APPLICATIONS:
 
 /*** TO INVESTIGATE ***/
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly; see: https://www.virusbulletin.com/virusbulletin/2018/10/dark-side-webassembly/
-  /* 5000x */ user_pref("dom.media.mediasession.enabled", true); // enable Media Control feature support; FF81+ default
-  /* 5000x */ user_pref("media.hardwaremediakeys.enabled", true); // enable Media Control feature support; FF81+ default
 
 user_pref("_user.js.parrot", "Eagle has landed!");
