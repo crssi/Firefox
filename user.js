@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 13 Aug 2020
-* version 80-alpha
+* date: 28 Aug 2020
+* version 80-beta
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
 
@@ -542,7 +542,8 @@ user_pref("security.password_lifetime", 5);
 /* 0905: disable auto-filling username & password form fields
  * can leak in cross-site forms *and* be spoofed
  * [NOTE] Username & password is still available when you enter the field
- * [SETTING] Privacy & Security>Logins and Passwords>Autofill logins and passwords ***/
+ * [SETTING] Privacy & Security>Logins and Passwords>Autofill logins and passwords
+ * [1] https://freedom-to-tinker.com/2017/12/27/no-boundaries-for-user-identities-web-trackers-exploit-browser-login-managers/ ***/
 user_pref("signon.autofillForms", false);
 /* 0909: disable formless login capture for Password Manager [FF51+] ***/
 user_pref("signon.formlessCapture.enabled", false);
@@ -733,11 +734,13 @@ user_pref("security.mixed_content.block_display_content", true);
 /* 1243: block unencrypted requests from Flash on encrypted pages to mitigate MitM attacks [FF59+]
  * [1] https://bugzilla.mozilla.org/1190623 ***/
 user_pref("security.mixed_content.block_object_subrequest", true);
-/* 1244: enable https-only-mode [FF76+]
- * [NOTE] This is experimental
- * [SETTING] Privacy & Security>HTTPS-Only Mode (FF81+)
- * [1] https://bugzilla.mozilla.org/1613063 */
+/* 1244: enable HTTPS-Only mode [FF76+]
+ * When "https_only_mode" (all windows) is true, "https_only_mode_pbm" (private windows only) is ignored
+ * [SETTING] to add site exceptions: Page Info>Permissions>Use insecure HTTP (FF80+)
+ * [SETTING] Privacy & Security>HTTPS-Only Mode (FF80+ with browser.preferences.exposeHTTPSOnly = true)
+ * [1] https://bugzilla.mozilla.org/1613063 ***/
    // user_pref("dom.security.https_only_mode", true); // [FF76+]
+   // user_pref("dom.security.https_only_mode_pbm", true); // [FF80+]
    // user_pref("dom.security.https_only_mode.upgrade_local", true); // [FF77+]
 
 /** CIPHERS [WARNING: do not meddle with your cipher suite: see the section 1200 intro]
@@ -807,7 +810,8 @@ user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 user_pref("gfx.font_rendering.graphite.enabled", false);
 /* 1409: limit system font exposure to a whitelist [FF52+] [RESTART]
  * If the whitelist is empty, then whitelisting is considered disabled and all fonts are allowed
- * [NOTE] RFP in FF80+ restricts the whitelist to bundled and "Base Fonts" (see 4618)
+ * [NOTE] in FF80 RFP restricts the whitelist to bundled and "Base Fonts"
+ * ...and in FF81+ the whitelist **overrides** RFP's font visibility (see 4618)
  * [WARNING] Creating your own probably highly-unique whitelist will raise your entropy.
  * Eventually privacy.resistFingerprinting (see 4500) will cover this
  * [1] https://bugzilla.mozilla.org/1121643 ***/
@@ -954,16 +958,6 @@ user_pref("media.autoplay.blocking_policy", 2);
 
 /*** [SECTION 2200]: WINDOW MEDDLING & LEAKS / POPUPS ***/
 user_pref("_user.js.parrot", "2200 syntax error: the parrot's 'istory!");
-/* 2201: prevent websites from disabling new window features ***/
-user_pref("dom.disable_window_open_feature.close", true);
-user_pref("dom.disable_window_open_feature.location", true); // [DEFAULT: true]
-user_pref("dom.disable_window_open_feature.menubar", true);
-user_pref("dom.disable_window_open_feature.minimizable", true);
-user_pref("dom.disable_window_open_feature.personalbar", true); // bookmarks toolbar
-user_pref("dom.disable_window_open_feature.resizable", true); // [DEFAULT: true]
-user_pref("dom.disable_window_open_feature.status", true); // [DEFAULT: true]
-user_pref("dom.disable_window_open_feature.titlebar", true);
-user_pref("dom.disable_window_open_feature.toolbar", true);
 /* 2202: prevent scripts from moving and resizing open windows ***/
 user_pref("dom.disable_window_move_resize", true);
 /* 2203: open links targeting new windows in a new tab instead
@@ -1557,7 +1551,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 15.8.2020 (commit: f1e0203); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 28.8.2020 (commit: 5fd7f6d); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -1665,6 +1659,7 @@ EXTERNAL APPLICATIONS:
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /* 4502  */ user_pref("ui.prefersReducedMotion", 0); // remove ugly UXs
   /* 5000  */ user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
@@ -1676,8 +1671,10 @@ EXTERNAL APPLICATIONS:
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
+  /* 5000x */ user_pref("dom.media.mediasession.enabled", true); // enable Media Control feature support; FF81+ default
   /* 5000x */ user_pref("extensions.pocket.enabled", false); // disable and hide Pocket
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
+  /* 5000x */ user_pref("media.hardwaremediakeys.enabled", true); // enable Media Control feature support; FF81+ default
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
