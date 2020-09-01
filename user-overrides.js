@@ -154,6 +154,7 @@ EXTERNAL APPLICATIONS:
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
 /*** TO INVESTIGATE ***/
+  // /* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly; see: https://www.virusbulletin.com/virusbulletin/2018/10/dark-side-webassembly/
 
 user_pref("_user.js.parrot", "Eagle has landed!");
