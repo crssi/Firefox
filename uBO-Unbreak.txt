@@ -126,6 +126,7 @@
 
 !!! shorteners
 @@||adj.st^
+@@||adfoc.us^$1p
 
 ! https://www.pinterest.com/jankasovisova/pepa-pig/
 ! AdGuard Annoyances
