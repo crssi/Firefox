@@ -177,17 +177,18 @@
 /* Menu customization; ? #context-openlinkin* */
 #appMenu-private-window-button,
 #appMenuRestoreLastSession,
-#placesContext_open\:newprivatewindow,
-#context-openlink,
-#context-openlinkprivate,
-#context-openlinkincurrent,
-#context-openlinkincontainertab,
 #context_bookmarkTab,
-#context_closeOtherTabs,
 #context_closeTab,
-#context_closeTabsToTheEnd,
+/* #context_closeOtherTabs,
+#context_closeTabOptions,
+#context_closeTabsToTheEnd, */
 #context_moveTabOptions,
-#context_selectAllTabs {
+#context_selectAllTabs,
+#context-openlink,
+#context-openlinkincontainertab,
+#context-openlinkincurrent,
+#context-openlinkprivate,
+#placesContext_open\:newprivatewindow {
     display: none !important;
 }
 
