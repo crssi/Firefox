@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 28 Aug 2020
-* version 80-beta
+* date: 03 Sep 2020
+* version 81-alpha
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
 
@@ -370,7 +370,7 @@ user_pref("network.prefetch-next", false);
 /* 0602: disable DNS prefetching
  * [1] https://developer.mozilla.org/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control ***/
 user_pref("network.dns.disablePrefetch", true);
-user_pref("network.dns.disablePrefetchFromHTTPS", true); // [HIDDEN PREF ESR68 or lower] [DEFAULT: true FF70+]
+user_pref("network.dns.disablePrefetchFromHTTPS", true); // [DEFAULT: true FF70+]
 /* 0603: disable predictor / prefetching ***/
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false); // [FF48+]
@@ -505,7 +505,7 @@ user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
  * [1] https://support.mozilla.org/en-US/kb/address-bar-autocomplete-firefox#w_url-autocomplete ***/
    // user_pref("browser.urlbar.autoFill", false);
 /* 0860: disable search and form history
- * [SETUP-WEB] Be aware thet autocomplete form data can be read by third parties, see [1] [2]
+ * [SETUP-WEB] Be aware that autocomplete form data can be read by third parties, see [1] [2]
  * [NOTE] We also clear formdata on exit (see 2803)
  * [SETTING] Privacy & Security>History>Custom Settings>Remember search and form history
  * [1] https://blog.mindedsecurity.com/2011/10/autocompleteagain.html
@@ -581,7 +581,7 @@ user_pref("browser.cache.disk.enable", false);
 /* 1003: disable memory cache
  * capacity: -1=determine dynamically (default), 0=none, n=memory capacity in kibibytes ***/
    // user_pref("browser.cache.memory.enable", false);
-   // user_pref("browser.cache.memory.capacity", 0); // [HIDDEN PREF ESR]
+   // user_pref("browser.cache.memory.capacity", 0);
 /* 1006: disable permissions manager from writing to disk [RESTART]
  * [NOTE] This means any permission changes are session only
  * [1] https://bugzilla.mozilla.org/967812 ***/
@@ -813,7 +813,6 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
  * [NOTE] in FF80 RFP restricts the whitelist to bundled and "Base Fonts"
  * ...and in FF81+ the whitelist **overrides** RFP's font visibility (see 4618)
  * [WARNING] Creating your own probably highly-unique whitelist will raise your entropy.
- * Eventually privacy.resistFingerprinting (see 4500) will cover this
  * [1] https://bugzilla.mozilla.org/1121643 ***/
    // user_pref("font.system.whitelist", ""); // [HIDDEN PREF]
 
@@ -965,7 +964,7 @@ user_pref("dom.disable_window_move_resize", true);
  * You can still right-click a link and open in a new window.
  * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#screen
  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/9881 ***/
-user_pref("browser.link.open_newwindow", 3);
+user_pref("browser.link.open_newwindow", 3); // 2=new window, 3=new tab
 user_pref("browser.link.open_newwindow.restriction", 0);
 /* 2204: disable Fullscreen API (requires user interaction) to prevent screen-resolution leaks
  * [NOTE] You can still manually toggle the browser's fullscreen state (F11),
@@ -1150,7 +1149,6 @@ user_pref("devtools.debugger.remote-enabled", false); // [DEFAULT: false]
  * [1] https://bugzilla.mozilla.org/1173199 ***/
    // user_pref("mathml.disabled", true);
 /* 2610: disable in-content SVG (Scalable Vector Graphics) [FF53+]
- * [NOTE] In FF70+ and ESR68.1.0+ this no longer affects extensions (1564208)
  * [WARNING] Expect breakage incl. youtube player controls. Best left for a "hardened" profile.
  * [1] https://bugzilla.mozilla.org/1216893 ***/
    // user_pref("svg.disabled", true);
@@ -1392,7 +1390,7 @@ user_pref("privacy.firstparty.isolate", true);
  * [2] https://bugzilla.mozilla.org/1492607
  * [3] https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage ***/
    // user_pref("privacy.firstparty.isolate.restrict_opener_access", true); // [DEFAULT: true]
-   // user_pref("privacy.firstparty.isolate.block_post_message", true); // [HIDDEN PREF ESR]
+   // user_pref("privacy.firstparty.isolate.block_post_message", true);
 /* 4003: enable site partitioning (FF78+)
  * [1] https://bugzilla.mozilla.org/1590107 [META] */
 user_pref("privacy.partition.network_state", true);
@@ -1551,7 +1549,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 28.8.2020 (commit: 5fd7f6d); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for ghacks-user.js; 3.9.2020 (commit: 76019e6); https://github.com/ghacksuserjs/ghacks-user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
@@ -1659,8 +1657,8 @@ EXTERNAL APPLICATIONS:
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  /* 4502  */ user_pref("ui.prefersReducedMotion", 0); // remove ugly UXs
-  /* 5000  */ user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF69+]
+  /* 4502  */ user_pref("ui.prefersReducedMotion", 0); // remove ugly UX
+  /* 5000  */ user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // disable What's New
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -1683,7 +1681,7 @@ EXTERNAL APPLICATIONS:
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate USB secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
-  /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
+  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
@@ -1697,7 +1695,7 @@ EXTERNAL APPLICATIONS:
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
-  /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
+  /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4618  */ user_pref("layout.css.font-visibility.level", 1); // limit font visbility
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
@@ -1705,6 +1703,8 @@ EXTERNAL APPLICATIONS:
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
 /*** TO INVESTIGATE ***/
+  // /* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
+  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly; see: https://www.virusbulletin.com/virusbulletin/2018/10/dark-side-webassembly/
 
 user_pref("_user.js.parrot", "Eagle has landed!");
