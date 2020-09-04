@@ -131,3 +131,6 @@
 ! https://www.pinterest.com/jankasovisova/pepa-pig/
 ! AdGuard Annoyances
 #@#.outerCookieBar
+
+! https://www.adjust.com/
+@@||consent.cookiebot.com^$script
