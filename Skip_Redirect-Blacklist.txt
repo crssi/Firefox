@@ -37,6 +37,7 @@ _sso=
 /sso/
 /subscribe
 /tmui/locallb
+/unauthenticated
 /verification
 /websso/
 /wsfederation
