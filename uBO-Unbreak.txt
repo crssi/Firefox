@@ -134,3 +134,6 @@
 
 ! https://www.adjust.com/
 @@||consent.cookiebot.com^$script
+
+! Redirects must be cleaned then by WE like Skip Redirect and in that case awstrack.me is not queried at all
+@@||awstrack.me/*/http*$
