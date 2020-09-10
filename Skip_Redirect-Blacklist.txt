@@ -70,6 +70,7 @@ securityheaders.com/
 ssllabs.com/
 t.umblr.com/redirect
 translate.google.com/
+translatetheweb.com/
 twitter.com/
 ubi.com/
 virustotal.com/
