@@ -163,3 +163,11 @@
 ||youtube.com/youtubei/v1/log_event$xhr
 ||zdassets.com^$3p,~xhr
 ||zendesk.com^$3p,~image
+
+
+
+! Phishing, every second line is a root domain that DKIM signed email
+birvainterior.com
+f5solutions.ro
+stopco2.ro
+productsgood.com
