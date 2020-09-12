@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1599909469700,
+  "timeStamp": 1599919182900,
   "version": "1.29.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -51,7 +51,6 @@
     "ITA-0",
     "SVN-0",
     "https://better.fyi/blockerList.txt",
-    "https://blokada.org/blocklists/ddgtrackerradar/standard/hosts.txt",
     "https://mirror.cedia.org.ec/malwaredomains/justdomains",
     "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/rlwpx.free.fr.hrsk/hosts",
     "https://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains",
