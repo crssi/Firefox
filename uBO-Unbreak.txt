@@ -86,6 +86,7 @@
 @@||tealium.cbsnews.com^$script,1p
 @@||thetacdn.net^$image
 @@||tiqcdn.com/*/utag.js$script
+@@||translate.google.com^$script,domain=googleusercontent.com
 @@||translate.googleusercontent.com^
 @@||tumblr.com^$subdocument,domain=instagram.com
 @@||ubisoft.com^$domain=ubi.com
