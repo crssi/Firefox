@@ -139,5 +139,8 @@
 ! Redirects must be cleaned then by WE like Skip Redirect and in that case awstrack.me is not queried at all
 @@||awstrack.me/*/http*$
 
+! BLOKADA
 ! decathlon.si
 @@||sdk.woosmap.com^$script
+!https://www.deviantart.com/demongirl99/journal/Top-10-Paranormal-Cartoon-Shows-10-344248065
+@@||static.parastorage.com^$stylesheet
