@@ -1,22 +1,22 @@
 /******
-* name: ghacks user.js
+* name: arkenfox user.js
 * date: 03 Sep 2020
 * version 81-alpha
-* url: https://github.com/ghacksuserjs/ghacks-user.js
-* license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
+* url: https://github.com/arkenfox/user.js
+* license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
 * releases: These are end-of-stable-life-cycle legacy archives.
             *Always* use the master branch user.js for a current up-to-date version
-       url: https://github.com/ghacksuserjs/ghacks-user.js/releases
+       url: https://github.com/arkenfox/user.js/releases
 
 * README:
 
   0. Consider using Tor Browser if it meets your needs or fits your threat model better
      * https://www.torproject.org/about/torusers.html.en
   1. READ the full README
-     * https://github.com/ghacksuserjs/ghacks-user.js/blob/master/README.md
+     * https://github.com/arkenfox/user.js/blob/master/README.md
   2. READ this
-     * https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
+     * https://github.com/arkenfox/user.js/wiki/1.3-Implementation
   3. If you skipped steps 1 and 2 above (shame on you), then here is the absolute minimum
      * Real time binary checks with Google services are disabled (0412)
      * You will still get prompts to update Firefox, but auto-installing them is disabled (0302a)
@@ -38,7 +38,7 @@
          [SETUP-HARDEN] maybe you should consider using the Tor Browser
      * [WARNING] tags are extra special and used sparingly, so heed them
   4. BACKUP your profile folder before implementing (and/or test in a new/cloned profile)
-  5. KEEP UP TO DATE: https://github.com/ghacksuserjs/ghacks-user.js/wiki#small_orange_diamond-maintenance
+  5. KEEP UP TO DATE: https://github.com/arkenfox/user.js/wiki#small_orange_diamond-maintenance
 
 * INDEX:
 
@@ -206,8 +206,7 @@ user_pref("app.update.auto", false);
  * when false, extension detail tabs will have no description ***/
    // user_pref("extensions.getAddons.cache.enabled", false);
 /* 0308: disable search engine updates (e.g. OpenSearch)
- * [NOTE] This does not affect Mozilla's built-in or Web Extension search engines
- * [SETTING] General>Firefox Updates>Automatically update search engines (FF72-) ***/
+ * [NOTE] This does not affect Mozilla's built-in or Web Extension search engines ***/
 user_pref("browser.search.update", false);
 /* 0309: disable sending Flash crash reports ***/
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
@@ -352,7 +351,7 @@ user_pref("browser.ping-centre.telemetry", false);
 /* 0517: disable Form Autofill
  * [NOTE] Stored data is NOT secure (uses a JSON file)
  * [NOTE] Heuristics controls Form Autofill on forms without @autocomplete attributes
- * [SETTING] Privacy & Security>Forms and Autofill>Autofill addresses (FF74+)
+ * [SETTING] Privacy & Security>Forms and Autofill>Autofill addresses
  * [1] https://wiki.mozilla.org/Firefox/Features/Form_Autofill ***/
 user_pref("extensions.formautofill.addresses.enabled", false); // [FF55+]
 user_pref("extensions.formautofill.available", "off"); // [FF56+]
@@ -377,22 +376,22 @@ user_pref("network.predictor.enable-prefetch", false); // [FF48+]
 /* 0605: disable link-mouseover opening connection to linked server
  * [1] https://news.slashdot.org/story/15/08/14/2321202/how-to-quash-firefoxs-silent-requests ***/
 user_pref("network.http.speculative-parallel-limit", 0);
-/* 0606: disable "Hyperlink Auditing" (click tracking) and enforce same host in case
+/* 0606: enforce no "Hyperlink Auditing" (click tracking)
  * [1] https://www.bleepingcomputer.com/news/software/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk/ ***/
 user_pref("browser.send_pings", false); // [DEFAULT: false]
-user_pref("browser.send_pings.require_same_host", true);
+user_pref("browser.send_pings.require_same_host", true); // defense-in-depth
 
 /*** [SECTION 0700]: HTTP* / TCP/IP / DNS / PROXY / SOCKS etc ***/
 user_pref("_user.js.parrot", "0700 syntax error: the parrot's given up the ghost!");
 /* 0701: disable IPv6
- * IPv6 can be abused, especially regarding MAC addresses. They also do not play nice
- * with VPNs. That's even assuming your ISP and/or router and/or website can handle it.
+ * IPv6 can be abused, especially with MAC addresses, and they do not play nice with VPNs. That's
+ * even assuming your ISP and/or router and/or website can handle it. Sites will fall back to IPv4
  * [STATS] Firefox telemetry (June 2020) shows only 5% of all connections are IPv6
  * [NOTE] This is just an application level fallback. Disabling IPv6 is best done at an
  * OS/network level, and/or configured properly in VPN setups. If you are not masking your IP,
  * then this won't make much difference. If you are masking your IP, then it can only help.
  * [TEST] https://ipleak.org/
- * [1] https://github.com/ghacksuserjs/ghacks-user.js/issues/437#issuecomment-403740626
+ * [1] https://github.com/arkenfox/user.js/issues/437#issuecomment-403740626
  * [2] https://www.internetsociety.org/tag/ipv6-security/ (see Myths 2,4,5,6) ***/
 user_pref("network.dns.disableIPv6", true);
 /* 0702: disable HTTP2
@@ -569,7 +568,7 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
      [2] https://robertheaton.com/2014/01/20/cookieless-user-tracking-for-douchebags/
      [3] https://www.grepular.com/Preventing_Web_Tracking_via_the_Browser_Cache
      [4] https://medium.com/@stoically/enhance-your-privacy-in-firefox-with-temporary-containers-33925cd6cd21
-     [5] https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.4-Header-Editor
+     [5] https://github.com/arkenfox/user.js/wiki/4.2.4-Header-Editor
 ***/
 user_pref("_user.js.parrot", "1000 syntax error: the parrot's gone to meet 'is maker!");
 /** CACHE ***/
@@ -587,7 +586,8 @@ user_pref("browser.cache.disk.enable", false);
  * [1] https://bugzilla.mozilla.org/967812 ***/
    // user_pref("permissions.memory_only", true); // [HIDDEN PREF]
 /* 1007: disable media cache from writing to disk in Private Browsing
- * [NOTE] MSE (Media Source Extensions) are already stored in-memory in PB ***/
+ * [NOTE] MSE (Media Source Extensions) are already stored in-memory in PB
+ * [SETUP-WEB] ESR78: playback might break on subsequent loading (1650281) ***/
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true); // [FF75+]
 user_pref("media.memory_cache_max_size", 65536);
 
@@ -726,7 +726,7 @@ user_pref("security.family_safety.mode", 0);
 user_pref("security.cert_pinning.enforcement_level", 2);
 
 /** MIXED CONTENT ***/
-/* 1240: disable insecure active content on https pages
+/* 1240: enforce no insecure active content on https pages
  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/21323 ***/
 user_pref("security.mixed_content.block_active_content", true); // [DEFAULT: true]
 /* 1241: disable insecure passive content (such as images) on https pages [SETUP-WEB] ***/
@@ -736,9 +736,11 @@ user_pref("security.mixed_content.block_display_content", true);
 user_pref("security.mixed_content.block_object_subrequest", true);
 /* 1244: enable HTTPS-Only mode [FF76+]
  * When "https_only_mode" (all windows) is true, "https_only_mode_pbm" (private windows only) is ignored
+ * [WARNING] This is experimental, see [1] and you can't set exceptions if FPI is enabled, see [2]
  * [SETTING] to add site exceptions: Page Info>Permissions>Use insecure HTTP (FF80+)
  * [SETTING] Privacy & Security>HTTPS-Only Mode (FF80+ with browser.preferences.exposeHTTPSOnly = true)
- * [1] https://bugzilla.mozilla.org/1613063 ***/
+ * [1] https://bugzilla.mozilla.org/1613063 [META]
+ * [2] https://bugzilla.mozilla.org/1647829 ***/
    // user_pref("dom.security.https_only_mode", true); // [FF76+]
    // user_pref("dom.security.https_only_mode_pbm", true); // [FF80+]
    // user_pref("dom.security.https_only_mode.upgrade_local", true); // [FF77+]
@@ -785,7 +787,7 @@ user_pref("browser.ssl_override_behavior", 1);
  * [TEST] https://expired.badssl.com/ ***/
 user_pref("browser.xul.error_pages.expert_bad_cert", true);
 /* 1273: display "insecure" icon and "Not Secure" text on HTTP sites ***/
-user_pref("security.insecure_connection_icon.enabled", true); // [FF59+] [DEFAULT: true FF70+]
+   // user_pref("security.insecure_connection_icon.enabled", true); // [FF59+] [DEFAULT: true FF70+]
 user_pref("security.insecure_connection_text.enabled", true); // [FF60+]
 
 /*** [SECTION 1400]: FONTS ***/
@@ -962,14 +964,14 @@ user_pref("dom.disable_window_move_resize", true);
 /* 2203: open links targeting new windows in a new tab instead
  * This stops malicious window sizes and some screen resolution leaks.
  * You can still right-click a link and open in a new window.
- * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#screen
+ * [TEST] https://arkenfox.github.io/TZP/tzp.html#screen
  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/9881 ***/
-user_pref("browser.link.open_newwindow", 3); // 2=new window, 3=new tab
+user_pref("browser.link.open_newwindow", 3); // 1=most recent window or tab 2=new window, 3=new tab
 user_pref("browser.link.open_newwindow.restriction", 0);
 /* 2204: disable Fullscreen API (requires user interaction) to prevent screen-resolution leaks
  * [NOTE] You can still manually toggle the browser's fullscreen state (F11),
  * but this pref will disable embedded video/game fullscreen controls, e.g. youtube
- * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#screen ***/
+ * [TEST] https://arkenfox.github.io/TZP/tzp.html#screen ***/
    // user_pref("full-screen-api.enabled", false);
 /* 2210: block popup windows
  * [SETTING] Privacy & Security>Permissions>Block pop-up windows ***/
@@ -1141,11 +1143,11 @@ user_pref("browser.uitour.url", "");
  * [SETTING] Devtools>Advanced Settings>Enable browser chrome and add-on debugging toolboxes
  * [1] https://github.com/pyllyukko/user.js/issues/179#issuecomment-246468676 ***/
 user_pref("devtools.chrome.enabled", false);
-/* 2608: disable remote debugging
+/* 2608: reset remote debugging to disabled
  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/16222 ***/
 user_pref("devtools.debugger.remote-enabled", false); // [DEFAULT: false]
 /* 2609: disable MathML (Mathematical Markup Language) [FF51+] [SETUP-HARDEN]
- * [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#misc
+ * [TEST] https://arkenfox.github.io/TZP/tzp.html#misc
  * [1] https://bugzilla.mozilla.org/1173199 ***/
    // user_pref("mathml.disabled", true);
 /* 2610: disable in-content SVG (Scalable Vector Graphics) [FF53+]
@@ -1406,7 +1408,7 @@ user_pref("privacy.partition.network_state", true);
       [NOTE] Info only: To set a size, open a XUL (chrome) page (such as about:config) which is at
       100% zoom, hit Shift+F4 to open the scratchpad, type window.resizeTo(1366,768), hit Ctrl+R to run.
       Test your window size, do some math, resize to allow for all the non inner window elements
-      [TEST] https://ghacksuserjs.github.io/TorZillaPrint/TorZillaPrint.html#screen
+      [TEST] https://arkenfox.github.io/TZP/tzp.html#screen
  ** 1281949 - spoof screen orientation (FF50+)
  ** 1281963 - hide the contents of navigator.plugins and navigator.mimeTypes (FF50+)
       FF53: Fixes GetSupportedNames in nsMimeTypeArray and nsPluginArray (1324044)
@@ -1549,10 +1551,10 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for ghacks-user.js; 3.9.2020 (commit: 76019e6); https://github.com/ghacksuserjs/ghacks-user.js
+INFO: Supplement for arkenfox user.js; 15.9.2020 (commit: ae0c980); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
-1. Download user.js from https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js and place it into "profile folder"
+1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
    NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 2. Append this file to user.js that was downloaded in the previous step
 3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
@@ -1629,6 +1631,7 @@ USEFUL/INTERESTING EXTENSIONS:
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
+  http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   Luminous: JavaScript events blocker; https://addons.mozilla.org/firefox/addon/luminous/ (https://gbaptista.github.io/luminous/doc/)
   Pasa password generator; https://addons.mozilla.org/firefox/addon/pasa-password-generator/ (https://github.com/alexhenrie/pasa/)
@@ -1696,7 +1699,7 @@ EXTERNAL APPLICATIONS:
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
-  /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI
+  /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4618  */ user_pref("layout.css.font-visibility.level", 1); // limit font visbility
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
