@@ -144,3 +144,5 @@
 @@||sdk.woosmap.com^$script
 !https://www.deviantart.com/demongirl99/journal/Top-10-Paranormal-Cartoon-Shows-10-344248065
 @@||static.parastorage.com^$stylesheet
+! ebay.com
+@@||rover.ebay.com^
