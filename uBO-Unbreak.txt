@@ -146,3 +146,5 @@
 @@||static.parastorage.com^$stylesheet
 ! ebay.com
 @@||rover.ebay.com^
+! https://www.jurman.si/jedilnik/
+@@||static.anyflip.com^$1p
