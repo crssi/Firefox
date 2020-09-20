@@ -150,3 +150,5 @@
 @@||static.anyflip.com^$1p
 ! https://www.webmd.com/coronavirus-in-context/video/alexander-greninger
 @@||consent.trustarc.com^$script
+! https://www.ceneje.si/Iskanje/Izdelki?q=kolebnica
+@@||img.cdn-cnj.si^$image
