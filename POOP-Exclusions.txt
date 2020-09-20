@@ -17,6 +17,7 @@
 *.facebook.com *.fbcdn.net
 *.google*.* *
 *.icloud.com *.apple*.com
+*.imdb.com *.imdb*.com
 *.imdb.com *amazon*.com
 *.live.com *
 *.microsoft.com *
