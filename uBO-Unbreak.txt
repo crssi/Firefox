@@ -148,3 +148,5 @@
 @@||rover.ebay.com^
 ! https://www.jurman.si/jedilnik/
 @@||static.anyflip.com^$1p
+! https://www.webmd.com/coronavirus-in-context/video/alexander-greninger
+@@||consent.trustarc.com^$script
