@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1600715990500,
+  "timeStamp": 1600796795000,
   "version": "1.29.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -33,12 +33,9 @@
     "adguard-generic",
     "adguard-mobile",
     "adguard-spyware",
-    "fanboy-enhanced",
     "urlhaus-1",
     "spam404-0",
-    "adguard-annoyance",
     "adguard-social",
-    "fanboy-annoyance",
     "ublock-annoyances",
     "mvps-0",
     "plowe-0",
