@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1600862213800,
+  "timeStamp": 1600872511200,
   "version": "1.29.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -56,6 +56,7 @@
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt",
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt",
     "https://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt",
+    "https://www.i-dont-care-about-cookies.eu/abp/",
     "https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt",
     "https://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt",
     "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt",
