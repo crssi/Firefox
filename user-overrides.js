@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 15.9.2020 (commit: ae0c980); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 23.9.2020 (commit: c367bea); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
@@ -37,8 +37,6 @@ ESSENTIAL EXTENSIONS:
     Block hyperlink auditing: Uncheck
   CSS Exfil Protection; https://addons.mozilla.org/firefox/addon/css-exfil-protection/ (https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
-  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-    List of all whitelisted websites: pinterest.com
   LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://codeberg.org/nobody/LocalCDN/)
     Block Google Fonts: Uncheck
     Disable release notes: Check
@@ -79,6 +77,8 @@ USEFUL/INTERESTING EXTENSIONS:
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
   http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
+  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
+    List of all whitelisted websites: pinterest.com
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   Luminous: JavaScript events blocker; https://addons.mozilla.org/firefox/addon/luminous/ (https://gbaptista.github.io/luminous/doc/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
@@ -159,8 +159,6 @@ EXTERNAL APPLICATIONS:
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
 /*** TO INVESTIGATE ***/
-  // /* 1003  */ user_pref("browser.cache.memory.enable", false); // disable memory cache
-  // /* 1242  */ user_pref("security.mixed_content.upgrade_display_content", true); // upgrade non-secure passive content
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly; see: https://www.virusbulletin.com/virusbulletin/2018/10/dark-side-webassembly/
 
 user_pref("_user.js.parrot", "Eagle has landed!");
