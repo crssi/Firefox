@@ -148,7 +148,6 @@
 @@||ib.adnxs.com^$image
 
 ! youtube.com
-www.youtube.com###consent-bump
 ! Filter override > Youtube: Remove Youtube Suggestions; Keeps starting video when paused if using WE "I don't care about cookies"
 @@||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com
 ! Filter override >"" I don't care about cookies"; Stops playing afer a few moments
