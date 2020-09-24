@@ -129,6 +129,10 @@
 @@||adj.st^
 @@||adfoc.us^$1p
 
+!!! tackers that happens only by user action
+@@||trk.klclick.com^
+
+
 ! https://www.pinterest.com/jankasovisova/pepa-pig/
 ! AdGuard Annoyances
 #@#.outerCookieBar
