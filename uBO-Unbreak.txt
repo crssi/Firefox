@@ -97,7 +97,7 @@
 @@||wavesecure.com^$subdocument,domain=mcafee.com
 @@||wgcdn.co^$domain=worldoftanks.eu|worldoftanks.com|wargaming.net
 @@||youtube-ui.*.google.com^$subdocument,script
-@@||youtube.com^$1p
+! @@||youtube.com^$1p
 @@||ytimg.*.google.com^$image
 @@||ytimg.com^$script
 @@||zdassets.com^$image,stylesheet,script
