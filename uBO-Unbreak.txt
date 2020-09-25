@@ -150,5 +150,6 @@
 ! youtube.com
 ! Filter override > Youtube: Remove Youtube Suggestions; Keeps starting video when paused if using WE "I don't care about cookies"
 @@||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com
+www.youtube.com###dialog
 ! Filter override >"" I don't care about cookies"; Stops playing afer a few moments
 #@#ytd-app > ytd-consent-bump-lightbox
