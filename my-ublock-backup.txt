@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1601142289300,
+  "timeStamp": 1601227501500,
   "version": "1.29.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -10,7 +10,7 @@
     "colorBlindFriendly": false,
     "contextMenuEnabled": true,
     "dynamicFilteringEnabled": false,
-    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/complete/adblock.txt\nhttps://better.fyi/blockerList.txt\nhttps://easylist-downloads.adblockplus.org/adwarefilters.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_other.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt\nhttps://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname\nhttps://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt\nhttps://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist\nhttps://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt\nhttps://www.i-dont-care-about-cookies.eu/abp/",
+    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/complete/adblock.txt\nhttps://better.fyi/blockerList.txt\nhttps://easylist-downloads.adblockplus.org/adwarefilters.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_other.txt\nhttps://easylist-downloads.adblockplus.org/yt_annoyances_suggestions.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://hexxiumcreations.github.io/threat-list/hexxiumthreatlist.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/cbuijs/shallalist/master/tracker/domains\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt\nhttps://raw.githubusercontent.com/nextdns/metadata/master/security/parked-domains-cname\nhttps://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt\nhttps://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt\nhttps://www.i-dont-care-about-cookies.eu/abp/",
     "firewallPaneMinimized": false,
     "hyperlinkAuditingDisabled": true,
     "ignoreGenericCosmeticFilters": false,
@@ -36,6 +36,7 @@
     "urlhaus-1",
     "spam404-0",
     "adguard-social",
+    "fanboy-social",
     "ublock-annoyances",
     "plowe-0",
     "CHN-0",
@@ -60,7 +61,6 @@
     "https://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt",
     "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/adblock/adblock.txt",
     "https://abp.oisd.nl//",
-    "https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist",
     "https://raw.githubusercontent.com/metaphoricgiraffe/tracking-filters/master/trackingfilters.txt",
     "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
     "https://easylist-downloads.adblockplus.org/yt_annoyances_other.txt",
