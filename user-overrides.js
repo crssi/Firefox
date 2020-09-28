@@ -40,9 +40,6 @@ ESSENTIAL EXTENSIONS:
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
     List of all whitelisted websites: pinterest.com
-  LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://codeberg.org/nobody/LocalCDN/)
-    Block Google Fonts: Uncheck
-    Disable release notes: Check
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
       script: Check
@@ -81,6 +78,10 @@ USEFUL/INTERESTING EXTENSIONS:
   Farsight DNSDB Scout; https://addons.mozilla.org/firefox/addon/farsight-dnsdb-scout/ (https://www.farsightsecurity.com/tools/dnsdb-scout/)
   http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
+  LocalCDN (fork of Decentraleyes); https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/ (https://codeberg.org/nobody/LocalCDN/)
+    Block Google Fonts: Uncheck
+    Disable release notes: Check
+    NOTE: Add rules to uBO
   Luminous: JavaScript events blocker; https://addons.mozilla.org/firefox/addon/luminous/ (https://gbaptista.github.io/luminous/doc/)
   Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
     Override list for default blocked parameters: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-custom_parameters.txt
