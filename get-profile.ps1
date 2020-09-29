@@ -46,4 +46,6 @@ Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -For
 Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false -ErrorAction SilentlyContinue
 
 Start-Process -FilePath 'firefox.exe'
+Start-Sleep -Milliseconds 2500
+do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
 Exit
