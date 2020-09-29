@@ -3,8 +3,8 @@
 [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
 if ($PSVersionTable.PSVersion.Major -le 4) { [Windows.Forms.MessageBox]::Show("ERROR:`nPowershell version 4 or greater is needed!", "GITHUB/CRSSI/FIREFOX/PROFILE", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null;Exit }
 
-do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
-do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'proxsign' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'proxsign' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
 
 try { Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox" -DestinationPath "$($env:APPDATA)\Mozilla\Firefox_Profile_Backup-$((Get-Date).ToString('yyyy.MM.dd_HH.mm.ss')).zip" -CompressionLevel Fastest } catch { [Windows.Forms.MessageBox]::Show("ERROR:`nNo active Firefox profile found!", "GITHUB/CRSSI/FIREFOX/PROFILE", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null; Exit }
 
@@ -46,6 +46,7 @@ Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -For
 Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false -ErrorAction SilentlyContinue
 
 Start-Process -FilePath 'firefox.exe'
-Start-Sleep -Milliseconds 2500
-do { Start-Sleep -Milliseconds 500 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+Start-Sleep -Milliseconds 2000
+do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+Start-Process -FilePath 'firefox.exe'
 Exit
