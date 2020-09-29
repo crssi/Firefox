@@ -1,6 +1,7 @@
 * *.akamaihd.net
 * *.braintreegateway.com
 * *.crisp.chat
+* *.launchdarkly.com
 * api.spectrumcustomizer.com
 * api.woosmap.com
 * edge.api.brightcove.com
