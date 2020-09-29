@@ -11,6 +11,7 @@
 *.amazon.* *amazon*.com
 *.azure.com *
 *.cnet.com cnetvideo.cbsistatic.com
+*.driftt.com *.drift*.com
 *.dropbox.com *.dropbox*.com
 *.ebay*.* *.ebay*.*
 *.expedia.com *.expedia*.com

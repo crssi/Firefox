@@ -152,3 +152,7 @@
 @@||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com
 ! Filter override >"" I don't care about cookies"; Stops playing afer a few moments
 #@#ytd-app > ytd-consent-bump-lightbox
+
+! Chat Drift
+@@||driftt.com^
+@@||drift.com^$domain=driftt.com
