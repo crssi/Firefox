@@ -156,3 +156,5 @@
 ! Chat Drift
 @@||driftt.com^
 @@||drift.com^$domain=driftt.com
+@@||www.driftt.com^
+@@||www.drift.com^
