@@ -160,5 +160,5 @@
 @@||www.drift.com^
 
 ! search @ stat.si
-@@||cse.google.com^$script
-@@||google.com/cse/*$3p,script,stylesheet
+!@@||cse.google.com^$script
+!@@||google.com/cse/*$3p,script,stylesheet
