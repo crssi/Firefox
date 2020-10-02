@@ -162,3 +162,6 @@
 ! search @ stat.si
 !@@||cse.google.com^$script
 !@@||google.com/cse/*$3p,script,stylesheet
+
+! https://www.cnet.com/videos/googles-new-pixel-5-seattle-approves-minimum-wage-for-lyft-uber-drivers/
+@@||geolocation.onetrust.com/cookieconsentpub/*$3p,script
