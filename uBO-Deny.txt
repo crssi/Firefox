@@ -172,3 +172,7 @@ birvainterior.com
 f5solutions.ro
 stopco2.ro
 productsgood.com
+
+! https://www.cnet.com/videos/googles-new-pixel-5-seattle-approves-minimum-wage-for-lyft-uber-drivers/
+||at.cbsi.com^$3p,xhr
+||firestore.googleapis.com^$3p,xhr
