@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1601724472700,
+  "timeStamp": 1601739041300,
   "version": "1.30.0",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -38,7 +38,6 @@
     "adguard-social",
     "fanboy-social",
     "ublock-annoyances",
-    "plowe-0",
     "CHN-0",
     "CZE-0",
     "DEU-0",
