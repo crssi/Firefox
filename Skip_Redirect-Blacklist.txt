@@ -3,8 +3,9 @@ _sso=
 /_login
 //azure.microsoft.com/email/\?destination=https%3A%2F%2Fportal.azure.com%2F
 //disq.us/
+//dns.nextdns.io/
 //go.redirectingat.com/
-//sites.google.com
+//sites.google.com/
 //slack-redir.net/link
 /abp
 /account
