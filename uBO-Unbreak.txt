@@ -96,6 +96,7 @@
 @@||vidyard.com^$domain=play.vidyard.com
 @@||wavesecure.com^$subdocument,domain=mcafee.com
 @@||wgcdn.co^$domain=worldoftanks.eu|worldoftanks.com|wargaming.net
+@@||widgets.pinterest.com^$3p,script
 @@||youtube-ui.*.google.com^$subdocument,script
 ! @@||youtube.com^$1p
 @@||ytimg.*.google.com^$image
