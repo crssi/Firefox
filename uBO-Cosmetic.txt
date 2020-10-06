@@ -87,3 +87,6 @@ mxtoolbox.com##footer.container-fluid
 
 ! https://www.news-des-tages.com
 ###sgpb-popup-dialog-main-div
+
+! https://github.com
+##.hx_cookie-banner--show.js-cookie-consent-banner
