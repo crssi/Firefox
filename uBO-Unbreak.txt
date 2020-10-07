@@ -168,3 +168,5 @@
 
 @@||assets.pinterest.com^$3p,script
 @@||widgets.pinterest.com^$3p,script
+
+@@||isgprivacy.cbsi.com^$3p,script
