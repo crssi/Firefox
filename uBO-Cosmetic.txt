@@ -89,4 +89,4 @@ mxtoolbox.com##footer.container-fluid
 ###sgpb-popup-dialog-main-div
 
 ! https://github.com -> Cookie banner
-||github.githubassets.com/assets/environment-*.js$3p,script
+!||github.githubassets.com/assets/environment-*.js$3p,script
