@@ -9,6 +9,7 @@ www.youtube.com##div[class^="ytp-ce-"]
 !www.youtube.com##div[class^="ytp-chrome-top-buttons"]
 !www.youtube.com##.ytp-gradient-bottom
 !www.youtube.com###consent-bump
+www.youtube.com##.ytp-cards-button-icon
 
 !!! duckduckgo
 duckduckgo.com##.js-badge-link.ddg-extension-hide.badge-link--fadein.badge-link--top.badge-link
