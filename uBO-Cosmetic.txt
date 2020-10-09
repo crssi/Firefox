@@ -3,12 +3,12 @@
 ! Homepage: https://github.com/crssi/Firefox
 
 !!! youtube.com
-www.youtube.com##div[class^="ytp-ce-"]
-www.youtube.com##div[class^="ytp-pause-overlay"]
 www.youtube.com##div[class^="branding-img-container"]
-www.youtube.com##div[class^="ytp-chrome-top-buttons"]
-www.youtube.com##.ytp-gradient-bottom
-www.youtube.com###consent-bump
+www.youtube.com##div[class^="ytp-ce-"]
+!www.youtube.com##div[class^="ytp-pause-overlay"]
+!www.youtube.com##div[class^="ytp-chrome-top-buttons"]
+!www.youtube.com##.ytp-gradient-bottom
+!www.youtube.com###consent-bump
 
 !!! duckduckgo
 duckduckgo.com##.js-badge-link.ddg-extension-hide.badge-link--fadein.badge-link--top.badge-link
