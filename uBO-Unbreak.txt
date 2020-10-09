@@ -169,4 +169,5 @@
 @@||assets.pinterest.com^$3p,script
 @@||widgets.pinterest.com^$3p,script
 
+! cbsnews.com -> Cookie problem
 @@||isgprivacy.cbsi.com^$3p,script
