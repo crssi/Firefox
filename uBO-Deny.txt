@@ -11,7 +11,6 @@
 ||*/fp.js$script,important
 ||*/loginmanager_sniff.js$script
 ||1105media.com^$3p
-!||advertising.com^$script,image,xhr
 ||2o7.net^
 ||a2sky.com^$3p
 ||addthis.com^$important
@@ -125,7 +124,6 @@
 ||privacy-center.org^
 ||purch.com^$3p,important
 ||pushance.com^$3p
-!||pusher.com^$3p
 ||qq.com^$3p
 ||quantserve.com^$3p
 ||s.aolcdn.com/ads/$3p,script
@@ -134,8 +132,6 @@
 ||scorecardresearch.com^$important
 ||secondego.com^3p
 ||servebom.com^$3p,important
-!||shopify.com^$3p,script
-!||shopifycdn.com^$3p,script
 ||sitebot.ai^$3p
 ||smartfocus.com^$3p
 ||smind.*^$3p
@@ -157,7 +153,6 @@
 ||vidible.tv^
 ||wayin.com^$3p
 ||wibbitz.com^$3p
-!||wistia.*^$3p,~image,~xhr,~subdocument
 ||yahoo.*^$3p,domain=~yahoo.com
 ||yottlyscript.com^$3p
 ||youtube.com/youtubei/v1/log_event$xhr
@@ -165,13 +160,5 @@
 ||zendesk.com^$3p,~image,~xhr
 
 
-
-! Phishing, every second line is a root domain that DKIM signed email
-birvainterior.com
-f5solutions.ro
-stopco2.ro
-productsgood.com
-
 ! https://www.cnet.com/videos/googles-new-pixel-5-seattle-approves-minimum-wage-for-lyft-uber-drivers/
 ||at.cbsi.com^$3p,xhr
-!||firestore.googleapis.com^$3p,xhr
