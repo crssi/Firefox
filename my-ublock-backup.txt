@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1602341876800,
+  "timeStamp": 1602345459700,
   "version": "1.30.2",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -39,8 +39,6 @@
     "ublock-annoyances",
     "CHN-0",
     "CZE-0",
-    "ITA-1",
-    "ITA-0",
     "SVN-0",
     "https://badmojr.github.io/1Hosts/complete/adblock.txt",
     "https://filters.adtidy.org/extension/ublock/filters/6.txt",
