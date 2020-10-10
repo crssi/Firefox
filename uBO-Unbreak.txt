@@ -148,6 +148,9 @@
 @@||router.infolinks.com^$image
 @@||ib.adnxs.com^$image
 
+! SURVEY
+@@||survey.mindtake.com^$1p
+
 ! youtube.com
 ! Filter override > Youtube: Remove Youtube Suggestions; Keeps starting video when paused if using WE "I don't care about cookies"
 @@||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com
