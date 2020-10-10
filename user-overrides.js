@@ -1,12 +1,12 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 28.9.2020 (commit: 2391874); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 7.10.2020 (commit: c90341d); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
    NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 2. Append this file to user.js that was downloaded in the previous step
-3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
+3. In the "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
 4. In the "profile folder" create a folder "chrome" and copy-in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css and https://raw.githubusercontent.com/crssi/Firefox/master/userContent.css
 5. Firefox -> Options -> General -> General -> Tabs -> Settings...
      Remove all containers
@@ -38,7 +38,7 @@ ESSENTIAL EXTENSIONS:
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-    List of all whitelisted websites: pinterest.com
+    List of all whitelisted websites: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/I_dont_care_about_cookies.txt
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
       script: Check
@@ -95,7 +95,6 @@ EXTERNAL APPLICATIONS:
   /* 0850c */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
-  /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I just <3 fonts
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 1); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows

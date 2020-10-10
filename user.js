@@ -736,7 +736,7 @@ user_pref("security.mixed_content.block_display_content", true);
 user_pref("security.mixed_content.block_object_subrequest", true);
 /* 1244: enable HTTPS-Only mode [FF76+]
  * When "https_only_mode" (all windows) is true, "https_only_mode_pbm" (private windows only) is ignored
- * [WARNING] This is experimental, see [1] and you can't set exceptions if FPI is enabled, see [2]
+ * [WARNING] This is experimental [1] and you can't set exceptions if FPI is enabled [2] (fixed in FF83)
  * [SETTING] to add site exceptions: Page Info>Permissions>Use insecure HTTP (FF80+)
  * [SETTING] Privacy & Security>HTTPS-Only Mode (FF80+ with browser.preferences.exposeHTTPSOnly = true)
  * [1] https://bugzilla.mozilla.org/1613063 [META]
@@ -794,9 +794,9 @@ user_pref("security.insecure_connection_text.enabled", true); // [FF60+]
 user_pref("_user.js.parrot", "1400 syntax error: the parrot's bereft of life!");
 /* 1401: disable websites choosing fonts (0=block, 1=allow)
  * This can limit most (but not all) JS font enumeration which is a high entropy fingerprinting vector
- * [SETUP-WEB] Can break some PDFs (missing text). Limiting to default fonts can "uglify" the web
+ * [WARNING] **DO NOT USE**: in FF80+ RFP covers this, and non-RFP users should use font vis (4618)
  * [SETTING] General>Language and Appearance>Fonts & Colors>Advanced>Allow pages to choose... ***/
-user_pref("browser.display.use_document_fonts", 0);
+   // user_pref("browser.display.use_document_fonts", 0);
 /* 1403: disable icon fonts (glyphs) and local fallback rendering
  * [1] https://bugzilla.mozilla.org/789788
  * [2] https://gitlab.torproject.org/legacy/trac/-/issues/8455 ***/
@@ -812,9 +812,8 @@ user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 user_pref("gfx.font_rendering.graphite.enabled", false);
 /* 1409: limit system font exposure to a whitelist [FF52+] [RESTART]
  * If the whitelist is empty, then whitelisting is considered disabled and all fonts are allowed
- * [NOTE] in FF80 RFP restricts the whitelist to bundled and "Base Fonts"
- * ...and in FF81+ the whitelist **overrides** RFP's font visibility (see 4618)
- * [WARNING] Creating your own probably highly-unique whitelist will raise your entropy.
+ * [WARNING] **DO NOT USE**: in FF80+ RFP covers this, and non-RFP users should use font vis (4618)
+ * [NOTE] In FF81+ the whitelist **overrides** RFP's font visibility (see 4618)
  * [1] https://bugzilla.mozilla.org/1121643 ***/
    // user_pref("font.system.whitelist", ""); // [HIDDEN PREF]
 
@@ -1073,11 +1072,6 @@ user_pref("javascript.options.asmjs", false);
  * [NOTE] In FF71+ this no longer affects extensions (1576254)
  * [1] https://developer.mozilla.org/docs/WebAssembly ***/
 user_pref("javascript.options.wasm", false);
-/* 2426: disable Intersection Observer API [FF55+]
- * [1] https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API
- * [2] https://w3c.github.io/IntersectionObserver/
- * [3] https://bugzilla.mozilla.org/1243846 ***/
-   // user_pref("dom.IntersectionObserver.enabled", false);
 /* 2429: enable (limited but sufficient) window.opener protection [FF65+]
  * Makes rel=noopener implicit for target=_blank in anchor and area elements when no rel attribute is set ***/
 user_pref("dom.targetBlankNoOpener.enabled", true); // [DEFAULT: true FF79+]
@@ -1124,7 +1118,7 @@ user_pref("dom.webaudio.enabled", false);
 /*** [SECTION 2600]: MISCELLANEOUS ***/
 user_pref("_user.js.parrot", "2600 syntax error: the parrot's run down the curtain!");
 /* 2601: prevent accessibility services from accessing your browser [RESTART]
- * [SETTING] Privacy & Security>Permissions>Prevent accessibility services from accessing your browser [FF80 or lower]
+ * [SETTING] Privacy & Security>Permissions>Prevent accessibility services from accessing your browser (FF80 or lower)
  * [1] https://support.mozilla.org/kb/accessibility-services ***/
 user_pref("accessibility.force_disabled", 1);
 /* 2602: disable sending additional analytics to web servers
@@ -1508,13 +1502,13 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 28.9.2020 (commit: 2391874); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 7.10.2020 (commit: c90341d); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
    NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
 2. Append this file to user.js that was downloaded in the previous step
-3. Go to "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
+3. In the "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
 4. In the "profile folder" create a folder "chrome" and copy-in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css and https://raw.githubusercontent.com/crssi/Firefox/master/userContent.css
 5. Firefox -> Options -> General -> General -> Tabs -> Settings...
      Remove all containers
@@ -1546,7 +1540,7 @@ ESSENTIAL EXTENSIONS:
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-    List of all whitelisted websites: pinterest.com
+    List of all whitelisted websites: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/I_dont_care_about_cookies.txt
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
       script: Check
@@ -1603,7 +1597,6 @@ EXTERNAL APPLICATIONS:
   /* 0850c */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
-  /* 1401  */ user_pref("browser.display.use_document_fonts", 1); // I just <3 fonts
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 1); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
