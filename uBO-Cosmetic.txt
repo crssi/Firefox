@@ -2,85 +2,35 @@
 ! Expires: 2 days
 ! Homepage: https://github.com/crssi/Firefox
 
-!!! youtube.com
-www.youtube.com##div[class^="branding-img-container"]
-www.youtube.com##div[class^="ytp-ce-"]
-!www.youtube.com##div[class^="ytp-pause-overlay"]
-!www.youtube.com##div[class^="ytp-chrome-top-buttons"]
-!www.youtube.com##.ytp-gradient-bottom
-!www.youtube.com###consent-bump
-www.youtube.com##.ytp-cards-button-icon
+youtube.com##div[class^="branding-img-container"]
+youtube.com##div[class^="ytp-ce-"]
+youtube.com##div[class^="ytp-pause-overlay"]
+youtube.com##.ytp-cards-button-icon
 
-!!! duckduckgo
-duckduckgo.com##.js-badge-link.ddg-extension-hide.badge-link--fadein.badge-link--top.badge-link
 duckduckgo.com##.header--aside
-duckduckgo.com##.feedback-btn.btn
 
-!!! microsoft.com
-technet.microsoft.com##.stdr-content.stdr-vote
-social.technet.microsoft.com###divNRMain > table > tbody > tr > td > table > tbody > tr > td
-docs.microsoft.com##.or-f.or-o.or-c-mv.or-b
-docs.microsoft.com##.or-o.or-c-pf
-support.microsoft.com##.x-hidden-focus.epb-default-color.epb-container.f-information.m-alert
-msdn.microsoft.com##.stdr-content.stdr-vote
-
-!!! github.com
-||assets-cdn.github.com/images/modules/site/site-signup-prompt.png$image
 github.com##.rounded-1.mb-4.text-center.p-4.signup-prompt
 
-!!! aliexpress.com
-www.aliexpress.com##.ui-mask
-www.aliexpress.com##.ui-newuser-layer-dialog.ui-window-transition.ui-window-normal.ui-window
-
-!!! facebook
-www.facebook.com###dialog_0
-www.facebook.com###u_0_3z
-
-!!! wego.here.com
-wego.here.com##.wrapper > .content
-wego.here.com##.head
-wego.here.com##.bottom-right.slideIn.pointer.tooltip
-wego.here.com##.download
-wego.here.com##.branding > .here_logo
-wego.here.com##.active.fullBanner
-
-!!! mail.ru
-cloud.mail.ru##.b-layer__overlay
-cloud.mail.ru##.b-layer__container_disko-popup.b-layer__container_popup.b-layer__container
-cloud.mail.ru##.b-layer__wrapper3_disko-popup.b-layer__wrapper3_popup.b-layer__wrapper3
-cloud.mail.ru##.b-layer__wrapper_disko-popup.b-layer__wrapper_popup.b-layer__wrapper
-
-!!! OTHER
-##.cf.modal
-##.underlay
-www.reddit.com##.cookie-infobar.with-btn.with-icon.md-container-small.reddit-infobar
-##.ng-star-inserted.cookies
-###cookie_module
-##.butterBar-message
-! https://www.windowscentral.com/how-troubleshoot-and-fix-common-problems-outlook
-##.detective--splash.swal-modal
-##.swal-overlay--show-modal.swal-overlay
-www.facebook.com###headerArea
-
-!!! github find on page context dissapearance workaround
-github.com##div.blob-wrapper:style(overflow: visible visible !important)
-
-imdb.com##.front-row-container
-||*/betlink$subdocument
-
-||www.partis.si/tmp/$image
-||amazonaws.com/banners$3p,subdocument
-partis.si#@#.all > div:nth-of-type(1)
-partis.si#@#.all > div:nth-of-type(2)
-www.partis.si###ld-widget-bottom
+here.com##.branding
+here.com##.active.fullBanner
+here.com##.footer_container
 
 mxtoolbox.com##.mx-inline-ad-link
 mxtoolbox.com##footer.container-fluid
 
+! iExplorer Chromium banner
+microsoft.com###epb
+microsoft.com###bannerAboveUHF
+! Survey
+microsoft.com##.survey-background.ng-scope
+! Feedback
+microsoft.com##.is-relative.feedback-section
+microsoft.com###supFeedbackWrapper
+! Other
+microsoft.com###uhf-upgrade-banner
+
 ! https://www.laptopmag.com
 ##.hawk-main-transparent
-
-##.spu-bg
 
 ! https://www.nbcbayarea.com/news/coronavirus/face-id-with-a-mask-heres-how-to-unlock-your-iphone-in-the-age-of-covid-19/2294624/
 ##[id^="nbc-mpx-video-"]
@@ -89,5 +39,14 @@ mxtoolbox.com##footer.container-fluid
 ! https://www.news-des-tages.com
 ###sgpb-popup-dialog-main-div
 
-! https://github.com -> Cookie banner
-!||github.githubassets.com/assets/environment-*.js$3p,script
+
+!!!!! TO-DO
+!##.cf.modal
+!##.underlay
+!##.ng-star-inserted.cookies
+!###cookie_module
+!##.butterBar-message
+
+!||*/betlink$subdocument
+!||amazonaws.com/banners$3p,subdocument
+!##.spu-bg
