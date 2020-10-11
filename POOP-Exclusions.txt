@@ -9,6 +9,7 @@
 * shopify-chat.shopifycloud.com
 *.*inn.com *.*inn.com
 *.24live*.com *.24live*.com
+*.airbnb.com *.muscache.com
 *.ali*.com *.ali*.com
 *.amazon.* *amazon*.com
 *.azure.com *
