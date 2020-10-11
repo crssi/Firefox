@@ -149,7 +149,8 @@
 @@||ib.adnxs.com^$image
 
 ! SURVEY
-@@||survey.mindtake.com^$1p
+@@||mindtake.com^$1p
+@@||samplicio.us^$1p
 
 ! youtube.com
 ! Filter override > Youtube: Remove Youtube Suggestions; Keeps starting video when paused if using WE "I don't care about cookies"
