@@ -3,3 +3,7 @@ _encoding@amazon.*, assetId, c_id, cid, ei@google.*, ref_@amazon.*, siteId
 
 [Blocked parameters]
 adid, AdID, adserverid, adserveroptimizerid, adset_*, adtype, adurl, affiliate, AffiliateGuid, aqs, atp, bav, bvm, CAMPAIGN*, campaign*, Campaign*, clickid, clkulrenc, CNDID, csi, d@banggood.com, dni, dq, e@linkedin.com, ek, email_source, email_token, ems_l, feeditemid, first_visit, forward, fromEmail, goalType, iact, icid, ijn, ImpressionGuid, Itemid, li@linkedin.com, lipi, lkid@gearbest.com, loc_, ncid, ndsp, ORIGIN, origin@linkedin.com, originalReferer, originalSubdomain, p@banggood.com, pbx, piggiebackcookie, pq, prmd, pubclick, pubid, ref_*@twitter.com, refId, rni, RSS*, sclient, scroll, snr, sr_share, stick, tbnid, tctx, terminal_id, trackId, tracking, trackingId, transAbTest, trkEmail, ut
+
+
+[URL request types]
+font, image, imageset, main_frame, media, object, object_subrequest, script, stylesheet, sub_frame, websocket, xbl, xml_dtd, xmlhttprequest, xslt, other
