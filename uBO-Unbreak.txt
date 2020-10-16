@@ -160,3 +160,5 @@
 
 @@||assets.pinterest.com^$3p,script
 @@||widgets.pinterest.com^$3p,script
+
+@@||nextdns.io^
