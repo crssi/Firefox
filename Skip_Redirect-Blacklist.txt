@@ -7,6 +7,7 @@ _sso=
 //go.redirectingat.com/
 //sites.google.com/
 //slack-redir.net/link
+//web.archive.org/
 /abp
 /account
 /adfs/ls/
@@ -47,7 +48,6 @@ aa419.org/
 action=login
 alipay.com
 archive.is/
-archive.org/
 chart.googleapis.com/chart
 docs.google.com/
 duckduckgo.com/
