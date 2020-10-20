@@ -143,7 +143,4 @@ EXTERNAL APPLICATIONS:
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
-/*** TO INVESTIGATE ***/
-  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly; see: https://www.virusbulletin.com/virusbulletin/2018/10/dark-side-webassembly/
-
 user_pref("_user.js.parrot", "Eagle has landed!");
