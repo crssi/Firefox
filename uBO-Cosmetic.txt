@@ -50,3 +50,7 @@ microsoft.com###uhf-upgrade-banner
 !||*/betlink$subdocument
 !||amazonaws.com/banners$3p,subdocument
 !##.spu-bg
+
+! www.24ur.com
+##.outbrain
+##onl-article-next-previous
