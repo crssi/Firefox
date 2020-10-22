@@ -1,6 +1,6 @@
 {
-  "timeStamp": 1602829228500,
-  "version": "1.30.4",
+  "timeStamp": 1603349560300,
+  "version": "1.30.6",
   "userSettings": {
     "advancedUserEnabled": true,
     "alwaysDetachLogger": true,
@@ -32,6 +32,7 @@
     "ublock-unbreak",
     "adguard-generic",
     "adguard-mobile",
+    "easylist",
     "adguard-spyware",
     "easyprivacy",
     "urlhaus-1",
