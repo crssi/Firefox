@@ -147,6 +147,8 @@
 ! mtb.si
 @@||router.infolinks.com^$image
 @@||ib.adnxs.com^$image
+! neuter EasyList
+@@/ad-inserter/*
 
 ! SURVEY
 @@||mindtake.com^$1p
