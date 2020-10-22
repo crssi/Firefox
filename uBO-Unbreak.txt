@@ -164,3 +164,6 @@
 @@||widgets.pinterest.com^$3p,script
 
 @@||nextdns.io^
+
+! cart at crossrope.com, neuter easyprivacy
+@@||ipgeolocation.io^$3p
