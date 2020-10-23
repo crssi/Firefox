@@ -32,8 +32,11 @@ ESSENTIAL EXTENSIONS:
     On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
     APIs -> Screen API -> Protect screen API: Uncheck
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://github.com/ClearURLs/)
-    Prevent tracking injection over history API: Uncheck
-    Block hyperlink auditing: Uncheck
+    Configs
+      Badges: Uncheck
+    Settings
+      Prevent tracking injection over history API: Uncheck
+      Block hyperlink auditing: Uncheck
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
     List of all whitelisted websites: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/I_dont_care_about_cookies.txt
@@ -77,6 +80,7 @@ USEFUL/INTERESTING EXTENSIONS:
   Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
+  Spoof Timezone; https://addons.mozilla.org/firefox/addon/spoof-timezone/ (https://github.com/joue-quroi/spoof-timezone/)
   Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
 
