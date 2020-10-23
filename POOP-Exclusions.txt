@@ -24,7 +24,7 @@
 *.imdb.com *.imdb*.com
 *.imdb.com *amazon*.com
 *.live.com *
-*.microsoft.com *
+*.microsoft*.com *
 *.minecraft.net *.mojang.com
 *.netflix.* *.nflx*.net
 *.notabug.io oauth.reddit.com
