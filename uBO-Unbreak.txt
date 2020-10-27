@@ -169,5 +169,5 @@
 @@||ipgeolocation.io^$3p
 
 ! https://okusno.je/triki-in-nasveti/koncno-znano-kako-se-naredi-peceno-jajce-ki-je-pred-kratkim-navdusilo-splet.html
-@@||mon-va.byteoversea.com^$xhr,domain=tiktok.com
+!@@||mon-va.byteoversea.com^$xhr,domain=tiktok.com
 @@||verification-va.byteoversea.com^$xhr,domain=tiktok.com
