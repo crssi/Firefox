@@ -167,3 +167,6 @@
 
 ! cart at crossrope.com, neuter easyprivacy
 @@||ipgeolocation.io^$3p
+
+@@||go.redirectingat.com^
+@@||go.skimresources.com^
