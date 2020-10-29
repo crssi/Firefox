@@ -378,6 +378,7 @@ user_pref("_user.js.parrot", "0700 syntax error: the parrot's given up the ghost
  * [NOTE] This is just an application level fallback. Disabling IPv6 is best done at an
  * OS/network level, and/or configured properly in VPN setups. If you are not masking your IP,
  * then this won't make much difference. If you are masking your IP, then it can only help.
+ * [NOTE] PHP defaults to IPv6 with "localhost". Use "php -S 127.0.0.1:PORT"
  * [TEST] https://ipleak.org/
  * [1] https://github.com/arkenfox/user.js/issues/437#issuecomment-403740626
  * [2] https://www.internetsociety.org/tag/ipv6-security/ (see Myths 2,4,5,6) ***/
@@ -932,8 +933,9 @@ user_pref("media.getusermedia.audiocapture.enabled", false);
    // user_pref("media.autoplay.default", 5);
 /* 2031: disable autoplay of HTML5 media if you interacted with the site [FF78+]
  * 0=sticky (default), 1=transient, 2=user
+ * Firefox's Autoplay Policy Documentation [PDF] is linked below via SUMO
  * [NOTE] If you have trouble with some video sites, then add an exception (see 2030)
- * [1] https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation ***/
+ * [1] https://support.mozilla.org/questions/1293231 ***/
 user_pref("media.autoplay.blocking_policy", 2);
 
 /*** [SECTION 2200]: WINDOW MEDDLING & LEAKS / POPUPS ***/
@@ -1045,8 +1047,14 @@ user_pref("javascript.options.asmjs", false);
    // user_pref("javascript.options.ion", false);
    // user_pref("javascript.options.baselinejit", false);
    // user_pref("javascript.options.jit_trustedprincipals", true); // [FF75+] [HIDDEN PREF]
-/* 2422: disable WebAssembly [FF52+] [SETUP-PERF]
- * [1] https://developer.mozilla.org/docs/WebAssembly ***/
+/* 2422: disable WebAssembly [FF52+]
+ * Vulnerabilities have increasingly been found, including those known and fixed
+ * in native programs years ago [2]. WASM has powerful low-level access, making
+ * certain attacks (brute-force) and vulnerabilities more possible
+ * [STATS] ~0.2% of websites, about half of which are for crytopmining / malvertising [2][3]
+ * [1] https://developer.mozilla.org/docs/WebAssembly
+ * [2] https://spectrum.ieee.org/tech-talk/telecom/security/more-worries-over-the-security-of-web-assembly
+ * [3] https://www.zdnet.com/article/half-of-the-websites-using-webassembly-use-it-for-malicious-purposes ***/
 user_pref("javascript.options.wasm", false);
 /* 2429: enable (limited but sufficient) window.opener protection [FF65+]
  * Makes rel=noopener implicit for target=_blank in anchor and area elements when no rel attribute is set ***/
@@ -1472,7 +1480,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 20.10.2020 (commit: 0adfddd); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 26.10.2020 (commit: ac52886); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
@@ -1504,8 +1512,11 @@ ESSENTIAL EXTENSIONS:
     On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
     APIs -> Screen API -> Protect screen API: Uncheck
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://github.com/ClearURLs/)
-    Prevent tracking injection over history API: Uncheck
-    Block hyperlink auditing: Uncheck
+    Configs
+      Badges: Uncheck
+    Settings
+      Prevent tracking injection over history API: Uncheck
+      Block hyperlink auditing: Uncheck
   HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
     List of all whitelisted websites: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/I_dont_care_about_cookies.txt
@@ -1549,6 +1560,7 @@ USEFUL/INTERESTING EXTENSIONS:
   Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
   Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
+  Spoof Timezone; https://addons.mozilla.org/firefox/addon/spoof-timezone/ (https://github.com/joue-quroi/spoof-timezone/)
   Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
 
