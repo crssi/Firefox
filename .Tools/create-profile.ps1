@@ -16,10 +16,8 @@ forEach ($file in @('extensions.json','compatibility.ini','pluginreg.dat','addon
   [System.IO.File]::WriteAllLines("$profilePath\$file", $content, $(New-Object System.Text.UTF8Encoding $False))
 }
 
-try {
-  Get-ChildItem $profilePath\storage\default | where { $_.name -notmatch '\^userContextId' } | Remove-Item -Recurse -Force -Confirm:$false -ErrorAction SilentlyContinue
-  Get-ChildItem $profilePath\addonStartup.json.lz4 | Remove-Item -Force -ErrorAction SilentlyContinue
-  Get-ChildItem $profilePath\pkcs11.txt | Remove-Item -Force -ErrorAction SilentlyContinue
-} Catch { }
+Get-ChildItem $profilePath\storage\default | where { $_.name -notmatch '\^userContextId' } | Remove-Item -Recurse -Force -Confirm:$false
+if (Test-Path -Path $profilePath\addonStartup.json.lz4) { Remove-Item -Path $profilePath\addonStartup.json.lz4 -Force }
+if (Test-Path -Path $profilePath\pkcs11.txt) { Remove-Item -Path $profilePath\pkcs11.txt -Force }
 
 Compress-Archive -Path "$($env:APPDATA)\Mozilla\Firefox\*" -DestinationPath "$env:UserProfile\Documents\GitHub\Firefox\Profile.zip" -CompressionLevel Optimal -Force
