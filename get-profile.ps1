@@ -43,15 +43,16 @@ forEach ($file in @('extensions.json','compatibility.ini','pluginreg.dat','addon
 }
 
 & "$tmpProfilePath\jsonlz4.exe" @("$tmpProfilePath\addonStartup.json","$tmpProfilePath\addonStartup.json.lz4")
-Remove-Item -Path "$tmpProfilePath\addonStartup.json" -Force
-Remove-Item -Path "$tmpProfilePath\jsonlz4.exe" -Force
+Start-Sleep -Milliseconds 1000
+#Remove-Item -Path "$tmpProfilePath\addonStartup.json" -Force
+#Remove-Item -Path "$tmpProfilePath\jsonlz4.exe" -Force
 
 Remove-Item -Path "$($env:APPDATA)\Mozilla\Firefox" -Recurse -Force -Confirm:$false
 Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -Force
 Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false -ErrorAction SilentlyContinue
 
 Start-Process -FilePath 'firefox.exe'
-Start-Sleep -Milliseconds 6000
-do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
-Start-Process -FilePath 'firefox.exe'
-Exit
+#Start-Sleep -Milliseconds 6000
+#do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+#Start-Process -FilePath 'firefox.exe'
+#Exit
