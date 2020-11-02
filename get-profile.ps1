@@ -43,7 +43,7 @@ forEach ($file in @('extensions.json','compatibility.ini','pluginreg.dat','addon
 }
 
 & "$tmpProfilePath\jsonlz4.exe" @("$tmpProfilePath\addonStartup.json","$tmpProfilePath\addonStartup.json.lz4")
-Start-Sleep -Milliseconds 3000
+Start-Sleep -Milliseconds 1000
 #Remove-Item -Path "$tmpProfilePath\addonStartup.json" -Force
 #Remove-Item -Path "$tmpProfilePath\jsonlz4.exe" -Force
 
