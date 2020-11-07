@@ -86,7 +86,7 @@
 @@||surveyrouter.com^$1p
 @@||tealium.cbsnews.com^$script,1p
 @@||thetacdn.net^$image
-@@||tiqcdn.com/*/utag.js$script
+@@||tags.tiqcdn.com/utag/$script
 @@||translate.google.com^$script,domain=googleusercontent.com
 @@||translate.googleusercontent.com^
 @@||tumblr.com^$subdocument,domain=instagram.com
@@ -172,5 +172,3 @@
 @@||go.skimresources.com^
 
 @@||click.ml.mailersend.com^
-
-@@||tags.tiqcdn.com^$domain=www.amway.com|www.amway.de|www.amway.co.uk|www.amway.it|www.amway.si
