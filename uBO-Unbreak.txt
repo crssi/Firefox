@@ -172,3 +172,5 @@
 @@||go.skimresources.com^
 
 @@||click.ml.mailersend.com^
+
+@@||tags.tiqcdn.com^$domain=www.amway.com|www.amway.de|www.amway.co.uk|www.amway.it|www.amway.si
