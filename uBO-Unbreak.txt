@@ -172,3 +172,6 @@
 @@||go.skimresources.com^
 
 @@||click.ml.mailersend.com^
+
+! https://www.vergleich.org/chilimuehle/ -> CLick OTTO offer
+@@||tracking.s24.com^
