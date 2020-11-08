@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1603349560300,
+  "timeStamp": 1604832648700,
   "version": "1.30.6",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -35,6 +35,7 @@
     "easylist",
     "adguard-spyware",
     "easyprivacy",
+    "fanboy-enhanced",
     "urlhaus-1",
     "adguard-social",
     "fanboy-social",
