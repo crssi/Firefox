@@ -31,7 +31,7 @@ ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
     APIs -> Screen API -> Protect screen API: Uncheck
-  ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://github.com/ClearURLs/)
+  ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
     Configs
       Badges: Uncheck
     Settings
