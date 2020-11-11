@@ -1,6 +1,6 @@
 {
   "version": "1.9.1",
-  "date": 1601055378800,
+  "date": 1605077643300,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -8,12 +8,12 @@
     },
     "notifications": false,
     "container": {
-      "namePrefix": "%domain% #",
+      "namePrefix": "%domain%",
       "color": "red",
       "colorRandom": true,
       "icon": "circle",
       "iconRandom": false,
-      "numberMode": "keepuntilrestart",
+      "numberMode": "hide",
       "removal": 900000,
       "colorRandomExcluded": [
         "toolbar"
@@ -357,7 +357,7 @@
       "containerRemoval": 0,
       "containerMouseClicks": "never",
       "statistics": false,
-      "active": false,
+      "active": true,
       "contextMenuBookmarks": false
     },
     "statistics": false,
