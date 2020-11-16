@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1604832648700,
+  "timeStamp": 1605532206200,
   "version": "1.30.6",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -10,7 +10,7 @@
     "colorBlindFriendly": false,
     "contextMenuEnabled": true,
     "dynamicFilteringEnabled": false,
-    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/Lite/adblock.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt",
+    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/Lite/adblock.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://www.i-dont-care-about-cookies.eu/abp/",
     "firewallPaneMinimized": false,
     "hyperlinkAuditingDisabled": true,
     "ignoreGenericCosmeticFilters": false,
@@ -34,12 +34,10 @@
     "adguard-mobile",
     "easylist",
     "adguard-spyware",
-    "easyprivacy",
     "fanboy-enhanced",
     "urlhaus-1",
     "adguard-social",
     "fanboy-social",
-    "ublock-annoyances",
     "CHN-0",
     "CZE-0",
     "SVN-0",
@@ -49,6 +47,7 @@
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt",
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt",
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt",
+    "https://www.i-dont-care-about-cookies.eu/abp/",
     "https://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt",
     "https://abp.oisd.nl//",
     "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
