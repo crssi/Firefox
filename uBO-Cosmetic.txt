@@ -39,7 +39,6 @@ microsoft.com###uhf-upgrade-banner
 ! https://www.news-des-tages.com
 ###sgpb-popup-dialog-main-div
 
-
 !!!!! TO-DO
 !##.cf.modal
 !##.underlay
@@ -54,3 +53,5 @@ microsoft.com###uhf-upgrade-banner
 ! www.24ur.com
 ##.outbrain
 ##onl-article-next-previous
+
+github.com##.hx_cookie-banner--show
