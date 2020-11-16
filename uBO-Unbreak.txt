@@ -175,3 +175,10 @@
 
 ! https://www.vergleich.org/chilimuehle/ -> CLick OTTO offer
 @@||tracking.s24.com^
+
+! uBlock filters – Annoyances
+! https://br.pinterest.com/hkvwms/peppa-pig-doll/ -> click to any
+! https://br.pinterest.com/pin/847310117370089878/?d=t&mt=login
+pinterest.*#@#div[class="GrowthUnauthPinImage__imageDim"]
+pinterest.*#@#.Hsu.iyn.zI7:nth-of-type(2) > div > .FullPageModal__scroller
+pinterest.*#@#.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="noButtonStyles "])
