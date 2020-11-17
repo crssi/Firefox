@@ -182,3 +182,6 @@
 pinterest.*#@#div[class="GrowthUnauthPinImage__imageDim"]
 pinterest.*#@#.Hsu.iyn.zI7:nth-of-type(2) > div > .FullPageModal__scroller
 pinterest.*#@#.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="noButtonStyles "])
+
+! neuter https://www.i-dont-care-about-cookies.eu/abp/ to deal with breakage at amway.si
+#@##cookiesPolicyPopup
