@@ -123,9 +123,11 @@ EXTERNAL APPLICATIONS:
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate USB secure token, TC Automode needed
+  // /* 1211  */ user_pref("security.OCSP.enabled", 0); // disable OCSP fetching
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content
+  // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable HTTPS-Only mode
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
@@ -135,6 +137,7 @@ EXTERNAL APPLICATIONS:
   /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2012  */ user_pref("webgl.min_capability_mode", false); // enable WebGL full capability mode
   /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
+  /* 2306  */ user_pref("permissions.default.desktop-notification", 2); // block Notifications
   /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
