@@ -7,7 +7,7 @@ youtube.com##div[class^="ytp-ce-"]
 youtube.com##div[class^="ytp-pause-overlay"]
 youtube.com##.ytp-cards-button-icon
 
-duckduckgo.com##.header--aside
+!duckduckgo.com##.header--aside
 
 github.com##.rounded-1.mb-4.text-center.p-4.signup-prompt
 
