@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 11.11.2020 (commit: ea0eb85); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 21.11.2020 (commit: ef93a75); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
@@ -32,12 +32,11 @@ ESSENTIAL EXTENSIONS:
     On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
     APIs -> Screen API -> Protect screen API: Uncheck
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
-    Configs
-      Badges: Uncheck
     Settings
-      Prevent tracking injection over history API: Uncheck
-      Block hyperlink auditing: Uncheck
-  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
+      Filters ETag headers from requests: Uncheck
+      Click [Save & reload addon]
+  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
+  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
       script: Check
@@ -68,12 +67,13 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
+  Add custom search engine; https://addons.mozilla.org/firefox/addon/add-custom-search-engine/ (https://github.com/evilpie/add-custom-search-engine/)
   Bitwarden - Free Password Manager; https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/ (https://github.com/bitwarden/, https://bitwarden.com/)
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
-  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
+  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
@@ -99,35 +99,30 @@ EXTERNAL APPLICATIONS:
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 1); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
-  /* 2210  */ user_pref("dom.disable_open_during_load", false); // allow popup windows
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("ui.prefersReducedMotion", 0); // remove ugly UX
-  /* 5000  */ user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // disable What's New
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
   /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmark in a new tab
   /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see  Bugzilla 1320061
-  /* 5000  */ user_pref("browser.urlbar.openViewOnFocus", false); // close urlbar dropdown when empty
   /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
-  /* 5000x */ user_pref("dom.media.mediasession.enabled", true); // enable Media Control feature support; FF81+ default
-  /* 5000x */ user_pref("extensions.pocket.enabled", false); // disable and hide Pocket
   /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
-  /* 5000x */ user_pref("media.hardwaremediakeys.enabled", true); // enable Media Control feature support; FF81+ default
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); //  breaks client certificate USB secure token, TC Automode needed
-  // /* 1211  */ user_pref("security.OCSP.enabled", 0); // disable OCSP fetching
-  /* 1212  */ user_pref("security.OCSP.require", false); // allow connection when OCSP not reacheable
-  /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // Set to default to avoid AV breakage
-  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content
-  // /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable HTTPS-Only mode
+  /* 1211  */ user_pref("security.OCSP.enabled", 0); // disable OCSP fetching
+  /* 1212  */ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
+  /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
+  /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content; when https_only_mode is disabled
+  /* 1244  */ user_pref("dom.security.https_only_mode", true); // enable HTTPS-Only mode
+  /* 1244x */ user_pref("dom.security.https_only_mode_send_http_background_request", false); // disable http background request
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 1825  */ user_pref("media.gmp-widevinecdm.enabled", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
   /* 1825  */ user_pref("media.gmp-widevinecdm.visible", true); // enable widevine CDM; Netflix, Amazon Prime, Hulu...
@@ -144,7 +139,6 @@ EXTERNAL APPLICATIONS:
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  /* 4618  */ user_pref("layout.css.font-visibility.level", 1); // limit font visbility
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
