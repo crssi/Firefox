@@ -1,0 +1,423 @@
+{
+  "version": "1.9.1",
+  "date": 1605938523800,
+  "preferences": {
+    "automaticMode": {
+      "active": true,
+      "newTab": "created"
+    },
+    "notifications": false,
+    "container": {
+      "namePrefix": "%domain%",
+      "color": "red",
+      "colorRandom": true,
+      "icon": "circle",
+      "iconRandom": false,
+      "numberMode": "hide",
+      "removal": 900000,
+      "colorRandomExcluded": [
+        "toolbar"
+      ],
+      "iconRandomExcluded": []
+    },
+    "iconColor": "default",
+    "isolation": {
+      "global": {
+        "navigation": {
+          "action": "never"
+        },
+        "mouseClick": {
+          "middle": {
+            "action": "notsamedomain",
+            "container": "default"
+          },
+          "ctrlleft": {
+            "action": "never",
+            "container": "default"
+          },
+          "left": {
+            "action": "never",
+            "container": "default"
+          }
+        },
+        "excluded": {},
+        "excludedContainers": []
+      },
+      "domain": [
+        {
+          "pattern": "duckduckgo.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {},
+          "_index": 0
+        },
+        {
+          "pattern": "/^https?:\\/\\/accounts\\.(google|youtube)\\.com\\/.*/",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": true,
+            "allowedInTemporary": true
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*": {}
+          }
+        },
+        {
+          "pattern": "*.google.*",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.google.*": {},
+            "*.youtube.com": {}
+          }
+        },
+        {
+          "pattern": "*.youtube.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.google.*": {},
+            "*.youtube.com": {}
+          }
+        },
+        {
+          "pattern": "/^https?:\\/\\/(.+\\.)?(facebook\\.com|instagram\\.com|messenger\\.com|fb\\.com|m\\.me)\\/.*/",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {
+            "facebook.com": {},
+            "*.facebook.com": {},
+            "instagram.com": {},
+            "*.instagram.com": {},
+            "messenger.com": {},
+            "*.messenger.com": {},
+            "fb.com": {},
+            "*.fb.com": {}
+          }
+        },
+        {
+          "pattern": "/^https?:\\/\\/(.+\\.)?(twitter\\.com|t\\.co)\\/.*/",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {
+            "twitter.com": {},
+            "*.twitter.com": {},
+            "t.co": {},
+            "*.t.co": {}
+          }
+        },
+        {
+          "pattern": "*.bing.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
+        },
+        {
+          "pattern": "*",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
+        }
+      ],
+      "mac": {
+        "action": "disabled"
+      },
+      "automaticReactivateDelay": 0
+    },
+    "browserActionPopup": false,
+    "pageAction": false,
+    "contextMenu": true,
+    "keyboardShortcuts": {
+      "AltC": true,
+      "AltP": true,
+      "AltN": false,
+      "AltShiftC": false,
+      "AltX": false,
+      "AltO": false,
+      "AltI": false
+    },
+    "replaceTabs": false,
+    "cookies": {
+      "domain": {
+        "duckduckgo.com": [
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "l",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "sl-sl"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "ah",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "sl-sl"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "1",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "-1"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "n",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "1"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "av",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "1"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "5",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "2"
+          },
+          {
+            "domain": "duckduckgo.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "am",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "here-maps"
+          }
+        ],
+        "www.24ur.com": [
+          {
+            "domain": "www.24ur.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "cookies_accept",
+            "path": "",
+            "sameSite": "lax",
+            "secure": "true",
+            "url": "https://www.24ur.com/",
+            "value": "all"
+          }
+        ]
+      }
+    },
+    "deletesHistory": {
+      "automaticMode": "never",
+      "contextMenu": false,
+      "containerAlwaysPerDomain": "never",
+      "containerIsolation": "never",
+      "containerRemoval": 0,
+      "containerMouseClicks": "never",
+      "statistics": false,
+      "active": true,
+      "contextMenuBookmarks": false
+    },
+    "statistics": false,
+    "closeRedirectorTabs": {
+      "active": true,
+      "delay": 2000,
+      "domains": [
+        "t.co",
+        "outgoing.prod.mozaws.net",
+        "slack-redir.net"
+      ]
+    },
+    "contextMenuBookmarks": false,
+    "ignoreRequests": [],
+    "ui": {
+      "expandPreferences": true,
+      "popupDefaultTab": "isolation-per-domain"
+    },
+    "ignoreRequestsToAMO": true,
+    "ignoreRequestsToPocket": true,
+    "scripts": {
+      "domain": {
+        "*.google.*": [
+          {
+            "code": "/*\n* ClearURLs\n* Copyright (c) 2017-2020 Kevin Röbert\n*\n* This program is free software: you can redistribute it and/or modify\n* it under the terms of the GNU Lesser General Public License as published by\n* the Free Software Foundation, either version 3 of the License, or\n* (at your option) any later version.\n*\n* This program is distributed in the hope that it will be useful,\n* but WITHOUT ANY WARRANTY; without even the implied warranty of\n* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n* GNU Lesser General Public License for more details.\n*\n* You should have received a copy of the GNU Lesser General Public License\n* along with this program.  If not, see <http://www.gnu.org/licenses/>.\n*\n* Based on:\n*   Remove Google Redirection\n*   https://github.com/kodango/Remove-Google-Redirection/blob/master/extension/chrome/remove-google-redirection.user.js\n*   Copyright (c) 2017 kodango\n*   MIT License: https://github.com/kodango/Remove-Google-Redirection/blob/master/LICENSE\n*/\n(function (window) {\n    \"use strict\";\n\n    function injectFunction() {\n        let ele = document.createElement('script');\n        let s = document.getElementsByTagName('script')[0];\n\n        ele.type = 'text/javascript';\n        ele.textContent = \"Object.defineProperty(window, 'rwt', {\" +\n        \"    value: function() { return true; },\" +\n        \"    writable: false,\" +\n        \"    configurable: false\" +\n        \"});\";\n\n        s.parentNode.insertBefore(ele, s);\n    }\n\n    /*\n    * The main entry\n    */\n    function main()\n    {\n        injectFunction();\n\n        document.addEventListener('mouseover', function (event) {\n            let a = event.target, depth = 1;\n\n            while (a && a.tagName !== 'A' && depth-- > 0) {\n                a = a.parentNode;\n            }\n\n            if (a && a.tagName === 'A') {\n                try {\n                    a.removeAttribute('data-cthref');\n                    delete a.dataset.cthref;\n                } catch(e) {\n                    console.log(e);\n                }\n            }\n        }, true);\n    }\n\n    main();\n})(window);\n",
+            "runAt": "document_end"
+          }
+        ],
+        "www.youtube.com": [
+          {
+            "code": "// https://stackoverflow.com/questions/63680896/how-to-block-the-annoying-sign-in-to-youtube-popup\n// SentinelJS is a JavaScript library that lets you detect new DOM nodes\nconst sentinel = function(){var e,n,t,i=Array.isArray,r={},o={};return{on:function(a,s){if(s){if(!e){var f=document,l=f.head;f.addEventListener(\"animationstart\",function(e,n,t,i){if(n=o[e.animationName])for(e.stopImmediatePropagation(),t=n.length,i=0;i<t;i++)n[i](e.target)},!0),e=f.createElement(\"style\"),l.insertBefore(e,l.firstChild),n=e.sheet,t=n.cssRules}(i(a)?a:[a]).map(function(e,i,a){(i=r[e])||(a=\"!\"==e[0],r[e]=i=a?e.slice(1):\"sentinel-\"+Math.random().toString(16).slice(2),t[n.insertRule(\"@keyframes \"+i+\"{from{transform:none;}to{transform:none;}}\",t.length)]._id=e,a||(t[n.insertRule(e+\"{animation-duration:0.0001s;animation-name:\"+i+\";}\",t.length)]._id=e),r[e]=i),(o[i]=o[i]||[]).push(s)})}},off:function(e,a){(i(e)?e:[e]).map(function(e,i,s,f){if(i=r[e]){if(s=o[i],a)for(f=s.length;f--;)s[f]===a&&s.splice(f,1);else s=[];if(!s.length){for(f=t.length;f--;)t[f]._id==e&&n.deleteRule(f);delete r[e],delete o[i]}}})},reset:function(){r={},o={},e&&e.parentNode.removeChild(e),e=0}}}(document);\n\n(() => {\n  const isSignedIn = document.cookie.includes('APISID=');\n\n  if (isSignedIn) return;\n\n  addStyles();\n  addScript();\n\n  const observer = new MutationObserver(() => {\n    const dismissButton = document.querySelector(\n      'yt-upsell-dialog-renderer #dismiss-button'\n    );\n\n    dismissButton && dismissButton.click();\n\n    const consentBump = document.querySelector('#consent-bump');\n\n    if (consentBump) {\n      consentBump.remove();\n      \n      const video = document.querySelector('video');\n\n      if (!video) return;\n\n      const onVideoPauseAfterConsentBump = () => {\n        video.play();\n        video.removeEventListener('pause', onVideoPauseAfterConsentBump);\n        setPopupContainerDisplay();\n      };\n\n      video.addEventListener('pause', onVideoPauseAfterConsentBump);\n    }\n  });\n\n  observer.observe(document.querySelector('ytd-app'), { childList: true });\n\n  sentinel.on('.ytp-large-play-button', (button) => {\n    let searchTime;\n    try {\n      searchTime = parseInt(location.search.match(/&t=(\\d+)/)[1]);\n    } catch {}\n\n    button.click();\n    searchTime && (document.querySelector('video').currentTime = searchTime);\n\n    setPopupContainerDisplay();\n  });\n\n  function setPopupContainerDisplay() {\n    const popupContainer = document.querySelector('.ytd-popup-container');\n    popupContainer && (popupContainer.style.display = 'none');\n  }\n\n  function addStyles() {\n    const style = document.createElement('style');\n\n    style.innerHTML = /* css */ `\n      #consent-bump,\n      iron-overlay-backdrop,\n      yt-upsell-dialog-renderer {\n        display: none !important;\n      }\n    `;\n\n    document.head.append(style);\n  }\n\n  function addScript() {\n    const script = document.createElement('script');\n\n    script.innerHTML = /* javascript */ `\n      const player = document.querySelector('#movie_player');\n      player && (player.stopVideo = function() { console.log(\"Don't stop!\"); });\n    `;\n\n    document.body.append(script);\n  }\n})();",
+            "runAt": "document_end"
+          }
+        ]
+      },
+      "active": true
+    }
+  }
+}
