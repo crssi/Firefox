@@ -185,3 +185,6 @@ pinterest.*#@#.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="n
 
 ! neuter https://www.i-dont-care-about-cookies.eu/abp/ to deal with breakage at amway.si
 #@##cookiesPolicyPopup
+
+! https://github.com/ryanbr/fanboy-adblock/issues/1440
+meet.google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
