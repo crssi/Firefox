@@ -187,4 +187,4 @@ pinterest.*#@#.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="n
 #@##cookiesPolicyPopup
 
 ! https://github.com/ryanbr/fanboy-adblock/issues/1440
-meet.google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
+google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
