@@ -156,7 +156,6 @@
 ||yahoo.*^$3p,domain=~yahoo.com
 ||yottlyscript.com^$3p
 ||youtube.com/youtubei/v1/log_event$xhr
-||zdassets.com^$3p,~xhr
 ||zendesk.com^$3p,~image,~xhr
 
 

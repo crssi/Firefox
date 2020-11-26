@@ -100,7 +100,6 @@
 @@||youtube-ui.*.google.com^$subdocument,script
 @@||ytimg.*.google.com^$image
 @@||ytimg.com^$script
-@@||zdassets.com^$image,stylesheet,script
 @@||zopim.com^$script,websocket,image
 
 !!! twitter
