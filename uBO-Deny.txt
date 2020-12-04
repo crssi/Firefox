@@ -69,6 +69,7 @@
 ||googleadservices.*^$important
 ||googlesyndication.*^$important
 ||googletagservices.*^$important
+||googletagmanager.*^$important
 ||gravatar.com^$3p
 ||groupbycloud.com^$3p
 ||guim.co.uk^$3p,script
