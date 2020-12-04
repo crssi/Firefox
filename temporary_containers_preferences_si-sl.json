@@ -1,6 +1,6 @@
 {
   "version": "1.9.1",
-  "date": 1606381586000,
+  "date": 1607023224600,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -115,7 +115,8 @@
           },
           "excluded": {
             "*.google.*": {},
-            "*.youtube.com": {}
+            "*.youtube.com": {},
+            "*.googleusercontent.com": {}
           }
         },
         {
