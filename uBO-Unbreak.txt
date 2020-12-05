@@ -191,11 +191,15 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/2
 @@||syndication.twimg.com^$xhr,domain=platform.twitter.com
 
+! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/3
+@@||nanorep.com^
+
+! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/4
+@@||qualtrics.com^
+
 ! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/5
 @@||instagram.com^$stylesheet,domain=www.instagram.com
 
-! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/3
-@@||cdn-*.nanorep.com^
-! Chat still needs to be reported for https://support.nordvpn.com/FAQ/Setup-tutorials/
+! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/7
 @@||static.ada.support^
-@@||pusher.com^$xhr
+@@||pusher.com^
