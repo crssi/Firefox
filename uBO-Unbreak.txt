@@ -196,6 +196,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/3
 @@||cdn-*.nanorep.com^
-! Chat still needs to be reported
+! Chat still needs to be reported for https://support.nordvpn.com/FAQ/Setup-tutorials/
 @@||static.ada.support^
 @@||pusher.com^$xhr
