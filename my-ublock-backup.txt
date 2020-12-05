@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1607178211500,
+  "timeStamp": 1607205361300,
   "version": "1.31.0",
   "userSettings": {
     "advancedUserEnabled": true,
@@ -10,7 +10,7 @@
     "colorBlindFriendly": false,
     "contextMenuEnabled": true,
     "dynamicFilteringEnabled": false,
-    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/Lite/adblock.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/For%20hosts%20file/The_Quantum_Ad-List.txt\nhttps://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual lists/The_Quantum_Abuse-List.txt\nhttps://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual lists/The_Quantum_Privacy-list.txt\nhttps://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual lists/The_Quantum_Simply-ads-list.txt\nhttps://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt\nhttps://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/master/TOP_EU_US_Ads_Trackers_ABP\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt",
+    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/Lite/adblock.txt\nhttps://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual lists/The_Quantum_Abuse-List.txt\nhttps://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual lists/The_Quantum_Privacy-list.txt\nhttps://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual lists/The_Quantum_Simply-ads-list.txt\nhttps://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt\nhttps://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/master/TOP_EU_US_Ads_Trackers_ABP\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts\nhttps://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt",
     "firewallPaneMinimized": false,
     "hyperlinkAuditingDisabled": true,
     "ignoreGenericCosmeticFilters": false,
@@ -42,7 +42,6 @@
     "CHN-0",
     "CZE-0",
     "SVN-0",
-    "https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/raw/master/Individual lists/The_Quantum_Abuse-List.txt",
     "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
     "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts",
     "https://badmojr.github.io/1Hosts/Lite/adblock.txt",
