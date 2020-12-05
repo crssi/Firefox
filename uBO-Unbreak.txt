@@ -196,6 +196,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/3
 @@||cdn-*.nanorep.com^
-! Chat need still to be reported
+! Chat still needs to be reported
 @@||static.ada.support^
 @@||pusher.com^$xhr
