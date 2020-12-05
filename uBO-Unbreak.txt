@@ -187,3 +187,9 @@ pinterest.*#@#.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="n
 
 ! https://github.com/ryanbr/fanboy-adblock/issues/1440
 google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
+
+! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/2
+@@||syndication.twimg.com^$xhr,domain=platform.twitter.com
+
+! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/5
+@@||instagram.com^$stylesheet,domain=www.instagram.com
