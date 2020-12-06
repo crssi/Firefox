@@ -33,6 +33,7 @@ ESSENTIAL EXTENSIONS:
     APIs -> Screen API -> Protect screen API: Uncheck
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
     Settings
+      Allow domain blocking: Uncheck
       Filters ETag headers from requests: Uncheck
       Click [Save & reload addon]
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
