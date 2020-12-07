@@ -197,12 +197,12 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/4
 @@||qualtrics.com^
 
-! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/5
-@@||instagram.com^$stylesheet,domain=www.instagram.com
+! Resolved: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/5
+! @@||instagram.com^$stylesheet,domain=www.instagram.com
 
 ! Resolved: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/7
 ! @@||static.ada.support^
 ! @@||pusher.com^
 
-! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/8
-@@||images.jifo.co^$image
+! Resolved: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/8
+! @@||images.jifo.co^$image
