@@ -191,8 +191,8 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/2
 @@||syndication.twimg.com^$xhr,domain=platform.twitter.com
 
-! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/3
-@@||nanorep.com^
+! WontFIX: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/3
+! @@||nanorep.com^
 
 ! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/4
 @@||qualtrics.com^
