@@ -17,7 +17,7 @@
 ||adicio.com^$3p
 ||adsensecustomsearchads.*^$important
 ||adserver.yahoo.com^$important
-||adservice.google.*^$important
+!||adservice.google.*^$important
 ||adtech.*^$important
 ||agilemeasure.com^$3p
 ||alooma.com^$3p
