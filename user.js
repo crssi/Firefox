@@ -172,19 +172,17 @@ user_pref("browser.region.update.enabled", false); // [[FF79+]
  * [TEST] https://addons.mozilla.org/about ***/
 user_pref("intl.accept_languages", "en-US, en");
 /* 0211: enforce US English locale regardless of the system locale
- * [SETUP-WEB] May break some input methods e.g xim/ibus for CJK languages, see [2]
- * [1] https://bugzilla.mozilla.org/867501
- * [2] https://bugzilla.mozilla.org/1629630 ***/
+ * [SETUP-WEB] May break some input methods e.g xim/ibus for CJK languages [1]
+ * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=867501,1629630 ***/
 user_pref("javascript.use_us_english_locale", true); // [HIDDEN PREF]
 
 /*** [SECTION 0300]: QUIET FOX
-     Starting in user.js v67, we only disable the auto-INSTALL of Firefox. You still get prompts
-     to update, in one click. We have NEVER disabled auto-CHECKING, and highly discourage that.
-     Previously we also disabled auto-INSTALLING of extensions (302b).
+     We only disable the auto-INSTALL of Firefox (app) updates. You still get prompts to update,
+     and it only takes one click. We highly discourage disabling auto-CHECKING for updates.
 
-     There are many legitimate reasons to turn off auto-INSTALLS, including hijacked or monetized
-     extensions, time constraints, legacy issues, dev/testing, and fear of breakage/bugs. It is
-     still important to do updates for security reasons, please do so manually if you make changes.
+     Legitimate reasons to disable auto-INSTALLS include hijacked/monetized extensions, time
+     constraints, legacy issues, dev/testing, and fear of breakage/bugs. It is still important
+     to do updates for security reasons, please do so manually if you make changes.
 ***/
 user_pref("_user.js.parrot", "0300 syntax error: the parrot's not pinin' for the fjords!");
 /* 0301b: disable auto-CHECKING for extension and theme updates ***/
@@ -217,11 +215,11 @@ user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
  * IF unified=true then .enabled ONLY controls whether to record extended data
  * so make sure to have both set as false
  * [NOTE] FF58+ 'toolkit.telemetry.enabled' is now LOCKED to reflect prerelease
- * or release builds (true and false respectively), see [2]
+ * or release builds (true and false respectively) [2]
  * [1] https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/internals/preferences.html
  * [2] https://medium.com/georg-fritzsche/data-preference-changes-in-firefox-58-2d5df9c428b5 ***/
 user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.enabled", false); // see [NOTE] above FF58+
+user_pref("toolkit.telemetry.enabled", false); // see [NOTE]
 user_pref("toolkit.telemetry.server", "data:,");
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.newProfilePing.enabled", false); // [FF55+]
@@ -304,7 +302,7 @@ user_pref("browser.safebrowsing.downloads.remote.url", "");
  * [SETTING] Privacy & Security>Security>... "Warn you about unwanted and uncommon software" ***/
    // user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
    // user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
-/* 0419: disable 'ignore this warning' on SB warnings
+/* 0419: disable 'ignore this warning' on SB warnings [FF45+]
  * If clicked, it bypasses the block for that session. This is a means for admins to enforce SB
  * [TEST] see github wiki APPENDIX A: Test Sites: Section 5
  * [1] https://bugzilla.mozilla.org/1226490 ***/
@@ -378,16 +376,15 @@ user_pref("browser.send_pings.require_same_host", true); // defense-in-depth
 /*** [SECTION 0700]: HTTP* / TCP/IP / DNS / PROXY / SOCKS etc ***/
 user_pref("_user.js.parrot", "0700 syntax error: the parrot's given up the ghost!");
 /* 0701: disable IPv6
- * IPv6 can be abused, especially with MAC addresses, and they do not play nice with VPNs. That's
- * even assuming your ISP and/or router and/or website can handle it. Sites will fall back to IPv4
- * [STATS] Firefox telemetry (June 2020) shows only 5% of all connections are IPv6
+ * IPv6 can be abused, especially with MAC addresses, and can leak with VPNs. That's even
+ * assuming your ISP and/or router and/or website can handle it. Sites will fall back to IPv4
+ * [STATS] Firefox telemetry (Dec 2020) shows ~8% of all connections are IPv6
  * [NOTE] This is just an application level fallback. Disabling IPv6 is best done at an
  * OS/network level, and/or configured properly in VPN setups. If you are not masking your IP,
  * then this won't make much difference. If you are masking your IP, then it can only help.
  * [NOTE] PHP defaults to IPv6 with "localhost". Use "php -S 127.0.0.1:PORT"
  * [TEST] https://ipleak.org/
- * [1] https://github.com/arkenfox/user.js/issues/437#issuecomment-403740626
- * [2] https://www.internetsociety.org/tag/ipv6-security/ (see Myths 2,4,5,6) ***/
+ * [1] https://www.internetsociety.org/tag/ipv6-security/ (see Myths 2,4,5,6) ***/
 user_pref("network.dns.disableIPv6", true);
 /* 0702: disable HTTP2
  * HTTP2 raises concerns with "multiplexing" and "server push", does nothing to
@@ -458,14 +455,6 @@ user_pref("keyword.enabled", false);
 user_pref("browser.fixup.alternate.enabled", false);
 /* 0803: display all parts of the url in the location bar ***/
 user_pref("browser.urlbar.trimURLs", false);
-/* 0805: disable coloring of visited links - CSS history leak
- * [NOTE] This has NEVER been fully "resolved": in Mozilla/docs it is stated it's
- * only in 'certain circumstances', also see latest comments in [2]
- * [TEST] https://earthlng.github.io/testpages/visited_links.html (see github wiki APPENDIX A on how to use)
- * [1] https://dbaron.org/mozilla/visited-privacy
- * [2] https://bugzilla.mozilla.org/147777
- * [3] https://developer.mozilla.org/docs/Web/CSS/Privacy_and_the_:visited_selector ***/
-user_pref("layout.css.visited_links_enabled", false);
 /* 0807: disable live search suggestions
 /* [NOTE] Both must be true for the location bar to work
  * [SETUP-CHROME] Change these if you trust and use a privacy respecting search engine
@@ -498,7 +487,7 @@ user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0);
  * [1] https://support.mozilla.org/en-US/kb/address-bar-autocomplete-firefox#w_url-autocomplete ***/
    // user_pref("browser.urlbar.autoFill", false);
 /* 0860: disable search and form history
- * [SETUP-WEB] Be aware that autocomplete form data can be read by third parties, see [1] [2]
+ * [SETUP-WEB] Be aware that autocomplete form data can be read by third parties [1][2]
  * [NOTE] We also clear formdata on exit (see 2803)
  * [SETTING] Privacy & Security>History>Custom Settings>Remember search and form history
  * [1] https://blog.mindedsecurity.com/2011/10/autocompleteagain.html
@@ -595,7 +584,7 @@ user_pref("browser.sessionstore.privacy_level", 2);
 /* 1022: disable resuming session from crash ***/
    // user_pref("browser.sessionstore.resume_from_crash", false);
 /* 1023: set the minimum interval between session save operations
- * Increasing this can help on older machines and some websites, as well as reducing writes, see [1]
+ * Increasing this can help on older machines and some websites, as well as reducing writes [1]
  * Default is 15000 (15 secs). Try 30000 (30 secs), 60000 (1 min) etc
  * [SETUP-CHROME] This can also affect entries in the "Recently Closed Tabs" feature:
  * i.e. the longer the interval the more chance a quick tab open/close won't be captured.
@@ -642,7 +631,6 @@ user_pref("_user.js.parrot", "1200 syntax error: the parrot's a stiff!");
 user_pref("security.ssl.require_safe_negotiation", true);
 /* 1202: control TLS versions with min and max
  * 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
- * [STATS] Firefox telemetry (June 2020) shows only 0.16% of SSL handshakes use 1.0 or 1.1
  * [WARNING] Leave these at default, otherwise you alter your TLS fingerprint.
  * [1] https://www.ssllabs.com/ssl-pulse/ ***/
    // user_pref("security.tls.version.min", 3); // [DEFAULT: 3]
@@ -718,12 +706,9 @@ user_pref("security.family_safety.mode", 0);
  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/16206 ***/
 user_pref("security.cert_pinning.enforcement_level", 2);
 /* 1224: enforce CRLite [FF73+]
- * In FF84+ it covers valid certs and in mode 2 doesn't fall back to OCSP, see [2]
- * [1] https://bugzilla.mozilla.org/1429800 [META]
- * [2] https://bugzilla.mozilla.org/1670985
- * [3] https://blog.mozilla.org/security/2020/01/09/crlite-part-1-all-web-pki-revocations-compressed/
- * [4] https://blog.mozilla.org/security/2020/01/09/crlite-part-2-end-to-end-design/
- * [5] https://blog.mozilla.org/security/2020/01/21/crlite-part-3-speeding-up-secure-browsing/ ***/
+ * In FF84+ it covers valid certs and in mode 2 doesn't fall back to OCSP
+ * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1429800,1670985
+ * [2] https://blog.mozilla.org/security/tag/crlite/ ***/
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
 
@@ -742,8 +727,7 @@ user_pref("security.mixed_content.block_object_subrequest", true);
  * [SETTING] Privacy & Security>HTTPS-Only Mode
  * [TEST] http://example.com [upgrade]
  * [TEST] http://neverssl.org/ [no upgrade]
- * [1] https://bugzilla.mozilla.org/1613063 [META]
- * [2] https://bugzilla.mozilla.org/1647829 ***/
+ * [1] https://bugzilla.mozilla.org/1613063 [META] ***/
 user_pref("dom.security.https_only_mode", true); // [FF76+]
    // user_pref("dom.security.https_only_mode_pbm", true); // [FF80+]
 /* 1245: enable HTTPS-Only mode for local resources [FF77+] ***/
@@ -778,7 +762,7 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 /** UI (User Interface) ***/
 /* 1270: display warning on the padlock for "broken security" (if 1201 is false)
  * Bug: warning padlock not indicated for subresources on a secure page! [2]
- * [STATS] SSL Labs (June 2020) reports 98.8% of sites have secure renegotiation [3]
+ * [STATS] SSL Labs (Dec 2020) reports 99.0% of sites have secure renegotiation [3]
  * [1] https://wiki.mozilla.org/Security:Renegotiation
  * [2] https://bugzilla.mozilla.org/1353705
  * [3] https://www.ssllabs.com/ssl-pulse/ ***/
@@ -812,7 +796,7 @@ user_pref("_user.js.parrot", "1400 syntax error: the parrot's bereft of life!");
  * [1] https://wiki.mozilla.org/SVGOpenTypeFonts - iSECPartnersReport recommends to disable this ***/
 user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 /* 1408: disable graphite
- * Graphite has had many critical security issues in the past, see [1]
+ * Graphite has had many critical security issues in the past [1]
  * [1] https://www.mozilla.org/security/advisories/mfsa2017-15/#CVE-2017-7778
  * [2] https://en.wikipedia.org/wiki/Graphite_(SIL) ***/
 user_pref("gfx.font_rendering.graphite.enabled", false);
@@ -921,7 +905,7 @@ user_pref("_user.js.parrot", "2000 syntax error: the parrot's snuffed it!");
  * [1] https://www.privacytools.io/#webrtc ***/
 user_pref("media.peerconnection.enabled", false);
 /* 2002: limit WebRTC IP leaks if using WebRTC
- * In FF70+ these settings match Mode 4 (Mode 3 in older versions), see [3]
+ * In FF70+ these settings match Mode 4 (Mode 3 in older versions) [3]
  * [TEST] https://browserleaks.com/webrtc
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1189041,1297416,1452713
  * [2] https://wiki.mozilla.org/Media/WebRTC/Privacy
@@ -1040,7 +1024,7 @@ user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!
  * [NOTE] This will break some sites' functionality e.g. Outlook, Twitter, Facebook, Wordpress
  * This applies to onCut/onCopy/onPaste events - i.e. it requires interaction with the website
  * [WARNING] If both 'middlemouse.paste' and 'general.autoScroll' are true (at least one
- * is default false) then enabling this pref can leak clipboard content, see [1]
+ * is default false) then enabling this pref can leak clipboard content [1]
  * [1] https://bugzilla.mozilla.org/1528289 */
    // user_pref("dom.event.clipboardevents.enabled", false);
 /* 2404: disable clipboard commands (cut/copy) from "non-privileged" content [FF41+]
@@ -1089,7 +1073,7 @@ user_pref("_user.js.parrot", "2500 syntax error: the parrot's shuffled off 'is m
  * Initially a Linux issue (high precision readout) that was fixed.
  * However, it is still another metric for fingerprinting, used to raise entropy.
  * e.g. do you have a battery or not, current charging status, charge level, times remaining etc
- * [NOTE] From FF52+ Battery Status API is only available in chrome/privileged code, see [1]
+ * [NOTE] From FF52+ Battery Status API is only available in chrome/privileged code [1]
  * [1] https://bugzilla.mozilla.org/1313580 ***/
    // user_pref("dom.battery.enabled", false);
 /* 2505: disable media device enumeration [FF29+]
@@ -1384,13 +1368,12 @@ user_pref("privacy.sanitize.timeSpan", 0);
 user_pref("_user.js.parrot", "4000 syntax error: the parrot's pegged out");
 /* 4001: enable First Party Isolation [FF51+]
  * [SETUP-WEB] May break cross-domain logins and site functionality until perfected
- * [1] https://bugzilla.mozilla.org/1260931
- * [2] https://bugzilla.mozilla.org/1299996 [META] ***/
+ * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1260931,1299996 ***/
 user_pref("privacy.firstparty.isolate", true);
 /* 4002: enforce FPI restriction for window.opener [FF54+]
  * [NOTE] Setting this to false may reduce the breakage in 4001
  * FF65+ blocks postMessage with targetOrigin "*" if originAttributes don't match. But
- * to reduce breakage it ignores the 1st-party domain (FPD) originAttribute, see [2],[3]
+ * to reduce breakage it ignores the 1st-party domain (FPD) originAttribute [2][3]
  * The 2nd pref removes that limitation and will only allow communication if FPDs also match.
  * [1] https://bugzilla.mozilla.org/1319773#c22
  * [2] https://bugzilla.mozilla.org/1492607
@@ -1476,8 +1459,7 @@ user_pref("privacy.resistFingerprinting", true);
 /* 4502: set new window sizes to round to hundreds [FF55+] [SETUP-CHROME]
  * Width will round down to multiples of 200s and height to 100s, to fit your screen.
  * The override values are a starting point to round from if you want some control
- * [1] https://bugzilla.mozilla.org/1330882
- * [2] https://hardware.metrics.mozilla.com/ ***/
+ * [1] https://bugzilla.mozilla.org/1330882 ***/
    // user_pref("privacy.window.maxInnerWidth", 1000);
    // user_pref("privacy.window.maxInnerHeight", 1000);
 /* 4503: disable mozAddonManager Web API [FF57+]
@@ -1485,7 +1467,7 @@ user_pref("privacy.resistFingerprinting", true);
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1384330,1406795,1415644,1453988 ***/
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDEN PREF]
 /* 4504: enable RFP letterboxing [FF67+]
- * Dynamically resizes the inner window by applying margins in stepped ranges, see [2]
+ * Dynamically resizes the inner window by applying margins in stepped ranges [2]
  * If you use the dimension pref, then it will only apply those resolutions. The format is
  * "width1xheight1, width2xheight2, ..." (e.g. "800x600, 1000x1000, 1600x900")
  * [SETUP-WEB] This does NOT require RFP (see 4501) **for now**, so if you're not using 4501, or you are but
@@ -1595,7 +1577,7 @@ user_pref("ui.use_standins_for_native_colors", true);
 user_pref("ui.systemUsesDarkTheme", 0); // [HIDDEN PREF]
 // FF80+
 // 4618: limit font visbility (non-ANDROID) [FF79+]
-   // Uses hardcoded lists with two parts: kBaseFonts + kLangPackFonts, see [1]
+   // Uses hardcoded lists with two parts: kBaseFonts + kLangPackFonts [1]
    // 1=only base system fonts, 2=also fonts from optional language packs, 3=also user-installed fonts
    // [NOTE] Bundled fonts are auto-allowed
    // [1] https://searchfox.org/mozilla-central/search?path=StandardFonts*.inc
@@ -1695,7 +1677,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 23.11.2020 (commit: fa85c9d); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 9.12.2020 (commit: 335ee84); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
@@ -1728,6 +1710,7 @@ ESSENTIAL EXTENSIONS:
     APIs -> Screen API -> Protect screen API: Uncheck
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
     Settings
+      Allow domain blocking: Uncheck
       Filters ETag headers from requests: Uncheck
       Click [Save & reload addon]
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
@@ -1811,7 +1794,6 @@ EXTERNAL APPLICATIONS:
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); // true breaks client certificate USB secure token, TC Automode needed
-  /* 1211  */ user_pref("security.OCSP.enabled", 0); // disable OCSP fetching
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content; when HTTPS-Only mode is disabled
