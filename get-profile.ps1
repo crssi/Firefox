@@ -25,8 +25,11 @@ $oldProfileFirefoxVersion = [Int]((Get-Content $oldProfilePath\prefs.js | where 
 $newProfileFirefoxVersion = [Int]((Get-Content $tmpProfilePath\prefs.js | where { $_ -like "*browser.startup.homepage_override.mstone*" }).Split('"')[3].Split(".")[0])
 if ($newProfileFirefoxVersion -gt $oldProfileFirefoxVersion) { Remove-Item -Path "$tmpFolder" -Recurse -Force -Confirm:$false; [Windows.Forms.MessageBox]::Show("ERROR:`nUpgrade Firefox to latest version and try again!`n`nStart Firefox > ☰ menu > Help > About.", "GITHUB/CRSSI/FIREFOX/PROFILE", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null; Exit }
 
+Get-Content $oldProfilePath\prefs.js | where { $_ -like "*browser.urlbar.placeholderName*" } | Out-File -FilePath $tmpProfilePath\prefs.js -Append -Encoding utf8
 Get-Content $oldProfilePath\prefs.js | where { $_ -like "*network.automatic-ntlm-auth.trusted-uris*" } | Out-File -FilePath $tmpProfilePath\prefs.js -Append -Encoding utf8
 Get-Content $oldProfilePath\prefs.js | where { $_ -like "*network.negotiate-auth.trusted-uris*" } | Out-File -FilePath $tmpProfilePath\prefs.js -Append -Encoding utf8
+Get-Content $oldProfilePath\prefs.js | where { $_ -like "*network.trr.mode*" } | Out-File -FilePath $tmpProfilePath\prefs.js -Append -Encoding utf8
+Get-Content $oldProfilePath\prefs.js | where { $_ -like "*network.trr.uri*" } | Out-File -FilePath $tmpProfilePath\prefs.js -Append -Encoding utf8
 Get-Content $oldProfilePath\prefs.js | where { $_ -like "*privacy.resistFingerprinting.letterboxing" } | Out-File -FilePath $tmpProfilePath\prefs.js -Append -Encoding utf8
 Get-Content $oldProfilePath\prefs.js | where { $_ -like "*services.sync.username*" } | Out-File -FilePath $tmpProfilePath\prefs.js -Append -Encoding utf8
 
@@ -52,7 +55,7 @@ Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -For
 Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false -ErrorAction SilentlyContinue
 
 Start-Process -FilePath 'firefox.exe'
-#Start-Sleep -Milliseconds 6000
-#do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
-#Start-Process -FilePath 'firefox.exe'
+Start-Sleep -Milliseconds 6000
+do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
+Start-Process -FilePath 'firefox.exe'
 Exit
