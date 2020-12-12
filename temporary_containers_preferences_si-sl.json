@@ -1,6 +1,6 @@
 {
   "version": "1.9.1",
-  "date": 1607784821100,
+  "date": 1607800052500,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -85,7 +85,7 @@
               "action": "global"
             },
             "left": {
-              "action": "notsamedomain"
+              "action": "global"
             }
           },
           "excluded": {
@@ -180,11 +180,11 @@
           }
         },
         {
-          "pattern": "login.live.com",
+          "pattern": "www.bing.com",
           "always": {
-            "action": "disabled",
-            "allowedInPermanent": true,
-            "allowedInTemporary": true
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
           },
           "navigation": {
             "action": "global"
@@ -197,37 +197,10 @@
               "action": "global"
             },
             "left": {
-              "action": "global"
+              "action": "notsamedomain"
             }
           },
-          "excluded": {
-            "*": {}
-          }
-        },
-        {
-          "pattern": "www.bing.com",
-          "always": {
-            "action": "disabled",
-            "allowedInPermanent": false,
-            "allowedInTemporary": false
-          },
-          "navigation": {
-            "action": "notsamedomain"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "global"
-            }
-          },
-          "excluded": {
-            "login.live.com": {}
-          }
+          "excluded": {}
         },
         {
           "pattern": "*",
@@ -254,7 +227,7 @@
         }
       ],
       "mac": {
-        "action": "disabled"
+        "action": "enabled"
       },
       "automaticReactivateDelay": 0
     },
