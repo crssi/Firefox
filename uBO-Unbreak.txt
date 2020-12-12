@@ -33,6 +33,7 @@
 @@||content.force.com^$image
 @@||content.jwplatform.com^$xhr,script
 @@||contextual.media.net^$script
+@@||consent.google.com^$subdocument
 @@||cookielaw.org/*/otBannerSdk.js$script
 @@||cookielaw.org/*/otPcPanel.json$xhr
 @@||cookielaw.org/*/otSDKStub.js$script
