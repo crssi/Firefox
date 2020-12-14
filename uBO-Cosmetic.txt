@@ -51,7 +51,8 @@ microsoft.com###uhf-upgrade-banner
 !##.spu-bg
 
 ! www.24ur.com
-##.outbrain
-##onl-article-next-previous
+www.24ur.com##.outbrain
+www.24ur.com##onl-article-next-previous
+www.24ur.com##onl-outbrain
 
 github.com##.hx_cookie-banner--show
