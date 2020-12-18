@@ -81,6 +81,7 @@
 ||hotjar.io^$important,3p
 ||hsforms.net^$3p
 ||hubspot.com^$3p
+||hubspot.net^$3p
 ||incartupsell.com^$3p
 ||inspectlet.com^$3p,important
 ||instagram.*^$3p,~subdocument
