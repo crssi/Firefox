@@ -207,3 +207,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! Resolved: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/8
 ! @@||images.jifo.co^$image
+
+! https://github.com/betterwebleon/slovenian-list/issues/17
+@@||ds.aai.arnes.si$generichide
