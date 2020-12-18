@@ -32,6 +32,7 @@
 ||askmediagroup.com^$3p
 ||beacon.krxd.net^$important
 ||bestofmedia.com^$3p
+||baidu.com^$3p
 ||bf-ad.net^$important
 ||blitzen.com^$3p
 ||blogsmithmedia.com^$3p,xhr
