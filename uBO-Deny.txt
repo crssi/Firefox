@@ -23,7 +23,7 @@
 ||alooma.com^$3p
 ||amazon-adsystem.*^
 ||amazonaws.com/*banners$3p
-||ampcid.google.*^$important
+||ampcid.google.com^$important
 ||anlcld.com^
 ||aolcdn.com/ads/$3p,script
 ||api.stacksocial.com^
@@ -49,7 +49,7 @@
 ||cookieinfoscript.com^$3p
 ||coordinatedcub.com^$3p
 ||delvenetworks.com^$3p,script
-||doubleclick.*^$important
+||doubleclick.net^$important
 ||eagleapi.io^
 ||evidon.com^$3p
 ||facebook.*^$3p,domain=~instagram.com|~messenger.com
@@ -63,13 +63,13 @@
 ||futurecdn.net^$xhr
 ||get-native.eu^$3p
 ||getsitecontrol.com^$3p
-||google-analytics.*^$3p,~script,important
-||google-analytics.*^$3p,script
+||google-analytics.com^$3p,~script,important
+||google-analytics.com^$3p,script
 ||google.com^$3p,~domain=translate.google.com
-||googleadservices.*^$important
-||googlesyndication.*^$important
-||googletagservices.*^$important
-||googletagmanager.*^$important
+!||googleadservices.com^$important
+||googlesyndication.com^$important
+||googletagservices.com^$important
+||googletagmanager.com^$important
 ||gravatar.com^$3p
 ||groupbycloud.com^$3p
 ||guim.co.uk^$3p,script
