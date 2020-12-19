@@ -69,6 +69,7 @@ phish-report.mozilla.com/
 reddit.com/
 rover.ebay.co
 securityheaders.com/
+soundestlink.com/transactional/
 ssllabs.com/
 t.umblr.com/redirect
 translate.google.com/
