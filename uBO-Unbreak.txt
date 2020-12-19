@@ -210,3 +210,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! https://github.com/betterwebleon/slovenian-list/issues/17
 @@||ds.aai.arnes.si$generichide
+
+! https://usawishingoal.com -> payment stuck
+@@||adv.000000.io^$script,xhr
