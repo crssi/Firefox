@@ -56,3 +56,6 @@ www.24ur.com##onl-article-next-previous
 www.24ur.com##onl-outbrain
 
 github.com##.hx_cookie-banner--show
+
+! https://www.nbcnews.com
+www.nbcnews.com##section.dn-print.related--single.related
