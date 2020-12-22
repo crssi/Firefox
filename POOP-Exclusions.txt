@@ -2,10 +2,12 @@
 * *.braintreegateway.com
 * *.crisp.chat
 * *.launchdarkly.com
+* *.shopify*.com
 * api.spectrumcustomizer.com
 * api.woosmap.com
 * edge.api.brightcove.com
 * firestore.googleapis.com
+* mcapi.us
 * shopify-chat.shopifycloud.com
 *.*inn.com *.*inn.com
 *.24live*.com *.24live*.com
