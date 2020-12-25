@@ -189,27 +189,15 @@ pinterest.*#@#.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="n
 ! https://github.com/ryanbr/fanboy-adblock/issues/1440
 google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
-! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/2
-@@||syndication.twimg.com^$xhr,domain=platform.twitter.com
-
-! WontFIX: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/3
-! @@||nanorep.com^
-
 ! https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/4
 @@||qualtrics.com^
-
-! Resolved: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/5
-! @@||instagram.com^$stylesheet,domain=www.instagram.com
-
-! Resolved: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/7
-! @@||static.ada.support^
-! @@||pusher.com^
-
-! Resolved: https://gitlab.com/The_Quantum_Alpha/the-quantum-ad-list/-/issues/8
-! @@||images.jifo.co^$image
 
 ! https://github.com/betterwebleon/slovenian-list/issues/17
 @@||ds.aai.arnes.si$generichide
 
 ! https://usawishingoal.com -> payment stuck
-@@||adv.000000.io^$script,xhr
+https://adv.000000.io
+
+! https://xiaomiplanets.com/xiaomi-yunmai-pro-massage-gun-7/
+! AdGuard Social Media
+#@#.share-container

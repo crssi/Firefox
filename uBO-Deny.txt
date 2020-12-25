@@ -17,7 +17,6 @@
 ||adicio.com^$3p
 ||adsensecustomsearchads.com^$important
 ||adserver.yahoo.com^$important
-!||adservice.google.*^$important
 ||adtech.*^$important
 ||agilemeasure.com^$3p
 ||alooma.com^$3p
@@ -44,7 +43,6 @@
 ||channelsight.com^$xhr
 ||chimpstatic.com^$3p
 ||cloudinary.com^$3p
-!!||consensu.org^$3p
 ||contentpass.net^$important
 ||cookieinfoscript.com^$3p
 ||coordinatedcub.com^$3p
@@ -76,7 +74,6 @@
 ||hawk-assets.co.uk^
 ||hawk-tech.co.uk^
 ||hawksearch.com^$3p
-!!||hextom.com^$3p
 ||hotjar.com^$important,3p
 ||hotjar.io^$important,3p
 ||hsforms.net^$3p
@@ -146,14 +143,12 @@
 ||themessagecloud.com^$3p
 ||ti-media.net^$~stylesheet,~image
 ||tinymce.com^$3p
-!!||tinypass.com^$3p
 ||trustpilot.com^$3p
 ||tsmedia.si^$3p
 ||twitter.*^$3p
 ||typography.com^$3p,~stylesheet,~xhr
 ||upscore.com^$3p
 ||urbanairship.com^$3p
-!!||vidible.tv^
 ||wayin.com^$3p
 ||wibbitz.com^$3p
 ||yahoo.*^$3p,domain=~yahoo.com
