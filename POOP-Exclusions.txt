@@ -30,6 +30,7 @@
 *.minecraft.net *.mojang.com
 *.netflix.* *.nflx*.net
 *.notabug.io oauth.reddit.com
+*.nytimes.com *.nyt.com
 *.office.com *
 *.paypal*.com *.paypal*.com
 *.powerbi.com *
@@ -44,4 +45,6 @@ disqus.com *.disqus.com
 f.vision *.dnsf.vision
 fast.com *.nflxvideo.net
 github.com *.github*.com
+slack.com *.slack*.com
+twitter.com *.twimg.com
 yastatic.net *.yandex.*
