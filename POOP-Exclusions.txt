@@ -2,6 +2,7 @@
 * *.braintreegateway.com
 * *.crisp.chat
 * *.launchdarkly.com
+* *.live.com
 * *.shopify*.com
 * api.spectrumcustomizer.com
 * api.woosmap.com
@@ -32,6 +33,9 @@
 *.notabug.io oauth.reddit.com
 *.nytimes.com *.nyt.com
 *.office.com *
+*.office365.com *.msedge.net
+*.office365.com *.office.*
+*.office365.com *.sharepointonline.com
 *.paypal*.com *.paypal*.com
 *.powerbi.com *
 *.reddit.com *.redd.it
