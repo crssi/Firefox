@@ -5,6 +5,7 @@ _sso=
 //disq.us/
 //dns.nextdns.io/
 //go.redirectingat.com/
+//myaccount.google.com/age-verification
 //sites.google.com/
 //slack-redir.net/link
 //web.archive.org/
