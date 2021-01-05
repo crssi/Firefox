@@ -8,6 +8,7 @@ _sso=
 //myaccount.google.com/age-verification
 //sites.google.com/
 //slack-redir.net/link
+//threatcrowd.org/
 //web.archive.org/
 /abp
 /account
