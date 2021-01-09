@@ -6,6 +6,7 @@ _sso=
 //dns.nextdns.io/
 //go.redirectingat.com/
 //myaccount.google.com/age-verification
+//oisd.nl/
 //sites.google.com/
 //slack-redir.net/link
 //threatcrowd.org/
