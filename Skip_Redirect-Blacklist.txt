@@ -11,6 +11,7 @@ _sso=
 //slack-redir.net/link
 //threatcrowd.org/
 //web.archive.org/
+//whois.
 /abp
 /account
 /adfs/ls/
