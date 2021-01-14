@@ -59,3 +59,6 @@ github.com##.hx_cookie-banner--show
 
 ! https://www.nbcnews.com
 www.nbcnews.com##section.dn-print.related--single.related
+
+##.adsbygoogle
+###exitpopup-modal
