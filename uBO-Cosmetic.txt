@@ -60,5 +60,10 @@ github.com##.hx_cookie-banner--show
 ! https://www.nbcnews.com
 www.nbcnews.com##section.dn-print.related--single.related
 
+! https://rofl.si, https://www.tocnoto.si
 ##.adsbygoogle
 ###exitpopup-modal
+
+! https://www.zurnal24.si
+www.zurnal24.si##.header__logo
+@@||www.vecer.com/templates/vecer/js/DFP-preroll-script.js$script,domain=www.vecer.com
