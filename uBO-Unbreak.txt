@@ -201,3 +201,9 @@ https://adv.000000.io
 ! https://xiaomiplanets.com/xiaomi-yunmai-pro-massage-gun-7/
 ! AdGuard Social Media
 #@#.share-container
+
+! https://aternos.org
+!@@||cdn.snigelweb.com^$script,domain=aternos.org
+!@@||securepubads.g.doubleclick.net^$script,domain=aternos.org
+!@@||amazon-adsystem.com^$xhr,domain=aternos.org
+!@@||www.google-analytics.com^$script,domain=aternos.org
