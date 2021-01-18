@@ -49,6 +49,7 @@ _sso=
 /wsfederation
 9inchurl.com/
 aa419.org/
+access/jwt
 action=login
 alipay.com
 archive.is/
