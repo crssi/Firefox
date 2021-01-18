@@ -1,7 +1,7 @@
 /******
 * name: arkenfox user.js
-* date: 05 Jan 2021
-* version 84
+* date: 17 Jan 2021
+* version 85-alpha
 * url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -1191,6 +1191,9 @@ user_pref("permissions.delegation.enabled", false);
  * If a new page from another domain is loaded into a tab, then window.name is set to an empty string. The original
  * string is restored if the tab reverts back to the original page. This change prevents some cross-site attacks ***/
 user_pref("privacy.window.name.update.enabled", true);
+/* 2625: disable bypassing 3rd party extension install prompts [FF82+]
+ * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1659530,1681331 ***/
+user_pref("extensions.postDownloadThirdPartyPrompt", false);
 
 /** DOWNLOADS ***/
 /* 2650: discourage downloading to desktop
@@ -1678,7 +1681,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 5.1.2021 (commit: 27dd6aa); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 17.1.2021 (commit: 1f098f2); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
