@@ -51,4 +51,5 @@ fast.com *.nflxvideo.net
 github.com *.github*.com
 slack.com *.slack*.com
 twitter.com *.twimg.com
+www.lidl.* www.bing.com
 yastatic.net *.yandex.*
