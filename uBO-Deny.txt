@@ -29,9 +29,9 @@
 ||app-measurement.com^$important
 ||arctur.*^$3p
 ||askmediagroup.com^$3p
+||baidu.com^$3p
 ||beacon.krxd.net^$important
 ||bestofmedia.com^$3p
-||baidu.com^$3p
 ||bf-ad.net^$important
 ||blitzen.com^$3p
 ||blogsmithmedia.com^$3p,xhr
@@ -64,10 +64,9 @@
 ||google-analytics.com^$3p,~script,important
 ||google-analytics.com^$3p,script
 ||google.com^$3p,~domain=translate.google.com
-!||googleadservices.com^$important
 ||googlesyndication.com^$important
-||googletagservices.com^$important
 ||googletagmanager.com^$important
+||googletagservices.com^$important
 ||gravatar.com^$3p
 ||groupbycloud.com^$3p
 ||guim.co.uk^$3p,script
@@ -89,6 +88,7 @@
 ||jwp*.com^$3p,~script,~media,~image
 ||kme.si^$3p,~image
 ||knowyourapps.com^$3p
+||leadsdome.com^
 ||letspin.io^$3p
 ||limelight.com^$3p,script
 ||linkedin.*^$3p
@@ -158,4 +158,6 @@
 ! https://www.cnet.com/videos/googles-new-pixel-5-seattle-approves-minimum-wage-for-lyft-uber-drivers/
 ||at.cbsi.com^$3p,xhr
 
-||leadsdome.com^
+! Message "seen" Remover for Facebook
+! https://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt
+||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest
