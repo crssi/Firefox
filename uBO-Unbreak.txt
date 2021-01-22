@@ -195,9 +195,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! https://github.com/betterwebleon/slovenian-list/issues/17
 @@||ds.aai.arnes.si$generichide
 
-! https://usawishingoal.com -> payment stuck
-https://adv.000000.io
-
 ! https://xiaomiplanets.com/xiaomi-yunmai-pro-massage-gun-7/
 ! AdGuard Social Media
 #@#.share-container
@@ -207,7 +204,6 @@ https://adv.000000.io
 !@@||securepubads.g.doubleclick.net^$script,domain=aternos.org
 !@@||amazon-adsystem.com^$xhr,domain=aternos.org
 !@@||www.google-analytics.com^$script,domain=aternos.org
-
 
 ! Video at https://www.wrc.com/en/video/player/?videoId=337067
 ! Neuter https://github.com/uBlockOrigin/uAssets/blob/bdb6f42d30539e913d7fddadbe325238899d7ce8/filters/resource-abuse.txt#L30-L31
