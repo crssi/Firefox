@@ -67,3 +67,9 @@ www.nbcnews.com##section.dn-print.related--single.related
 ! https://www.zurnal24.si
 www.zurnal24.si##.header__logo
 @@||www.vecer.com/templates/vecer/js/DFP-preroll-script.js$script,domain=www.vecer.com
+
+! https://www.maketecheasier.com/use-nextdns-for-more-secure-private-browsing/
+www.maketecheasier.com##.mb-2.ad-slot.in-content-ad
+
+! https://www.reddit.com/r/privacytoolsIO/
+www.reddit.com##.promotedlink
