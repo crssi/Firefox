@@ -35,7 +35,7 @@ Get-Content $oldProfilePath\prefs.js | where { $_ -like "*services.sync.username
 
  @('cert9.db','content-prefs.sqlite','favicons.sqlite','handlers.json','key4.db','logins.json','permissions.sqlite','persdict.dat','pkcs11.txt','places.sqlite') | ForEach-Object { Copy-Item -Path "$oldProfilePath\$_" -Destination "$tmpProfilePath\$_" -Force -ErrorAction SilentlyContinue }
 
-forEach ($file in @('extensions.json','compatibility.ini','pluginreg.dat','addonStartup.json')) {
+forEach ($file in @('extensions.json','compatibility.ini','addonStartup.json')) {
     $content = Get-Content -Encoding UTF8 -Path $tmpProfilePath\$file
     $content = $content.Replace('%appdata%/',"$($env:APPDATA.Replace('\','/').Replace(' ','%20'))/")
     $content = $content.Replace('%appdata%\\',"$($env:APPDATA.Replace('\','\\'))\\")
@@ -55,7 +55,5 @@ Move-Item -Path "$tmpFolder" -Destination "$($env:APPDATA)\Mozilla\Firefox" -For
 Remove-Item -Path $tmpFolder -Recurse -Force -Confirm:$false -ErrorAction SilentlyContinue
 
 Start-Process -FilePath 'firefox.exe'
-Start-Sleep -Milliseconds 6000
-do { Start-Sleep -Milliseconds 1000 } while ((Get-Process -Name 'firefox' -ErrorAction SilentlyContinue | Stop-Process) -ne $null)
-Start-Process -FilePath 'firefox.exe'
+
 Exit
