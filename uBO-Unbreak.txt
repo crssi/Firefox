@@ -149,6 +149,8 @@
 @@||ib.adnxs.com^$image
 ! neuter EasyList
 @@/ad-inserter/*
+! neuter adblock detection
+||www.mtb.si/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp$script
 
 ! SURVEY
 @@||mindtake.com^$1p
