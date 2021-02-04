@@ -152,7 +152,7 @@
 ||wibbitz.com^$3p
 ||yahoo.*^$3p,domain=~yahoo.com
 ||yottlyscript.com^$3p
-||youtube.com/youtubei/v1/log_event$xhr
+!||youtube.com/youtubei/v1/log_event$xhr
 
 
 ! https://www.cnet.com/videos/googles-new-pixel-5-seattle-approves-minimum-wage-for-lyft-uber-drivers/
