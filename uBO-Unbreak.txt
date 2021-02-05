@@ -210,6 +210,3 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! Video at https://www.wrc.com/en/video/player/?videoId=337067
 ! Neuter https://github.com/uBlockOrigin/uAssets/blob/bdb6f42d30539e913d7fddadbe325238899d7ce8/filters/resource-abuse.txt#L30-L31
 @@*?proxy=$script
-
-! https://github.com/easylist/easylist/issues/7155
-@@/jquery.dfp.js$script
