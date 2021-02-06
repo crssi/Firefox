@@ -47,6 +47,8 @@ _sso=
 /verification
 /websso/
 /wsfederation
+&openid.
+%2Fauth%2F
 9inchurl.com/
 aa419.org/
 access/jwt
