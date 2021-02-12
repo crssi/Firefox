@@ -5,11 +5,11 @@
 ! Allow extensions like uBO/uM to get the filter list updates
 @@||$domain=moz-extension-scheme
 
-||*.checkfront.com/lib/Control.Geocoder*.js$script
-||*.checkfront.com/reserve/lib/jquery.cookie*.js$script
-||*/fingerprintjs2$script,important
-||*/fp.js$script,important
-||*/loginmanager_sniff.js$script
+.checkfront.com/lib/Control.Geocoder*.js$script
+.checkfront.com/reserve/lib/jquery.cookie*.js$script
+/fingerprintjs2$script,important
+/fp.js$script,important
+/loginmanager_sniff.js$script
 ||1105media.com^$3p
 ||2o7.net^
 ||a2sky.com^$3p
@@ -160,4 +160,8 @@
 
 ! Message "seen" Remover for Facebook
 ! https://easylist-downloads.adblockplus.org/message_seen_remover_for_facebook.txt
+! Last modified: 07 Oct 2020 12:03 UTC
 ||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest
+
+! https://www.mimovrste.com
+/marxy.js?t=$script
