@@ -68,24 +68,15 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
-  Add custom search engine; https://addons.mozilla.org/firefox/addon/add-custom-search-engine/ (https://github.com/evilpie/add-custom-search-engine/)
   Bitwarden - Free Password Manager; https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/ (https://github.com/bitwarden/, https://bitwarden.com/)
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
-  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
-  Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
-  Spoof Timezone; https://addons.mozilla.org/firefox/addon/spoof-timezone/ (https://github.com/joue-quroi/spoof-timezone/)
-  Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
-
-EXTERNAL APPLICATIONS:
-  FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/
-  PasswordFox; http://www.nirsoft.net/utils/passwordfox.html
 
 ******/
 
