@@ -73,3 +73,6 @@ www.maketecheasier.com##.mb-2.ad-slot.in-content-ad
 
 ! https://www.reddit.com/r/privacytoolsIO/
 www.reddit.com##.promotedlink
+
+! www.bolha.com
+##.HeaderSpotlight.Attention
