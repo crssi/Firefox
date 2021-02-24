@@ -415,7 +415,7 @@ user_pref("network.http.altsvc.oe", false);
  * [1] https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers ***/
 user_pref("network.proxy.socks_remote_dns", true);
 /* 0708: disable FTP [FF60+] ***/
-   // user_pref("network.ftp.enabled", false);
+   // user_pref("network.ftp.enabled", false); // [DEFAULT: false FF88+]
 /* 0709: disable using UNC (Uniform Naming Convention) paths [FF61+]
  * [SETUP-CHROME] Can break extensions for profiles on network shares
  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/26424 ***/
@@ -645,19 +645,15 @@ user_pref("security.ssl.require_safe_negotiation", true);
 /* 1203: enforce TLS 1.0 and 1.1 downgrades as session only */
 user_pref("security.tls.version.enable-deprecated", false);
 /* 1204: disable SSL session tracking [FF36+]
- * SSL Session IDs are unique, last up to 24hrs in Firefox, and can be used for tracking
- * [SETUP-PERF] Relax this if you have FPI enabled (see 4000) *AND* you understand the
- * consequences. FPI isolates these, but it was designed with the Tor protocol in mind,
- * and the Tor Browser has extra protection, including enhanced sanitizing per Identity.
+ * SSL Session IDs are unique and last up to 24hrs in Firefox (or longer with prolongation attacks)
+ * [NOTE] These are not used in PB mode. In normal windows they are isolated when using FPI (4001)
+ * and/or containers. In FF85+ they are isolated by default (privacy.partition.network_state)
+ * [WARNING] There are perf and passive fingerprinting costs, for little to no gain. Preventing
+ * tracking via this method does not address IPs, nor handle any sanitizing of current identifiers
  * [1] https://tools.ietf.org/html/rfc5077
  * [2] https://bugzilla.mozilla.org/967977
  * [3] https://arxiv.org/abs/1810.07304 ***/
-user_pref("security.ssl.disable_session_identifiers", true); // [HIDDEN PREF]
-/* 1205: disable SSL Error Reporting
- * [1] https://firefox-source-docs.mozilla.org/browser/base/sslerrorreport/preferences.html ***/
-user_pref("security.ssl.errorReporting.automatic", false);
-user_pref("security.ssl.errorReporting.enabled", false);
-user_pref("security.ssl.errorReporting.url", "");
+   // user_pref("security.ssl.disable_session_identifiers", true); // [HIDDEN PREF]
 /* 1206: disable TLS1.3 0-RTT (round-trip time) [FF51+]
  * [1] https://github.com/tlswg/tls13-spec/issues/1001
  * [2] https://blog.cloudflare.com/tls-1-3-overview-and-q-and-a/ ***/
@@ -923,7 +919,7 @@ user_pref("webgl.disabled", true);
 user_pref("webgl.enable-webgl2", false);
 /* 2012: limit WebGL ***/
 user_pref("webgl.min_capability_mode", true);
-user_pref("webgl.disable-fail-if-major-performance-caveat", true);
+user_pref("webgl.disable-fail-if-major-performance-caveat", true); // [DEFAULT: true FF86+]
 /* 2022: disable screensharing ***/
 user_pref("media.getusermedia.screensharing.enabled", false);
 user_pref("media.getusermedia.browser.enabled", false);
@@ -966,8 +962,8 @@ user_pref("browser.link.open_newwindow.restriction", 0);
  * [SETTING] Privacy & Security>Permissions>Block pop-up windows ***/
 user_pref("dom.disable_open_during_load", true);
 /* 2212: limit events that can cause a popup [SETUP-WEB]
- * default is "change click dblclick auxclick mouseup pointerup notificationclick reset submit touchend contextmenu" ***/
-user_pref("dom.popup_allowed_events", "click dblclick");
+ * default FF86+: "change click dblclick auxclick mousedown mouseup pointerdown pointerup notificationclick reset submit touchend contextmenu ***/
+user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
 
 /*** [SECTION 2300]: WEB WORKERS
      A worker is a JS "background task" running in a global context, i.e. it is different from
@@ -1202,8 +1198,6 @@ user_pref("extensions.postDownloadThirdPartyPrompt", false);
 user_pref("browser.download.useDownloadDir", false);
 /* 2652: disable adding downloads to the system's "recent documents" list ***/
 user_pref("browser.download.manager.addToRecentDocs", false);
-/* 2653: disable hiding mime types (Options>General>Applications) not associated with a plugin ***/
-user_pref("browser.download.hide_plugins_without_extensions", false);
 /* 2654: disable "open with" in download dialog [FF50+] [SETUP-HARDEN]
  * This is very useful to enable when the browser is sandboxed (e.g. via AppArmor)
  * in such a way that it is forbidden to run external applications.
@@ -1661,14 +1655,22 @@ user_pref("_user.js.parrot", "9999 syntax error: the parrot's deprecated!");
    // [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/20025
    // [-] https://bugzilla.mozilla.org/1603712
 user_pref("intl.charset.fallback.override", "windows-1252");
-// * * * /
 // FF82
 // 0206: disable geographically specific results/search engines e.g. "browser.search.*.US"
    // i.e. ignore all of Mozilla's various search engines in multiple locales
    // [-] https://bugzilla.mozilla.org/1619926
 user_pref("browser.search.geoSpecificDefaults", false);
 user_pref("browser.search.geoSpecificDefaults.url", "");
-// * * * /
+// FF86
+// 1205: disable SSL Error Reporting
+   // [1] https://firefox-source-docs.mozilla.org/browser/base/sslerrorreport/preferences.html
+   // [-] https://bugzilla.mozilla.org/1681839
+user_pref("security.ssl.errorReporting.automatic", false);
+user_pref("security.ssl.errorReporting.enabled", false);
+user_pref("security.ssl.errorReporting.url", "");
+// 2653: disable hiding mime types (Options>General>Applications) not associated with a plugin
+   // [-] https://bugzilla.mozilla.org/1581678
+user_pref("browser.download.hide_plugins_without_extensions", false);
 // ***/
 
 /* END: internal custom pref to test for syntax errors ***/
@@ -1677,7 +1679,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 8.2.2021 (commit: 82bb3f9); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 24.2.2021 (commit: e54ae46); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
@@ -1745,24 +1747,15 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
-  Add custom search engine; https://addons.mozilla.org/firefox/addon/add-custom-search-engine/ (https://github.com/evilpie/add-custom-search-engine/)
   Bitwarden - Free Password Manager; https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/ (https://github.com/bitwarden/, https://bitwarden.com/)
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
-  HTTPZ; https://addons.mozilla.org/firefox/addon/httpz/ (https://github.com/claustromaniac/httpz/)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
-  Save Screenshot; https://addons.mozilla.org/firefox/addon/savescreenshot/ (https://github.com/M-Reimer/savescreenshot/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
-  Spoof Timezone; https://addons.mozilla.org/firefox/addon/spoof-timezone/ (https://github.com/joue-quroi/spoof-timezone/)
-  Switch Container Plus; https://addons.mozilla.org/firefox/addon/switch-container-plus/ (https://github.com/stoically/switch-container-plus/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
-
-EXTERNAL APPLICATIONS:
-  FF Password Exporter; https://github.com/kspearrin/ff-password-exporter/
-  PasswordFox; http://www.nirsoft.net/utils/passwordfox.html
 
 ******/
 
@@ -1794,7 +1787,6 @@ EXTERNAL APPLICATIONS:
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
-  /* 1204  */ user_pref("security.ssl.disable_session_identifiers", false); // true breaks client certificate USB secure token, TC Automode needed
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content; when HTTPS-Only mode is disabled
