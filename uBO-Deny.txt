@@ -126,6 +126,7 @@
 ||qq.com^$3p
 ||quantserve.com^$3p
 ||s.aolcdn.com/ads/$3p,script
+||s0.2mdn.net^$3p
 ||salesforceliveagent.com^$3p
 ||sandsiv.com^3p
 ||scorecardresearch.com^$important
