@@ -9,7 +9,6 @@ _sso=
 //oisd.nl/
 //sites.google.com/
 //slack-redir.net/link
-//threatcrowd.org/
 //web.archive.org/
 //whois.
 /abp
@@ -79,6 +78,7 @@ securityheaders.com/
 soundestlink.com/transactional/
 ssllabs.com/
 t.umblr.com/redirect
+threatcrowd.org/
 translate.google.com/
 translatetheweb.com/
 twitter.com/
