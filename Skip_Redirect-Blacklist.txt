@@ -11,6 +11,7 @@ _sso=
 //slack-redir.net/link
 //web.archive.org/
 //whois.
+//www.bing.com/
 /abp
 /account
 /adfs/ls/
