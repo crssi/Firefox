@@ -13,6 +13,7 @@
 ||1105media.com^$3p
 ||2o7.net^
 ||a2sky.com^$3p
+||ad.exilio.net^
 ||addthis.com^$important
 ||adicio.com^$3p
 ||adsensecustomsearchads.com^$important
