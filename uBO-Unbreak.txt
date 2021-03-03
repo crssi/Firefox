@@ -213,6 +213,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76395
-! ||bing.com/fd/ls/$badfilter
-! ||bing.com/fd/ls/$~xhr
-@@||bing.com/fd/ls/$~xhr
+! @@||bing.com/fd/ls/$~xhr
+||bing.com/fd/ls/$badfilter
+||bing.com/fd/ls/$~xhr
