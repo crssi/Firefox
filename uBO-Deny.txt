@@ -47,6 +47,7 @@
 ||contentpass.net^$important
 ||cookieinfoscript.com^$3p
 ||coordinatedcub.com^$3p
+||decacopy.com^
 ||delvenetworks.com^$3p,script
 ||doubleclick.net^$important
 ||eagleapi.io^
