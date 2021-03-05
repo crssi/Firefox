@@ -8,6 +8,10 @@
 		{
 			"url": "onedrive.live.com",
 			"protectDOMRect": false
+		},
+		{
+			"url": "paypal.com",
+			"blockMode": "block"
 		}
 	],
 	"hiddenSettings": {},
@@ -47,7 +51,7 @@
 	"storePersistentRnd": false,
 	"persistentRndClearIntervalValue": 15,
 	"persistentRndClearIntervalUnit": "minutes",
-	"lastPersistentRndClearing": 1603965519600,
+	"lastPersistentRndClearing": 1614946041900,
 	"sharePersistentRndBetweenDomains": false,
 	"askOnlyOnce": "individual",
 	"askDenyMode": "block",
