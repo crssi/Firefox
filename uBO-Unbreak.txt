@@ -216,3 +216,7 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! @@||bing.com/fd/ls/$~xhr
 ||bing.com/fd/ls/$badfilter
 ||bing.com/fd/ls/$~xhr
+
+! https://demo.paypal.com/us/demo/go_platform/partners/home
+! EasyPrivacy
+/ganalytics.$badfilter
