@@ -1,21 +1,19 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 28.2.2021 (commit: 5f9bb59); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 14.3.2021 (commit: b7c8084); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
-1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js and place it into "profile folder"
-   NOTE: To find location of the "profile folder" enter "about:support" into url bar, click "Open Folder" button under "Application Basics" section on "Profile Folder"
-2. Append this file to user.js that was downloaded in the previous step
-3. In the "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
-4. In the "profile folder" create a folder "chrome" and copy-in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css and https://raw.githubusercontent.com/crssi/Firefox/master/userContent.css
-5. Firefox -> Options -> General -> General -> Tabs -> Settings...
+1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
+   NOTE: To find "profile folder" location, enter "about:support" into urlbar and on "Profile Folder" row click "Open Folder" button
+2. In the "profile folder", remove file "SiteSecurityServiceState.txt" and create folder with the same name; https://nakedsecurity.sophos.com/2015/02/02/anatomy-of-a-browser-dilemma-how-hsts-supercookies-make-you-choose-between-privacy-or-security/
+3. In the "profile folder" create a folder "chrome" and copy-in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css and https://raw.githubusercontent.com/crssi/Firefox/master/userContent.css
+4. Firefox -> Options -> General -> General -> Tabs -> Settings...
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
-6. To enable SSO for user/enterprise specific realm/domain enter domain list (comma separated without spaces) into preferences (about:config) network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
-7. Install extensions (see Extensions section) and setup by instructions
+5. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
-8. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
+6. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    cert9.db - Certificates
    content-prefs.sqlite - Site-specific preferences
    favicons.sqlite - Bookmarks icons
@@ -26,6 +24,7 @@ NOTE: Before proceeding further, make a backup of your current profile
    persdict.dat - Personal dictionary
    pkcs11.txt - Security device settings
    places.sqlite - Bookmarks
+7. To enable SSO for enterprise specific realm/domain enter domain list (comma separated without spaces) into preferences (about:config) network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
@@ -50,8 +49,8 @@ ESSENTIAL EXTENSIONS:
     Notifications
       Enable popup: Uncheck
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
-    Whiteliste Sources:
-      Add: https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
+    Whitelist Sources: Add https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
+    Rewrite Mode: Send nothing as referer, looking like a direct hit
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     Export/Import
       Import Preferences
@@ -90,7 +89,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 1); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
-  /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("ui.prefersReducedMotion", 0); // remove ugly UX
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
