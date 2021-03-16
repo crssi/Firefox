@@ -28,8 +28,7 @@ NOTE: Before proceeding further, make a backup of your current profile
 
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-    On install page click apply for Convenient, Stealth settings and reCAPTCHA exception
-    APIs -> Screen API -> Protect screen API: Uncheck
+    Enter "Load" in the search box, click [Load] button and import https://raw.githubusercontent.com/crssi/Firefox/master/CanvasBlocker-settings.json
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
     Settings
       Allow domain blocking: Uncheck
@@ -89,6 +88,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 1); // Enable autoplay of HTML5 media if interacted with the site
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
+  /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4502  */ user_pref("ui.prefersReducedMotion", 0); // remove ugly UX
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
