@@ -28,7 +28,7 @@ NOTE: Before proceeding further, make a backup of your current profile
 
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-    Enter "Load" in the search box, click [Load] button and import https://raw.githubusercontent.com/crssi/Firefox/master/CanvasBlocker-settings.json
+    Enter "Load" in the search box, click [Load] button and open https://raw.githubusercontent.com/crssi/Firefox/master/CanvasBlocker-settings.json
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
     Settings
       Allow domain blocking: Uncheck
