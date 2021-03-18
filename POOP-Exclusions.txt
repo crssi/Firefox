@@ -33,6 +33,7 @@
 *.notabug.io oauth.reddit.com
 *.nytimes.com *.nyt.com
 *.office.com *
+*.office365.com *.lync.com
 *.office365.com *.msedge.net
 *.office365.com *.office.*
 *.office365.com *.sharepointonline.com
