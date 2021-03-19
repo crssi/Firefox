@@ -220,3 +220,17 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! https://demo.paypal.com/us/demo/go_platform/partners/home
 ! EasyPrivacy
 /ganalytics.$badfilter
+
+
+! https://office.com
+! EasyList, EasyPrivacy, AdGuard Tracking Protection
+||pipe.aria.microsoft.com/collector/$badfilter
+||microsoft.com/collector/$badfilter
+||bing.com/fd/ls/lsp.aspx$badfilter
+||virtualearth.net/webservices/v*/loggingservice/loggingservice.svc/log?entry=$badfilter
+||dc.services.visualstudio.com/*/track$badfilter
+||dc.services.visualstudio.com/v2/track$badfilter
+||visualstudio.com/v2/track$3p,badfilter
+||visualstudio.com/v*/track$3p,badfilter
+/log?entry=$badfilter
+/postlog?$badfilter
