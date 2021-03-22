@@ -120,7 +120,7 @@
 ||pmcatalyst-ae.com^$3p
 ||polldaddy.com^$3p
 ||popupmaker.com^$3p
-||prismic.io^$3p
+!||prismic.io^$3p -> Images at https://wolt.com/sl/about
 ||pristopmedia.network^
 ||privacy-center.org^
 ||purch.com^$3p,important
