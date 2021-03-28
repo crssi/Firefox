@@ -1,9 +1,9 @@
 {
-  "timeStamp": 1614329307800,
-  "version": "1.33.2",
+  "timeStamp": 1616942684100,
+  "version": "1.34.0",
   "userSettings": {
     "advancedUserEnabled": true,
-    "externalLists": "https://abp.oisd.nl//\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt",
+    "externalLists": "https://abp.oisd.nl//\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://www.fanboy.co.nz/enhancedstats.txt",
     "firewallPaneMinimized": false,
     "importedLists": [
       "https://abp.oisd.nl//",
@@ -11,7 +11,8 @@
       "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt",
       "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt",
       "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt",
-      "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt"
+      "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt",
+      "https://www.fanboy.co.nz/enhancedstats.txt"
     ],
     "popupPanelSections": 63,
     "webrtcIPAddressHidden": true
@@ -20,14 +21,12 @@
     "user-filters",
     "ublock-filters",
     "ublock-badware",
-    "ublock-privacy",
     "ublock-abuse",
     "ublock-unbreak",
     "adguard-generic",
     "adguard-mobile",
     "easylist",
     "adguard-spyware",
-    "fanboy-enhanced",
     "urlhaus-1",
     "adguard-social",
     "CHN-0",
@@ -38,6 +37,7 @@
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt",
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt",
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt",
+    "https://www.fanboy.co.nz/enhancedstats.txt",
     "https://abp.oisd.nl//"
   ],
   "hiddenSettings": {
