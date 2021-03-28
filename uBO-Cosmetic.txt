@@ -80,6 +80,15 @@ www.reddit.com##.promotedlink
 ! https://outlook.office.com
 ||pipe.aria.microsoft.com/collector/$badfilter
 ! EasyPrivacy
+/log?entry=$badfilter
+/postlog?$badfilter
+||bing.com/fd/ls/lsp.aspx$badfilter
 ||data.microsoft.com/OneCollector/$badfilter
 ||fp.measure.office.com^$badfilter
 ||microsoft.com/collector/$badfilter
+||visualstudio.com/v*/track$3p,badfilter
+||visualstudio.com/v2/track$3p,badfilter
+! AdGuard Tracking Protection
+||dc.services.visualstudio.com/*/track$badfilter
+||dc.services.visualstudio.com/v2/track$badfilter
+||virtualearth.net/webservices/v*/loggingservice/loggingservice.svc/log?entry=$badfilter
