@@ -214,3 +214,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! https://demo.paypal.com/us/demo/go_platform/partners/home
 ! EasyPrivacy
 /ganalytics.$badfilter
+
+! Cookie consent at maps.google.com
+@@||googleads.g.doubleclick.net/ads/preferences/cu/optout?continue=

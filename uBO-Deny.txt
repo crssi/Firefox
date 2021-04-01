@@ -49,7 +49,7 @@
 ||coordinatedcub.com^$3p
 ||decacopy.com^
 ||delvenetworks.com^$3p,script
-||doubleclick.net^$important
+||doubleclick.net^
 ||eagleapi.io^
 ||evidon.com^$3p
 ||facebook.*^$3p,domain=~instagram.com|~messenger.com
