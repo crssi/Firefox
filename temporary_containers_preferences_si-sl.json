@@ -1,6 +1,6 @@
 {
-  "version": "1.9.1",
-  "date": 1607800052500,
+  "version": "1.9.2",
+  "date": 1617363316100,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -68,58 +68,6 @@
           "_index": 0
         },
         {
-          "pattern": "www.google.*",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": false,
-            "allowedInTemporary": false
-          },
-          "navigation": {
-            "action": "notsamedomain"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "global"
-            }
-          },
-          "excluded": {
-            "*.google*.*": {},
-            "*.youtube.com": {}
-          }
-        },
-        {
-          "pattern": "www.youtube.com",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": false,
-            "allowedInTemporary": false
-          },
-          "navigation": {
-            "action": "notsamedomain"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "notsamedomain"
-            }
-          },
-          "excluded": {
-            "*.google.*": {},
-            "*.youtube.com": {}
-          }
-        },
-        {
           "pattern": "/^https?:\\/\\/(.+\\.)?(facebook\\.com|instagram\\.com|messenger\\.com|fb\\.com|m\\.me)\\/.*/",
           "always": {
             "action": "enabled",
@@ -180,29 +128,6 @@
           }
         },
         {
-          "pattern": "www.bing.com",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": false,
-            "allowedInTemporary": false
-          },
-          "navigation": {
-            "action": "global"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "notsamedomain"
-            }
-          },
-          "excluded": {}
-        },
-        {
           "pattern": "*",
           "always": {
             "action": "enabled",
@@ -229,7 +154,7 @@
       "mac": {
         "action": "enabled"
       },
-      "automaticReactivateDelay": 0
+      "reactivateDelay": 0
     },
     "browserActionPopup": false,
     "pageAction": false,
