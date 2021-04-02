@@ -1813,5 +1813,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
+  /* 5000x */ user_pref("security.osclientcerts.autoload", true); // load OS user certificates store
 
 user_pref("_user.js.parrot", "Eagle has landed!");
