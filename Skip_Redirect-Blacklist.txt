@@ -2,6 +2,7 @@ _sso=
 .encReferrer=
 /_login
 //azure.microsoft.com/email/\?destination=https%3A%2F%2Fportal.azure.com%2F
+//consent.google.com/s?continue=
 //disq.us/
 //dns.nextdns.io/
 //go.redirectingat.com/
