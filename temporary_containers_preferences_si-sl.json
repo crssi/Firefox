@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1617363316100,
+  "date": 1617712945600,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -66,6 +66,29 @@
           },
           "excluded": {},
           "_index": 0
+        },
+        {
+          "pattern": "/^https?:\\/\\/(.+\\.)?(google|youtube|googleusercontent|doubleclick)\\..+\\/.*/",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomain"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "notsamedomain"
+            }
+          },
+          "excluded": {}
         },
         {
           "pattern": "/^https?:\\/\\/(.+\\.)?(facebook\\.com|instagram\\.com|messenger\\.com|fb\\.com|m\\.me)\\/.*/",
