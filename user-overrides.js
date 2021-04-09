@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 4.4.2021 (commit: ada8158); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 7.4.2021 (commit: 7ad3bb9); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -83,6 +83,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
+  /* 0850a */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
   /* 0850c */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
