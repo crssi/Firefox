@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 7.4.2021 (commit: 7ad3bb9); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 8.4.2021 (commit: 6c10e03); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
