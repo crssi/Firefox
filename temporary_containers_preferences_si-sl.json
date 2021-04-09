@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1617712945600,
+  "date": 1617955687800,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -68,7 +68,7 @@
           "_index": 0
         },
         {
-          "pattern": "/^https?:\\/\\/(.+\\.)?(google|youtube|googleusercontent|doubleclick)\\..+\\/.*/",
+          "pattern": "/^https?:\\/\\/www\\.google\\..+\\/.*/",
           "always": {
             "action": "enabled",
             "allowedInPermanent": false,
@@ -85,70 +85,10 @@
               "action": "global"
             },
             "left": {
-              "action": "notsamedomain"
+              "action": "global"
             }
           },
           "excluded": {}
-        },
-        {
-          "pattern": "/^https?:\\/\\/(.+\\.)?(facebook\\.com|instagram\\.com|messenger\\.com|fb\\.com|m\\.me)\\/.*/",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": false,
-            "allowedInTemporary": false
-          },
-          "navigation": {
-            "action": "notsamedomain"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "notsamedomain"
-            }
-          },
-          "excluded": {
-            "facebook.com": {},
-            "*.facebook.com": {},
-            "instagram.com": {},
-            "*.instagram.com": {},
-            "messenger.com": {},
-            "*.messenger.com": {},
-            "fb.com": {},
-            "*.fb.com": {}
-          }
-        },
-        {
-          "pattern": "/^https?:\\/\\/(.+\\.)?(twitter\\.com|t\\.co)\\/.*/",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": false,
-            "allowedInTemporary": false
-          },
-          "navigation": {
-            "action": "notsamedomain"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "notsamedomain"
-            }
-          },
-          "excluded": {
-            "twitter.com": {},
-            "*.twitter.com": {},
-            "t.co": {},
-            "*.t.co": {}
-          }
         },
         {
           "pattern": "*",

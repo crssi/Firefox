@@ -1708,7 +1708,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 4.4.2021 (commit: ada8158); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 7.4.2021 (commit: 7ad3bb9); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -1741,6 +1741,8 @@ ESSENTIAL EXTENSIONS:
       Allow domain blocking: Uncheck
       Filters ETag headers from requests: Uncheck
       Click [Save & reload addon]
+  Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
+    Click [Containerise] icon, click [Pencil], copy/paste from https://raw.githubusercontent.com/crssi/Firefox/master/Containerise.txt, click [Save]
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
@@ -1767,7 +1769,6 @@ ESSENTIAL EXTENSIONS:
 
 ADDITIONAL EXTENSIONS THAT I AM USING:
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
-  Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
   Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
@@ -1779,6 +1780,7 @@ USEFUL/INTERESTING EXTENSIONS:
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
+  NX Enhanced; https://addons.mozilla.org/firefox/addon/nx-enhanced/ (https://github.com/hjk789/NXEnhanced)
   Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
@@ -1790,6 +1792,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0808  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
+  /* 0850a */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
   /* 0850c */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
   /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
   /* 0862  */ user_pref("places.history.enabled", false); // disable history
