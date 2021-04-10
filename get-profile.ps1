@@ -21,8 +21,8 @@ Get-Content -Path "$tmpFolder\installs.ini" | ForEach-Object { if ($_.StartsWith
 $tmpProfilePath = "$tmpFolder\Profiles\$($tmpProfilePath.split('\')[-1])"
 Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $oldProfilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
 
-$oldProfileFirefoxVersion = [Int]((Get-Content $oldProfilePath\prefs.js | where { $_ -like "*browser.startup.homepage_override.mstone*" }).Split('"')[3].Split(".")[0])
-$newProfileFirefoxVersion = [Int]((Get-Content $tmpProfilePath\prefs.js | where { $_ -like "*browser.startup.homepage_override.mstone*" }).Split('"')[3].Split(".")[0])
+$oldProfileFirefoxVersion = [Int]((Get-Content $oldProfilePath\prefs.js | where { $_ -like "*distribution.iniFile.exists.appversion*" }).Split('"')[3].Split(".")[0])
+$newProfileFirefoxVersion = [Int]((Get-Content $tmpProfilePath\prefs.js | where { $_ -like "*distribution.iniFile.exists.appversion*" }).Split('"')[3].Split(".")[0])
 if ($newProfileFirefoxVersion -gt $oldProfileFirefoxVersion) { Remove-Item -Path "$tmpFolder" -Recurse -Force -Confirm:$false; [Windows.Forms.MessageBox]::Show("ERROR:`nUpgrade Firefox to latest version and try again!`n`nStart Firefox > ☰ menu > Help > About.", "GITHUB/CRSSI/FIREFOX/PROFILE", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information) | Out-Null; Exit }
 
 Get-Content $oldProfilePath\prefs.js | where { $_ -like "*browser.urlbar.placeholderName*" } | Out-File -FilePath $tmpProfilePath\prefs.js -Append -Encoding utf8
