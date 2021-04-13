@@ -217,3 +217,7 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! Cookie consent at maps.google.com
 @@||googleads.g.doubleclick.net/ads/preferences/cu/optout?continue=
+
+! https://www.24ur.com/novice/korona/zacetek-samotestiranja-v-petek-prvi-na-vrsti-bodo-dijaki.html
+! AdGuard Mobile Ads
+@@||imasdk.googleapis.com/*/ima3.js$script
