@@ -220,4 +220,4 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! https://www.24ur.com/novice/korona/zacetek-samotestiranja-v-petek-prvi-na-vrsti-bodo-dijaki.html
 ! AdGuard Mobile Ads
-! @@||imasdk.googleapis.com/*/ima3.js$script
+@@||imasdk.googleapis.com/*/ima3.js$script
