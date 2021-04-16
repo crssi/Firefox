@@ -1,4 +1,4 @@
 @(.*\.)?(google|youtube|doubleclick)\..+$ , GOOGLE
 @(.*\.)?ebay\..+$ , EBAY
-@(.*\.)?(facebook\.com|instagram\.com|messenger\.com|fb\.com|m\.me)\/.+$ , FACEBOOK
-@(.*\.)?(twitter\.com|t\.co)\/.+$ , TWITTER
+@(.*\.)?(facebook\.com|instagram\.com|messenger\.com|fb\.com|m\.me)\/.*$ , FACEBOOK
+@(.*\.)?(twitter\.com|t\.co)\/.*$ , TWITTER
