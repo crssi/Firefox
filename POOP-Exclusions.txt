@@ -1,4 +1,5 @@
 * *.akamaihd.net
+* *.azure.net
 * *.braintreegateway.com
 * *.crisp.chat
 * *.launchdarkly.com
@@ -19,7 +20,6 @@
 * firestore.googleapis.com
 * mcapi.us
 * shopify-chat.shopifycloud.com
-* *.azure.net
 *.*inn.com *.*inn.com
 *.24live*.com *.24live*.com
 *.airbnb.com *.muscache.com
@@ -58,6 +58,7 @@ disqus.com *.disqus.com
 f.vision *.dnsf.vision
 fast.com *.nflx*.net
 github.com *.github*.com
+player.vimeo.com *.akamaized.net
 slack.com *.slack*.com
 twitter.com *.twimg.com
 yastatic.net *.yandex.*
