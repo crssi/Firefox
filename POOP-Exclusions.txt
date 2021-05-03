@@ -53,12 +53,11 @@
 *.twitter.com *.twimg.com
 *.ubisoft.com *ubi*
 *.youtube*.com *
-*vimeo.com *vimeo*.*
+*vimeo.com *
 disqus.com *.disqus.com
 f.vision *.dnsf.vision
 fast.com *.nflx*.net
 github.com *.github*.com
-player.vimeo.com *.akamaized.net
 slack.com *.slack*.com
 twitter.com *.twimg.com
 yastatic.net *.yandex.*
