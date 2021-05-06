@@ -221,3 +221,7 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! https://www.24ur.com/novice/korona/zacetek-samotestiranja-v-petek-prvi-na-vrsti-bodo-dijaki.html
 ! AdGuard Mobile Ads
 @@||imasdk.googleapis.com/*/ima3.js$script
+
+! https://www.telekom.si/poslovni-uporabniki/ponudba/resitve-za-podjetja/izobrazevalni-center/seznam-izobrazevanj/posamezno-izobrazevanje/MS-030T00
+! SVN: Slovenian List
+||telekom.si/*/track.js$badfilter
