@@ -112,7 +112,7 @@
 ||oath.com^$3p
 ||olark.com^$3p
 ||oneall.com^$3p
-||onesignal.com^$3p
+!||onesignal.com^$3p
 ||outbrain.com^$3p
 ||paht.tech^
 ||piano.io$3p
