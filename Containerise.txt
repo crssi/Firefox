@@ -1,4 +1,4 @@
-!google. , GOOGLE
+!google\. , GOOGLE
 *.youtube.com , GOOGLE
 *.facebook.com , FACEBOOK
 *.instagram.com , FACEBOOK
