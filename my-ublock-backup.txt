@@ -1,6 +1,6 @@
 {
-  "timeStamp": 1618469905600,
-  "version": "1.34.0",
+  "timeStamp": 1620625279600,
+  "version": "1.35.2",
   "userSettings": {
     "advancedUserEnabled": true,
     "externalLists": "https://abp.oisd.nl//\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://www.fanboy.co.nz/enhancedstats.txt",
@@ -27,7 +27,6 @@
     "easylist",
     "adguard-spyware",
     "urlhaus-1",
-    "adguard-social",
     "CHN-0",
     "CZE-0",
     "SVN-0",
