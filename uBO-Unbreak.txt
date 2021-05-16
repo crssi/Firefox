@@ -225,3 +225,9 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! https://www.telekom.si/poslovni-uporabniki/ponudba/resitve-za-podjetja/izobrazevalni-center/seznam-izobrazevanj/posamezno-izobrazevanje/MS-030T00
 ! SVN: Slovenian List
 ||telekom.si/*/track.js$badfilter
+
+! https://techgenix.com/off-boarding-email-office-365-exchange-2013-part1/
+! Fanboy's Enhanced Tracking List
+/leaky-paywall/*$badfilter
+/leaky-paywall-$badfilter
+?action=leaky_paywall_$badfilter
