@@ -8,14 +8,13 @@
 		{
 			"url": "onedrive.live.com",
 			"protectDOMRect": false
-		},
-		{
-			"url": "paypal.com",
-			"blockMode": "block"
 		}
 	],
 	"hiddenSettings": {},
-	"expandStatus": {},
+	"expandStatus": {
+		"section_faking": true,
+		"blockMode": true
+	},
 	"displayHiddenSettings": false,
 	"whiteList": "paypal.com",
 	"sessionWhiteList": "",
@@ -51,7 +50,7 @@
 	"storePersistentRnd": false,
 	"persistentRndClearIntervalValue": 15,
 	"persistentRndClearIntervalUnit": "minutes",
-	"lastPersistentRndClearing": 1622058414000,
+	"lastPersistentRndClearing": 1622058570900,
 	"sharePersistentRndBetweenDomains": false,
 	"askOnlyOnce": "individual",
 	"askDenyMode": "block",
