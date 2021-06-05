@@ -1,1 +1,1 @@
-.apple.com>.*apple*.* .google*.*>.google*.* .google*.*>.gstatic.com .google*.*>.ytimg.com .icloud.com>.*apple*.* .paloaltonetworks.com>.cloudfront.net .travelriskmap.com>* hitrinakup.com>.tus.si www.instagram.com>instagram.*.fna.fbcdn.net .*>vidstreamz.online
+.apple.com>.*apple*.* .google*.*>.google*.* .google*.*>.gstatic.com .google*.*>.ytimg.com .icloud.com>.*apple*.* .paloaltonetworks.com>.cloudfront.net .travelriskmap.com>* hitrinakup.com>.tus.si www.instagram.com>instagram.*.fna.fbcdn.net *>vidstreamz.online
