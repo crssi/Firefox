@@ -87,4 +87,5 @@ twitter.com/
 ubi.com/
 virustotal.com/
 wego.here.com/
+www.google.com/url?q=
 youtube.com/embed/
