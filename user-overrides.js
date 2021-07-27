@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 8.5.2021 (commit: ba9b3c2); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 26.7.2021 (commit: b8f3d93); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -62,7 +62,6 @@ ESSENTIAL EXTENSIONS:
 ADDITIONAL EXTENSIONS THAT I AM USING:
   Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
-  Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
@@ -74,7 +73,10 @@ USEFUL/INTERESTING EXTENSIONS:
   http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
   IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
+  Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
+    Copy/Paste settings from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-custom_parameters.txt
   NX Enhanced; https://addons.mozilla.org/firefox/addon/nx-enhanced/ (https://github.com/hjk789/NXEnhanced)
+  Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
@@ -93,7 +95,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 0); // Reset autoplay of HTML5 media to default
   /* 2203  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  /* 4502  */ user_pref("ui.prefersReducedMotion", 0); // remove ugly UX
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // disable CFR
   /* 5000  */ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false); // disable CFR
   /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
@@ -103,12 +104,15 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
-  /* 5000x */ user_pref("findbar.highlightAll", true); // hihglight all hits on search
+  /* 5000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
+  /* 5000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
+  /* 5000x */ user_pref("image.webp.enabled", false); // disable WebP
   /* 5000x */ user_pref("signon.management.page.fileImport.enabled", true); // enable logins import from file (Bitwarden, KeePass)
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-  /* 0302a */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
+  /* 0301  */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
+  /* 0302  */ user_pref("app.update.background.scheduling.enabled", true); // enable auto-INSTALLING Firefox updates via a background service
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
@@ -116,13 +120,13 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 1830  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
-  /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL, high entropy FP vector; should be true, except if using WE CanvasBlocker
-  /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
+  // /* 2010  */ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
+  // /* 2010  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
+    // https://www.nytimes.com/interactive/2021/06/30/opinion/environmental-inequity-trees-critical-infrastructure.html
   /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   /* 2306  */ user_pref("permissions.default.desktop-notification", 2); // block Notifications
-  /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly
-  /* 2510  */ user_pref("dom.webaudio.enabled", true); // should be false, except if using WE CanvasBlocker
+  // /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
+  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
