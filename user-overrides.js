@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 26.7.2021 (commit: b8f3d93); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; 1.8.2021 (commit: eb4363d); https://github.com/arkenfox/user.js
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -28,6 +28,7 @@ NOTE: Before proceeding further, make a backup of your current profile
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     Enter "Load" in the search box, click [Load] button and open https://raw.githubusercontent.com/crssi/Firefox/master/CanvasBlocker-settings.json
+    Note: When WebGL is disabled, then CB is not essential
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
     Settings
       Allow domain blocking: Uncheck
@@ -106,7 +107,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 5000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 5000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
-  /* 5000x */ user_pref("image.webp.enabled", false); // disable WebP
   /* 5000x */ user_pref("signon.management.page.fileImport.enabled", true); // enable logins import from file (Bitwarden, KeePass)
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
@@ -125,10 +125,11 @@ USEFUL/INTERESTING EXTENSIONS:
     // https://www.nytimes.com/interactive/2021/06/30/opinion/environmental-inequity-trees-critical-infrastructure.html
   /* 2022  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   /* 2306  */ user_pref("permissions.default.desktop-notification", 2); // block Notifications
-  // /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
+  /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
-  /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // do we need 3rd party cookies blocked when TC Automode?
+  /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // we don't need 3rd party cookies blocked when TC Automode
+  /* 2701  */ user_pref("network.cookie.cookieBehavior", 5); // enable dynamic FPI (dFPI)
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
