@@ -1,6 +1,8 @@
 _sso=
 .encReferrer=
 /_login
+//archive.ph/
+//archive.today/
 //azure.microsoft.com/email/\?destination=https%3A%2F%2Fportal.azure.com%2F
 //consent.google.
 //disq.us/
