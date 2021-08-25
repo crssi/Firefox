@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; 17.8.2021 (commit: dc63a75); https://github.com/arkenfox/user.js
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 881a2d2 on 25.8.2021
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -87,52 +87,51 @@ USEFUL/INTERESTING EXTENSIONS:
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:15,suggestion:Infinity"); // resets 0801 and must be applied before
   /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
-  /* 0807  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
-  /* 0807  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
-  /* 0850a */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
-  /* 0850c */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
-  /* 0850d */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
-  /* 0862  */ user_pref("places.history.enabled", false); // disable history
+  /* 0804  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
+  /* 0804  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 0); // Reset autoplay of HTML5 media to default
-  /* 2524  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
+  /* 2503  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  /* 5000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
-  /* 5000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmark in a new tab
-  /* 5000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see Bugzilla 1320061
-  /* 5000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
-  /* 5000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
-  /* 5000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
-  /* 5000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
-  /* 5000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
-  /* 5000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
-  /* 5000x */ user_pref("signon.management.page.fileImport.enabled", true); // enable logins import from file (Bitwarden, KeePass)
+  /* 5010  */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
+  /* 5011  */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
+  /* 5012  */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
+  /* 5013  */ user_pref("places.history.enabled", false); // disable history
+  /* 9000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
+  /* 9000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmark in a new tab
+  /* 9000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see Bugzilla 1320061
+  /* 9000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
+  /* 9000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
+  /* 9000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
+  /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
+  /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
+  /* 9000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
+  /* 9000x */ user_pref("signon.management.page.fileImport.enabled", true); // enable logins import from file (Bitwarden, KeePass)
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
-  /* 0110  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 0301  */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 0302  */ user_pref("app.update.background.scheduling.enabled", true); // enable auto-INSTALLING Firefox updates via a background service
-  // /* 0913  */ user_pref("network.http.windows-sso.enabled", true); // enable automatic authentication on Microsoft sites
+  // /* 0906  */ user_pref("network.http.windows-sso.enabled", true); // enable automatic authentication on Microsoft sites
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content; when HTTPS-Only mode is disabled
-  /* 1603  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
+  /* 1601  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
   /* 2003  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   /* 2022  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
-  /* 2306  */ user_pref("permissions.default.desktop-notification", 2); // block Notifications
-  /* 2403  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
-  // /* 2422  */ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
-  // /* 2522  */ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
-  // /* 2522  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
+  /* 2406  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
+  // /* 2504  */ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
+  // /* 2504  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // we don't need 3rd party cookies blocked when TC Automode
   /* 2701  */ user_pref("network.cookie.cookieBehavior", 5); // enable dynamic FPI (dFPI)
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  /* 5000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
-  /* 5000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-  /* 5000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
-  /* 5000x */ user_pref("security.osclientcerts.autoload", true); // use OS user certificates store
+  /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
+  // /* 5506  */ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
+  /* 9000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
+  /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
+  /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
+  /* 9000x */ user_pref("security.osclientcerts.autoload", true); // use OS user certificates store
 
 user_pref("_user.js.parrot", "Eagle has landed!");
