@@ -13,7 +13,7 @@
 @@/share-link-$1p,xhr
 @@||a-msedge.net^$domain=bing.com
 @@||accounts.google.*/ServiceLogin$subdocument
-@@||ads.api.24ur.si^$xhr,domain=24ur.com
+@@||ads.api.24ur.si^$xhr
 @@||advertising.com^$1p
 @@||alexa.com^$1p
 @@||amzn.to^$1p
