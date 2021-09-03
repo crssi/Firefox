@@ -12,6 +12,7 @@ _sso=
 //oisd.nl/
 //sites.google.com/
 //slack-redir.net/link
+//testtls.com/
 //web.archive.org/
 //whois.
 //www.bing.com/
