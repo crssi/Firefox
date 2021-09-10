@@ -10,6 +10,7 @@ NOTE: Before proceeding further, make a backup of your current profile
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
+     Show search suggestions ahead of browsing history in address bar results: Uncheck
 4. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
 5. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
