@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 881a2d2 on 25.8.2021
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit e5c1288 on 10.9.2021
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -117,18 +117,15 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 1241  */ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content; when HTTPS-Only mode is disabled
   /* 1601  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2001  */ user_pref("media.peerconnection.enabled", true); // enable WebRTC, but do not leak local IP
-  /* 2003  */ user_pref("media.getusermedia.screensharing.enabled", true); // enable screensharing
   /* 2022  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
-  /* 2406  */ user_pref("dom.allow_cut_copy", true); // allow cut/copy by JS
   // /* 2504  */ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
-  // /* 2504  */ user_pref("webgl.enable-webgl2", true); // enable WebGL
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // we don't need 3rd party cookies blocked when TC Automode
   /* 2701  */ user_pref("network.cookie.cookieBehavior", 5); // enable dynamic FPI (dFPI)
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
-  /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
+  /* 4503  */ user_pref("pr ivacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-  // /* 5506  */ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
+  /* 5506  */ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
   /* 9000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
