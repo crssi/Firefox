@@ -137,6 +137,7 @@
 ||sitebot.ai^$3p
 ||smartfocus.com^$3p
 ||smind.com^$3p
+||sni.star.24ur.com.c.footprint.net^$media
 ||spot.im^$3p
 ||startpage.com/do/$image,important
 ||startpage.com/english/$image,important
