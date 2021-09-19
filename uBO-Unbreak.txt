@@ -231,3 +231,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 /leaky-paywall/*$badfilter
 /leaky-paywall-$badfilter
 ?action=leaky_paywall_$badfilter
+
+! stop spam logs
+||pipe.aria.microsoft.com^$badfilter
