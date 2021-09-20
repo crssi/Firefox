@@ -91,4 +91,5 @@ ubi.com/
 virustotal.com/
 wego.here.com/
 www.google.com/url?q=
+xboxlive.com/connect/
 youtube.com/embed/
