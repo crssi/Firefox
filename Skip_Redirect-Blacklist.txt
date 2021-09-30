@@ -79,6 +79,7 @@ paypal.com/
 phish-report.mozilla.com/
 reddit.com/
 rover.ebay.co
+safelinks.protection.outlook.com/
 securityheaders.com/
 soundestlink.com/transactional/
 ssllabs.com/
