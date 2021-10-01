@@ -78,7 +78,7 @@
 ||hotjar.com^$important,3p
 ||hotjar.io^$important,3p
 ||hubspot.com^$3p
-||hubspot.net^$3p
+! ||hubspot.net^$3p -> https://www.enowsoftware.com/solutions-engine/centralized-mail-transport-in-multi-forest-exchange-environments
 ||incartupsell.com^$3p
 ||inspectlet.com^$3p,important
 ||instagram.*^$3p,~subdocument
