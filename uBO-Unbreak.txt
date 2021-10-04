@@ -234,4 +234,5 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! stop spam logs
 ||pipe.aria.microsoft.com^$badfilter
+||browser.pipe.aria.microsoft.com^$badfilter
 @@||docs.microsoft.com/answers/static/trackJs.json$xhr
