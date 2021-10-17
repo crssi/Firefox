@@ -169,3 +169,8 @@
 
 ! https://www.mimovrste.com
 /marxy.js?t=$script
+
+
+! parameters
+||imdb.com^$removeparam=listId
+||imdb.com^$removeparam=ref_
