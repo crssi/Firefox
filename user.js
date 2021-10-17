@@ -1509,11 +1509,6 @@ ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     Enter "Load" in the search box, click [Load] button and open https://raw.githubusercontent.com/crssi/Firefox/master/CanvasBlocker-settings.json
     Note: When WebGL is disabled, then CB is not essential
-  ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
-    Settings
-      Allow domain blocking: Uncheck
-      Filters ETag headers from requests: Uncheck
-      Click [Save & reload addon]
   Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
     Click [Containerise] icon, click [Pencil], copy/paste from https://raw.githubusercontent.com/crssi/Firefox/master/Containerise.txt, click [Save]
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
@@ -1544,17 +1539,12 @@ ADDITIONAL EXTENSIONS THAT I AM USING:
 USEFUL/INTERESTING EXTENSIONS:
   Bitwarden - Free Password Manager; https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/ (https://github.com/bitwarden/, https://bitwarden.com/)
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
-  Close unused blank tabs Plus; https://addons.mozilla.org/firefox/addon/close-unused-blank-tabs-plus/ (https://github.com/crssi/Close-unused-blank-tabs-Plus/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
-  Ephemeral or Confined Container, EoCC; https://addons.mozilla.org/firefox/addon/confiner/ (https://github.com/zncoder/confiner)
   Extension source viewer; https://addons.mozilla.org/firefox/addon/crxviewer/ (https://github.com/Rob--W/crxviewer/)
   http tracker; https://addons.mozilla.org/firefox/addon/http-tracker/
   IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
-  Neat URL; https://addons.mozilla.org/firefox/addon/neat-url/ (https://github.com/Smile4ever/Neat-URL/)
-    Copy/Paste settings from https://raw.githubusercontent.com/crssi/Firefox/master/Neat_URL-custom_parameters.txt
   NX Enhanced; https://addons.mozilla.org/firefox/addon/nx-enhanced/ (https://github.com/hjk789/NXEnhanced)
-  Redirect AMP to HTML; https://addons.mozilla.org/firefox/addon/amp2html/ (https://github.com/da2x/amp2html/)
   Request Control; https://addons.mozilla.org/firefox/addon/requestcontrol/ (https://github.com/tumpio/requestcontrol/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
