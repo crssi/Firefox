@@ -2,7 +2,7 @@
 Get-Content -Path "$($env:APPDATA)\Mozilla\Firefox\installs.ini" | ForEach-Object { if ($_.StartsWith('Default=Profiles/')) { $profilePath = "$($env:APPDATA)\Mozilla\Firefox\Profiles\$($_.Replace('Default=Profiles/', ''))" } }
 
 & "$env:UserProfile\Documents\GitHub\Firefox\.Tools\dejsonlz4.exe" @("$profilePath\addonStartup.json.lz4","$profilePath\addonStartup.json")
-Copy-Item "$env:UserProfile\Documents\GitHub\Firefox\.Tools\jsonlz4.exe" $profilePath -Force
+Copy-Item "$([Environment]::GetFolderPath("MyDocuments"))\GitHub\Firefox\.Tools\jsonlz4.exe" $profilePath -Force
 
 forEach ($file in @('cert9.db','content-prefs.sqlite','favicons.sqlite','handlers.json','key4.db','logins.json','permissions.sqlite','persdict.dat','pkcs11.txt','places.sqlite')) { if (Test-Path -Path $profilePath\$file) { Remove-Item -Path $profilePath\$file -Force -ErrorAction SilentlyContinue } }
 
