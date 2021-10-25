@@ -238,4 +238,5 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 @@||docs.microsoft.com/answers/static/trackJs.json$xhr
 ||alive.github.com^$badfilter
 
+! https://github.com/badmojr/1Hosts/issues/274
 ||g.msn.com^$badfilter
