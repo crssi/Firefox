@@ -237,3 +237,5 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ||browser.pipe.aria.microsoft.com^$badfilter
 @@||docs.microsoft.com/answers/static/trackJs.json$xhr
 ||alive.github.com^$badfilter
+
+||g.msn.com^$badfilter
