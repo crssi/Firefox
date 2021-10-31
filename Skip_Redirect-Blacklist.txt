@@ -78,6 +78,7 @@ on.crisp.email/
 paypal.com/
 phish-report.mozilla.com/
 reddit.com/
+reviewmeta.com/
 rover.ebay.co
 safelinks.protection.outlook.com/
 securityheaders.com/
