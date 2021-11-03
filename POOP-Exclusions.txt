@@ -59,5 +59,6 @@ f.vision *.dnsf.vision
 fast.com *.nflx*.net
 github.com *.github*.com
 slack.com *.slack*.com
+tunein.com *.radiotime.com
 twitter.com *.twimg.com
 yastatic.net *.yandex.*
