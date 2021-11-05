@@ -240,3 +240,7 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! https://github.com/badmojr/1Hosts/issues/274
 ||g.msn.com^$badfilter
+
+! ebay message reply broken
+@@$removeparam=loc
+@@$removeparam=qid
