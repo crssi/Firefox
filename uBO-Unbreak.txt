@@ -242,5 +242,5 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ||g.msn.com^$badfilter
 
 ! ebay message reply broken
-@@$removeparam=loc
-@@$removeparam=qid
+!@@$removeparam=loc
+!@@$removeparam=qid
