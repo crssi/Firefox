@@ -44,6 +44,9 @@ ESSENTIAL EXTENSIONS:
     No-skip-urls-list: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Skip_Redirect-Blacklist.txt
     Notifications
       Enable popup: Uncheck
+  Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
+    Whitelist Sources: Add https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
+    Rewrite Mode: Send nothing as referer, looking like a direct hit
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     Export/Import
       Import Preferences
