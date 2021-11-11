@@ -8,12 +8,14 @@ _sso=
 //disq.us/
 //dns.nextdns.io/
 //go.redirectingat.com/
+//htmlpreview.github.io/
 //myaccount.google.com/age-verification
 //oisd.nl/
 //sites.google.com/
 //slack-redir.net/link
 //testtls.com/
 //web.archive.org/
+//webbkoll.dataskydd.net/
 //whois.
 //www.bing.com/
 /abp
