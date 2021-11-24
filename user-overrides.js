@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit f8932dc on 7.11.2021
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 4b393b9 on 24.11.2021
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -101,7 +101,7 @@ USEFUL/INTERESTING EXTENSIONS:
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0301  */ user_pref("app.update.auto", true); // enable auto-installing Firefox updates
   /* 0302  */ user_pref("app.update.background.scheduling.enabled", true); // enable auto-INSTALLING Firefox updates via a background service
-  /* 0906  */ user_pref("network.http.windows-sso.enabled", true); // enable automatic authentication on Microsoft sites
+  // /* 0906  */ user_pref("network.http.windows-sso.enabled", true); // enable automatic authentication on Microsoft sites
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
@@ -112,7 +112,6 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // we don't need 3rd party cookies blocked when TC Automode
   /* 2701  */ user_pref("network.cookie.cookieBehavior", 5); // enable dynamic FPI (dFPI)
-  /* 2703  */ user_pref("network.cookie.lifetimePolicy", 2); // delete cookies and site data on close, but allow exceptions
   /* 2803  */ user_pref("privacy.clearOnShutdown.cookies", false); // complements with 2703 set to 2
   /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
