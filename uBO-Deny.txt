@@ -78,7 +78,6 @@
 ||hotjar.com^$important,3p
 ||hotjar.io^$important,3p
 ||hubspot.com^$3p
-! ||hubspot.net^$3p -> https://www.enowsoftware.com/solutions-engine/centralized-mail-transport-in-multi-forest-exchange-environments
 ||incartupsell.com^$3p
 ||inspectlet.com^$3p,important
 ||instagram.*^$3p,~subdocument
@@ -112,7 +111,6 @@
 ||oath.com^$3p
 ||olark.com^$3p
 ||oneall.com^$3p
-!||onesignal.com^$3p
 ||outbrain.com^$3p
 ||paht.tech^
 ||piano.io$3p
@@ -156,7 +154,6 @@
 ||wibbitz.com^$3p
 ||yahoo.*^$3p,domain=~yahoo.com
 ||yottlyscript.com^$3p
-!||youtube.com/youtubei/v1/log_event$xhr
 
 
 ! https://www.cnet.com/videos/googles-new-pixel-5-seattle-approves-minimum-wage-for-lyft-uber-drivers/
