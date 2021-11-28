@@ -54,12 +54,12 @@
 @@||google.*/maps/$subdocument
 @@||google.*/recaptcha/$subdocument
 @@||google.*^$script,domain=youtube.com
-@@||google.*^$domain=google.com|googleapis.com
+@@||google*.*^$domain=google.*|googleapis.com|googleusercontent.com|youtube.com|youtube-nocookie.com
 @@||google.com/recaptcha/api.js$script
 @@||google.com/uds/*visualization$script,stylesheet
-@@||google.com^$domain=youtube.com|youtube-nocookie.com
-@@||googleapis.com^$subdocument,domain=google.com|google.si
-@@||googleusercontent.com^$subdocument,domain=google.com|google.si
+!@@||google.com^$domain=youtube.com|youtube-nocookie.com
+!@@||googleapis.com^$subdocument,domain=google.*
+!@@||googleusercontent.com^$subdocument,domain=google.*
 @@||gravatar.com^$image,stylesheet
 @@||gstaticadssl.*.google.com^$font
 @@||ibb.co^$image
@@ -77,7 +77,7 @@
 @@||msa.trafficmanager.net^$xhr
 @@||omara.cdn-cnj.si^$script
 @@||paypal.com^$subdocument,popup
-@@||pictures.zooplus.com^$script,image,domain=www.zoohit.si
+@@||pictures.zooplus.com^$script,image,domain=zoohit.*
 @@||play.vidyard.com^$subdocument,script
 @@||players.brightcove.net^$script
 @@||pulsar.ebay.com^$1p
@@ -88,7 +88,7 @@
 @@||tealium.cbsnews.com^$script,1p
 @@||thetacdn.net^$image
 @@||tags.tiqcdn.com/utag/$script
-@@||translate.google.com^$script,domain=googleusercontent.com
+!@@||translate.google.com^$script,domain=googleusercontent.com
 @@||translate.googleusercontent.com^
 @@||tumblr.com^$subdocument,domain=instagram.com
 @@||ubisoft.com^$domain=ubi.com
@@ -97,7 +97,7 @@
 @@||use.typekit.net^$font,stylesheet,script
 @@||vidyard.com^$domain=play.vidyard.com
 @@||wavesecure.com^$subdocument,domain=mcafee.com
-@@||wgcdn.co^$domain=worldoftanks.eu|worldoftanks.com|wargaming.net
+@@||wgcdn.co^$domain=worldoftanks.*|wargaming.net
 @@||youtube-ui.*.google.com^$subdocument,script
 @@||ytimg.*.google.com^$image
 @@||ytimg.com^$script
@@ -201,12 +201,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 ! AdGuard Social Media
 #@#.share-container
 
-! https://aternos.org
-!@@||cdn.snigelweb.com^$script,domain=aternos.org
-!@@||securepubads.g.doubleclick.net^$script,domain=aternos.org
-!@@||amazon-adsystem.com^$xhr,domain=aternos.org
-!@@||www.google-analytics.com^$script,domain=aternos.org
-
 ! Video at https://www.wrc.com/en/video/player/?videoId=337067
 ! Neuter https://github.com/uBlockOrigin/uAssets/blob/bdb6f42d30539e913d7fddadbe325238899d7ce8/filters/resource-abuse.txt#L30-L31
 @@*?proxy=$script
@@ -240,7 +234,3 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! https://github.com/badmojr/1Hosts/issues/274
 ||g.msn.com^$badfilter
-
-! ebay message reply broken
-!@@$removeparam=loc
-!@@$removeparam=qid
