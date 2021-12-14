@@ -1,6 +1,6 @@
 {
-  "timeStamp": 1636359484200,
-  "version": "1.38.6",
+  "timeStamp": 1639491110800,
+  "version": "1.39.2",
   "userSettings": {
     "advancedUserEnabled": true,
     "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/Lite/adblock.txt\nhttps://badmojr.github.io/1Hosts/Pro/adblock.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://www.fanboy.co.nz/enhancedstats.txt",
@@ -32,12 +32,14 @@
     "adguard-spyware-url",
     "block-lan",
     "urlhaus-1",
+    "curben-phishing",
+    "curben-pup",
     "CHN-0",
     "CZE-0",
     "SVN-0",
     "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt",
     "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt",
-    "https://badmojr.github.io/1Hosts/Lite/adblock.txt",
+    "https://badmojr.github.io/1Hosts/Pro/adblock.txt",
     "https://filters.adtidy.org/extension/ublock/filters/6.txt",
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt",
     "https://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt",
@@ -45,10 +47,7 @@
     "https://www.fanboy.co.nz/enhancedstats.txt",
     "https://abp.oisd.nl//"
   ],
-  "hiddenSettings": {
-    "cloudStorageCompression": false,
-    "filterAuthorMode": true
-  },
+  "hiddenSettings": {},
   "whitelist": [
     "# about-scheme",
     "chrome-extension-scheme",
