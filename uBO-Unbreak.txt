@@ -234,3 +234,6 @@ google.com#@#+js(abort-current-inline-script, navigator.deviceMemory)
 
 ! https://github.com/badmojr/1Hosts/issues/274
 ||g.msn.com^$badfilter
+
+! AdGuard Tracking Protection, see https://github.com/badmojr/1Hosts/commit/47f24f92ba6d57408f78e45aa166be74d061b7f6#commitcomment-62242367
+||collector.githubapp.com^$badfilter
