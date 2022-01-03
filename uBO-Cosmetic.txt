@@ -92,3 +92,5 @@ www.reddit.com##.promotedlink
 ||dc.services.visualstudio.com/*/track$badfilter
 ||dc.services.visualstudio.com/v2/track$badfilter
 ||virtualearth.net/webservices/v*/loggingservice/loggingservice.svc/log?entry=$badfilter
+
+www.nytimes.com##.efw9frv0.css-3fbowa.expanded-dock.expanded.shown.MAG_web_all_Monthly-Sale-dock
