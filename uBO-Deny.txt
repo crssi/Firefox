@@ -22,7 +22,7 @@
 ||agilemeasure.com^$3p
 ||alooma.com^$3p
 ||amazon-adsystem.com^
-||amazonaws.com/*banners$3p
+!||amazonaws.com/*banners$3p
 ||ampcid.google.com^$important
 ||anlcld.com^
 ||aolcdn.com/ads/$3p,script
