@@ -57,6 +57,7 @@
 disqus.com *.disqus.com
 f.vision *.dnsf.vision
 fast.com *.nflx*.net
+forms.medifit.si app.eambulanta.si
 github.com *.github*.com
 slack.com *.slack*.com
 tunein.com *.radiotime.com
