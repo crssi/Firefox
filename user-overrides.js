@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 7016c20 on 30.12.2021
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 10044fc on 22.1.2022
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -80,8 +80,8 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0804  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0804  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 0); // Reset autoplay of HTML5 media to default
-  /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
-  /* 4512  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
+  /* 2651??*/ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /* 4513  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 5010  */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
   /* 5011  */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
   /* 5012  */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
@@ -103,19 +103,22 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212  */ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
-  /* 1241??*/ user_pref("security.mixed_content.block_display_content", false); // enable insecure passive content; when HTTPS-Only mode is disabled
   /* 1601  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2022  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
-  /* 2701??*/ user_pref("browser.contentblocking.category", "standard"); // we don't need 3rd party cookies blocked when TC Automode
-  /* 2701  */ user_pref("network.cookie.cookieBehavior", 5); // enable dynamic FPI (dFPI)
-  /* 2803  */ user_pref("privacy.clearOnShutdown.cookies", false); // complements with 2703 set to 2
-  /* 4001  */ user_pref("privacy.firstparty.isolate", false); // true breaks cross-domain logins and site functionality, TC covers FPI just fine
+  /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // we don't need 3rd party cookies blocked when TC Automode
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
-  /* 4513  */ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
+  /* 4520  */ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 5506  */ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
+  /* 7016  */ user_pref("network.http.referer.disallowCrossSiteRelaxingDefault", true);
+  /* 7016  */ user_pref("privacy.partition.network_state.ocsp_cache", true);
+  /* 7016  */ user_pref("network.cookie.cookieBehavior", 5); // enable dynamic FPI (dFPI)
+  /* 7016  */ user_pref("privacy.trackingprotection.enabled", true); // enable tracking protection
+  /* 7016  */ user_pref("privacy.trackingprotection.socialtracking.enabled", true); // enable social tracking protection
+  /* 7016  */ user_pref("privacy.trackingprotection.cryptomining.enabled", true); // enable social tracking protection
+  /* 7016  */ user_pref("privacy.trackingprotection.fingerprinting.enabled", true); // enable fingerprinting protection
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
   /* 9000x */ user_pref("security.osclientcerts.autoload", true); // use OS user certificates store
