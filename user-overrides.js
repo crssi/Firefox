@@ -124,3 +124,5 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000x */ user_pref("security.osclientcerts.autoload", true); // use OS user certificates store
 
 user_pref("_user.js.parrot", "Eagle has landed!");
+
+// browser.download.improvements_to_download_panel

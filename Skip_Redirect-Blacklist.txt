@@ -2,8 +2,13 @@ _sso=
 .encReferrer=
 /_login
 //12ft.io/
+//archive.fo/
+//archive.is/
+//archive.li/
+//archive.md/
 //archive.ph/
 //archive.today/
+//archive.vn/
 //azure.microsoft.com/email/\?destination=https%3A%2F%2Fportal.azure.com%2F
 //consent.google.
 //disq.us/
@@ -62,7 +67,6 @@ aa419.org/
 access/jwt
 action=login
 alipay.com
-archive.is/
 chart.googleapis.com/chart
 docs.google.com/
 duckduckgo.com/

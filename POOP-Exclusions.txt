@@ -20,6 +20,7 @@
 * firestore.googleapis.com
 * mcapi.us
 * shopify-chat.shopifycloud.com
+* v.redd.it
 *.*inn.com *.*inn.com
 *.24live*.com *.24live*.com
 *.airbnb.com *.muscache.com
