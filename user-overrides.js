@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 10044fc on 22.1.2022
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit a98b73c on 13.2.2022
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -124,5 +124,3 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000x */ user_pref("security.osclientcerts.autoload", true); // use OS user certificates store
 
 user_pref("_user.js.parrot", "Eagle has landed!");
-
-// browser.download.improvements_to_download_panel
