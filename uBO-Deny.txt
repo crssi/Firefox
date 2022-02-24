@@ -167,6 +167,8 @@
 ! https://www.mimovrste.com
 /marxy.js?t=$script
 
+! https://hifireference.com
+/frontend.min.js?ver=1.6.9$script
 
 ! parameters
 ||imdb.com^$removeparam=listId
