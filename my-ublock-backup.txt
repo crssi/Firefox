@@ -1,13 +1,12 @@
 {
-  "timeStamp": 1639491110800,
-  "version": "1.39.2",
+  "timeStamp": 1645705488300,
+  "version": "1.41.6",
   "userSettings": {
     "advancedUserEnabled": true,
-    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/Lite/adblock.txt\nhttps://badmojr.github.io/1Hosts/Pro/adblock.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://www.fanboy.co.nz/enhancedstats.txt",
+    "externalLists": "https://abp.oisd.nl//\nhttps://badmojr.github.io/1Hosts/Pro/adblock.txt\nhttps://filters.adtidy.org/extension/ublock/filters/6.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Cosmetic.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Deny.txt\nhttps://raw.githubusercontent.com/crssi/Firefox/master/uBO-Unbreak.txt\nhttps://www.fanboy.co.nz/enhancedstats.txt",
     "firewallPaneMinimized": false,
     "importedLists": [
       "https://abp.oisd.nl//",
-      "https://badmojr.github.io/1Hosts/Lite/adblock.txt",
       "https://badmojr.github.io/1Hosts/Pro/adblock.txt",
       "https://filters.adtidy.org/extension/ublock/filters/6.txt",
       "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt",
@@ -47,7 +46,9 @@
     "https://www.fanboy.co.nz/enhancedstats.txt",
     "https://abp.oisd.nl//"
   ],
-  "hiddenSettings": {},
+  "hiddenSettings": {
+    "filterAuthorMode": true
+  },
   "whitelist": [
     "# about-scheme",
     "chrome-extension-scheme",
