@@ -6,6 +6,7 @@ youtube.com##div[class^="branding-img-container"]
 youtube.com##div[class^="ytp-ce-"]
 youtube.com##div[class^="ytp-pause-overlay"]
 youtube.com##.ytp-cards-button-icon
+www.youtube.com##.ytp-cards-teaser
 
 !duckduckgo.com##.header--aside
 
