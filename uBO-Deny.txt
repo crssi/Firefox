@@ -103,7 +103,7 @@
 ||metric.gstatic.com^
 ||moengage.com^$3p
 ||montiapm.com^$3p
-||n26.*^$domain=~n26.com
+!||n26.*^$domain=~n26.com
 ||nepremicnine.net^$3p
 ||newrelic.com^
 ||nir.regmedia.co.uk^$3p
