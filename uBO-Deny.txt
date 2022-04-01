@@ -169,7 +169,3 @@
 
 ! https://hifireference.com
 /frontend.min.js?ver=1.6.9$script
-
-! parameters
-!||imdb.com^$removeparam=listId
-!||imdb.com^$removeparam=ref_
