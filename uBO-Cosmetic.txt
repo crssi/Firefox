@@ -95,3 +95,4 @@ www.reddit.com##.promotedlink
 ||virtualearth.net/webservices/v*/loggingservice/loggingservice.svc/log?entry=$badfilter
 
 www.nytimes.com##.efw9frv0.css-3fbowa.expanded-dock.expanded.shown.MAG_web_all_Monthly-Sale-dock
+www.geeksforgeeks.org##.login-modal-div
