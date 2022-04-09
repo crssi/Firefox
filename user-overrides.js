@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit d9af90d on 10.3.2022
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 9aae0a6 on 9.4.2022
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -80,7 +80,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0804  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0804  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 0); // Reset autoplay of HTML5 media to default
-  /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /* 2651 ?*/ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4513  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 5010  */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
   /* 5011  */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
@@ -93,7 +93,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 9000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 9000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
-  /* 9000x */ user_pref("browser.download.improvements_to_download_panel", false); // enable classic download behavior
+  /* 9000x?*/ user_pref("browser.download.improvements_to_download_panel", false); // enable classic download behavior
   /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 9000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
@@ -107,17 +107,11 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 1601  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
   /* 2022  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
-  /* 2701  */ user_pref("browser.contentblocking.category", "standard"); // we don't need 3rd party cookies blocked when TC Automode
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
-  /* 4520  */ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
+  // /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-  /* 5506  */ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
-  /* 7016  */ user_pref("network.cookie.cookieBehavior", 5); // enable dynamic FPI (dFPI)
-  /* 7016  */ user_pref("privacy.trackingprotection.enabled", true); // enable tracking protection
-  /* 7016  */ user_pref("privacy.trackingprotection.socialtracking.enabled", true); // enable social tracking protection
-  /* 7016  */ user_pref("privacy.trackingprotection.cryptomining.enabled", true); // enable social tracking protection
-  /* 7016  */ user_pref("privacy.trackingprotection.fingerprinting.enabled", true); // enable fingerprinting protection
+  // /* 5506 ?*/ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
   /* 9000x */ user_pref("security.osclientcerts.autoload", true); // use OS user certificates store
