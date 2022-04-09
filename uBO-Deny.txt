@@ -18,7 +18,7 @@
 ||adicio.com^$3p
 ||adsensecustomsearchads.com^$important
 ||adserver.yahoo.com^$important
-||adtech.*^$important
+!||adtech.*^$important
 ||agilemeasure.com^$3p
 ||alooma.com^$3p
 ||amazon-adsystem.com^
