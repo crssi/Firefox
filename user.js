@@ -1394,8 +1394,6 @@ ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
     Enter "Load" in the search box, click [Load] button and open https://raw.githubusercontent.com/crssi/Firefox/master/CanvasBlocker-settings.json
     Note: When WebGL is disabled, then CB is not essential
-  Containerise; https://addons.mozilla.org/firefox/addon/containerise/ (https://github.com/kintesh/containerise/)
-    Click [Containerise] icon, click [Pencil], copy/paste from https://raw.githubusercontent.com/crssi/Firefox/master/Containerise.txt, click [Save]
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
@@ -1411,10 +1409,6 @@ ESSENTIAL EXTENSIONS:
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
     Whitelist Sources: Add https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
     Rewrite Mode: Send nothing as referer, looking like a direct hit
-  Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
-    Export/Import
-      Import Preferences
-        Click [Import from local file]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/)
     Settings
       Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.txt
@@ -1423,6 +1417,10 @@ EXTENSIONS THAT I AM ALSO USING:
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
+  Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
+    Export/Import
+      Import Preferences
+        Click [Import from local file]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
@@ -1444,7 +1442,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0804  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0804  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 0); // Reset autoplay of HTML5 media to default
-  /* 2651 ?*/ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4513  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 5010  */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
   /* 5011  */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
@@ -1457,7 +1455,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 9000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 9000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
-  /* 9000x?*/ user_pref("browser.download.improvements_to_download_panel", false); // enable classic download behavior
+  /* 9000x */ user_pref("browser.download.improvements_to_download_panel", false); // enable classic download behavior
   /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 9000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
@@ -1473,9 +1471,9 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
-  // /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, except if using WE CanvasBlocker
+  /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when  using WE CanvasBlocker
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
-  // /* 5506 ?*/ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
+  /* 5506 ?*/ user_pref("javascript.options.wasm", true); // enable WebAssembly, Synology DSM 7.0
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
   /* 9000x */ user_pref("security.osclientcerts.autoload", true); // use OS user certificates store

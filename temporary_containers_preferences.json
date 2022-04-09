@@ -1,34 +1,35 @@
 {
   "version": "1.9.2",
-  "date": 1617955724800,
+  "date": 1649513103700,
   "preferences": {
     "automaticMode": {
-      "active": true,
+      "active": false,
       "newTab": "created"
     },
     "notifications": false,
     "container": {
       "namePrefix": "%domain%",
-      "color": "red",
+      "color": "toolbar",
       "colorRandom": true,
-      "icon": "circle",
-      "iconRandom": false,
-      "numberMode": "hide",
-      "removal": 900000,
       "colorRandomExcluded": [
         "toolbar"
       ],
-      "iconRandomExcluded": []
+      "icon": "circle",
+      "iconRandom": false,
+      "iconRandomExcluded": [],
+      "numberMode": "hide",
+      "removal": 900000
     },
     "iconColor": "default",
     "isolation": {
+      "reactivateDelay": 0,
       "global": {
         "navigation": {
           "action": "never"
         },
         "mouseClick": {
           "middle": {
-            "action": "notsamedomain",
+            "action": "never",
             "container": "default"
           },
           "ctrlleft": {
@@ -43,85 +44,15 @@
         "excluded": {},
         "excludedContainers": []
       },
-      "domain": [
-        {
-          "pattern": "duckduckgo.com",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": false
-          },
-          "navigation": {
-            "action": "notsamedomain"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "global"
-            }
-          },
-          "excluded": {},
-          "_index": 0
-        },
-        {
-          "pattern": "/^https?:\\/\\/www\\.google\\..+\\/.*/",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": false,
-            "allowedInTemporary": false
-          },
-          "navigation": {
-            "action": "notsamedomain"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "global"
-            }
-          },
-          "excluded": {}
-        },
-        {
-          "pattern": "*",
-          "always": {
-            "action": "enabled",
-            "allowedInPermanent": false,
-            "allowedInTemporary": false
-          },
-          "navigation": {
-            "action": "global"
-          },
-          "mouseClick": {
-            "middle": {
-              "action": "global"
-            },
-            "ctrlleft": {
-              "action": "global"
-            },
-            "left": {
-              "action": "global"
-            }
-          },
-          "excluded": {}
-        }
-      ],
+      "domain": [],
       "mac": {
-        "action": "enabled"
-      },
-      "reactivateDelay": 0
+        "action": "disabled"
+      }
     },
     "browserActionPopup": false,
     "pageAction": false,
     "contextMenu": true,
+    "contextMenuBookmarks": false,
     "keyboardShortcuts": {
       "AltC": true,
       "AltP": true,
@@ -132,86 +63,8 @@
       "AltI": false
     },
     "replaceTabs": false,
-    "cookies": {
-      "domain": {
-        "duckduckgo.com": [
-          {
-            "domain": "duckduckgo.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "1",
-            "path": "",
-            "sameSite": "",
-            "secure": "",
-            "url": "https://duckduckgo.com/",
-            "value": "-1"
-          },
-          {
-            "domain": "duckduckgo.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "n",
-            "path": "",
-            "sameSite": "",
-            "secure": "",
-            "url": "https://duckduckgo.com/",
-            "value": "1"
-          },
-          {
-            "domain": "duckduckgo.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "av",
-            "path": "",
-            "sameSite": "",
-            "secure": "",
-            "url": "https://duckduckgo.com/",
-            "value": "1"
-          },
-          {
-            "domain": "duckduckgo.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "5",
-            "path": "",
-            "sameSite": "",
-            "secure": "",
-            "url": "https://duckduckgo.com/",
-            "value": "2"
-          },
-          {
-            "domain": "duckduckgo.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "am",
-            "path": "",
-            "sameSite": "",
-            "secure": "",
-            "url": "https://duckduckgo.com/",
-            "value": "here-maps"
-          }
-        ]
-      }
-    },
-    "deletesHistory": {
-      "automaticMode": "never",
-      "contextMenu": false,
-      "containerAlwaysPerDomain": "never",
-      "containerIsolation": "never",
-      "containerRemoval": 0,
-      "containerMouseClicks": "never",
-      "statistics": false,
-      "active": true,
-      "contextMenuBookmarks": false
-    },
-    "statistics": false,
     "closeRedirectorTabs": {
-      "active": true,
+      "active": false,
       "delay": 2000,
       "domains": [
         "t.co",
@@ -219,17 +72,32 @@
         "slack-redir.net"
       ]
     },
-    "contextMenuBookmarks": false,
-    "ignoreRequests": [],
-    "ui": {
-      "expandPreferences": true,
-      "popupDefaultTab": "isolation-per-domain"
+    "ignoreRequests": [
+      "getpocket.com",
+      "addons.mozilla.org"
+    ],
+    "cookies": {
+      "domain": {}
     },
-    "ignoreRequestsToAMO": true,
-    "ignoreRequestsToPocket": true,
     "scripts": {
-      "domain": {},
-      "active": true
+      "active": false,
+      "domain": {}
+    },
+    "deletesHistory": {
+      "active": false,
+      "automaticMode": "never",
+      "contextMenu": false,
+      "contextMenuBookmarks": false,
+      "containerAlwaysPerDomain": "never",
+      "containerIsolation": "never",
+      "containerRemoval": 0,
+      "containerMouseClicks": "never",
+      "statistics": false
+    },
+    "statistics": false,
+    "ui": {
+      "expandPreferences": false,
+      "popupDefaultTab": "isolation-global"
     }
   }
 }
