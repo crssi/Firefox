@@ -29,6 +29,7 @@
 *.azure.com *
 *.azureedge.net *.omnichannelengagementhub.com
 *.cnet.com cnetvideo.cbsistatic.com
+*.dm.* *.services.dmtech.com
 *.driftt.com *.drift*.com
 *.dropbox.com *.dropbox*.com
 *.ebay*.* *.ebay*.*
