@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1649513103700,
+  "date": 1650805564900,
   "preferences": {
     "automaticMode": {
       "active": false,
@@ -96,7 +96,7 @@
     },
     "statistics": false,
     "ui": {
-      "expandPreferences": false,
+      "expandPreferences": true,
       "popupDefaultTab": "isolation-global"
     }
   }
