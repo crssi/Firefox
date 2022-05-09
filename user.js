@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 9 April 2022
-* version: 99
+*    date: 9 May 2022
+* version: 100
 *     url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -741,6 +741,9 @@ user_pref("browser.download.useDownloadDir", false);
 user_pref("browser.download.alwaysOpenPanel", false);
 /* 2653: disable adding downloads to the system's "recent documents" list ***/
 user_pref("browser.download.manager.addToRecentDocs", false);
+/* 2654: enable user interaction for security by always asking how to handle new mimetypes [FF101+]
+ * [SETTING] General>Files and Applications>What should Firefox do with other files ***/
+user_pref("browser.download.always_ask_before_handling_new_types", true);
 
 /** EXTENSIONS ***/
 /* 2660: lock down allowed extension directories
@@ -1174,13 +1177,6 @@ user_pref("_user.js.parrot", "7000 syntax error: the parrot's pushing up daisies
  * [WHY] Defaults are fine. They can be overridden by a site-controlled Referrer Policy ***/
    // user_pref("network.http.referer.defaultPolicy", 2); // [DEFAULT: 2]
    // user_pref("network.http.referer.defaultPolicy.pbmode", 2); // [DEFAULT: 2]
-/* 7009: disable HTTP2
- * [WHY] Passive fingerprinting. ~50% of sites use HTTP2 [1]
- * [1] https://w3techs.com/technologies/details/ce-http2/all/all ***/
-   // user_pref("network.http.spdy.enabled", false);
-   // user_pref("network.http.spdy.enabled.deps", false);
-   // user_pref("network.http.spdy.enabled.http2", false);
-   // user_pref("network.http.spdy.websockets", false); // [FF65+]
 /* 7010: disable HTTP Alternative Services [FF37+]
  * [WHY] Already isolated with network partitioning (FF85+) ***/
    // user_pref("network.http.altsvc.enabled", false);
@@ -1209,6 +1205,7 @@ user_pref("_user.js.parrot", "7000 syntax error: the parrot's pushing up daisies
  * [WHY] Arkenfox only supports strict (2701) which sets these at runtime ***/
    // user_pref("network.cookie.cookieBehavior", 5);
    // user_pref("network.http.referer.disallowCrossSiteRelaxingDefault", true);
+   // user_pref("network.http.referer.disallowCrossSiteRelaxingDefault.top_navigation", true); // [FF100+]
    // user_pref("privacy.partition.network_state.ocsp_cache", true);
    // user_pref("privacy.trackingprotection.enabled", true);
    // user_pref("privacy.trackingprotection.socialtracking.enabled", true);
@@ -1356,6 +1353,15 @@ user_pref("app.update.background.scheduling.enabled", false);
    // [1] https://developer.mozilla.org/docs/Web/HTTP/CSP
    // [-] https://bugzilla.mozilla.org/1754301
 user_pref("security.csp.enable", true); // [DEFAULT: true]
+// FF100
+// 7009: disable HTTP2 - replaced by network.http.http2* prefs
+   // [WHY] Passive fingerprinting. ~50% of sites use HTTP2 [1]
+   // [1] https://w3techs.com/technologies/details/ce-http2/all/all
+   // [-] https://bugzilla.mozilla.org/1752621
+   // user_pref("network.http.spdy.enabled", false);
+   // user_pref("network.http.spdy.enabled.deps", false);
+   // user_pref("network.http.spdy.enabled.http2", false);
+   // user_pref("network.http.spdy.websockets", false); // [FF65+]
 // ***/
 
 /* END: internal custom pref to test for syntax errors ***/
@@ -1364,7 +1370,7 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 9aae0a6 on 9.4.2022
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit d6b26e7 on 9.5.2022
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -1408,6 +1414,10 @@ ESSENTIAL EXTENSIONS:
       Enable popup: Uncheck
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
     Whitelist Sources: Add https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
+  Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
+    Export/Import
+      Import Preferences
+        Click [Import from local file]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
   uBlock Origin; https://addons.mozilla.org/firefox/addon/ublock-origin/ (https://github.com/uBlockOrigin/uBlock-issues/)
     Settings
       Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.txt
@@ -1416,10 +1426,6 @@ EXTENSIONS THAT I AM ALSO USING:
   I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
-  Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
-    Export/Import
-      Import Preferences
-        Click [Import from local file]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
 
 USEFUL/INTERESTING EXTENSIONS:
@@ -1438,7 +1444,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0804  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0804  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 0); // Reset autoplay of HTML5 media to default
-  /* 2651  */ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  /* 2651 ?*/ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4513  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 5010  */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
   /* 5011  */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
@@ -1451,7 +1457,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 9000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 9000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
-  /* 9000x */ user_pref("browser.download.improvements_to_download_panel", false); // enable classic download behavior
+  /* 9000x?*/ user_pref("browser.download.improvements_to_download_panel", false); // enable classic download behavior
   /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 9000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
