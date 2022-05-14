@@ -413,7 +413,7 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
 /* 0906: enforce no automatic authentication on Microsoft sites [FF91+] [WINDOWS 10+]
  * [SETTING] Privacy & Security>Logins and Passwords>Allow Windows single sign-on for...
  * [1] https://support.mozilla.org/kb/windows-sso ***/
-user_pref("network.http.windows-sso.enabled", false); // [DEFAULT: false]
+// user_pref("network.http.windows-sso.enabled", false); // [DEFAULT: false]
 
 /*** [SECTION 1000]: DISK AVOIDANCE ***/
 user_pref("_user.js.parrot", "1000 syntax error: the parrot's gone to meet 'is maker!");
