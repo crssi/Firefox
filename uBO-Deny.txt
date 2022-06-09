@@ -18,11 +18,9 @@
 ||adicio.com^$3p
 ||adsensecustomsearchads.com^$important
 ||adserver.yahoo.com^$important
-!||adtech.*^$important
 ||agilemeasure.com^$3p
 ||alooma.com^$3p
 ||amazon-adsystem.com^
-!||amazonaws.com/*banners$3p
 ||ampcid.google.com^$important
 ||anlcld.com^
 ||aolcdn.com/ads/$3p,script
@@ -98,7 +96,6 @@
 ||medium.com^$3p,~script,~image
 ||moengage.com^$3p
 ||montiapm.com^$3p
-!||n26.*^$domain=~n26.com
 ||nepremicnine.net^$3p
 ||newrelic.com^
 ||nir.regmedia.co.uk^$3p
@@ -111,9 +108,7 @@
 ||pkmods.com$inline-script
 ||pmcatalyst-ae.com^$3p
 ||popupmaker.com^$3p
-!||prismic.io^$3p -> Images at https://wolt.com/sl/about
 ||pristopmedia.network^
-!||privacy-center.org^
 ||pushance.com^$3p
 ||qq.com^$3p
 ||quantserve.com^$3p
