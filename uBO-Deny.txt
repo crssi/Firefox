@@ -82,7 +82,6 @@
 ||inspectlet.com^$3p,important
 ||instagram.*^$3p,~subdocument
 ||inswebt.com^
-||ipinfo.io^$3p
 ||iprom.net^$3p
 ||ipromcloud.com^$3p
 ||jetlore.com^$3p
@@ -96,11 +95,7 @@
 ||list-manage.com^$3p
 ||livenetlife.com^$3p
 ||mailchimp.com^$3p
-||mailerlite.com^$3p
-||mallgroup.com^$3p
-||marketo.com^$3p
 ||medium.com^$3p,~script,~image
-||metric.gstatic.com^
 ||moengage.com^$3p
 ||montiapm.com^$3p
 !||n26.*^$domain=~n26.com
@@ -111,17 +106,14 @@
 ||oath.com^$3p
 ||olark.com^$3p
 ||oneall.com^$3p
-||outbrain.com^$3p
 ||paht.tech^
 ||piano.io$3p
 ||pkmods.com$inline-script
 ||pmcatalyst-ae.com^$3p
-||polldaddy.com^$3p
 ||popupmaker.com^$3p
 !||prismic.io^$3p -> Images at https://wolt.com/sl/about
 ||pristopmedia.network^
 !||privacy-center.org^
-||purch.com^$3p,important
 ||pushance.com^$3p
 ||qq.com^$3p
 ||quantserve.com^$3p
@@ -150,7 +142,6 @@
 ||typography.com^$3p,~stylesheet,~xhr
 ||upscore.com^$3p
 ||urbanairship.com^$3p
-||wayin.com^$3p
 ||wibbitz.com^$3p
 ||yahoo.*^$3p,domain=~yahoo.com
 ||yottlyscript.com^$3p
