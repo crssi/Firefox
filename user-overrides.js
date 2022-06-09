@@ -80,7 +80,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 0804  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0804  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 2031  */ user_pref("media.autoplay.blocking_policy", 0); // Reset autoplay of HTML5 media to default
-  /* 2651 ?*/ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
+  // /* 2651 ?*/ user_pref("browser.download.useDownloadDir", true); // force save downloads to download folder
   /* 4513  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 5010  */ user_pref("browser.urlbar.suggest.topsites", false); // hide drop-down search suggestions in urlbar
   /* 5011  */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
@@ -93,7 +93,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
   /* 9000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 9000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
-  /* 9000x?*/ user_pref("browser.download.improvements_to_download_panel", false); // enable classic download behavior
+  // /* 9000x?*/ user_pref("browser.download.improvements_to_download_panel", false); // enable classic download behavior
   /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 9000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search

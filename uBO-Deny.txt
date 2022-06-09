@@ -120,7 +120,7 @@
 ||popupmaker.com^$3p
 !||prismic.io^$3p -> Images at https://wolt.com/sl/about
 ||pristopmedia.network^
-||privacy-center.org^
+!||privacy-center.org^
 ||purch.com^$3p,important
 ||pushance.com^$3p
 ||qq.com^$3p
