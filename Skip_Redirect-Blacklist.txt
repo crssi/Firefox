@@ -21,11 +21,13 @@ _sso=
 //oisd.nl/
 //sites.google.com/
 //slack-redir.net/link
+//statics.teams.cdn.office.net/
 //testtls.com/
 //web.archive.org/
 //webbkoll.dataskydd.net/
 //whois.
 //www.bing.com/
+//www.saferpay.com/
 /abp
 /account
 /adfs/ls/

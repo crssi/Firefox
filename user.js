@@ -1397,6 +1397,7 @@ ESSENTIAL EXTENSIONS:
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
     Settings
       Allow domain blocking: Uncheck
+      Prevent tracking injection over history API: Uncheck
       Allow referral marketing: Check
       Filters ETag headers from requests: Uncheck
       Click [Save & reload addon]
