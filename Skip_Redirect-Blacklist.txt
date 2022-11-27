@@ -26,6 +26,7 @@ _sso=
 //web.archive.org/
 //webbkoll.dataskydd.net/
 //whois.
+//www.addevent.com/
 //www.bing.com/
 //www.saferpay.com/
 /abp
