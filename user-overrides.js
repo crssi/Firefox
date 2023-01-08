@@ -1,12 +1,12 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 6789dc7 on 22.11.2022
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 62a68f0 on 8.1.2023
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
    NOTE: To find "profile folder" location, enter "about:support" into urlbar and on "Profile Folder" row click "Open Folder" button
 2. In the "profile folder" create a folder "chrome" and copy-in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css and https://raw.githubusercontent.com/crssi/Firefox/master/userContent.css
-3. Firefox -> Options -> General -> General -> Tabs -> Settings...
+3. Firefox -> Maburger menu -> Settings -> General -> General -> Tabs -> Settings...
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
@@ -32,9 +32,9 @@ ESSENTIAL EXTENSIONS:
     Note: When WebGL is disabled, then CB is not essential
   ClearURLs; https://addons.mozilla.org/firefox/addon/clearurls/ (https://gitlab.com/KevinRoebert/ClearUrls/)
     Settings
-      Allow domain blocking: Uncheck
-      Allow referral marketing: Check
-      Filters ETag headers from requests: Uncheck
+      Allow domain blocking: Uncheck (Left)
+      Allow referral marketing: Check (Right)
+      Filters ETag headers from requests: Uncheck (Left)
       Click [Save & reload addon]
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
