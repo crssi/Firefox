@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 62a68f0 on 8.1.2023
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 7388485 on 7.2.2023
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -58,18 +58,15 @@ ESSENTIAL EXTENSIONS:
     Settings
       Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.txt
 
-EXTENSIONS THAT I AM ALSO USING:
-  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
-  I still don't care about cookies; https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/ (https://github.com/OhMyGuus/I-Dont-Care-About-Cookies/)
-  IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
-  Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
-  URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
-
 USEFUL/INTERESTING EXTENSIONS:
   Bitwarden - Free Password Manager; https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/ (https://github.com/bitwarden/, https://bitwarden.com/)
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
+  I still don't care about cookies; https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/ (https://github.com/OhMyGuus/I-Dont-Care-About-Cookies/)
+  IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
+  Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
+  URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
 
@@ -104,7 +101,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
-  /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when using WE CanvasBlocker
+  // /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when using WE CanvasBlocker
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+

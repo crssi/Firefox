@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 9 January 2023
-* version: 108
+*    date: 7 February 2023
+* version: 109
 *     url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -471,8 +471,7 @@
  user_pref("security.family_safety.mode", 0);
  /* 1223: enable strict PKP (Public Key Pinning)
   * 0=disabled, 1=allow user MiTM (default; such as your antivirus), 2=strict
-  * [SETUP-WEB] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
-  * your web browsing by inspecting ALL your web traffic, then override to current default ***/
+  * [SETUP-WEB] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE ***/
  user_pref("security.cert_pinning.enforcement_level", 2);
  /* 1224: enable CRLite [FF73+]
   * 0 = disabled
@@ -595,8 +594,6 @@
  user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!");
  /* 2402: prevent scripts from moving and resizing open windows ***/
  user_pref("dom.disable_window_move_resize", true);
- /* 2404: limit events that can cause a pop-up [SETUP-WEB] ***/
- user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
  
  /*** [SECTION 2600]: MISCELLANEOUS ***/
  user_pref("_user.js.parrot", "2600 syntax error: the parrot's run down the curtain!");
@@ -606,8 +603,6 @@
  /* 2603: remove temp files opened with an external application
   * [1] https://bugzilla.mozilla.org/302433 ***/
  user_pref("browser.helperApps.deleteTempFileOnExit", true);
- /* 2604: disable page thumbnail collection ***/
- user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
  /* 2606: disable UITour backend so there is no chance that a remote page can use it ***/
  user_pref("browser.uitour.enabled", false);
     // user_pref("browser.uitour.url", ""); // Defense-in-depth
@@ -853,10 +848,6 @@
     // user_pref("privacy.resistFingerprinting.testGranularityMask", 0);
  /* 4506: set RFP's font visibility level (1402) [FF94+] ***/
     // user_pref("layout.css.font-visibility.resistFingerprinting", 1); // [DEFAULT: 1]
- /* 4507: disable showing about:blank as soon as possible during startup [FF60+]
-  * When default true this no longer masks the RFP chrome resizing activity
-  * [1] https://bugzilla.mozilla.org/1448423 ***/
- user_pref("browser.startup.blankWindow", false);
  /* 4510: disable using system colors
   * [SETTING] General>Language and Appearance>Fonts and Colors>Colors>Use system colors ***/
  user_pref("browser.display.use_system_colors", false); // [DEFAULT: false NON-WINDOWS]
@@ -963,6 +954,10 @@
     // user_pref("extensions.formautofill.addresses.enabled", false); // [FF55+]
     // user_pref("extensions.formautofill.creditCards.enabled", false); // [FF56+]
     // user_pref("extensions.formautofill.heuristics.enabled", false); // [FF55+]
+ /* 5017: limit events that can cause a pop-up ***/
+    // user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
+ /* 5018: disable page thumbnail collection ***/
+    // user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
  
  /*** [SECTION 5500]: OPTIONAL HARDENING
     Not recommended. Overriding these can cause breakage and performance issues,
@@ -1033,6 +1028,7 @@
  user_pref("extensions.webcompat-reporter.enabled", false); // [DEFAULT: false]
  /* 6050: prefsCleaner: reset previously active items removed from arkenfox FF102+ ***/
     // user_pref("beacon.enabled", "");
+    // user_pref("browser.startup.blankWindow", "");
     // user_pref("browser.newtab.preload", "");
     // user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", "");
     // user_pref("browser.newtabpage.activity-stream.feeds.snippets", "");
@@ -1186,8 +1182,8 @@
  user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
  /* 9003: disable What's New toolbar icon [FF69+] ***/
  user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
- /* 9004: disable seach terms [FF110+]
-  * [SETTING] Search > SearchBar > Use the address bar for search and navigation > Show search terms instead of URL... ***/
+ /* 9004: disable search terms [FF110+]
+  * [SETTING] Search>Search Bar>Use the address bar for search and navigation>Show search terms instead of URL... ***/
  user_pref("browser.urlbar.showSearchTerms.enabled", false);
  
  /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
@@ -1214,7 +1210,7 @@
 
  /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 62a68f0 on 8.1.2023
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 7388485 on 7.2.2023
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -1273,7 +1269,6 @@ ESSENTIAL EXTENSIONS:
       Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.txt
 
 EXTENSIONS THAT I AM ALSO USING:
-  I don't care about cookies; https://addons.mozilla.org/firefox/addon/i-dont-care-about-cookies/ (https://www.i-dont-care-about-cookies.eu/)
   I still don't care about cookies; https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/ (https://github.com/OhMyGuus/I-Dont-Care-About-Cookies/)
   IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
@@ -1318,7 +1313,7 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
-  /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when using WE CanvasBlocker
+  // /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when using WE CanvasBlocker
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
