@@ -41,7 +41,7 @@
 ||cdn.transifex.com^
 ||channelsight.com^$xhr
 ||chimpstatic.com^$3p
-||cloudinary.com^$3p
+||cloudinary.com^$3p,~image
 ||contentpass.net^$important
 ||cookieinfoscript.com^$3p
 ||coordinatedcub.com^$3p
