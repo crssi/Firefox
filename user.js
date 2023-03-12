@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 7 February 2023
-* version: 109
+*    date: 12 March 2023
+* version: 110
 *     url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -557,13 +557,6 @@
  
  /*** [SECTION 2000]: PLUGINS / MEDIA / WEBRTC ***/
  user_pref("_user.js.parrot", "2000 syntax error: the parrot's snuffed it!");
- /* 2001: disable WebRTC (Web Real-Time Communication)
-  * Firefox desktop uses mDNS hostname obfuscation and the private IP is never exposed until
-  * required in TRUSTED scenarios; i.e. after you grant device (microphone or camera) access
-  * [TEST] https://browserleaks.com/webrtc
-  * [1] https://groups.google.com/g/discuss-webrtc/c/6stQXi72BEU/m/2FwZd24UAQAJ
-  * [2] https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-mdns-ice-candidates#section-3.1.1 ***/
-    // user_pref("media.peerconnection.enabled", false);
  /* 2002: force WebRTC inside the proxy [FF70+] ***/
  user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
  /* 2003: force a single network interface for ICE candidates generation [FF42+]
@@ -954,9 +947,9 @@
     // user_pref("extensions.formautofill.addresses.enabled", false); // [FF55+]
     // user_pref("extensions.formautofill.creditCards.enabled", false); // [FF56+]
     // user_pref("extensions.formautofill.heuristics.enabled", false); // [FF55+]
- /* 5017: limit events that can cause a pop-up ***/
+ /* 5018: limit events that can cause a pop-up ***/
     // user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
- /* 5018: disable page thumbnail collection ***/
+ /* 5019: disable page thumbnail collection ***/
     // user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
  
  /*** [SECTION 5500]: OPTIONAL HARDENING
@@ -1143,6 +1136,13 @@
   * [NOTE] To remove all subscriptions, reset "dom.push.userAgentID"
   * [1] https://support.mozilla.org/kb/push-notifications-firefox ***/
     // user_pref("dom.push.enabled", false);
+ /* 7020: disable WebRTC (Web Real-Time Communication)
+  * [WHY] Firefox desktop uses mDNS hostname obfuscation and the private IP is never exposed until
+  * required in TRUSTED scenarios; i.e. after you grant device (microphone or camera) access
+  * [TEST] https://browserleaks.com/webrtc
+  * [1] https://groups.google.com/g/discuss-webrtc/c/6stQXi72BEU/m/2FwZd24UAQAJ
+  * [2] https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-mdns-ice-candidates#section-3.1.1 ***/
+    // user_pref("media.peerconnection.enabled", false);
  
  /*** [SECTION 8000]: DON'T BOTHER: FINGERPRINTING
     [WHY] They are insufficient to help anti-fingerprinting and do more harm than good
@@ -1210,7 +1210,7 @@
 
  /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 7388485 on 7.2.2023
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit d13f39d on 12.3.2023
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -1268,17 +1268,15 @@ ESSENTIAL EXTENSIONS:
     Settings
       Click [Restore from file...]: https://raw.githubusercontent.com/crssi/Firefox/master/my-ublock-backup.txt
 
-EXTENSIONS THAT I AM ALSO USING:
-  I still don't care about cookies; https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/ (https://github.com/OhMyGuus/I-Dont-Care-About-Cookies/)
-  IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
-  Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
-  URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
-
 USEFUL/INTERESTING EXTENSIONS:
   Bitwarden - Free Password Manager; https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/ (https://github.com/bitwarden/, https://bitwarden.com/)
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
+  I still don't care about cookies; https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/ (https://github.com/OhMyGuus/I-Dont-Care-About-Cookies/)
+  IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
+  Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
+  URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
 
