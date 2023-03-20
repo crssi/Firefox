@@ -4,9 +4,9 @@
 
 youtube.com##div[class^="branding-img-container"]
 # to remove cards ovelay uncomment next line
-#youtube.com##div[class^="ytp-ce-"]
+! youtube.com##div[class^="ytp-ce-"]
 youtube.com##div[class^="ytp-pause-overlay"]
-# youtube.com##.ytp-cards-button-icon
+! youtube.com##.ytp-cards-button-icon
 www.youtube.com##.ytp-cards-teaser
 
 !duckduckgo.com##.header--aside
