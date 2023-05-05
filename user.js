@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 30 March 2023
-* version: 111
+*    date: 4 May 2023
+* version: 112
 *     url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -491,7 +491,7 @@
   * [SETTING] to add site exceptions: Padlock>HTTPS-Only mode>On (after "Continue to HTTP Site")
   * [SETTING] Privacy & Security>HTTPS-Only Mode (and manage exceptions)
   * [TEST] http://example.com [upgrade]
-  * [TEST] http://httpforever.com/ [no upgrade] ***/
+  * [TEST] http://httpforever.com/ | http://http.rip [no upgrade] ***/
  user_pref("dom.security.https_only_mode", true); // [FF76+]
     // user_pref("dom.security.https_only_mode_pbm", true); // [FF80+]
  /* 1245: enable HTTPS-Only mode for local resources [FF77+] ***/
@@ -1007,8 +1007,8 @@
   * [1] https://www.squarefree.com/2004/07/01/race-conditions-in-security-dialogs/ ***/
  user_pref("security.dialog_enable_delay", 1000); // [DEFAULT: 1000]
  /* 6008: enforce no First Party Isolation [FF51+]
-  * [WARNING] Replaced with network partitioning (FF85+) and TCP (2701),
-  * and enabling FPI disables those. FPI is no longer maintained ***/
+  * [WARNING] Replaced with network partitioning (FF85+) and TCP (2701), and enabling FPI
+  * disables those. FPI is no longer maintained except at Tor Project for Tor Browser's config ***/
  user_pref("privacy.firstparty.isolate", false); // [DEFAULT: false]
  /* 6009: enforce SmartBlock shims [FF81+]
   * In FF96+ these are listed in about:compat
@@ -1207,12 +1207,12 @@
  // ***/
  
  /* END: internal custom pref to test for syntax errors ***/
- user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"); 
  
 
- /******
+/******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit c84c419 on 30.3.2023
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit bc5add9 on 5.5.2023
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -1319,4 +1319,4 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
-user_pref("_user.js.parrot", "Eagle has landed!");
+  user_pref("_user.js.parrot", "Eagle has landed!");
