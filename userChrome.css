@@ -48,7 +48,7 @@
   display: none !important;
 }
 .tabbrowser-tab:hover .tab-close-button {
-  display: -moz-box !important;
+  display: block !important;
 }
 
 
