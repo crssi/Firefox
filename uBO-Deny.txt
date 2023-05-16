@@ -16,6 +16,7 @@
 ||ad.exilio.net^
 ||addthis.com^$important
 ||adicio.com^$3p
+||ads-store.24ur.com^
 ||adsensecustomsearchads.com^$important
 ||adserver.yahoo.com^$important
 ||agilemeasure.com^$3p
