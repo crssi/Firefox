@@ -19,8 +19,6 @@
 ||ads-store.24ur.com^
 ||adsensecustomsearchads.com^$important
 ||adserver.yahoo.com^$important
-||agilemeasure.com^$3p
-||alooma.com^$3p
 ||amazon-adsystem.com^
 ||ampcid.google.com^$important
 ||anlcld.com^
@@ -31,11 +29,8 @@
 ||askmediagroup.com^$3p
 ||baidu.com^$3p
 ||beacon.krxd.net^$important
-||bestofmedia.com^$3p
-||bf-ad.net^$important
 ||blitzen.com^$3p
 ||blogsmithmedia.com^$3p,xhr
-||booster3000.si^$3p
 ||calculoid.com^$3p,script
 ||cdn.krxd.net^
 ||cdn.ravenjs.com^$3p,script
@@ -75,7 +70,6 @@
 ||hawk-tech.co.uk^
 ||hawksearch.com^$3p
 ||hotjar.com^$important,3p
-||hotjar.io^$important,3p
 ||hubspot.com^$3p
 ||incartupsell.com^$3p
 ||inspectlet.com^$3p,important
@@ -112,7 +106,6 @@
 ||pristopmedia.network^
 ||pushance.com^$3p
 ||qq.com^$3p
-||quantserve.com^$3p
 ||s.aolcdn.com/ads/$3p,script
 !||s0.2mdn.net^$3p -> https://github.com/badmojr/1Hosts/issues/115
 ||salesforceliveagent.com^$3p
