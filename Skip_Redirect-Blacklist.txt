@@ -93,10 +93,12 @@ phish-report.mozilla.com/
 reddit.com/
 reviewmeta.com/
 rover.ebay.co
+safelinks.protection.outlook.com
 safelinks.protection.outlook.com/
 securityheaders.com/
 soundestlink.com/transactional/
 ssllabs.com/
+statics.teams.cdn.office.net
 t.umblr.com/redirect
 threatcrowd.org/
 translate.google.com/
@@ -106,5 +108,6 @@ ubi.com/
 virustotal.com/
 wego.here.com/
 www.google.com/url?q=
+www.saferpay.com
 xboxlive.com/connect/
 youtube.com/embed/
