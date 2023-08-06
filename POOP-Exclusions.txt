@@ -12,6 +12,7 @@
 * *.office*.*
 * *.sharepoint*.com
 * *.shopify*.com
+* *.sportshop.com
 * *.svc.ms
 * *.windows.net
 * api.spectrumcustomizer.com
