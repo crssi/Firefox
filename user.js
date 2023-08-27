@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 4 May 2023
-* version: 112
+*    date: 27 August 2023
+* version: 115
 *     url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -18,7 +18,6 @@
        * Some site breakage and unintended consequences will happen. Everyone's experience will differ
          e.g. some user data is erased on exit (section 2800), change this to suit your needs
        * While not 100% definitive, search for "[SETUP" tags
-         e.g. third party images/videos not loading on some sites? check 1601
   5. Some tag info
        [SETUP-SECURITY] it's one item, read it
             [SETUP-WEB] can cause some websites to break
@@ -42,13 +41,13 @@
   0300: QUIETER FOX
   0400: SAFE BROWSING
   0600: BLOCK IMPLICIT OUTBOUND
-  0700: DNS / DoH / PROXY / SOCKS / IPv6
+  0700: DNS / DoH / PROXY / SOCKS
   0800: LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS
   0900: PASSWORDS
   1000: DISK AVOIDANCE
   1200: HTTPS (SSL/TLS / OCSP / CERTS / HPKP)
   1400: FONTS
-  1600: HEADERS / REFERERS
+  1600: REFERERS
   1700: CONTAINERS
   2000: PLUGINS / MEDIA / WEBRTC
   2400: DOM (DOCUMENT OBJECT MODEL)
@@ -116,7 +115,6 @@
  user_pref("intl.accept_languages", "en-US, en");
  /* 0211: use en-US locale regardless of the system or region locale
   * [SETUP-WEB] May break some input methods e.g xim/ibus for CJK languages [1]
-  * [TEST] https://arkenfox.github.io/TZP/tests/formatting.html
   * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=867501,1629630 ***/
  user_pref("javascript.use_us_english_locale", true); // [HIDDEN PREF]
  
@@ -256,20 +254,8 @@
   * [1] https://www.bleepingcomputer.com/news/software/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk/ ***/
     // user_pref("browser.send_pings", false); // [DEFAULT: false]
  
- /*** [SECTION 0700]: DNS / DoH / PROXY / SOCKS / IPv6 ***/
+ /*** [SECTION 0700]: DNS / DoH / PROXY / SOCKS ***/
  user_pref("_user.js.parrot", "0700 syntax error: the parrot's given up the ghost!");
- /* 0701: disable IPv6
-  * IPv6 can be abused, especially with MAC addresses, and can leak with VPNs: assuming
-  * your ISP and/or router and/or website is IPv6 capable. Most sites will fall back to IPv4
-  * [SETUP-WEB] PR_CONNECT_RESET_ERROR: this pref *might* be the cause
-  * [STATS] Firefox telemetry (Feb 2023) shows ~9% of successful connections are IPv6
-  * [NOTE] This is an application level fallback. Disabling IPv6 is best done at an
-  * OS/network level, and/or configured properly in VPN setups. If you are not masking your IP,
-  * then this won't make much difference. If you are masking your IP, then it can only help.
-  * [NOTE] PHP defaults to IPv6 with "localhost". Use "php -S 127.0.0.1:PORT"
-  * [TEST] https://ipleak.org/
-  * [1] https://www.internetsociety.org/tag/ipv6-security/ (Myths 2,4,5,6) ***/
- user_pref("network.dns.disableIPv6", true);
  /* 0702: set the proxy server to do any DNS lookups when using SOCKS
   * e.g. in Tor, this stops your local DNS server from knowing your Tor destination
   * as a remote Tor node will handle the DNS request
@@ -296,10 +282,11 @@
   * [WARNING] If false, this will break the fallback for some security features
   * [SETUP-CHROME] If you use a proxy and you understand the security impact
   * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1732792,1733994,1733481 ***/
-    // user_pref("network.proxy.allow_bypass", false); // [HIDDEN PREF FF95-96]
+    // user_pref("network.proxy.allow_bypass", false);
  /* 0710: disable DNS-over-HTTPS (DoH) rollout [FF60+]
-  * 0=off by default, 2=TRR (Trusted Recursive Resolver) first, 3=TRR only, 5=explicitly off
+  * 0=default, 2=increased (TRR (Trusted Recursive Resolver) first), 3=max (TRR only), 5=off
   * see "doh-rollout.home-region": USA 2019, Canada 2021, Russia/Ukraine 2022 [3]
+  * [SETTING] Privacy & Security>DNS over HTTPS
   * [1] https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/
   * [2] https://wiki.mozilla.org/Security/DOH-resolver-policy
   * [3] https://support.mozilla.org/en-US/kb/firefox-dns-over-https
@@ -308,13 +295,6 @@
  
  /*** [SECTION 0800]: LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS ***/
  user_pref("_user.js.parrot", "0800 syntax error: the parrot's ceased to be!");
- /* 0801: disable location bar using search
-  * Don't leak URL typos to a search engine, give an error message instead
-  * Examples: "secretplace,com", "secretplace/com", "secretplace com", "secret place.com"
-  * [NOTE] This does not affect explicit user action such as using search buttons in the
-  * dropdown, or using keyword search shortcuts you configure in options (e.g. "d" for DuckDuckGo)
-  * [SETUP-CHROME] Override this if you trust and use a privacy respecting search engine ***/
- user_pref("keyword.enabled", false);
  /* 0802: disable location bar domain guessing
   * domain guessing intercepts DNS "hostname not found errors" and resends a
   * request (e.g. by adding www or .com). This is inconsistent use (e.g. FQDNs), does not work
@@ -527,18 +507,13 @@
     // user_pref("layout.css.font-visibility.standard", 1);
     // user_pref("layout.css.font-visibility.trackingprotection", 1);
  
- /*** [SECTION 1600]: HEADERS / REFERERS
+ /*** [SECTION 1600]: REFERERS
                    full URI: https://example.com:8888/foo/bar.html?id=1234
       scheme+host+port+path: https://example.com:8888/foo/bar.html
            scheme+host+port: https://example.com:8888
     [1] https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/
  ***/
  user_pref("_user.js.parrot", "1600 syntax error: the parrot rests in peace!");
- /* 1601: control when to send a cross-origin referer
-  * 0=always (default), 1=only if base domains match, 2=only if hosts match
-  * [SETUP-WEB] Breakage: older modems/routers and some sites e.g banks, vimeo, icloud, instagram
-  * If "2" is too strict, then override to "0" and use Smart Referer extension (Strict mode + add exceptions) ***/
- user_pref("network.http.referer.XOriginPolicy", 2);
  /* 1602: control the amount of cross-origin information to send [FF52+]
   * 0=send full URI (default), 1=scheme+host+port+path, 2=scheme+host+port ***/
  user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
@@ -571,17 +546,6 @@
  /* 2020: disable GMP (Gecko Media Plugins)
   * [1] https://wiki.mozilla.org/GeckoMediaPlugins ***/
     // user_pref("media.gmp-provider.enabled", false);
- /* 2021: disable widevine CDM (Content Decryption Module)
-  * [NOTE] This is covered by the EME master switch (2022) ***/
-    // user_pref("media.gmp-widevinecdm.enabled", false);
- /* 2022: disable all DRM content (EME: Encryption Media Extension)
-  * Optionally hide the setting which also disables the DRM prompt
-  * [SETUP-WEB] e.g. Netflix, Amazon Prime, Hulu, HBO, Disney+, Showtime, Starz, DirectTV
-  * [SETTING] General>DRM Content>Play DRM-controlled content
-  * [TEST] https://bitmovin.com/demos/drm
-  * [1] https://www.eff.org/deeplinks/2017/10/drms-dead-canary-how-we-just-lost-web-what-we-learned-it-and-what-we-need-do-next ***/
- user_pref("media.eme.enabled", false);
-    // user_pref("browser.eme.ui.enabled", false);
  
  /*** [SECTION 2400]: DOM (DOCUMENT OBJECT MODEL) ***/
  user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!");
@@ -602,9 +566,6 @@
  /* 2608: reset remote debugging to disabled
   * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/16222 ***/
  user_pref("devtools.debugger.remote-enabled", false); // [DEFAULT: false]
- /* 2611: disable middle mouse click opening links from clipboard
-  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/10089 ***/
- user_pref("middlemouse.contentLoadURL", false);
  /* 2615: disable websites overriding Firefox's keyboard shortcuts [FF58+]
   * 0 (default) or 1=allow, 2=block
   * [SETTING] to add site exceptions: Ctrl+I>Permissions>Override Keyboard Shortcuts ***/
@@ -634,14 +595,14 @@
   * [1] https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=pdf.js+firefox ***/
  user_pref("pdfjs.disabled", false); // [DEFAULT: false]
  user_pref("pdfjs.enableScripting", false); // [FF86+]
- /* 2621: disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS] ***/
- user_pref("network.protocol-handler.external.ms-windows-store", false);
  /* 2623: disable permissions delegation [FF73+]
   * Currently applies to cross-origin geolocation, camera, mic and screen-sharing
   * permissions, and fullscreen requests. Disabling delegation means any prompts
   * for these will show/use their correct 3rd party origin
   * [1] https://groups.google.com/forum/#!topic/mozilla.dev.platform/BdFOMAuCGW8/discussion ***/
  user_pref("permissions.delegation.enabled", false);
+ /* 2624: disable middle click on new tab button opening URLs or searches using clipboard [FF115+] */
+ user_pref("browser.tabs.searchclipboardfor.middleclick", false); // [DEFAULT: false NON-LINUX]
  
  /** DOWNLOADS ***/
  /* 2651: enable user interaction for security by always asking where to download
@@ -727,10 +688,6 @@
   * [SETTING] to manage site exceptions: Options>Privacy & Security>Permissions>Settings ***/
  user_pref("privacy.clearOnShutdown.cookies", true); // Cookies
  user_pref("privacy.clearOnShutdown.offlineApps", true); // Site Data
- /* 2816: set cache to clear on exit [FF96+]
-  * [NOTE] We already disable disk cache (1001) and clear on exit (2811) which is more robust
-  * [1] https://bugzilla.mozilla.org/1671182 ***/
-    // user_pref("privacy.clearsitedata.cache.enabled", true);
  
  /** SANITIZE MANUAL: IGNORES "ALLOW" SITE EXCEPTIONS ***/
  /* 2820: reset default items to clear with Ctrl-Shift-Del [SETUP-CHROME]
@@ -758,11 +715,11 @@
  /*** [SECTION 4500]: RFP (RESIST FINGERPRINTING)
     RFP covers a wide range of ongoing fingerprinting solutions.
     It is an all-or-nothing buy in: you cannot pick and choose what parts you want
+    [TEST] https://arkenfox.github.io/TZP/tzp.html
  
     [WARNING] DO NOT USE extensions to alter RFP protected metrics
  
      418986 - limit window.screen & CSS media queries (FF41)
-       [TEST] https://arkenfox.github.io/TZP/tzp.html#screen
     1281949 - spoof screen orientation (FF50)
     1330890 - spoof timezone as UTC0 (FF55)
     1360039 - spoof navigator.hardwareConcurrency as 2 (FF55)
@@ -801,19 +758,23 @@
     1595823 - return audioContext sampleRate as 44100 (FF72)
     1607316 - spoof pointer as coarse and hover as none (ANDROID) (FF74)
     1621433 - randomize canvas (previously FF58+ returned an all-white canvas) (FF78)
+    1506364 - return "no-preference" with prefers-contrast (FF80)
     1653987 - limit font visibility to bundled and "Base Fonts" (Windows, Mac, some Linux) (FF80)
     1461454 - spoof smooth=true and powerEfficient=false for supported media in MediaCapabilities (FF82)
      531915 - use fdlibm's sin, cos and tan in jsmath (FF93, ESR91.1)
     1756280 - enforce navigator.pdfViewerEnabled as true and plugins/mimeTypes as hard-coded values (FF100)
     1692609 - reduce JS timing precision to 16.67ms (previously FF55+ was 100ms) (FF102)
     1422237 - return "srgb" with color-gamut (FF110)
+    1794628 - return "none" with inverted-colors (FF114)
  ***/
  user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs");
- /* 4501: enable privacy.resistFingerprinting [FF41+]
+ /* 4501: enable privacy.resistFingerprinting
   * [SETUP-WEB] RFP can cause some website breakage: mainly canvas, use a site exception via the urlbar
   * RFP also has a few side effects: mainly timezone is UTC0, and websites will prefer light theme
+  * [NOTE] pbmode applies if true and the original pref is false
   * [1] https://bugzilla.mozilla.org/418986 ***/
- user_pref("privacy.resistFingerprinting", true);
+ user_pref("privacy.resistFingerprinting", true); // [FF41+]
+    // user_pref("privacy.resistFingerprinting.pbmode", true); // [FF114+]
  /* 4502: set new window size rounding max values [FF55+]
   * [SETUP-CHROME] sizes round down in hundreds: width to 200s and height to 100s, to fit your screen
   * [1] https://bugzilla.mozilla.org/1330882 ***/
@@ -822,7 +783,7 @@
  /* 4503: disable mozAddonManager Web API [FF57+]
   * [NOTE] To allow extensions to work on AMO, you also need 2662
   * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1384330,1406795,1415644,1453988 ***/
- user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDEN PREF]
+ user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDEN PREF FF57-108]
  /* 4504: enable RFP letterboxing [FF67+]
   * Dynamically resizes the inner window by applying margins in stepped ranges [2]
   * If you use the dimension pref, then it will only apply those resolutions.
@@ -838,7 +799,6 @@
   * [WARNING] DO NOT USE unless testing, see [1] comment 12
   * [1] https://bugzilla.mozilla.org/1635603 ***/
     // user_pref("privacy.resistFingerprinting.exemptedDomains", "*.example.invalid");
-    // user_pref("privacy.resistFingerprinting.testGranularityMask", 0);
  /* 4506: set RFP's font visibility level (1402) [FF94+] ***/
     // user_pref("layout.css.font-visibility.resistFingerprinting", 1); // [DEFAULT: 1]
  /* 4510: disable using system colors
@@ -935,24 +895,28 @@
  /* 5015: disable Windows taskbar preview [WINDOWS] ***/
     // user_pref("browser.taskbar.previews.enable", false); // [DEFAULT: false]
  /* 5016: discourage downloading to desktop
-  * 0=desktop, 1=downloads (default), 2=last used
-  * [SETTING] To set your default "downloads": General>Downloads>Save files to ***/
+  * 0=desktop, 1=downloads (default), 2=custom
+  * [SETTING] To set your custom default "downloads": General>Downloads>Save files to ***/
     // user_pref("browser.download.folderList", 2);
  /* 5017: disable Form Autofill
   * If .supportedCountries includes your region (browser.search.region) and .supported
   * is "detect" (default), then the UI will show. Stored data is not secure, uses JSON
-  * [NOTE] Heuristics controls Form Autofill on forms without @autocomplete attributes
   * [SETTING] Privacy & Security>Forms and Autofill>Autofill addresses
   * [1] https://wiki.mozilla.org/Firefox/Features/Form_Autofill ***/
     // user_pref("extensions.formautofill.addresses.enabled", false); // [FF55+]
     // user_pref("extensions.formautofill.creditCards.enabled", false); // [FF56+]
-    // user_pref("extensions.formautofill.heuristics.enabled", false); // [FF55+]
  /* 5018: limit events that can cause a pop-up ***/
     // user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
  /* 5019: disable page thumbnail collection ***/
     // user_pref("browser.pagethumbnails.capturing_disabled", true); // [HIDDEN PREF]
  /* 5020: disable Windows native notifications and use app notications instead [FF111+] [WINDOWS] ***/
     // user_pref("alerts.useSystemBackend.windows.notificationserver.enabled", false);
+ /* 5021: disable location bar using search
+  * Don't leak URL typos to a search engine, give an error message instead
+  * Examples: "secretplace,com", "secretplace/com", "secretplace com", "secret place.com"
+  * [NOTE] This does not affect explicit user action such as using search buttons in the
+  * dropdown, or using keyword search shortcuts you configure in options (e.g. "d" for DuckDuckGo) ***/
+    // user_pref("keyword.enabled", false);
  
  /*** [SECTION 5500]: OPTIONAL HARDENING
     Not recommended. Overriding these can cause breakage and performance issues,
@@ -993,6 +957,25 @@
     // user_pref("javascript.options.wasm", false);
  /* 5507: disable rendering of SVG OpenType fonts ***/
     // user_pref("gfx.font_rendering.opentype_svg.enabled", false);
+ /* 5508: disable all DRM content (EME: Encryption Media Extension)
+  * Optionally hide the UI setting which also disables the DRM prompt
+  * [SETTING] General>DRM Content>Play DRM-controlled content
+  * [TEST] https://bitmovin.com/demos/drm
+  * [1] https://www.eff.org/deeplinks/2017/10/drms-dead-canary-how-we-just-lost-web-what-we-learned-it-and-what-we-need-do-next ***/
+    // user_pref("media.eme.enabled", false);
+    // user_pref("browser.eme.ui.enabled", false);
+ /* 5509: disable IPv6 if using a VPN
+  * This is an application level fallback. Disabling IPv6 is best done at an OS/network
+  * level, and/or configured properly in system wide VPN setups.
+  * If you see PR_CONNECT_RESET_ERROR, this pref *might* be the cause
+  * [NOTE] PHP defaults to IPv6 with "localhost". Use "php -S 127.0.0.1:PORT"
+  * [TEST] https://ipleak.org/
+  * [1] https://www.internetsociety.org/tag/ipv6-security/ (Myths 2,4,5,6) ***/
+    // user_pref("network.dns.disableIPv6", true);
+ /* 5510: control when to send a cross-origin referer
+  * 0=always (default), 1=only if base domains match, 2=only if hosts match
+  * [NOTE] Will cause breakage: older modems/routers and some sites e.g banks, vimeo, icloud, instagram ***/
+    // user_pref("network.http.referer.XOriginPolicy", 2);
  
  /*** [SECTION 6000]: DON'T TOUCH ***/
  user_pref("_user.js.parrot", "6000 syntax error: the parrot's 'istory!");
@@ -1021,6 +1004,9 @@
   * Web Compatibility Reporter adds a "Report Site Issue" button to send data to Mozilla
   * [WHY] To prevent wasting Mozilla's time with a custom setup ***/
  user_pref("extensions.webcompat-reporter.enabled", false); // [DEFAULT: false]
+ /* 6012: enforce Quarantined Domains [FF115+]
+  * [WHY] https://support.mozilla.org/kb/quarantined-domains */
+ user_pref("extensions.quarantinedDomains.enabled", true); // [DEFAULT: true]
  /* 6050: prefsCleaner: reset previously active items removed from arkenfox FF102+ ***/
     // user_pref("beacon.enabled", "");
     // user_pref("browser.startup.blankWindow", "");
@@ -1037,16 +1023,18 @@
     // user_pref("extensions.formautofill.addresses.supported", "");
     // user_pref("extensions.formautofill.creditCards.available", "");
     // user_pref("extensions.formautofill.creditCards.supported", "");
+    // user_pref("middlemouse.contentLoadURL", "");
+ /* 6051: prefsCleaner: reset previously active items removed from arkenfox FF115+ ***/
+    // user_pref("network.protocol-handler.external.ms-windows-store", "");
  
  /*** [SECTION 7000]: DON'T BOTHER ***/
  user_pref("_user.js.parrot", "7000 syntax error: the parrot's pushing up daisies!");
  /* 7001: disable APIs
-  * Location-Aware Browsing, Full Screen, offline cache (appCache)
-  * [WHY] The API state is easily fingerprintable. Geo is behind a prompt (7002).
-  * appCache storage capability was removed in FF90. Full screen requires user interaction ***/
+  * Location-Aware Browsing, Full Screen
+  * [WHY] The API state is easily fingerprintable.
+  * Geo is behind a prompt (7002). Full screen requires user interaction ***/
     // user_pref("geo.enabled", false);
     // user_pref("full-screen-api.enabled", false);
-    // user_pref("browser.cache.offline.enable", false);
  /* 7002: set default permissions
   * Location, Camera, Microphone, Notifications [FF58+] Virtual Reality [FF73+]
   * 0=always ask (default), 1=allow, 2=block
@@ -1083,7 +1071,7 @@
     // user_pref("dom.securecontext.allowlist_onions", true); // [FF97+] 1382359/1744006
     // user_pref("network.http.referer.hideOnionSource", true); // 1305144
  /* 7007: referers
-  * [WHY] Only cross-origin referers (1600s) need control ***/
+  * [WHY] Only cross-origin referers (1602, 5510) matter ***/
     // user_pref("network.http.sendRefererHeader", 2);
     // user_pref("network.http.referer.trimmingPolicy", 0);
  /* 7008: set the default Referrer Policy [FF59+]
@@ -1194,9 +1182,9 @@
  ***/
  user_pref("_user.js.parrot", "9999 syntax error: the parrot's shuffled off 'is mortal coil!");
  /* ESR102.x still uses all the following prefs
- // [NOTE] replace the * with a slash in the line above to re-enable them
+ // [NOTE] replace the * with a slash in the line above to re-enable active ones
  // FF103
-    // 2801: delete cookies and site data on exit - replaced by sanitizeOnShutdown* (2810)
+ // 2801: delete cookies and site data on exit - replaced by sanitizeOnShutdown* (2810)
     // 0=keep until they expire (default), 2=keep until you close Firefox
     // [SETTING] Privacy & Security>Cookies and Site Data>Delete cookies and site data when Firefox is closed
     // [-] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1681493,1681495,1681498,1759665,1764761
@@ -1204,13 +1192,31 @@
  // 6012: disable SHA-1 certificates
     // [-] https://bugzilla.mozilla.org/1766687
     // user_pref("security.pki.sha1_enforcement_level", 1); // [DEFAULT: 1]
+ // FF114
+ // 2816: set cache to clear on exit [FF96+]
+    // [NOTE] We already disable disk cache (1001) and clear on exit (2811) which is more robust
+    // [1] https://bugzilla.mozilla.org/1671182
+    // [-] https://bugzilla.mozilla.org/1821651
+    // user_pref("privacy.clearsitedata.cache.enabled", true);
+ // 4505: experimental RFP [FF91+]
+    // [-] https://bugzilla.mozilla.org/1824235
+    // user_pref("privacy.resistFingerprinting.testGranularityMask", 0);
+ // 5017: disable Form Autofill heuristics
+    // Heuristics controls Form Autofill on forms without @autocomplete attributes
+    // [-] https://bugzilla.mozilla.org/1829670
+    // user_pref("extensions.formautofill.heuristics.enabled", false); // [FF55+]
+ // FF115
+    // 7001: disable offline cache (appCache)
+    // [NOTE] appCache storage capability was removed in FF90
+    // [-] https://bugzilla.mozilla.org/1677718
+    // user_pref("browser.cache.offline.enable", false);
  // ***/
  
  /* END: internal custom pref to test for syntax errors ***/
- user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"); 
+ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
  
 
-/******
+ /******
 HOME: https://github.com/crssi/Firefox
 INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit bc5add9 on 5.5.2023
 NOTE: Before proceeding further, make a backup of your current profile
@@ -1286,7 +1292,6 @@ USEFUL/INTERESTING EXTENSIONS:
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:15,suggestion:Infinity"); // resets 0801 and must be applied before
-  /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0804  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0804  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 4513  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
@@ -1306,17 +1311,16 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000x */ user_pref("signon.management.page.fileImport.enabled", true); // enable logins import from file (Bitwarden, KeePass, etc.)
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
+  /* 0701  */ user_pref("network.dns.disableIPv6", true); //disable IPv6
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212 ?*/ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
-  /* 1601  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
-  /* 2022  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
-  // /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when using WE CanvasBlocker
+  /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when using WE CanvasBlocker
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
   /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
-  user_pref("_user.js.parrot", "Eagle has landed!");
+user_pref("_user.js.parrot", "Eagle has landed!");

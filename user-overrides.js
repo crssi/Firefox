@@ -74,7 +74,6 @@ USEFUL/INTERESTING EXTENSIONS:
 
 /*** PERSONAL AND ANNOYANCES TWEAKS ***/
   /* 0800x */ user_pref("browser.urlbar.matchBuckets", "general:15,suggestion:Infinity"); // resets 0801 and must be applied before
-  /* 0801  */ user_pref("keyword.enabled", true); // enable location bar using search
   /* 0804  */ user_pref("browser.search.suggest.enabled", true); // enable live search suggestions
   /* 0804  */ user_pref("browser.urlbar.suggest.searches", true); // show search suggestions in address bar results
   /* 4513  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
@@ -94,11 +93,10 @@ USEFUL/INTERESTING EXTENSIONS:
   /* 9000x */ user_pref("signon.management.page.fileImport.enabled", true); // enable logins import from file (Bitwarden, KeePass, etc.)
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
+  /* 0701  */ user_pref("network.dns.disableIPv6", true); //disable IPv6
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212 ?*/ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
-  /* 1601  */ user_pref("network.http.referer.XOriginPolicy", 0); // should be 1, except when spoofing by 3rd-party WE, like Smart Referer
-  /* 2022  */ user_pref("media.eme.enabled", true); // enable DRM content (EME: Encryption Media Extension); Netflix, Amazon Prime, Hulu...
   /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
