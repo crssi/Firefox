@@ -1,12 +1,12 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit bc5add9 on 5.5.2023
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 1e6e211 on 17.9.2023
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
    NOTE: To find "profile folder" location, enter "about:support" into urlbar and on "Profile Folder" row click "Open Folder" button
 2. In the "profile folder" create a folder "chrome" and copy-in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css and https://raw.githubusercontent.com/crssi/Firefox/master/userContent.css
-3. Firefox -> Maburger menu -> Settings -> General -> General -> Tabs -> Settings...
+3. Firefox -> Hamburger menu -> Settings -> General -> General -> Tabs -> Settings...
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
