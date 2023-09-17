@@ -17,6 +17,7 @@ _sso=
 //domain.glass/
 //go.redirectingat.com/
 //htmlpreview.github.io/
+//info.addr.tools/
 //myaccount.google.com/age-verification
 //oisd.nl/
 //sites.google.com/
