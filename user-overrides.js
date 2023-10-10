@@ -28,8 +28,7 @@ NOTE: Before proceeding further, make a backup of your current profile
 
 ESSENTIAL EXTENSIONS:
   CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-    Enter "Load" in the search box, click [Load] button and open https://raw.githubusercontent.com/crssi/Firefox/master/CanvasBlocker-settings.json
-    Note: When WebGL is disabled, then CB is not essential
+    Disable all except Canvas API as input only for webGL
   ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
     Type filters
