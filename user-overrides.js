@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 1e6e211 on 17.9.2023
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 3fdcb28 on 18.10.2023
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -41,6 +41,8 @@ ESSENTIAL EXTENSIONS:
     No-skip-urls-list: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Skip_Redirect-Blacklist.txt
     Notifications
       Enable popup: Uncheck
+  Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
+    Whitelist Sources: Add https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
   Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
     Export/Import
       Import Preferences
@@ -73,13 +75,13 @@ ARCHIVED USEFUL/INTERESTING EXTENSIONS:
   /* 4513  */ user_pref("browser.link.open_newwindow.restriction", 2); // don't like that a new window is forcibly opened fullsize
   /* 5011  */ user_pref("browser.urlbar.maxRichResults", 16); // number of urlbar search results
   /* 5012  */ user_pref("browser.urlbar.autoFill", false); // disable location bar autofill
-  /* 9000  */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
-  /* 9000  */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmark in a new tab
-  /* 9000  */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see Bugzilla 1320061
-  /* 9000  */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
-  /* 9000  */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
-  /* 9000  */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
-  /* 9000  */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
+  /* 9000x */ user_pref("browser.tabs.closeWindowWithLastTab", false); // do not close FF with the last tab
+  /* 9000x */ user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmark in a new tab
+  /* 9000x */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see Bugzilla 1320061
+  /* 9000x */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
+  /* 9000x */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
+  /* 9000x */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
+  /* 9000x */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 9000x */ user_pref("browser.urlbar.suggest.topsites", false); // don't show top sites suggestion in url bar
