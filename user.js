@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 18 October 2023
-* version: 118
+*    date: 5 February 2024
+* version: 122
 *    urls: https://github.com/arkenfox/user.js [repo]
 *        : https://arkenfox.github.io/gui/ [interactive]
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
@@ -40,7 +40,7 @@
 * INDEX:
 
   0100: STARTUP
-  0200: GEOLOCATION / LANGUAGE / LOCALE
+  0200: GEOLOCATION
   0300: QUIETER FOX
   0400: SAFE BROWSING
   0600: BLOCK IMPLICIT OUTBOUND
@@ -56,6 +56,7 @@
   2600: MISCELLANEOUS
   2700: ETP (ENHANCED TRACKING PROTECTION)
   2800: SHUTDOWN & SANITIZING
+  4000: FPP (fingerprintingProtection)
   4500: RFP (resistFingerprinting)
   5000: OPTIONAL OPSEC
   5500: OPTIONAL HARDENING
@@ -100,7 +101,7 @@
   * [NOTE] This does not block you from adding your own ***/
  user_pref("browser.newtabpage.activity-stream.default.sites", "");
  
- /*** [SECTION 0200]: GEOLOCATION / LANGUAGE / LOCALE ***/
+ /*** [SECTION 0200]: GEOLOCATION ***/
  user_pref("_user.js.parrot", "0200 syntax error: the parrot's definitely deceased!");
  /* 0201: use Mozilla geolocation service instead of Google if permission is granted [FF74+]
   * Optionally enable logging to the console (defaults to false) ***/
@@ -109,16 +110,8 @@
  /* 0202: disable using the OS's geolocation service ***/
  user_pref("geo.provider.ms-windows-location", false); // [WINDOWS]
  user_pref("geo.provider.use_corelocation", false); // [MAC]
- user_pref("geo.provider.use_gpsd", false); // [LINUX]
+ user_pref("geo.provider.use_gpsd", false); // [LINUX] [HIDDEN PREF]
  user_pref("geo.provider.use_geoclue", false); // [FF102+] [LINUX]
- /* 0210: set preferred language for displaying pages
-  * [SETTING] General>Language and Appearance>Language>Choose your preferred language...
-  * [TEST] https://addons.mozilla.org/about ***/
- user_pref("intl.accept_languages", "en-US, en");
- /* 0211: use en-US locale regardless of the system or region locale
-  * [SETUP-WEB] May break some input methods e.g xim/ibus for CJK languages [1]
-  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=867501,1629630 ***/
- user_pref("javascript.use_us_english_locale", true); // [HIDDEN PREF]
  
  /*** [SECTION 0300]: QUIETER FOX ***/
  user_pref("_user.js.parrot", "0300 syntax error: the parrot's not pinin' for the fjords!");
@@ -268,7 +261,7 @@
  user_pref("network.proxy.socks_remote_dns", true);
  /* 0703: disable using UNC (Uniform Naming Convention) paths [FF61+]
   * [SETUP-CHROME] Can break extensions for profiles on network shares
-  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/26424 ***/
+  * [1] https://bugzilla.mozilla.org/1413868 ***/
  user_pref("network.file.disable_unc_paths", true); // [HIDDEN PREF]
  /* 0704: disable GIO as a potential proxy bypass vector
   * Gvfs/GIO has a set of supported protocols like obex, network, archive, computer,
@@ -297,8 +290,6 @@
   * [3] https://support.mozilla.org/en-US/kb/firefox-dns-over-https
   * [4] https://www.eff.org/deeplinks/2020/12/dns-doh-and-odoh-oh-my-year-review-2020 ***/
     // user_pref("network.trr.mode", 3);
- /* 0711: disable skipping DoH when parental controls are enabled [FF70+] ***/
- user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
  /* 0712: set DoH provider
   * The custom uri is the value shown when you "Choose provider>Custom>"
   * [NOTE] If you USE custom then "network.trr.uri" should be set the same
@@ -311,11 +302,11 @@
  /* 0801: disable location bar making speculative connections [FF56+]
   * [1] https://bugzilla.mozilla.org/1348275 ***/
  user_pref("browser.urlbar.speculativeConnect.enabled", false);
- /* 0802: disable location bar contextual suggestions [FF92+]
+ /* 0802: disable location bar contextual suggestions
   * [SETTING] Privacy & Security>Address Bar>Suggestions from...
   * [1] https://blog.mozilla.org/data/2021/09/15/data-and-firefox-suggest/ ***/
  user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false); // [FF95+]
- user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
+ user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false); // [FF92+]
  /* 0803: disable live search suggestions
   * [NOTE] Both must be true for the location bar to work
   * [SETUP-CHROME] Override these if you trust and use a privacy respecting search engine
@@ -354,6 +345,10 @@
   * [4] https://earthlng.github.io/testpages/visited_links.html (see github wiki APPENDIX A on how to use)
   * [5] https://lcamtuf.blogspot.com/2016/08/css-mix-blend-mode-is-bad-for-keeping.html ***/
     // user_pref("layout.css.visited_links_enabled", false);
+ /* 0830: enable separate default search engine in Private Windows and its UI setting
+  * [SETTING] Search>Default Search Engine>Choose a different default search engine for Private Windows only ***/
+ user_pref("browser.search.separatePrivateDefault", true); // [FF70+]
+ user_pref("browser.search.separatePrivateDefault.ui.enabled", true); // [FF71+]
  
  /*** [SECTION 0900]: PASSWORDS
     [1] https://support.mozilla.org/kb/use-primary-password-protect-stored-logins-and-pas
@@ -396,7 +391,7 @@
  /* 1005: disable automatic Firefox start and session restore after reboot [FF62+] [WINDOWS]
   * [1] https://bugzilla.mozilla.org/603903 ***/
  user_pref("toolkit.winRegisterApplicationRestart", false);
- /* 1006: disable favicons in shortcuts
+ /* 1006: disable favicons in shortcuts [WINDOWS]
   * URL shortcuts use a cached randomly named .ico file which is stored in your
   * profile/shortcutCache directory. The .ico remains after the shortcut is deleted
   * If set to false then the shortcuts use a generic Firefox icon ***/
@@ -417,7 +412,7 @@
   * but the problem is that the browser can't know that. Setting this pref to true is the only way for the
   * browser to ensure there will be no unsafe renegotiations on the channel between the browser and the server
   * [SETUP-WEB] SSL_ERROR_UNSAFE_NEGOTIATION: is it worth overriding this for that one site?
-  * [STATS] SSL Labs (Feb 2023) reports over 99.3% of top sites have secure renegotiation [4]
+  * [STATS] SSL Labs (Nov 2023) reports over 99.5% of top sites have secure renegotiation [4]
   * [1] https://wiki.mozilla.org/Security:Renegotiation
   * [2] https://datatracker.ietf.org/doc/html/rfc5746
   * [3] https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555
@@ -462,7 +457,7 @@
   * 0 = disabled
   * 1 = consult CRLite but only collect telemetry
   * 2 = consult CRLite and enforce both "Revoked" and "Not Revoked" results
-  * 3 = consult CRLite and enforce "Not Revoked" results, but defer to OCSP for "Revoked" (FF99+, default FF100+)
+  * 3 = consult CRLite and enforce "Not Revoked" results, but defer to OCSP for "Revoked" (default)
   * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1429800,1670985,1753071
   * [2] https://blog.mozilla.org/security/tag/crlite/ ***/
  user_pref("security.remote_settings.crlite_filters.enabled", true);
@@ -471,7 +466,7 @@
  /** MIXED CONTENT ***/
  /* 1241: disable insecure passive content (such as images) on https pages ***/
     // user_pref("security.mixed_content.block_display_content", true); // Defense-in-depth (see 1244)
- /* 1244: enable HTTPS-Only mode in all windows [FF76+]
+ /* 1244: enable HTTPS-Only mode in all windows
   * When the top-level is HTTPS, insecure subresources are also upgraded (silent fail)
   * [SETTING] to add site exceptions: Padlock>HTTPS-Only mode>On (after "Continue to HTTP Site")
   * [SETTING] Privacy & Security>HTTPS-Only Mode (and manage exceptions)
@@ -603,12 +598,13 @@
  user_pref("browser.download.always_ask_before_handling_new_types", true);
  
  /** EXTENSIONS ***/
- /* 2660: lock down allowed extension directories
-  * [SETUP-CHROME] This will break extensions, language packs, themes and any other
-  * XPI files which are installed outside of profile and application directories
+ /* 2660: limit allowed extension directories
+  * 1=profile, 2=user, 4=application, 8=system, 16=temporary, 31=all
+  * The pref value represents the sum: e.g. 5 would be profile and application directories
+  * [SETUP-CHROME] Breaks usage of files which are installed outside allowed directories
   * [1] https://archive.is/DYjAM ***/
  user_pref("extensions.enabledScopes", 5); // [HIDDEN PREF]
- user_pref("extensions.autoDisableScopes", 15); // [DEFAULT: 15]
+    // user_pref("extensions.autoDisableScopes", 15); // [DEFAULT: 15]
  /* 2661: disable bypassing 3rd party extension install prompts [FF82+]
   * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1659530,1681331 ***/
  user_pref("extensions.postDownloadThirdPartyPrompt", false);
@@ -625,7 +621,7 @@
   * [1] https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/
   * [SETTING] to add site exceptions: Urlbar>ETP Shield
   * [SETTING] to manage site exceptions: Options>Privacy & Security>Enhanced Tracking Protection>Manage Exceptions ***/
- user_pref("browser.contentblocking.category", "strict");
+ user_pref("browser.contentblocking.category", "strict"); // [HIDDEN PREF]
  /* 2702: disable ETP web compat features [FF93+]
   * [SETUP-HARDEN] Includes skip lists, heuristics (SmartBlock) and automatic grants
   * Opener and redirect heuristics are granted for 30 days, see [3]
@@ -691,8 +687,32 @@
   * which will display a blank value, and are not guaranteed to work ***/
  user_pref("privacy.sanitize.timeSpan", 0);
  
+ /*** [SECTION 4000]: FPP (fingerprintingProtection)
+    RFP (4501) overrides FPP
+ 
+    In FF118+ FPP is on by default in private windows (4001) and in FF119+ is controlled
+    by ETP (2701). FPP will also use Remote Services in future to relax FPP protections
+    on a per site basis for compatibility (pref coming).
+ 
+    1826408 - restrict fonts to system (kBaseFonts + kLangPackFonts) (Windows, Mac, some Linux)
+       https://searchfox.org/mozilla-central/search?path=StandardFonts*.inc
+    1858181 - subtly randomize canvas per eTLD+1, per session and per window-mode (FF120+)
+ ***/
+ user_pref("_user.js.parrot", "1400 syntax error: the parrot's bereft of life!");
+ /* 4001: enable FPP in PB mode [FF114+]
+  * [NOTE] In FF119+, FPP for all modes (7106) is enabled with ETP Strict (2701) ***/
+    // user_pref("privacy.fingerprintingProtection.pbmode", true); // [DEFAULT: true FF118+]
+ /* 4002: set global FPP overrides [FF114+]
+  * Controls what protections FPP uses globally, including "RFPTargets" (despite the name these are
+  * not used by RFP) e.g. "+AllTargets,-CSSPrefersColorScheme" or "-AllTargets,+CanvasRandomization"
+  * [NOTE] Be aware that not all RFP protections are necessarily in RFPTargets
+  * [WARNING] Not recommended. Either use RFP or FPP at defaults
+  * [1] https://searchfox.org/mozilla-central/source/toolkit/components/resistfingerprinting/RFPTargets.inc ***/
+    // user_pref("privacy.fingerprintingProtection.overrides", "");
+ 
  /*** [SECTION 4500]: RFP (resistFingerprinting)
-    RFP covers a wide range of ongoing fingerprinting solutions.
+    RFP overrides FPP (4000)
+ 
     It is an all-or-nothing buy in: you cannot pick and choose what parts you want
     [TEST] https://arkenfox.github.io/TZP/tzp.html
  
@@ -703,7 +723,6 @@
     1330890 - spoof timezone as UTC0 (FF55)
     1360039 - spoof navigator.hardwareConcurrency as 2 (FF55)
   FF56
-    1369303 - spoof/disable performance API
     1333651 - spoof User Agent & Navigator API
        version: android version spoofed as ESR (FF119 or lower)
        OS: JS spoofed as Windows 10, OS 10.15, Android 10, or Linux | HTTP Headers spoofed as Windows or Android
@@ -716,7 +735,6 @@
     1369309 - spoof media statistics
     1382499 - reduce screen co-ordinate fingerprinting in Touch API
     1217290 & 1409677 - enable some fingerprinting resistance for WebGL
-    1382545 - reduce fingerprinting in Animation API
     1354633 - limit MediaError.message to a whitelist
   FF58+
     1372073 - spoof/block fingerprinting in MediaDevices API (FF59)
@@ -741,15 +759,15 @@
     1653987 - limit font visibility to bundled and "Base Fonts" (Windows, Mac, some Linux) (FF80)
     1461454 - spoof smooth=true and powerEfficient=false for supported media in MediaCapabilities (FF82)
      531915 - use fdlibm's sin, cos and tan in jsmath (FF93, ESR91.1)
-    1756280 - enforce navigator.pdfViewerEnabled as true and plugins/mimeTypes as hard-coded values (FF100)
+    1756280 - enforce navigator.pdfViewerEnabled as true and plugins/mimeTypes as hard-coded values (FF100-115)
     1692609 - reduce JS timing precision to 16.67ms (previously FF55+ was 100ms) (FF102)
     1422237 - return "srgb" with color-gamut (FF110)
     1794628 - return "none" with inverted-colors (FF114)
  ***/
  user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs");
  /* 4501: enable RFP
-  * [SETUP-WEB] RFP can cause some website breakage: mainly canvas, use a canvas site exception via the urlbar
-  * RFP also has a few side effects: mainly timezone is UTC0, and websites will prefer light theme
+  * [SETUP-WEB] RFP can cause some website breakage: mainly canvas, use a canvas site exception via the urlbar.
+  * RFP also has a few side effects: mainly timezone is UTC, and websites will prefer light theme
   * [NOTE] pbmode applies if true and the original pref is false
   * [1] https://bugzilla.mozilla.org/418986 ***/
  user_pref("privacy.resistFingerprinting", true); // [FF41+]
@@ -973,10 +991,9 @@
   * [WARNING] Replaced with network partitioning (FF85+) and TCP (2701), and enabling FPI
   * disables those. FPI is no longer maintained except at Tor Project for Tor Browser's config ***/
  user_pref("privacy.firstparty.isolate", false); // [DEFAULT: false]
- /* 6009: enforce SmartBlock shims [FF81+]
-  * In FF96+ these are listed in about:compat
+ /* 6009: enforce SmartBlock shims (about:compat) [FF81+]
   * [1] https://blog.mozilla.org/security/2021/03/23/introducing-smartblock/ ***/
- user_pref("extensions.webcompat.enable_shims", true); // [DEFAULT: true]
+ user_pref("extensions.webcompat.enable_shims", true); // [HIDDEN PREF] [DEFAULT: true]
  /* 6010: enforce no TLS 1.0/1.1 downgrades
   * [TEST] https://tls-v1-1.badssl.com:1010/ ***/
  user_pref("security.tls.version.enable-deprecated", false); // [DEFAULT: false]
@@ -987,38 +1004,13 @@
  /* 6012: enforce Quarantined Domains [FF115+]
   * [WHY] https://support.mozilla.org/kb/quarantined-domains */
  user_pref("extensions.quarantinedDomains.enabled", true); // [DEFAULT: true]
- /* 6050: prefsCleaner: previously active items removed from arkenfox 102-114 ***/
-    // user_pref("beacon.enabled", "");
-    // user_pref("browser.startup.blankWindow", "");
-    // user_pref("browser.newtab.preload", "");
-    // user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", "");
-    // user_pref("browser.newtabpage.activity-stream.feeds.snippets", "");
-    // user_pref("browser.region.network.url", "");
-    // user_pref("browser.region.update.enabled", "");
-    // user_pref("browser.ssl_override_behavior", "");
-    // user_pref("devtools.chrome.enabled", "");
-    // user_pref("dom.disable_beforeunload", "");
-    // user_pref("dom.disable_open_during_load", "");
-    // user_pref("extensions.formautofill.available", "");
-    // user_pref("extensions.formautofill.addresses.supported", "");
-    // user_pref("extensions.formautofill.creditCards.available", "");
-    // user_pref("extensions.formautofill.creditCards.supported", "");
-    // user_pref("middlemouse.contentLoadURL", "");
- /* 6051: prefsCleaner: previously active items removed from arkenfox 115-127 ***/
+ /* 6050: prefsCleaner: previously active items removed from arkenfox 115-127 ***/
     // user_pref("accessibility.force_disabled", "");
-    // user_pref("browser.fixup.alternate.enabled", "");
     // user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", "");
     // user_pref("network.protocol-handler.external.ms-windows-store", "");
     // user_pref("privacy.partition.always_partition_third_party_non_cookie_storage", "");
     // user_pref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage", "");
     // user_pref("privacy.partition.serviceWorkers", "");
- /* 6052: prefsCleaner: deprecated ESR102 items from FF103-115 ***/
-    // user_pref("browser.cache.offline.enable", "");
-    // user_pref("extensions.formautofill.heuristics.enabled", "");
-    // user_pref("network.cookie.lifetimePolicy", "");
-    // user_pref("privacy.clearsitedata.cache.enabled", "");
-    // user_pref("privacy.resistFingerprinting.testGranularityMask", "");
-    // user_pref("security.pki.sha1_enforcement_level", "");
  
  /*** [SECTION 7000]: DON'T BOTHER ***/
  user_pref("_user.js.parrot", "7000 syntax error: the parrot's pushing up daisies!");
@@ -1102,8 +1094,8 @@
     // user_pref("privacy.fingerprintingProtection", true); // [FF114+] [ETP FF119+]
     // user_pref("network.http.referer.disallowCrossSiteRelaxingDefault", true);
     // user_pref("network.http.referer.disallowCrossSiteRelaxingDefault.top_navigation", true); // [FF100+]
-    // user_pref("privacy.partition.network_state.ocsp_cache", true);
-    // user_pref("privacy.query_stripping.enabled", true); // [FF101+] [ETP FF102+]
+    // user_pref("privacy.partition.network_state.ocsp_cache", true); // [DEFAULT: true FF123+]
+    // user_pref("privacy.query_stripping.enabled", true); // [FF101+]
     // user_pref("privacy.trackingprotection.enabled", true);
     // user_pref("privacy.trackingprotection.socialtracking.enabled", true);
     // user_pref("privacy.trackingprotection.cryptomining.enabled", true); // [DEFAULT: true]
@@ -1160,7 +1152,7 @@
  /*** [SECTION 9000]: NON-PROJECT RELATED ***/
  user_pref("_user.js.parrot", "9000 syntax error: the parrot's cashed in 'is chips!");
  /* 9001: disable welcome notices ***/
- user_pref("browser.startup.homepage_override.mstone", "ignore");
+ user_pref("browser.startup.homepage_override.mstone", "ignore"); // [HIDDEN PREF]
  /* 9002: disable General>Browsing>Recommend extensions/features as you browse [FF67+] ***/
  user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
  user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
@@ -1209,15 +1201,24 @@
     // [1] https://groups.google.com/forum/#!topic/mozilla.dev.platform/BdFOMAuCGW8/discussion
     // [-] https://bugzilla.mozilla.org/1697151
     // user_pref("permissions.delegation.enabled", false);
+ // FF119
+ // 0211: use en-US locale regardless of the system or region locale
+    // [SETUP-WEB] May break some input methods e.g xim/ibus for CJK languages [1]
+    // [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=867501,1629630
+    // [-] https://bugzilla.mozilla.org/1846224
+    // user_pref("javascript.use_us_english_locale", true); // [HIDDEN PREF]
+ // 0711: disable skipping DoH when parental controls are enabled [FF70+]
+    // [-] https://bugzilla.mozilla.org/1586941
+ user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
  // ***/
  
  /* END: internal custom pref to test for syntax errors ***/
  user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
  
 
-/******
+ /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 3fdcb28 on 18.10.2023
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 33a84b6 on 4.2.2024
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -1300,6 +1301,7 @@ ARCHIVED USEFUL/INTERESTING EXTENSIONS:
   /* 9000x */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 9000x */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
+  /* 9000x */ user_pref("browser.translations.automaticallyPopup", false); // do not show translation popup
   /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 9000x */ user_pref("browser.urlbar.suggest.topsites", false); // don't show top sites suggestion in url bar
   /* 9000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
@@ -1310,12 +1312,10 @@ ARCHIVED USEFUL/INTERESTING EXTENSIONS:
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212 ?*/ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
-  /* 2621  */ user_pref("network.protocol-handler.external.ms-windows-store", true); // enable MS Windows Store
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
   /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when using WE CanvasBlocker
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
-  /* 9000e */ user_pref("security.enterprise_roots.enabled", true); // use OS certificates store, Firefox 68+
 
-  user_pref("_user.js.parrot", "Eagle has landed!");
+user_pref("_user.js.parrot", "Eagle has landed!");

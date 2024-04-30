@@ -19,6 +19,7 @@
 	https://www.userchrome.org/megabar-styling-firefox-address-bar.html
 */
 
+/* letterbox color */
 #tabbrowser-tabpanels {
   background-color: rgb(46,54,69) !important;
 }
