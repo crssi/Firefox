@@ -127,7 +127,7 @@
 ||tinymce.com^$3p
 ||trustpilot.com^$3p
 ||tsmedia.si^$3p
-||twitter.*^$3p
+||twitter.*^$3p,domain=~x.com
 ||typography.com^$3p,~stylesheet,~xhr
 ||upscore.com^$3p
 ||urbanairship.com^$3p
