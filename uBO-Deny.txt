@@ -84,7 +84,7 @@
 ||leadsdome.com^
 ||letspin.io^$3p
 ||limelight.com^$3p,script
-||linkedin.*^$3p
+! ||linkedin.*^$3p
 ||list-manage.com^$3p
 ||livenetlife.com^$3p
 ||mailchimp.com^$3p
