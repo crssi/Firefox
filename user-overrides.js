@@ -38,7 +38,7 @@ ESSENTIAL EXTENSIONS:
     No-skip-urls-list: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Skip_Redirect-Blacklist.txt
     Notifications
       Enable popup: Uncheck
-  Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
+  Temporary Containers Plus; https://addons.mozilla.org/firefox/addon/temporary-containers-plus/ (https://github.com/GodKratos/temporary-containers/)
     Export/Import
       Import Preferences
         Click [Import from local file]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
@@ -48,7 +48,7 @@ ESSENTIAL EXTENSIONS:
 
 USEFUL/INTERESTING EXTENSIONS:
   IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
-  Keepa.com - Amazon Price Tracker (https://addons.mozilla.org/firefox/addon/keepa/)
+  Keepa.com - Amazon Price Tracker; https://addons.mozilla.org/firefox/addon/keepa/
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
   Simple Translate (https://addons.mozilla.org/firefox/addon/simple-translate/)
