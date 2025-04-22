@@ -74,13 +74,12 @@ ARCHIVED/INTERESTING EXTENSIONS:
   /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 9000x */ user_pref("browser.urlbar.suggest.topsites", false); // don't show top sites suggestion in url bar
   /* 9000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
-  /* 9000x */ user_pref("signon.management.page.fileImport.enabled", true); // enable logins import from file (Bitwarden, KeePass, etc.)
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0701  */ user_pref("network.dns.disableIPv6", true); //disable IPv6
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212 ?*/ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
-  /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
+  /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AntiVirus breakage
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
