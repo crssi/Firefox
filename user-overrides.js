@@ -67,7 +67,6 @@ ARCHIVED/INTERESTING EXTENSIONS:
   /* 9000x */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see Bugzilla 1320061
   /* 9000x */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 9000x */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
-  /* 9000x */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 9000x */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 9000x */ user_pref("browser.translations.automaticallyPopup", false); // do not show translation popup
