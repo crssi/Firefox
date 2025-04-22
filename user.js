@@ -1248,7 +1248,6 @@
  /* END: internal custom pref to test for syntax errors ***/
  user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
  
-
  /******
 HOME: https://github.com/crssi/Firefox
 INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 3d76c74 on 6.3.2025
@@ -1256,26 +1255,14 @@ NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
    NOTE: To find "profile folder" location, enter "about:support" into urlbar and on "Profile Folder" row click "Open Folder" button
-2. In the "profile folder" create a folder "chrome" and copy-in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css and https://raw.githubusercontent.com/crssi/Firefox/master/userContent.css
-3. Firefox -> Hamburger menu -> Settings -> General -> General -> Tabs -> Settings...
+2. Firefox -> Hamburger menu -> Settings -> General -> General -> Tabs -> Settings...
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
      Show search suggestions ahead of browsing history in address bar results: Uncheck
-4. Install extensions (see Extensions section) and setup by instructions
-   NOTE: all changes are addition to default
-5. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
-   cert9.db - Certificates
-   content-prefs.sqlite - Site-specific preferences
-   favicons.sqlite - Bookmarks icons
-   handlers.json - Download actions
-   key4.db - Passwords
-   logins.json - Passwords
-   permissions.sqlite - Site-specific preferences
-   persdict.dat - Personal dictionary
-   pkcs11.txt - Security device settings
-   places.sqlite - Bookmarks
-6. To enable SSO for enterprise specific realm/domain enter domain list (comma separated without spaces) into preferences (about:config) network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
+3. Install extensions (see Extensions section) and setup by instructions
+   NOTE: all changes are addition to default settings, so you can use them as a reference for your own settings
+4. To enable SSO for enterprise specific realm/domain enter domain list (comma separated without spaces) into preferences (about:config) network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 
 ESSENTIAL EXTENSIONS:
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
@@ -1289,7 +1276,7 @@ ESSENTIAL EXTENSIONS:
     No-skip-urls-list: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Skip_Redirect-Blacklist.txt
     Notifications
       Enable popup: Uncheck
-  Temporary Containers; https://addons.mozilla.org/firefox/addon/temporary-containers/ (https://github.com/stoically/temporary-containers/)
+  Temporary Containers Plus; https://addons.mozilla.org/firefox/addon/temporary-containers-plus/ (https://github.com/GodKratos/temporary-containers/)
     Export/Import
       Import Preferences
         Click [Import from local file]: Download from https://raw.githubusercontent.com/crssi/Firefox/master/temporary_containers_preferences.json
@@ -1299,7 +1286,7 @@ ESSENTIAL EXTENSIONS:
 
 USEFUL/INTERESTING EXTENSIONS:
   IMDb Search (Internet Movie Database); https://addons.mozilla.org/firefox/addon/imdb-search-all/ (https://github.com/docmalkovich/firefox-imdb-search)
-  Keepa.com - Amazon Price Tracker (https://addons.mozilla.org/firefox/addon/keepa/)
+  Keepa.com - Amazon Price Tracker; https://addons.mozilla.org/firefox/addon/keepa/
   Maximize All Windows (Minimalist Version); https://addons.mozilla.org/firefox/addon/maximize-all-windows-minimal/ (https://github.com/ericchase/maximize-all-windows/tree/master-minimal/)
   URLs List; https://addons.mozilla.org/firefox/addon/urls-list/ (https://github.com/moritz-h/urls-list/)
   Simple Translate (https://addons.mozilla.org/firefox/addon/simple-translate/)
@@ -1307,17 +1294,13 @@ USEFUL/INTERESTING EXTENSIONS:
 
 ARCHIVED/INTERESTING EXTENSIONS:
   Bitwarden - Free Password Manager; https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/ (https://github.com/bitwarden/, https://bitwarden.com/)
-  CanvasBlocker; https://addons.mozilla.org/firefox/addon/canvasblocker/ (https://github.com/kkapsner/CanvasBlocker/)
-    Disable all except Canvas API as input only for webGL
   Certainly Something (Certificate Viewer); https://addons.mozilla.org/firefox/addon/certainly-something/ (https://github.com/april/certainly-something/)
   Cookie Quick Manager; https://addons.mozilla.org/firefox/addon/cookie-quick-manager/ (https://github.com/ysard/cookie-quick-manager/)
-  ETag Stoppa; https://addons.mozilla.org/firefox/addon/etag-stoppa/ (https://github.com/claustromaniac/etag-stoppa/)
   I still don't care about cookies; https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/ (https://github.com/OhMyGuus/I-Dont-Care-About-Cookies/)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
     Whitelist Sources: Add https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
-  xBrowserSync; https://www.xbrowsersync.org/ (https://github.com/xbrowsersync/)
 
 
 ******/
@@ -1334,23 +1317,19 @@ ARCHIVED/INTERESTING EXTENSIONS:
   /* 9000x */ user_pref("browser.urlbar.decodeURLsOnCopy", true); // see Bugzilla 1320061
   /* 9000x */ user_pref("full-screen-api.warning.timeout", 0); // remove fullscreen message annoyance
   /* 9000x */ user_pref("general.autoScroll", false); // disable mouse middle-click scroll annoyance
-  /* 9000x */ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // support for userChrome.css (FF 68+)
   /* 9000x */ user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar
   /* 9000x */ user_pref("browser.tabs.selectOwnerOnClose", false); // set tab first to the left of closed tab as active
   /* 9000x */ user_pref("browser.translations.automaticallyPopup", false); // do not show translation popup
   /* 9000x */ user_pref("browser.urlbar.showSearchSuggestionsFirst", false) // Show search suggestions ahead of browsing history in address bar results
   /* 9000x */ user_pref("browser.urlbar.suggest.topsites", false); // don't show top sites suggestion in url bar
   /* 9000x */ user_pref("findbar.highlightAll", true); // highlight all hits on search
-  /* 9000x */ user_pref("signon.management.page.fileImport.enabled", true); // enable logins import from file (Bitwarden, KeePass, etc.)
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0701  */ user_pref("network.dns.disableIPv6", true); //disable IPv6
   /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1212 ?*/ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
-  /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AV breakage
+  /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AntiVirus breakage
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  /* 4504  */ user_pref("privacy.resistFingerprinting.letterboxing", false); // disable RFP letterboxing
-  /* 4520 ?*/ user_pref("webgl.disabled", false); // enable WebGL; high entropy FP vector; should be true, exception only when using WE CanvasBlocker
   /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
 
