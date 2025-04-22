@@ -11,19 +11,8 @@ NOTE: Before proceeding further, make a backup of your current profile
      Default Search Engine: duckduckgo
      Show search suggestions ahead of browsing history in address bar results: Uncheck
 3. Install extensions (see Extensions section) and setup by instructions
-   NOTE: all changes are addition to default
-4. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
-   cert9.db - Certificates
-   content-prefs.sqlite - Site-specific preferences
-   favicons.sqlite - Bookmarks icons
-   handlers.json - Download actions
-   key4.db - Passwords
-   logins.json - Passwords
-   permissions.sqlite - Site-specific preferences
-   persdict.dat - Personal dictionary
-   pkcs11.txt - Security device settings
-   places.sqlite - Bookmarks
-5. To enable SSO for enterprise specific realm/domain enter domain list (comma separated without spaces) into preferences (about:config) network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
+   NOTE: all changes are addition to default settings, so you can use them as a reference for your own settings
+4. To enable SSO for enterprise specific realm/domain enter domain list (comma separated without spaces) into preferences (about:config) network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 
 ESSENTIAL EXTENSIONS:
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
