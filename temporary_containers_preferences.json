@@ -1,9 +1,9 @@
 {
-  "version": "1.9.2",
-  "date": 1650805564900,
+  "version": "1.0.3",
+  "date": 1744364901801,
   "preferences": {
     "automaticMode": {
-      "active": false,
+      "active": true,
       "newTab": "created"
     },
     "notifications": false,
@@ -29,7 +29,7 @@
         },
         "mouseClick": {
           "middle": {
-            "action": "never",
+            "action": "notsamedomain",
             "container": "default"
           },
           "ctrlleft": {
@@ -44,7 +44,77 @@
         "excluded": {},
         "excludedContainers": []
       },
-      "domain": [],
+      "domain": [
+        {
+          "pattern": "duckduckgo.com",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": true,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "notsamedomainexact"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
+        },
+        {
+          "pattern": "/^https?:\\\\/\\\\/www\\\\.google\\\\..+\\\\/.*/",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": true,
+            "allowedInTemporary": true
+          },
+          "navigation": {
+            "action": "notsamedomainexact"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
+        },
+        {
+          "pattern": "*",
+          "always": {
+            "action": "enabled",
+            "allowedInPermanent": true,
+            "allowedInTemporary": true
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
+        }
+      ],
       "mac": {
         "action": "disabled"
       }
@@ -69,6 +139,7 @@
       "domains": [
         "t.co",
         "outgoing.prod.mozaws.net",
+        "slack-redir.net",
         "slack-redir.net"
       ]
     },
@@ -77,7 +148,70 @@
       "addons.mozilla.org"
     ],
     "cookies": {
-      "domain": {}
+      "domain": {
+        "duckduckgo.com": [
+          {
+            "domain": "",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "am",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "here-maps"
+          },
+          {
+            "domain": "",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "5",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "2"
+          },
+          {
+            "domain": "",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "av",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "1"
+          },
+          {
+            "domain": "",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "n",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "1"
+          },
+          {
+            "domain": "",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "1",
+            "path": "",
+            "sameSite": "",
+            "secure": "",
+            "url": "https://duckduckgo.com/",
+            "value": "-1"
+          }
+        ]
+      }
     },
     "scripts": {
       "active": false,
