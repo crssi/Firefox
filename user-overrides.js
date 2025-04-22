@@ -5,15 +5,14 @@ NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
    NOTE: To find "profile folder" location, enter "about:support" into urlbar and on "Profile Folder" row click "Open Folder" button
-2. In the "profile folder" create a folder "chrome" and copy-in userChrome.css and userContent.css from https://raw.githubusercontent.com/crssi/Firefox/master/userChrome.css and https://raw.githubusercontent.com/crssi/Firefox/master/userContent.css
-3. Firefox -> Hamburger menu -> Settings -> General -> General -> Tabs -> Settings...
+2. Firefox -> Hamburger menu -> Settings -> General -> General -> Tabs -> Settings...
      Remove all containers
    Firefox -> Options -> Search
      Default Search Engine: duckduckgo
      Show search suggestions ahead of browsing history in address bar results: Uncheck
-4. Install extensions (see Extensions section) and setup by instructions
+3. Install extensions (see Extensions section) and setup by instructions
    NOTE: all changes are addition to default
-5. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
+4. Migrate your personal stuff from previous profile by copying appropriate files from backup (see https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data/):
    cert9.db - Certificates
    content-prefs.sqlite - Site-specific preferences
    favicons.sqlite - Bookmarks icons
@@ -24,7 +23,7 @@ NOTE: Before proceeding further, make a backup of your current profile
    persdict.dat - Personal dictionary
    pkcs11.txt - Security device settings
    places.sqlite - Bookmarks
-6. To enable SSO for enterprise specific realm/domain enter domain list (comma separated without spaces) into preferences (about:config) network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
+5. To enable SSO for enterprise specific realm/domain enter domain list (comma separated without spaces) into preferences (about:config) network.negotiate-auth.trusted-uris and network.automatic-ntlm-auth.trusted-uris
 
 ESSENTIAL EXTENSIONS:
   Privacy-Oriented Origin Policy; https://addons.mozilla.org/firefox/addon/privacy-oriented-origin-policy/ (https://github.com/claustromaniac/poop/)
