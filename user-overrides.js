@@ -1,6 +1,6 @@
 /******
 HOME: https://github.com/crssi/Firefox
-INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 0f14e03 on 3.11.2025
+INFO: Supplement for arkenfox user.js; https://github.com/arkenfox/user.js; inline with commit 3d76c74 on 6.3.2025
 NOTE: Before proceeding further, make a backup of your current profile
 
 1. Download user.js from https://raw.githubusercontent.com/arkenfox/user.js/master/user.js, append this file and place it into "profile folder"
@@ -22,10 +22,6 @@ ESSENTIAL EXTENSIONS:
     Exclusions
       Exclusions: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/POOP-Exclusions.txt
     Click [Save]
-  Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
-    No-skip-urls-list: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Skip_Redirect-Blacklist.txt
-    Notifications
-      Enable popup: Uncheck
   Temporary Containers Plus; https://addons.mozilla.org/firefox/addon/temporary-containers-plus/ (https://github.com/GodKratos/temporary-containers/)
     Export/Import
       Import Preferences
@@ -49,6 +45,10 @@ ARCHIVED/INTERESTING EXTENSIONS:
   I still don't care about cookies; https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/ (https://github.com/OhMyGuus/I-Dont-Care-About-Cookies/)
   IndicateTLS; https://addons.mozilla.org/firefox/addon/indicatetls/ (https://github.com/jannispinter/indicatetls/)
   SixIndicator; https://addons.mozilla.org/firefox/addon/sixindicator/ (https://github.com/HostedDinner/SixIndicator/)
+  Skip Redirect; https://addons.mozilla.org/firefox/addon/skip-redirect/ (https://github.com/sblask/webextension-skip-redirect/)
+    No-skip-urls-list: Copy/Paste from https://raw.githubusercontent.com/crssi/Firefox/master/Skip_Redirect-Blacklist.txt
+    Notifications
+      Enable popup: Uncheck
   Smart Referer; https://addons.mozilla.org/firefox/addon/smart-referer/ (https://gitlab.com/smart-referer/smart-referer/)
     Whitelist Sources: Add https://raw.githubusercontent.com/crssi/Firefox/master/Smart_Referer-Whitelist.txt
 
@@ -76,11 +76,9 @@ ARCHIVED/INTERESTING EXTENSIONS:
 
 /*** BREAKAGE AND SECURITY TWEAKS ***/
   /* 0701  */ user_pref("network.dns.disableIPv6", true); //disable IPv6
-  /* 1201  */ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
-  /* 1212 ?*/ user_pref("security.OCSP.require", false); // allow connection if OCSP not reacheable; when OCSP is enabled
+  /* 1201 ?*/ user_pref("security.ssl.require_safe_negotiation", false); // do not force require_safe_negotiation
   /* 1223  */ user_pref("security.cert_pinning.enforcement_level", 1); // set to default to avoid AntiVirus breakage
   /* 4503  */ user_pref("privacy.resistFingerprinting.block_mozAddonManager", false); // enable AMO to work as intended, 2662 must be default
-  /* 5001  */ user_pref("browser.privatebrowsing.autostart", false); // disable PB
   /* 9000e */ user_pref("network.automatic-ntlm-auth.allow-non-fqdn", true); // enable SSO for hostnames
 
 user_pref("_user.js.parrot", "Eagle has landed!");
